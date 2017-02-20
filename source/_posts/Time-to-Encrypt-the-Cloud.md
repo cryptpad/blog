@@ -5,8 +5,6 @@ author: Caleb James DeLisle
 tags:
 ---
 
-## Our Vision
-
 From typing a business letter to taking pictures with friends, the internet has changed every part of our lives.
 We don't just share information with people, we also want it synced across our computers, tablets, and phones.
 
@@ -83,7 +81,7 @@ We did this not only because Open Source is in our culture, but also because we 
 ## How you can help
 
 * Use CryptPad and other Zero Knowledge services evey day, tell us what you like and what we can do better.
-* Show your support: Buy an upgraded account from us, the people who are developing the code.
+* Show your support: Buy an upgraded account (_coming soon_) from us, the people who are developing the code.
 * If you install the Open Source code of CryptPad on your own servers, consider buying a support contract.
 * Talk to your friends and colleagues about Zero Knowledge, show them CryptPad and explain that this is what the cloud can be.
 * If you're a web developer, think about Zero Knowledge for your next web app.
@@ -94,7 +92,7 @@ We did this not only because Open Source is in our culture, but also because we 
   * https://spideroak.com/
   * https://www.sync.com/
   * https://www.pcloud.com
-* text "pastebin"
+* Text "pastebin"
   * https://ncry.pt/  (https://github.com/luggs-co/ncrypt)
   * https://privatebin.net/ (https://github.com/PrivateBin/PrivateBin)
 * Image and file upload
