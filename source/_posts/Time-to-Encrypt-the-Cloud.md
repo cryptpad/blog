@@ -40,7 +40,7 @@ We don't need to wait for the AI singularity, all we need is a deep mind with th
 > --Quinn Norton
 
 While we must seek to use services with ethical foundations, we must also recognize that once we give up our data, we are at the mercy of economics.
-Companies that don't _extract maximum value_ from our data will eventually be acquired by those that do.
+Companies which don't _extract maximum value_ from our data will eventually be acquired by those which do.
 
 ## Zero Knowledge
 
@@ -57,9 +57,9 @@ Furthermore, a username and password can be made into a secret key which allows 
 Zero Knowledge web apps are not intended to _make you secure_, they're intended to be _provably ethical_.
 This cannot be overstated, for too long we have been forced to choose between "James Bond" security protocols which are too difficult to use, and slick web apps which monetize your data.
 
-> Our promise to you is that our business model is not to spy on you, and it never well be.
+> _Our promise to you is that our business model is not to spy on you, and it never well be_.
 
-We hope that the security community joins us in building user-friendly, Zero Knowledge services.
+We hope that the security community will join us in building user-friendly, Zero Knowledge services.
 Privacy is a social problem as much as it is a mathematical one, and it is time we take that seriously.
 
 ## What we're going to do
