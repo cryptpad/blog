@@ -13,13 +13,13 @@ We don't just share information with people, but with our various devices, compu
 Generally, when our devices communicate with each other, they do not do so directly, rather, they communicate through _the Cloud_.
 Unfortunately, _the Cloud_ is a fancy way of referring to _other people's computers_.
 
-A lot of what we think of as the Cloud is owned by multinational corporations, like Google, whose main business is knowing _your business_.
+A lot of what we think of as the Cloud is owned by multinational corporations like Google, whose main business is knowing _your business_.
 Though they may seem like innocent custodians of our data, behind the scenes they are often using it to target us with advertising.
 
 ## There is little a person can do.
 
 Terms of service are long, vague documents which usually don't address knowledge _derived_ from your data.
-More sinister: You can never really know if they're cheating.
+More sinister: you can never really know if they're cheating.
 Ad networks don't tell you how they know or even what they know.
 They just show you ads, based on what they discovered about you... _somehow_.
 
@@ -54,16 +54,15 @@ Furthermore, a username and password can be made into a secret key which allows 
 
 ## How do we know you're secure?
 
-Zero Knowledge web apps are not intended to be secure, they're intended to be ethical.
+Zero Knowledge web apps are not intended to _make you secure_, they're intended to be _provably ethical_.
 This cannot be overstated, for too long we have been forced to choose between "James Bond" security protocols which are too difficult to use, and slick web apps which monetize your data.
 
 Our promise to you is that our business model is not to spy on you, and it never well be.
-We make it as difficult as we can to break our promise, by backing it up with mathematics.
 
 We hope that the security community joins us in building user-friendly, Zero Knowledge services.
 Privacy is a social problem as much as it is a mathematical one, and its time we take that seriously.
 
-## The plan
+## What we're going to do
 
 We are going to show the world that web apps can be elegant and usable while still respecting privacy in a verifiable way.
 We cannot easily prove that we've never collected any data but we can prove we're not doing it systematically.
@@ -74,7 +73,6 @@ We are aiming to make it the most user friendly, most productive collaboration t
 Finally, we have chosen to make the CryptPad project [Open Source](https://github.com/xwiki-labs/cryptpad).
 We did this not only because Open Source is in our culture, but also because we want Zero Knowledge web apps to become the universal standard.
 
-## What we're going to do
 
 1. Develop the most user friendly collaboration tool available which is also Zero Knowledge.
 2. Use this tool to explain the problem and show that an alternative is possible.
