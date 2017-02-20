@@ -8,6 +8,14 @@
     <% if (post.link || post.title){ %>
       <header class="article-header">
         <%- partial('post/title', {class_name: 'article-title'}) %>
+
+        <% if (post.author) { %>
+            <span class="article-author">
+                by
+                <%- post.author %>
+            </span>
+        <% } %>
+
       </header>
     <% } %>
     <div class="article-entry" itemprop="articleBody">
