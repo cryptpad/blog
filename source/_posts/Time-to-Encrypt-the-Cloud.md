@@ -28,7 +28,8 @@ They just show you ads, based on what they discovered about you... _somehow_.
 * Pregnant in your second trimester? $0.11 (_52 times as much_)
 * Have a specific health condition? $0.26 (_123 times as much_)
 
-This is only going to get worse, Artificial Intelligence technology is maturing, and Silicon Valley is using it to derive even more value from _us_, its most valuable products.
+This is only going to get worse.
+Artificial Intelligence technology is maturing and Silicon Valley is using it to derive even more value from _us_, its most valuable products.
 
 The result of this will be a veritable weapon of mass manipulation.
 The tragedy is, manipulating people to get what you want is not that complex.
@@ -46,7 +47,7 @@ Companies that don't _extract maximum value_ from our data will eventually be ac
 Fortunately we don't have to go back to the typewriter age.
 Using basic cryptography, the cloud can make information available across your devices without being able to read the data which it stores.
 
-We do this by adding a a hash character (#) to a link.
+We do this by adding a hash character (#) to a link.
 By design, browsers don't share anything after this character.
 That means we can share encryption keys just by sharing links.
 Furthermore, a username and password can be made into a secret key which allows a person's private data to be kept encrypted using their login credentials.
