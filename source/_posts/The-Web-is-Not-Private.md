@@ -29,7 +29,7 @@ They just show you ads, based on what they discovered about you... _somehow_.
 * Pregnant in your second trimester? $0.11 52 times as much
 * Have a specific health condition? $0.26 123 times as much
 
-This is only going to get worse, Artificial Intelligence technology is maturing, and Silicon Valley is using it to extract even more value from _you_, its most valuable product.
+This is only going to get worse, Artificial Intelligence technology is maturing, and Silicon Valley is using it to derive even more value from _you_, its most valuable product.
 
 The result of this will be a veritable weapon of mass manipulation.
 The tragedy is, manipulating people to get what you want is not that complex.
@@ -40,7 +40,7 @@ We don't need to wait for the AI singularity, all we need is a deep mind with th
 > --Quinn Norton
 
 While we must seek to use services with ethical foundations, we must also recognize that once we give up our data we are at the mercy of economics.
-Companies that don't "extract maximum value" from our data will eventually be acquired by those that do.
+Companies that don't _extract maximum value_ from our data will eventually be acquired by those that do.
 
 ## Zero Knowledge
 
