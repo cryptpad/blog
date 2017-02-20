@@ -73,6 +73,8 @@ We are aiming to make it the most user friendly, most productive collaboration t
 Finally, we have chosen to make the CryptPad project [Open Source](https://github.com/xwiki-labs/cryptpad).
 We did this not only because Open Source is in our culture, but also because we want Zero Knowledge web apps to become the universal standard.
 
+### The plan in four steps
+
 1. Develop the most user friendly collaboration tool available which is also Zero Knowledge.
 2. Use this tool to explain the problem and show that an alternative is possible.
 3. Open Source the work we do so that others can also build Zero Knowledge apps.
