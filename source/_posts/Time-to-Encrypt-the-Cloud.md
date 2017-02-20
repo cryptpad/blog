@@ -1,6 +1,6 @@
 ---
 title: Time to Encrypt the Cloud
-date: 2017-02-15 17:54:02
+date: 2017-02-20 17:54:02
 author: Caleb James DeLisle
 tags:
 ---
