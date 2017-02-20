@@ -1,5 +1,5 @@
 ---
-title: The Web is Not Private
+title: Time to Encrypt the Cloud
 date: 2017-02-15 17:54:02
 author: Caleb James DeLisle
 tags:
@@ -8,15 +8,14 @@ tags:
 ## Our Vision
 
 From typing a business letter to taking pictures with friends, the internet has changed every part of our lives.
-We don't just share information with people, but with our various devices, computers, tablets, smartphones, and an increasing number of wearable technologies.
+We don't just share information with people, we also want it synced across our computers, tablets, and phones.
 
-Generally, when our devices communicate with each other, they do not do so directly, rather, they communicate through _the Cloud_.
-Unfortunately, _the Cloud_ is a fancy way of referring to _other people's computers_.
+Modern technology allows us to do this, but it does so by sending all our data to _the Cloud_.
 
-A lot of what we think of as the Cloud is owned by multinational corporations like Google, whose main business is knowing _your business_.
+A lot of what we think of as the Cloud is owned by multinational corporations like Google.
 Though they may seem like innocent custodians of our data, behind the scenes they are often using it to target us with advertising.
 
-## There is little a person can do.
+## There is little that one person can do
 
 Terms of service are long, vague documents which usually don't address knowledge _derived_ from your data.
 More sinister: you can never really know if they're cheating.
@@ -26,8 +25,8 @@ They just show you ads, based on what they discovered about you... _somehow_.
 ## What's your personal information worth?
 
 * Normally  $0.0005 - $0.0021 per person
-* Pregnant in your second trimester? $0.11 _52 times as much_
-* Have a specific health condition? $0.26 _123 times as much_
+* Pregnant in your second trimester? $0.11 (_52 times as much_)
+* Have a specific health condition? $0.26 (_123 times as much_)
 
 This is only going to get worse, Artificial Intelligence technology is maturing, and Silicon Valley is using it to derive even more value from _us_, its most valuable products.
 
@@ -35,7 +34,7 @@ The result of this will be a veritable weapon of mass manipulation.
 The tragedy is, manipulating people to get what you want is not that complex.
 We don't need to wait for the AI singularity, all we need is a deep mind with the cleverness of a spoiled 5 year old.
 
->  All data, over time, approaches deleted, or public.
+>  _All data, over time, approaches deleted, or public._
 >
 > --Quinn Norton
 
