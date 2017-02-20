@@ -26,10 +26,10 @@ They just show you ads, based on what they discovered about you... _somehow_.
 ## What's your personal information worth?
 
 * Normally  $0.0005 - $0.0021 per person
-* Pregnant in your second trimester? $0.11 52 times as much
-* Have a specific health condition? $0.26 123 times as much
+* Pregnant in your second trimester? $0.11 _52 times as much_
+* Have a specific health condition? $0.26 _123 times as much_
 
-This is only going to get worse, Artificial Intelligence technology is maturing, and Silicon Valley is using it to derive even more value from _you_, its most valuable product.
+This is only going to get worse, Artificial Intelligence technology is maturing, and Silicon Valley is using it to derive even more value from _us_, its most valuable products.
 
 The result of this will be a veritable weapon of mass manipulation.
 The tragedy is, manipulating people to get what you want is not that complex.
@@ -39,7 +39,7 @@ We don't need to wait for the AI singularity, all we need is a deep mind with th
 >
 > --Quinn Norton
 
-While we must seek to use services with ethical foundations, we must also recognize that once we give up our data we are at the mercy of economics.
+While we must seek to use services with ethical foundations, we must also recognize that once we give up our data, we are at the mercy of economics.
 Companies that don't _extract maximum value_ from our data will eventually be acquired by those that do.
 
 ## Zero Knowledge
@@ -57,10 +57,10 @@ Furthermore, a username and password can be made into a secret key which allows 
 Zero Knowledge web apps are not intended to _make you secure_, they're intended to be _provably ethical_.
 This cannot be overstated, for too long we have been forced to choose between "James Bond" security protocols which are too difficult to use, and slick web apps which monetize your data.
 
-Our promise to you is that our business model is not to spy on you, and it never well be.
+> Our promise to you is that our business model is not to spy on you, and it never well be.
 
 We hope that the security community joins us in building user-friendly, Zero Knowledge services.
-Privacy is a social problem as much as it is a mathematical one, and its time we take that seriously.
+Privacy is a social problem as much as it is a mathematical one, and it is time we take that seriously.
 
 ## What we're going to do
 
@@ -72,7 +72,6 @@ We are aiming to make it the most user friendly, most productive collaboration t
 
 Finally, we have chosen to make the CryptPad project [Open Source](https://github.com/xwiki-labs/cryptpad).
 We did this not only because Open Source is in our culture, but also because we want Zero Knowledge web apps to become the universal standard.
-
 
 1. Develop the most user friendly collaboration tool available which is also Zero Knowledge.
 2. Use this tool to explain the problem and show that an alternative is possible.
@@ -87,26 +86,25 @@ We did this not only because Open Source is in our culture, but also because we 
 * Talk to your friends and colleagues about Zero Knowledge, show them CryptPad and explain that this is what the cloud can be.
 * If you're a web developer, think about Zero Knowledge for your next web app.
 
-## Other Zero Knowledge Services in the same boat as us
+## Other Zero Knowledge Services
 
 * Backup your data
-  * https://spideroak.com/  Partially Open Source
+  * https://spideroak.com/
   * https://www.sync.com/
   * https://www.pcloud.com
-* ext "pastebin"
-  * https://ncry.pt/  Fully Open Source ( https://github.com/luggs-co/ncrypt )
-  * https://privatebin.net/ Fully Open Source ( https://github.com/PrivateBin/PrivateBin )
-  * Up1 - Fully Open Source but no public server:  https://github.com/Upload/Up1
+* text "pastebin"
+  * https://ncry.pt/  (https://github.com/luggs-co/ncrypt)
+  * https://privatebin.net/ (https://github.com/PrivateBin/PrivateBin)
 * Image and file upload
-  * Up1 - Fully Open Source but no public server:  https://github.com/Upload/Up1
+  * [Up1](https://github.com/Upload/Up1)
 * Chat and instant messaging
-  * https://whispersystems.org/ ( Fully Open Source ) https://github.com/whispersystems/
-  * https://wire.com/en/ ( Fully Open Source ) https://github.com/wireapp
-  * https://riot.im/ ( Fully Open Source ) https://github.com/vector-im
-  * https://keybase.io/ (Not Fully Open Source )
+  * https://whispersystems.org/ https://github.com/whispersystems/
+  * https://wire.com/en/ https://github.com/wireapp
+  * https://riot.im/ https://github.com/vector-im
 * Encrypted Email
-  * https://prettyeasyprivacy.com ( Fully Open Source ) https://cacert.pep.foundation/trac/browser
+  * https://prettyeasyprivacy.com https://cacert.pep.foundation/trac/browser
   * https://protonmail.com/
-* An important one which we forgot? Get in touch !  research@xwiki.com TODO PGP
-
+* Web of trust and proof of identity
+  * https://keybase.io/
+* An important one which we forgot? [Get in touch](https://cryptpad.fr/contact.html)!
 
