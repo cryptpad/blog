@@ -55,7 +55,7 @@ Furthermore, a username and password can be made into a secret key which allows 
 Zero Knowledge web apps are not intended to _make you secure_, they're intended to be _provably ethical_.
 This cannot be overstated, for too long we have been forced to choose between "James Bond" security protocols which are too difficult to use, and slick web apps which monetize your data.
 
-> _Our promise to you is that our business model is not to spy on you, and it never well be_.
+> _Our promise to you is that our business model is not to spy on you, and it never will be_.
 
 We hope that the security community will join us in building user-friendly, Zero Knowledge services.
 Privacy is a social problem as much as it is a mathematical one, and it is time we take that seriously.
