@@ -115,9 +115,11 @@ While we value Open Source, the need for Zero Knowledge Cloud is paramount and w
 decision of some organizations to keep parts of their codebases proprietary.
 
 * Data backup
-  * https://spideroak.com/personal/spideroak-one
+  * https://www.boxcryptor.com/en
+  * https://whisp.ly/en
   * https://www.sync.com/
   * https://www.pcloud.com
+  * https://spideroak.com/personal/spideroak-one
 * Chat and instant messaging
   * https://wire.com/en/
   * https://spideroak.com/personal/semaphor
