@@ -2,6 +2,7 @@
 menu:
   Home: /
   Archives: /archives
+  Use Cryptpad: https://cryptpad.fr
 rss: /atom.xml
 
 # Content
