@@ -21,6 +21,7 @@ Then git add `./public/`
 ## Push to the server
 
 `git remote add blog ssh://cryptpad@blog.cryptpad.fr/home/cryptpad/blog.git`
+`git push`
 
 ## Pull to the production directory
 
