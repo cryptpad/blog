@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: CryptPad
+title: CryptPad Blog
 subtitle:
 description:
 author: XWiki Labs
@@ -81,5 +81,4 @@ feed:
 # Markdown configuration
 marked:
   breaks: false
-
 
