@@ -88,23 +88,43 @@ We did this not only because Open Source is in our culture, but also because we 
 
 ## Other Zero Knowledge Services
 
-* Backup your data
-  * https://spideroak.com/
+### Open Source
+
+* Sync backups to Google or Dropbox and force them to become Zero Knowledge
+  * https://cryptomator.org/
+  * Source Code: https://github.com/cryptomator/cryptomator
+* Easy chrome extension for gmail users to send & receive end-to-end encrypted email
+  * https://cryptup.org/
+  * Source Code: https://github.com/tomholub/cryptup-chrome
+* Send and receive end-to-end encrypted email using your normal email account (Mobile, Desktop version coming soon)
+  * https://prettyeasyprivacy.com/
+  * https://cacert.pep.foundation/trac
+* Send end-to-end encrypted text messages on your phone
+  * https://whispersystems.org/
+  * Source Code: https://github.com/whispersystems
+* Type or paste a message and give the link to friends
+  * https://ncry.pt/  (Source code: https://github.com/luggs-co/ncrypt)
+  * https://privatebin.net/ (Source code: https://github.com/PrivateBin/PrivateBin)
+* Chat online with lots of people at once
+  * https://riot.im/  **NOTE:** End-to-end encryption mode in beta so currently disabled by default
+  * Source code: https://github.com/vector-im
+
+### Proprietary
+
+While we value Open Source, the need for Zero Knowledge Cloud is paramount and we respect the
+decision of some organizations to keep parts of their codebases proprietary.
+
+* Data backup
+  * https://spideroak.com/personal/spideroak-one
   * https://www.sync.com/
   * https://www.pcloud.com
-* Text "pastebin"
-  * https://ncry.pt/  (https://github.com/luggs-co/ncrypt)
-  * https://privatebin.net/ (https://github.com/PrivateBin/PrivateBin)
-* Image and file upload
-  * [Up1](https://github.com/Upload/Up1)
 * Chat and instant messaging
-  * https://whispersystems.org/ https://github.com/whispersystems/
-  * https://wire.com/en/ https://github.com/wireapp
-  * https://riot.im/ https://github.com/vector-im
-* Encrypted Email
-  * https://prettyeasyprivacy.com https://cacert.pep.foundation/trac/browser
+  * https://wire.com/en/
+  * https://spideroak.com/personal/semaphor
+* Send and receive end-to-end encrypted email
   * https://protonmail.com/
 * Web of trust and proof of identity
   * https://keybase.io/
-* An important one which we forgot? [Get in touch](https://cryptpad.fr/contact.html)!
 
+
+An important one which we forgot? [Get in touch](https://cryptpad.fr/contact.html)!
