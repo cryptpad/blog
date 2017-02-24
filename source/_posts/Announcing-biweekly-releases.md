@@ -1,6 +1,6 @@
 ---
 title: Announcing biweekly releases
-date: 2017-02-23 16:26:03
+date: 2017-02-24 16:26:03
 author: Aaron MacSween
 tags:
 ---
