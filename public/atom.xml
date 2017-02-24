@@ -5,7 +5,7 @@
   <link href="//atom.xml" rel="self"/>
   
   <link href="https://blog.cryptpad.fr/"/>
-  <updated>2017-02-22T18:31:50.000Z</updated>
+  <updated>2017-02-24T12:27:41.889Z</updated>
   <id>https://blog.cryptpad.fr/</id>
   
   <author>
@@ -16,11 +16,27 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Announcing biweekly releases</title>
+    <link href="https://blog.cryptpad.fr/2017/02/23/Announcing-biweekly-releases/"/>
+    <id>https://blog.cryptpad.fr/2017/02/23/Announcing-biweekly-releases/</id>
+    <published>2017-02-23T15:26:03.000Z</published>
+    <updated>2017-02-24T12:27:41.889Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;When I joined the research team at &lt;a href=&quot;http://www.xwiki.com/en/team/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;XWiki&lt;/a&gt; a little over a year 
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>Time to Encrypt the Cloud</title>
     <link href="https://blog.cryptpad.fr/2017/02/20/Time-to-Encrypt-the-Cloud/"/>
     <id>https://blog.cryptpad.fr/2017/02/20/Time-to-Encrypt-the-Cloud/</id>
     <published>2017-02-20T16:54:02.000Z</published>
-    <updated>2017-02-22T18:31:50.000Z</updated>
+    <updated>2017-02-22T18:34:49.774Z</updated>
     
     <summary type="html">
     
