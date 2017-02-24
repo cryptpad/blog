@@ -32,7 +32,7 @@ At the end of 2016, however, most of these big, complicated issues were coming t
 Our team took some much-needed vacation time, and upon returning we started working to release and deploy a tagged version of our codebase.
 
 Our newest features went live to [CryptPad.fr](https://cryptpad.fr) on Tuesday, the 14th of February.
-Some of them are big enough that we'll probably dedicate entire blog posts to them, but the release notes are [on Github](https://github.com/xwiki-labs/cryptpad/tree/1.0.0).
+Some of them are big enough that we'll probably dedicate entire blog posts to them, but the release notes are [on GitHub](https://github.com/xwiki-labs/cryptpad/tree/1.0.0).
 
 ## Our new release policy
 
