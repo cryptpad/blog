@@ -17,7 +17,7 @@ We learned things and improved our security in multiple ways and we have plans t
 
 Martin Gubri volunteered to help us with security testing and found multiple XSS vulnerabilities
 We learned things and improved our security in multiple ways and we have plans to bu">
-<meta property="og:updated_time" content="2017-03-06T11:16:48.825Z">
+<meta property="og:updated_time" content="2017-03-06T11:18:45.043Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Security growing pains">
 <meta name="twitter:description" content="To sum things up:
@@ -59,9 +59,9 @@ We learned things and improved our security in multiple ways and we have plans t
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://blog.cryptpad.fr"></form>
@@ -108,6 +108,7 @@ We learned things and improved our security in multiple ways and we have plans t
 <li>Update all the things</li>
 </ol>
 <h2 id="Exactly-what-happened"><a href="#Exactly-what-happened" class="headerlink" title="Exactly what happened"></a>Exactly what happened</h2><p>Late Tuesday night after work, I got an email from Martin Gubri telling me that he had found multiple XSS vulnerabilities in CryptPad.
+This is not fun news for anybody, but as the browser stores encryption keys, it is especially bad news.
 I want to reiterate what I said in <a href="https://blog.cryptpad.fr/2017/02/20/Time-to-Encrypt-the-Cloud/" title="Time to Encrypt the Cloud">our first blog post</a>, CryptPad is just a regular web app but with provable ethics, it is not designed to provide military grade security.</p>
 <p>Though we could have waited until our next release to fix this issue, we decided that we could not feel good working on new features while knowing about an issue which could harm our users.
 However, we wanted to fix the systemic issue which caused XSS to be possible in the first place, not just the symptoms which we became aware of.</p>
@@ -130,7 +131,7 @@ This introduces some difficulty on our end, as we want to provide a resilient pl
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://blog.cryptpad.fr/2017/03/06/Security-growing-pains/" data-id="cizy0ij0100019xa86wtavdkl" class="article-share-link">Partager</a>
+      <a data-url="https://blog.cryptpad.fr/2017/03/06/Security-growing-pains/" data-id="cizy0ij0100019xa86wtavdkl" class="article-share-link">Share</a>
       
       
     </footer>
@@ -141,7 +142,7 @@ This introduces some difficulty on our end, as we want to provide a resilient pl
   
   
     <a href="/2017/02/24/Announcing-biweekly-releases/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Ancien</strong>
+      <strong class="article-nav-caption">Older</strong>
       <div class="article-nav-title">Announcing biweekly releases</div>
     </a>
   
@@ -175,7 +176,7 @@ This introduces some difficulty on our end, as we want to provide a resilient pl
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Articles récents</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
         
