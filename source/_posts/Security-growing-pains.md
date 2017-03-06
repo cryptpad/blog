@@ -41,7 +41,7 @@ If you're using cryptpad.fr on the website then there's nothing you need to do, 
 We want to find and pioneer better ways of protecting your data on CryptPad.
 We also hope to foster a whole movement of Zero Knowledge web services which feature layered security, protecting users from external threats as well as the mistakes that developers are sure to make.
 
-Spurred on by the revelation of our own errors, we have reinvigorated a conversation about moving the "apps" such as CKEditor into a [sandboxed iframe](https://www.html5rocks.com/en/tutorials/security/sandboxed-iframes/) where it cannot access any of the cryptographic keys or other pads.
+Spurred on by the revelation of our own errors, we have reinvigorated a conversation about moving each of the _apps_ such as CKEditor into a [sandboxed iframe](https://www.html5rocks.com/en/tutorials/security/sandboxed-iframes/) where they would be unable to access any of the cryptographic keys or other pads.
 This introduces some difficulty on our end, as we want to provide a resilient platform while making Zero Knowledge an approachable subject for web developers.
 
 Finally I would like to also publically thank our friend [_kpcyrd_](https://github.com/kpcyrd) for finding another XSS issue back in early December of 2016, before we had official releases or a blog where we could give him credit for his work.
