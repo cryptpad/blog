@@ -14,6 +14,7 @@ To sum things up:
 ## Exactly what happened
 
 Late Tuesday night after work, I got an email from Martin Gubri telling me that he had found multiple XSS vulnerabilities in CryptPad.
+This is not fun news for anybody, but as the browser stores encryption keys, it is especially bad news.
 I want to reiterate what I said in [our first blog post](https://blog.cryptpad.fr/2017/02/20/Time-to-Encrypt-the-Cloud/ "Time to Encrypt the Cloud"), CryptPad is just a regular web app but with provable ethics, it is not designed to provide military grade security.
 
 Though we could have waited until our next release to fix this issue, we decided that we could not feel good working on new features while knowing about an issue which could harm our users.
