@@ -18,12 +18,12 @@ This is not fun news for anybody, but as we make use of cryptography it is espec
 I want to reiterate what I said in [our first blog post](https://blog.cryptpad.fr/2017/02/20/Time-to-Encrypt-the-Cloud/ "Time to Encrypt the Cloud"), CryptPad is just a regular web app but with provable ethics, it is not designed to provide military grade security.
 
 Though we could have waited until our next release to fix this issue, we decided that we could not feel good working on new features while knowing about an issue which could harm our users.
-However, we also wanted to make a real fix, not only a fix of the issues we could see but also a fix of the systemic issue which caused XSS to be possible in the first place.
+However, we wanted to fix the systemic issue which caused XSS to be possible in the first place, not just the symptoms which we became aware of.
 
 CryptPad uses a modern web feature called [Content Security Policy](https://en.wikipedia.org/wiki/Content_Security_Policy) to prevent attacks such as this one.
 Content Security Policy allows a web server to mandate that javascript can only be loaded from domains which are explicitly authorized.
-Unfortunately, CKEditor [makes heavy usage of inline scripts](https://dev.ckeditor.com/ticket/8584) (scripts which is written directly into the HTML file), so we had made an exception for inline script which represents the most common type of XSS.
-When Martin did a review of our application, he found multiple places where we had not been properly escaping HTML content and sadly all of these were attackable despite the Content Security Policy.
+Unfortunately, CKEditor [makes heavy usage of inline scripts](https://dev.ckeditor.com/ticket/8584) (scripts which are written directly into the HTML file), so we had made an exception for inline script which represents the most common type of XSS.
+When Martin did a review of our application, he found multiple places where we had not been properly escaping HTML content and sadly all of these were attackable despite our Content Security Policy.
 
 ## How we reacted
 
