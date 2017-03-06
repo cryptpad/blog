@@ -5,7 +5,7 @@
   <link href="//atom.xml" rel="self"/>
   
   <link href="https://blog.cryptpad.fr/"/>
-  <updated>2017-02-24T15:41:00.374Z</updated>
+  <updated>2017-03-06T11:16:48.825Z</updated>
   <id>https://blog.cryptpad.fr/</id>
   
   <author>
@@ -14,6 +14,24 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Security growing pains</title>
+    <link href="https://blog.cryptpad.fr/2017/03/06/Security-growing-pains/"/>
+    <id>https://blog.cryptpad.fr/2017/03/06/Security-growing-pains/</id>
+    <published>2017-03-06T10:04:58.000Z</published>
+    <updated>2017-03-06T11:16:48.825Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;To sum things up:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/Framartin&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Martin Gubri&lt;/a&gt; volunteered to help
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Announcing biweekly releases</title>
