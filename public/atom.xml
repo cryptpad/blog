@@ -5,7 +5,7 @@
   <link href="//atom.xml" rel="self"/>
   
   <link href="https://blog.cryptpad.fr/"/>
-  <updated>2017-03-06T11:18:45.043Z</updated>
+  <updated>2017-03-24T16:33:26.000Z</updated>
   <id>https://blog.cryptpad.fr/</id>
   
   <author>
@@ -14,6 +14,24 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>What is Zero Knowledge</title>
+    <link href="https://blog.cryptpad.fr/2017/03/24/What-is-Zero-Knowledge/"/>
+    <id>https://blog.cryptpad.fr/2017/03/24/What-is-Zero-Knowledge/</id>
+    <published>2017-03-24T13:42:03.000Z</published>
+    <updated>2017-03-24T16:33:26.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;We have gotten a lot of questions about the concept of Zero Knowledge, the vision and ethics as well as the exact meaning.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;W
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Security growing pains</title>
