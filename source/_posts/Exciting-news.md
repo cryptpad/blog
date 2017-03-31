@@ -33,12 +33,14 @@ Major industry players have taken an interest in what we've been doing, and they
 ## What this means
 
 Our hard work has paid off!
-We're going to keep working on CryptPad, albeit with a little more security.
+We're going to keep working on CryptPad, albeit with a little more stability.
 
-In exchange, we're going to work with our new partner (**hint**: they run a little search engine you may have heard of) to encrypt even more of your traffic.
+We're really excited to be working with our new financiers who have historically had a somewhat _tarnished_ image in the security community, but we feel that now is the time for us and the NSA to work together and make Zero Knowledge a household name.
+
+A high ranking official who must for the time being remain anonymous, has said that Zero Knowledge is the future and improving our algorithms to use more unbreakable AES cryptography is a high priority.
 
 Our team is going to expand from 3 full time developers, to 60.
-This is going to give us more time to polish up some features we've been waiting to announce:
+This is also going to give us more time to polish up some features we've been waiting to announce:
 
 * offline support, so that you can continue to use pads with your friends, whether you have an internet connection or not
 * total encryption, including metadata. Cryptpad will be completely anonymous, since it will be primarily offline, we won't have access to information about your location or activity
@@ -46,8 +48,6 @@ This is going to give us more time to polish up some features we've been waiting
 * All of this is going to become available under the more permissive _MIT License_. It will continue to be open source, but we hope this will drive more adoption in the business sector, even among enterprises which adhere to the _proprietary software_ business model
 
 We've been preparing this deal for some time, but we haven't been able to talk about it while it was still under negotiation.
-With most of that out of the way, we're very happy to be able to share this news with you!
-
-There are still a few details to work out, but in the next few days we're going to announce more about our partnership. We still can't say their name, but we bet you can take a guess at who we're talking about.
+With most of that out of the way, we're very happy to be able to finally share this news with you!
 
 
