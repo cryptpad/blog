@@ -42,9 +42,11 @@ A high ranking official who must for the time being remain anonymous, has said t
 Our team is going to expand from 3 full time developers, to 60.
 This is also going to give us more time to polish up some features we've been waiting to announce:
 
-* offline support, so that you can continue to use pads with your friends, whether you have an internet connection or not
-* total encryption, including metadata. Cryptpad will be completely anonymous, since it will be primarily offline, we won't have access to information about your location or activity
-* full text search on encryped data, using quantum homomorphic encryption. Find everything all the time, in real time, with friends or alone
+* New serverless architecture, all you need to do is connect to the internet and the NSA will collect your data automatically
+* Total encryption, including metadata. Cryptpad will be completely anonymous, since it will be primarily offline, we won't have access to information about your location or activity. We'll be handing this off to the NSA's best cryptanalysts and mathematicians.
+* Full text search on encryped data, using quantum homomorphic encryption. Find everything all the time, in real time, with friends or alone
+* We will slowly rewrite our codebase in Rust-lang over the next several months
+* We will offer a new service to recover lost pads. If you've ever sent the link to the pad in an email, the NSA will be able to access the pad for you
 * All of this is going to become available under the more permissive _MIT License_. It will continue to be open source, but we hope this will drive more adoption in the business sector, even among enterprises which adhere to the _proprietary software_ business model
 
 We've been preparing this deal for some time, but we haven't been able to talk about it while it was still under negotiation.
