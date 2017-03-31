@@ -35,7 +35,7 @@ Major industry players have taken an interest in what we've been doing, and they
 Our hard work has paid off!
 We're going to keep working on CryptPad, albeit with a little more stability.
 
-We're really excited to be working with our new financiers who have historically had a somewhat _tarnished_ image in the security community, but we feel that now is the time for us and the NSA to work together and make Zero Knowledge a household name.
+We're really excited to be working with our new financiers who have historically had a somewhat "tarnished" image in the security community, but we feel that now is the time for us and the NSA to work together and make Zero Knowledge a household name.
 
 A high ranking official who must for the time being remain anonymous, has said that Zero Knowledge is the future and improving our algorithms to use more unbreakable AES cryptography is a high priority.
 
