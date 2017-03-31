@@ -5,7 +5,7 @@
   <link href="//atom.xml" rel="self"/>
   
   <link href="https://blog.cryptpad.fr/"/>
-  <updated>2017-03-24T16:33:26.000Z</updated>
+  <updated>2017-03-31T23:13:39.768Z</updated>
   <id>https://blog.cryptpad.fr/</id>
   
   <author>
@@ -16,11 +16,28 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Exciting news</title>
+    <link href="https://blog.cryptpad.fr/2017/04/01/Exciting-news/"/>
+    <id>https://blog.cryptpad.fr/2017/04/01/Exciting-news/</id>
+    <published>2017-03-31T22:03:49.000Z</published>
+    <updated>2017-03-31T23:13:39.768Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Here in the research department of XWiki SAS, which you may know as &lt;em&gt;the CryptPad team&lt;/em&gt;, we take our work very seriously.
+Each day
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>What is Zero Knowledge</title>
     <link href="https://blog.cryptpad.fr/2017/03/24/What-is-Zero-Knowledge/"/>
     <id>https://blog.cryptpad.fr/2017/03/24/What-is-Zero-Knowledge/</id>
     <published>2017-03-24T13:42:03.000Z</published>
-    <updated>2017-03-24T16:33:26.000Z</updated>
+    <updated>2017-03-31T18:29:00.287Z</updated>
     
     <summary type="html">
     
