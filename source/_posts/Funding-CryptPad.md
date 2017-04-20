@@ -59,7 +59,7 @@ We believe this time is sufficient to distinguish valuable information from that
 * Pinning will only be available to registered users.
 * Pinning will take effect following our next release, on April 25th, 2017
 * Everything that is in your drive will be automatically pinned.
-  * new files will be pinned once you add them
+  * new files will be pinned once you add them to your drive
   * removing a file from your drive's trash will unpin it
 * Unpinned files which have not been accessed for at least 90 days will be removed
   * effective July 24th, 2017 (90 days from April 25th)
