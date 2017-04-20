@@ -76,7 +76,7 @@ If you're using CryptPad to host critical information, however, you might consid
 We're still figuring out the details of our support contracts, however, this approach has proven to be of valuable to XWiki's many customers in the past.
 You can see an example of XWiki's pricing [here](http://www.xwiki.com/en/products/pricing-onpremise).
 
-If you plan to use CryptPad for your business, consider that it might be more time and cost effective to have us install and configure everything than to learn to administrate it yourself.
+If you plan to use CryptPad for your business, consider that it might be more time and cost effective to have us install and configure everything than to learn to administrate it on your own.
 Otherwise, if you find that you're comfortable setting everything up in a basic configuration, but you'd like help configuring your server to behave in a special way, we'll be there to help.
 
 ### Sponsored development of open source features
