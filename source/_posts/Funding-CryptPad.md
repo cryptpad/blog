@@ -53,7 +53,7 @@ In other situations, people use CryptPad to collaborate on reports, code, or pre
 At some point, those projects are finished, and those documents are forgotten.
 
 To address this problem, we've implemented **pinning**, which is a way of telling the server that you want a pad to continue to be available.
-Pads that _aren't_ pinned are liable to be removed after 90 days of not having been read or modified.
+Anonymous pads, that is, _those which aren't pinned by a registered user_, are liable to be removed after 90 days of not having been read or modified.
 We believe this time is sufficient to distinguish valuable information from that which is safe to remove.
 
 * Pinning will only be available to registered users.
