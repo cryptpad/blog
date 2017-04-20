@@ -5,7 +5,7 @@
   <link href="//atom.xml" rel="self"/>
   
   <link href="https://blog.cryptpad.fr/"/>
-  <updated>2017-03-31T23:13:39.768Z</updated>
+  <updated>2017-04-20T12:46:57.899Z</updated>
   <id>https://blog.cryptpad.fr/</id>
   
   <author>
@@ -14,6 +14,24 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Funding CryptPad</title>
+    <link href="https://blog.cryptpad.fr/2017/04/20/Funding-CryptPad/"/>
+    <id>https://blog.cryptpad.fr/2017/04/20/Funding-CryptPad/</id>
+    <published>2017-04-20T10:15:09.000Z</published>
+    <updated>2017-04-20T12:46:57.899Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;CryptPad started as a novel idea:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;provide a means for people to collaborate on the web, without their data being expo
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Exciting news</title>
