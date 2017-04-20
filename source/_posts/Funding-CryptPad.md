@@ -85,7 +85,7 @@ If there's a particular feature you'd like to see implemented within CryptPad, w
 
 Sponsored development allows us to build features to suit particular users' needs.
 By integrating those features into the official, open source version of CryptPad, we ensure that they will be used by as many people as possible.
-This helps us refine those features to be even more useful for you, and ensures that they will continue to be supported in the long run.
+This helps us refine those features to be even more useful for you, and ensures that they will continue to be supported well into the future.
 
 ## What's next
 
