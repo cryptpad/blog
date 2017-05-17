@@ -5,7 +5,7 @@
   <link href="//atom.xml" rel="self"/>
   
   <link href="https://blog.cryptpad.fr/"/>
-  <updated>2017-04-20T12:46:57.899Z</updated>
+  <updated>2017-05-17T16:13:18.000Z</updated>
   <id>https://blog.cryptpad.fr/</id>
   
   <author>
@@ -16,11 +16,27 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>You gotta log in</title>
+    <link href="https://blog.cryptpad.fr/2017/05/17/You-gotta-log-in/"/>
+    <id>https://blog.cryptpad.fr/2017/05/17/You-gotta-log-in/</id>
+    <published>2017-05-17T10:22:52.000Z</published>
+    <updated>2017-05-17T16:13:18.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;It’s been two and a half years since the &lt;a href=&quot;https://github.com/xwiki-labs/cryptpad/commit/1508c7ba71f5de5e51f061fbef45bc1f18493832&quot;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>Funding CryptPad</title>
     <link href="https://blog.cryptpad.fr/2017/04/20/Funding-CryptPad/"/>
     <id>https://blog.cryptpad.fr/2017/04/20/Funding-CryptPad/</id>
     <published>2017-04-20T10:15:09.000Z</published>
-    <updated>2017-04-20T12:46:57.899Z</updated>
+    <updated>2017-05-17T13:38:14.000Z</updated>
     
     <summary type="html">
     

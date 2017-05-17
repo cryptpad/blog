@@ -60,6 +60,75 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-You-gotta-log-in" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/05/17/You-gotta-log-in/" class="article-date">
+  <time datetime="2017-05-17T10:22:52.000Z" itemprop="datePublished">2017-05-17</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/05/17/You-gotta-log-in/">You gotta log in</a>
+    </h1>
+  
+
+
+        
+            <span class="article-author">
+                by
+                Caleb James DeLisle
+            </span>
+        
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>It’s been two and a half years since the <a href="https://github.com/xwiki-labs/cryptpad/commit/1508c7ba71f5de5e51f061fbef45bc1f18493832" target="_blank" rel="external">first commit to CryptPad</a>,
+we no longer have the hideous white and green color-scheme and we’re on our third URL format.
+More importantly we now have a CryptDrive with folders instead of just remembering a few recent
+pads in the browser’s local storage.</p>
+<p>The success of CryptPad as a tool for organizing and collaboration makes us glad to be working on
+the technology, but our desire to avoid collecting metadata has lead to an unsustainable situation.</p>
+<blockquote>
+<p><em>We can’t store data we don’t understand for people we don’t know</em></p>
+</blockquote>
+<p>There has been a proliferation of pads which are not accessed after a while and we don’t know who
+made them or even what type of pad they are. We know that a great many of them are “test pads”,
+if for no other reason, because we made a lot of them. Eventually we will be forced to delete old
+data but we don’t want to delete anything important.</p>
+<p>Starting a few weeks ago we implemented a system called pinning. When you are logged in, your
+browser tells CryptPad all of the things in your drive. We don’t know what’s in them but we know
+they’re important so we shouldn’t delete them. Right now you can log in to CryptPad, go to your
+<a href="https://cryptpad.fr/settings/" target="_blank" rel="external">Settings Page</a> and click the <strong>Usage</strong> button to see how much data
+you are pinning.</p>
+<p>We recognize many users of CryptPad would like to use it anonymously and we will continue to support
+anonymous pads, but soon they will begin to be removed from storage after 3 months of inactivity.
+We’ve also simplified the anonymous CryptDrive because we want to send the message loud and clear
+that <em>pads in the anonymous drive are not safe from deletion</em>.</p>
+<p>So please register and log in, you’ll get 50MB of pinning quota with the full features of CryptDrive
+and you can be sure that none of your pads will ever be removed from the server.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://blog.cryptpad.fr/2017/05/17/You-gotta-log-in/" data-id="cj2t5o1kc0000t9zftrnlqx2c" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-Funding-CryptPad" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/04/20/Funding-CryptPad/" class="article-date">
@@ -121,13 +190,13 @@ So far, this hasn’t been a concern, but as more people take interest in the pr
 In other situations, people use CryptPad to collaborate on reports, code, or presentations.
 At some point, those projects are finished, and those documents are forgotten.</p>
 <p>To address this problem, we’ve implemented <strong>pinning</strong>, which is a way of telling the server that you want a pad to continue to be available.
-Pads that <em>aren’t</em> pinned are liable to be removed after 90 days of not having been read or modified.
+Anonymous pads, that is, <em>those which aren’t pinned by a registered user</em>, are liable to be removed after 90 days of not having been read or modified.
 We believe this time is sufficient to distinguish valuable information from that which is safe to remove.</p>
 <ul>
 <li>Pinning will only be available to registered users.</li>
 <li>Pinning will take effect following our next release, on April 25th, 2017</li>
 <li>Everything that is in your drive will be automatically pinned.<ul>
-<li>new files will be pinned once you add them</li>
+<li>new files will be pinned once you add them to your drive</li>
 <li>removing a file from your drive’s trash will unpin it</li>
 </ul>
 </li>
@@ -144,12 +213,12 @@ Like you, we use free software, and know the benefits of taking responsibility f
 <p>If you’re using CryptPad to host critical information, however, you might consider purchasing a support contract.
 We’re still figuring out the details of our support contracts, however, this approach has proven to be of valuable to XWiki’s many customers in the past.
 You can see an example of XWiki’s pricing <a href="http://www.xwiki.com/en/products/pricing-onpremise" target="_blank" rel="external">here</a>.</p>
-<p>If you plan to use CryptPad for your business, consider that it might be more time and cost effective to have us install and configure everything than to learn to administrate it yourself.
+<p>If you plan to use CryptPad for your business, consider that it might be more time and cost effective to have us install and configure everything than to learn to administrate it on your own.
 Otherwise, if you find that you’re comfortable setting everything up in a basic configuration, but you’d like help configuring your server to behave in a special way, we’ll be there to help.</p>
 <h3 id="Sponsored-development-of-open-source-features"><a href="#Sponsored-development-of-open-source-features" class="headerlink" title="Sponsored development of open source features"></a>Sponsored development of open source features</h3><p>If there’s a particular feature you’d like to see implemented within CryptPad, we’re able to dedicate development time to build it into the software in the best way possible.</p>
 <p>Sponsored development allows us to build features to suit particular users’ needs.
 By integrating those features into the official, open source version of CryptPad, we ensure that they will be used by as many people as possible.
-This helps us refine those features to be even more useful for you, and ensures that they will continue to be supported in the long run.</p>
+This helps us refine those features to be even more useful for you, and ensures that they will continue to be supported well into the future.</p>
 <h2 id="What’s-next"><a href="#What’s-next" class="headerlink" title="What’s next"></a>What’s next</h2><p>Since we announced our <a href="https://blog.cryptpad.fr/2017/02/24/Announcing-biweekly-releases/">bi-weekly release schedule</a>, we’ve tried to make sure that each release contains an exciting feature.
 This time around, we’ve had to set some time aside to implement pinning, as well as code for reporting the size used by any one user’s drive.
 We realize this isn’t especially interesting for most of you, but it will be necessary for some more advanced features which we hope to share with you soon.</p>
@@ -383,90 +452,6 @@ This introduces some difficulty on our end, as we want to provide a resilient pl
 
 
   
-    <article id="post-Announcing-biweekly-releases" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/02/24/Announcing-biweekly-releases/" class="article-date">
-  <time datetime="2017-02-24T15:26:03.000Z" itemprop="datePublished">2017-02-24</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/24/Announcing-biweekly-releases/">Announcing biweekly releases</a>
-    </h1>
-  
-
-
-        
-            <span class="article-author">
-                by
-                Aaron MacSween
-            </span>
-        
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>When I joined the research team at <a href="http://www.xwiki.com/en/team/" target="_blank" rel="external">XWiki</a> a little over a year ago, CryptPad was very much an experiment.
-We had ideas of what we wanted to accomplish, but we didn’t know whether it would work at all, let alone how we were going to get there.</p>
-<p>We’ve come a long way since then.
-Having proven that <em>zero knowledge, real time collaborative editing</em> in the browser was possible, we’ve been thinking about an even more difficult task:</p>
-<blockquote>
-<p>How do we make this something that <em>anybody</em> can use?</p>
-</blockquote>
-<h2 id="How-we’ve-gotten-here"><a href="#How-we’ve-gotten-here" class="headerlink" title="How we’ve gotten here"></a>How we’ve gotten here</h2><p>We’ve built CryptPad from a number of small pieces.
-In some cases, we were lucky enough to find existing software libraries which solved our problems.
-We love when this happens because it keeps us from having to reinvent the wheel, leaving more time for unsolved problems.</p>
-<p>When you try to build something that nobody has built before, however, you run into problems that nobody else cares about.
-We’ve had to build a lot of our own components, and some of them have been incredibly complicated.</p>
-<p>Some bugs only become obvious under very odd circumstances, when users with different browsers do very specific sequences or combinations of actions.
-Our growing userbase has been critical in helping us to identify these kinds of issues, and things have been improving steadily.</p>
-<h2 id="What-we’ve-learned"><a href="#What-we’ve-learned" class="headerlink" title="What we’ve learned"></a>What we’ve learned</h2><p>Our longest delays have come from working on tough problems that managed to get tangled up with smaller bug fixes, which kept them from reaching our users.
-At the end of 2016, however, most of these big, complicated issues were coming to a close.
-Our team took some much-needed vacation time, and upon returning we started working to release and deploy a tagged version of our codebase.</p>
-<p>Our newest features went live to <a href="https://cryptpad.fr" target="_blank" rel="external">CryptPad.fr</a> on Tuesday, the 14th of February.
-Some of them are big enough that we’ll probably dedicate entire blog posts to them, but the release notes are <a href="https://github.com/xwiki-labs/cryptpad/tree/1.0.0" target="_blank" rel="external">on GitHub</a>.</p>
-<h2 id="Our-new-release-policy"><a href="#Our-new-release-policy" class="headerlink" title="Our new release policy"></a>Our new release policy</h2><p>In the interest of getting feedback from our users more quickly, we’ve decided to adopt a two week release cycle.
-We’re going to focus on delivering features that directly improve your experience.</p>
-<p>The live site will run code from our latest <em>master</em> branch, while the upcoming release will be on the <a href="https://github.com/xwiki-labs/cryptpad/tree/staging" target="_blank" rel="external">staging</a> branch.</p>
-<p>Each release will come with a set of notes detailing what we did, and known issues that didn’t quite make it into that version.
-We’ll work on getting those issues fixed in the following cycle.</p>
-<p>Whenever we deploy these big updates, we’ll announce when we expect the next one to arrive.
-Since we started on a Tuesday, we expect to deploy again on Tuesday, February the 28th, 2017.</p>
-<h2 id="Codenamed-releases"><a href="#Codenamed-releases" class="headerlink" title="Codenamed releases"></a>Codenamed releases</h2><p>Since it’s difficult to remember versions of the software if they have names like <code>1.0.0</code>, we’ve decided to give each one a more memorable codename.
-With there being 26 letters in the Latin alphabet, and 26 two week releases in the year, we started looking for alphabetical lists from which we could choose names.
-We didn’t look for very long until we thought of <em>Cryptids</em>…</p>
-<blockquote>
-<p><em>an animal whose existence or survival is disputed or unsubstantiated, such as the yeti</em></p>
-</blockquote>
-<p>We quickly settled on picking a name from this list every two weeks, starting with the letter A, and proceding through the alphabet.
-For version <code>1.0.0</code>, we went with <a href="https://en.wikipedia.org/wiki/Agogwe" target="_blank" rel="external">Agogwe</a>.</p>
-<p>There won’t necessarily be much significance to the name we choose, but we hope that nobody will worry if we choose a particularly frightening cryptid for a given release.
-Some of the code is bound to be difficult and scary to write, but we want your experience to be <em>as easy as possible</em>.</p>
-<p>As always, if you have any feedback you’d like to share, we want to hear it!
-<a href="https://cryptpad.fr/contact.html" target="_blank" rel="external">Contact us</a> and let us know how you use Cryptpad.</p>
-<p>If you aren’t using CryptPad yet, give it a try at <a href="https://cryptpad.fr" target="_blank" rel="external">CryptPad.fr</a>!</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://blog.cryptpad.fr/2017/02/24/Announcing-biweekly-releases/" data-id="cj1q94jba0000jma8m9alyh61" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
   <nav id="page-nav">
@@ -488,7 +473,7 @@ Some of the code is bound to be difficult and scary to write, but we want your e
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li></ul>
     </div>
   </div>
 
@@ -499,6 +484,10 @@ Some of the code is bound to be difficult and scary to write, but we want your e
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2017/05/17/You-gotta-log-in/">You gotta log in</a>
+          </li>
         
           <li>
             <a href="/2017/04/20/Funding-CryptPad/">Funding CryptPad</a>
@@ -514,10 +503,6 @@ Some of the code is bound to be difficult and scary to write, but we want your e
         
           <li>
             <a href="/2017/03/06/Security-growing-pains/">Security growing pains</a>
-          </li>
-        
-          <li>
-            <a href="/2017/02/24/Announcing-biweekly-releases/">Announcing biweekly releases</a>
           </li>
         
       </ul>
