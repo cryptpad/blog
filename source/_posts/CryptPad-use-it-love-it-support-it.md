@@ -1,11 +1,9 @@
 ---
-title: 'CryptPad - use it, love it, support it'
+title: 'CryptPad - use it, love ❤️ it, support it'
 date: 2017-05-23 18:40:35
 author:
 tags:
 ---
-
-# CryptPad - Use it, love ❤️ it, support it
 
 It's been another release day in our little team. Today we released
 [CryptPad v1.7.0 (Hodag)](https://github.com/xwiki-labs/cryptpad/releases/tag/1.7.0). The biggest new feature in this version is that when you create a */code/* pad, the default highlighting is in markdown syntax and there it is rendered in realtime while you type. Try it out by making a pad at [cryptpad.fr/code](https://cryptpad.fr/code).
