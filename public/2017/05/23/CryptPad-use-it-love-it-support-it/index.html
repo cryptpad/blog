@@ -5,13 +5,19 @@
   
   <title>CryptPad - use it, love it, support it | CryptPad Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
+  <meta name="description" content="CryptPad - Use it, love ❤️ it, support itIt’s been another release day in our little team. Today we released
+CryptPad v1.7.0 (Hodag). The biggest new feature in this version is that when you create a">
+<meta property="og:type" content="article">
 <meta property="og:title" content="CryptPad - use it, love it, support it">
 <meta property="og:url" content="https://blog.cryptpad.fr/2017/05/23/CryptPad-use-it-love-it-support-it/index.html">
 <meta property="og:site_name" content="CryptPad Blog">
-<meta property="og:updated_time" content="2017-05-23T16:40:35.000Z">
+<meta property="og:description" content="CryptPad - Use it, love ❤️ it, support itIt’s been another release day in our little team. Today we released
+CryptPad v1.7.0 (Hodag). The biggest new feature in this version is that when you create a">
+<meta property="og:updated_time" content="2017-05-23T16:44:10.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CryptPad - use it, love it, support it">
+<meta name="twitter:description" content="CryptPad - Use it, love ❤️ it, support itIt’s been another release day in our little team. Today we released
+CryptPad v1.7.0 (Hodag). The biggest new feature in this version is that when you create a">
   
     <link rel="alternate" href="/atom.xml" title="CryptPad Blog" type="application/atom+xml">
   
@@ -84,7 +90,36 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h1 id="CryptPad-Use-it-love-❤️-it-support-it"><a href="#CryptPad-Use-it-love-❤️-it-support-it" class="headerlink" title="CryptPad - Use it, love ❤️ it, support it"></a>CryptPad - Use it, love ❤️ it, support it</h1><p>It’s been another release day in our little team. Today we released
+<a href="https://github.com/xwiki-labs/cryptpad/releases/tag/1.7.0" target="_blank" rel="external">CryptPad v1.7.0 (Hodag)</a>. The biggest new feature in this version is that when you create a <em>/code/</em> pad, the default highlighting is in markdown syntax and there it is rendered in realtime while you type. Try it out by making a pad at <a href="https://cryptpad.fr/code" target="_blank" rel="external">cryptpad.fr/code</a>.</p>
+<p>In this release we also completed something much more important and central to the future of CryptPad. We finished our first version of the payment server which allows you to take a subscription and help support the work that we do.</p>
+<p>Starting with this release we are now imposing a 50MB storage limit for our anonymous users and a 3 month expiration of pads which are not stored by a registered user. </p>
+<p>Instant collaboration is the vision of CryptPad and we are committed to continuing to provide that and even providing 50MB of persistant storage for anyone who is willing to sign up.</p>
+<p>For people who are ready to take the next step, we are now providing subscriptions which will improve how you organize your information while helping CryptPad to grow and improve.</p>
+<h2 id="Plans"><a href="#Plans" class="headerlink" title="Plans"></a>Plans</h2><ol>
+<li>Personal (5GB storage, 5€/month ex. VAT)<ul>
+<li>This is best for an individual using lots of pads for collaboration and note taking. For the price of a sandwich you can stay organized on all of your devices while also keeping your privacy private.</li>
+</ul>
+</li>
+<li>Standard (20GB storage, 10€/month ex. VAT)<ul>
+<li>For the price of lunch, you can have 20GB of storage, enough for not only pads but also for the soon to launch File Upload which will allow Zero Knowledge storage of files such as pictures and PDF documents. With the Standard plan you can add one more friend for free.</li>
+</ul>
+</li>
+<li>Team (50GB storage, 15€/month ex. VAT)<ul>
+<li>If you’re ready to extend your usage of CryptPad to an entire team, we are ready to help you succeed. With a Team plan you get 50GB of data storage in CryptPad, plenty for files and pads. You also get to add <strong>five</strong> people to your plan and you get professional support available in English and French.</li>
+</ul>
+</li>
+</ol>
+<p>Our goal is to make the best collaboration tool available while still being unable to sell or leak your content. Help us succeed, helping you stay organized and help show the world that Zero Knowledge Cloud is possible.</p>
+<h2 id="For-Admins"><a href="#For-Admins" class="headerlink" title="For Admins"></a>For Admins</h2><p>If you’re hosting your own instance of CryptPad, there are a few things you’ll need to do when you upgrade to Hodag. The limits code is still somewhat of a mess and while we get it tied down, you’ll need to do a bit of work to disable it.</p>
+<p>First there is a serverside per-user storage limit defined in <code>config.js</code> You’ll want to set this to a big number like so:</p>
+<pre><code>defaultStorageLimit: Number.MAX_SAFE_INTEGER
+</code></pre><p>Then there is <code>customize/application_config.js</code>. If you’re not familiar with <code>/customize/</code>, you can create this directory and then copy <code>application_config.js</code> over from the <code>/customize.dist/</code> directory so it will not be overwritten. The server will try looking in <code>/customize/</code> first.</p>
+<p>Inside of <code>application_config.js</code> you’ll need to update the <code>enablePinLimit</code> line like so:</p>
+<pre><code>enablePinLimit = false;
+</code></pre><p>If you’re using your own CryptPad installation in a business context, please consider contacting <a href="mailto:sales@cryptpad.fr" target="_blank" rel="external">sales@cryptpad.fr</a> for an on-premisis support contract. You’ll get help with upgrades and early information about security issues.</p>
+<h2 id="What’s-Next"><a href="#What’s-Next" class="headerlink" title="What’s Next"></a>What’s Next</h2><p>In the coming month, we’re hoping to roll out text coloring based on the authors of the document as well as file upload for PDF and image embedding. Eventually we plan to add Zero Knowledge spreadsheets and workgroups for team collaboration.</p>
+
       
     </div>
     <footer class="article-footer">
