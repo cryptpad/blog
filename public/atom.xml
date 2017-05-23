@@ -5,7 +5,7 @@
   <link href="//atom.xml" rel="self"/>
   
   <link href="https://blog.cryptpad.fr/"/>
-  <updated>2017-05-23T16:45:58.000Z</updated>
+  <updated>2017-05-23T17:19:50.000Z</updated>
   <id>https://blog.cryptpad.fr/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://blog.cryptpad.fr/2017/05/23/CryptPad-use-it-love-it-support-it/"/>
     <id>https://blog.cryptpad.fr/2017/05/23/CryptPad-use-it-love-it-support-it/</id>
     <published>2017-05-23T16:40:35.000Z</published>
-    <updated>2017-05-23T16:45:58.000Z</updated>
+    <updated>2017-05-23T17:19:50.000Z</updated>
     
     <summary type="html">
     
@@ -106,13 +106,11 @@ Each day
     <link href="https://blog.cryptpad.fr/2017/03/06/Security-growing-pains/"/>
     <id>https://blog.cryptpad.fr/2017/03/06/Security-growing-pains/</id>
     <published>2017-03-06T10:04:58.000Z</published>
-    <updated>2017-03-24T13:41:05.000Z</updated>
+    <updated>2017-05-23T17:25:28.000Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;To sum things up:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/Framartin&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Martin Gubri&lt;/a&gt; volunteered to help
+      &lt;p&gt;&lt;em&gt;Update: The issue mentioned in this blog post was assigned &lt;a href=&quot;https://github.com/distributedweaknessfiling/DWF-CVE-2017-1000000
     
     </summary>
     

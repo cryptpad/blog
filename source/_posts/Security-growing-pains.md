@@ -5,6 +5,8 @@ author: Caleb James Delisle
 tags:
 ---
 
+*Update: The issue mentioned in this blog post was assigned [CVE-2017-1000051](https://github.com/distributedweaknessfiling/DWF-CVE-2017-1000000/blob/f2e15ac3468dd382d9ffa3d5acc032c106f3248c/CVE-2017-1000051.json) by Distributed Weakness Filing, thanks Martin Gubri for applying for the number.*
+
 To sum things up:
 
 1. [Martin Gubri](https://github.com/Framartin) volunteered to help us with security testing and found multiple XSS vulnerabilities

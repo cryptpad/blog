@@ -12,7 +12,7 @@ In this release we also completed something much more important and central to t
 
 Starting with this release we are now imposing a 50MB storage limit for our anonymous users and a 3 month expiration of pads which are not stored by a registered user. 
 
-Instant collaboration is the vision of CryptPad and we are committed to continuing to provide that and even providing 50MB of persistant storage for anyone who is willing to sign up.
+Instant collaboration is the vision of CryptPad and we are committed to continuing to provide that and even providing 50MB of persistent storage for anyone who is willing to sign up.
 
 For people who are ready to take the next step, we are now providing subscriptions which will improve how you organize your information while helping CryptPad to grow and improve.
 
@@ -41,7 +41,7 @@ Inside of `application_config.js` you'll need to update the `enablePinLimit` lin
 
     enablePinLimit = false;
 
-If you're using your own CryptPad installation in a business context, please consider contacting [sales@cryptpad.fr](mailto:sales@cryptpad.fr) for an on-premisis support contract. You'll get help with upgrades and early information about security issues.
+If you're using your own CryptPad installation in a business context, please consider contacting [sales@cryptpad.fr](mailto:sales@cryptpad.fr) for an on-premises support contract. You'll get help with upgrades and early information about security issues.
 
 ## What's Next
 
