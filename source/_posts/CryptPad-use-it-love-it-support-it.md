@@ -45,4 +45,4 @@ If you're using your own CryptPad installation in a business context, please con
 
 ## What's Next
 
-In the coming month, we're hoping to roll out text coloring based on the authors of the document as well as file upload for PDF and image embedding. Eventually we plan to add Zero Knowledge spreadsheets and workgroups for team collaboration.
+In the coming months, we're hoping to roll out text coloring based on the authors of the document as well as file upload for PDF and image embedding. Eventually we plan to add Zero Knowledge spreadsheets and workgroups for team collaboration.
