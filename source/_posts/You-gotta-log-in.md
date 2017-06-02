@@ -3,6 +3,8 @@ title: You gotta log in
 date: 2017-05-17 12:22:52
 author: Caleb James DeLisle
 tags:
+  - Login
+  - Storage
 ---
 
 It's been two and a half years since the [first commit to CryptPad](https://github.com/xwiki-labs/cryptpad/commit/1508c7ba71f5de5e51f061fbef45bc1f18493832),

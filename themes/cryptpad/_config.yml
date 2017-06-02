@@ -13,7 +13,7 @@ excerpt_link: Read More
 sidebar: right
 widgets:
 - category
-- tag
+#- tag ## This shows all tags ever and the cloud also shows them so lets remove it.
 - tagcloud
 - archive
 - recent_posts

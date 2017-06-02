@@ -60,6 +60,68 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-What-is-Zero-Knowledge" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/03/24/What-is-Zero-Knowledge/" class="article-date">
+  <time datetime="2017-03-24T13:42:03.000Z" itemprop="datePublished">2017-03-24</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/24/What-is-Zero-Knowledge/">What is Zero Knowledge</a>
+    </h1>
+  
+
+
+        
+            <span class="article-author">
+                by
+                Caleb James DeLisle
+            </span>
+        
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>We have gotten a lot of questions about the concept of Zero Knowledge, the vision and ethics as well as the exact meaning.</p>
+<ul>
+<li>What is Zero Knowledge?</li>
+<li>How can encryption in the browser be secure?</li>
+<li>What about metadata?</li>
+<li>Most importantly: How to know if a service is Zero Knowledge?</li>
+</ul>
+<p>I wanted to write a blog post to clarify what Zero Knowledge is all about. Zero Knowledge has two meanings, it can refer to a <em>Zero Knowledge Proof</em>, an obscure mathematical construct with few real-world uses but it can also refer to something with a very real-world meaning: web services which encrypt your content so that they themselves cannot read it. You may be wondering how this can be secure when a web administrator can quietly change their site to an unencrypted version at any time. This is a real problem, there is currently no way to verify the content (and code) of a website, but we need not despair. Even though we cannot prove that a website is <em>secure</em>, we can check that they are promising to make themselves blind to your content and they make that promise knowing if break it they might get caught.</p>
+<h2 id="Security-is-probabilistic"><a href="#Security-is-probabilistic" class="headerlink" title="Security is probabilistic"></a>Security is probabilistic</h2><p>Consider the security software you use every day such as your web browser with HTTPS, your phone and your computer’s operating system. Have you ever stopped to check that software for “backdoors” (intentionally inserted which break your security)? If you have then you are one of the tiny group of heroes who dedicate their time to making the world a bit more robust and I salute you for it. If you’re like the rest of us, you just hope that the authors of that software were honest enough and protective enough of their reputations to avoid inserting a backdoor when it means potentially getting caught. Zero Knowledge is based on the same logic, just as software makers can surreptitiously add a backdoor to their software, Zero Knowledge websites can serve a backdoor to the user. However, just as software makers who insert backdoors in their software risk getting caught, Zero Knowledge web app providers who insert backdoors in their website also risk being caught.</p>
+<h2 id="The-metadata-question"><a href="#The-metadata-question" class="headerlink" title="The metadata question"></a>The metadata question</h2><p>Metadata is a serious issue. Former CIA director Michael Hayden said of the agency: “We kill people based on metadata”. I don’t want to belittle the importance of data which is not the actual content, but at the same time we must recognize that there is a huge uphill climb fix this issue. While the CryptPad project tries not to collect metadata when it can be avoided, we also recognize that other cloud providers may collect more or less metadata than us in order to provide their services. Fundamentally, we accept that a service qualifies as Zero Knowledge as long as the <em>content</em> is protected from the server operators. We are committed to studying ways to develop new, more secure solutions to the metadata issue but the spirit of Zero Knowledge is about more ethical solutions which are immediately actionable.</p>
+<h2 id="How-to-know-if-a-service-is-Zero-Knowledge"><a href="#How-to-know-if-a-service-is-Zero-Knowledge" class="headerlink" title="How to know if a service is Zero Knowledge"></a>How to know if a service is Zero Knowledge</h2><p>Zero Knowledge is about trust, nobody can read over and verify all of the code of all of the Zero Knowledge services available, but there are some heuristics which you can use when choosing a service.</p>
+<h3 id="1-Is-it-primarily-Open-Source"><a href="#1-Is-it-primarily-Open-Source" class="headerlink" title="1. Is it primarily Open Source ?"></a>1. Is it primarily Open Source ?</h3><p>Services which are primarily Open Source are easier to evaluate both for accidental security mistakes and for potentially nefarious behavior. Furthermore, when a company commits their software to Open Source they make a statement that they are in the business of being an ethical provider for the long term and are not just riding the wave of a popular term.</p>
+<h3 id="2-Were-you-warned-about-losing-your-password"><a href="#2-Were-you-warned-about-losing-your-password" class="headerlink" title="2. Were you warned about losing your password ?"></a>2. Were you warned about losing your password ?</h3><p>True Zero Knowledge services must protect your data from themselves using something you know and they don’t, such as your password… In the event that you lose your password and you are using a true Zero Knowledge service, your content will be inaccessible to you and to the service - the locks that keep them out will keep you out as well. Check for this warning.</p>
+<h3 id="3-Does-it-claim-to-be-Zero-Knowledge-or-End-to-end-Encrypted"><a href="#3-Does-it-claim-to-be-Zero-Knowledge-or-End-to-end-Encrypted" class="headerlink" title="3. Does it claim to be Zero Knowledge or End-to-end Encrypted ?"></a>3. Does it claim to be Zero Knowledge or End-to-end Encrypted ?</h3><p>This is perhaps the most important question, because when a service provider makes the public statement that they are Zero Knowledge, they show they are prepared to risk their reputation if they are discovered to be storing your content in a way they can access. Some Zero Knowledge providers prefer the term <em>End-to-end Encrypted</em> which has gained significant popularity with messaging apps. There is no functional difference between a Zero Knowledge application and one which advertizes End-to-end Encryption.</p>
+<h2 id="Talk-to-us"><a href="#Talk-to-us" class="headerlink" title="Talk to us"></a>Talk to us</h2><p>CryptPad is developed by a team of 3 people with generous financing from BPIFrance through the <a href="http://ng.open-paas.org/about-us.html" target="_blank" rel="external">OpenPaaS::NG Research Project</a>. Our mission is to make Cloud Computing more ethical by promoting Zero Knowledge Cloud Services and show young entrepreneurs that it is possible to make a living while being ethical with peoples’ data. Meet us in our IRC/Matrix channel on Freenode and at: <a href="https://riot.im/app/#/room/#cryptpad:matrix.org" target="_blank" rel="external">https://riot.im/app/#/room/#cryptpad:matrix.org</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://blog.cryptpad.fr/2017/03/24/What-is-Zero-Knowledge/" data-id="cj3fsmc4t0007f4zf7k7crre7" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Security/">Security</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Zero-Knowledge/">Zero Knowledge</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-Security-growing-pains" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/03/06/Security-growing-pains/" class="article-date">
@@ -121,9 +183,11 @@ This introduces some difficulty on our end, as we want to provide a resilient pl
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://blog.cryptpad.fr/2017/03/06/Security-growing-pains/" data-id="cj31sf8ol00054bzfjj78bgup" class="article-share-link">Share</a>
+      <a data-url="https://blog.cryptpad.fr/2017/03/06/Security-growing-pains/" data-id="cj3fsmc4q0005f4zf5qj666fd" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Security/">Security</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/XSS/">XSS</a></li></ul>
+
     </footer>
   </div>
   
@@ -205,9 +269,11 @@ Some of the code is bound to be difficult and scary to write, but we want your e
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://blog.cryptpad.fr/2017/02/24/Announcing-biweekly-releases/" data-id="cj31sf8of00014bzfr54hccm6" class="article-share-link">Share</a>
+      <a data-url="https://blog.cryptpad.fr/2017/02/24/Announcing-biweekly-releases/" data-id="cj3fsmc4d0000f4zf2woglb7j" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Release/">Release</a></li></ul>
+
     </footer>
   </div>
   
@@ -365,9 +431,11 @@ decision of some organizations to keep parts of their codebases proprietary.</p>
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://blog.cryptpad.fr/2017/02/20/Time-to-Encrypt-the-Cloud/" data-id="cj31sf8ow00064bzf5qmhd34z" class="article-share-link">Share</a>
+      <a data-url="https://blog.cryptpad.fr/2017/02/20/Time-to-Encrypt-the-Cloud/" data-id="cj3fsmc4r0006f4zflni7wqp7" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Zero-Knowledge/">Zero Knowledge</a></li></ul>
+
     </footer>
   </div>
   
@@ -389,15 +457,19 @@ decision of some organizations to keep parts of their codebases proprietary.</p>
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Cloud/" style="font-size: 10px;">Cloud</a> <a href="/tags/Donate/" style="font-size: 10px;">Donate</a> <a href="/tags/Ethics/" style="font-size: 10px;">Ethics</a> <a href="/tags/Financing/" style="font-size: 20px;">Financing</a> <a href="/tags/Login/" style="font-size: 10px;">Login</a> <a href="/tags/Lulz/" style="font-size: 10px;">Lulz</a> <a href="/tags/Open-Source/" style="font-size: 10px;">Open Source</a> <a href="/tags/Release/" style="font-size: 10px;">Release</a> <a href="/tags/Research/" style="font-size: 10px;">Research</a> <a href="/tags/Security/" style="font-size: 20px;">Security</a> <a href="/tags/Storage/" style="font-size: 10px;">Storage</a> <a href="/tags/XSS/" style="font-size: 10px;">XSS</a> <a href="/tags/Zero-Knowledge/" style="font-size: 20px;">Zero Knowledge</a>
+    </div>
+  </div>
 
-  
-    
   
     
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li></ul>
     </div>
   </div>
 
@@ -408,6 +480,10 @@ decision of some organizations to keep parts of their codebases proprietary.</p>
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2017/06/02/Building-mutually-beneficial-relationships/">Building mutually beneficial relationships</a>
+          </li>
         
           <li>
             <a href="/2017/05/23/CryptPad-use-it-love-it-support-it/">CryptPad - use it, love ❤️ it, support it</a>
@@ -423,10 +499,6 @@ decision of some organizations to keep parts of their codebases proprietary.</p>
         
           <li>
             <a href="/2017/04/01/Exciting-news/">Exciting news</a>
-          </li>
-        
-          <li>
-            <a href="/2017/03/24/What-is-Zero-Knowledge/">What is Zero Knowledge</a>
           </li>
         
       </ul>

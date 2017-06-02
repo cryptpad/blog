@@ -3,6 +3,7 @@ title: Exciting news
 date: 2017-04-01 00:03:49
 author: Aaron MacSween
 tags:
+  - Lulz
 ---
 
 Here in the research department of XWiki SAS, which you may know as _the CryptPad team_, we take our work very seriously.
