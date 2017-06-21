@@ -5,7 +5,7 @@
   <link href="//atom.xml" rel="self"/>
   
   <link href="https://blog.cryptpad.fr/"/>
-  <updated>2017-06-02T12:14:42.000Z</updated>
+  <updated>2017-06-21T12:57:54.000Z</updated>
   <id>https://blog.cryptpad.fr/</id>
   
   <author>
@@ -14,6 +14,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CryptPad Jacalope - File Upload, PDF and Pictures</title>
+    <link href="https://blog.cryptpad.fr/2017/06/21/CryptPad-Jacalope-file-upload-pdf-and-pictures/"/>
+    <id>https://blog.cryptpad.fr/2017/06/21/CryptPad-Jacalope-file-upload-pdf-and-pictures/</id>
+    <published>2017-06-21T10:48:48.000Z</published>
+    <updated>2017-06-21T12:57:54.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Yesterday we released CryptPad v1.9.0 Jacalope, we have some exciting new features
+which we’ve been working on for a long time. As part o
+    
+    </summary>
+    
+    
+      <category term="PDF" scheme="https://blog.cryptpad.fr/tags/PDF/"/>
+    
+      <category term="File" scheme="https://blog.cryptpad.fr/tags/File/"/>
+    
+      <category term="Upload" scheme="https://blog.cryptpad.fr/tags/Upload/"/>
+    
+      <category term="Embed" scheme="https://blog.cryptpad.fr/tags/Embed/"/>
+    
+  </entry>
   
   <entry>
     <title>Building mutually beneficial relationships</title>
@@ -30,11 +55,11 @@
     </summary>
     
     
+      <category term="Open Source" scheme="https://blog.cryptpad.fr/tags/Open-Source/"/>
+    
       <category term="Cloud" scheme="https://blog.cryptpad.fr/tags/Cloud/"/>
     
       <category term="Ethics" scheme="https://blog.cryptpad.fr/tags/Ethics/"/>
-    
-      <category term="Open Source" scheme="https://blog.cryptpad.fr/tags/Open-Source/"/>
     
   </entry>
   
