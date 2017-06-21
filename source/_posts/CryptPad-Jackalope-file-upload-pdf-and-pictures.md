@@ -1,5 +1,5 @@
 ---
-title: CryptPad Jacalope - File Upload, PDF and Pictures
+title: CryptPad Jackalope - File Upload, PDF and Pictures
 date: 2017-06-21 12:48:48
 author: Caleb James DeLisle
 tags:
@@ -9,7 +9,7 @@ tags:
   - Embed
 ---
 
-Yesterday we released CryptPad v1.9.0 Jacalope, we have some exciting new features
+Yesterday we released CryptPad v1.9.0 Jackalope, we have some exciting new features
 which we've been working on for a long time. As part of the UCF project we have
 implemented a Zero Knowledge `media-tag` in CryptPad for displaying and downloading
 encrypted files stored in CryptPad. Starting now, you can upload files by clicking
@@ -42,3 +42,7 @@ written in Markdown, this means you get a live action preview of what your
 presentation slides are going to look like.
 
 ![Slide Preview and Drag & Drop](/images/CryptPad_slide_upload_and_preview.png)
+
+## Try it now
+
+Head over to [cryptpad.fr](https://cryptpad.fr) and give CryptPad a try !
