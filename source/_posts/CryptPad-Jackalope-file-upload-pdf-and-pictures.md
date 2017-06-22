@@ -10,13 +10,13 @@ tags:
 ---
 
 Yesterday we released CryptPad v1.9.0 Jackalope, we have some exciting new features
-which we've been working on for a long time. As part of the UCF project we have
-implemented a Zero Knowledge `media-tag` in CryptPad for displaying and downloading
-encrypted files stored in CryptPad. Starting now, you can upload files by clicking
-the upload button or dragging them into your CryptDrive. You can also view pictures
-and PDF files in CryptPad and you can drag-and-drop pictures **directly** into
-presentations. In the next release we will hopefully be adding drag-and-drop
-pictures into the pad.
+which we've been working on for a long time. As part of the
+[UCF project](https://github.com/UCF-project) we have implemented a Zero Knowledge
+`media-tag` in CryptPad for displaying and downloading encrypted files stored in
+CryptPad. Starting now, you can upload files by clicking the upload button or
+dragging them into your CryptDrive. You can also view pictures and PDF files in
+CryptPad and you can drag-and-drop pictures **directly** into presentations. In the
+next release we will hopefully be adding drag-and-drop pictures into the pad.
 
 ![CryptDrive Upload](/images/CryptPad_drive_with_upload.png)
 
