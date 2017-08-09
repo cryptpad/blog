@@ -100,6 +100,9 @@ We did this not only because Open Source is in our culture, but also because we 
 * Send and receive end-to-end encrypted email using your normal email account (Mobile, Desktop version coming soon)
   * https://prettyeasyprivacy.com/
   * https://cacert.pep.foundation/trac
+* Send end-to-end encrypted text messages on a phone or computer
+  * https://wire.com/en/
+  * https://github.com/wireapp/
 * Send end-to-end encrypted text messages on your phone
   * https://whispersystems.org/
   * Source Code: https://github.com/whispersystems
@@ -122,7 +125,6 @@ decision of some organizations to keep parts of their codebases proprietary.
   * https://www.pcloud.com
   * https://spideroak.com/personal/spideroak-one
 * Chat and instant messaging
-  * https://wire.com/en/
   * https://spideroak.com/personal/semaphor
 * Send and receive end-to-end encrypted email
   * https://protonmail.com/
@@ -131,3 +133,7 @@ decision of some organizations to keep parts of their codebases proprietary.
 
 
 An important one which we forgot? [Get in touch](https://cryptpad.fr/contact.html)!
+
+### Updated
+
+* August 9, 2017, Wire is now fully Open Source, yay
