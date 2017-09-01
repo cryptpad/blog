@@ -5,7 +5,7 @@
   <link href="//atom.xml" rel="self"/>
   
   <link href="https://blog.cryptpad.fr/"/>
-  <updated>2017-08-18T10:47:51.000Z</updated>
+  <updated>2017-09-01T08:24:50.000Z</updated>
   <id>https://blog.cryptpad.fr/</id>
   
   <author>
@@ -14,6 +14,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CryptPad&#39;s new Secure Cross-Domain Iframe</title>
+    <link href="https://blog.cryptpad.fr/2017/08/30/CryptPad-s-new-Secure-Cross-Domain-Iframe/"/>
+    <id>https://blog.cryptpad.fr/2017/08/30/CryptPad-s-new-Secure-Cross-Domain-Iframe/</id>
+    <published>2017-08-30T14:53:00.000Z</published>
+    <updated>2017-09-01T08:24:50.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;script src=&quot;https://cryptpad.fr/common/media-tag-nacl.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;CryptPad version 1.14 (Codename &lt;a href=&quot;https://en.wikipedia.o
+    
+    </summary>
+    
+    
+      <category term="security" scheme="https://blog.cryptpad.fr/tags/security/"/>
+    
+      <category term="appstore" scheme="https://blog.cryptpad.fr/tags/appstore/"/>
+    
+      <category term="iframe" scheme="https://blog.cryptpad.fr/tags/iframe/"/>
+    
+      <category term="media-tag" scheme="https://blog.cryptpad.fr/tags/media-tag/"/>
+    
+  </entry>
   
   <entry>
     <title>CryptPad&#39;s New Direction</title>
@@ -207,9 +233,9 @@ Each day
     </summary>
     
     
-      <category term="Security" scheme="https://blog.cryptpad.fr/tags/Security/"/>
-    
       <category term="Zero Knowledge" scheme="https://blog.cryptpad.fr/tags/Zero-Knowledge/"/>
+    
+      <category term="Security" scheme="https://blog.cryptpad.fr/tags/Security/"/>
     
   </entry>
   
