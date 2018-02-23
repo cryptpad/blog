@@ -3,9 +3,9 @@ title: CryptPad Analytics & Privacy - What we can't know, what we must know, wha
 date: 2017-07-07 13:41:02
 author: Caleb James DeLisle
 tags:
-  - Analytics
-  - Data
-  - Privacy
+  - analytics
+  - data
+  - privacy
 ---
 
 CryptPad is a Zero Knowledge cloud application, this means we have designed it such

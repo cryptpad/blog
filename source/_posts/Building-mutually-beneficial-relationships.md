@@ -3,9 +3,9 @@ title: Building mutually beneficial relationships
 date: 2017-06-02 13:52:47
 author: Caleb James DeLisle
 tags:
-  - Open Source
-  - Cloud
-  - Ethics
+  - open source
+  - cloud
+  - ethics
 ---
  
 *People hosting instances of CryptPad should read at least the

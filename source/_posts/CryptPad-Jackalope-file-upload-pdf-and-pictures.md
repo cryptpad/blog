@@ -3,10 +3,10 @@ title: CryptPad Jackalope - File Upload, PDF and Pictures
 date: 2017-06-21 12:48:48
 author: Caleb James DeLisle
 tags:
-  - PDF
-  - File
-  - Upload
-  - Embed
+  - pdf
+  - file
+  - upload
+  - embed
 ---
 
 Yesterday we released CryptPad v1.9.0 Jackalope, we have some exciting new features

@@ -3,7 +3,7 @@ title: Time to Encrypt the Cloud
 date: 2017-02-20 17:54:02
 author: Caleb James DeLisle
 tags:
-  - Zero Knowledge
+  - zero knowledge
 ---
 
 From typing a business letter to taking pictures with friends, the internet has changed every part of our lives.

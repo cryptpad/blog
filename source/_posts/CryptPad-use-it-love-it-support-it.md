@@ -3,8 +3,8 @@ title: 'CryptPad - use it, love ❤️ it, support it'
 date: 2017-05-23 18:40:35
 author: Caleb James DeLisle
 tags:
-  - Donate
-  - Financing
+  - donate
+  - financing
 ---
 
 It's been another release day in our little team. Today we released
