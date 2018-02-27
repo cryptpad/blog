@@ -2,10 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>CryptPad Blog</title>
   
+  
   <link href="//atom.xml" rel="self"/>
   
   <link href="https://blog.cryptpad.fr/"/>
-  <updated>2017-09-01T08:24:50.000Z</updated>
+  <updated>2018-02-27T14:43:53.557Z</updated>
   <id>https://blog.cryptpad.fr/</id>
   
   <author>
@@ -16,17 +17,45 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>One year of biweekly releases</title>
+    <link href="https://blog.cryptpad.fr/2018/02/23/One-year-of-biweekly-releases/"/>
+    <id>https://blog.cryptpad.fr/2018/02/23/One-year-of-biweekly-releases/</id>
+    <published>2018-02-23T13:37:15.000Z</published>
+    <updated>2018-02-27T14:43:53.557Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Approximately one year ago, we published an article about our intention to follow a &lt;a href=&quot;/2017/02/24/Announcing-biweekly-releases/&quot;&gt;b
+      
+    
+    </summary>
+    
+    
+      <category term="security" scheme="https://blog.cryptpad.fr/tags/security/"/>
+    
+      <category term="release" scheme="https://blog.cryptpad.fr/tags/release/"/>
+    
+      <category term="roadmap" scheme="https://blog.cryptpad.fr/tags/roadmap/"/>
+    
+  </entry>
+  
+  <entry>
     <title>CryptPad&#39;s new Secure Cross-Domain Iframe</title>
     <link href="https://blog.cryptpad.fr/2017/08/30/CryptPad-s-new-Secure-Cross-Domain-Iframe/"/>
     <id>https://blog.cryptpad.fr/2017/08/30/CryptPad-s-new-Secure-Cross-Domain-Iframe/</id>
     <published>2017-08-30T14:53:00.000Z</published>
-    <updated>2017-09-01T08:24:50.000Z</updated>
+    <updated>2018-02-23T13:42:23.891Z</updated>
     
     <summary type="html">
     
-      &lt;script src=&quot;https://cryptpad.fr/common/media-tag-nacl.min.js&quot;&gt;&lt;/script&gt;
+      
+      
+        &lt;script src=&quot;https://cryptpad.fr/common/media-tag-nacl.min.js&quot;&gt;&lt;/script&gt;
 
 &lt;p&gt;CryptPad version 1.14 (Codename &lt;a href=&quot;https://en.wikipedia.o
+      
     
     </summary>
     
@@ -46,12 +75,15 @@
     <link href="https://blog.cryptpad.fr/2017/08/18/CryptPad-s-New-Direction/"/>
     <id>https://blog.cryptpad.fr/2017/08/18/CryptPad-s-New-Direction/</id>
     <published>2017-08-18T10:14:39.000Z</published>
-    <updated>2017-08-18T10:47:51.000Z</updated>
+    <updated>2018-02-23T13:42:21.975Z</updated>
     
     <summary type="html">
     
-      &lt;blockquote&gt;
+      
+      
+        &lt;blockquote&gt;
 &lt;p&gt;If you are hosting CryptPad, please make sure you are up to date. &lt;a href=&quot;https://github.com/xwiki-labs/cryptpad/releases/t
+      
     
     </summary>
     
@@ -69,21 +101,24 @@
     <link href="https://blog.cryptpad.fr/2017/07/07/cryptpad-analytics-what-we-cant-know-what-we-must-know-what-we-want-to-know/"/>
     <id>https://blog.cryptpad.fr/2017/07/07/cryptpad-analytics-what-we-cant-know-what-we-must-know-what-we-want-to-know/</id>
     <published>2017-07-07T11:41:02.000Z</published>
-    <updated>2017-07-07T11:50:26.000Z</updated>
+    <updated>2018-02-23T13:42:12.959Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;CryptPad is a Zero Knowledge cloud application, this means we have designed it such
+      
+      
+        &lt;p&gt;CryptPad is a Zero Knowledge cloud application, this means we have designed it such
 that we do not have any access to the content which i
+      
     
     </summary>
     
     
-      <category term="Analytics" scheme="https://blog.cryptpad.fr/tags/Analytics/"/>
+      <category term="analytics" scheme="https://blog.cryptpad.fr/tags/analytics/"/>
     
-      <category term="Data" scheme="https://blog.cryptpad.fr/tags/Data/"/>
+      <category term="data" scheme="https://blog.cryptpad.fr/tags/data/"/>
     
-      <category term="Privacy" scheme="https://blog.cryptpad.fr/tags/Privacy/"/>
+      <category term="privacy" scheme="https://blog.cryptpad.fr/tags/privacy/"/>
     
   </entry>
   
@@ -92,23 +127,26 @@ that we do not have any access to the content which i
     <link href="https://blog.cryptpad.fr/2017/06/21/CryptPad-Jackalope-file-upload-pdf-and-pictures/"/>
     <id>https://blog.cryptpad.fr/2017/06/21/CryptPad-Jackalope-file-upload-pdf-and-pictures/</id>
     <published>2017-06-21T10:48:48.000Z</published>
-    <updated>2017-06-22T15:39:54.000Z</updated>
+    <updated>2018-02-23T13:42:19.755Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;Yesterday we released CryptPad v1.9.0 Jackalope, we have some exciting new features
+      
+      
+        &lt;p&gt;Yesterday we released CryptPad v1.9.0 Jackalope, we have some exciting new features
 which we’ve been working on for a long time. As part 
+      
     
     </summary>
     
     
-      <category term="PDF" scheme="https://blog.cryptpad.fr/tags/PDF/"/>
+      <category term="pdf" scheme="https://blog.cryptpad.fr/tags/pdf/"/>
     
-      <category term="File" scheme="https://blog.cryptpad.fr/tags/File/"/>
+      <category term="file" scheme="https://blog.cryptpad.fr/tags/file/"/>
     
-      <category term="Upload" scheme="https://blog.cryptpad.fr/tags/Upload/"/>
+      <category term="upload" scheme="https://blog.cryptpad.fr/tags/upload/"/>
     
-      <category term="Embed" scheme="https://blog.cryptpad.fr/tags/Embed/"/>
+      <category term="embed" scheme="https://blog.cryptpad.fr/tags/embed/"/>
     
   </entry>
   
@@ -117,21 +155,24 @@ which we’ve been working on for a long time. As part
     <link href="https://blog.cryptpad.fr/2017/06/02/Building-mutually-beneficial-relationships/"/>
     <id>https://blog.cryptpad.fr/2017/06/02/Building-mutually-beneficial-relationships/</id>
     <published>2017-06-02T11:52:47.000Z</published>
-    <updated>2017-06-02T12:14:42.000Z</updated>
+    <updated>2018-02-23T13:42:07.543Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;em&gt;People hosting instances of CryptPad should read at least the
+      
+      
+        &lt;p&gt;&lt;em&gt;People hosting instances of CryptPad should read at least the
 &lt;a href=&quot;/2017/06/02/Building-mutually-beneficial-relationships/#Change
+      
     
     </summary>
     
     
-      <category term="Open Source" scheme="https://blog.cryptpad.fr/tags/Open-Source/"/>
+      <category term="open source" scheme="https://blog.cryptpad.fr/tags/open-source/"/>
     
-      <category term="Cloud" scheme="https://blog.cryptpad.fr/tags/Cloud/"/>
+      <category term="cloud" scheme="https://blog.cryptpad.fr/tags/cloud/"/>
     
-      <category term="Ethics" scheme="https://blog.cryptpad.fr/tags/Ethics/"/>
+      <category term="ethics" scheme="https://blog.cryptpad.fr/tags/ethics/"/>
     
   </entry>
   
@@ -140,19 +181,22 @@ which we’ve been working on for a long time. As part
     <link href="https://blog.cryptpad.fr/2017/05/23/CryptPad-use-it-love-it-support-it/"/>
     <id>https://blog.cryptpad.fr/2017/05/23/CryptPad-use-it-love-it-support-it/</id>
     <published>2017-05-23T16:40:35.000Z</published>
-    <updated>2017-06-02T12:16:01.000Z</updated>
+    <updated>2018-02-23T13:42:27.619Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;It’s been another release day in our little team. Today we released
+      
+      
+        &lt;p&gt;It’s been another release day in our little team. Today we released
 &lt;a href=&quot;https://github.com/xwiki-labs/cryptpad/releases/tag/1.7.0&quot; t
+      
     
     </summary>
     
     
-      <category term="Donate" scheme="https://blog.cryptpad.fr/tags/Donate/"/>
+      <category term="donate" scheme="https://blog.cryptpad.fr/tags/donate/"/>
     
-      <category term="Financing" scheme="https://blog.cryptpad.fr/tags/Financing/"/>
+      <category term="financing" scheme="https://blog.cryptpad.fr/tags/financing/"/>
     
   </entry>
   
@@ -161,18 +205,21 @@ which we’ve been working on for a long time. As part
     <link href="https://blog.cryptpad.fr/2017/05/17/You-gotta-log-in/"/>
     <id>https://blog.cryptpad.fr/2017/05/17/You-gotta-log-in/</id>
     <published>2017-05-17T10:22:52.000Z</published>
-    <updated>2017-06-02T12:16:01.000Z</updated>
+    <updated>2018-02-23T13:43:09.028Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;It’s been two and a half years since the &lt;a href=&quot;https://github.com/xwiki-labs/cryptpad/commit/1508c7ba71f5de5e51f061fbef45bc1f18493832&quot;
+      
+      
+        &lt;p&gt;It’s been two and a half years since the &lt;a href=&quot;https://github.com/xwiki-labs/cryptpad/commit/1508c7ba71f5de5e51f061fbef45bc1f18493832&quot;
+      
     
     </summary>
     
     
-      <category term="Login" scheme="https://blog.cryptpad.fr/tags/Login/"/>
+      <category term="login" scheme="https://blog.cryptpad.fr/tags/login/"/>
     
-      <category term="Storage" scheme="https://blog.cryptpad.fr/tags/Storage/"/>
+      <category term="storage" scheme="https://blog.cryptpad.fr/tags/storage/"/>
     
   </entry>
   
@@ -181,20 +228,23 @@ which we’ve been working on for a long time. As part
     <link href="https://blog.cryptpad.fr/2017/04/20/Funding-CryptPad/"/>
     <id>https://blog.cryptpad.fr/2017/04/20/Funding-CryptPad/</id>
     <published>2017-04-20T10:15:09.000Z</published>
-    <updated>2017-06-02T12:16:01.000Z</updated>
+    <updated>2018-02-23T13:42:35.927Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;CryptPad started as a novel idea:&lt;/p&gt;
+      
+      
+        &lt;p&gt;CryptPad started as a novel idea:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;provide a means for people to collaborate on the web, without their data being expo
+      
     
     </summary>
     
     
-      <category term="Financing" scheme="https://blog.cryptpad.fr/tags/Financing/"/>
+      <category term="financing" scheme="https://blog.cryptpad.fr/tags/financing/"/>
     
-      <category term="Research" scheme="https://blog.cryptpad.fr/tags/Research/"/>
+      <category term="research" scheme="https://blog.cryptpad.fr/tags/research/"/>
     
   </entry>
   
@@ -203,17 +253,20 @@ which we’ve been working on for a long time. As part
     <link href="https://blog.cryptpad.fr/2017/04/01/Exciting-news/"/>
     <id>https://blog.cryptpad.fr/2017/04/01/Exciting-news/</id>
     <published>2017-03-31T22:03:49.000Z</published>
-    <updated>2017-06-02T12:16:01.000Z</updated>
+    <updated>2018-02-23T13:42:30.991Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;Here in the research department of XWiki SAS, which you may know as &lt;em&gt;the CryptPad team&lt;/em&gt;, we take our work very seriously.
+      
+      
+        &lt;p&gt;Here in the research department of XWiki SAS, which you may know as &lt;em&gt;the CryptPad team&lt;/em&gt;, we take our work very seriously.
 Each day
+      
     
     </summary>
     
     
-      <category term="Lulz" scheme="https://blog.cryptpad.fr/tags/Lulz/"/>
+      <category term="lulz" scheme="https://blog.cryptpad.fr/tags/lulz/"/>
     
   </entry>
   
@@ -222,20 +275,23 @@ Each day
     <link href="https://blog.cryptpad.fr/2017/03/24/What-is-Zero-Knowledge/"/>
     <id>https://blog.cryptpad.fr/2017/03/24/What-is-Zero-Knowledge/</id>
     <published>2017-03-24T13:42:03.000Z</published>
-    <updated>2017-06-02T12:16:01.000Z</updated>
+    <updated>2018-02-23T13:43:02.844Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;We have gotten a lot of questions about the concept of Zero Knowledge, the vision and ethics as well as the exact meaning.&lt;/p&gt;
+      
+      
+        &lt;p&gt;We have gotten a lot of questions about the concept of Zero Knowledge, the vision and ethics as well as the exact meaning.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;W
+      
     
     </summary>
     
     
-      <category term="Zero Knowledge" scheme="https://blog.cryptpad.fr/tags/Zero-Knowledge/"/>
+      <category term="security" scheme="https://blog.cryptpad.fr/tags/security/"/>
     
-      <category term="Security" scheme="https://blog.cryptpad.fr/tags/Security/"/>
+      <category term="zero knowledge" scheme="https://blog.cryptpad.fr/tags/zero-knowledge/"/>
     
   </entry>
   
@@ -244,18 +300,21 @@ Each day
     <link href="https://blog.cryptpad.fr/2017/03/06/Security-growing-pains/"/>
     <id>https://blog.cryptpad.fr/2017/03/06/Security-growing-pains/</id>
     <published>2017-03-06T10:04:58.000Z</published>
-    <updated>2017-06-02T12:16:01.000Z</updated>
+    <updated>2018-02-23T13:42:48.100Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;em&gt;Update: The issue mentioned in this blog post was assigned &lt;a href=&quot;https://github.com/distributedweaknessfiling/DWF-CVE-2017-1000000
+      
+      
+        &lt;p&gt;&lt;em&gt;Update: The issue mentioned in this blog post was assigned &lt;a href=&quot;https://github.com/distributedweaknessfiling/DWF-CVE-2017-1000000
+      
     
     </summary>
     
     
-      <category term="Security" scheme="https://blog.cryptpad.fr/tags/Security/"/>
+      <category term="security" scheme="https://blog.cryptpad.fr/tags/security/"/>
     
-      <category term="XSS" scheme="https://blog.cryptpad.fr/tags/XSS/"/>
+      <category term="xss" scheme="https://blog.cryptpad.fr/tags/xss/"/>
     
   </entry>
   
@@ -264,16 +323,19 @@ Each day
     <link href="https://blog.cryptpad.fr/2017/02/24/Announcing-biweekly-releases/"/>
     <id>https://blog.cryptpad.fr/2017/02/24/Announcing-biweekly-releases/</id>
     <published>2017-02-24T15:26:03.000Z</published>
-    <updated>2017-06-02T12:16:01.000Z</updated>
+    <updated>2018-02-23T13:41:20.782Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;When I joined the research team at &lt;a href=&quot;http://www.xwiki.com/en/team/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;XWiki&lt;/a&gt; a little over a year 
+      
+      
+        &lt;p&gt;When I joined the research team at &lt;a href=&quot;http://www.xwiki.com/en/team/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;XWiki&lt;/a&gt; a little over a year 
+      
     
     </summary>
     
     
-      <category term="Release" scheme="https://blog.cryptpad.fr/tags/Release/"/>
+      <category term="release" scheme="https://blog.cryptpad.fr/tags/release/"/>
     
   </entry>
   
@@ -282,17 +344,20 @@ Each day
     <link href="https://blog.cryptpad.fr/2017/02/20/Time-to-Encrypt-the-Cloud/"/>
     <id>https://blog.cryptpad.fr/2017/02/20/Time-to-Encrypt-the-Cloud/</id>
     <published>2017-02-20T16:54:02.000Z</published>
-    <updated>2017-08-09T08:29:04.000Z</updated>
+    <updated>2018-02-23T13:42:56.892Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;From typing a business letter to taking pictures with friends, the internet has changed every part of our lives.
+      
+      
+        &lt;p&gt;From typing a business letter to taking pictures with friends, the internet has changed every part of our lives.
 We don’t just share info
+      
     
     </summary>
     
     
-      <category term="Zero Knowledge" scheme="https://blog.cryptpad.fr/tags/Zero-Knowledge/"/>
+      <category term="zero knowledge" scheme="https://blog.cryptpad.fr/tags/zero-knowledge/"/>
     
   </entry>
   
