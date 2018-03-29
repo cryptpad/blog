@@ -6,6 +6,10 @@ This project is built using [Hexo](https://hexo.io/) for [the CryptPad Blog](htt
 
 `npm install -g hexo-cli`
 
+## To preview changes as you make them
+
+`hexo server`
+
 ## To create a new post:
 
 `hexo new "your blog title"`
