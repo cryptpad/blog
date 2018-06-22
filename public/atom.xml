@@ -5,7 +5,7 @@
   <link href="//atom.xml" rel="self"/>
   
   <link href="https://blog.cryptpad.fr/"/>
-  <updated>2018-06-15T10:08:36.000Z</updated>
+  <updated>2018-06-22T19:33:24.000Z</updated>
   <id>https://blog.cryptpad.fr/</id>
   
   <author>
@@ -14,6 +14,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Faster loads with SharedWorker &amp; ServiceWorker</title>
+    <link href="https://blog.cryptpad.fr/2018/06/22/Faster-loads-with-SharedWorker-ServiceWorker/"/>
+    <id>https://blog.cryptpad.fr/2018/06/22/Faster-loads-with-SharedWorker-ServiceWorker/</id>
+    <published>2018-06-22T19:21:58.000Z</published>
+    <updated>2018-06-22T19:33:24.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;When CryptPad was first created, the only thing to load was the CryptPad code itself and the pad which you were editing. Recently edited 
+    
+    </summary>
+    
+    
+      <category term="WebWorker" scheme="https://blog.cryptpad.fr/tags/WebWorker/"/>
+    
+      <category term="SharedWorker" scheme="https://blog.cryptpad.fr/tags/SharedWorker/"/>
+    
+      <category term="Performance" scheme="https://blog.cryptpad.fr/tags/Performance/"/>
+    
+  </entry>
   
   <entry>
     <title>Signing CryptPad</title>
