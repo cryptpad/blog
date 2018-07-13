@@ -5,7 +5,7 @@
   <link href="//atom.xml" rel="self"/>
   
   <link href="https://blog.cryptpad.fr/"/>
-  <updated>2018-07-06T13:11:02.000Z</updated>
+  <updated>2018-07-13T10:45:54.000Z</updated>
   <id>https://blog.cryptpad.fr/</id>
   
   <author>
@@ -14,6 +14,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CryptPad Roadmap</title>
+    <link href="https://blog.cryptpad.fr/2018/07/13/CryptPad-Roadmap/"/>
+    <id>https://blog.cryptpad.fr/2018/07/13/CryptPad-Roadmap/</id>
+    <published>2018-07-13T10:41:04.000Z</published>
+    <updated>2018-07-13T10:45:54.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;CryptPad was started as an experimental platform as part of the &lt;a href=&quot;http://ng.open-paas.org/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;OpenPaa
+    
+    </summary>
+    
+    
+      <category term="Roadmap" scheme="https://blog.cryptpad.fr/tags/Roadmap/"/>
+    
+      <category term="Financing" scheme="https://blog.cryptpad.fr/tags/Financing/"/>
+    
+  </entry>
   
   <entry>
     <title>CryptPad #ZeroKnowledge Free Software needs funding</title>
@@ -29,9 +49,9 @@
     </summary>
     
     
-      <category term="funding" scheme="https://blog.cryptpad.fr/tags/funding/"/>
-    
       <category term="zero knowledge" scheme="https://blog.cryptpad.fr/tags/zero-knowledge/"/>
+    
+      <category term="funding" scheme="https://blog.cryptpad.fr/tags/funding/"/>
     
   </entry>
   
