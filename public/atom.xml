@@ -5,7 +5,7 @@
   <link href="//atom.xml" rel="self"/>
   
   <link href="https://blog.cryptpad.fr/"/>
-  <updated>2018-07-13T10:45:54.000Z</updated>
+  <updated>2018-07-20T10:27:12.000Z</updated>
   <id>https://blog.cryptpad.fr/</id>
   
   <author>
@@ -14,6 +14,24 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Making CryptPad CSS 3 times faster, by loading it twice</title>
+    <link href="https://blog.cryptpad.fr/2018/07/20/Making-CryptPad-CSS-3-times-faster-by-loading-it-twice/"/>
+    <id>https://blog.cryptpad.fr/2018/07/20/Making-CryptPad-CSS-3-times-faster-by-loading-it-twice/</id>
+    <published>2018-07-20T10:00:59.000Z</published>
+    <updated>2018-07-20T10:27:12.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;script src=&quot;https://cryptpad.fr/common/media-tag-nacl.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;In CryptPad development, we have always tried to push the limit
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>CryptPad Roadmap</title>
@@ -339,9 +357,9 @@ Each day
     </summary>
     
     
-      <category term="security" scheme="https://blog.cryptpad.fr/tags/security/"/>
-    
       <category term="zero knowledge" scheme="https://blog.cryptpad.fr/tags/zero-knowledge/"/>
+    
+      <category term="security" scheme="https://blog.cryptpad.fr/tags/security/"/>
     
   </entry>
   
