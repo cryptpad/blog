@@ -3,8 +3,8 @@ title: CryptPad Roadmap
 date: 2018-07-13 12:41:04
 author: Caleb James DeLisle
 tags:
-  - Roadmap
-  - Financing
+  - roadmap
+  - funding
 ---
 CryptPad was started as an experimental platform as part of the [OpenPaaS::NG research project](http://ng.open-paas.org/). Since then it has developed into a suite of editors for many different types of documents, all without ever leaking the content that you edit to the server or the server operators. Now, in order to keep the project moving, we need your help.
 

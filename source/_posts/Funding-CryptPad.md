@@ -4,7 +4,7 @@ date: 2017-04-20 12:15:09
 author: Aaron MacSween
 tags:
   - research
-  - financing
+  - funding
 ---
 
 CryptPad started as a novel idea:

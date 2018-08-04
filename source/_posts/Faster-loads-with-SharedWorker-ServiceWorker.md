@@ -3,9 +3,9 @@ title: Faster loads with SharedWorker & ServiceWorker
 date: 2018-06-22 21:21:58
 author: Caleb James DeLisle
 tags:
-  - WebWorker
-  - SharedWorker
-  - Performance
+  - web worker
+  - shared worker
+  - performance
 ---
 
 When CryptPad was first created, the only thing to load was the CryptPad code itself and the pad which you were editing. Recently edited pads were remembered in the browser's [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) which was not portable between computers but allowed some recent history to be kept.
