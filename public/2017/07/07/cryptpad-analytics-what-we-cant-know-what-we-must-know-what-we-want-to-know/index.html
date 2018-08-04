@@ -5,28 +5,24 @@
   
   <title>CryptPad Analytics &amp; Privacy - What we can&#39;t know, what we must know, what we want to know | CryptPad Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="CryptPad is a Zero Knowledge cloud application, this means we have designed it such
-that we do not have any access to the content which is hosted on our server.
-However, there are other things which w">
+  <meta name="description" content="CryptPad is a Zero Knowledge cloud application, this means we have designed it such that we do not have any access to the content which is hosted on our server. However, there are other things which w">
+<meta name="keywords" content="analytics,data,privacy">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CryptPad Analytics & Privacy - What we can't know, what we must know, what we want to know">
+<meta property="og:title" content="CryptPad Analytics &amp; Privacy - What we can&#39;t know, what we must know, what we want to know">
 <meta property="og:url" content="https://blog.cryptpad.fr/2017/07/07/cryptpad-analytics-what-we-cant-know-what-we-must-know-what-we-want-to-know/index.html">
 <meta property="og:site_name" content="CryptPad Blog">
-<meta property="og:description" content="CryptPad is a Zero Knowledge cloud application, this means we have designed it such
-that we do not have any access to the content which is hosted on our server.
-However, there are other things which w">
+<meta property="og:description" content="CryptPad is a Zero Knowledge cloud application, this means we have designed it such that we do not have any access to the content which is hosted on our server. However, there are other things which w">
+<meta property="og:locale" content="default">
 <meta property="og:image" content="https://blog.cryptpad.fr/images/Analytics-padtypes.png">
 <meta property="og:image" content="https://blog.cryptpad.fr/images/Analytics-uniques.png">
 <meta property="og:image" content="https://blog.cryptpad.fr/images/Analytics-browserdimensions.png">
 <meta property="og:image" content="https://blog.cryptpad.fr/images/Analytics-createdabandoned.png">
 <meta property="og:image" content="https://blog.cryptpad.fr/images/Analytics-activepads.png">
 <meta property="og:image" content="https://blog.cryptpad.fr/images/Analytics-peopleleave.png">
-<meta property="og:updated_time" content="2018-06-15T10:06:34.000Z">
+<meta property="og:updated_time" content="2018-08-04T09:10:05.993Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CryptPad Analytics & Privacy - What we can't know, what we must know, what we want to know">
-<meta name="twitter:description" content="CryptPad is a Zero Knowledge cloud application, this means we have designed it such
-that we do not have any access to the content which is hosted on our server.
-However, there are other things which w">
+<meta name="twitter:title" content="CryptPad Analytics &amp; Privacy - What we can&#39;t know, what we must know, what we want to know">
+<meta name="twitter:description" content="CryptPad is a Zero Knowledge cloud application, this means we have designed it such that we do not have any access to the content which is hosted on our server. However, there are other things which w">
 <meta name="twitter:image" content="https://blog.cryptpad.fr/images/Analytics-padtypes.png">
   
     <link rel="alternate" href="/atom.xml" title="CryptPad Blog" type="application/atom+xml">
@@ -68,7 +64,7 @@ However, there are other things which w">
         <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://blog.cryptpad.fr"></form>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://blog.cryptpad.fr"></form>
       </div>
     </div>
   </div>
@@ -136,16 +132,16 @@ educated guesses by looking at the encrypted data.</p>
 <h2 id="What-we-could-know-but-don’t-bother-to-collect"><a href="#What-we-could-know-but-don’t-bother-to-collect" class="headerlink" title="What we could know but don’t bother to collect"></a>What we could know but don’t bother to collect</h2><p>There are also some things which we don’t really want to know but we cannot avoid
 seeing it anyway. This includes most importantly the IP addresses of people who
 edited a specific pad. Technically we know your
-<a href="https://en.wikipedia.org/wiki/IP_address" target="_blank" rel="external">IP address</a> because it’s how you
+<a href="https://en.wikipedia.org/wiki/IP_address" target="_blank" rel="noopener">IP address</a> because it’s how you
 communicate with our server, but most of the actual operations are done using
-commands sent down a <a href="https://en.wikipedia.org/wiki/WebSocket" target="_blank" rel="external">WebSocket</a>.
+commands sent down a <a href="https://en.wikipedia.org/wiki/WebSocket" target="_blank" rel="noopener">WebSocket</a>.
 Once the WebSocket is established, we assign you a random ID and this is how
 you are referenced, what appears in our server logs looks like this:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">198.167.222.70 - - [06/Jul/2017:20:47:45 +0200] &quot;GET /pad/ HTTP/1.1&quot;</div><div class="line">304 0 &quot;-&quot; &quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36</div><div class="line">(KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36&quot; &quot;-&quot;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">198.167.222.70 - - [06/Jul/2017:20:47:45 +0200] &quot;GET /pad/ HTTP/1.1&quot;</span><br><span class="line">304 0 &quot;-&quot; &quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36</span><br><span class="line">(KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36&quot; &quot;-&quot;</span><br></pre></td></tr></table></figure>
 <p>Notice there is no pad ID in there, the pad ID is not in the URL so it doesn’t go
 in the server logs by default.</p>
 <p>Compare this with EtherPad:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">  IP Address                                             Pad ID</div><div class="line">198.167.222.70 - - [06/Jul/2017:11:54:37 -0700] &quot;GET /p/UNWnpczTkq HTTP/1.1&quot;</div><div class="line">200 8920 &quot;https://pad.meshwith.me/&quot; &quot;Mozilla/5.0 (Macintosh; Intel Mac OS X</div><div class="line">10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109</div><div class="line">Safari/537.36&quot;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  IP Address                                             Pad ID</span><br><span class="line">198.167.222.70 - - [06/Jul/2017:11:54:37 -0700] &quot;GET /p/UNWnpczTkq HTTP/1.1&quot;</span><br><span class="line">200 8920 &quot;https://pad.meshwith.me/&quot; &quot;Mozilla/5.0 (Macintosh; Intel Mac OS X</span><br><span class="line">10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109</span><br><span class="line">Safari/537.36&quot;</span><br></pre></td></tr></table></figure>
 <p><em>You cannot verify that we’re not collecting this so best assume that we are.</em></p>
 <h2 id="What-we-must-know"><a href="#What-we-must-know" class="headerlink" title="What we must know"></a>What we must know</h2><p>There are some things which we need to know in order for CryptPad to function
 properly, we need to know which pads are in your drive in order to impose
@@ -159,7 +155,7 @@ their CryptDrive including a pad of some type which has the ID
 <code>ff2fdf9bb99ecc89d29d780780de10efdac14ed15e93b235</code>. One of these pads that they
 have is actually their drive itself, but we don’t strictly know which one (again,
 we can take guesses based on the size of the patches). You can find out what your
-signing key is by looking at in your <a href="https://cryptpad.fr/settings" target="_blank" rel="external">settings page</a>.</p>
+signing key is by looking at in your <a href="https://cryptpad.fr/settings" target="_blank" rel="noopener">settings page</a>.</p>
 <p>We also know when each pad was last accessed so that we can know to delete pads
 which are not in anybody’s CryptDrive and have not been opened in a long time.</p>
 <h3 id="Why-we-can’t-avoid-collecting-IP-addresses"><a href="#Why-we-can’t-avoid-collecting-IP-addresses" class="headerlink" title="Why we can’t avoid collecting IP addresses"></a>Why we can’t avoid collecting IP addresses</h3><p>Being able to know how many <em>different</em> people are using CryptPad is very important
@@ -172,13 +168,13 @@ widespread support vs. which ones are only popular with a few prolific users.</p
 <p>One obvious thought is to simply run the IP addresses through a hash function the
 way we traditionally hash passwords. However this sadly cannot work because there
 are only 4.2 billion IPv4 addresses and constructing a
-<a href="https://en.wikipedia.org/wiki/Rainbow_table" target="_blank" rel="external">rainbow table</a> to get back the
+<a href="https://en.wikipedia.org/wiki/Rainbow_table" target="_blank" rel="noopener">rainbow table</a> to get back the
 original IP addresses would take only about 1 day of computer time. So in the end
 we simply log the IP addresses and don’t worry about it.</p>
 <h3 id="What-a-pad-looks-like-to-us"><a href="#What-a-pad-looks-like-to-us" class="headerlink" title="What a pad looks like to us"></a>What a pad looks like to us</h3><p>A pad is stored as a file which represents a sequence of encrypted <em>patches</em>.
 These patches change the content of the pad from nothing to whatever it becomes in
 the end. A typical message looks something like this:
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[0,&quot;69d46337f826c0ecd881be59c119a527&quot;,&quot;MSG&quot;,&quot;fe382219b10c0396de63d2bab7942390&quot;,&quot;51Q....&quot;]</div></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[0,&quot;69d46337f826c0ecd881be59c119a527&quot;,&quot;MSG&quot;,&quot;fe382219b10c0396de63d2bab7942390&quot;,&quot;51Q....&quot;]</span><br></pre></td></tr></table></figure></p>
 <p>It starts with a zero and then your temporary random ID, then it contains the word
 MSG and the ID of the pad which it is sent to, this format is exactly the same as
 what is sent on the wire. Finally it contains the encrypted patch which tells us
@@ -194,9 +190,9 @@ make that experience better. So therefore we collect quite a number of data-poin
 about where people click and what their browser supports. For example we collect
 the dimensions of your browser. Not because we want to know who you are but because
 we want to know that types of browsers we need to support.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">198.167.222.70 - - [06/Jul/2017:21:26:15 +0200]</div><div class="line">&quot;HEAD /common/feedback.html?DIMENSIONS:752x1440=1499369175085 HTTP/1.1&quot; 200 0</div><div class="line">&quot;https://cryptpad.fr/settings/&quot; &quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5)</div><div class="line">AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36&quot; &quot;-&quot;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">198.167.222.70 - - [06/Jul/2017:21:26:15 +0200]</span><br><span class="line">&quot;HEAD /common/feedback.html?DIMENSIONS:752x1440=1499369175085 HTTP/1.1&quot; 200 0</span><br><span class="line">&quot;https://cryptpad.fr/settings/&quot; &quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5)</span><br><span class="line">AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36&quot; &quot;-&quot;</span><br></pre></td></tr></table></figure>
 <p>You can see an exhaustive list of things that we collect by checking out the
-<a href="https://github.com/xwiki-labs/cryptpad/search?p=2&amp;q=Cryptpad.feedback&amp;type=&amp;utf8=%E2%9C%93" target="_blank" rel="external">feedback functionality</a> in the CryptPad source code but
+<a href="https://github.com/xwiki-labs/cryptpad/search?p=2&amp;q=Cryptpad.feedback&amp;type=&amp;utf8=%E2%9C%93" target="_blank" rel="noopener">feedback functionality</a> in the CryptPad source code but
 as of the time of this writing, we are collecting feedback about the following
 things (usually we just collect the fact that an event occurred, not more).</p>
 <ul>
@@ -210,16 +206,16 @@ things (usually we just collect the fact that an event occurred, not more).</p>
 <li>Creating and using templates</li>
 <li>Showing and hiding the userlist or CKEditor menu bar</li>
 <li>Whether your browser is missing certain important features like
-<a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Proxy" target="_blank" rel="external">Proxy</a>,
-<a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray" target="_blank" rel="external">isArray</a>
-or <a href="https://developer.mozilla.org/en/docs/Web/API/Window/localStorage" target="_blank" rel="external">localStorage</a></li>
+<a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Proxy" target="_blank" rel="noopener">Proxy</a>,
+<a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray" target="_blank" rel="noopener">isArray</a>
+or <a href="https://developer.mozilla.org/en/docs/Web/API/Window/localStorage" target="_blank" rel="noopener">localStorage</a></li>
 <li>Which type of pad you are using</li>
 <li>The dimensions of your browser window</li>
 <li>When you have changed your display name</li>
 <li>Whether you have migrated your CryptDrive from the legacy format</li>
 </ul>
 <p>If you are worried about what we might do with this data, you can disable
-feedback collection in your <a href="https://cryptpad.fr/settings/" target="_blank" rel="external">settings page</a>. But
+feedback collection in your <a href="https://cryptpad.fr/settings/" target="_blank" rel="noopener">settings page</a>. But
 keep in mind that if you disable it we cannot help but know, because your IP
 address will be in the tiny minority of addresses which access the site but don’t
 send feedback messages.</p>
@@ -251,14 +247,14 @@ their projects succeed. So whenever people decide that CryptPad is not the right
 answer for them, we care about what went wrong and how we can make it better.</p>
 <h2 id="How-we-analyze-this-data"><a href="#How-we-analyze-this-data" class="headerlink" title="How we analyze this data"></a>How we analyze this data</h2><p>We do all of our analysis ourselves, and we don’t share any of this data with Google
 or other data companies. We’re thankful to
-<a href="https://www.elastic.co/products/kibana" target="_blank" rel="external">Kibana/ElasticSearch</a> and
-<a href="https://www.elastic.co/products/logstash" target="_blank" rel="external">LogStash</a> for making it possible to do
+<a href="https://www.elastic.co/products/kibana" target="_blank" rel="noopener">Kibana/ElasticSearch</a> and
+<a href="https://www.elastic.co/products/logstash" target="_blank" rel="noopener">LogStash</a> for making it possible to do
 in depth analysis on our own computers without resorting to a cloud service.</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://blog.cryptpad.fr/2017/07/07/cryptpad-analytics-what-we-cant-know-what-we-must-know-what-we-want-to-know/" data-id="cjjttvr0f000s7ezfzx3ptg38" class="article-share-link">Share</a>
+      <a data-url="https://blog.cryptpad.fr/2017/07/07/cryptpad-analytics-what-we-cant-know-what-we-must-know-what-we-want-to-know/" data-id="cjkf7woxt000v954t4iv70w6u" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/analytics/">analytics</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/data/">data</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/privacy/">privacy</a></li></ul>
@@ -301,7 +297,7 @@ in depth analysis on our own computers without resorting to a cloud service.</p>
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Financing/" style="font-size: 10px;">Financing</a> <a href="/tags/Performance/" style="font-size: 10px;">Performance</a> <a href="/tags/Roadmap/" style="font-size: 10px;">Roadmap</a> <a href="/tags/SharedWorker/" style="font-size: 10px;">SharedWorker</a> <a href="/tags/WebWorker/" style="font-size: 10px;">WebWorker</a> <a href="/tags/analytics/" style="font-size: 10px;">analytics</a> <a href="/tags/appstore/" style="font-size: 10px;">appstore</a> <a href="/tags/chain-of-trust/" style="font-size: 10px;">chain of trust</a> <a href="/tags/cloud/" style="font-size: 10px;">cloud</a> <a href="/tags/data/" style="font-size: 10px;">data</a> <a href="/tags/donate/" style="font-size: 10px;">donate</a> <a href="/tags/embed/" style="font-size: 10px;">embed</a> <a href="/tags/ethics/" style="font-size: 10px;">ethics</a> <a href="/tags/extensibility/" style="font-size: 10px;">extensibility</a> <a href="/tags/file/" style="font-size: 10px;">file</a> <a href="/tags/financing/" style="font-size: 13.33px;">financing</a> <a href="/tags/funding/" style="font-size: 10px;">funding</a> <a href="/tags/iframe/" style="font-size: 10px;">iframe</a> <a href="/tags/login/" style="font-size: 10px;">login</a> <a href="/tags/lulz/" style="font-size: 10px;">lulz</a> <a href="/tags/media-tag/" style="font-size: 10px;">media-tag</a> <a href="/tags/open-source/" style="font-size: 10px;">open source</a> <a href="/tags/pdf/" style="font-size: 10px;">pdf</a> <a href="/tags/privacy/" style="font-size: 10px;">privacy</a> <a href="/tags/quality/" style="font-size: 10px;">quality</a> <a href="/tags/release/" style="font-size: 13.33px;">release</a> <a href="/tags/research/" style="font-size: 10px;">research</a> <a href="/tags/roadmap/" style="font-size: 10px;">roadmap</a> <a href="/tags/security/" style="font-size: 20px;">security</a> <a href="/tags/signing/" style="font-size: 10px;">signing</a> <a href="/tags/storage/" style="font-size: 10px;">storage</a> <a href="/tags/subresource-integrity/" style="font-size: 10px;">subresource integrity</a> <a href="/tags/upload/" style="font-size: 10px;">upload</a> <a href="/tags/xss/" style="font-size: 10px;">xss</a> <a href="/tags/zero-knowledge/" style="font-size: 16.67px;">zero knowledge</a>
+      <a href="/tags/analytics/" style="font-size: 10px;">analytics</a> <a href="/tags/appstore/" style="font-size: 10px;">appstore</a> <a href="/tags/chain-of-trust/" style="font-size: 10px;">chain of trust</a> <a href="/tags/cloud/" style="font-size: 10px;">cloud</a> <a href="/tags/data/" style="font-size: 10px;">data</a> <a href="/tags/donate/" style="font-size: 13.33px;">donate</a> <a href="/tags/embed/" style="font-size: 10px;">embed</a> <a href="/tags/ethics/" style="font-size: 10px;">ethics</a> <a href="/tags/extensibility/" style="font-size: 10px;">extensibility</a> <a href="/tags/file/" style="font-size: 10px;">file</a> <a href="/tags/funding/" style="font-size: 20px;">funding</a> <a href="/tags/iframe/" style="font-size: 10px;">iframe</a> <a href="/tags/login/" style="font-size: 10px;">login</a> <a href="/tags/lulz/" style="font-size: 10px;">lulz</a> <a href="/tags/media-tag/" style="font-size: 10px;">media-tag</a> <a href="/tags/open-collective/" style="font-size: 10px;">open collective</a> <a href="/tags/open-source/" style="font-size: 10px;">open source</a> <a href="/tags/pdf/" style="font-size: 10px;">pdf</a> <a href="/tags/performance/" style="font-size: 10px;">performance</a> <a href="/tags/privacy/" style="font-size: 10px;">privacy</a> <a href="/tags/quality/" style="font-size: 10px;">quality</a> <a href="/tags/release/" style="font-size: 13.33px;">release</a> <a href="/tags/research/" style="font-size: 10px;">research</a> <a href="/tags/roadmap/" style="font-size: 13.33px;">roadmap</a> <a href="/tags/security/" style="font-size: 20px;">security</a> <a href="/tags/shared-worker/" style="font-size: 10px;">shared worker</a> <a href="/tags/signing/" style="font-size: 10px;">signing</a> <a href="/tags/storage/" style="font-size: 10px;">storage</a> <a href="/tags/subresource-integrity/" style="font-size: 10px;">subresource integrity</a> <a href="/tags/upload/" style="font-size: 10px;">upload</a> <a href="/tags/web-worker/" style="font-size: 10px;">web worker</a> <a href="/tags/xss/" style="font-size: 10px;">xss</a> <a href="/tags/zero-knowledge/" style="font-size: 16.67px;">zero knowledge</a>
     </div>
   </div>
 
@@ -310,7 +306,7 @@ in depth analysis on our own computers without resorting to a cloud service.</p>
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li></ul>
     </div>
   </div>
 
@@ -321,6 +317,10 @@ in depth analysis on our own computers without resorting to a cloud service.</p>
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2018/08/04/CryptPad-funding-status-after-one-month/">CryptPad funding status after one month</a>
+          </li>
         
           <li>
             <a href="/2018/07/20/Making-CryptPad-CSS-3-times-faster-by-loading-it-twice/">Making CryptPad CSS 3 times faster, by loading it twice</a>
@@ -336,10 +336,6 @@ in depth analysis on our own computers without resorting to a cloud service.</p>
         
           <li>
             <a href="/2018/06/22/Faster-loads-with-SharedWorker-ServiceWorker/">Faster loads with SharedWorker &amp; ServiceWorker</a>
-          </li>
-        
-          <li>
-            <a href="/2018/06/15/Signing-CryptPad/">Signing CryptPad</a>
           </li>
         
       </ul>

@@ -9,6 +9,7 @@
 <meta property="og:title" content="CryptPad Blog">
 <meta property="og:url" content="https://blog.cryptpad.fr/page/2/index.html">
 <meta property="og:site_name" content="CryptPad Blog">
+<meta property="og:locale" content="default">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CryptPad Blog">
   
@@ -51,7 +52,7 @@
         <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://blog.cryptpad.fr"></form>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://blog.cryptpad.fr"></form>
       </div>
     </div>
   </div>
@@ -59,6 +60,78 @@
 
       <div class="outer">
         <section id="main">
+  
+    <article id="post-Signing-CryptPad" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/06/15/Signing-CryptPad/" class="article-date">
+  <time datetime="2018-06-15T10:07:05.000Z" itemprop="datePublished">2018-06-15</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/06/15/Signing-CryptPad/">Signing CryptPad</a>
+    </h1>
+  
+
+
+        
+            <span class="article-author">
+                by
+                Caleb James DeLisle
+            </span>
+        
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>CryptPad was designed with a view that privacy should be default and cryptography should be invisible. In order to do this, we made use of the web-app model so people could just go to cryptpad.fr and immediately begin using the app, no installation necessary. However, this model has a known flaw, the server can decide what client-side code it will send to any given user, allowing a compromized server to serve code with a back-door vulnerability.</p>
+<p>Recently, I did an experiment to make CryptPad more secure against these types of attacks by signing the code. CryptPad is a unique webapp, even without considering the encryption aspect. There is no build system, the code we write is exactly the same as what your web browser runs. All of the CryptPad html, javascript and resources are static files which are served by a plain old web server. The data persistance is managed by an API server which the web browser communicates with using an HTML5 WebSocket. Finally, in order to add a layer of security against possible Cross Site Scripting attacks, CryptPad makes use of a <a href="https://blog.cryptpad.fr/2017/08/30/CryptPad-s-new-Secure-Cross-Domain-Iframe/">cross domain iframe</a>, protecting your encryption keys from the majority of the CryptPad code in the same way that your online bank is protected from that sketchy porn site open in another tab.</p>
+<p>Since CryptPad has no build system, there are many small javascript files which must be loaded. To do this, CryptPad uses <a href="http://requirejs.org/" target="_blank" rel="noopener">RequireJS</a>. While many small files are generally considered to be bad for website performance, RequireJS uses the HTML5 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script" target="_blank" rel="noopener">async attribute</a> to tell the browser not to block loading of other things while waiting for the scripts to load. Secondly, RequireJS also allows version numbers to be added to the script URLs which allows us to cache almost everything in the browser. Finally, we use the <a href="https://en.wikipedia.org/wiki/HTTP/2" target="_blank" rel="noopener">HTTP/2</a> protocol to serve resources because it allows multiple requests to be sent at the same time, while HTTP/2 is incompatible with WebSocket, this is ok because the web-app is served from a different server from the API server.</p>
+<h2 id="Chain-of-Trust"><a href="#Chain-of-Trust" class="headerlink" title="Chain of Trust"></a>Chain of Trust</h2><p>Just one corrupted script is enough to render the security of an entire web-app useless, so in CryptPad we needed the signing to cover all javascript files. Fortunately there is a new HTML5 technology called <a href="https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity" target="_blank" rel="noopener">Subresource Integrity</a> which allows putting the hash of a script in a script tag attribute and makes the browser verify the script before executing it.</p>
+<p>Insecure, some.website can serve you anything:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;script</span><br><span class="line">  src=&quot;https://some.website/path/to/script.js&quot;</span><br><span class="line">&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>Secure, only one possible script can be sent by some.website or else the web browser will throw an error and refuse to run the script:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;script</span><br><span class="line">  src=&quot;https://some.website/path/to/script.js&quot;</span><br><span class="line">  integrity=&quot;sha256-G1KwaJYUEDsA1SD/6Wt4z0laskKzIwgqgs5cYH0CW/o=&quot;</span><br><span class="line">&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>So rather than signing every script, I only needed to make a list of hashes of every script, and sign that. What I needed was a way to generate a <em>manifest</em>, and so I developed a small program which could hash all of the javascript files in CryptPad and generate a manifest file. The content of the manifest looks something like this:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&quot;files&quot;: &#123;</span><br><span class="line">  &quot;assert&quot;: &#123;</span><br><span class="line">    &quot;frame&quot;: &#123;</span><br><span class="line">      &quot;frame.js&quot;: &quot;BrN2JNnK4QJCztw3PyRRPAsEwSq5lczTBrRkzdLAFow=&quot;,</span><br><span class="line">      &quot;respond.js&quot;: &quot;yO0KFMHiCdE1fXFWPVaFB+Mmh37OCl/UNPpXrYtWF7A=&quot;</span><br><span class="line">    &#125;,</span><br><span class="line">    &quot;main.js&quot;: &quot;ABf3uhmYVHWaHX6vhK8K2jAUY8XqRjjMJ2FqXVGLZE0=&quot;,</span><br><span class="line">    &quot;translations&quot;: &#123;</span><br><span class="line">      &quot;main.js&quot;: &quot;50Ami2eghyXcGKGYTaDK1vUeEuAEG7kcpvUoCKbUaUU=&quot;</span><br></pre></td></tr></table></figure>
+<p>It contains a JSON tree which mirrors the files that are part of the CryptPad codebase and the hashes of the files for the Subresource Integrity check. Once the <code>manifest.js</code> file was created, then I needed a javascript file which would load and verify it. Since the manifest is different every time a new release is made, the verification of the manifest needed to be via <em>signing</em>. The manifest hash was signed along with a version number and those were placed in a file called <code>version.txt</code> and <code>version.txt</code> is loaded using a file called <code>sboot.js</code>. The hash of <code>sboot.js</code> was included directly into the html files which are cached, so <code>sboot.js</code> can never be changed at all.</p>
+<h2 id="Loading-process"><a href="#Loading-process" class="headerlink" title="Loading process"></a>Loading process</h2><h3 id="index-html"><a href="#index-html" class="headerlink" title="index.html"></a>index.html</h3><p>First, the browser loads the html file, the html file contains a single script tag loading <code>sboot.js</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;script</span><br><span class="line">  async</span><br><span class="line">  data-bootload=&quot;/customize/template.js&quot;</span><br><span class="line">  src=&quot;/common/sboot.js?ver=8IaxCUqjpzoP7AEPEk%2B%2BVQ%2BBk83mRdXx4dK%2BXvSNPcI%3D&quot;</span><br><span class="line">  integrity=&quot;sha256-8IaxCUqjpzoP7AEPEk++VQ+Bk83mRdXx4dK+XvSNPcI=&quot;</span><br><span class="line">&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>There is a custom attribute called <code>data-bootload</code> which indicates which javascript file should be loaded for that <code>html</code> file.</p>
+<h3 id="sboot-js"><a href="#sboot-js" class="headerlink" title="sboot.js"></a>sboot.js</h3><p>When <code>sboot.js</code> gets loaded, it downloads and then verifies <code>version.txt</code> which is a signed message containing the CryptPad version number and the hash of <code>manifest.js</code>. The content that is signed looks something like this:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[85,&quot;h+tOXVmYBWMmiVDylXvnRq28LWRVs6xy+goBwNEELZk=&quot;]</span><br></pre></td></tr></table></figure>
+<p>The version number (85) is not the CryptPad version but rather an auto-incrementing number which is stored in the browser localStorage and prevents the server from downgrading the version of CryptPad. After the signature/version check completes successfully, <code>sboot.js</code> loads <code>manifest.js</code> like the following:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;script</span><br><span class="line">  async</span><br><span class="line">  src=&quot;/customize/manifest.js?ver=h%2BtOXVmYBWMmiVDylXvnRq28LWRVs6xy%2BgoBwNEELZk%3D&quot;</span><br><span class="line">  integrity=&quot;sha256-h+tOXVmYBWMmiVDylXvnRq28LWRVs6xy+goBwNEELZk=&quot;</span><br><span class="line">&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>You will notice that the hash is used also in the URL of <code>manifest.js</code>, this allows the server to signal that the files are immutable and can be cached by the browser forever which makes CryptPad load faster next time.</p>
+<p>After <code>manifest.js</code> loads, <code>sboot.js</code> finds the hash of <code>require.js</code> in the manifest and then manually loads <code>require.js</code> in the same way. Once <code>require.js</code> is loaded, <code>sboot.js</code> configures require to use the hashes from the manifest for every file it loads, then it uses require to load <code>boot2.js</code>.</p>
+<h3 id="boot2-js"><a href="#boot2-js" class="headerlink" title="boot2.js"></a>boot2.js</h3><p>This file is not needed for security, but unlike <code>sboot.js</code>, it can easily be changed from release to release and it contains any code which should be run before the main CryptPad code. Things such as additional requirejs configuration and shims for missing browser APIs are placed here. After <code>boot2.js</code> is complete, it reads the <code>data-bootload</code> attribute from the html file and invokes require to load that.</p>
+<h2 id="Further-development"><a href="#Further-development" class="headerlink" title="Further development"></a>Further development</h2><p>While this system provides excellent security, it is still not perfect. If the root html file is compromized then it can alter the chain of trust, or scrap it completely. With a very long cache header, the browser will store the html file essentially forever, but if the user triggers a hard reload with the F5 key, then the cache will be flushed.</p>
+<p>The root html file can be signed using pgp and then verified using the <a href="https://github.com/tasn/webext-signed-pages" target="_blank" rel="noopener">signed pages</a> chrome extension. But signed pages is not able to prevent the loading of the website even if the signature is invalid and it only takes 1 second for the keys in localStorage to be leaked.</p>
+<p>If the root html file was <em>generated</em> by the server each load, it could contain a secret key which is used to encrypt the keys in the localStorage, thus rendering them unusable if the html file is re-loaded, and meaning that the user must re-enter their password and would then be able to see that the signature on the html file is invalid, however unless signed pages can ignore the key inside of the html file when verifying the signature, it would have to be re-signed every time, pushing the pgp key onto the server, which we are worried about being compromized.</p>
+<p>There are also a number of configuration files in the CryptPad project which are in fact javascript files and would thus be signed by the release manager, preventing anyone hosting CryptPad from changing them so it may be a long time before this project is merged into CryptPad mainline, however it is available and you can experiment with it by checking out the <a href="https://github.com/xwiki-labs/cryptpad/tree/code-integrity" target="_blank" rel="noopener">code-integrity</a> branch of the CryptPad project.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://blog.cryptpad.fr/2018/06/15/Signing-CryptPad/" data-id="cjkf7woxp000p954ttl8qyam2" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/chain-of-trust/">chain of trust</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/signing/">signing</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/subresource-integrity/">subresource integrity</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
   
     <article id="post-One-year-of-biweekly-releases" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -92,7 +165,7 @@
       
         <p>Approximately one year ago, we published an article about our intention to follow a <a href="/2017/02/24/Announcing-biweekly-releases/">biweekly release schedule</a>.
 Since then, we’ve thought of every second Tuesday as <em>release day</em>.
-Starting with <a href="https://github.com/xwiki-labs/cryptpad/releases/tag/1.0.0" target="_blank" rel="external">the letter A</a> on February 21st, 2017 and ending with <a href="https://github.com/xwiki-labs/cryptpad/releases/tag/1.25.0" target="_blank" rel="external">the letter Z</a> on January 30th, 2018, we went through the whole latin alphabet.</p>
+Starting with <a href="https://github.com/xwiki-labs/cryptpad/releases/tag/1.0.0" target="_blank" rel="noopener">the letter A</a> on February 21st, 2017 and ending with <a href="https://github.com/xwiki-labs/cryptpad/releases/tag/1.25.0" target="_blank" rel="noopener">the letter Z</a> on January 30th, 2018, we went through the whole latin alphabet.</p>
 <p>Throughout this self-imposed regimen, we managed to meet each deadline, though on occasion we had to stay at the office later than usual.
 Any time a release was more difficult than expected, we considered what went wrong and added a counter-measure to our release checklist (in CryptPad, naturally).
 Each release became easier than the one before, but even so, we found there were some drawbacks to this rigid schedule.</p>
@@ -119,7 +192,7 @@ In order to do so <em>privately</em>, the sender and the receiver must both use 
 The necessity of having to use a second tool makes it so that CryptPad must always be used as <em>part of the solution</em>, rather than solving a user’s problem outright.</p>
 <p>We’d like to approach this problem with two improvements:</p>
 <ol>
-<li>integrate our existing encrypted messenger better with the rest of CryptPad’s functionality (as per <a href="https://github.com/xwiki-labs/cryptpad/issues/79" target="_blank" rel="external">this issue</a>)</li>
+<li>integrate our existing encrypted messenger better with the rest of CryptPad’s functionality (as per <a href="https://github.com/xwiki-labs/cryptpad/issues/79" target="_blank" rel="noopener">this issue</a>)</li>
 <li>develop a method of sharing entire folder structures from a users drive, so that sharing can scale to support large-scale projects, a feature we call <em>Workgroups</em></li>
 </ol>
 <h3 id="Layered-protection"><a href="#Layered-protection" class="headerlink" title="Layered protection"></a>Layered protection</h3><p>Even if the link for a pad is shared securely, there is the possibility that somebody discovers that link through other (possibly malicious) means.
@@ -133,7 +206,7 @@ This could be accomplished in very different ways:</p>
 Going forward, we hope to find ways to implement a more granular permission system which does not rely on the server behaving correctly.
 Some of these features are more in the realm of <em>applied-cryptography research</em> than <em>web application development</em>, so it’s very likely they’ll be implemented later, but we’re excited about them nevertheless.</p>
 <h3 id="Increased-trustworthiness"><a href="#Increased-trustworthiness" class="headerlink" title="Increased trustworthiness"></a>Increased trustworthiness</h3><p>Even though CryptPad performs its encryption in your browser, there is always the possibility that a compromised server could send malicious code to the browser which would cause it to reveal its secrets.
-We’re interested in developing features which would mitigate these kinds of attacks against users, through a combination of modern browser features like <a href="https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity" target="_blank" rel="external">sub-resource integrity</a>, and perhaps a registry of verified code signatures signed by us, the developers.</p>
+We’re interested in developing features which would mitigate these kinds of attacks against users, through a combination of modern browser features like <a href="https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity" target="_blank" rel="noopener">sub-resource integrity</a>, and perhaps a registry of verified code signatures signed by us, the developers.</p>
 <p>It’s very difficult to make a web application secure against those responsible for delivering its source to your browser.
 We’re actively searching for any kind of technique for securing that makes CryptPad a more robust platform for storing your data privately, even against ourselves.</p>
 <h3 id="Password-usability"><a href="#Password-usability" class="headerlink" title="Password usability"></a>Password usability</h3><p>CryptPad’s login system looks quite conventional at first glance, since it has a field for a <em>user-name</em> and <em>password</em> like most other web applications.
@@ -154,12 +227,12 @@ We’re taking a step back to decide where we’d like to go next.</p>
 <p>We recognize that CryptPad’s growth over the last year was driven largely by word of mouth between friends and colleagues who care about privacy.
 By moving towards a more flexible schedule, we hope to make it easier to adapt to the frequent feedback we receive from people using CryptPad to help them accomplish a multitude of goals.</p>
 <p>We’re very interested in hearing what you think about this change.
-Feel free to reach out to us through any of the methods listed on <a href="https://cryptpad.fr/contact.html" target="_blank" rel="external">our contact page</a>.</p>
+Feel free to reach out to us through any of the methods listed on <a href="https://cryptpad.fr/contact.html" target="_blank" rel="noopener">our contact page</a>.</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://blog.cryptpad.fr/2018/02/23/One-year-of-biweekly-releases/" data-id="cjjttvr09000j7ezffe0zq51w" class="article-share-link">Share</a>
+      <a data-url="https://blog.cryptpad.fr/2018/02/23/One-year-of-biweekly-releases/" data-id="cjkf7woxn000l954t9t492p3t" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/release/">release</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/roadmap/">roadmap</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/security/">security</a></li></ul>
@@ -204,23 +277,23 @@ Feel free to reach out to us through any of the methods listed on <a href="https
       
         <script src="https://cryptpad.fr/common/media-tag-nacl.min.js"></script>
 
-<p>CryptPad version 1.14 (Codename <a href="https://en.wikipedia.org/wiki/Ouroboros" target="_blank" rel="external">Ouroboros</a>) has been released and the most exciting new feature is one you cannot even see. As you may remember from the <a href="/2017/03/06/Security-growing-pains/">Security Growing Pains</a> post, <a href="https://en.wikipedia.org/wiki/Content_Security_Policy" target="_blank" rel="external">Content Security Policy</a> is a significant part of CryptPad’s security model, and it is unfortunately incompatible with <a href="https://ckeditor.com/" target="_blank" rel="external">CKEditor</a>, the Open Source text editor used in CryptPad.</p>
-<p>With this release, we have done a significant re-architecture of the CryptPad codebase. Starting with the /pad/ application, the CryptPad UI has begun a process of moving into an iframe which is hosted on a different domain: <em>sandbox.cryptpad.info</em>. Moving the visual content to a different domain means that even in the event of a <a href="https://en.wikipedia.org/wiki/Cross-site_scripting" target="_blank" rel="external">Cross-site scripting</a> security vulnerability, most of your private information such as the pads in your CryptDrive, will not be at risk.</p>
+<p>CryptPad version 1.14 (Codename <a href="https://en.wikipedia.org/wiki/Ouroboros" target="_blank" rel="noopener">Ouroboros</a>) has been released and the most exciting new feature is one you cannot even see. As you may remember from the <a href="/2017/03/06/Security-growing-pains/">Security Growing Pains</a> post, <a href="https://en.wikipedia.org/wiki/Content_Security_Policy" target="_blank" rel="noopener">Content Security Policy</a> is a significant part of CryptPad’s security model, and it is unfortunately incompatible with <a href="https://ckeditor.com/" target="_blank" rel="noopener">CKEditor</a>, the Open Source text editor used in CryptPad.</p>
+<p>With this release, we have done a significant re-architecture of the CryptPad codebase. Starting with the /pad/ application, the CryptPad UI has begun a process of moving into an iframe which is hosted on a different domain: <em>sandbox.cryptpad.info</em>. Moving the visual content to a different domain means that even in the event of a <a href="https://en.wikipedia.org/wiki/Cross-site_scripting" target="_blank" rel="noopener">Cross-site scripting</a> security vulnerability, most of your private information such as the pads in your CryptDrive, will not be at risk.</p>
 <p>In this version we updated only the /pad/ application to use the cross-domain iframe because it is the only app which requires <em>inline script</em>. This prevented us from using Content Security Policy to block the most significant vector for Cross Site Scripting attacks but now with the cross-domain iframe, such attacks are mitigated.</p>
 <p><media-tag src="https://files.cryptpad.fr/blob/b5/b5cd676935a5b23c158f38a84b7f3dfd3dc96ab3aafddd62" data-crypto-key="cryptpad:FBD19VUsNtgIxwjMGSOZcswciQzDixfuBY7dVWVwRG0=" data-attr-width="50%"></media-tag></p>
 <p>Going forward, we plan to implement a standardized CryptPad application API so that new applications can be developed, installed and used in CryptPad. Today, the CryptPad API which is exposed to apps such as /pad/ and /code/ is not standardized and there is no clear line between the apps themselves and the CryptPad internals. As we move toward the a standard app API, we will define a standard representation of a CryptPad application with such additional aspects as the app’s color-scheme and icons.</p>
 <p>Fundimentally, this unexciting change to CryptPad begins a new phase in development, we plan to move from a set of integrated prepackaged applications to an ecosystem of applications for collaborating on different types of content with the same encryption under the hood.</p>
 <h2 id="But-Wait-There’s-more"><a href="#But-Wait-There’s-more" class="headerlink" title="But Wait, There’s more"></a>But Wait, There’s more</h2><p>The pictures in this blog post are not hosted on the blog, they are in fact Zero Knowledge files uploaded on CryptPad. They
-can be seen on this blog because it is using the <a href="https://github.com/UCF-project/media-tag" target="_blank" rel="external">Media Tag</a> which was developed as part of the UCF Project with the support of <a href="http://www.systematic-paris-region.org/" target="_blank" rel="external">Systematic</a>, <a href="https://www.bpifrance.fr/" target="_blank" rel="external">BPIFrance</a> and the <a href="https://www.paris.fr/" target="_blank" rel="external">City of Paris</a>. </p>
+can be seen on this blog because it is using the <a href="https://github.com/UCF-project/media-tag" target="_blank" rel="noopener">Media Tag</a> which was developed as part of the UCF Project with the support of <a href="http://www.systematic-paris-region.org/" target="_blank" rel="noopener">Systematic</a>, <a href="https://www.bpifrance.fr/" target="_blank" rel="noopener">BPIFrance</a> and the <a href="https://www.paris.fr/" target="_blank" rel="noopener">City of Paris</a>. </p>
 <p><media-tag src="https://files.cryptpad.fr/blob/3c/3c9b5b3fb00b7dc35e15851606132585e8b69b06a51556eb" data-crypto-key="cryptpad:VE4raHL5VFReAXxioTaFZwt6q2jpxX+bdFHAFeoivZQ=" data-attr-width="40%"></media-tag></p>
 <p>Media Tag allows files on CryptPad to be included in any website (such as this blog). All you have to do to include a file from CryptPad is simply include the Media Tag loader and then add a Media Tag to your document, just like the following:</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- At the top of your HTML file --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cryptpad.fr/common/media-tag-nacl.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- Where you'd like the image to be located --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">media-tag</span> <span class="attr">src</span>=<span class="string">"https://files.cryptpad.fr/blob/3c/3c9b5b3fb00b7dc35e15851606132585e8b69b06a51556eb"</span> <span class="attr">data-crypto-key</span>=<span class="string">"cryptpad:VE4raHL5VFReAXxioTaFZwt6q2jpxX+bdFHAFeoivZQ="</span>&gt;</span><span class="tag">&lt;/<span class="name">media-tag</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- At the top of your HTML file --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cryptpad.fr/common/media-tag-nacl.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- Where you'd like the image to be located --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">media-tag</span> <span class="attr">src</span>=<span class="string">"https://files.cryptpad.fr/blob/3c/3c9b5b3fb00b7dc35e15851606132585e8b69b06a51556eb"</span> <span class="attr">data-crypto-key</span>=<span class="string">"cryptpad:VE4raHL5VFReAXxioTaFZwt6q2jpxX+bdFHAFeoivZQ="</span>&gt;</span><span class="tag">&lt;/<span class="name">media-tag</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>With this you can embed files from your CryptDrive into any website you want.</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://blog.cryptpad.fr/2017/08/30/CryptPad-s-new-Secure-Cross-Domain-Iframe/" data-id="cjjttvr01000b7ezf3p40tat8" class="article-share-link">Share</a>
+      <a data-url="https://blog.cryptpad.fr/2017/08/30/CryptPad-s-new-Secure-Cross-Domain-Iframe/" data-id="cjkf7woxc000b954tf44mah1u" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/appstore/">appstore</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iframe/">iframe</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/media-tag/">media-tag</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/security/">security</a></li></ul>
@@ -264,11 +337,11 @@ can be seen on this blog because it is using the <a href="https://github.com/UCF
     <div class="article-entry" itemprop="articleBody">
       
         <blockquote>
-<p>If you are hosting CryptPad, please make sure you are up to date. <a href="https://github.com/xwiki-labs/cryptpad/releases/tag/1.13.0" target="_blank" rel="external">CryptPad 1.13.0 (Naiad)</a> fixed a major security issue.</p>
+<p>If you are hosting CryptPad, please make sure you are up to date. <a href="https://github.com/xwiki-labs/cryptpad/releases/tag/1.13.0" target="_blank" rel="noopener">CryptPad 1.13.0 (Naiad)</a> fixed a major security issue.</p>
 </blockquote>
 <p>CryptPad was born on Halloween 2014, at that time it was a skunkworks project inside of XWiki SAS. The UI was hidious green and white and the only feature was the CKEditor based pad. We have come a long way.</p>
 <p><img src="/images/cryptpad_old_mainpage.png" alt="Old CryptPad Main Page"></p>
-<p>As was mentioned in <a href="2017/06/02/Building-mutually-beneficial-relationships/">Building Mututally Beneficial Relationships</a>, CryptPad cannot ever be great without people developing the software as their daily job. We have been able to develop this project with the generous support of <a href="http://www.bpifrance.fr/" target="_blank" rel="external">BPI France</a> and the <a href="http://ng.open-paas.org/" target="_blank" rel="external">OpenPaaS::NG</a> but that support only finances a small team and it will not continue indefinitely.</p>
+<p>As was mentioned in <a href="2017/06/02/Building-mutually-beneficial-relationships/">Building Mututally Beneficial Relationships</a>, CryptPad cannot ever be great without people developing the software as their daily job. We have been able to develop this project with the generous support of <a href="http://www.bpifrance.fr/" target="_blank" rel="noopener">BPI France</a> and the <a href="http://ng.open-paas.org/" target="_blank" rel="noopener">OpenPaaS::NG</a> but that support only finances a small team and it will not continue indefinitely.</p>
 <p>Starting with this release, we are adopting a new look and a reinforced dedication to making a quality product for people whose time is valuable. We’re starting this by upgrading the logo and the informational pages.</p>
 <p><img src="/images/cryptpad_new_mainpage.png" alt="New CryptPad Main Page"></p>
 <p>Our lovable fist logo was created one night by grabbing a screen shot of an ascii generator. It was a time when I was racing to get <em>something</em> working to prove that CryptPad was an idea worth pursuing. Now times have changed. CryptPad is finally something that I’m starting to feel proud of, and the logo represented the last reminents of a time when everything was a rush and quality was an afterthought.</p>
@@ -281,13 +354,13 @@ can be seen on this blog because it is using the <a href="https://github.com/UCF
 </ul>
 <p><img src="/images/cryptpad_pdf.png" alt="Registered users can uploading and view PDF Files"></p>
 <p>But more than features, we have focused on making CryptPad easier to use. It’s now easier to paste text into the pad without breaking the formatting and we have additional tool-tips to help explain different features of CryptPad.</p>
-<p>Going forward from today we plan to make CryptPad easier to use, more secure and more extensible. We are rewriting the pad logic in order to run in a cross-domain iframe which will make use of the browser’s <a href="https://en.wikipedia.org/wiki/Same-origin_policy" target="_blank" rel="external">Same Origin Policy</a> as a sandbox to block most of the code from accessing the decryption keys.</p>
+<p>Going forward from today we plan to make CryptPad easier to use, more secure and more extensible. We are rewriting the pad logic in order to run in a cross-domain iframe which will make use of the browser’s <a href="https://en.wikipedia.org/wiki/Same-origin_policy" target="_blank" rel="noopener">Same Origin Policy</a> as a sandbox to block most of the code from accessing the decryption keys.</p>
 <p>This will open the door to 3rd party applications developed for CryptPad which can be protected by the same cryptography as CryptPad and which have limited access to the CryptPad system.</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://blog.cryptpad.fr/2017/08/18/CryptPad-s-New-Direction/" data-id="cjjttvqzw00087ezfvomnihtf" class="article-share-link">Share</a>
+      <a data-url="https://blog.cryptpad.fr/2017/08/18/CryptPad-s-New-Direction/" data-id="cjkf7woxb0009954tccd27vgl" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/extensibility/">extensibility</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/quality/">quality</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/security/">security</a></li></ul>
@@ -361,16 +434,16 @@ educated guesses by looking at the encrypted data.</p>
 <h2 id="What-we-could-know-but-don’t-bother-to-collect"><a href="#What-we-could-know-but-don’t-bother-to-collect" class="headerlink" title="What we could know but don’t bother to collect"></a>What we could know but don’t bother to collect</h2><p>There are also some things which we don’t really want to know but we cannot avoid
 seeing it anyway. This includes most importantly the IP addresses of people who
 edited a specific pad. Technically we know your
-<a href="https://en.wikipedia.org/wiki/IP_address" target="_blank" rel="external">IP address</a> because it’s how you
+<a href="https://en.wikipedia.org/wiki/IP_address" target="_blank" rel="noopener">IP address</a> because it’s how you
 communicate with our server, but most of the actual operations are done using
-commands sent down a <a href="https://en.wikipedia.org/wiki/WebSocket" target="_blank" rel="external">WebSocket</a>.
+commands sent down a <a href="https://en.wikipedia.org/wiki/WebSocket" target="_blank" rel="noopener">WebSocket</a>.
 Once the WebSocket is established, we assign you a random ID and this is how
 you are referenced, what appears in our server logs looks like this:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">198.167.222.70 - - [06/Jul/2017:20:47:45 +0200] &quot;GET /pad/ HTTP/1.1&quot;</div><div class="line">304 0 &quot;-&quot; &quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36</div><div class="line">(KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36&quot; &quot;-&quot;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">198.167.222.70 - - [06/Jul/2017:20:47:45 +0200] &quot;GET /pad/ HTTP/1.1&quot;</span><br><span class="line">304 0 &quot;-&quot; &quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36</span><br><span class="line">(KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36&quot; &quot;-&quot;</span><br></pre></td></tr></table></figure>
 <p>Notice there is no pad ID in there, the pad ID is not in the URL so it doesn’t go
 in the server logs by default.</p>
 <p>Compare this with EtherPad:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">  IP Address                                             Pad ID</div><div class="line">198.167.222.70 - - [06/Jul/2017:11:54:37 -0700] &quot;GET /p/UNWnpczTkq HTTP/1.1&quot;</div><div class="line">200 8920 &quot;https://pad.meshwith.me/&quot; &quot;Mozilla/5.0 (Macintosh; Intel Mac OS X</div><div class="line">10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109</div><div class="line">Safari/537.36&quot;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  IP Address                                             Pad ID</span><br><span class="line">198.167.222.70 - - [06/Jul/2017:11:54:37 -0700] &quot;GET /p/UNWnpczTkq HTTP/1.1&quot;</span><br><span class="line">200 8920 &quot;https://pad.meshwith.me/&quot; &quot;Mozilla/5.0 (Macintosh; Intel Mac OS X</span><br><span class="line">10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109</span><br><span class="line">Safari/537.36&quot;</span><br></pre></td></tr></table></figure>
 <p><em>You cannot verify that we’re not collecting this so best assume that we are.</em></p>
 <h2 id="What-we-must-know"><a href="#What-we-must-know" class="headerlink" title="What we must know"></a>What we must know</h2><p>There are some things which we need to know in order for CryptPad to function
 properly, we need to know which pads are in your drive in order to impose
@@ -384,7 +457,7 @@ their CryptDrive including a pad of some type which has the ID
 <code>ff2fdf9bb99ecc89d29d780780de10efdac14ed15e93b235</code>. One of these pads that they
 have is actually their drive itself, but we don’t strictly know which one (again,
 we can take guesses based on the size of the patches). You can find out what your
-signing key is by looking at in your <a href="https://cryptpad.fr/settings" target="_blank" rel="external">settings page</a>.</p>
+signing key is by looking at in your <a href="https://cryptpad.fr/settings" target="_blank" rel="noopener">settings page</a>.</p>
 <p>We also know when each pad was last accessed so that we can know to delete pads
 which are not in anybody’s CryptDrive and have not been opened in a long time.</p>
 <h3 id="Why-we-can’t-avoid-collecting-IP-addresses"><a href="#Why-we-can’t-avoid-collecting-IP-addresses" class="headerlink" title="Why we can’t avoid collecting IP addresses"></a>Why we can’t avoid collecting IP addresses</h3><p>Being able to know how many <em>different</em> people are using CryptPad is very important
@@ -397,13 +470,13 @@ widespread support vs. which ones are only popular with a few prolific users.</p
 <p>One obvious thought is to simply run the IP addresses through a hash function the
 way we traditionally hash passwords. However this sadly cannot work because there
 are only 4.2 billion IPv4 addresses and constructing a
-<a href="https://en.wikipedia.org/wiki/Rainbow_table" target="_blank" rel="external">rainbow table</a> to get back the
+<a href="https://en.wikipedia.org/wiki/Rainbow_table" target="_blank" rel="noopener">rainbow table</a> to get back the
 original IP addresses would take only about 1 day of computer time. So in the end
 we simply log the IP addresses and don’t worry about it.</p>
 <h3 id="What-a-pad-looks-like-to-us"><a href="#What-a-pad-looks-like-to-us" class="headerlink" title="What a pad looks like to us"></a>What a pad looks like to us</h3><p>A pad is stored as a file which represents a sequence of encrypted <em>patches</em>.
 These patches change the content of the pad from nothing to whatever it becomes in
 the end. A typical message looks something like this:
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[0,&quot;69d46337f826c0ecd881be59c119a527&quot;,&quot;MSG&quot;,&quot;fe382219b10c0396de63d2bab7942390&quot;,&quot;51Q....&quot;]</div></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[0,&quot;69d46337f826c0ecd881be59c119a527&quot;,&quot;MSG&quot;,&quot;fe382219b10c0396de63d2bab7942390&quot;,&quot;51Q....&quot;]</span><br></pre></td></tr></table></figure></p>
 <p>It starts with a zero and then your temporary random ID, then it contains the word
 MSG and the ID of the pad which it is sent to, this format is exactly the same as
 what is sent on the wire. Finally it contains the encrypted patch which tells us
@@ -419,9 +492,9 @@ make that experience better. So therefore we collect quite a number of data-poin
 about where people click and what their browser supports. For example we collect
 the dimensions of your browser. Not because we want to know who you are but because
 we want to know that types of browsers we need to support.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">198.167.222.70 - - [06/Jul/2017:21:26:15 +0200]</div><div class="line">&quot;HEAD /common/feedback.html?DIMENSIONS:752x1440=1499369175085 HTTP/1.1&quot; 200 0</div><div class="line">&quot;https://cryptpad.fr/settings/&quot; &quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5)</div><div class="line">AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36&quot; &quot;-&quot;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">198.167.222.70 - - [06/Jul/2017:21:26:15 +0200]</span><br><span class="line">&quot;HEAD /common/feedback.html?DIMENSIONS:752x1440=1499369175085 HTTP/1.1&quot; 200 0</span><br><span class="line">&quot;https://cryptpad.fr/settings/&quot; &quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5)</span><br><span class="line">AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36&quot; &quot;-&quot;</span><br></pre></td></tr></table></figure>
 <p>You can see an exhaustive list of things that we collect by checking out the
-<a href="https://github.com/xwiki-labs/cryptpad/search?p=2&amp;q=Cryptpad.feedback&amp;type=&amp;utf8=%E2%9C%93" target="_blank" rel="external">feedback functionality</a> in the CryptPad source code but
+<a href="https://github.com/xwiki-labs/cryptpad/search?p=2&amp;q=Cryptpad.feedback&amp;type=&amp;utf8=%E2%9C%93" target="_blank" rel="noopener">feedback functionality</a> in the CryptPad source code but
 as of the time of this writing, we are collecting feedback about the following
 things (usually we just collect the fact that an event occurred, not more).</p>
 <ul>
@@ -435,16 +508,16 @@ things (usually we just collect the fact that an event occurred, not more).</p>
 <li>Creating and using templates</li>
 <li>Showing and hiding the userlist or CKEditor menu bar</li>
 <li>Whether your browser is missing certain important features like
-<a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Proxy" target="_blank" rel="external">Proxy</a>,
-<a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray" target="_blank" rel="external">isArray</a>
-or <a href="https://developer.mozilla.org/en/docs/Web/API/Window/localStorage" target="_blank" rel="external">localStorage</a></li>
+<a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Proxy" target="_blank" rel="noopener">Proxy</a>,
+<a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray" target="_blank" rel="noopener">isArray</a>
+or <a href="https://developer.mozilla.org/en/docs/Web/API/Window/localStorage" target="_blank" rel="noopener">localStorage</a></li>
 <li>Which type of pad you are using</li>
 <li>The dimensions of your browser window</li>
 <li>When you have changed your display name</li>
 <li>Whether you have migrated your CryptDrive from the legacy format</li>
 </ul>
 <p>If you are worried about what we might do with this data, you can disable
-feedback collection in your <a href="https://cryptpad.fr/settings/" target="_blank" rel="external">settings page</a>. But
+feedback collection in your <a href="https://cryptpad.fr/settings/" target="_blank" rel="noopener">settings page</a>. But
 keep in mind that if you disable it we cannot help but know, because your IP
 address will be in the tiny minority of addresses which access the site but don’t
 send feedback messages.</p>
@@ -476,89 +549,17 @@ their projects succeed. So whenever people decide that CryptPad is not the right
 answer for them, we care about what went wrong and how we can make it better.</p>
 <h2 id="How-we-analyze-this-data"><a href="#How-we-analyze-this-data" class="headerlink" title="How we analyze this data"></a>How we analyze this data</h2><p>We do all of our analysis ourselves, and we don’t share any of this data with Google
 or other data companies. We’re thankful to
-<a href="https://www.elastic.co/products/kibana" target="_blank" rel="external">Kibana/ElasticSearch</a> and
-<a href="https://www.elastic.co/products/logstash" target="_blank" rel="external">LogStash</a> for making it possible to do
+<a href="https://www.elastic.co/products/kibana" target="_blank" rel="noopener">Kibana/ElasticSearch</a> and
+<a href="https://www.elastic.co/products/logstash" target="_blank" rel="noopener">LogStash</a> for making it possible to do
 in depth analysis on our own computers without resorting to a cloud service.</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://blog.cryptpad.fr/2017/07/07/cryptpad-analytics-what-we-cant-know-what-we-must-know-what-we-want-to-know/" data-id="cjjttvr0f000s7ezfzx3ptg38" class="article-share-link">Share</a>
+      <a data-url="https://blog.cryptpad.fr/2017/07/07/cryptpad-analytics-what-we-cant-know-what-we-must-know-what-we-want-to-know/" data-id="cjkf7woxt000v954t4iv70w6u" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/analytics/">analytics</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/data/">data</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/privacy/">privacy</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-CryptPad-Jackalope-file-upload-pdf-and-pictures" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/06/21/CryptPad-Jackalope-file-upload-pdf-and-pictures/" class="article-date">
-  <time datetime="2017-06-21T10:48:48.000Z" itemprop="datePublished">2017-06-21</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/21/CryptPad-Jackalope-file-upload-pdf-and-pictures/">CryptPad Jackalope - File Upload, PDF and Pictures</a>
-    </h1>
-  
-
-
-        
-            <span class="article-author">
-                by
-                Caleb James DeLisle
-            </span>
-        
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Yesterday we released CryptPad v1.9.0 Jackalope, we have some exciting new features
-which we’ve been working on for a long time. As part of the
-<a href="https://github.com/UCF-project" target="_blank" rel="external">UCF project</a> we have implemented a Zero Knowledge
-<code>media-tag</code> in CryptPad for displaying and downloading encrypted files stored in
-CryptPad. Starting now, you can upload files by clicking the upload button or
-dragging them into your CryptDrive. You can also view pictures and PDF files in
-CryptPad and you can drag-and-drop pictures <strong>directly</strong> into presentations. In the
-next release we will hopefully be adding drag-and-drop pictures into the pad.</p>
-<p><img src="/images/CryptPad_drive_with_upload.png" alt="CryptDrive Upload"></p>
-<h2 id="Filenames"><a href="#Filenames" class="headerlink" title="Filenames"></a>Filenames</h2><p>We also made a significant but less visible improvement to the CryptDrive. When you
-make a new pad in CryptPad, it has a <em>title</em>, which anyone in the pad can change, and
-it has a <em>filename</em> which it how the pad is shown in your CryptDrive. Because anyone
-at any time can change the <em>title</em> of a pad, the only way to know the titles of all
-the pads in your drive is to load each and every one of them which would take a long
-time. But the <em>filename</em> is your unique way to refer to a pad, it lives only in
-<em>your</em> CryptDrive and it is the same no matter what <em>title</em> someone gives to the pad.</p>
-<p>Now the CryptDrive UI shows only one name for a pad, this name is just the <em>title</em>
-of the pad at the last time you’d accessed it <strong>unless</strong> you assign it your own
-<em>filename</em>.</p>
-<h2 id="Slide-Preview"><a href="#Slide-Preview" class="headerlink" title="Slide Preview"></a>Slide Preview</h2><p>When you’re using the CryptPad slide app to make a quick presentation, now you can
-see your presentation in the righthand pane while you type. Since presentations are
-written in Markdown, this means you get a live action preview of what your
-presentation slides are going to look like.</p>
-<p><img src="/images/CryptPad_slide_upload_and_preview.png" alt="Slide Preview and Drag &amp; Drop"></p>
-<h2 id="Try-it-now"><a href="#Try-it-now" class="headerlink" title="Try it now"></a>Try it now</h2><p>Head over to <a href="https://cryptpad.fr" target="_blank" rel="external">cryptpad.fr</a> and give CryptPad a try !</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://blog.cryptpad.fr/2017/06/21/CryptPad-Jackalope-file-upload-pdf-and-pictures/" data-id="cjjttvqzq00037ezfo1fullht" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/embed/">embed</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/file/">file</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/pdf/">pdf</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/upload/">upload</a></li></ul>
 
     </footer>
   </div>
@@ -585,7 +586,7 @@ presentation slides are going to look like.</p>
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Financing/" style="font-size: 10px;">Financing</a> <a href="/tags/Performance/" style="font-size: 10px;">Performance</a> <a href="/tags/Roadmap/" style="font-size: 10px;">Roadmap</a> <a href="/tags/SharedWorker/" style="font-size: 10px;">SharedWorker</a> <a href="/tags/WebWorker/" style="font-size: 10px;">WebWorker</a> <a href="/tags/analytics/" style="font-size: 10px;">analytics</a> <a href="/tags/appstore/" style="font-size: 10px;">appstore</a> <a href="/tags/chain-of-trust/" style="font-size: 10px;">chain of trust</a> <a href="/tags/cloud/" style="font-size: 10px;">cloud</a> <a href="/tags/data/" style="font-size: 10px;">data</a> <a href="/tags/donate/" style="font-size: 10px;">donate</a> <a href="/tags/embed/" style="font-size: 10px;">embed</a> <a href="/tags/ethics/" style="font-size: 10px;">ethics</a> <a href="/tags/extensibility/" style="font-size: 10px;">extensibility</a> <a href="/tags/file/" style="font-size: 10px;">file</a> <a href="/tags/financing/" style="font-size: 13.33px;">financing</a> <a href="/tags/funding/" style="font-size: 10px;">funding</a> <a href="/tags/iframe/" style="font-size: 10px;">iframe</a> <a href="/tags/login/" style="font-size: 10px;">login</a> <a href="/tags/lulz/" style="font-size: 10px;">lulz</a> <a href="/tags/media-tag/" style="font-size: 10px;">media-tag</a> <a href="/tags/open-source/" style="font-size: 10px;">open source</a> <a href="/tags/pdf/" style="font-size: 10px;">pdf</a> <a href="/tags/privacy/" style="font-size: 10px;">privacy</a> <a href="/tags/quality/" style="font-size: 10px;">quality</a> <a href="/tags/release/" style="font-size: 13.33px;">release</a> <a href="/tags/research/" style="font-size: 10px;">research</a> <a href="/tags/roadmap/" style="font-size: 10px;">roadmap</a> <a href="/tags/security/" style="font-size: 20px;">security</a> <a href="/tags/signing/" style="font-size: 10px;">signing</a> <a href="/tags/storage/" style="font-size: 10px;">storage</a> <a href="/tags/subresource-integrity/" style="font-size: 10px;">subresource integrity</a> <a href="/tags/upload/" style="font-size: 10px;">upload</a> <a href="/tags/xss/" style="font-size: 10px;">xss</a> <a href="/tags/zero-knowledge/" style="font-size: 16.67px;">zero knowledge</a>
+      <a href="/tags/analytics/" style="font-size: 10px;">analytics</a> <a href="/tags/appstore/" style="font-size: 10px;">appstore</a> <a href="/tags/chain-of-trust/" style="font-size: 10px;">chain of trust</a> <a href="/tags/cloud/" style="font-size: 10px;">cloud</a> <a href="/tags/data/" style="font-size: 10px;">data</a> <a href="/tags/donate/" style="font-size: 13.33px;">donate</a> <a href="/tags/embed/" style="font-size: 10px;">embed</a> <a href="/tags/ethics/" style="font-size: 10px;">ethics</a> <a href="/tags/extensibility/" style="font-size: 10px;">extensibility</a> <a href="/tags/file/" style="font-size: 10px;">file</a> <a href="/tags/funding/" style="font-size: 20px;">funding</a> <a href="/tags/iframe/" style="font-size: 10px;">iframe</a> <a href="/tags/login/" style="font-size: 10px;">login</a> <a href="/tags/lulz/" style="font-size: 10px;">lulz</a> <a href="/tags/media-tag/" style="font-size: 10px;">media-tag</a> <a href="/tags/open-collective/" style="font-size: 10px;">open collective</a> <a href="/tags/open-source/" style="font-size: 10px;">open source</a> <a href="/tags/pdf/" style="font-size: 10px;">pdf</a> <a href="/tags/performance/" style="font-size: 10px;">performance</a> <a href="/tags/privacy/" style="font-size: 10px;">privacy</a> <a href="/tags/quality/" style="font-size: 10px;">quality</a> <a href="/tags/release/" style="font-size: 13.33px;">release</a> <a href="/tags/research/" style="font-size: 10px;">research</a> <a href="/tags/roadmap/" style="font-size: 13.33px;">roadmap</a> <a href="/tags/security/" style="font-size: 20px;">security</a> <a href="/tags/shared-worker/" style="font-size: 10px;">shared worker</a> <a href="/tags/signing/" style="font-size: 10px;">signing</a> <a href="/tags/storage/" style="font-size: 10px;">storage</a> <a href="/tags/subresource-integrity/" style="font-size: 10px;">subresource integrity</a> <a href="/tags/upload/" style="font-size: 10px;">upload</a> <a href="/tags/web-worker/" style="font-size: 10px;">web worker</a> <a href="/tags/xss/" style="font-size: 10px;">xss</a> <a href="/tags/zero-knowledge/" style="font-size: 16.67px;">zero knowledge</a>
     </div>
   </div>
 
@@ -594,7 +595,7 @@ presentation slides are going to look like.</p>
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li></ul>
     </div>
   </div>
 
@@ -605,6 +606,10 @@ presentation slides are going to look like.</p>
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2018/08/04/CryptPad-funding-status-after-one-month/">CryptPad funding status after one month</a>
+          </li>
         
           <li>
             <a href="/2018/07/20/Making-CryptPad-CSS-3-times-faster-by-loading-it-twice/">Making CryptPad CSS 3 times faster, by loading it twice</a>
@@ -620,10 +625,6 @@ presentation slides are going to look like.</p>
         
           <li>
             <a href="/2018/06/22/Faster-loads-with-SharedWorker-ServiceWorker/">Faster loads with SharedWorker &amp; ServiceWorker</a>
-          </li>
-        
-          <li>
-            <a href="/2018/06/15/Signing-CryptPad/">Signing CryptPad</a>
           </li>
         
       </ul>
