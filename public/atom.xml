@@ -46,8 +46,8 @@
     <title>Making CryptPad CSS 3 times faster, by loading it twice</title>
     <link href="https://blog.cryptpad.fr/2018/07/20/Making-CryptPad-CSS-3-times-faster-by-loading-it-twice/"/>
     <id>https://blog.cryptpad.fr/2018/07/20/Making-CryptPad-CSS-3-times-faster-by-loading-it-twice/</id>
-    <published>2018-07-20T10:00:59.000Z</published>
-    <updated>2018-08-04T09:10:05.992Z</updated>
+    <published>2018-07-20T16:00:59.000Z</published>
+    <updated>2018-09-04T13:24:22.725Z</updated>
     
     <summary type="html">
     
@@ -60,6 +60,10 @@
     
     </summary>
     
+    
+      <category term="performance" scheme="https://blog.cryptpad.fr/tags/performance/"/>
+    
+      <category term="css" scheme="https://blog.cryptpad.fr/tags/css/"/>
     
   </entry>
   
@@ -393,8 +397,8 @@ which we’ve been working on for a long time. As part
   
   <entry>
     <title>Exciting news</title>
-    <link href="https://blog.cryptpad.fr/2017/04/01/Exciting-news/"/>
-    <id>https://blog.cryptpad.fr/2017/04/01/Exciting-news/</id>
+    <link href="https://blog.cryptpad.fr/2017/03/31/Exciting-news/"/>
+    <id>https://blog.cryptpad.fr/2017/03/31/Exciting-news/</id>
     <published>2017-03-31T22:03:49.000Z</published>
     <updated>2018-08-04T09:10:05.991Z</updated>
     

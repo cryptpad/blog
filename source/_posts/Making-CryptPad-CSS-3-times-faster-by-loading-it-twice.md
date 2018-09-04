@@ -1,8 +1,10 @@
 ---
 title: 'Making CryptPad CSS 3 times faster, by loading it twice'
 date: 2018-07-20 12:00:59
-author:
+author: Caleb James DeLisle
 tags:
+  - performance
+  - css
 ---
 
 <script src="https://cryptpad.fr/common/media-tag-nacl.min.js"></script>
