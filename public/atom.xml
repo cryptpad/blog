@@ -6,7 +6,7 @@
   <link href="//atom.xml" rel="self"/>
   
   <link href="https://blog.cryptpad.fr/"/>
-  <updated>2018-08-14T11:13:06.151Z</updated>
+  <updated>2018-09-12T18:35:56.483Z</updated>
   <id>https://blog.cryptpad.fr/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CryptPad funding status August 2018</title>
+    <link href="https://blog.cryptpad.fr/2018/09/12/CryptPad-funding-status-August-2018/"/>
+    <id>https://blog.cryptpad.fr/2018/09/12/CryptPad-funding-status-August-2018/</id>
+    <published>2018-09-12T18:14:16.000Z</published>
+    <updated>2018-09-12T18:35:56.483Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;/images/cryptpad-funding-blog-cover-generic.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;We have now passed the summer since we have started the OpenCol
+      
+    
+    </summary>
+    
+    
+      <category term="funding" scheme="https://blog.cryptpad.fr/tags/funding/"/>
+    
+      <category term="donate" scheme="https://blog.cryptpad.fr/tags/donate/"/>
+    
+      <category term="open collective" scheme="https://blog.cryptpad.fr/tags/open-collective/"/>
+    
+  </entry>
   
   <entry>
     <title>CryptPad funding status after one month</title>
@@ -483,28 +509,6 @@ Each day
     
     
       <category term="release" scheme="https://blog.cryptpad.fr/tags/release/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Time to Encrypt the Cloud</title>
-    <link href="https://blog.cryptpad.fr/2017/02/20/Time-to-Encrypt-the-Cloud/"/>
-    <id>https://blog.cryptpad.fr/2017/02/20/Time-to-Encrypt-the-Cloud/</id>
-    <published>2017-02-20T16:54:02.000Z</published>
-    <updated>2018-08-04T09:10:05.993Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;From typing a business letter to taking pictures with friends, the internet has changed every part of our lives.
-We don’t just share info
-      
-    
-    </summary>
-    
-    
-      <category term="zero knowledge" scheme="https://blog.cryptpad.fr/tags/zero-knowledge/"/>
     
   </entry>
   
