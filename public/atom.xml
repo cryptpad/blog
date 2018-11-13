@@ -6,7 +6,7 @@
   <link href="//atom.xml" rel="self"/>
   
   <link href="https://blog.cryptpad.fr/"/>
-  <updated>2018-09-12T18:35:56.483Z</updated>
+  <updated>2018-11-13T17:15:09.036Z</updated>
   <id>https://blog.cryptpad.fr/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>We are Europe&#39;s Next Generation Privacy Startup (and what does it mean for you)</title>
+    <link href="https://blog.cryptpad.fr/2018/11/13/We-are-Europe-s-Next-Generation-Privacy-Startup-and-what-does-it-mean-for-you/"/>
+    <id>https://blog.cryptpad.fr/2018/11/13/We-are-Europe-s-Next-Generation-Privacy-Startup-and-what-does-it-mean-for-you/</id>
+    <published>2018-11-13T14:29:32.000Z</published>
+    <updated>2018-11-13T17:15:09.036Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;/images/cryptpad_ngi_award.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Almost four years ago, when the first CryptPad commit Caleb did (&lt;a href=&quot;https:
+      
+    
+    </summary>
+    
+    
+      <category term="privacy" scheme="https://blog.cryptpad.fr/tags/privacy/"/>
+    
+      <category term="award" scheme="https://blog.cryptpad.fr/tags/award/"/>
+    
+      <category term="ngi" scheme="https://blog.cryptpad.fr/tags/ngi/"/>
+    
+  </entry>
   
   <entry>
     <title>CryptPad funding status August 2018</title>
@@ -36,9 +62,9 @@
     
       <category term="funding" scheme="https://blog.cryptpad.fr/tags/funding/"/>
     
-      <category term="donate" scheme="https://blog.cryptpad.fr/tags/donate/"/>
-    
       <category term="open collective" scheme="https://blog.cryptpad.fr/tags/open-collective/"/>
+    
+      <category term="donate" scheme="https://blog.cryptpad.fr/tags/donate/"/>
     
   </entry>
   
@@ -46,8 +72,8 @@
     <title>CryptPad funding status after one month</title>
     <link href="https://blog.cryptpad.fr/2018/08/04/CryptPad-funding-status-after-one-month/"/>
     <id>https://blog.cryptpad.fr/2018/08/04/CryptPad-funding-status-after-one-month/</id>
-    <published>2018-08-04T09:26:23.000Z</published>
-    <updated>2018-08-14T11:13:06.151Z</updated>
+    <published>2018-08-04T15:26:23.000Z</published>
+    <updated>2018-09-12T18:34:57.802Z</updated>
     
     <summary type="html">
     
@@ -62,9 +88,9 @@
     
       <category term="funding" scheme="https://blog.cryptpad.fr/tags/funding/"/>
     
-      <category term="donate" scheme="https://blog.cryptpad.fr/tags/donate/"/>
-    
       <category term="open collective" scheme="https://blog.cryptpad.fr/tags/open-collective/"/>
+    
+      <category term="donate" scheme="https://blog.cryptpad.fr/tags/donate/"/>
     
   </entry>
   
@@ -73,7 +99,7 @@
     <link href="https://blog.cryptpad.fr/2018/07/20/Making-CryptPad-CSS-3-times-faster-by-loading-it-twice/"/>
     <id>https://blog.cryptpad.fr/2018/07/20/Making-CryptPad-CSS-3-times-faster-by-loading-it-twice/</id>
     <published>2018-07-20T16:00:59.000Z</published>
-    <updated>2018-09-04T13:24:22.725Z</updated>
+    <updated>2018-09-12T18:34:57.802Z</updated>
     
     <summary type="html">
     
@@ -98,7 +124,7 @@
     <link href="https://blog.cryptpad.fr/2018/07/13/CryptPad-Roadmap/"/>
     <id>https://blog.cryptpad.fr/2018/07/13/CryptPad-Roadmap/</id>
     <published>2018-07-13T10:41:04.000Z</published>
-    <updated>2018-08-07T13:13:14.526Z</updated>
+    <updated>2018-08-04T09:29:12.682Z</updated>
     
     <summary type="html">
     
@@ -110,9 +136,9 @@
     </summary>
     
     
-      <category term="roadmap" scheme="https://blog.cryptpad.fr/tags/roadmap/"/>
-    
       <category term="funding" scheme="https://blog.cryptpad.fr/tags/funding/"/>
+    
+      <category term="roadmap" scheme="https://blog.cryptpad.fr/tags/roadmap/"/>
     
   </entry>
   
@@ -423,8 +449,8 @@ which we’ve been working on for a long time. As part
   
   <entry>
     <title>Exciting news</title>
-    <link href="https://blog.cryptpad.fr/2017/03/31/Exciting-news/"/>
-    <id>https://blog.cryptpad.fr/2017/03/31/Exciting-news/</id>
+    <link href="https://blog.cryptpad.fr/2017/04/01/Exciting-news/"/>
+    <id>https://blog.cryptpad.fr/2017/04/01/Exciting-news/</id>
     <published>2017-03-31T22:03:49.000Z</published>
     <updated>2018-08-04T09:10:05.991Z</updated>
     
@@ -462,9 +488,9 @@ Each day
     </summary>
     
     
-      <category term="zero knowledge" scheme="https://blog.cryptpad.fr/tags/zero-knowledge/"/>
-    
       <category term="security" scheme="https://blog.cryptpad.fr/tags/security/"/>
+    
+      <category term="zero knowledge" scheme="https://blog.cryptpad.fr/tags/zero-knowledge/"/>
     
   </entry>
   
@@ -488,27 +514,6 @@ Each day
       <category term="security" scheme="https://blog.cryptpad.fr/tags/security/"/>
     
       <category term="xss" scheme="https://blog.cryptpad.fr/tags/xss/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Announcing biweekly releases</title>
-    <link href="https://blog.cryptpad.fr/2017/02/24/Announcing-biweekly-releases/"/>
-    <id>https://blog.cryptpad.fr/2017/02/24/Announcing-biweekly-releases/</id>
-    <published>2017-02-24T15:26:03.000Z</published>
-    <updated>2018-08-04T09:10:05.990Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;When I joined the research team at &lt;a href=&quot;http://www.xwiki.com/en/team/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;XWiki&lt;/a&gt; a little over a year 
-      
-    
-    </summary>
-    
-    
-      <category term="release" scheme="https://blog.cryptpad.fr/tags/release/"/>
     
   </entry>
   
