@@ -6,7 +6,7 @@
   <link href="//atom.xml" rel="self"/>
   
   <link href="https://blog.cryptpad.fr/"/>
-  <updated>2018-11-13T17:15:09.036Z</updated>
+  <updated>2018-11-16T13:46:37.864Z</updated>
   <id>https://blog.cryptpad.fr/</id>
   
   <author>
@@ -17,18 +17,19 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>We are Europe&#39;s Next Generation Privacy Startup (and what does it mean for you)</title>
-    <link href="https://blog.cryptpad.fr/2018/11/13/We-are-Europe-s-Next-Generation-Privacy-Startup-and-what-does-it-mean-for-you/"/>
-    <id>https://blog.cryptpad.fr/2018/11/13/We-are-Europe-s-Next-Generation-Privacy-Startup-and-what-does-it-mean-for-you/</id>
+    <title>CryptPad receives NGI Startup Award</title>
+    <link href="https://blog.cryptpad.fr/2018/11/13/CryptPad-receives-NGI-Startup-Award/"/>
+    <id>https://blog.cryptpad.fr/2018/11/13/CryptPad-receives-NGI-Startup-Award/</id>
     <published>2018-11-13T14:29:32.000Z</published>
-    <updated>2018-11-13T17:15:09.036Z</updated>
+    <updated>2018-11-16T13:46:37.864Z</updated>
     
     <summary type="html">
     
       
       
         &lt;p&gt;&lt;img src=&quot;/images/cryptpad_ngi_award.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;Almost four years ago, when the first CryptPad commit Caleb did (&lt;a href=&quot;https:
+&lt;p&gt;&lt;strong&gt;Europe recognizes Privacy, and it’s starting with CryptPad&lt;/strong&gt;&lt;/p&gt;
+
       
     
     </summary>
@@ -46,8 +47,8 @@
     <title>CryptPad funding status August 2018</title>
     <link href="https://blog.cryptpad.fr/2018/09/12/CryptPad-funding-status-August-2018/"/>
     <id>https://blog.cryptpad.fr/2018/09/12/CryptPad-funding-status-August-2018/</id>
-    <published>2018-09-12T18:14:16.000Z</published>
-    <updated>2018-09-12T18:35:56.483Z</updated>
+    <published>2018-09-12T12:14:16.000Z</published>
+    <updated>2018-09-12T18:47:21.809Z</updated>
     
     <summary type="html">
     
@@ -72,7 +73,7 @@
     <title>CryptPad funding status after one month</title>
     <link href="https://blog.cryptpad.fr/2018/08/04/CryptPad-funding-status-after-one-month/"/>
     <id>https://blog.cryptpad.fr/2018/08/04/CryptPad-funding-status-after-one-month/</id>
-    <published>2018-08-04T15:26:23.000Z</published>
+    <published>2018-08-04T09:26:23.000Z</published>
     <updated>2018-09-12T18:34:57.802Z</updated>
     
     <summary type="html">
@@ -98,7 +99,7 @@
     <title>Making CryptPad CSS 3 times faster, by loading it twice</title>
     <link href="https://blog.cryptpad.fr/2018/07/20/Making-CryptPad-CSS-3-times-faster-by-loading-it-twice/"/>
     <id>https://blog.cryptpad.fr/2018/07/20/Making-CryptPad-CSS-3-times-faster-by-loading-it-twice/</id>
-    <published>2018-07-20T16:00:59.000Z</published>
+    <published>2018-07-20T10:00:59.000Z</published>
     <updated>2018-09-12T18:34:57.802Z</updated>
     
     <summary type="html">
@@ -124,7 +125,7 @@
     <link href="https://blog.cryptpad.fr/2018/07/13/CryptPad-Roadmap/"/>
     <id>https://blog.cryptpad.fr/2018/07/13/CryptPad-Roadmap/</id>
     <published>2018-07-13T10:41:04.000Z</published>
-    <updated>2018-08-04T09:29:12.682Z</updated>
+    <updated>2018-08-07T13:20:06.103Z</updated>
     
     <summary type="html">
     
@@ -147,7 +148,7 @@
     <link href="https://blog.cryptpad.fr/2018/07/06/CryptPad-ZeroKnowledge-Free-Software-needs-funding/"/>
     <id>https://blog.cryptpad.fr/2018/07/06/CryptPad-ZeroKnowledge-Free-Software-needs-funding/</id>
     <published>2018-07-06T12:37:18.000Z</published>
-    <updated>2018-08-04T09:29:16.030Z</updated>
+    <updated>2018-08-07T13:20:06.103Z</updated>
     
     <summary type="html">
     
@@ -170,7 +171,7 @@
     <link href="https://blog.cryptpad.fr/2018/06/22/Faster-loads-with-SharedWorker-ServiceWorker/"/>
     <id>https://blog.cryptpad.fr/2018/06/22/Faster-loads-with-SharedWorker-ServiceWorker/</id>
     <published>2018-06-22T19:21:58.000Z</published>
-    <updated>2018-08-04T09:31:34.119Z</updated>
+    <updated>2018-08-07T13:20:06.103Z</updated>
     
     <summary type="html">
     
@@ -195,7 +196,7 @@
     <link href="https://blog.cryptpad.fr/2018/06/15/Signing-CryptPad/"/>
     <id>https://blog.cryptpad.fr/2018/06/15/Signing-CryptPad/</id>
     <published>2018-06-15T10:07:05.000Z</published>
-    <updated>2018-08-04T09:10:05.993Z</updated>
+    <updated>2018-08-07T13:19:41.279Z</updated>
     
     <summary type="html">
     
@@ -220,7 +221,7 @@
     <link href="https://blog.cryptpad.fr/2018/02/23/One-year-of-biweekly-releases/"/>
     <id>https://blog.cryptpad.fr/2018/02/23/One-year-of-biweekly-releases/</id>
     <published>2018-02-23T13:37:15.000Z</published>
-    <updated>2018-08-04T09:10:05.992Z</updated>
+    <updated>2018-02-27T14:43:53.557Z</updated>
     
     <summary type="html">
     
@@ -234,9 +235,9 @@
     
       <category term="release" scheme="https://blog.cryptpad.fr/tags/release/"/>
     
-      <category term="roadmap" scheme="https://blog.cryptpad.fr/tags/roadmap/"/>
-    
       <category term="security" scheme="https://blog.cryptpad.fr/tags/security/"/>
+    
+      <category term="roadmap" scheme="https://blog.cryptpad.fr/tags/roadmap/"/>
     
   </entry>
   
@@ -245,7 +246,7 @@
     <link href="https://blog.cryptpad.fr/2017/08/30/CryptPad-s-new-Secure-Cross-Domain-Iframe/"/>
     <id>https://blog.cryptpad.fr/2017/08/30/CryptPad-s-new-Secure-Cross-Domain-Iframe/</id>
     <published>2017-08-30T14:53:00.000Z</published>
-    <updated>2018-08-04T09:10:05.991Z</updated>
+    <updated>2018-02-23T13:42:23.891Z</updated>
     
     <summary type="html">
     
@@ -274,7 +275,7 @@
     <link href="https://blog.cryptpad.fr/2017/08/18/CryptPad-s-New-Direction/"/>
     <id>https://blog.cryptpad.fr/2017/08/18/CryptPad-s-New-Direction/</id>
     <published>2017-08-18T10:14:39.000Z</published>
-    <updated>2018-08-04T09:10:05.991Z</updated>
+    <updated>2018-02-23T13:42:21.975Z</updated>
     
     <summary type="html">
     
@@ -300,7 +301,7 @@
     <link href="https://blog.cryptpad.fr/2017/07/07/cryptpad-analytics-what-we-cant-know-what-we-must-know-what-we-want-to-know/"/>
     <id>https://blog.cryptpad.fr/2017/07/07/cryptpad-analytics-what-we-cant-know-what-we-must-know-what-we-want-to-know/</id>
     <published>2017-07-07T11:41:02.000Z</published>
-    <updated>2018-08-04T09:10:05.993Z</updated>
+    <updated>2018-02-23T13:42:12.959Z</updated>
     
     <summary type="html">
     
@@ -313,11 +314,11 @@ that we do not have any access to the content which i
     </summary>
     
     
+      <category term="privacy" scheme="https://blog.cryptpad.fr/tags/privacy/"/>
+    
       <category term="analytics" scheme="https://blog.cryptpad.fr/tags/analytics/"/>
     
       <category term="data" scheme="https://blog.cryptpad.fr/tags/data/"/>
-    
-      <category term="privacy" scheme="https://blog.cryptpad.fr/tags/privacy/"/>
     
   </entry>
   
@@ -326,7 +327,7 @@ that we do not have any access to the content which i
     <link href="https://blog.cryptpad.fr/2017/06/21/CryptPad-Jackalope-file-upload-pdf-and-pictures/"/>
     <id>https://blog.cryptpad.fr/2017/06/21/CryptPad-Jackalope-file-upload-pdf-and-pictures/</id>
     <published>2017-06-21T10:48:48.000Z</published>
-    <updated>2018-08-04T09:10:05.990Z</updated>
+    <updated>2018-02-23T13:42:19.755Z</updated>
     
     <summary type="html">
     
@@ -354,7 +355,7 @@ which we’ve been working on for a long time. As part
     <link href="https://blog.cryptpad.fr/2017/06/02/Building-mutually-beneficial-relationships/"/>
     <id>https://blog.cryptpad.fr/2017/06/02/Building-mutually-beneficial-relationships/</id>
     <published>2017-06-02T11:52:47.000Z</published>
-    <updated>2018-08-04T09:10:05.990Z</updated>
+    <updated>2018-02-23T13:42:07.543Z</updated>
     
     <summary type="html">
     
@@ -380,7 +381,7 @@ which we’ve been working on for a long time. As part
     <link href="https://blog.cryptpad.fr/2017/05/23/CryptPad-use-it-love-it-support-it/"/>
     <id>https://blog.cryptpad.fr/2017/05/23/CryptPad-use-it-love-it-support-it/</id>
     <published>2017-05-23T16:40:35.000Z</published>
-    <updated>2018-08-04T09:35:38.416Z</updated>
+    <updated>2018-08-07T13:20:06.103Z</updated>
     
     <summary type="html">
     
@@ -404,7 +405,7 @@ which we’ve been working on for a long time. As part
     <link href="https://blog.cryptpad.fr/2017/05/17/You-gotta-log-in/"/>
     <id>https://blog.cryptpad.fr/2017/05/17/You-gotta-log-in/</id>
     <published>2017-05-17T10:22:52.000Z</published>
-    <updated>2018-08-04T09:10:05.993Z</updated>
+    <updated>2018-02-23T13:43:09.028Z</updated>
     
     <summary type="html">
     
@@ -427,7 +428,7 @@ which we’ve been working on for a long time. As part
     <link href="https://blog.cryptpad.fr/2017/04/20/Funding-CryptPad/"/>
     <id>https://blog.cryptpad.fr/2017/04/20/Funding-CryptPad/</id>
     <published>2017-04-20T10:15:09.000Z</published>
-    <updated>2018-08-04T09:28:44.333Z</updated>
+    <updated>2018-08-07T13:20:06.103Z</updated>
     
     <summary type="html">
     
@@ -452,7 +453,7 @@ which we’ve been working on for a long time. As part
     <link href="https://blog.cryptpad.fr/2017/04/01/Exciting-news/"/>
     <id>https://blog.cryptpad.fr/2017/04/01/Exciting-news/</id>
     <published>2017-03-31T22:03:49.000Z</published>
-    <updated>2018-08-04T09:10:05.991Z</updated>
+    <updated>2018-02-23T13:42:30.991Z</updated>
     
     <summary type="html">
     
@@ -474,7 +475,7 @@ Each day
     <link href="https://blog.cryptpad.fr/2017/03/24/What-is-Zero-Knowledge/"/>
     <id>https://blog.cryptpad.fr/2017/03/24/What-is-Zero-Knowledge/</id>
     <published>2017-03-24T13:42:03.000Z</published>
-    <updated>2018-08-04T09:10:05.993Z</updated>
+    <updated>2018-02-23T13:43:02.844Z</updated>
     
     <summary type="html">
     
@@ -499,7 +500,7 @@ Each day
     <link href="https://blog.cryptpad.fr/2017/03/06/Security-growing-pains/"/>
     <id>https://blog.cryptpad.fr/2017/03/06/Security-growing-pains/</id>
     <published>2017-03-06T10:04:58.000Z</published>
-    <updated>2018-08-04T09:10:05.992Z</updated>
+    <updated>2018-02-23T13:42:48.100Z</updated>
     
     <summary type="html">
     
