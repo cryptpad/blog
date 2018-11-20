@@ -15,7 +15,7 @@ tags:
 
 Europe's Next Generation Internet initiative ([NGI.eu](https://www.NGI.eu)) awarded CryptPad the Next Generation Internet’s [Privacy and trust-enhanced technologies startup award](https://awards.ngi.eu/winners-startup-awards). The NGI Startup Awards recognize Europe’s most disruptive entrepreneurs who are advancing revolutionary products, solutions and services destined to have a major impact on the internet of the future.
 
-Of course XWiki SAS and the CryptPad team are very proud of this award for a project that was started 4 years ago by Caleb James De Lisle as part of a French research project funding realtime editing in XWiki. The first commit ["**and so it begins**"](https://github.com/xwiki-labs/cryptpad/commit/1508c7ba71f5de5e51f061fbef45bc1f18493832) was premonitory of a long and important project.
+Of course XWiki SAS and the CryptPad team are very proud of this award for a project that was started 4 years ago by Caleb James DeLisle as part of a French research project funding realtime editing in XWiki. The first commit ["**and so it begins**"](https://github.com/xwiki-labs/cryptpad/commit/1508c7ba71f5de5e51f061fbef45bc1f18493832) was premonitory of a long and important project.
 
 But most importantly we are very happy that privacy enhancing technologies are getting recognized. We strongly believe that users of internet technologies should be able to control their privacy and the security of their data, and unfortunately this is not the case today. The dominating business model of the Internet is advertisement based on exploiting user data ("Your data is their data"). Cloud providers have full access to most of users' and companies' private data, which is being exposed to many risks.
 
