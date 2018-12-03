@@ -21,7 +21,7 @@ In this version we updated only the /pad/ application to use the cross-domain if
 
 Going forward, we plan to implement a standardized CryptPad application API so that new applications can be developed, installed and used in CryptPad. Today, the CryptPad API which is exposed to apps such as /pad/ and /code/ is not standardized and there is no clear line between the apps themselves and the CryptPad internals. As we move toward the a standard app API, we will define a standard representation of a CryptPad application with such additional aspects as the app's color-scheme and icons.
 
-Fundimentally, this unexciting change to CryptPad begins a new phase in development, we plan to move from a set of integrated prepackaged applications to an ecosystem of applications for collaborating on different types of content with the same encryption under the hood.
+Fundementally, this unexciting change to CryptPad begins a new phase in development, we plan to move from a set of integrated prepackaged applications to an ecosystem of applications for collaborating on different types of content with the same encryption under the hood.
 
 ## But Wait, There's more
 
