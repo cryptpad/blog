@@ -6,7 +6,7 @@
   <link href="//atom.xml" rel="self"/>
   
   <link href="https://blog.cryptpad.fr/"/>
-  <updated>2018-11-20T10:05:46.908Z</updated>
+  <updated>2018-12-10T16:30:01.915Z</updated>
   <id>https://blog.cryptpad.fr/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CryptPad funding status November 2018</title>
+    <link href="https://blog.cryptpad.fr/2018/12/09/CryptPad-funding-status-November-2018/"/>
+    <id>https://blog.cryptpad.fr/2018/12/09/CryptPad-funding-status-November-2018/</id>
+    <published>2018-12-09T19:00:00.000Z</published>
+    <updated>2018-12-10T16:30:01.915Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;/images/cryptpad-funding-blog-cover-generic.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;I’ve now let a few months pass since the last August status. I’
+      
+    
+    </summary>
+    
+    
+      <category term="funding" scheme="https://blog.cryptpad.fr/tags/funding/"/>
+    
+      <category term="open collective" scheme="https://blog.cryptpad.fr/tags/open-collective/"/>
+    
+      <category term="donate" scheme="https://blog.cryptpad.fr/tags/donate/"/>
+    
+  </entry>
   
   <entry>
     <title>CryptPad receives NGI Startup Award</title>
@@ -492,29 +518,6 @@ Each day
       <category term="security" scheme="https://blog.cryptpad.fr/tags/security/"/>
     
       <category term="zero knowledge" scheme="https://blog.cryptpad.fr/tags/zero-knowledge/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Security growing pains</title>
-    <link href="https://blog.cryptpad.fr/2017/03/06/Security-growing-pains/"/>
-    <id>https://blog.cryptpad.fr/2017/03/06/Security-growing-pains/</id>
-    <published>2017-03-06T10:04:58.000Z</published>
-    <updated>2018-02-23T13:42:48.100Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;em&gt;Update: The issue mentioned in this blog post was assigned &lt;a href=&quot;https://github.com/distributedweaknessfiling/DWF-CVE-2017-1000000
-      
-    
-    </summary>
-    
-    
-      <category term="security" scheme="https://blog.cryptpad.fr/tags/security/"/>
-    
-      <category term="xss" scheme="https://blog.cryptpad.fr/tags/xss/"/>
     
   </entry>
   
