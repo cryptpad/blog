@@ -6,7 +6,7 @@
   <link href="//atom.xml" rel="self"/>
   
   <link href="https://blog.cryptpad.fr/"/>
-  <updated>2019-02-22T13:04:29.856Z</updated>
+  <updated>2019-03-11T13:50:25.096Z</updated>
   <id>https://blog.cryptpad.fr/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Looking for translators</title>
+    <link href="https://blog.cryptpad.fr/2019/03/11/Looking-for-translators/"/>
+    <id>https://blog.cryptpad.fr/2019/03/11/Looking-for-translators/</id>
+    <published>2019-03-11T10:12:50.000Z</published>
+    <updated>2019-03-11T13:50:25.096Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Our mission is to make privacy-enhancing technologies accessible to people from all over the world.
+We get a lot of attention for the tec
+      
+    
+    </summary>
+    
+    
+      <category term="open source" scheme="https://blog.cryptpad.fr/tags/open-source/"/>
+    
+      <category term="quality" scheme="https://blog.cryptpad.fr/tags/quality/"/>
+    
+  </entry>
   
   <entry>
     <title>Heading to Barcelona</title>
@@ -44,7 +68,7 @@
     <link href="https://blog.cryptpad.fr/2018/12/09/CryptPad-funding-status-November-2018/"/>
     <id>https://blog.cryptpad.fr/2018/12/09/CryptPad-funding-status-November-2018/</id>
     <published>2018-12-09T19:00:00.000Z</published>
-    <updated>2018-12-10T16:30:01.915Z</updated>
+    <updated>2018-12-10T16:37:20.663Z</updated>
     
     <summary type="html">
     
@@ -70,7 +94,7 @@
     <link href="https://blog.cryptpad.fr/2018/11/13/CryptPad-receives-NGI-Startup-Award/"/>
     <id>https://blog.cryptpad.fr/2018/11/13/CryptPad-receives-NGI-Startup-Award/</id>
     <published>2018-11-13T14:29:32.000Z</published>
-    <updated>2018-11-20T10:05:46.908Z</updated>
+    <updated>2018-12-10T16:17:07.987Z</updated>
     
     <summary type="html">
     
@@ -123,7 +147,7 @@
     <link href="https://blog.cryptpad.fr/2018/08/04/CryptPad-funding-status-after-one-month/"/>
     <id>https://blog.cryptpad.fr/2018/08/04/CryptPad-funding-status-after-one-month/</id>
     <published>2018-08-04T09:26:23.000Z</published>
-    <updated>2018-09-12T18:34:57.802Z</updated>
+    <updated>2018-12-10T16:17:07.983Z</updated>
     
     <summary type="html">
     
@@ -149,7 +173,7 @@
     <link href="https://blog.cryptpad.fr/2018/07/20/Making-CryptPad-CSS-3-times-faster-by-loading-it-twice/"/>
     <id>https://blog.cryptpad.fr/2018/07/20/Making-CryptPad-CSS-3-times-faster-by-loading-it-twice/</id>
     <published>2018-07-20T10:00:59.000Z</published>
-    <updated>2018-09-12T18:34:57.802Z</updated>
+    <updated>2018-12-10T16:17:07.987Z</updated>
     
     <summary type="html">
     
@@ -295,7 +319,7 @@
     <link href="https://blog.cryptpad.fr/2017/08/30/CryptPad-s-new-Secure-Cross-Domain-Iframe/"/>
     <id>https://blog.cryptpad.fr/2017/08/30/CryptPad-s-new-Secure-Cross-Domain-Iframe/</id>
     <published>2017-08-30T14:53:00.000Z</published>
-    <updated>2018-12-03T10:23:05.096Z</updated>
+    <updated>2018-12-10T16:17:07.987Z</updated>
     
     <summary type="html">
     
@@ -494,28 +518,6 @@ which we’ve been working on for a long time. As part
       <category term="funding" scheme="https://blog.cryptpad.fr/tags/funding/"/>
     
       <category term="research" scheme="https://blog.cryptpad.fr/tags/research/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Exciting news</title>
-    <link href="https://blog.cryptpad.fr/2017/04/01/Exciting-news/"/>
-    <id>https://blog.cryptpad.fr/2017/04/01/Exciting-news/</id>
-    <published>2017-03-31T22:03:49.000Z</published>
-    <updated>2018-02-23T13:42:30.991Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;Here in the research department of XWiki SAS, which you may know as &lt;em&gt;the CryptPad team&lt;/em&gt;, we take our work very seriously.
-Each day
-      
-    
-    </summary>
-    
-    
-      <category term="lulz" scheme="https://blog.cryptpad.fr/tags/lulz/"/>
     
   </entry>
   
