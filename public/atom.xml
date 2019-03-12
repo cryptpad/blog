@@ -6,7 +6,7 @@
   <link href="//atom.xml" rel="self"/>
   
   <link href="https://blog.cryptpad.fr/"/>
-  <updated>2019-03-11T13:50:25.096Z</updated>
+  <updated>2019-03-12T16:52:56.768Z</updated>
   <id>https://blog.cryptpad.fr/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CryptPad funding status March 2019 - Thanks to our 100 backers!</title>
+    <link href="https://blog.cryptpad.fr/2019/03/11/CryptPad-funding-status-March-2019/"/>
+    <id>https://blog.cryptpad.fr/2019/03/11/CryptPad-funding-status-March-2019/</id>
+    <published>2019-03-11T19:00:00.000Z</published>
+    <updated>2019-03-12T16:52:56.768Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;/images/cryptpad-funding-blog-cover-generic.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;The beginning of the year has been busy.
+We &lt;a href=&quot;/2019/02/2
+      
+    
+    </summary>
+    
+    
+      <category term="funding" scheme="https://blog.cryptpad.fr/tags/funding/"/>
+    
+      <category term="open collective" scheme="https://blog.cryptpad.fr/tags/open-collective/"/>
+    
+      <category term="donate" scheme="https://blog.cryptpad.fr/tags/donate/"/>
+    
+  </entry>
   
   <entry>
     <title>Looking for translators</title>
@@ -308,9 +335,9 @@ We get a lot of attention for the tec
     
       <category term="release" scheme="https://blog.cryptpad.fr/tags/release/"/>
     
-      <category term="security" scheme="https://blog.cryptpad.fr/tags/security/"/>
-    
       <category term="roadmap" scheme="https://blog.cryptpad.fr/tags/roadmap/"/>
+    
+      <category term="security" scheme="https://blog.cryptpad.fr/tags/security/"/>
     
   </entry>
   
@@ -493,31 +520,6 @@ which we’ve been working on for a long time. As part
       <category term="login" scheme="https://blog.cryptpad.fr/tags/login/"/>
     
       <category term="storage" scheme="https://blog.cryptpad.fr/tags/storage/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Funding CryptPad</title>
-    <link href="https://blog.cryptpad.fr/2017/04/20/Funding-CryptPad/"/>
-    <id>https://blog.cryptpad.fr/2017/04/20/Funding-CryptPad/</id>
-    <published>2017-04-20T10:15:09.000Z</published>
-    <updated>2018-08-07T13:20:06.103Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;CryptPad started as a novel idea:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;provide a means for people to collaborate on the web, without their data being expo
-      
-    
-    </summary>
-    
-    
-      <category term="funding" scheme="https://blog.cryptpad.fr/tags/funding/"/>
-    
-      <category term="research" scheme="https://blog.cryptpad.fr/tags/research/"/>
     
   </entry>
   
