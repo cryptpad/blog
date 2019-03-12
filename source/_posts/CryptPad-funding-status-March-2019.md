@@ -17,7 +17,7 @@ Spreadsheet functionality was officially released in CryptPad and our funding ha
 We have seen a spike of both new subscriptions and growing usage of [CryptPad.fr](https://cryptpad.fr) in the last few months.
 You can see the numbers in [the new spreadsheet function launched in January](https://cryptpad.fr/sheet/#/2/sheet/view/ppScrSTQQy7gQ6gwYG2pSvNzedP0mHhhFHWwPl5P+Vk/embed/present/) (though this functionality is still restricted to registered users).
 
-![CryptPad funding details](/images/cryptpad-201902-funding.png)
+![CryptPad funding details](/images/cryptpad-201902-funding.png?v=2)
 
 We now have more than 100 backers from 23 countries around the world.
 
