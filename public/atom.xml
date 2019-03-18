@@ -6,7 +6,7 @@
   <link href="//atom.xml" rel="self"/>
   
   <link href="https://blog.cryptpad.fr/"/>
-  <updated>2019-03-12T17:42:50.546Z</updated>
+  <updated>2019-03-18T19:46:25.478Z</updated>
   <id>https://blog.cryptpad.fr/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Join the team</title>
+    <link href="https://blog.cryptpad.fr/2019/03/18/Join-the-team/"/>
+    <id>https://blog.cryptpad.fr/2019/03/18/Join-the-team/</id>
+    <published>2019-03-18T16:31:21.000Z</published>
+    <updated>2019-03-18T19:46:25.478Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;We’ve been making a big deal of our funding status for the last while, and for good reason.
+CryptPad has largely been funded by the &lt;a hr
+      
+    
+    </summary>
+    
+    
+      <category term="funding" scheme="https://blog.cryptpad.fr/tags/funding/"/>
+    
+      <category term="roadmap" scheme="https://blog.cryptpad.fr/tags/roadmap/"/>
+    
+      <category term="privacy" scheme="https://blog.cryptpad.fr/tags/privacy/"/>
+    
+      <category term="research" scheme="https://blog.cryptpad.fr/tags/research/"/>
+    
+      <category term="open-source" scheme="https://blog.cryptpad.fr/tags/open-source/"/>
+    
+  </entry>
   
   <entry>
     <title>CryptPad funding status March 2019 - Thanks to our 100 backers!</title>
@@ -237,9 +267,9 @@ We get a lot of attention for the tec
     </summary>
     
     
-      <category term="roadmap" scheme="https://blog.cryptpad.fr/tags/roadmap/"/>
-    
       <category term="funding" scheme="https://blog.cryptpad.fr/tags/funding/"/>
+    
+      <category term="roadmap" scheme="https://blog.cryptpad.fr/tags/roadmap/"/>
     
   </entry>
   
@@ -497,29 +527,6 @@ which we’ve been working on for a long time. As part
       <category term="funding" scheme="https://blog.cryptpad.fr/tags/funding/"/>
     
       <category term="donate" scheme="https://blog.cryptpad.fr/tags/donate/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>You gotta log in</title>
-    <link href="https://blog.cryptpad.fr/2017/05/17/You-gotta-log-in/"/>
-    <id>https://blog.cryptpad.fr/2017/05/17/You-gotta-log-in/</id>
-    <published>2017-05-17T10:22:52.000Z</published>
-    <updated>2018-02-23T13:43:09.028Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;It’s been two and a half years since the &lt;a href=&quot;https://github.com/xwiki-labs/cryptpad/commit/1508c7ba71f5de5e51f061fbef45bc1f18493832&quot;
-      
-    
-    </summary>
-    
-    
-      <category term="login" scheme="https://blog.cryptpad.fr/tags/login/"/>
-    
-      <category term="storage" scheme="https://blog.cryptpad.fr/tags/storage/"/>
     
   </entry>
   
