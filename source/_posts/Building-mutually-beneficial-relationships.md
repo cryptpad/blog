@@ -3,7 +3,7 @@ title: Building mutually beneficial relationships
 date: 2017-06-02 13:52:47
 author: Caleb James DeLisle
 tags:
-  - open source
+  - open-source
   - cloud
   - ethics
 ---

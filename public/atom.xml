@@ -6,7 +6,7 @@
   <link href="//atom.xml" rel="self"/>
   
   <link href="https://blog.cryptpad.fr/"/>
-  <updated>2019-03-18T19:46:25.478Z</updated>
+  <updated>2019-05-27T10:16:04.230Z</updated>
   <id>https://blog.cryptpad.fr/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Our future is collaborative</title>
+    <link href="https://blog.cryptpad.fr/2019/05/24/Our-future-is-collaborative/"/>
+    <id>https://blog.cryptpad.fr/2019/05/24/Our-future-is-collaborative/</id>
+    <published>2019-05-24T15:44:22.000Z</published>
+    <updated>2019-05-27T10:16:04.230Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;For anyone that doesn’t have the time or interest to read the rest of this article, the short version is that the CryptPad team has recei
+      
+    
+    </summary>
+    
+    
+      <category term="funding" scheme="https://blog.cryptpad.fr/tags/funding/"/>
+    
+      <category term="roadmap" scheme="https://blog.cryptpad.fr/tags/roadmap/"/>
+    
+      <category term="ngi" scheme="https://blog.cryptpad.fr/tags/ngi/"/>
+    
+      <category term="open-source" scheme="https://blog.cryptpad.fr/tags/open-source/"/>
+    
+  </entry>
   
   <entry>
     <title>Join the team</title>
@@ -51,7 +78,7 @@ CryptPad has largely been funded by the &lt;a hr
     <link href="https://blog.cryptpad.fr/2019/03/11/CryptPad-funding-status-March-2019/"/>
     <id>https://blog.cryptpad.fr/2019/03/11/CryptPad-funding-status-March-2019/</id>
     <published>2019-03-11T19:00:00.000Z</published>
-    <updated>2019-03-12T17:42:50.546Z</updated>
+    <updated>2019-03-18T20:03:53.450Z</updated>
     
     <summary type="html">
     
@@ -78,7 +105,7 @@ We &lt;a href=&quot;/2019/02/2
     <link href="https://blog.cryptpad.fr/2019/03/11/Looking-for-translators/"/>
     <id>https://blog.cryptpad.fr/2019/03/11/Looking-for-translators/</id>
     <published>2019-03-11T10:12:50.000Z</published>
-    <updated>2019-03-11T13:50:25.096Z</updated>
+    <updated>2019-05-27T10:12:01.063Z</updated>
     
     <summary type="html">
     
@@ -91,9 +118,9 @@ We get a lot of attention for the tec
     </summary>
     
     
-      <category term="open source" scheme="https://blog.cryptpad.fr/tags/open-source/"/>
-    
       <category term="quality" scheme="https://blog.cryptpad.fr/tags/quality/"/>
+    
+      <category term="open-source" scheme="https://blog.cryptpad.fr/tags/open-source/"/>
     
   </entry>
   
@@ -485,7 +512,7 @@ which we’ve been working on for a long time. As part
     <link href="https://blog.cryptpad.fr/2017/06/02/Building-mutually-beneficial-relationships/"/>
     <id>https://blog.cryptpad.fr/2017/06/02/Building-mutually-beneficial-relationships/</id>
     <published>2017-06-02T11:52:47.000Z</published>
-    <updated>2018-02-23T13:42:07.543Z</updated>
+    <updated>2019-05-27T10:11:56.567Z</updated>
     
     <summary type="html">
     
@@ -498,35 +525,11 @@ which we’ve been working on for a long time. As part
     </summary>
     
     
-      <category term="open source" scheme="https://blog.cryptpad.fr/tags/open-source/"/>
-    
       <category term="cloud" scheme="https://blog.cryptpad.fr/tags/cloud/"/>
     
       <category term="ethics" scheme="https://blog.cryptpad.fr/tags/ethics/"/>
     
-  </entry>
-  
-  <entry>
-    <title>CryptPad - use it, love ❤️ it, support it</title>
-    <link href="https://blog.cryptpad.fr/2017/05/23/CryptPad-use-it-love-it-support-it/"/>
-    <id>https://blog.cryptpad.fr/2017/05/23/CryptPad-use-it-love-it-support-it/</id>
-    <published>2017-05-23T16:40:35.000Z</published>
-    <updated>2018-08-07T13:20:06.103Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;It’s been another release day in our little team. Today we released
-&lt;a href=&quot;https://github.com/xwiki-labs/cryptpad/releases/tag/1.7.0&quot; t
-      
-    
-    </summary>
-    
-    
-      <category term="funding" scheme="https://blog.cryptpad.fr/tags/funding/"/>
-    
-      <category term="donate" scheme="https://blog.cryptpad.fr/tags/donate/"/>
+      <category term="open-source" scheme="https://blog.cryptpad.fr/tags/open-source/"/>
     
   </entry>
   

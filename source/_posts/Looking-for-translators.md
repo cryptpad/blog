@@ -3,7 +3,7 @@ title: Looking for translators
 date: 2019-03-11 11:12:50
 author: Aaron MacSween
 tags:
-  - open source
+  - open-source
   - quality
 ---
 
