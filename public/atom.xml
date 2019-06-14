@@ -6,7 +6,7 @@
   <link href="//atom.xml" rel="self"/>
   
   <link href="https://blog.cryptpad.fr/"/>
-  <updated>2019-05-27T10:21:13.634Z</updated>
+  <updated>2019-06-14T21:51:01.885Z</updated>
   <id>https://blog.cryptpad.fr/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Yesterday I made a mess</title>
+    <link href="https://blog.cryptpad.fr/2019/06/14/Yesterday-I-made-a-mess/"/>
+    <id>https://blog.cryptpad.fr/2019/06/14/Yesterday-I-made-a-mess/</id>
+    <published>2019-06-14T15:29:33.000Z</published>
+    <updated>2019-06-14T21:51:01.885Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Normally when I write a blog post it’s because I have exciting news to share.
+This time it’s not a fun occasion because the only good new
+      
+    
+    </summary>
+    
+    
+      <category term="cloud" scheme="https://blog.cryptpad.fr/tags/cloud/"/>
+    
+      <category term="storage" scheme="https://blog.cryptpad.fr/tags/storage/"/>
+    
+      <category term="data" scheme="https://blog.cryptpad.fr/tags/data/"/>
+    
+  </entry>
   
   <entry>
     <title>Our future is collaborative</title>
@@ -35,11 +61,11 @@
     
       <category term="funding" scheme="https://blog.cryptpad.fr/tags/funding/"/>
     
-      <category term="roadmap" scheme="https://blog.cryptpad.fr/tags/roadmap/"/>
+      <category term="open-source" scheme="https://blog.cryptpad.fr/tags/open-source/"/>
     
       <category term="ngi" scheme="https://blog.cryptpad.fr/tags/ngi/"/>
     
-      <category term="open-source" scheme="https://blog.cryptpad.fr/tags/open-source/"/>
+      <category term="roadmap" scheme="https://blog.cryptpad.fr/tags/roadmap/"/>
     
   </entry>
   
@@ -63,13 +89,13 @@ CryptPad has largely been funded by the &lt;a hr
     
       <category term="funding" scheme="https://blog.cryptpad.fr/tags/funding/"/>
     
-      <category term="roadmap" scheme="https://blog.cryptpad.fr/tags/roadmap/"/>
+      <category term="open-source" scheme="https://blog.cryptpad.fr/tags/open-source/"/>
     
       <category term="privacy" scheme="https://blog.cryptpad.fr/tags/privacy/"/>
     
-      <category term="research" scheme="https://blog.cryptpad.fr/tags/research/"/>
+      <category term="roadmap" scheme="https://blog.cryptpad.fr/tags/roadmap/"/>
     
-      <category term="open-source" scheme="https://blog.cryptpad.fr/tags/open-source/"/>
+      <category term="research" scheme="https://blog.cryptpad.fr/tags/research/"/>
     
   </entry>
   
@@ -118,9 +144,9 @@ We get a lot of attention for the tec
     </summary>
     
     
-      <category term="quality" scheme="https://blog.cryptpad.fr/tags/quality/"/>
-    
       <category term="open-source" scheme="https://blog.cryptpad.fr/tags/open-source/"/>
+    
+      <category term="quality" scheme="https://blog.cryptpad.fr/tags/quality/"/>
     
   </entry>
   
@@ -392,9 +418,9 @@ We get a lot of attention for the tec
     
       <category term="release" scheme="https://blog.cryptpad.fr/tags/release/"/>
     
-      <category term="roadmap" scheme="https://blog.cryptpad.fr/tags/roadmap/"/>
-    
       <category term="security" scheme="https://blog.cryptpad.fr/tags/security/"/>
+    
+      <category term="roadmap" scheme="https://blog.cryptpad.fr/tags/roadmap/"/>
     
   </entry>
   
@@ -504,32 +530,6 @@ which we’ve been working on for a long time. As part
       <category term="upload" scheme="https://blog.cryptpad.fr/tags/upload/"/>
     
       <category term="embed" scheme="https://blog.cryptpad.fr/tags/embed/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Building mutually beneficial relationships</title>
-    <link href="https://blog.cryptpad.fr/2017/06/02/Building-mutually-beneficial-relationships/"/>
-    <id>https://blog.cryptpad.fr/2017/06/02/Building-mutually-beneficial-relationships/</id>
-    <published>2017-06-02T11:52:47.000Z</published>
-    <updated>2019-05-27T10:11:56.567Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;em&gt;People hosting instances of CryptPad should read at least the
-&lt;a href=&quot;/2017/06/02/Building-mutually-beneficial-relationships/#Change
-      
-    
-    </summary>
-    
-    
-      <category term="cloud" scheme="https://blog.cryptpad.fr/tags/cloud/"/>
-    
-      <category term="ethics" scheme="https://blog.cryptpad.fr/tags/ethics/"/>
-    
-      <category term="open-source" scheme="https://blog.cryptpad.fr/tags/open-source/"/>
     
   </entry>
   
