@@ -198,7 +198,7 @@ way to predict what aspect ratio a device using CryptPad is going to have.
 ### 4. Lots of pads are made and then abandoned
 The first chart shows in blue the number of pads created each day and the number
 of pads which become "abandoned" (have not been touched in 2 weeks). This says
-that perhaps pads are considered ephimeral and not to be used for the long term.
+that perhaps pads are considered ephemeral and not to be used for the long term.
 ![Created vs. abandoned pads](/images/Analytics-createdabandoned.png)
 
 Here we can see the evolution of pads which have been accessed within the last
