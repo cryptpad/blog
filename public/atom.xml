@@ -6,7 +6,7 @@
   <link href="//atom.xml" rel="self"/>
   
   <link href="https://blog.cryptpad.fr/"/>
-  <updated>2019-12-31T23:17:21.985Z</updated>
+  <updated>2020-07-03T18:41:52.097Z</updated>
   <id>https://blog.cryptpad.fr/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CryptPad Funding Status July 2020</title>
+    <link href="https://blog.cryptpad.fr/2020/07/03/CryptPad-Funding-Status-July-2020/"/>
+    <id>https://blog.cryptpad.fr/2020/07/03/CryptPad-Funding-Status-July-2020/</id>
+    <published>2020-07-03T22:04:09.000Z</published>
+    <updated>2020-07-03T18:41:52.097Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;We have not been very active on the CryptPad blog lately, however, we have been very active making &lt;a href=&quot;https://github.com/xwiki-labs
+      
+    
+    </summary>
+    
+    
+      <category term="funding" scheme="https://blog.cryptpad.fr/tags/funding/"/>
+    
+      <category term="open collective" scheme="https://blog.cryptpad.fr/tags/open-collective/"/>
+    
+      <category term="donate" scheme="https://blog.cryptpad.fr/tags/donate/"/>
+    
+  </entry>
   
   <entry>
     <title>Looking back, looking forward</title>
@@ -498,32 +523,6 @@ We get a lot of attention for the tec
       <category term="extensibility" scheme="https://blog.cryptpad.fr/tags/extensibility/"/>
     
       <category term="quality" scheme="https://blog.cryptpad.fr/tags/quality/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CryptPad Analytics &amp; Privacy - What we can&#39;t know, what we must know, what we want to know</title>
-    <link href="https://blog.cryptpad.fr/2017/07/07/cryptpad-analytics-what-we-cant-know-what-we-must-know-what-we-want-to-know/"/>
-    <id>https://blog.cryptpad.fr/2017/07/07/cryptpad-analytics-what-we-cant-know-what-we-must-know-what-we-want-to-know/</id>
-    <published>2017-07-07T17:41:02.000Z</published>
-    <updated>2019-07-16T09:24:05.760Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;CryptPad is a Zero Knowledge cloud application, this means we have designed it such
-that we do not have any access to the content which i
-      
-    
-    </summary>
-    
-    
-      <category term="privacy" scheme="https://blog.cryptpad.fr/tags/privacy/"/>
-    
-      <category term="data" scheme="https://blog.cryptpad.fr/tags/data/"/>
-    
-      <category term="analytics" scheme="https://blog.cryptpad.fr/tags/analytics/"/>
     
   </entry>
   
