@@ -9,6 +9,103 @@ body:after {
 body:after {
   clear: both;
 }
+@font-face {
+  font-family: 'Open Sans';
+  font-weight: 300;
+  font-style: normal;
+  src: url("fonts/open-sans-fontface/fonts/Light/OpenSans-Light.eot");
+  src: url("fonts/open-sans-fontface/fonts/Light/OpenSans-Light.eot?#iefix") format('embedded-opentype'), url("fonts/open-sans-fontface/fonts/Light/OpenSans-Light.woff") format('woff'), url("fonts/open-sans-fontface/fonts/Light/OpenSans-Light.ttf") format('truetype'), url("fonts/open-sans-fontface/fonts/Light/OpenSans-Light.svg#OpenSansLight") format('svg');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-weight: 300;
+  font-style: italic;
+  src: url("fonts/open-sans-fontface/fonts/LightItalic/OpenSans-LightItalic.eot");
+  src: url("fonts/open-sans-fontface/fonts/LightItalic/OpenSans-LightItalic.eot?#iefix") format('embedded-opentype'), url("fonts/open-sans-fontface/fonts/LightItalic/OpenSans-LightItalic.woff") format('woff'), url("fonts/open-sans-fontface/fonts/LightItalic/OpenSans-LightItalic.ttf") format('truetype'), url("fonts/open-sans-fontface/fonts/LightItalic/OpenSans-LightItalic.svg#OpenSansLightItalic") format('svg');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-weight: normal;
+  font-style: normal;
+  src: url("fonts/open-sans-fontface/fonts/Regular/OpenSans-Regular.eot");
+  src: url("fonts/open-sans-fontface/fonts/Regular/OpenSans-Regular.eot?#iefix") format('embedded-opentype'), url("fonts/open-sans-fontface/fonts/Regular/OpenSans-Regular.woff") format('woff'), url("fonts/open-sans-fontface/fonts/Regular/OpenSans-Regular.ttf") format('truetype'), url("fonts/open-sans-fontface/fonts/Regular/OpenSans-Regular.svg#OpenSansRegular") format('svg');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-weight: normal;
+  font-style: italic;
+  src: url("fonts/open-sans-fontface/fonts/Italic/OpenSans-Italic.eot");
+  src: url("fonts/open-sans-fontface/fonts/Italic/OpenSans-Italic.eot?#iefix") format('embedded-opentype'), url("fonts/open-sans-fontface/fonts/Italic/OpenSans-Italic.woff") format('woff'), url("fonts/open-sans-fontface/fonts/Italic/OpenSans-Italic.ttf") format('truetype'), url("fonts/open-sans-fontface/fonts/Italic/OpenSans-Italic.svg#OpenSansItalic") format('svg');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-weight: 600;
+  font-style: normal;
+  src: url("fonts/open-sans-fontface/fonts/Semibold/OpenSans-Semibold.eot");
+  src: url("fonts/open-sans-fontface/fonts/Semibold/OpenSans-Semibold.eot?#iefix") format('embedded-opentype'), url("fonts/open-sans-fontface/fonts/Semibold/OpenSans-Semibold.woff") format('woff'), url("fonts/open-sans-fontface/fonts/Semibold/OpenSans-Semibold.ttf") format('truetype'), url("fonts/open-sans-fontface/fonts/Semibold/OpenSans-Semibold.svg#OpenSansSemibold") format('svg');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 600;
+  src: url("fonts/open-sans-fontface/fonts/SemiboldItalic/OpenSans-SemiboldItalic.eot");
+  src: url("fonts/open-sans-fontface/fonts/SemiboldItalic/OpenSans-SemiboldItalic.eot?#iefix") format('embedded-opentype'), url("fonts/open-sans-fontface/fonts/SemiboldItalic/OpenSans-SemiboldItalic.woff") format('woff'), url("fonts/open-sans-fontface/fonts/SemiboldItalic/OpenSans-SemiboldItalic.ttf") format('truetype'), url("fonts/open-sans-fontface/fonts/SemiboldItalic/OpenSans-SemiboldItalic.svg#OpenSansSemiboldItalic") format('svg');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-weight: bold;
+  font-style: normal;
+  src: url("fonts/open-sans-fontface/fonts/Bold/OpenSans-Bold.eot");
+  src: url("fonts/open-sans-fontface/fonts/Bold/OpenSans-Bold.eot?#iefix") format('embedded-opentype'), url("fonts/open-sans-fontface/fonts/Bold/OpenSans-Bold.woff") format('woff'), url("fonts/open-sans-fontface/fonts/Bold/OpenSans-Bold.ttf") format('truetype'), url("fonts/open-sans-fontface/fonts/Bold/OpenSans-Bold.svg#OpenSansBold") format('svg');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-weight: bold;
+  font-style: italic;
+  src: url("fonts/open-sans-fontface/fonts/BoldItalic/OpenSans-BoldItalic.eot");
+  src: url("fonts/open-sans-fontface/fonts/BoldItalic/OpenSans-BoldItalic.eot?#iefix") format('embedded-opentype'), url("fonts/open-sans-fontface/fonts/BoldItalic/OpenSans-BoldItalic.woff") format('woff'), url("fonts/open-sans-fontface/fonts/BoldItalic/OpenSans-BoldItalic.ttf") format('truetype'), url("fonts/open-sans-fontface/fonts/BoldItalic/OpenSans-BoldItalic.svg#OpenSansBoldItalic") format('svg');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-weight: 800;
+  font-style: normal;
+  src: url("fonts/open-sans-fontface/fonts/ExtraBold/OpenSans-ExtraBold.eot");
+  src: url("fonts/open-sans-fontface/fonts/ExtraBold/OpenSans-ExtraBold.eot?#iefix") format('embedded-opentype'), url("fonts/open-sans-fontface/fonts/ExtraBold/OpenSans-ExtraBold.woff") format('woff'), url("fonts/open-sans-fontface/fonts/ExtraBold/OpenSans-ExtraBold.ttf") format('truetype'), url("fonts/open-sans-fontface/fonts/ExtraBold/OpenSans-ExtraBold.svg#OpenSansExtrabold") format('svg');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-weight: 800;
+  font-style: italic;
+  src: url("fonts/open-sans-fontface/fonts/ExtraBoldItalic/OpenSans-ExtraBoldItalic.eot");
+  src: url("fonts/open-sans-fontface/fonts/ExtraBoldItalic/OpenSans-ExtraBoldItalic.eot?#iefix") format('embedded-opentype'), url("fonts/open-sans-fontface/fonts/ExtraBoldItalic/OpenSans-ExtraBoldItalic.woff") format('woff'), url("fonts/open-sans-fontface/fonts/ExtraBoldItalic/OpenSans-ExtraBoldItalic.ttf") format('truetype'), url("fonts/open-sans-fontface/fonts/ExtraBoldItalic/OpenSans-ExtraBoldItalic.svg#OpenSansExtraboldItalic") format('svg');
+}
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-weight: 500;
+  font-style: normal;
+  src: url("fonts/IBMPlexMono-Medium.woff") format('woff'), url("fonts/IBMPlexMono-Medium.woff2") format('woff2'),;
+}
+@font-face {
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  src: url("fonts/fontawesome-webfont.eot?v=#4.0.3");
+  src: url("fonts/fontawesome-webfont.eot?#iefix&v=#4.0.3") format("embedded-opentype"), url("fonts/fontawesome-webfont.woff?v=#4.0.3") format("woff"), url("fonts/fontawesome-webfont.ttf?v=#4.0.3") format("truetype"), url("fonts/fontawesome-webfont.svg#fontawesomeregular?v=#4.0.3") format("svg");
+}
+@font-face {
+  font-family: 'Source Code Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Source Code Pro'), local('SourceCodePro-Regular'), url("/css/fonts/SourceCodeProRegular.woff2") format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Source Code Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Source Code Pro'), local('SourceCodePro-Regular'), url("/css/fonts/SourceCodeProRegular.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
 html,
 body,
 div,
@@ -110,37 +207,14 @@ button::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
-@font-face {
-  font-family: FontAwesome;
-  font-style: normal;
-  font-weight: normal;
-  src: url("fonts/fontawesome-webfont.eot?v=#4.0.3");
-  src: url("fonts/fontawesome-webfont.eot?#iefix&v=#4.0.3") format("embedded-opentype"), url("fonts/fontawesome-webfont.woff?v=#4.0.3") format("woff"), url("fonts/fontawesome-webfont.ttf?v=#4.0.3") format("truetype"), url("fonts/fontawesome-webfont.svg#fontawesomeregular?v=#4.0.3") format("svg");
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Source Code Pro';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Source Code Pro'), local('SourceCodePro-Regular'), url("/css/fonts/SourceCodeProRegular.woff2") format('woff2');
-  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Source Code Pro';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Source Code Pro'), local('SourceCodePro-Regular'), url("/css/fonts/SourceCodeProRegular.woff2") format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
-}
 html,
 body,
 #container {
   height: 100%;
 }
 body {
-  background: #eee;
-  font: 20px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: #e7e7e7;
+  font: 16px "Open Sans", Helvetica, Arial, sans-serif;
   -webkit-text-size-adjust: 100%;
 }
 .outer {
@@ -190,7 +264,7 @@ body {
   -ms-transition: 0.2s ease-out;
   transition: 0.2s ease-out;
   z-index: 1;
-  background: #eee;
+  background: #e7e7e7;
 }
 .mobile-nav-on #wrap {
   left: 280px;
@@ -326,7 +400,6 @@ body {
 #header {
   height: 300px;
   position: relative;
-  border-bottom: 1px solid #ddd;
 }
 #header:before,
 #header:after {
@@ -335,20 +408,6 @@ body {
   left: 0;
   right: 0;
   height: 40px;
-}
-#header:before {
-  top: 0;
-  background: -webkit-linear-gradient(rgba(0,0,0,0.2), transparent);
-  background: -moz-linear-gradient(rgba(0,0,0,0.2), transparent);
-  background: -ms-linear-gradient(rgba(0,0,0,0.2), transparent);
-  background: linear-gradient(rgba(0,0,0,0.2), transparent);
-}
-#header:after {
-  bottom: 0;
-  background: -webkit-linear-gradient(transparent, rgba(0,0,0,0.2));
-  background: -moz-linear-gradient(transparent, rgba(0,0,0,0.2));
-  background: -ms-linear-gradient(transparent, rgba(0,0,0,0.2));
-  background: linear-gradient(transparent, rgba(0,0,0,0.2));
 }
 #header-outer {
   height: 100%;
@@ -365,18 +424,6 @@ body {
   width: 100%;
   height: 100%;
 }
-#banner {
-  background: url("images/banner.jpg") center #000;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  z-index: -2;
-}
-#banner-overlay {
-  background-color: #000;
-  opacity: 0.55;
-  z-index: -1;
-}
 #header-title {
   text-align: center;
   height: 48px;
@@ -385,17 +432,18 @@ body {
   left: 0;
   margin-top: -24px;
 }
+#header-title .cp-logo {
+  max-width: 80px;
+}
 #logo,
 #subtitle {
   text-decoration: none;
-  color: #fff;
-  font-weight: 300;
-  text-shadow: 0 1px 4px rgba(0,0,0,0.3);
+  color: #0087ff;
+  font-family: "IBM Plex Mono";
 }
 #logo {
   font-size: 48px;
   line-height: 48px;
-  letter-spacing: 2px;
 }
 #subtitle {
   font-size: 16px;
@@ -412,11 +460,8 @@ body {
 .nav-icon,
 .main-nav-link {
   float: left;
-  color: #fff;
-  opacity: 0.9;
-  font-weight: bold;
+  color: #0087ff;
   text-decoration: none;
-  text-shadow: 0 1px rgba(0,0,0,0.2);
   -webkit-transition: opacity 0.2s;
   -moz-transition: opacity 0.2s;
   -ms-transition: opacity 0.2s;
@@ -431,16 +476,12 @@ body {
 .nav-icon {
   font-family: FontAwesome;
   text-align: center;
-  font-size: 20px;
-  width: 20px;
-  height: 20px;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
   padding: 20px 15px;
   position: relative;
   cursor: pointer;
-}
-.main-nav-link {
-  font-weight: 300;
-  letter-spacing: 1px;
 }
 @media screen and (max-width: 479px) {
   .main-nav-link {
@@ -506,7 +547,7 @@ body {
   background: none;
   color: #555;
   width: 100%;
-  font: 13px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 13px "Open Sans", Helvetica, Arial, sans-serif;
   outline: none;
 }
 .search-form-input::-webkit-search-results-decoration,
@@ -573,7 +614,7 @@ body {
   transition: color 0.2s;
 }
 a.article-title:hover {
-  color: #41b7d8;
+  color: #0087ff;
 }
 .article-author {
   color: #999;
@@ -613,7 +654,7 @@ a.article-title:hover {
   margin: 1.1em 0;
 }
 .article-entry a {
-  color: #41b7d8;
+  color: #0087ff;
   text-decoration: none;
 }
 .article-entry a:hover {
@@ -656,9 +697,9 @@ a.article-title:hover {
   text-align: center;
 }
 .article-entry blockquote footer {
-  font-size: 20px;
+  font-size: 16px;
   margin: 1.6em 0;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
 }
 .article-entry blockquote footer cite:before {
   content: "—";
@@ -706,16 +747,16 @@ a.article-title:hover {
   line-height: 1em;
   padding: 6px 15px;
   border-radius: 15px;
-  background: #eee;
+  background: #e7e7e7;
   color: #999;
   text-shadow: 0 1px #fff;
   text-decoration: none;
 }
 .article-more-link a:hover {
-  background: #41b7d8;
+  background: #0087ff;
   color: #fff;
   text-decoration: none;
-  text-shadow: 0 1px #269abb;
+  text-shadow: 0 1px #006ccc;
 }
 .article-footer {
   font-size: 0.85em;
@@ -863,7 +904,7 @@ a.article-title:hover {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 14px "Open Sans", Helvetica, Arial, sans-serif;
   padding: 0 15px;
   color: #555;
   outline: none;
@@ -873,7 +914,7 @@ a.article-title:hover {
   line-height: 36px;
 }
 .article-share-links {
-  background: #eee;
+  background: #e7e7e7;
 }
 .article-share-links:before,
 .article-share-links:after {
@@ -978,7 +1019,7 @@ a.article-title:hover {
   margin: 50px 0;
 }
 #comments a {
-  color: #41b7d8;
+  color: #0087ff;
 }
 .archives-wrap {
   margin: 50px 0;
@@ -1034,7 +1075,7 @@ a.article-title:hover {
   line-height: 1.6em;
 }
 .archive-article-title:hover {
-  color: #41b7d8;
+  color: #0087ff;
 }
 .archive-article-footer {
   margin-top: 1em;
@@ -1108,7 +1149,7 @@ a.article-title:hover {
   color: #999;
 }
 #footer a {
-  color: #41b7d8;
+  color: #0087ff;
   text-decoration: none;
 }
 #footer a:hover {
@@ -1128,7 +1169,7 @@ a.article-title:hover {
   border-width: 1px 0;
   overflow: auto;
   color: #ccc;
-  line-height: 32px;
+  line-height: 25.6px;
 }
 .article-entry .highlight .gutter pre,
 .article-entry .gist .gist-file .gist-data .line-numbers {
@@ -1140,7 +1181,7 @@ a.article-title:hover {
   font-family: "Source Code Pro", Consolas, Monaco, Menlo, Consolas, monospace;
 }
 .article-entry code {
-  background: #eee;
+  background: #e7e7e7;
   text-shadow: 0 1px #fff;
   padding: 0 0.3em;
 }
@@ -1184,7 +1225,7 @@ a.article-title:hover {
   padding-right: 20px;
 }
 .article-entry .highlight .line {
-  height: 32px;
+  height: 25.6px;
 }
 .article-entry .highlight .line.marked {
   background: #515151;
@@ -1222,14 +1263,14 @@ a.article-title:hover {
 .article-entry .gist .gist-file .gist-meta {
   background: #2d2d2d;
   color: #999;
-  font: 0.85em "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 0.85em "Open Sans", Helvetica, Arial, sans-serif;
   text-shadow: 0 0;
   padding: 0;
   margin-top: 1em;
   margin-left: 20px;
 }
 .article-entry .gist .gist-file .gist-meta a {
-  color: #41b7d8;
+  color: #0087ff;
   font-weight: normal;
 }
 .article-entry .gist .gist-file .gist-meta a:hover {
@@ -1335,7 +1376,7 @@ pre .javascript .function {
   border-radius: 3px;
 }
 .widget a {
-  color: #41b7d8;
+  color: #0087ff;
   text-decoration: none;
 }
 .widget a:hover {
