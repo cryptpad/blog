@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  <title>Faster loads with SharedWorker &amp; ServiceWorker | CryptPad Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="When CryptPad was first created, the only thing to load was the CryptPad code itself and the pad which you were editing. Recently edited pads were remembered in the browser’s localStorage which was no">
+<meta name="keywords" content="web worker,shared worker,performance">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Faster loads with SharedWorker &amp; ServiceWorker">
+<meta property="og:url" content="https://blog.cryptpad.fr/2018/06/23/Faster-loads-with-SharedWorker-ServiceWorker/index.html">
+<meta property="og:site_name" content="CryptPad Blog">
+<meta property="og:description" content="When CryptPad was first created, the only thing to load was the CryptPad code itself and the pad which you were editing. Recently edited pads were remembered in the browser’s localStorage which was no">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-08-07T13:20:06.103Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Faster loads with SharedWorker &amp; ServiceWorker">
+<meta name="twitter:description" content="When CryptPad was first created, the only thing to load was the CryptPad code itself and the pad which you were editing. Recently edited pads were remembered in the browser’s localStorage which was no">
+  
+    <link rel="alternate" href="/atom.xml" title="CryptPad Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+<head><meta name="generator" content="Hexo 3.9.0">
+</head></head></html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <!-- <div class="banner" id="banner"></div>
+  <div class="banner" id="banner-overlay"></div> -->
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <img src="/css/images/CryptPad_logo.svg" class="cp-logo" alt="CryptPad Logo">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">CryptPad Blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" href="https://cryptpad.fr">Use CryptPad.fr</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://blog.cryptpad.fr"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-Faster-loads-with-SharedWorker-ServiceWorker" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/06/23/Faster-loads-with-SharedWorker-ServiceWorker/" class="article-date">
+  <time datetime="2018-06-23T01:21:58.000Z" itemprop="datePublished">2018-06-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Faster loads with SharedWorker &amp; ServiceWorker
+    </h1>
+  
+
+
+        
+            <span class="article-author">
+                by
+                Caleb James DeLisle
+            </span>
+        
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>When CryptPad was first created, the only thing to load was the CryptPad code itself and the pad which you were editing. Recently edited pads were remembered in the browser’s <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage" target="_blank" rel="noopener">localStorage</a> which was not portable between computers but allowed some recent history to be kept.</p>
+<p>However, we wanted to allow people to login and manage their pads on all of their devices so we created the CryptDrive. Anyone who has used CryptPad but never logged in is encouraged to <a href="https://cryptpad.fr/register" target="_blank" rel="noopener">register and login</a> (it’s free) and check out their drive. CryptDrive is basically just a realtime pad containing a JSON structure with links to all of your pads as well as their titles and other information. When you update the title of a pad, it changes the pad itself but it also changes your drive so that you can see the title of the pad in your drive. This is of course not perfect because if someone else changes the title of a pad, your drive will not be updated until you look at the pad again, but doing everything with the server completely blind to the content isn’t easy, and this works reasonably well.</p>
+<p>However, CryptDrive causes an additional delay when loading CryptPad because whenever you load a document, you are actually loading two realtime instances. Since the drive is loaded over and over for every pad you view, it was obvious to us that we could make it more efficient using communication inside the browser.</p>
+<h2 id="First-idea-Messages-between-tabs"><a href="#First-idea-Messages-between-tabs" class="headerlink" title="First idea: Messages between tabs"></a>First idea: Messages between tabs</h2><p>Tabs (or windows) in a browser which are on the same website are able to <a href="http://krasimirtsonev.com/blog/article/Using-Local-Storage-as-a-communication-channel" target="_blank" rel="noopener">communicate using localStorage</a> and so it seemed like a good solution to just have one tab claim the role of managing the drive and then when another tab is opened, it would message the first. However, this seemingly easy solution becomes a nightmare when you consider what happens when that tab is closed. The drive that everyone is relying on goes away and all of the other tabs are without a drive so they need to <a href="https://martin.kleppmann.com/2016/02/08/how-to-do-distributed-locking.html" target="_blank" rel="noopener">flip a coin</a> to decide which tab should become the keeper of the drive, then that tab needs to download the drive before it can service events, all the while any of the buttons which affect the drive (for instance deleting the pad) cannot possibly function. This idea was soon scrapped…</p>
+<h2 id="Enter-ServiceWorker"><a href="#Enter-ServiceWorker" class="headerlink" title="Enter ServiceWorker"></a>Enter ServiceWorker</h2><p>Recently, the HTML5 working group created a new standard called <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorker" target="_blank" rel="noopener">ServiceWorker</a> which for someone making a webapp seems like a dream come true. ServiceWorkers:</p>
+<ul>
+<li>Are side-processes which are created one-per-website and live in the background.</li>
+<li>Can intercept HTTP requests from your main javascript (excellent for caching!).</li>
+<li>Is suspended when the last tab is closed, and re-launched when the user returns.</li>
+<li>Are stored in suspended state even when the browser is turned off.</li>
+<li>Supported by <a href="https://caniuse.com/#search=serviceworker" target="_blank" rel="noopener">every modern browser</a>.</li>
+</ul>
+<p>When the website loads a worker, if the worker is already running it will not load and will instead defer to the existing worker. Communicating between workers and tabs which are on the website is possible via a <a href="https://developer.mozilla.org/en-US/docs/Web/API/Client/postMessage" target="_blank" rel="noopener">postMessage()</a> API and then the ServiceWorker can postMessage() which will reach all tabs that are navigated to the website.</p>
+<p>One limitation of this design is versioning. Because the ServiceWorker would stay alive potentially forever, we needed to identify a way to upgrade it if a new version of CryptPad is released. This is quite important for CryptPad as version mismatches can lead to catastrophic conflicts between different browsers working on the same document.</p>
+<p>Though updating is non-trivial, we were able to solve it by sending version messages between different components of CryptPad and informing them whether they need to update (or even if they can <em>optionally</em> update). Since this seemed like a solvable problem, we tried creating an experimental implementatiton of ServiceWorkers in CryptPad, and then the fun started…</p>
+<h3 id="ServiceWorkers-in-Firefox"><a href="#ServiceWorkers-in-Firefox" class="headerlink" title="ServiceWorkers in Firefox"></a>ServiceWorkers in Firefox</h3><p>Since Firefox 48, Firefox has begun following Chrome’s model and running <a href="https://developer.mozilla.org/en-US/Firefox/Multiprocess_Firefox" target="_blank" rel="noopener">different processes</a> for rendering the different tabs in the browser. However, this isolation has a side-effect that when you attempt to launch a ServiceWorker, it <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1438945" target="_blank" rel="noopener">may launch even though one already exists for the same website</a>, because the other one exists in a different tab which happens to be operating in a different process. However, the postMessage() requests from tabs go out to all of the ServiceWorkers so this bug can be worked around.</p>
+<p>Unfortunately we encountered some more issues with Firefox which we found not worth debugging. Our CryptDrive is a Javascript object which is represented in the encrypted realtime document as JSON and there is an ES6 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy" target="_blank" rel="noopener">Proxy</a> object in order to allow every change to the drive to be propagated to the underlying realtime object. In Firefox the proxy did not work when used in a ServiceWorker and at times our ServiceWorker simply stopped running.</p>
+<h3 id="Reporting-bugs-in-browsers"><a href="#Reporting-bugs-in-browsers" class="headerlink" title="Reporting bugs in browsers"></a>Reporting bugs in browsers</h3><p>One might think these are great opportunities to report issues with Firefox, and when we find an <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1434278" target="_blank" rel="noopener">issue which we think will affect lots of people</a> especially if it is a regression, we don’t hesitate to report it, but usually it is not clear how to reproduce the issue, whether there might be some error in our usage of the API which is being smoothed over by Chrome, or whether the component being reported on is a priority, in that case rather rain low quality bug reports down upon the poor browser developers, we spend our limited time trying to make CryptPad better. In the case of ServiceWorker in Firefox, our conclusion is that in effect the technology remains experimental and shouldn’t be relied upon.</p>
+<h2 id="SharedWorker-to-the-rescue"><a href="#SharedWorker-to-the-rescue" class="headerlink" title="SharedWorker to the rescue"></a>SharedWorker to the rescue</h2><p>Fortunately there is another technology called <a href="https://developer.mozilla.org/en-US/docs/Web/API/SharedWorker" target="_blank" rel="noopener">SharedWorker</a> which is essentially identical to a plain vanilla WebWorker but can communicate with all tabs which are navigated to the site. Unfortunately this technology is only supported in <a href="https://caniuse.com/#feat=sharedworkers" target="_blank" rel="noopener">Chrome and Firefox</a>, but the support for this technology, we found, really works!</p>
+<p>However, Firefox still has the <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1438945" target="_blank" rel="noopener">issue</a> with of multiple SharedWorkers being created for multiple tabs, but since this issue is fixable we were able to go ahead with it anyway. For browsers which have no SharedWorker, they would fallback to plain old WebWorker. Though this seems like it would be a problem, it is in fact quite fine because actions done in the drive by another WebWorker are the same as actions done in the drive by another device, they need to be encrypted and sent to the server in order to persist anyway.</p>
+<h2 id="Faster-CryptPad"><a href="#Faster-CryptPad" class="headerlink" title="Faster CryptPad"></a>Faster CryptPad</h2><p>Coming in the release on Tuesday June 26, 2018, we will have a new SharedWorker based CryptPad instance, that means when you use Chrome or Firefox, the first time you open CryptPad, it will load your drive, but then every tab you open after that will communicate with the SharedWorker managing the drive and therefore pads will load nearly twice as fast.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://blog.cryptpad.fr/2018/06/23/Faster-loads-with-SharedWorker-ServiceWorker/" data-id="ckbkywmf1000oy1a8em5ppusz" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/performance/">performance</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shared-worker/">shared worker</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web-worker/">web worker</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/07/06/CryptPad-ZeroKnowledge-Free-Software-needs-funding/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          CryptPad #ZeroKnowledge Free Software needs funding
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/06/15/Signing-CryptPad/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Signing CryptPad</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/analytics/" style="font-size: 10px;">analytics</a> <a href="/tags/appstore/" style="font-size: 10px;">appstore</a> <a href="/tags/award/" style="font-size: 11.67px;">award</a> <a href="/tags/chain-of-trust/" style="font-size: 10px;">chain of trust</a> <a href="/tags/cloud/" style="font-size: 11.67px;">cloud</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/data/" style="font-size: 11.67px;">data</a> <a href="/tags/donate/" style="font-size: 18.33px;">donate</a> <a href="/tags/embed/" style="font-size: 10px;">embed</a> <a href="/tags/ethics/" style="font-size: 10px;">ethics</a> <a href="/tags/extensibility/" style="font-size: 10px;">extensibility</a> <a href="/tags/file/" style="font-size: 10px;">file</a> <a href="/tags/funding/" style="font-size: 20px;">funding</a> <a href="/tags/iframe/" style="font-size: 10px;">iframe</a> <a href="/tags/login/" style="font-size: 10px;">login</a> <a href="/tags/lulz/" style="font-size: 10px;">lulz</a> <a href="/tags/media-tag/" style="font-size: 10px;">media-tag</a> <a href="/tags/ngi/" style="font-size: 13.33px;">ngi</a> <a href="/tags/open-collective/" style="font-size: 16.67px;">open collective</a> <a href="/tags/open-source/" style="font-size: 15px;">open-source</a> <a href="/tags/pdf/" style="font-size: 10px;">pdf</a> <a href="/tags/performance/" style="font-size: 11.67px;">performance</a> <a href="/tags/privacy/" style="font-size: 13.33px;">privacy</a> <a href="/tags/quality/" style="font-size: 11.67px;">quality</a> <a href="/tags/release/" style="font-size: 11.67px;">release</a> <a href="/tags/research/" style="font-size: 11.67px;">research</a> <a href="/tags/roadmap/" style="font-size: 16.67px;">roadmap</a> <a href="/tags/security/" style="font-size: 16.67px;">security</a> <a href="/tags/shared-worker/" style="font-size: 10px;">shared worker</a> <a href="/tags/signing/" style="font-size: 10px;">signing</a> <a href="/tags/storage/" style="font-size: 11.67px;">storage</a> <a href="/tags/subresource-integrity/" style="font-size: 10px;">subresource integrity</a> <a href="/tags/upload/" style="font-size: 10px;">upload</a> <a href="/tags/web-worker/" style="font-size: 10px;">web worker</a> <a href="/tags/xss/" style="font-size: 10px;">xss</a> <a href="/tags/zero-knowledge/" style="font-size: 13.33px;">zero knowledge</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/07/03/CryptPad-Funding-Status-July-2020/">CryptPad Funding Status July 2020</a>
+          </li>
+        
+          <li>
+            <a href="/2019/12/31/Looking-back-looking-forward/">Looking back, looking forward</a>
+          </li>
+        
+          <li>
+            <a href="/2019/06/14/Yesterday-I-made-a-mess/">Yesterday I made a mess</a>
+          </li>
+        
+          <li>
+            <a href="/2019/05/27/Our-future-is-collaborative/">Our future is collaborative</a>
+          </li>
+        
+          <li>
+            <a href="/2019/03/18/Join-the-team/">Join the team</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 XWiki Labs<br>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="https://cryptpad.fr" class="mobile-nav-link">Use CryptPad.fr</a>
+  
+</nav>
+    
+
+<script src="/js/jquery.min.js"></script>
+
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
