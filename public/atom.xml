@@ -6,7 +6,7 @@
   <link href="//atom.xml" rel="self"/>
   
   <link href="https://blog.cryptpad.fr/"/>
-  <updated>2020-07-03T18:41:52.097Z</updated>
+  <updated>2020-12-16T11:59:26.503Z</updated>
   <id>https://blog.cryptpad.fr/</id>
   
   <author>
@@ -17,9 +17,32 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>The outage of December 8th, 2020 - a postmortem</title>
+    <link href="https://blog.cryptpad.fr/2020/12/16/The-outage-of-December-8th-2020-a-postmortem/"/>
+    <id>https://blog.cryptpad.fr/2020/12/16/The-outage-of-December-8th-2020-a-postmortem/</id>
+    <published>2020-12-16T10:00:00.000Z</published>
+    <updated>2020-12-16T11:59:26.503Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;On December 8th, 2020 a malfunction in the water-cooling system at a data-center in Roubaix, France caused an unrecoverable error in the 
+      
+    
+    </summary>
+    
+    
+      <category term="cloud" scheme="https://blog.cryptpad.fr/tags/cloud/"/>
+    
+      <category term="storage" scheme="https://blog.cryptpad.fr/tags/storage/"/>
+    
+  </entry>
+  
+  <entry>
     <title>CryptPad Funding Status July 2020</title>
-    <link href="https://blog.cryptpad.fr/2020/07/03/CryptPad-Funding-Status-July-2020/"/>
-    <id>https://blog.cryptpad.fr/2020/07/03/CryptPad-Funding-Status-July-2020/</id>
+    <link href="https://blog.cryptpad.fr/2020/07/04/CryptPad-Funding-Status-July-2020/"/>
+    <id>https://blog.cryptpad.fr/2020/07/04/CryptPad-Funding-Status-July-2020/</id>
     <published>2020-07-03T22:04:09.000Z</published>
     <updated>2020-07-03T18:41:52.097Z</updated>
     
@@ -43,8 +66,8 @@
   
   <entry>
     <title>Looking back, looking forward</title>
-    <link href="https://blog.cryptpad.fr/2019/12/31/Looking-back-looking-forward/"/>
-    <id>https://blog.cryptpad.fr/2019/12/31/Looking-back-looking-forward/</id>
+    <link href="https://blog.cryptpad.fr/2020/01/01/Looking-back-looking-forward/"/>
+    <id>https://blog.cryptpad.fr/2020/01/01/Looking-back-looking-forward/</id>
     <published>2019-12-31T21:06:16.000Z</published>
     <updated>2019-12-31T23:17:21.985Z</updated>
     
@@ -65,8 +88,8 @@ At that point fewer than 10 people used the service on a weekly
   
   <entry>
     <title>Yesterday I made a mess</title>
-    <link href="https://blog.cryptpad.fr/2019/06/14/Yesterday-I-made-a-mess/"/>
-    <id>https://blog.cryptpad.fr/2019/06/14/Yesterday-I-made-a-mess/</id>
+    <link href="https://blog.cryptpad.fr/2019/06/15/Yesterday-I-made-a-mess/"/>
+    <id>https://blog.cryptpad.fr/2019/06/15/Yesterday-I-made-a-mess/</id>
     <published>2019-06-14T21:29:33.000Z</published>
     <updated>2019-06-14T21:51:01.885Z</updated>
     
@@ -118,8 +141,8 @@ This time it’s not a fun occasion because the only good new
   
   <entry>
     <title>Join the team</title>
-    <link href="https://blog.cryptpad.fr/2019/03/18/Join-the-team/"/>
-    <id>https://blog.cryptpad.fr/2019/03/18/Join-the-team/</id>
+    <link href="https://blog.cryptpad.fr/2019/03/19/Join-the-team/"/>
+    <id>https://blog.cryptpad.fr/2019/03/19/Join-the-team/</id>
     <published>2019-03-18T21:31:21.000Z</published>
     <updated>2019-03-18T19:46:25.478Z</updated>
     
@@ -148,8 +171,8 @@ CryptPad has largely been funded by the &lt;a hr
   
   <entry>
     <title>CryptPad funding status March 2019 - Thanks to our 100 backers!</title>
-    <link href="https://blog.cryptpad.fr/2019/03/11/CryptPad-funding-status-March-2019/"/>
-    <id>https://blog.cryptpad.fr/2019/03/11/CryptPad-funding-status-March-2019/</id>
+    <link href="https://blog.cryptpad.fr/2019/03/12/CryptPad-funding-status-March-2019/"/>
+    <id>https://blog.cryptpad.fr/2019/03/12/CryptPad-funding-status-March-2019/</id>
     <published>2019-03-12T00:00:00.000Z</published>
     <updated>2019-03-18T20:03:53.450Z</updated>
     
@@ -222,8 +245,8 @@ We get a lot of attention for the tec
   
   <entry>
     <title>CryptPad funding status November 2018</title>
-    <link href="https://blog.cryptpad.fr/2018/12/09/CryptPad-funding-status-November-2018/"/>
-    <id>https://blog.cryptpad.fr/2018/12/09/CryptPad-funding-status-November-2018/</id>
+    <link href="https://blog.cryptpad.fr/2018/12/10/CryptPad-funding-status-November-2018/"/>
+    <id>https://blog.cryptpad.fr/2018/12/10/CryptPad-funding-status-November-2018/</id>
     <published>2018-12-10T01:00:00.000Z</published>
     <updated>2018-12-10T16:37:20.663Z</updated>
     
@@ -248,8 +271,8 @@ We get a lot of attention for the tec
   
   <entry>
     <title>CryptPad receives NGI Startup Award</title>
-    <link href="https://blog.cryptpad.fr/2018/11/13/CryptPad-receives-NGI-Startup-Award/"/>
-    <id>https://blog.cryptpad.fr/2018/11/13/CryptPad-receives-NGI-Startup-Award/</id>
+    <link href="https://blog.cryptpad.fr/2018/11/14/CryptPad-receives-NGI-Startup-Award/"/>
+    <id>https://blog.cryptpad.fr/2018/11/14/CryptPad-receives-NGI-Startup-Award/</id>
     <published>2018-11-13T20:29:32.000Z</published>
     <updated>2018-12-10T16:17:07.987Z</updated>
     
@@ -375,8 +398,8 @@ We get a lot of attention for the tec
   
   <entry>
     <title>CryptPad #ZeroKnowledge Free Software needs funding</title>
-    <link href="https://blog.cryptpad.fr/2018/07/06/CryptPad-ZeroKnowledge-Free-Software-needs-funding/"/>
-    <id>https://blog.cryptpad.fr/2018/07/06/CryptPad-ZeroKnowledge-Free-Software-needs-funding/</id>
+    <link href="https://blog.cryptpad.fr/2018/07/07/CryptPad-ZeroKnowledge-Free-Software-needs-funding/"/>
+    <id>https://blog.cryptpad.fr/2018/07/07/CryptPad-ZeroKnowledge-Free-Software-needs-funding/</id>
     <published>2018-07-06T18:37:18.000Z</published>
     <updated>2018-08-07T13:20:06.103Z</updated>
     
@@ -398,8 +421,8 @@ We get a lot of attention for the tec
   
   <entry>
     <title>Faster loads with SharedWorker &amp; ServiceWorker</title>
-    <link href="https://blog.cryptpad.fr/2018/06/22/Faster-loads-with-SharedWorker-ServiceWorker/"/>
-    <id>https://blog.cryptpad.fr/2018/06/22/Faster-loads-with-SharedWorker-ServiceWorker/</id>
+    <link href="https://blog.cryptpad.fr/2018/06/23/Faster-loads-with-SharedWorker-ServiceWorker/"/>
+    <id>https://blog.cryptpad.fr/2018/06/23/Faster-loads-with-SharedWorker-ServiceWorker/</id>
     <published>2018-06-23T01:21:58.000Z</published>
     <updated>2018-08-07T13:20:06.103Z</updated>
     
@@ -448,8 +471,8 @@ We get a lot of attention for the tec
   
   <entry>
     <title>One year of biweekly releases</title>
-    <link href="https://blog.cryptpad.fr/2018/02/23/One-year-of-biweekly-releases/"/>
-    <id>https://blog.cryptpad.fr/2018/02/23/One-year-of-biweekly-releases/</id>
+    <link href="https://blog.cryptpad.fr/2018/02/24/One-year-of-biweekly-releases/"/>
+    <id>https://blog.cryptpad.fr/2018/02/24/One-year-of-biweekly-releases/</id>
     <published>2018-02-23T19:37:15.000Z</published>
     <updated>2018-02-27T14:43:53.557Z</updated>
     
@@ -473,8 +496,8 @@ We get a lot of attention for the tec
   
   <entry>
     <title>CryptPad&#39;s new Secure Cross-Domain Iframe</title>
-    <link href="https://blog.cryptpad.fr/2017/08/30/CryptPad-s-new-Secure-Cross-Domain-Iframe/"/>
-    <id>https://blog.cryptpad.fr/2017/08/30/CryptPad-s-new-Secure-Cross-Domain-Iframe/</id>
+    <link href="https://blog.cryptpad.fr/2017/08/31/CryptPad-s-new-Secure-Cross-Domain-Iframe/"/>
+    <id>https://blog.cryptpad.fr/2017/08/31/CryptPad-s-new-Secure-Cross-Domain-Iframe/</id>
     <published>2017-08-30T20:53:00.000Z</published>
     <updated>2018-12-10T16:17:07.987Z</updated>
     
@@ -497,32 +520,6 @@ We get a lot of attention for the tec
       <category term="iframe" scheme="https://blog.cryptpad.fr/tags/iframe/"/>
     
       <category term="media-tag" scheme="https://blog.cryptpad.fr/tags/media-tag/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CryptPad&#39;s New Direction</title>
-    <link href="https://blog.cryptpad.fr/2017/08/18/CryptPad-s-New-Direction/"/>
-    <id>https://blog.cryptpad.fr/2017/08/18/CryptPad-s-New-Direction/</id>
-    <published>2017-08-18T16:14:39.000Z</published>
-    <updated>2018-02-23T13:42:21.975Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;blockquote&gt;
-&lt;p&gt;If you are hosting CryptPad, please make sure you are up to date. &lt;a href=&quot;https://github.com/xwiki-labs/cryptpad/releases/t
-      
-    
-    </summary>
-    
-    
-      <category term="security" scheme="https://blog.cryptpad.fr/tags/security/"/>
-    
-      <category term="extensibility" scheme="https://blog.cryptpad.fr/tags/extensibility/"/>
-    
-      <category term="quality" scheme="https://blog.cryptpad.fr/tags/quality/"/>
     
   </entry>
   
