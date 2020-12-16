@@ -98,7 +98,7 @@ I'll start by saying in very simple terms that _this experience **sucked**_. I k
 
 It should be more obvious given the root meaning of the word _internet_, but we all depend on many systems functioning to maintain our daily routines. The majority of our users only contact us to report bugs. Kevin and I mostly end up chatting when one of us notices irregular server behaviour. We only contact OVH when our servers have problems, and they probably don't deal too much with their municipal electricity and fuel providers except when their power goes out and they fall back to using generators. _We are most aware of the systems that sustain us when they break_.
 
-On a positive note, though, I was pleasantly surprised by how understanding people were about the situation. One of our paying users cancelled their subscription, but it seems the outage served to remind many people that there are humans working on this project, and so we've actually seen an increase in the rate of donations and subscriptions in the week since.
+On a positive note, though, I was pleasantly surprised by how understanding people were about the situation. One of our paying users cancelled their subscription, but it seems the outage served to remind many people that there are humans working on this project, and so we've actually seen an increase in the rate of donations and subscriptions in the week since. We greatly appreciate everyone's generosity!
 
 Some users seem to have understandably lost some confidence in our platform, as we've seen slightly fewer users at the usual peak hours (2700 concurrent connections instead of 3000). On the other hand, it seems like the downtime page led to a significant increase in our follower count on social media.
 
