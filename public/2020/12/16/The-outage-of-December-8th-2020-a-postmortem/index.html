@@ -15,8 +15,9 @@
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://blog.cryptpad.fr/images/3000-connections.png">
 <meta property="og:image" content="https://blog.cryptpad.fr/images/poor-server-performance.png">
+<meta property="og:image" content="https://blog.cryptpad.fr/images/physical-internet.png">
 <meta property="og:image" content="https://blog.cryptpad.fr/images/cryptpad-down-page.png">
-<meta property="og:updated_time" content="2020-12-16T12:54:27.478Z">
+<meta property="og:updated_time" content="2020-12-17T13:21:21.969Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="The outage of December 8th, 2020 - a postmortem">
 <meta name="twitter:description" content="On December 8th, 2020 a malfunction in the water-cooling system at a data-center in Roubaix, France caused an unrecoverable error in the physical machine which hosts CryptPad.fr. The service was unava">
@@ -116,10 +117,8 @@
 <p>At 15:40 these disk integrity checks were interrupted when one of the data-center technicians (who I’m sure was also having a bad day) had to take the server back offline to transfer our hardware to a new location in the same building. Access was restored just a few minutes later, but we had to restart our integrity checks.</p>
 <h3 id="December-8-16-20-First-disk-integrity-check-completes"><a href="#December-8-16-20-First-disk-integrity-check-completes" class="headerlink" title="December 8, 16:20 - First disk integrity check completes"></a>December 8, 16:20 - First disk integrity check completes</h3><p>Forty minutes after the manual intervention, the first of three disk checkups had completed. VMware was reporting that all systems were operational, however, the VM that usually hosts our API server was failing to boot. Kevin was able to launch a Debian rescue system from a live disk and mount the system for inspection, but there was still no obvious indication why the system wouldn’t boot. He proceeded to launch checks for the remaining two disks while he continued to search for the cause of the failure.</p>
 <h3 id="December-8-18-30-Initial-failure-traced-to-a-cooling-malfunction"><a href="#December-8-18-30-Initial-failure-traced-to-a-cooling-malfunction" class="headerlink" title="December 8, 18:30 - Initial failure traced to a cooling malfunction"></a>December 8, 18:30 - Initial failure traced to a cooling malfunction</h3><p>Throughout the duration of this downtime Kevin had been on and off the phone with the data-center technicians getting updates about what had happened and whether we should expect any further problems. By 18:30 we were informed of the cooling system’s malfunction. While it was somewhat comforting to know that the problem had nothing to do with code we’d written, it was also frustrating to be reminded that there will likely always be physical events like this that we can neither control nor predict.</p>
-<!--
-![](/images/physical-internet.png)
-
-As twitter user [@RimaSghaier](https://twitter.com/RimaSghaier/status/1336398196109697025) noted, the internet is still _very physical_. -->
+<p><img src="/images/physical-internet.png" alt=""></p>
+<p>As twitter user <a href="https://twitter.com/RimaSghaier/status/1336398196109697025" target="_blank" rel="noopener">@RimaSghaier</a> noted, the internet is still <em>very physical</em>.</p>
 <h3 id="December-8-19-30-File-transfer-commences"><a href="#December-8-19-30-File-transfer-commences" class="headerlink" title="December 8, 19:30 - File transfer commences"></a>December 8, 19:30 - File transfer commences</h3><p>By 19:30, between myself, Kevin, Ludovic (the company’s CEO), and one of Ludovic’s friends who has some more experience with the intricacies of bootable filesystems,  we’d made no progress diagnosing why the affected VM would not boot outside of the environment of the rescue disk. We had access to all the system’s files and all of the integrity checks had passed, but there seemed to be problem with the root filesystem. We decided that the safest thing to do was to provision a new VM and begin transferring the relevant files. We could interrupt the process if we discovered the reason for the failure, but it was already late in the day and we had no promising leads.</p>
 <p>It took only a few minutes to provision a nearly identical VM and we immediately began transferring files via the data-center’s internal network. Unfortunately, there was around 750GB of data to transfer at a variable rate that did not seem very promising.</p>
 <p>Until this point I’d been very hopeful that <em>at any minute</em> we would find some trick to get the original server back online. As it became increasingly apparent that this was unlikely and that we’d need to wait for the file transfer to finish we shifted our focus to damage control.</p>
@@ -148,7 +147,7 @@ As twitter user [@RimaSghaier](https://twitter.com/RimaSghaier/status/1336398196
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://blog.cryptpad.fr/2020/12/16/The-outage-of-December-8th-2020-a-postmortem/" data-id="ckirbmibq0000goa8too7y4ii" class="article-share-link">Share</a>
+      <a data-url="https://blog.cryptpad.fr/2020/12/16/The-outage-of-December-8th-2020-a-postmortem/" data-id="ckisvtu49001ipna84ydr0o5p" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cloud/">cloud</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/storage/">storage</a></li></ul>
@@ -159,8 +158,17 @@ As twitter user [@RimaSghaier](https://twitter.com/RimaSghaier/status/1336398196
     
 <nav id="article-nav">
   
+    <a href="/2020/12/17/Recent-interviews-and-presentations/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Recent interviews and presentations
+        
+      </div>
+    </a>
   
-    <a href="/2020/07/04/CryptPad-Funding-Status-July-2020/" id="article-nav-older" class="article-nav-link-wrap">
+  
+    <a href="/2020/07/03/CryptPad-Funding-Status-July-2020/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
       <div class="article-nav-title">CryptPad Funding Status July 2020</div>
     </a>
@@ -191,7 +199,7 @@ As twitter user [@RimaSghaier](https://twitter.com/RimaSghaier/status/1336398196
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li></ul>
     </div>
   </div>
 
@@ -204,23 +212,23 @@ As twitter user [@RimaSghaier](https://twitter.com/RimaSghaier/status/1336398196
       <ul>
         
           <li>
+            <a href="/2020/12/17/Recent-interviews-and-presentations/">Recent interviews and presentations</a>
+          </li>
+        
+          <li>
             <a href="/2020/12/16/The-outage-of-December-8th-2020-a-postmortem/">The outage of December 8th, 2020 - a postmortem</a>
           </li>
         
           <li>
-            <a href="/2020/07/04/CryptPad-Funding-Status-July-2020/">CryptPad Funding Status July 2020</a>
+            <a href="/2020/07/03/CryptPad-Funding-Status-July-2020/">CryptPad Funding Status July 2020</a>
           </li>
         
           <li>
-            <a href="/2020/01/01/Looking-back-looking-forward/">Looking back, looking forward</a>
+            <a href="/2019/12/31/Looking-back-looking-forward/">Looking back, looking forward</a>
           </li>
         
           <li>
-            <a href="/2019/06/15/Yesterday-I-made-a-mess/">Yesterday I made a mess</a>
-          </li>
-        
-          <li>
-            <a href="/2019/05/27/Our-future-is-collaborative/">Our future is collaborative</a>
+            <a href="/2019/06/14/Yesterday-I-made-a-mess/">Yesterday I made a mess</a>
           </li>
         
       </ul>
