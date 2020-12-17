@@ -58,10 +58,9 @@ Forty minutes after the manual intervention, the first of three disk checkups ha
 
 Throughout the duration of this downtime Kevin had been on and off the phone with the data-center technicians getting updates about what had happened and whether we should expect any further problems. By 18:30 we were informed of the cooling system's malfunction. While it was somewhat comforting to know that the problem had nothing to do with code we'd written, it was also frustrating to be reminded that there will likely always be physical events like this that we can neither control nor predict.
 
-<!--
 ![](/images/physical-internet.png)
 
-As twitter user [@RimaSghaier](https://twitter.com/RimaSghaier/status/1336398196109697025) noted, the internet is still _very physical_. -->
+As twitter user [@RimaSghaier](https://twitter.com/RimaSghaier/status/1336398196109697025) noted, the internet is still _very physical_.
 
 ### December 8, 19:30 - File transfer commences
 
