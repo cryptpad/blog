@@ -7,7 +7,7 @@ tags:
 ---
 
 
-CryptPad and the team have received some attention recently through various channels: Reddit AMA thread, podcast, presentation, and blog interview. Whether you prefer to read, watch or listen there is a way for you to get an up-to-date presentation of CryptPad.
+CryptPad and the team have received some attention recently through various channels: a Reddit AMA thread, podcast, presentation, and blog interview. Whether you prefer to read, watch or listen there is a way for you to get an up-to-date presentation of CryptPad.
 
 Aaron MacSween was invited for an [Ask Me Anything (AMA) thread on r/privacy](https://www.reddit.com/r/privacy/comments/k1uonq/im_aaron_macsween_project_lead_for_cryptpad_the/) on Reddit. The thread started on November 27th 2020 and lasted for a couple of days. 98 questions were raised about everything from CryptPad's business model, to future development plans, the broader state of open-source software, and the EU's recent debates against encryption.
 
