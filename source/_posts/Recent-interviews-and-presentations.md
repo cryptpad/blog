@@ -1,8 +1,10 @@
 ---
 title: Recent interviews and presentations
-date: 2020-12-17 11:11:11
+date: 2020-12-18 10:55:11
 author: David Benqué
 tags:
+  - presentation
+  - press
 
 ---
 
