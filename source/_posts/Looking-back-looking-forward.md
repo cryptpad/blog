@@ -76,7 +76,7 @@ Every cent of these revenue streams go back into development and we do our best 
 There are, of course, many other ways you can contribute.
 Any publicity you can generate will free us to spend less time marketing and more time improving the software and its documentation.
 Sharing our messages on social media with your followers helps a lot, so please follow us on the [Fediverse](https://social.weho.st/@cryptpad) and [Twitter](https://twitter.com/cryptpad).
-We especially appreciate personal messagest that tell the world exactly what it is you love about CryptPad.
+We especially appreciate personal messages that tell the world exactly what it is you love about CryptPad.
 
 We're also happy to support and publicize offline events promoting the project.
 If you're comfortable speaking in public and would like to represent us in your community feel free to contact us about and we'll see how we can help.
