@@ -6,7 +6,7 @@
   <link href="//atom.xml" rel="self"/>
   
   <link href="https://blog.cryptpad.fr/"/>
-  <updated>2020-12-18T10:04:46.557Z</updated>
+  <updated>2020-12-31T17:35:11.221Z</updated>
   <id>https://blog.cryptpad.fr/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>No plan survives first contact with the enemy</title>
+    <link href="https://blog.cryptpad.fr/2020/12/31/No-plan-survives-first-contact-with-the-enemy/"/>
+    <id>https://blog.cryptpad.fr/2020/12/31/No-plan-survives-first-contact-with-the-enemy/</id>
+    <published>2020-12-31T16:57:34.000Z</published>
+    <updated>2020-12-31T17:35:11.221Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;In 2019 we finished a four-year research project that had covered the majority of CryptPad’s development costs.
+We had some worries about
+      
+    
+    </summary>
+    
+    
+      <category term="roadmap" scheme="https://blog.cryptpad.fr/tags/roadmap/"/>
+    
+  </entry>
   
   <entry>
     <title>Recent interviews and presentations</title>
@@ -92,7 +114,7 @@
     <link href="https://blog.cryptpad.fr/2019/12/31/Looking-back-looking-forward/"/>
     <id>https://blog.cryptpad.fr/2019/12/31/Looking-back-looking-forward/</id>
     <published>2019-12-31T10:36:16.000Z</published>
-    <updated>2019-12-31T23:17:21.986Z</updated>
+    <updated>2020-12-30T09:20:33.972Z</updated>
     
     <summary type="html">
     
@@ -152,9 +174,9 @@ This time it’s not a fun occasion because the only good new
     </summary>
     
     
-      <category term="funding" scheme="https://blog.cryptpad.fr/tags/funding/"/>
-    
       <category term="open-source" scheme="https://blog.cryptpad.fr/tags/open-source/"/>
+    
+      <category term="funding" scheme="https://blog.cryptpad.fr/tags/funding/"/>
     
       <category term="roadmap" scheme="https://blog.cryptpad.fr/tags/roadmap/"/>
     
@@ -180,9 +202,9 @@ CryptPad has largely been funded by the &lt;a hr
     </summary>
     
     
-      <category term="funding" scheme="https://blog.cryptpad.fr/tags/funding/"/>
-    
       <category term="open-source" scheme="https://blog.cryptpad.fr/tags/open-source/"/>
+    
+      <category term="funding" scheme="https://blog.cryptpad.fr/tags/funding/"/>
     
       <category term="roadmap" scheme="https://blog.cryptpad.fr/tags/roadmap/"/>
     
@@ -489,31 +511,6 @@ We get a lot of attention for the tec
       <category term="subresource integrity" scheme="https://blog.cryptpad.fr/tags/subresource-integrity/"/>
     
       <category term="chain of trust" scheme="https://blog.cryptpad.fr/tags/chain-of-trust/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>One year of biweekly releases</title>
-    <link href="https://blog.cryptpad.fr/2018/02/23/One-year-of-biweekly-releases/"/>
-    <id>https://blog.cryptpad.fr/2018/02/23/One-year-of-biweekly-releases/</id>
-    <published>2018-02-23T09:07:15.000Z</published>
-    <updated>2018-02-27T14:43:53.557Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;Approximately one year ago, we published an article about our intention to follow a &lt;a href=&quot;/2017/02/24/Announcing-biweekly-releases/&quot;&gt;b
-      
-    
-    </summary>
-    
-    
-      <category term="release" scheme="https://blog.cryptpad.fr/tags/release/"/>
-    
-      <category term="roadmap" scheme="https://blog.cryptpad.fr/tags/roadmap/"/>
-    
-      <category term="security" scheme="https://blog.cryptpad.fr/tags/security/"/>
     
   </entry>
   
