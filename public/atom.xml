@@ -6,7 +6,7 @@
   <link href="//atom.xml" rel="self"/>
   
   <link href="https://blog.cryptpad.fr/"/>
-  <updated>2021-01-21T14:43:32.374Z</updated>
+  <updated>2021-02-03T13:30:09.158Z</updated>
   <id>https://blog.cryptpad.fr/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CryptPad at FOSDEM 2021</title>
+    <link href="https://blog.cryptpad.fr/2021/02/03/CryptPad-at-FOSDEM-2021/"/>
+    <id>https://blog.cryptpad.fr/2021/02/03/CryptPad-at-FOSDEM-2021/</id>
+    <published>2021-02-03T13:26:52.000Z</published>
+    <updated>2021-02-03T13:30:09.158Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;The CryptPad team is taking part in the 2021 online edition of &lt;a href=&quot;https://fosdem.org/2021/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;FOSDEM&lt;/
+      
+    
+    </summary>
+    
+    
+      <category term="presentation" scheme="https://blog.cryptpad.fr/tags/presentation/"/>
+    
+      <category term="FOSDEM" scheme="https://blog.cryptpad.fr/tags/FOSDEM/"/>
+    
+      <category term="talk" scheme="https://blog.cryptpad.fr/tags/talk/"/>
+    
+  </entry>
   
   <entry>
     <title>No plan survives first contact with the enemy</title>
@@ -486,31 +511,6 @@ We get a lot of attention for the tec
       <category term="shared worker" scheme="https://blog.cryptpad.fr/tags/shared-worker/"/>
     
       <category term="performance" scheme="https://blog.cryptpad.fr/tags/performance/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Signing CryptPad</title>
-    <link href="https://blog.cryptpad.fr/2018/06/15/Signing-CryptPad/"/>
-    <id>https://blog.cryptpad.fr/2018/06/15/Signing-CryptPad/</id>
-    <published>2018-06-15T06:37:05.000Z</published>
-    <updated>2018-08-07T13:19:41.279Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;CryptPad was designed with a view that privacy should be default and cryptography should be invisible. In order to do this, we made use o
-      
-    
-    </summary>
-    
-    
-      <category term="signing" scheme="https://blog.cryptpad.fr/tags/signing/"/>
-    
-      <category term="subresource integrity" scheme="https://blog.cryptpad.fr/tags/subresource-integrity/"/>
-    
-      <category term="chain of trust" scheme="https://blog.cryptpad.fr/tags/chain-of-trust/"/>
     
   </entry>
   
