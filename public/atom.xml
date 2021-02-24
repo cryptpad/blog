@@ -6,7 +6,7 @@
   <link href="//atom.xml" rel="self"/>
   
   <link href="https://blog.cryptpad.fr/"/>
-  <updated>2021-02-03T13:30:09.158Z</updated>
+  <updated>2021-02-24T12:23:32.648Z</updated>
   <id>https://blog.cryptpad.fr/</id>
   
   <author>
@@ -17,17 +17,39 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>CryptPad at FOSDEM 2021</title>
-    <link href="https://blog.cryptpad.fr/2021/02/03/CryptPad-at-FOSDEM-2021/"/>
-    <id>https://blog.cryptpad.fr/2021/02/03/CryptPad-at-FOSDEM-2021/</id>
-    <published>2021-02-03T13:26:52.000Z</published>
-    <updated>2021-02-03T13:30:09.158Z</updated>
+    <title>Feb. 2021 status: Dark mode and organisation plans</title>
+    <link href="https://blog.cryptpad.fr/2021/02/24/status-feb-2021/"/>
+    <id>https://blog.cryptpad.fr/2021/02/24/status-feb-2021/</id>
+    <published>2021-02-24T06:27:52.000Z</published>
+    <updated>2021-02-24T12:23:32.648Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;The CryptPad team is taking part in the 2021 online edition of &lt;a href=&quot;https://fosdem.org/2021/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;FOSDEM&lt;/
+        &lt;p&gt;This is a new format of post we are starting on the blog: publishing the monthly updates that were until now only circulated in the inter
+      
+    
+    </summary>
+    
+    
+      <category term="status update" scheme="https://blog.cryptpad.fr/tags/status-update/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CryptPad at FOSDEM 2021</title>
+    <link href="https://blog.cryptpad.fr/2021/02/03/CryptPad-at-FOSDEM-2021/"/>
+    <id>https://blog.cryptpad.fr/2021/02/03/CryptPad-at-FOSDEM-2021/</id>
+    <published>2021-02-03T13:26:52.000Z</published>
+    <updated>2021-02-24T12:01:44.410Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;(this post was edited on 24th Feb. 2021 to include video embeds and corrections)&lt;/p&gt;
+&lt;p&gt;The CryptPad team is taking part in the 2021 onli
       
     
     </summary>
@@ -486,31 +508,6 @@ We get a lot of attention for the tec
       <category term="funding" scheme="https://blog.cryptpad.fr/tags/funding/"/>
     
       <category term="zero knowledge" scheme="https://blog.cryptpad.fr/tags/zero-knowledge/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Faster loads with SharedWorker &amp; ServiceWorker</title>
-    <link href="https://blog.cryptpad.fr/2018/06/22/Faster-loads-with-SharedWorker-ServiceWorker/"/>
-    <id>https://blog.cryptpad.fr/2018/06/22/Faster-loads-with-SharedWorker-ServiceWorker/</id>
-    <published>2018-06-22T15:51:58.000Z</published>
-    <updated>2018-08-07T13:20:06.104Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;When CryptPad was first created, the only thing to load was the CryptPad code itself and the pad which you were editing. Recently edited 
-      
-    
-    </summary>
-    
-    
-      <category term="web worker" scheme="https://blog.cryptpad.fr/tags/web-worker/"/>
-    
-      <category term="shared worker" scheme="https://blog.cryptpad.fr/tags/shared-worker/"/>
-    
-      <category term="performance" scheme="https://blog.cryptpad.fr/tags/performance/"/>
     
   </entry>
   
