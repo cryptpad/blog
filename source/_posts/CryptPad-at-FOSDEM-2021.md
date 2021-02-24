@@ -8,6 +8,8 @@ tags:
   - talk
 ---
 
+(this post was edited on 24th Feb. 2021 to include video embeds and corrections)
+
 The CryptPad team is taking part in the 2021 online edition of [FOSDEM](https://fosdem.org/2021/). We will use this opportunity to reflect on the past year from a couple of different perspectives. 
 
 Aaron MacSween's presentation is about the technical challenges faced by the team this year. The massive influx of users working from home pushed us to scale CryptPad to accomodate an additional 60K weekly active users. This was made easier by the platform's unique architecture, where most of the "expensive" work involving cryptography happens on the client rather than the server. Additional challenges involved a [27 hour outage](https://blog.cryptpad.fr/2020/12/16/The-outage-of-December-8th-2020-a-postmortem/) due to a cooling malfunction at our hosting provider. While the outage itself was out of our control, it brought into sharp relief that our procedures to mitigate uncertainty had not scaled with our user-base. Aaron will speak about what we plan to do to avoid such situations in future. 
@@ -22,12 +24,10 @@ This blog post will be updated with video embeds once these are available.
 ### [Living on the edge with CryptPad](https://fosdem.org/2021/schedule/event/cryptpad/)
 
 - **Speaker**: Aaron MacSween
-- **Track**: [Collaborative Information and Content Management Applications devroom](https://fosdem.org/2021/schedule/track/collaborative_information_and_content_management_applications/)
-- **Room**: [D.collab](https://fosdem.org/2021/schedule/room/dcollab/)
-- **Day**: [Saturday](https://fosdem.org/2021/schedule/day/saturday/)
-- **Start**: [11:00](https://fosdem.org/2021/schedule/day/saturday/#1100) (CET)
-- **End**: [11:35](https://fosdem.org/2021/schedule/day/saturday/#1135) (CET)
 
+Due to unforeseen circumstances, Aaron was unable to include his presentation in the FOSDEM track. However he still recorded it so we are making it available here and on our PeerTube channel. 
+
+<iframe width="560" height="315" sandbox="allow-same-origin allow-scripts allow-popups" src="https://peertube.xwiki.com/videos/embed/96a0c839-3e29-4ffd-b6e3-201bc3c6bc36" frameborder="0" allowfullscreen></iframe>
 
 ### [Communicating CryptPad](https://fosdem.org/2021/schedule/event/communicating_cryptpad/)
 
@@ -38,4 +38,4 @@ This blog post will be updated with video embeds once these are available.
 -  **Start**: [13:30](https://fosdem.org/2021/schedule/day/saturday/#1330) (CET)
 -  **End**: [13:50](https://fosdem.org/2021/schedule/day/saturday/#1350) (CET)
 
-
+<iframe width="560" height="315" sandbox="allow-same-origin allow-scripts allow-popups" src="https://peertube.xwiki.com/videos/embed/5339bbc1-ec4b-46ef-b064-6060d40ea272" frameborder="0" allowfullscreen></iframe>
