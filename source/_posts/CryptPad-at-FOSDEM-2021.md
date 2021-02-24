@@ -8,7 +8,7 @@ tags:
   - talk
 ---
 
-(this post was edited on 24th Feb. 2021 to include video embeds and corrections)
+(this post was edited on 24th Feb. 2021 to include links to videos and corrections)
 
 The CryptPad team is taking part in the 2021 online edition of [FOSDEM](https://fosdem.org/2021/). We will use this opportunity to reflect on the past year from a couple of different perspectives. 
 
@@ -27,7 +27,7 @@ This blog post will be updated with video embeds once these are available.
 
 Due to unforeseen circumstances, Aaron was unable to include his presentation in the FOSDEM track. However he still recorded it so we are making it available here and on our PeerTube channel. 
 
-<iframe width="560" height="315" sandbox="allow-same-origin allow-scripts allow-popups" src="https://peertube.xwiki.com/videos/embed/96a0c839-3e29-4ffd-b6e3-201bc3c6bc36" frameborder="0" allowfullscreen></iframe>
+[Watch on the CrytpPad Peertube channel](https://peertube.xwiki.com/videos/watch/96a0c839-3e29-4ffd-b6e3-201bc3c6bc36)
 
 ### [Communicating CryptPad](https://fosdem.org/2021/schedule/event/communicating_cryptpad/)
 
@@ -38,4 +38,4 @@ Due to unforeseen circumstances, Aaron was unable to include his presentation in
 -  **Start**: [13:30](https://fosdem.org/2021/schedule/day/saturday/#1330) (CET)
 -  **End**: [13:50](https://fosdem.org/2021/schedule/day/saturday/#1350) (CET)
 
-<iframe width="560" height="315" sandbox="allow-same-origin allow-scripts allow-popups" src="https://peertube.xwiki.com/videos/embed/5339bbc1-ec4b-46ef-b064-6060d40ea272" frameborder="0" allowfullscreen></iframe>
+[Watch on the CrytpPad Peertube channel](https://peertube.xwiki.com/videos/watch/5339bbc1-ec4b-46ef-b064-6060d40ea272)
