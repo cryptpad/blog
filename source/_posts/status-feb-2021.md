@@ -47,7 +47,7 @@ We were happy to welcome the first couple of subscribers on these plans and hope
 
 We had an unexpected spike in traffic early in the month after the following tweet linked to a toolkit made on cryptpad.fr.
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Here’s an updated toolkit by people on the ground in India if you want to help. (They removed their previous document as it was outdated.)<a href="https://twitter.com/hashtag/StandWithFarmers?src=hash&amp;ref_src=twsrc%5Etfw">#StandWithFarmers</a> <a href="https://twitter.com/hashtag/FarmersProtest?src=hash&amp;ref_src=twsrc%5Etfw">#FarmersProtest</a> <a href="https://cryptpad.fr/pad/#/2/pad/view/ehTz+drfKPwi4fP5dn0mivwVCKhwNe7OD1YHDiBUj0Y/">https://cryptpad.fr/pad/#/2/pad/vi...</a></p>&mdash; Greta Thunberg (@GretaThunberg) <a href="https://twitter.com/GretaThunberg/status/1357054451769606147?ref_src=twsrc%5Etfw">February 3, 2021</a></blockquote>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Here’s an updated toolkit by people on the ground in India if you want to help. (They removed their previous document as it was outdated.)<a href="https://twitter.com/hashtag/StandWithFarmers">#StandWithFarmers</a> <a href="https://twitter.com/hashtag/FarmersProtest">#FarmersProtest</a> <a href="https://cryptpad.fr/pad/#/2/pad/view/ehTz+drfKPwi4fP5dn0mivwVCKhwNe7OD1YHDiBUj0Y/">https://cryptpad.fr/pad/#/2/pad/vi...</a></p>&mdash; Greta Thunberg (@GretaThunberg) <a href="https://twitter.com/GretaThunberg/status/1357054451769606147">February 3, 2021</a></blockquote>
 
 This brought a lot of traffic to the service, as illustrated by the spike below. While this was a surprise, our infrastructure was prepared for it and held up very well.
 
