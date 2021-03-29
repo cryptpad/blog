@@ -6,7 +6,7 @@
   <link href="//atom.xml" rel="self"/>
   
   <link href="https://blog.cryptpad.fr/"/>
-  <updated>2021-02-24T12:23:32.648Z</updated>
+  <updated>2021-03-29T11:10:31.392Z</updated>
   <id>https://blog.cryptpad.fr/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>March 2021 status: Public roadmap and Spreadsheet updates</title>
+    <link href="https://blog.cryptpad.fr/2021/03/29/status-march-2021/"/>
+    <id>https://blog.cryptpad.fr/2021/03/29/status-march-2021/</id>
+    <published>2021-03-29T06:28:46.000Z</published>
+    <updated>2021-03-29T11:10:31.392Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;This month we released two versions of CryptPad, 4.2 and 4.3. Both improved CryptPad’s stability and performance: &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Version 4
+      
+    
+    </summary>
+    
+    
+      <category term="status update, talk, spreadsheet, roadmap" scheme="https://blog.cryptpad.fr/tags/status-update-talk-spreadsheet-roadmap/"/>
+    
+  </entry>
   
   <entry>
     <title>Feb. 2021 status: Dark mode and organisation plans</title>
@@ -485,29 +508,6 @@ We get a lot of attention for the tec
       <category term="funding" scheme="https://blog.cryptpad.fr/tags/funding/"/>
     
       <category term="roadmap" scheme="https://blog.cryptpad.fr/tags/roadmap/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CryptPad #ZeroKnowledge Free Software needs funding</title>
-    <link href="https://blog.cryptpad.fr/2018/07/06/CryptPad-ZeroKnowledge-Free-Software-needs-funding/"/>
-    <id>https://blog.cryptpad.fr/2018/07/06/CryptPad-ZeroKnowledge-Free-Software-needs-funding/</id>
-    <published>2018-07-06T09:07:18.000Z</published>
-    <updated>2018-08-07T13:20:06.104Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;a href=&quot;http://blog.ludovic.org/xwiki/bin/view/Blog/Aidez%20le%20projet%20libre%20CryptPad&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Version franç
-      
-    
-    </summary>
-    
-    
-      <category term="funding" scheme="https://blog.cryptpad.fr/tags/funding/"/>
-    
-      <category term="zero knowledge" scheme="https://blog.cryptpad.fr/tags/zero-knowledge/"/>
     
   </entry>
   

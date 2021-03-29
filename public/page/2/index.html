@@ -62,6 +62,97 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-The-outage-of-December-8th-2020-a-postmortem" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/12/16/The-outage-of-December-8th-2020-a-postmortem/" class="article-date">
+  <time datetime="2020-12-16T10:00:00.000Z" itemprop="datePublished">2020-12-16</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/12/16/The-outage-of-December-8th-2020-a-postmortem/">The outage of December 8th, 2020 - a postmortem</a>
+    </h1>
+  
+
+
+        
+            <span class="article-author">
+                by
+                Aaron MacSween
+            </span>
+        
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>On December 8th, 2020 a malfunction in the water-cooling system at a data-center in Roubaix, France caused an unrecoverable error in the physical machine which hosts CryptPad.fr. The service was unavailable for approximately 27 hours while we diagnosed a corrupted OS, provisioned a new server, and migrated user data to the new system.</p>
+<h2 id="What-happened"><a href="#What-happened" class="headerlink" title="What happened"></a>What happened</h2><p>Our team works remotely across three different timezones, so for the sake of simplicity I’ll summarize the timeline of the service outage in Central European Time (CET) using a 24-hour clock.</p>
+<h3 id="December-8-05-30-Server-update-deployed"><a href="#December-8-05-30-Server-update-deployed" class="headerlink" title="December 8, 05:30 - Server update deployed"></a>December 8, 05:30 - Server update deployed</h3><p>I occasionally start my working days very early in the morning when we have as few users connected as possible. On the days where a server restart is necessary, I do it at this time to minimize the number of active users that might be inconvenienced by the momentary service interruption.</p>
+<p>During the process of deploying a minor patch to optimize how the service loads and evicts document metadata I noticed that our monthly full-disk backup was running. We run a less intensive incremental backup on a daily basis, but having a regular full-disk backup ensures that restoration does not become increasingly difficult over time.</p>
+<p>We’ve been breaking our records for the highest ever number of concurrent users on CryptPad.fr on a regular basis, so I tend to pay close attention to how our server is performing and how small changes in our code affect its performance.</p>
+<p><img src="/images/3000-connections.png" alt="A record number of concurrently connected clients, as reported by our admin panel"></p>
+<p>My colleagues hadn’t started their shifts yet, but I left a message informing them that the server would probably be under more load than usual. We were considering also deploying an update to our client code, but we usually avoid doing so on backup days to help ensure that things go smoothly.</p>
+<p><img src="/images/poor-server-performance.png" alt="Me jinxing our server for the day"></p>
+<h3 id="December-8-12-42-CryptPad-goes-down"><a href="#December-8-12-42-CryptPad-goes-down" class="headerlink" title="December 8, 12:42 - CryptPad goes down"></a>December 8, 12:42 - CryptPad goes down</h3><p>CryptPad is developed by a company called <a href="https://xwiki.com/" target="_blank" rel="noopener">XWiki</a>. We host everything using virtual machines provisioned on the same dedicated physical servers as the rest of the company’s infrastructure. Performance metrics and monitoring for our other sites suggests that the host machine did not fail instantly, rather, its performance degraded over a relatively short period of time. Some services failed sooner as the host system tried to de-prioritize less critical systems.</p>
+<p>The last line in our server’s log was written to the disk at 12:42. I was away from my desk to eat a meal, so I didn’t notice that anything had gone wrong. I returned to find some user reports sent at around 13:00 that the service had been unavailable for some time. We occasionally receive such reports that turn out to be user error (typos in URLs or DNS problems), but in this case it was easy to confirm as a systemic problem since my CryptPad tabs were also disconnected.</p>
+<p>My first assumption was that an error in the the code I’d deployed earlier in the day that had caused the server to crash. I tried to log into our servers from my terminal with no success, then tried to ping the server’s domain name, then its raw IP address, at which point I realized that the machine was completely powered down or otherwise unreachable.</p>
+<p>The last time we were surprised with this kind of outage was in <a href="https://www.theregister.com/2017/11/09/ovh_datacenters_go_titsup/" target="_blank" rel="noopener">November 2017</a> when a power outage and a generator failure took several data-centers completely offline. That outage lasted 3.5 hours, which seemed very bad at the time, but I was expecting something similar.</p>
+<h3 id="December-8-13-35-Infra-is-on-it"><a href="#December-8-13-35-Infra-is-on-it" class="headerlink" title="December 8, 13:35 - Infra is on it"></a>December 8, 13:35 - Infra is on it</h3><p>Since the same physical infrastructure hosts a large number of sites the outage had been noticed by many of our company’s employees almost instantly. We have lots of monitoring in place to send warnings when things are performing poorly (or not at all), but I learned via our company’s internal chat service that at least one of our physical servers had had a critical failure and that Kevin (our resident infra expert) was working on it. CryptPad’s track record for uptime until this point was very good, and most of that was due to Kevin, so I tried to leave him alone so he could focus on diagnosing and possibly fixing the problem. Since there didn’t seem to be anything I could do on that front to help the situation I started to respond to the related GitHub issues and messages in our public chat channel to inform our users what was going on.</p>
+<p>At this point I also noticed several messages from my colleagues congratulating me on my five-year anniversary at the company. I’d forgotten the date, and grateful as I was for the wishes, this wasn’t how I’d expected to celebrate the milestone.</p>
+<h3 id="December-8-15-00-Host-machine-comes-back-online"><a href="#December-8-15-00-Host-machine-comes-back-online" class="headerlink" title="December 8, 15:00 - Host machine comes back online"></a>December 8, 15:00 - Host machine comes back online</h3><p>By 15:00 the physical server that had gone offline had been powered back up. This meant that VMware (the software we use to host many virtual machines on one very powerful machine) was running again, though some more work was needed to bring many of its hosted VMs back online. Kevin immediately began running a range of integrity checks to confirm that the hardware was functioning correctly before relaunching services. Some VMs that required fewer resources were able to be re-launched very quickly, but CryptPad requires more storage than most of the wikis we host, and disk checks tend to require more time than other diagnostics.</p>
+<p>At 15:40 these disk integrity checks were interrupted when one of the data-center technicians (who I’m sure was also having a bad day) had to take the server back offline to transfer our hardware to a new location in the same building. Access was restored just a few minutes later, but we had to restart our integrity checks.</p>
+<h3 id="December-8-16-20-First-disk-integrity-check-completes"><a href="#December-8-16-20-First-disk-integrity-check-completes" class="headerlink" title="December 8, 16:20 - First disk integrity check completes"></a>December 8, 16:20 - First disk integrity check completes</h3><p>Forty minutes after the manual intervention, the first of three disk checkups had completed. VMware was reporting that all systems were operational, however, the VM that usually hosts our API server was failing to boot. Kevin was able to launch a Debian rescue system from a live disk and mount the system for inspection, but there was still no obvious indication why the system wouldn’t boot. He proceeded to launch checks for the remaining two disks while he continued to search for the cause of the failure.</p>
+<h3 id="December-8-18-30-Initial-failure-traced-to-a-cooling-malfunction"><a href="#December-8-18-30-Initial-failure-traced-to-a-cooling-malfunction" class="headerlink" title="December 8, 18:30 - Initial failure traced to a cooling malfunction"></a>December 8, 18:30 - Initial failure traced to a cooling malfunction</h3><p>Throughout the duration of this downtime Kevin had been on and off the phone with the data-center technicians getting updates about what had happened and whether we should expect any further problems. By 18:30 we were informed of the cooling system’s malfunction. While it was somewhat comforting to know that the problem had nothing to do with code we’d written, it was also frustrating to be reminded that there will likely always be physical events like this that we can neither control nor predict.</p>
+<p><img src="/images/physical-internet.png" alt=""></p>
+<p>As twitter user <a href="https://twitter.com/RimaSghaier/status/1336398196109697025" target="_blank" rel="noopener">@RimaSghaier</a> noted, the internet is still <em>very physical</em>.</p>
+<h3 id="December-8-19-30-File-transfer-commences"><a href="#December-8-19-30-File-transfer-commences" class="headerlink" title="December 8, 19:30 - File transfer commences"></a>December 8, 19:30 - File transfer commences</h3><p>By 19:30, between myself, Kevin, Ludovic (the company’s CEO), and one of Ludovic’s friends who has some more experience with the intricacies of bootable filesystems,  we’d made no progress diagnosing why the affected VM would not boot outside of the environment of the rescue disk. We had access to all the system’s files and all of the integrity checks had passed, but there seemed to be problem with the root filesystem. We decided that the safest thing to do was to provision a new VM and begin transferring the relevant files. We could interrupt the process if we discovered the reason for the failure, but it was already late in the day and we had no promising leads.</p>
+<p>It took only a few minutes to provision a nearly identical VM and we immediately began transferring files via the data-center’s internal network. Unfortunately, there was around 750GB of data to transfer at a variable rate that did not seem very promising.</p>
+<p>Until this point I’d been very hopeful that <em>at any minute</em> we would find some trick to get the original server back online. As it became increasingly apparent that this was unlikely and that we’d need to wait for the file transfer to finish we shifted our focus to damage control.</p>
+<p>The API server that hosts our database and Nodejs server had been offline, but we actually serve our static assets (HTML, Javascript, etc) from a different machine that had stayed online. I’d been distracted by the actual system outage and hadn’t thought to update our front-end to inform all our users of what was going on, though I had been posting to our <a href="https://social.weho.st/@cryptpad" target="_blank" rel="noopener">Mastodon</a> and <a href="https://twitter.com/cryptpad" target="_blank" rel="noopener">Twitter</a> accounts.</p>
+<p>I hacked together and deployed some very basic HTML as quickly as I could, explaining what was happening and directing users to our social media for updates. This was deployed by 19:43.</p>
+<p><img src="/images/cryptpad-down-page.png" alt="CryptPad&#39;s down page"></p>
+<h3 id="December-8-20-00-I-try-to-get-some-sleep"><a href="#December-8-20-00-I-try-to-get-some-sleep" class="headerlink" title="December 8, 20:00 - I try to get some sleep"></a>December 8, 20:00 - I try to get some sleep</h3><p>Finally, after about 7 hours of downtime and a 14.5 hour shift on my part, we left the servers alone to continue their work and decided to get some rest for the following day. We expected the file transfer to take at least 10 more hours to complete, so I set my alarm for the following morning and called it a day.</p>
+<h3 id="December-9-16-14"><a href="#December-9-16-14" class="headerlink" title="December 9, 16:14"></a>December 9, 16:14</h3><p>December 9th was not especially eventful. I spent most of the day idly monitoring the progress of the network file transfer. I was far too distracted to be productive with anything else, and anyway it seemed prudent to save my energy for when the transfer completed.</p>
+<p>By about 13:30 the transfer was 90% complete and I began to pre-configure as much as possible on the new system so that we could bring everything back up as quickly as possible. I prepared and reviewed a list of final tasks with Kevin and Yann in the final 30 minutes of the transfer, and we started working as soon as it finished.</p>
+<p>We were able to complete the system’s setup in around 20 minutes, including a last-minute configuration fix to restrict the service to our IP addresses before we launched it. This restriction allowed us to access CryptPad as normal before anyone else. We took about ten minutes to test the platform, loading any documents we’d been editing leading up to the crash and confirming that everything was behaving as expected.</p>
+<p>Finally, by 16:14, after a bit more than 27 hours of downtime, we removed the IP address restriction and removed the downtime notice I’d deployed the evening before.</p>
+<h2 id="Difficulties-and-lessons-learned"><a href="#Difficulties-and-lessons-learned" class="headerlink" title="Difficulties and lessons learned"></a>Difficulties and lessons learned</h2><p>I’ll start by saying in very simple terms that <em>this experience <strong>sucked</strong></em>. I know it was very frustrating for our users who couldn’t access their documents while the server was offline. I certainly had a terrible two shifts. It was stressful for everyone on our team, and I suspect it was similarly unpleasant for the data-center technicians as well.</p>
+<p>It should be more obvious given the root meaning of the word <em>internet</em>, but we all depend on many systems functioning to maintain our daily routines. The majority of our users only contact us to report bugs. Kevin and I mostly end up chatting when one of us notices irregular server behaviour. We only contact OVH when our servers have problems, and they probably don’t deal too much with their municipal electricity and fuel providers except when their power goes out and they fall back to using generators. <em>We are most aware of the systems that sustain us when they break</em>.</p>
+<p>On a positive note, though, I was pleasantly surprised by how understanding people were about the situation. One of our paying users cancelled their subscription, but it seems the outage served to remind many people that there are humans working on this project, and so we’ve actually seen an increase in the rate of donations and subscriptions in the week since. We greatly appreciate everyone’s generosity!</p>
+<p>Some users seem to have understandably lost some confidence in our platform, as we’ve seen slightly fewer users at the usual peak hours (2700 concurrent connections instead of 3000). On the other hand, it seems like the downtime page led to a significant increase in our follower count on social media.</p>
+<p>Many of our users rely on CryptPad as a persistent home for their documents, and in these cases downtime is very inconvenient. During the outage, however, I learned about <a href="https://github.com/tosterkamp/random-redirect" target="_blank" rel="noopener">this software</a> which randomly redirects users to publicly hosted instances of open-source software platforms. If you use CryptPad as a place to collaborate rather than a place to store documents, then you could try <a href="https://cryptpad.random-redirect.de/" target="_blank" rel="noopener">cryptpad.random-redirect.de</a> to find alternatives. If you host a CryptPad instance you could even inquire about adding your server to the list. One of the great things about open-source software is that failures that affect one server or service do not need to have global effects.</p>
+<p>Despite the positive aspects of our community’s response to this event, I regret that it took so long migrate to a new machine. The simple fact is that while we (mostly Kevin and Ludovic) have put in a lot of effort to making sure that our hosting infrastructure is reliable, we were unprepared for the task of rapidly migrating our entire database to a new machine. We’re hosting about six times more data now than we were at the start of the year. Until now we’ve had little cause to consider the increasing difficulty of managing this growing dataset and with everything else that has happened this year there has been little opportunity to do so. This event made it abundantly clear that we’re going to have to find the required time.</p>
+<h2 id="What-we-plan-to-do"><a href="#What-we-plan-to-do" class="headerlink" title="What we plan to do"></a>What we plan to do</h2><p>It would be an understatement to say that I have a bit of an idealist stance when it comes to software. This is why I work on open-source, privacy-preserving tech. It’s terrible that modern, web-based software is as fragile as it is. That said, the alternative of emailing static documents to colleagues (or between devices) also makes it difficult to be productive.</p>
+<p>It’s a bit ridiculous that a broken cooling system in northern France can mean that our 20,000 daily active users lose the ability to edit or even read their documents for more than a day. More frustrating is the fact that we were very nearly in a good position to mitigate many of the adverse effects of this outage. We’ve been working on some new <em>offline-first</em> functionality in CryptPad over the last few months and, as noted above, we were considering deploying the first phase of these improvements the day of the outage.</p>
+<p>Our first offline features were deployed yesterday as a part of our <a href="https://github.com/xwiki-labs/cryptpad/releases/3.25.0" target="_blank" rel="noopener">3.25.0 release</a>. Now, every time you load a document in CryptPad you’re also populating an advanced cache in your browser. For now this only has the effect of reducing the total time to load cached documents, since we still wait for confirmation from the server that this is the most recent version of the content before removing the loading screen.</p>
+<p>Our next step will be to merge a branch of our code which will instead load and display the last known state of any document in your local cache in offline mode, regardless of whether you’re able to reach our database server. This would have alleviated some of the inconvenience of our outage, since users were still able to load the platform’s HTML and JavaScript that would have at least let them access cached documents.</p>
+<p>The next major feature will be the use of <a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API" target="_blank" rel="noopener">service-workers</a> to enable browsers to use very advanced caching policies and load our client-side code even while entirely offline, allowing full access to cached documents under almost any circumstance. We expect to deploy these updates in early January 2021 as a part of our upcoming <em>4.0.0</em> release.</p>
+<p><a href="https://www.cs.jhu.edu/~huang/paper/grayfailure-hotos17.pdf" target="_blank" rel="noopener">One of my favourite academic papers</a> defines the term <strong>gray failures</strong>, in which well-intentioned attempts to introduce redundancy into online systems can paradoxically increases the likelihood of service degradation or interruptions. In the last few weeks both Amazon and Google (some of the richest companies on the planet, in case you haven’t heard of them) have experienced severe service outages. There are very few easy answers in this area, but we’re going to learn from this situation and work on solutions that would have helped at least let us recover more quickly.</p>
+<p>If the next data-center failure happens in another three years I hope it will only last a small fraction of the time, and that our software will be so resilient you’ll hardly notice. In the meantime our team greatly appreciates all your support!</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://blog.cryptpad.fr/2020/12/16/The-outage-of-December-8th-2020-a-postmortem/" data-id="ckkpgv7dj001lpza8uj7n46fs" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cloud/">cloud</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/storage/">storage</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-CryptPad-Funding-Status-July-2020" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/07/03/CryptPad-Funding-Status-July-2020/" class="article-date">
@@ -451,118 +542,10 @@ As always, if you have ideas, concerns, or questions feel free to <a href="https
 
 
   
-    <article id="post-Join-the-team" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/03/18/Join-the-team/" class="article-date">
-  <time datetime="2019-03-18T12:01:21.000Z" itemprop="datePublished">2019-03-18</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/03/18/Join-the-team/">Join the team</a>
-    </h1>
-  
-
-
-        
-            <span class="article-author">
-                by
-                Aaron MacSween
-            </span>
-        
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>We’ve been making a big deal of our funding status for the last while, and for good reason.
-CryptPad has largely been funded by the <a href="https://open-paas.org/" target="_blank" rel="noopener">OpenPaaS</a> research and development project, funded by <a href="http://www.bpifrance.com/" target="_blank" rel="noopener">BPIFrance</a>.
-We’re very happy with the results of the past four years of work, but this support will terminate at the end of March 2019.</p>
-<p>While this change is a bit scary for us, it also means that we’ll be free to pursue new research projects.
-Europe is investing in technologies that promote human-centric values, so there are many opportunities that align with our goals.
-We have been actively seeking funding from a variety of sources, and though things are currently uncertain for us, it’s quite likely that <strong>our team will need to expand</strong> to prepare for upcoming obligations.</p>
-<h2 id="The-skills-we-want"><a href="#The-skills-we-want" class="headerlink" title="The skills we want"></a>The skills we want</h2><p>We’re looking for <em>web technologists</em> and <em>product designers</em> with experience in <a href="https://en.wikipedia.org/wiki/Privacy_engineering" target="_blank" rel="noopener">privacy engineering</a>.
-If you already use CryptPad, encrypted messengers, or other similar communication systems to protect your personal data, that knowledge will be an asset.
-If you use unencrypted platforms and have a good understanding of the personal and societal trade-offs, that will count in your favour as well.</p>
-<p>This field is fairly young, so we’re open to any experience you have, not just what you’ve learned in a professional or academic context.</p>
-<p>In terms of technical skills, our daily work typically includes:</p>
-<ul>
-<li>Clientside Javascript (ES5) and cross-platform browser APIs</li>
-<li>Nodejs</li>
-<li>CSS3 and LESS</li>
-<li>HTML5</li>
-<li>BASH</li>
-<li>GIT</li>
-<li>SSH, information security, and basic system administration</li>
-</ul>
-<p>We’re interested in incorporating skills we don’t already have, so don’t panic if you’re unfamiliar with anything listed above.</p>
-<p>Perhaps more important than the technical skills are the so-called <em>soft skills</em>:</p>
-<ul>
-<li>Empathizing with users and prioritizing improvements based on their impact</li>
-<li>Communicating well within a team (including asking for clarification if your goals are ever unclear)</li>
-<li>Managing your time well (we avoid micro-managing and working overtime)</li>
-<li>Reasoning about pragmatic security</li>
-<li>Consideration of both immediate tasks and long-term goals</li>
-</ul>
-<h2 id="What-we-offer"><a href="#What-we-offer" class="headerlink" title="What we offer"></a>What we offer</h2><p>XWiki SAS has been developing open-source software for the last 15 years, and we rely on the open-source tooling internally.
-Joining our team means learning how to run a sustainable business while giving away our product for free (without selling user data).</p>
-<p>Otherwise you can expect:</p>
-<ul>
-<li>A relaxed work environment (in <em>Paris, France</em> or <em>Iasi, Romania</em>) with part-time remote work<ul>
-<li>or negotiable full-time if relocation is not possible or desireable</li>
-</ul>
-</li>
-<li>To develop portable skills using open-source software</li>
-<li>International travel (at our expense) when promoting the company or our projects</li>
-<li>Opportunities for advancement, training, and other benefits</li>
-<li>The chance to shape the future of an exciting project with your personal view of responsible data handling</li>
-<li>To become an expert in privacy-enhancing technologies (we’re literally an <em>award-winning team</em>) <img src="/images/xwiki-awards-tweet.png" alt="Awards for XWiki and CryptPad"></li>
-</ul>
-<h2 id="A-special-note-to-researchers"><a href="#A-special-note-to-researchers" class="headerlink" title="A special note to researchers"></a>A special note to researchers</h2><p>We’re very interested in distributed systems, data science (as an adversary against privacy), and human-computer interaction.
-If you are knowledgeable about any of these, some intersection, or anything else that might be relevant, that’s great!</p>
-<p>If you have recently attained a PhD from an institution recognized by the EU, there are subsidies which can help us pay your salary.
-We have authored two peer-reviewed papers to date, so we can offer continued involvement in the research community if you desire.</p>
-<h2 id="Caveats"><a href="#Caveats" class="headerlink" title="Caveats"></a>Caveats</h2><p>Sorting through CVs can be a lot of work, though a little transparency on some issues might help lighten the burden on our side.
-Below are some things to consider before contacting us.</p>
-<p>As stated above, our ability to hire will be based on the status of some pending proposals.
-We don’t currently know how many positions will be available, and our timeline on when we could hire is fuzzy at best.
-We’d like to have your profile ready so we can act quickly once we know more.</p>
-<p>We can’t compete with the salaries offered by companies in Silicon Valley, though they are comparable to other European businesses.
-As a consolation, you’ll be directly involved in determining how we move forward, and you’ll gain insight into the exciting European research ecosystem.</p>
-<p>Our funding sources tend to place restrictions limiting those funds to residents of European member states.
-I moved to France from Canada to work on CryptPad several years ago, but things are generally simpler if you’re already here.
-Don’t let that stop you from contacting us, though!</p>
-<p>We understand that talent comes in many forms, and we welcome new ideas.
-We’re willing to make exceptions for promising candidates, but we’d like to know that you care about the topic.
-There are probably better options available if you just want <em>a job</em>.</p>
-<h2 id="If-you-are-interested…"><a href="#If-you-are-interested…" class="headerlink" title="If you are interested…"></a>If you are interested…</h2><p>Contact us at <a href="mailto:jobs@cryptpad.fr" target="_blank" rel="noopener">jobs@cryptpad.fr</a> with a recent CV and a brief introduction explaining what you’d bring to the team.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://blog.cryptpad.fr/2019/03/18/Join-the-team/" data-id="ckkpgv7d5000wpza825xc9l7i" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/funding/">funding</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/open-source/">open-source</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/privacy/">privacy</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/research/">research</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/roadmap/">roadmap</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
   <nav id="page-nav">
-    <a class="extend prev" rel="prev" href="/">Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/3/">Next</a>
+    <a class="extend prev" rel="prev" href="/">Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/3/">Next</a>
   </nav>
 
 </section>
@@ -576,7 +559,7 @@ There are probably better options available if you just want <em>a job</em>.</p>
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/FOSDEM/" style="font-size: 10px;">FOSDEM</a> <a href="/tags/analytics/" style="font-size: 10px;">analytics</a> <a href="/tags/appstore/" style="font-size: 10px;">appstore</a> <a href="/tags/award/" style="font-size: 11.67px;">award</a> <a href="/tags/chain-of-trust/" style="font-size: 10px;">chain of trust</a> <a href="/tags/cloud/" style="font-size: 13.33px;">cloud</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/data/" style="font-size: 11.67px;">data</a> <a href="/tags/donate/" style="font-size: 18.33px;">donate</a> <a href="/tags/embed/" style="font-size: 10px;">embed</a> <a href="/tags/ethics/" style="font-size: 10px;">ethics</a> <a href="/tags/extensibility/" style="font-size: 10px;">extensibility</a> <a href="/tags/file/" style="font-size: 10px;">file</a> <a href="/tags/funding/" style="font-size: 20px;">funding</a> <a href="/tags/iframe/" style="font-size: 10px;">iframe</a> <a href="/tags/login/" style="font-size: 10px;">login</a> <a href="/tags/media-tag/" style="font-size: 10px;">media-tag</a> <a href="/tags/ngi/" style="font-size: 13.33px;">ngi</a> <a href="/tags/open-collective/" style="font-size: 16.67px;">open collective</a> <a href="/tags/open-source/" style="font-size: 15px;">open-source</a> <a href="/tags/pdf/" style="font-size: 10px;">pdf</a> <a href="/tags/performance/" style="font-size: 11.67px;">performance</a> <a href="/tags/presentation/" style="font-size: 11.67px;">presentation</a> <a href="/tags/press/" style="font-size: 10px;">press</a> <a href="/tags/privacy/" style="font-size: 13.33px;">privacy</a> <a href="/tags/quality/" style="font-size: 11.67px;">quality</a> <a href="/tags/release/" style="font-size: 11.67px;">release</a> <a href="/tags/research/" style="font-size: 11.67px;">research</a> <a href="/tags/roadmap/" style="font-size: 18.33px;">roadmap</a> <a href="/tags/security/" style="font-size: 16.67px;">security</a> <a href="/tags/shared-worker/" style="font-size: 10px;">shared worker</a> <a href="/tags/signing/" style="font-size: 10px;">signing</a> <a href="/tags/status-update/" style="font-size: 10px;">status update</a> <a href="/tags/storage/" style="font-size: 13.33px;">storage</a> <a href="/tags/subresource-integrity/" style="font-size: 10px;">subresource integrity</a> <a href="/tags/talk/" style="font-size: 10px;">talk</a> <a href="/tags/upload/" style="font-size: 10px;">upload</a> <a href="/tags/web-worker/" style="font-size: 10px;">web worker</a> <a href="/tags/xss/" style="font-size: 10px;">xss</a> <a href="/tags/zero-knowledge/" style="font-size: 13.33px;">zero knowledge</a>
+      <a href="/tags/FOSDEM/" style="font-size: 10px;">FOSDEM</a> <a href="/tags/analytics/" style="font-size: 10px;">analytics</a> <a href="/tags/appstore/" style="font-size: 10px;">appstore</a> <a href="/tags/award/" style="font-size: 11.67px;">award</a> <a href="/tags/chain-of-trust/" style="font-size: 10px;">chain of trust</a> <a href="/tags/cloud/" style="font-size: 13.33px;">cloud</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/data/" style="font-size: 11.67px;">data</a> <a href="/tags/donate/" style="font-size: 18.33px;">donate</a> <a href="/tags/embed/" style="font-size: 10px;">embed</a> <a href="/tags/ethics/" style="font-size: 10px;">ethics</a> <a href="/tags/extensibility/" style="font-size: 10px;">extensibility</a> <a href="/tags/file/" style="font-size: 10px;">file</a> <a href="/tags/funding/" style="font-size: 20px;">funding</a> <a href="/tags/iframe/" style="font-size: 10px;">iframe</a> <a href="/tags/login/" style="font-size: 10px;">login</a> <a href="/tags/media-tag/" style="font-size: 10px;">media-tag</a> <a href="/tags/ngi/" style="font-size: 13.33px;">ngi</a> <a href="/tags/open-collective/" style="font-size: 16.67px;">open collective</a> <a href="/tags/open-source/" style="font-size: 15px;">open-source</a> <a href="/tags/pdf/" style="font-size: 10px;">pdf</a> <a href="/tags/performance/" style="font-size: 11.67px;">performance</a> <a href="/tags/presentation/" style="font-size: 11.67px;">presentation</a> <a href="/tags/press/" style="font-size: 10px;">press</a> <a href="/tags/privacy/" style="font-size: 13.33px;">privacy</a> <a href="/tags/quality/" style="font-size: 11.67px;">quality</a> <a href="/tags/release/" style="font-size: 11.67px;">release</a> <a href="/tags/research/" style="font-size: 11.67px;">research</a> <a href="/tags/roadmap/" style="font-size: 18.33px;">roadmap</a> <a href="/tags/security/" style="font-size: 16.67px;">security</a> <a href="/tags/shared-worker/" style="font-size: 10px;">shared worker</a> <a href="/tags/signing/" style="font-size: 10px;">signing</a> <a href="/tags/status-update/" style="font-size: 10px;">status update</a> <a href="/tags/status-update-talk-spreadsheet-roadmap/" style="font-size: 10px;">status update, talk, spreadsheet, roadmap</a> <a href="/tags/storage/" style="font-size: 13.33px;">storage</a> <a href="/tags/subresource-integrity/" style="font-size: 10px;">subresource integrity</a> <a href="/tags/talk/" style="font-size: 10px;">talk</a> <a href="/tags/upload/" style="font-size: 10px;">upload</a> <a href="/tags/web-worker/" style="font-size: 10px;">web worker</a> <a href="/tags/xss/" style="font-size: 10px;">xss</a> <a href="/tags/zero-knowledge/" style="font-size: 13.33px;">zero knowledge</a>
     </div>
   </div>
 
@@ -585,7 +568,7 @@ There are probably better options available if you just want <em>a job</em>.</p>
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">February 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">February 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li></ul>
     </div>
   </div>
 
@@ -596,6 +579,10 @@ There are probably better options available if you just want <em>a job</em>.</p>
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2021/03/29/status-march-2021/">March 2021 status: Public roadmap and Spreadsheet updates</a>
+          </li>
         
           <li>
             <a href="/2021/02/24/status-feb-2021/">Feb. 2021 status: Dark mode and organisation plans</a>
@@ -611,10 +598,6 @@ There are probably better options available if you just want <em>a job</em>.</p>
         
           <li>
             <a href="/2020/12/18/Recent-interviews-and-presentations/">Recent interviews and presentations</a>
-          </li>
-        
-          <li>
-            <a href="/2020/12/16/The-outage-of-December-8th-2020-a-postmortem/">The outage of December 8th, 2020 - a postmortem</a>
           </li>
         
       </ul>
