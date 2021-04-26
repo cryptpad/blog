@@ -62,6 +62,129 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-CryptPad-Roadmap" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/07/13/CryptPad-Roadmap/" class="article-date">
+  <time datetime="2018-07-13T07:11:04.000Z" itemprop="datePublished">2018-07-13</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/13/CryptPad-Roadmap/">CryptPad Roadmap</a>
+    </h1>
+  
+
+
+        
+            <span class="article-author">
+                by
+                Caleb James DeLisle
+            </span>
+        
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>CryptPad was started as an experimental platform as part of the <a href="http://ng.open-paas.org/" target="_blank" rel="noopener">OpenPaaS::NG research project</a>. Since then it has developed into a suite of editors for many different types of documents, all without ever leaking the content that you edit to the server or the server operators. Now, in order to keep the project moving, we need your help.</p>
+<p>We have created a roadmap of the features which we would like to develop over the next year and <strong>we’re hoping to raise 60,000€</strong> to finance it. Fortunately, <strong>XWiki SAS is willing to match your donations euro-for-euro</strong>. XWiki SAS is a company with open source at its heart and it was the company where CryptPad was first envisioned. XWiki SAS normally sells days of development time at about 1,000€ each, but since this project is dear to our hearts, we are also discounting the structure costs (things like the office and business taxes) for this project. <strong>We believe in CryptPad, but in order to succeed, we need you to believe in it too</strong>.</p>
+<p>The following is a 48 week roadmap which will fund one developer to work on CryptPad. You can donate to this roadmap on <a href="https://opencollective.com/cryptpad" target="_blank" rel="noopener">https://opencollective.com/cryptpad</a> or on <a href="https://accounts.cryptpad.fr/#/donate" target="_blank" rel="noopener">https://accounts.cryptpad.fr/#/donate</a>, if you would like to make a donation by wire transfer or by cryptocurrency, please get in touch with us at <a href="mailto:sales@cryptpad.fr" target="_blank" rel="noopener">sales@cryptpad.fr</a> and if you are involved in EU research projects and would like to work with us and this cutting edge Privacy Enhancing Technology, please contact <a href="mailto:research@xwiki.com" target="_blank" rel="noopener">research@xwiki.com</a>.</p>
+<h1 id="Goal-1-Spreadsheets-amp-Office-Documents"><a href="#Goal-1-Spreadsheets-amp-Office-Documents" class="headerlink" title="Goal 1 - Spreadsheets &amp; Office Documents"></a>Goal 1 - Spreadsheets &amp; Office Documents</h1><p>CryptPad is excellent for quick editing of meeting notes and plans, and it is able to store and view images and PDF files, but it does not allow editing of more complex types of files such as spreadsheets and word documents. Fortunately there is an open source web-based editor called OnlyOffice which allows editing these complex document types, but it is a highly complex piece of software and we will need time and effort to integrate it into CryptPad. Even after it is fully integrated, the conversion of xlsx files to OnlyOffice’s internal format will still need to be carried out be specialized software either on the user’s computer, or on a cloud service (not Zero-Knowledge!). However, we think that editing of spreadsheets and other documents in OnlyOffice is achievable without leaking any of the content back to the CryptPad server, so your spreadsheets will remain a secret.</p>
+<ul>
+<li>Spreadsheets, documents and presentations in CryptPad</li>
+<li>Realtime collaborative editing of office documents</li>
+<li>No import/export for now, this will come later</li>
+<li>No embedding of images from CryptPad until later</li>
+</ul>
+<p>We expect office file editing will take <strong>30 days, a cost of €7,500</strong></p>
+<h1 id="Goal-2-Comments-on-Rich-Text-Pads"><a href="#Goal-2-Comments-on-Rich-Text-Pads" class="headerlink" title="Goal 2 - Comments on Rich Text Pads"></a>Goal 2 - Comments on Rich Text Pads</h1><p>Many people use a workflow which includes the use of comments in a document. This is already standard in Google Docs and we need to be able to support it in CryptPad, in order to add comments we will need to add some HTML into the document without causing any problems for CKEditor (our rich text editor) and without causing it to be treated as part of the pad and synced over the wire.</p>
+<ul>
+<li>In the rich text pad, you will be able to add a comment by selecting some text, right clicking it and clicking “add comment”</li>
+<li>Comments will be shown in the right margin and associated with the text which highlighted them</li>
+<li>Comments will be able to be replied to, or “resolved” (they will no longer be shown, but still be visible in history of the document)</li>
+<li>If you delete the text with which a comment was associated, the comment will automatically be resolved</li>
+</ul>
+<p>We expect Comments on Rich Text Pads to take about <strong>10 days of development, a cost of €2,500</strong></p>
+<h1 id="Goal-3-Contacts-and-Messaging"><a href="#Goal-3-Contacts-and-Messaging" class="headerlink" title="Goal 3 - Contacts and Messaging"></a>Goal 3 - Contacts and Messaging</h1><p>To be able to easily share documents and get the attention of a person, we would like to implement Contacts and Messaging in CryptPad, currently we have a rudimentry implementation which allows chatting with contacts, but the contact request feature needs to be stabilized with a better process for contact requests, better integration with pad-sharing menu and more clear notifications. We would also like to add a small chat window in each document so that everyone working on that document can chat about it. Finally, we would like to add the ability to at-reference someone when writing a comment on a pad, which will cause a message to be sent to them.</p>
+<ul>
+<li>The share menu will include a list of contacts with whom you can share the pad</li>
+<li>You will be able to email somebody a link which will invite them to become a contact of yours</li>
+<li>Messages (pads shared with you, comments referencing you) will be shown in the upper-right when you come to CryptPad</li>
+<li>When writing a comment (Goal 2), you will be able to at-reference a contact (with auto-complete) and they will be notified</li>
+<li>Replying to (and resolving) a comment will also cause the author of the comment and anyone who replied to be notified</li>
+</ul>
+<p>We expect Contacts and Messaging to take about <strong>20 days of development, a cost of €5,000</strong></p>
+<h1 id="Goal-4-Shared-Drive"><a href="#Goal-4-Shared-Drive" class="headerlink" title="Goal 4 - Shared Drive"></a>Goal 4 - Shared Drive</h1><p>When planning a significant project, often there is the need to have many pads for the different aspects of the project. Currently all of the collaborators on the project must share all of the pad links with each other and they must each organize them in their personal drives. Personal drive organization is a nice feature because it allows each person to organize their work the way that makes the most sense to them, but sometimes it is more advantageous to have a folder in everybody’s drive which contains pads that are shared between all of them.</p>
+<p>Shared folders are complicated to implement. Unlike your personal drive which is just one realtime object (essentially it’s a pad), each shared folder must be a separate realtime object. Also, like a user account, a shared folder must be able to own pads, otherwise pads in that folder which are not in anyone’s personal drive risk being deleted by the server as per our expiration policy.</p>
+<ul>
+<li>You will be able to create a shared drive, just like you create a pad</li>
+<li>In your drive, you will be able to explore inside of the shared drive and organize it just like a folder</li>
+<li>You will be able to share the link to the Shared Drive with other people, when they click the link, it will import the shared drive into their personal drive</li>
+</ul>
+<p>We expect Shared Drive to take about <strong>20 days of development, a cost of €5,000</strong></p>
+<h1 id="Goal-5-Federated-Messaging"><a href="#Goal-5-Federated-Messaging" class="headerlink" title="Goal 5 - Federated Messaging"></a>Goal 5 - Federated Messaging</h1><p>There are about 150 CryptPad instances in existence, operated by people and organizations who want the privacy which CryptPad offers and also the additional security guarantee, decentralization and customization of their own instance. We want to support this usage while still allowing people on one instance to chat and message people on another instance. We want to support the ability to add contacts (Goal 3) with people registered on a different instance. You will then be able to at-reference them in a comment or share a pad with them using the share menu as you would with a person using the same instance as you.</p>
+<ul>
+<li>When you are on a pad or shared folder on somebody else’s instance, you will be able to import it to your instance</li>
+<li>Clicking a link to become a contact will work, even if you are registered on a different instance</li>
+<li>Once you have made a contact, all features in Contacts and Messaging will function across instances</li>
+</ul>
+<p>We expect Federated Messaging to take about <strong>30 days of development, a cost of €7,500</strong></p>
+<h1 id="Goal-6-Better-permissions"><a href="#Goal-6-Better-permissions" class="headerlink" title="Goal 6 - Better permissions"></a>Goal 6 - Better permissions</h1><p>Initially, all pads were “open” pads, meaning they were accessible to anyone and there was no owner. Open pads are deleted automatically when they have not been touched in 3 months, unless a registered user has a reference to them. Once we added the ability to have registered users, we needed to make sure that users would not have the pads in their drive disappear off the server, so we implemented what we call pinning. Pinning is a way of claiming that a pad is important to you and that it should not be deleted. However, this left a problem, still pads had no owner, meaning nobody had the right to delete them. Once a pad was created, there was no way to delete it which was a serious problem for pads contining confidential information.</p>
+<p>In order to allow pads to be deleted, we implemented <em>owned pads</em>, and the splash screen registered users now see when they create a new pad. So now you can delete it from the server when you are done with it. However, two problems remain:</p>
+<ol>
+<li>The owner of a pad is the person who created it and there is no way to add owners or share ownership</li>
+<li>There is no way to revoke access once it has been given</li>
+</ol>
+<p>In order to solve #1, we will add the ability to share ownership with other people. For solving #2 in a Zero-Knowledge compatible way, we will need to introduce the concept of redirects, links which re-direct to the actual ID and key of the pad. Revoking access will be a matter of changing the pad’s ID and then updating all of the redirects which are <em>not</em> to be revoked. This will allow the creation of pads which can only be viewed by registered users who are invited. Even view-only links to a pad will be able to be revoked by the owners of that pad.</p>
+<ul>
+<li>Pads which are only accessible by people invited, or members of a group</li>
+<li>Grant and revoke access</li>
+<li>Create new links to a pad, and revoke them</li>
+</ul>
+<p>We expect better permissions will take about <strong>40 days of development, a cost of €10,000</strong></p>
+<h1 id="Goal-7-Color-by-author"><a href="#Goal-7-Color-by-author" class="headerlink" title="Goal 7 - Color-by-author"></a>Goal 7 - Color-by-author</h1><p>After something is typed into a pad, the person who typed cannot be determined, we would like to change this and allow the etherpad-like behavior of shading the text differently based on who typed it. This will require getting the author from each patch in the stream of changes to the pad and making it available to the pad structure. In CryptPad there is a special message type which is called a checkpoint, it replaces the entire pad so that when a new person arrives in the pad, they don’t need to download more history than the previous 2 checkpoints. We will need to take special care to preserve the editor of each piece of the document when we create checkpoints, finally we will need to be able to shade the text based on it’s author, without either messing up CKEditor or causing the shading to be sent over the wire as if it were part of the pad.</p>
+<ul>
+<li>When an option is selected, text in the rich text app will be shaded with a color based on the author of that text</li>
+<li>The user list will show users who have joined and then left again, along with the color of their changes</li>
+<li>Right-clicking on the text will show the name of the person who wrote it (including whether they are one of your contacts)</li>
+</ul>
+<p>We expect Color-by-author to take about <strong>20 days of development, a cost of €5,000</strong></p>
+<h1 id="Goal-8-Offline-and-Suggested-Edits"><a href="#Goal-8-Offline-and-Suggested-Edits" class="headerlink" title="Goal 8 - Offline and Suggested Edits"></a>Goal 8 - Offline and Suggested Edits</h1><p>Like color-by-author, Offline and Suggested Edits is a reasonably complicated feature to implement. When working on a complex document, it is nice to be able to propose a change without actually changing the document, or make a change while disconnected from the internet and then have someone (maybe you) merge it later. However, this is complicated because when it comes time to merge that change, the document may have significantly changed, necessitating a smart merge.</p>
+<p>Rich text pads in CryptPad are stored in a quazi-html representation so patching and merging is anything but simple. The operational transformation done normally on pads takes advantage of the fact that divergences are small and infrequent so merging usually works ok. This feature will require development of a smart merging algorithm for the rich text app as well as for any other app for which one would like to have suggested edits and offline.</p>
+<ul>
+<li>Suggestion mode, your change is shown shaded and can be accepted or rejected, it will be attached to a comment so you can explain it</li>
+<li>When offline, you are automatically put into suggestion mode instead of read-only mode</li>
+</ul>
+<p>We expect Offline and Suggested Edits to take <strong>40 days of development, a cost of €10,000</strong></p>
+<h1 id="Goal-9-All-the-little-things"><a href="#Goal-9-All-the-little-things" class="headerlink" title="Goal 9 - All the little things"></a>Goal 9 - All the little things</h1><p>Even though it doesn’t get a lot of press, a significant amount of time is spent just fixing bugs, handling pull requests and doing releases. We want to keep CryptPad a community project and so we want to make sure that when someone makes a pull-request to the project, that request can be properly handled. Also, because CryptPad makes such use of modern HTML5 features, new releases of Chrome and Firefox typically introduce new bugs in CryptPad. There is rarely enough time to handle all of the issues which crop up, but we need to allocate time to handle some of them. This roadmap allocates the time of one person for 48 weeks, which means 24 releases, we need at least 1 day per release just to perform the release and write the release notes and fix miscellanious issues which appear.</p>
+<ul>
+<li>Keep on fixing bugs in CryptPad </li>
+<li>Handle pull requests and make releases</li>
+</ul>
+<p>We expect all the little things to take <strong>30 days of development, a cost of €7,500</strong></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://blog.cryptpad.fr/2018/07/13/CryptPad-Roadmap/" data-id="ckkpgv7cm000bpza8hsivhuki" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/funding/">funding</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/roadmap/">roadmap</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-CryptPad-ZeroKnowledge-Free-Software-needs-funding" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/07/06/CryptPad-ZeroKnowledge-Free-Software-needs-funding/" class="article-date">
@@ -392,67 +515,6 @@ Feel free to reach out to us through any of the methods listed on <a href="https
 
 
   
-    <article id="post-CryptPad-s-new-Secure-Cross-Domain-Iframe" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/08/30/CryptPad-s-new-Secure-Cross-Domain-Iframe/" class="article-date">
-  <time datetime="2017-08-30T11:23:00.000Z" itemprop="datePublished">2017-08-30</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/08/30/CryptPad-s-new-Secure-Cross-Domain-Iframe/">CryptPad&#39;s new Secure Cross-Domain Iframe</a>
-    </h1>
-  
-
-
-        
-            <span class="article-author">
-                by
-                Caleb James DeLisle
-            </span>
-        
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <script src="https://cryptpad.fr/common/media-tag-nacl.min.js"></script>
-
-<p>CryptPad version 1.14 (Codename <a href="https://en.wikipedia.org/wiki/Ouroboros" target="_blank" rel="noopener">Ouroboros</a>) has been released and the most exciting new feature is one you cannot even see. As you may remember from the <a href="/2017/03/06/Security-growing-pains/">Security Growing Pains</a> post, <a href="https://en.wikipedia.org/wiki/Content_Security_Policy" target="_blank" rel="noopener">Content Security Policy</a> is a significant part of CryptPad’s security model, and it is unfortunately incompatible with <a href="https://ckeditor.com/" target="_blank" rel="noopener">CKEditor</a>, the Open Source text editor used in CryptPad.</p>
-<p>With this release, we have done a significant re-architecture of the CryptPad codebase. Starting with the /pad/ application, the CryptPad UI has begun a process of moving into an iframe which is hosted on a different domain: <em>sandbox.cryptpad.info</em>. Moving the visual content to a different domain means that even in the event of a <a href="https://en.wikipedia.org/wiki/Cross-site_scripting" target="_blank" rel="noopener">Cross-site scripting</a> security vulnerability, most of your private information such as the pads in your CryptDrive, will not be at risk.</p>
-<p>In this version we updated only the /pad/ application to use the cross-domain iframe because it is the only app which requires <em>inline script</em>. This prevented us from using Content Security Policy to block the most significant vector for Cross Site Scripting attacks but now with the cross-domain iframe, such attacks are mitigated.</p>
-<p><media-tag src="https://files.cryptpad.fr/blob/b5/b5cd676935a5b23c158f38a84b7f3dfd3dc96ab3aafddd62" data-crypto-key="cryptpad:FBD19VUsNtgIxwjMGSOZcswciQzDixfuBY7dVWVwRG0=" data-attr-width="50%"></media-tag></p>
-<p>Going forward, we plan to implement a standardized CryptPad application API so that new applications can be developed, installed and used in CryptPad. Today, the CryptPad API which is exposed to apps such as /pad/ and /code/ is not standardized and there is no clear line between the apps themselves and the CryptPad internals. As we move toward the a standard app API, we will define a standard representation of a CryptPad application with such additional aspects as the app’s color-scheme and icons.</p>
-<p>Fundementally, this unexciting change to CryptPad begins a new phase in development, we plan to move from a set of integrated prepackaged applications to an ecosystem of applications for collaborating on different types of content with the same encryption under the hood.</p>
-<h2 id="But-Wait-There’s-more"><a href="#But-Wait-There’s-more" class="headerlink" title="But Wait, There’s more"></a>But Wait, There’s more</h2><p>The pictures in this blog post are not hosted on the blog, they are in fact Zero Knowledge files uploaded on CryptPad. They
-can be seen on this blog because it is using the <a href="https://github.com/UCF-project/media-tag" target="_blank" rel="noopener">Media Tag</a> which was developed as part of the UCF Project with the support of <a href="http://www.systematic-paris-region.org/" target="_blank" rel="noopener">Systematic</a>, <a href="https://www.bpifrance.fr/" target="_blank" rel="noopener">BPIFrance</a> and the <a href="https://www.paris.fr/" target="_blank" rel="noopener">City of Paris</a>. </p>
-<p><media-tag src="https://files.cryptpad.fr/blob/3c/3c9b5b3fb00b7dc35e15851606132585e8b69b06a51556eb" data-crypto-key="cryptpad:VE4raHL5VFReAXxioTaFZwt6q2jpxX+bdFHAFeoivZQ=" data-attr-width="40%"></media-tag></p>
-<p>Media Tag allows files on CryptPad to be included in any website (such as this blog). All you have to do to include a file from CryptPad is simply include the Media Tag loader and then add a Media Tag to your document, just like the following:</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- At the top of your HTML file --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cryptpad.fr/common/media-tag-nacl.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- Where you'd like the image to be located --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">media-tag</span> <span class="attr">src</span>=<span class="string">"https://files.cryptpad.fr/blob/3c/3c9b5b3fb00b7dc35e15851606132585e8b69b06a51556eb"</span> <span class="attr">data-crypto-key</span>=<span class="string">"cryptpad:VE4raHL5VFReAXxioTaFZwt6q2jpxX+bdFHAFeoivZQ="</span>&gt;</span><span class="tag">&lt;/<span class="name">media-tag</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>With this you can embed files from your CryptDrive into any website you want.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://blog.cryptpad.fr/2017/08/30/CryptPad-s-new-Secure-Cross-Domain-Iframe/" data-id="ckkpgv7cx000lpza8ycmml3pv" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/appstore/">appstore</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iframe/">iframe</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/media-tag/">media-tag</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/security/">security</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
   <nav id="page-nav">
@@ -470,7 +532,7 @@ can be seen on this blog because it is using the <a href="https://github.com/UCF
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/FOSDEM/" style="font-size: 10px;">FOSDEM</a> <a href="/tags/analytics/" style="font-size: 10px;">analytics</a> <a href="/tags/appstore/" style="font-size: 10px;">appstore</a> <a href="/tags/award/" style="font-size: 11.67px;">award</a> <a href="/tags/chain-of-trust/" style="font-size: 10px;">chain of trust</a> <a href="/tags/cloud/" style="font-size: 13.33px;">cloud</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/data/" style="font-size: 11.67px;">data</a> <a href="/tags/donate/" style="font-size: 18.33px;">donate</a> <a href="/tags/embed/" style="font-size: 10px;">embed</a> <a href="/tags/ethics/" style="font-size: 10px;">ethics</a> <a href="/tags/extensibility/" style="font-size: 10px;">extensibility</a> <a href="/tags/file/" style="font-size: 10px;">file</a> <a href="/tags/funding/" style="font-size: 20px;">funding</a> <a href="/tags/iframe/" style="font-size: 10px;">iframe</a> <a href="/tags/login/" style="font-size: 10px;">login</a> <a href="/tags/media-tag/" style="font-size: 10px;">media-tag</a> <a href="/tags/ngi/" style="font-size: 13.33px;">ngi</a> <a href="/tags/open-collective/" style="font-size: 16.67px;">open collective</a> <a href="/tags/open-source/" style="font-size: 15px;">open-source</a> <a href="/tags/pdf/" style="font-size: 10px;">pdf</a> <a href="/tags/performance/" style="font-size: 11.67px;">performance</a> <a href="/tags/presentation/" style="font-size: 11.67px;">presentation</a> <a href="/tags/press/" style="font-size: 10px;">press</a> <a href="/tags/privacy/" style="font-size: 13.33px;">privacy</a> <a href="/tags/quality/" style="font-size: 11.67px;">quality</a> <a href="/tags/release/" style="font-size: 11.67px;">release</a> <a href="/tags/research/" style="font-size: 11.67px;">research</a> <a href="/tags/roadmap/" style="font-size: 18.33px;">roadmap</a> <a href="/tags/security/" style="font-size: 16.67px;">security</a> <a href="/tags/shared-worker/" style="font-size: 10px;">shared worker</a> <a href="/tags/signing/" style="font-size: 10px;">signing</a> <a href="/tags/status-update/" style="font-size: 10px;">status update</a> <a href="/tags/status-update-talk-spreadsheet-roadmap/" style="font-size: 10px;">status update, talk, spreadsheet, roadmap</a> <a href="/tags/storage/" style="font-size: 13.33px;">storage</a> <a href="/tags/subresource-integrity/" style="font-size: 10px;">subresource integrity</a> <a href="/tags/talk/" style="font-size: 10px;">talk</a> <a href="/tags/upload/" style="font-size: 10px;">upload</a> <a href="/tags/web-worker/" style="font-size: 10px;">web worker</a> <a href="/tags/xss/" style="font-size: 10px;">xss</a> <a href="/tags/zero-knowledge/" style="font-size: 13.33px;">zero knowledge</a>
+      <a href="/tags/FOSDEM/" style="font-size: 10px;">FOSDEM</a> <a href="/tags/administration/" style="font-size: 10px;">administration</a> <a href="/tags/analytics/" style="font-size: 10px;">analytics</a> <a href="/tags/appstore/" style="font-size: 10px;">appstore</a> <a href="/tags/award/" style="font-size: 11.67px;">award</a> <a href="/tags/calendar/" style="font-size: 10px;">calendar</a> <a href="/tags/chain-of-trust/" style="font-size: 10px;">chain of trust</a> <a href="/tags/cloud/" style="font-size: 13.33px;">cloud</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/data/" style="font-size: 11.67px;">data</a> <a href="/tags/donate/" style="font-size: 18.33px;">donate</a> <a href="/tags/embed/" style="font-size: 10px;">embed</a> <a href="/tags/ethics/" style="font-size: 10px;">ethics</a> <a href="/tags/extensibility/" style="font-size: 10px;">extensibility</a> <a href="/tags/file/" style="font-size: 10px;">file</a> <a href="/tags/funding/" style="font-size: 20px;">funding</a> <a href="/tags/iframe/" style="font-size: 10px;">iframe</a> <a href="/tags/login/" style="font-size: 10px;">login</a> <a href="/tags/media-tag/" style="font-size: 10px;">media-tag</a> <a href="/tags/ngi/" style="font-size: 13.33px;">ngi</a> <a href="/tags/open-collective/" style="font-size: 16.67px;">open collective</a> <a href="/tags/open-source/" style="font-size: 15px;">open-source</a> <a href="/tags/pdf/" style="font-size: 10px;">pdf</a> <a href="/tags/performance/" style="font-size: 11.67px;">performance</a> <a href="/tags/presentation/" style="font-size: 11.67px;">presentation</a> <a href="/tags/press/" style="font-size: 10px;">press</a> <a href="/tags/privacy/" style="font-size: 13.33px;">privacy</a> <a href="/tags/quality/" style="font-size: 11.67px;">quality</a> <a href="/tags/release/" style="font-size: 11.67px;">release</a> <a href="/tags/research/" style="font-size: 13.33px;">research</a> <a href="/tags/roadmap/" style="font-size: 18.33px;">roadmap</a> <a href="/tags/security/" style="font-size: 16.67px;">security</a> <a href="/tags/shared-worker/" style="font-size: 10px;">shared worker</a> <a href="/tags/signing/" style="font-size: 10px;">signing</a> <a href="/tags/status-update/" style="font-size: 11.67px;">status update</a> <a href="/tags/status-update-talk-spreadsheet-roadmap/" style="font-size: 10px;">status update, talk, spreadsheet, roadmap</a> <a href="/tags/storage/" style="font-size: 13.33px;">storage</a> <a href="/tags/subresource-integrity/" style="font-size: 10px;">subresource integrity</a> <a href="/tags/talk/" style="font-size: 10px;">talk</a> <a href="/tags/upload/" style="font-size: 10px;">upload</a> <a href="/tags/web-worker/" style="font-size: 10px;">web worker</a> <a href="/tags/xss/" style="font-size: 10px;">xss</a> <a href="/tags/zero-knowledge/" style="font-size: 13.33px;">zero knowledge</a>
     </div>
   </div>
 
@@ -479,7 +541,7 @@ can be seen on this blog because it is using the <a href="https://github.com/UCF
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">February 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">February 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li></ul>
     </div>
   </div>
 
@@ -490,6 +552,10 @@ can be seen on this blog because it is using the <a href="https://github.com/UCF
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2021/04/26/status-april-2021/">April 2021 status: Calendars and a major new research project</a>
+          </li>
         
           <li>
             <a href="/2021/03/29/status-march-2021/">March 2021 status: Public roadmap and Spreadsheet updates</a>
@@ -505,10 +571,6 @@ can be seen on this blog because it is using the <a href="https://github.com/UCF
         
           <li>
             <a href="/2020/12/31/No-plan-survives-first-contact-with-the-enemy/">No plan survives first contact with the enemy</a>
-          </li>
-        
-          <li>
-            <a href="/2020/12/18/Recent-interviews-and-presentations/">Recent interviews and presentations</a>
           </li>
         
       </ul>

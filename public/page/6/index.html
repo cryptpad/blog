@@ -62,6 +62,67 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-CryptPad-s-new-Secure-Cross-Domain-Iframe" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/08/30/CryptPad-s-new-Secure-Cross-Domain-Iframe/" class="article-date">
+  <time datetime="2017-08-30T11:23:00.000Z" itemprop="datePublished">2017-08-30</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/08/30/CryptPad-s-new-Secure-Cross-Domain-Iframe/">CryptPad&#39;s new Secure Cross-Domain Iframe</a>
+    </h1>
+  
+
+
+        
+            <span class="article-author">
+                by
+                Caleb James DeLisle
+            </span>
+        
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <script src="https://cryptpad.fr/common/media-tag-nacl.min.js"></script>
+
+<p>CryptPad version 1.14 (Codename <a href="https://en.wikipedia.org/wiki/Ouroboros" target="_blank" rel="noopener">Ouroboros</a>) has been released and the most exciting new feature is one you cannot even see. As you may remember from the <a href="/2017/03/06/Security-growing-pains/">Security Growing Pains</a> post, <a href="https://en.wikipedia.org/wiki/Content_Security_Policy" target="_blank" rel="noopener">Content Security Policy</a> is a significant part of CryptPad’s security model, and it is unfortunately incompatible with <a href="https://ckeditor.com/" target="_blank" rel="noopener">CKEditor</a>, the Open Source text editor used in CryptPad.</p>
+<p>With this release, we have done a significant re-architecture of the CryptPad codebase. Starting with the /pad/ application, the CryptPad UI has begun a process of moving into an iframe which is hosted on a different domain: <em>sandbox.cryptpad.info</em>. Moving the visual content to a different domain means that even in the event of a <a href="https://en.wikipedia.org/wiki/Cross-site_scripting" target="_blank" rel="noopener">Cross-site scripting</a> security vulnerability, most of your private information such as the pads in your CryptDrive, will not be at risk.</p>
+<p>In this version we updated only the /pad/ application to use the cross-domain iframe because it is the only app which requires <em>inline script</em>. This prevented us from using Content Security Policy to block the most significant vector for Cross Site Scripting attacks but now with the cross-domain iframe, such attacks are mitigated.</p>
+<p><media-tag src="https://files.cryptpad.fr/blob/b5/b5cd676935a5b23c158f38a84b7f3dfd3dc96ab3aafddd62" data-crypto-key="cryptpad:FBD19VUsNtgIxwjMGSOZcswciQzDixfuBY7dVWVwRG0=" data-attr-width="50%"></media-tag></p>
+<p>Going forward, we plan to implement a standardized CryptPad application API so that new applications can be developed, installed and used in CryptPad. Today, the CryptPad API which is exposed to apps such as /pad/ and /code/ is not standardized and there is no clear line between the apps themselves and the CryptPad internals. As we move toward the a standard app API, we will define a standard representation of a CryptPad application with such additional aspects as the app’s color-scheme and icons.</p>
+<p>Fundementally, this unexciting change to CryptPad begins a new phase in development, we plan to move from a set of integrated prepackaged applications to an ecosystem of applications for collaborating on different types of content with the same encryption under the hood.</p>
+<h2 id="But-Wait-There’s-more"><a href="#But-Wait-There’s-more" class="headerlink" title="But Wait, There’s more"></a>But Wait, There’s more</h2><p>The pictures in this blog post are not hosted on the blog, they are in fact Zero Knowledge files uploaded on CryptPad. They
+can be seen on this blog because it is using the <a href="https://github.com/UCF-project/media-tag" target="_blank" rel="noopener">Media Tag</a> which was developed as part of the UCF Project with the support of <a href="http://www.systematic-paris-region.org/" target="_blank" rel="noopener">Systematic</a>, <a href="https://www.bpifrance.fr/" target="_blank" rel="noopener">BPIFrance</a> and the <a href="https://www.paris.fr/" target="_blank" rel="noopener">City of Paris</a>. </p>
+<p><media-tag src="https://files.cryptpad.fr/blob/3c/3c9b5b3fb00b7dc35e15851606132585e8b69b06a51556eb" data-crypto-key="cryptpad:VE4raHL5VFReAXxioTaFZwt6q2jpxX+bdFHAFeoivZQ=" data-attr-width="40%"></media-tag></p>
+<p>Media Tag allows files on CryptPad to be included in any website (such as this blog). All you have to do to include a file from CryptPad is simply include the Media Tag loader and then add a Media Tag to your document, just like the following:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- At the top of your HTML file --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cryptpad.fr/common/media-tag-nacl.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- Where you'd like the image to be located --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">media-tag</span> <span class="attr">src</span>=<span class="string">"https://files.cryptpad.fr/blob/3c/3c9b5b3fb00b7dc35e15851606132585e8b69b06a51556eb"</span> <span class="attr">data-crypto-key</span>=<span class="string">"cryptpad:VE4raHL5VFReAXxioTaFZwt6q2jpxX+bdFHAFeoivZQ="</span>&gt;</span><span class="tag">&lt;/<span class="name">media-tag</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>With this you can embed files from your CryptDrive into any website you want.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://blog.cryptpad.fr/2017/08/30/CryptPad-s-new-Secure-Cross-Domain-Iframe/" data-id="ckkpgv7cx000lpza8ycmml3pv" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/appstore/">appstore</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iframe/">iframe</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/media-tag/">media-tag</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/security/">security</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-CryptPad-s-New-Direction" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/08/18/CryptPad-s-New-Direction/" class="article-date">
@@ -557,82 +618,6 @@ make CryptPad fit your needs better.</p>
 
 
   
-    <article id="post-CryptPad-use-it-love-it-support-it" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/05/23/CryptPad-use-it-love-it-support-it/" class="article-date">
-  <time datetime="2017-05-23T13:10:35.000Z" itemprop="datePublished">2017-05-23</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/23/CryptPad-use-it-love-it-support-it/">CryptPad - use it, love ❤️ it, support it</a>
-    </h1>
-  
-
-
-        
-            <span class="article-author">
-                by
-                Caleb James DeLisle
-            </span>
-        
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>It’s been another release day in our little team. Today we released
-<a href="https://github.com/xwiki-labs/cryptpad/releases/tag/1.7.0" target="_blank" rel="noopener">CryptPad v1.7.0 (Hodag)</a>. The biggest new feature in this version is that when you create a <em>/code/</em> pad, the default highlighting is in markdown syntax and there it is rendered in realtime while you type. Try it out by making a pad at <a href="https://cryptpad.fr/code" target="_blank" rel="noopener">cryptpad.fr/code</a>.</p>
-<p>In this release we also completed something much more important and central to the future of CryptPad. We finished our first version of the payment server which allows you to take a subscription and help support the work that we do.</p>
-<p>Starting with this release we are now imposing a 50MB storage limit for our anonymous users and a 3 month expiration of pads which are not stored by a registered user. </p>
-<p>Instant collaboration is the vision of CryptPad and we are committed to continuing to provide that and even providing 50MB of persistent storage for anyone who is willing to sign up.</p>
-<p>For people who are ready to take the next step, we are now providing subscriptions which will improve how you organize your information while helping CryptPad to grow and improve.</p>
-<h2 id="Plans"><a href="#Plans" class="headerlink" title="Plans"></a>Plans</h2><ol>
-<li>Personal (5GB storage, 5€/month ex. VAT)<ul>
-<li>This is best for an individual using lots of pads for collaboration and note taking. For the price of a sandwich you can stay organized on all of your devices while also keeping your privacy private.</li>
-</ul>
-</li>
-<li>Standard (20GB storage, 10€/month ex. VAT)<ul>
-<li>For the price of lunch, you can have 20GB of storage, enough for not only pads but also for the soon to launch File Upload which will allow Zero Knowledge storage of files such as pictures and PDF documents. With the Standard plan you can add one more friend for free.</li>
-</ul>
-</li>
-<li>Team (50GB storage, 15€/month ex. VAT)<ul>
-<li>If you’re ready to extend your usage of CryptPad to an entire team, we are ready to help you succeed. With a Team plan you get 50GB of data storage in CryptPad, plenty for files and pads. You also get to add <strong>five</strong> people to your plan and you get professional support available in English and French.</li>
-</ul>
-</li>
-</ol>
-<p>Our goal is to make the best collaboration tool available while still being unable to sell or leak your content. Help us succeed, helping you stay organized and help show the world that Zero Knowledge Cloud is possible.</p>
-<h2 id="For-Admins"><a href="#For-Admins" class="headerlink" title="For Admins"></a>For Admins</h2><p>If you’re hosting your own instance of CryptPad, there are a few things you’ll need to do when you upgrade to Hodag. The limits code is still somewhat of a mess and while we get it tied down, you’ll need to do a bit of work to disable it.</p>
-<p>First there is a serverside per-user storage limit defined in <code>config.js</code> You’ll want to set this to a big number like so:</p>
-<pre><code>defaultStorageLimit: Number.MAX_SAFE_INTEGER
-</code></pre><p>Then there is <code>customize/application_config.js</code>. If you’re not familiar with <code>/customize/</code>, you can create this directory and then copy <code>application_config.js</code> over from the <code>/customize.dist/</code> directory so it will not be overwritten. The server will try looking in <code>/customize/</code> first.</p>
-<p>Inside of <code>application_config.js</code> you’ll need to update the <code>enablePinLimit</code> line like so:</p>
-<pre><code>enablePinLimit = false;
-</code></pre><p>If you’re using your own CryptPad installation in a business context, please consider contacting <a href="mailto:sales@cryptpad.fr" target="_blank" rel="noopener">sales@cryptpad.fr</a> for an on-premises support contract. You’ll get help with upgrades and early information about security issues.</p>
-<h2 id="What’s-Next"><a href="#What’s-Next" class="headerlink" title="What’s Next"></a>What’s Next</h2><p>In the coming months, we’re hoping to roll out text coloring based on the authors of the document as well as file upload for PDF and image embedding. Eventually we plan to add Zero Knowledge spreadsheets and workgroups for team collaboration.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://blog.cryptpad.fr/2017/05/23/CryptPad-use-it-love-it-support-it/" data-id="ckkpgv7cy000opza8cr2g6s3p" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/donate/">donate</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/funding/">funding</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
   <nav id="page-nav">
@@ -650,7 +635,7 @@ make CryptPad fit your needs better.</p>
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/FOSDEM/" style="font-size: 10px;">FOSDEM</a> <a href="/tags/analytics/" style="font-size: 10px;">analytics</a> <a href="/tags/appstore/" style="font-size: 10px;">appstore</a> <a href="/tags/award/" style="font-size: 11.67px;">award</a> <a href="/tags/chain-of-trust/" style="font-size: 10px;">chain of trust</a> <a href="/tags/cloud/" style="font-size: 13.33px;">cloud</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/data/" style="font-size: 11.67px;">data</a> <a href="/tags/donate/" style="font-size: 18.33px;">donate</a> <a href="/tags/embed/" style="font-size: 10px;">embed</a> <a href="/tags/ethics/" style="font-size: 10px;">ethics</a> <a href="/tags/extensibility/" style="font-size: 10px;">extensibility</a> <a href="/tags/file/" style="font-size: 10px;">file</a> <a href="/tags/funding/" style="font-size: 20px;">funding</a> <a href="/tags/iframe/" style="font-size: 10px;">iframe</a> <a href="/tags/login/" style="font-size: 10px;">login</a> <a href="/tags/media-tag/" style="font-size: 10px;">media-tag</a> <a href="/tags/ngi/" style="font-size: 13.33px;">ngi</a> <a href="/tags/open-collective/" style="font-size: 16.67px;">open collective</a> <a href="/tags/open-source/" style="font-size: 15px;">open-source</a> <a href="/tags/pdf/" style="font-size: 10px;">pdf</a> <a href="/tags/performance/" style="font-size: 11.67px;">performance</a> <a href="/tags/presentation/" style="font-size: 11.67px;">presentation</a> <a href="/tags/press/" style="font-size: 10px;">press</a> <a href="/tags/privacy/" style="font-size: 13.33px;">privacy</a> <a href="/tags/quality/" style="font-size: 11.67px;">quality</a> <a href="/tags/release/" style="font-size: 11.67px;">release</a> <a href="/tags/research/" style="font-size: 11.67px;">research</a> <a href="/tags/roadmap/" style="font-size: 18.33px;">roadmap</a> <a href="/tags/security/" style="font-size: 16.67px;">security</a> <a href="/tags/shared-worker/" style="font-size: 10px;">shared worker</a> <a href="/tags/signing/" style="font-size: 10px;">signing</a> <a href="/tags/status-update/" style="font-size: 10px;">status update</a> <a href="/tags/status-update-talk-spreadsheet-roadmap/" style="font-size: 10px;">status update, talk, spreadsheet, roadmap</a> <a href="/tags/storage/" style="font-size: 13.33px;">storage</a> <a href="/tags/subresource-integrity/" style="font-size: 10px;">subresource integrity</a> <a href="/tags/talk/" style="font-size: 10px;">talk</a> <a href="/tags/upload/" style="font-size: 10px;">upload</a> <a href="/tags/web-worker/" style="font-size: 10px;">web worker</a> <a href="/tags/xss/" style="font-size: 10px;">xss</a> <a href="/tags/zero-knowledge/" style="font-size: 13.33px;">zero knowledge</a>
+      <a href="/tags/FOSDEM/" style="font-size: 10px;">FOSDEM</a> <a href="/tags/administration/" style="font-size: 10px;">administration</a> <a href="/tags/analytics/" style="font-size: 10px;">analytics</a> <a href="/tags/appstore/" style="font-size: 10px;">appstore</a> <a href="/tags/award/" style="font-size: 11.67px;">award</a> <a href="/tags/calendar/" style="font-size: 10px;">calendar</a> <a href="/tags/chain-of-trust/" style="font-size: 10px;">chain of trust</a> <a href="/tags/cloud/" style="font-size: 13.33px;">cloud</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/data/" style="font-size: 11.67px;">data</a> <a href="/tags/donate/" style="font-size: 18.33px;">donate</a> <a href="/tags/embed/" style="font-size: 10px;">embed</a> <a href="/tags/ethics/" style="font-size: 10px;">ethics</a> <a href="/tags/extensibility/" style="font-size: 10px;">extensibility</a> <a href="/tags/file/" style="font-size: 10px;">file</a> <a href="/tags/funding/" style="font-size: 20px;">funding</a> <a href="/tags/iframe/" style="font-size: 10px;">iframe</a> <a href="/tags/login/" style="font-size: 10px;">login</a> <a href="/tags/media-tag/" style="font-size: 10px;">media-tag</a> <a href="/tags/ngi/" style="font-size: 13.33px;">ngi</a> <a href="/tags/open-collective/" style="font-size: 16.67px;">open collective</a> <a href="/tags/open-source/" style="font-size: 15px;">open-source</a> <a href="/tags/pdf/" style="font-size: 10px;">pdf</a> <a href="/tags/performance/" style="font-size: 11.67px;">performance</a> <a href="/tags/presentation/" style="font-size: 11.67px;">presentation</a> <a href="/tags/press/" style="font-size: 10px;">press</a> <a href="/tags/privacy/" style="font-size: 13.33px;">privacy</a> <a href="/tags/quality/" style="font-size: 11.67px;">quality</a> <a href="/tags/release/" style="font-size: 11.67px;">release</a> <a href="/tags/research/" style="font-size: 13.33px;">research</a> <a href="/tags/roadmap/" style="font-size: 18.33px;">roadmap</a> <a href="/tags/security/" style="font-size: 16.67px;">security</a> <a href="/tags/shared-worker/" style="font-size: 10px;">shared worker</a> <a href="/tags/signing/" style="font-size: 10px;">signing</a> <a href="/tags/status-update/" style="font-size: 11.67px;">status update</a> <a href="/tags/status-update-talk-spreadsheet-roadmap/" style="font-size: 10px;">status update, talk, spreadsheet, roadmap</a> <a href="/tags/storage/" style="font-size: 13.33px;">storage</a> <a href="/tags/subresource-integrity/" style="font-size: 10px;">subresource integrity</a> <a href="/tags/talk/" style="font-size: 10px;">talk</a> <a href="/tags/upload/" style="font-size: 10px;">upload</a> <a href="/tags/web-worker/" style="font-size: 10px;">web worker</a> <a href="/tags/xss/" style="font-size: 10px;">xss</a> <a href="/tags/zero-knowledge/" style="font-size: 13.33px;">zero knowledge</a>
     </div>
   </div>
 
@@ -659,7 +644,7 @@ make CryptPad fit your needs better.</p>
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">February 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">February 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li></ul>
     </div>
   </div>
 
@@ -670,6 +655,10 @@ make CryptPad fit your needs better.</p>
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2021/04/26/status-april-2021/">April 2021 status: Calendars and a major new research project</a>
+          </li>
         
           <li>
             <a href="/2021/03/29/status-march-2021/">March 2021 status: Public roadmap and Spreadsheet updates</a>
@@ -685,10 +674,6 @@ make CryptPad fit your needs better.</p>
         
           <li>
             <a href="/2020/12/31/No-plan-survives-first-contact-with-the-enemy/">No plan survives first contact with the enemy</a>
-          </li>
-        
-          <li>
-            <a href="/2020/12/18/Recent-interviews-and-presentations/">Recent interviews and presentations</a>
           </li>
         
       </ul>

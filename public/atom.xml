@@ -6,7 +6,7 @@
   <link href="//atom.xml" rel="self"/>
   
   <link href="https://blog.cryptpad.fr/"/>
-  <updated>2021-03-29T11:10:31.392Z</updated>
+  <updated>2021-04-26T13:13:57.785Z</updated>
   <id>https://blog.cryptpad.fr/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>April 2021 status: Calendars and a major new research project</title>
+    <link href="https://blog.cryptpad.fr/2021/04/26/status-april-2021/"/>
+    <id>https://blog.cryptpad.fr/2021/04/26/status-april-2021/</id>
+    <published>2021-04-26T08:35:43.000Z</published>
+    <updated>2021-04-26T13:13:57.785Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;This month we released CryptPad &lt;a href=&quot;https://github.com/xwiki-labs/cryptpad/releases/4.4.0&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;4.4.0&lt;/a&gt;,
+      
+    
+    </summary>
+    
+    
+      <category term="funding" scheme="https://blog.cryptpad.fr/tags/funding/"/>
+    
+      <category term="research" scheme="https://blog.cryptpad.fr/tags/research/"/>
+    
+      <category term="status update" scheme="https://blog.cryptpad.fr/tags/status-update/"/>
+    
+      <category term="calendar" scheme="https://blog.cryptpad.fr/tags/calendar/"/>
+    
+      <category term="administration" scheme="https://blog.cryptpad.fr/tags/administration/"/>
+    
+  </entry>
   
   <entry>
     <title>March 2021 status: Public roadmap and Spreadsheet updates</title>
@@ -485,29 +514,6 @@ We get a lot of attention for the tec
       <category term="performance" scheme="https://blog.cryptpad.fr/tags/performance/"/>
     
       <category term="css" scheme="https://blog.cryptpad.fr/tags/css/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CryptPad Roadmap</title>
-    <link href="https://blog.cryptpad.fr/2018/07/13/CryptPad-Roadmap/"/>
-    <id>https://blog.cryptpad.fr/2018/07/13/CryptPad-Roadmap/</id>
-    <published>2018-07-13T07:11:04.000Z</published>
-    <updated>2018-08-07T13:20:06.104Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;CryptPad was started as an experimental platform as part of the &lt;a href=&quot;http://ng.open-paas.org/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;OpenPaa
-      
-    
-    </summary>
-    
-    
-      <category term="funding" scheme="https://blog.cryptpad.fr/tags/funding/"/>
-    
-      <category term="roadmap" scheme="https://blog.cryptpad.fr/tags/roadmap/"/>
     
   </entry>
   
