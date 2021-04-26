@@ -3,7 +3,11 @@ title: "April 2021 status: Calendars and a major new research project"
 date: 2021-04-26 14:05:43
 author: David Benqué
 tags:
-  - status update, calendar, administration, research, funding
+  - status update
+  - calendar
+  - administration
+  - research
+  - funding
 ---
 
 
