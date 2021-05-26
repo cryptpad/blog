@@ -1,15 +1,13 @@
 ---
-title: "April 2021 status: Calendars and a major new research project"
-date: 2021-04-26 14:05:43
+title: "May 2021 status: Communities wrap up and initial work on Forms"
+date: 2021-05-26 14:05:00
 author: David Benqué
 tags:
   - status update
   - communities
-  - forms 
+  - forms
   - documentation
 ---
-
-# May 2021 status: Communities wrap up and initial work on Forms
 
 This month we released CryptPad [4.5.0](https://github.com/xwiki-labs/cryptpad/releases/4.5.0), featuring the public debut of the Calendar application that was [in beta since 4.4.0](https://blog.cryptpad.fr/2021/04/26/status-april-2021/).   
 
@@ -40,8 +38,7 @@ With some projects completed we can now turn another major milestone ahead: the 
 
 Finally, the team took part in a couple of events this month. Ludovic Dubost was [interviewed about INTEROFFICE](https://www.capdigital.com/en/dapsi-2nd-open-call-results-are-out-discover-one-of-the-winners-xwiki/), our upcoming project as part of the DAPSI grant.  
 
-CryptPad was featured as part the of the [3rd Workshop on Obfuscation](https://3rd.obfuscationworkshop.org/), a fascinating online event running on open-source software. We presented the poster below in the exhibition space.  
+CryptPad was featured as part the of the [3rd Workshop on Obfuscation](https://3rd.obfuscationworkshop.org/), a fascinating online event running on open-source software. We presented the poster below in the exhibition space. Click for [the PDF version](https://cryptpad.fr/file/#/2/file/LSBSej8liq5+v+igXgS6vDXA/).  
 
 ![The CryptPad poster presented at the workshop](/images/cryptpad-poster.png)  
 
-CryptPad poster at the 3rd Workshop on Obfuscation, click for [the PDF version](https://cryptpad.fr/file/#/2/file/LSBSej8liq5+v+igXgS6vDXA/).  
