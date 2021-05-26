@@ -6,7 +6,7 @@
   <link href="//atom.xml" rel="self"/>
   
   <link href="https://blog.cryptpad.fr/"/>
-  <updated>2021-04-26T13:13:57.785Z</updated>
+  <updated>2021-05-26T10:15:38.366Z</updated>
   <id>https://blog.cryptpad.fr/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>May 2021 status: Communities wrap up and initial work on Forms</title>
+    <link href="https://blog.cryptpad.fr/2021/05/26/status-may-2021/"/>
+    <id>https://blog.cryptpad.fr/2021/05/26/status-may-2021/</id>
+    <published>2021-05-26T08:35:00.000Z</published>
+    <updated>2021-05-26T10:15:38.366Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;This month we released CryptPad &lt;a href=&quot;https://github.com/xwiki-labs/cryptpad/releases/4.5.0&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;4.5.0&lt;/a&gt;,
+      
+    
+    </summary>
+    
+    
+      <category term="status update" scheme="https://blog.cryptpad.fr/tags/status-update/"/>
+    
+      <category term="communities" scheme="https://blog.cryptpad.fr/tags/communities/"/>
+    
+      <category term="forms" scheme="https://blog.cryptpad.fr/tags/forms/"/>
+    
+      <category term="documentation" scheme="https://blog.cryptpad.fr/tags/documentation/"/>
+    
+  </entry>
   
   <entry>
     <title>April 2021 status: Calendars and a major new research project</title>
@@ -73,7 +100,7 @@
     <link href="https://blog.cryptpad.fr/2021/02/24/status-feb-2021/"/>
     <id>https://blog.cryptpad.fr/2021/02/24/status-feb-2021/</id>
     <published>2021-02-24T06:27:52.000Z</published>
-    <updated>2021-02-24T12:23:32.648Z</updated>
+    <updated>2021-02-24T12:41:09.134Z</updated>
     
     <summary type="html">
     
@@ -489,31 +516,6 @@ We get a lot of attention for the tec
       <category term="open collective" scheme="https://blog.cryptpad.fr/tags/open-collective/"/>
     
       <category term="donate" scheme="https://blog.cryptpad.fr/tags/donate/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Making CryptPad CSS 3 times faster, by loading it twice</title>
-    <link href="https://blog.cryptpad.fr/2018/07/20/Making-CryptPad-CSS-3-times-faster-by-loading-it-twice/"/>
-    <id>https://blog.cryptpad.fr/2018/07/20/Making-CryptPad-CSS-3-times-faster-by-loading-it-twice/</id>
-    <published>2018-07-20T06:30:59.000Z</published>
-    <updated>2018-12-10T16:17:07.987Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;script src=&quot;https://cryptpad.fr/common/media-tag-nacl.min.js&quot;&gt;&lt;/script&gt;
-
-&lt;p&gt;In CryptPad development, we have always tried to push the limit
-      
-    
-    </summary>
-    
-    
-      <category term="performance" scheme="https://blog.cryptpad.fr/tags/performance/"/>
-    
-      <category term="css" scheme="https://blog.cryptpad.fr/tags/css/"/>
     
   </entry>
   
