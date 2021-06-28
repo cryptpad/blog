@@ -8,14 +8,13 @@ tags:
   - forms
 ---
 
-
-This month we released 2 versions of CryptPad: [4.6.0](https://github.com/xwiki-labs/cryptpad/releases/tag/4.6.0) and [4.7.0](https://github.com/xwiki-labs/cryptpad/releases/tag/4.7.0). 4.6 was a stability update addressing many minor issues while the team prepared for 4.7 and a major new feature: the new *Forms* application.   
+This month we released two versions of CryptPad. [4.6](https://github.com/xwiki-labs/cryptpad/releases/tag/4.6.0) was a stability update addressing many minor issues while the team prepared for [4.7](https://github.com/xwiki-labs/cryptpad/releases/tag/4.7.0) and a major new feature: the new *Forms* application.
 
 ## Say hello to Forms!
 
 ![Preview of the new Form application](/images/form-preview.png)  
 
-The *Poll* application in CryptPad was aimed at agreeing a meeting date between a group of people. However it had some major shortcomings including "all or nothing" edit rights where participants could modify other people's answers. Part of our [Dialogue](https://nlnet.nl/project/CryptPadForms/) project proposal was to address these issues in a complete re-write of the application. Another aspect of the project aims to provide a new application for online surveys beyond simple polls.   
+The *Poll* application in CryptPad was aimed at choosing a meeting date between a group of people. However it had some major shortcomings including "all or nothing" edit rights where participants could modify other people's answers. Part of our [Dialogue](https://nlnet.nl/project/CryptPadForms/) project proposal was to address these issues in a complete re-write of the application. Another aspect of the project aims to provide a new application for online surveys beyond simple polls.   
 
 The new *Form* application is an answer to both of these proposals. Polls are now one of 8 question types that can be added to an online form. Earlier in the project we [spun out the reminders API element of forms into a full blown calendar app](https://blog.cryptpad.fr/2021/04/26/status-april-2021/). With *Forms* we are merging a variety of use cases into one application. As we have [indicated](https://social.weho.st/@cryptpad/106419898274848746) polls created with the old application remain available, but the creation of new ones is discouraged and all our future development efforts will be directed at *Forms*.  
 
@@ -25,7 +24,7 @@ We released the first Beta version of forms with CryptPad [4.7.0](https://github
 - Better visualization of responses (e.g. with simple bar charts)  
 - "Required" questions that would print an error if left empty  
 - Notifications for form authors (e.g. when someone has responded)  
-- A default "poll" template to make it easy to replicate the behaviour of the deprecated *Poll* app.  
+- A default "poll" template to make it easy to replicate the behaviour of the deprecated *Poll* app  
 
 We are gathering feedback on these and anything else that might be improved, using the *Form* app itself for a feedback survey that is open until **July 12th**. Please [let us know of any comments on the application](https://cryptpad.fr/form/#/2/form/view/gYs4QS7DetInCXy0z2CQoUW6CwN6kaR2utGsftDzp58/) and what you would like to see improved, especially if you use online forms regularly. We really appreciate the time of nearly 100 people who have already sent in their comments. These will inform our work as we improve *Forms* this summer.  
 
@@ -40,7 +39,7 @@ First of all, how did we have their email? The configuration for a new instance 
 
 In both releases this month we have made improvements to the administration panel of CryptPad instances. More settings, such as the setup for the Support ticket mailbox, are now available from the panel rather than buried in configuration files. This also includes new settings for administrators to manage how they communicate (or not) with the development team.   
 
-The "mass-email" was to encourage all administrators to upgrade to the latest 4.7.0 version in order to 1) benefit from all of the new features and security improvements made to CryptPad in the last few months (or years depending on the version they were on) and 2) manage further communication with the development team going forward. These communications will include security notifications and other things such as inclusion in a directory of open instances that we are working on setting up.   
+The "mass email" was to encourage all administrators to upgrade to the latest 4.7.0 version in order to 1) benefit from all of the new features and security improvements made to CryptPad in the last few months (or years depending on the version they were on) and 2) manage further communication with the development team going forward. These communications will include security notifications and other things such as inclusion in a directory of open instances that we are working on setting up.   
 
 ---  
 
