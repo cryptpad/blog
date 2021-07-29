@@ -6,7 +6,7 @@
   <link href="//atom.xml" rel="self"/>
   
   <link href="https://blog.cryptpad.fr/"/>
-  <updated>2021-06-28T10:56:35.916Z</updated>
+  <updated>2021-07-29T08:37:32.754Z</updated>
   <id>https://blog.cryptpad.fr/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>July 2021 status: Research on Forms and file import/export</title>
+    <link href="https://blog.cryptpad.fr/2021/06/29/status-july-2021/"/>
+    <id>https://blog.cryptpad.fr/2021/06/29/status-july-2021/</id>
+    <published>2021-06-29T05:54:33.000Z</published>
+    <updated>2021-07-29T08:37:32.754Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;This month we released two versions of CryptPad. &lt;a href=&quot;https://github.com/xwiki-labs/cryptpad/releases/tag/4.8.0&quot; target=&quot;_blank&quot; rel=
+      
+    
+    </summary>
+    
+    
+      <category term="ngi" scheme="https://blog.cryptpad.fr/tags/ngi/"/>
+    
+      <category term="research" scheme="https://blog.cryptpad.fr/tags/research/"/>
+    
+      <category term="status update" scheme="https://blog.cryptpad.fr/tags/status-update/"/>
+    
+      <category term="forms" scheme="https://blog.cryptpad.fr/tags/forms/"/>
+    
+  </entry>
   
   <entry>
     <title>June 2021 status: Forms and a call to instance administrators</title>
@@ -489,32 +516,6 @@ We get a lot of attention for the tec
       <category term="award" scheme="https://blog.cryptpad.fr/tags/award/"/>
     
       <category term="ngi" scheme="https://blog.cryptpad.fr/tags/ngi/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CryptPad funding status August 2018</title>
-    <link href="https://blog.cryptpad.fr/2018/09/12/CryptPad-funding-status-August-2018/"/>
-    <id>https://blog.cryptpad.fr/2018/09/12/CryptPad-funding-status-August-2018/</id>
-    <published>2018-09-12T08:44:16.000Z</published>
-    <updated>2018-09-12T18:47:21.809Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;img src=&quot;/images/cryptpad-funding-blog-cover-generic.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;We have now passed the summer since we have started the OpenCol
-      
-    
-    </summary>
-    
-    
-      <category term="funding" scheme="https://blog.cryptpad.fr/tags/funding/"/>
-    
-      <category term="open collective" scheme="https://blog.cryptpad.fr/tags/open-collective/"/>
-    
-      <category term="donate" scheme="https://blog.cryptpad.fr/tags/donate/"/>
     
   </entry>
   
