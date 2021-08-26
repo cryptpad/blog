@@ -6,7 +6,7 @@
   <link href="//atom.xml" rel="self"/>
   
   <link href="https://blog.cryptpad.fr/"/>
-  <updated>2021-08-26T12:50:10.582Z</updated>
+  <updated>2021-08-26T13:03:12.162Z</updated>
   <id>https://blog.cryptpad.fr/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://blog.cryptpad.fr/2021/08/26/status-2021-08/"/>
     <id>https://blog.cryptpad.fr/2021/08/26/status-2021-08/</id>
     <published>2021-08-26T07:55:32.000Z</published>
-    <updated>2021-08-26T12:50:10.582Z</updated>
+    <updated>2021-08-26T13:03:12.162Z</updated>
     
     <summary type="html">
     
@@ -87,9 +87,9 @@
     
       <category term="status update" scheme="https://blog.cryptpad.fr/tags/status-update/"/>
     
-      <category term="administration" scheme="https://blog.cryptpad.fr/tags/administration/"/>
-    
       <category term="forms" scheme="https://blog.cryptpad.fr/tags/forms/"/>
+    
+      <category term="administration" scheme="https://blog.cryptpad.fr/tags/administration/"/>
     
   </entry>
   
@@ -112,9 +112,9 @@
     
       <category term="status update" scheme="https://blog.cryptpad.fr/tags/status-update/"/>
     
-      <category term="communities" scheme="https://blog.cryptpad.fr/tags/communities/"/>
-    
       <category term="forms" scheme="https://blog.cryptpad.fr/tags/forms/"/>
+    
+      <category term="communities" scheme="https://blog.cryptpad.fr/tags/communities/"/>
     
       <category term="documentation" scheme="https://blog.cryptpad.fr/tags/documentation/"/>
     
