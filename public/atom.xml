@@ -6,7 +6,7 @@
   <link href="//atom.xml" rel="self"/>
   
   <link href="https://blog.cryptpad.fr/"/>
-  <updated>2021-07-29T08:37:32.754Z</updated>
+  <updated>2021-08-26T12:50:10.582Z</updated>
   <id>https://blog.cryptpad.fr/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>August 2021 status: Forms hackathon and a new social media account</title>
+    <link href="https://blog.cryptpad.fr/2021/08/26/status-2021-08/"/>
+    <id>https://blog.cryptpad.fr/2021/08/26/status-2021-08/</id>
+    <published>2021-08-26T07:55:32.000Z</published>
+    <updated>2021-08-26T12:50:10.582Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;This month the team has been operating at reduced capacity as we took turns taking much needed breaks. There is less than usual to report
+      
+    
+    </summary>
+    
+    
+      <category term="status update" scheme="https://blog.cryptpad.fr/tags/status-update/"/>
+    
+      <category term="forms" scheme="https://blog.cryptpad.fr/tags/forms/"/>
+    
+      <category term="social media" scheme="https://blog.cryptpad.fr/tags/social-media/"/>
+    
+  </entry>
   
   <entry>
     <title>July 2021 status: Research on Forms and file import/export</title>
@@ -489,33 +514,6 @@ We get a lot of attention for the tec
       <category term="open collective" scheme="https://blog.cryptpad.fr/tags/open-collective/"/>
     
       <category term="donate" scheme="https://blog.cryptpad.fr/tags/donate/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CryptPad receives NGI Startup Award</title>
-    <link href="https://blog.cryptpad.fr/2018/11/13/CryptPad-receives-NGI-Startup-Award/"/>
-    <id>https://blog.cryptpad.fr/2018/11/13/CryptPad-receives-NGI-Startup-Award/</id>
-    <published>2018-11-13T09:59:32.000Z</published>
-    <updated>2018-12-10T16:17:07.987Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;img src=&quot;/images/cryptpad_ngi_award.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Europe recognizes Privacy, and it’s starting with CryptPad&lt;/strong&gt;&lt;/p&gt;
-
-      
-    
-    </summary>
-    
-    
-      <category term="privacy" scheme="https://blog.cryptpad.fr/tags/privacy/"/>
-    
-      <category term="award" scheme="https://blog.cryptpad.fr/tags/award/"/>
-    
-      <category term="ngi" scheme="https://blog.cryptpad.fr/tags/ngi/"/>
     
   </entry>
   
