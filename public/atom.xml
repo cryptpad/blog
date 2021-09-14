@@ -5,9 +5,9 @@
   
   <link href="//atom.xml" rel="self"/>
   
-  <link href="https://blog.cryptpad.fr/"/>
+  <link href="https://blog.cryptpad.org/"/>
   <updated>2021-08-26T13:03:12.162Z</updated>
-  <id>https://blog.cryptpad.fr/</id>
+  <id>https://blog.cryptpad.org/</id>
   
   <author>
     <name>XWiki Labs</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>August 2021 status: Forms hackathon and a new social media account</title>
-    <link href="https://blog.cryptpad.fr/2021/08/26/status-2021-08/"/>
-    <id>https://blog.cryptpad.fr/2021/08/26/status-2021-08/</id>
+    <link href="https://blog.cryptpad.org/2021/08/26/status-2021-08/"/>
+    <id>https://blog.cryptpad.org/2021/08/26/status-2021-08/</id>
     <published>2021-08-26T07:55:32.000Z</published>
     <updated>2021-08-26T13:03:12.162Z</updated>
     
@@ -33,18 +33,18 @@
     </summary>
     
     
-      <category term="status update" scheme="https://blog.cryptpad.fr/tags/status-update/"/>
+      <category term="status update" scheme="https://blog.cryptpad.org/tags/status-update/"/>
     
-      <category term="forms" scheme="https://blog.cryptpad.fr/tags/forms/"/>
+      <category term="forms" scheme="https://blog.cryptpad.org/tags/forms/"/>
     
-      <category term="social media" scheme="https://blog.cryptpad.fr/tags/social-media/"/>
+      <category term="social media" scheme="https://blog.cryptpad.org/tags/social-media/"/>
     
   </entry>
   
   <entry>
     <title>July 2021 status: Research on Forms and file import/export</title>
-    <link href="https://blog.cryptpad.fr/2021/06/29/status-july-2021/"/>
-    <id>https://blog.cryptpad.fr/2021/06/29/status-july-2021/</id>
+    <link href="https://blog.cryptpad.org/2021/06/29/status-july-2021/"/>
+    <id>https://blog.cryptpad.org/2021/06/29/status-july-2021/</id>
     <published>2021-06-29T05:54:33.000Z</published>
     <updated>2021-07-29T08:37:32.754Z</updated>
     
@@ -58,20 +58,20 @@
     </summary>
     
     
-      <category term="ngi" scheme="https://blog.cryptpad.fr/tags/ngi/"/>
+      <category term="ngi" scheme="https://blog.cryptpad.org/tags/ngi/"/>
     
-      <category term="research" scheme="https://blog.cryptpad.fr/tags/research/"/>
+      <category term="research" scheme="https://blog.cryptpad.org/tags/research/"/>
     
-      <category term="status update" scheme="https://blog.cryptpad.fr/tags/status-update/"/>
+      <category term="status update" scheme="https://blog.cryptpad.org/tags/status-update/"/>
     
-      <category term="forms" scheme="https://blog.cryptpad.fr/tags/forms/"/>
+      <category term="forms" scheme="https://blog.cryptpad.org/tags/forms/"/>
     
   </entry>
   
   <entry>
     <title>June 2021 status: Forms and a call to instance administrators</title>
-    <link href="https://blog.cryptpad.fr/2021/06/28/status-june-2021/"/>
-    <id>https://blog.cryptpad.fr/2021/06/28/status-june-2021/</id>
+    <link href="https://blog.cryptpad.org/2021/06/28/status-june-2021/"/>
+    <id>https://blog.cryptpad.org/2021/06/28/status-june-2021/</id>
     <published>2021-06-28T05:54:33.000Z</published>
     <updated>2021-06-28T10:56:35.916Z</updated>
     
@@ -85,18 +85,18 @@
     </summary>
     
     
-      <category term="status update" scheme="https://blog.cryptpad.fr/tags/status-update/"/>
+      <category term="status update" scheme="https://blog.cryptpad.org/tags/status-update/"/>
     
-      <category term="forms" scheme="https://blog.cryptpad.fr/tags/forms/"/>
+      <category term="administration" scheme="https://blog.cryptpad.org/tags/administration/"/>
     
-      <category term="administration" scheme="https://blog.cryptpad.fr/tags/administration/"/>
+      <category term="forms" scheme="https://blog.cryptpad.org/tags/forms/"/>
     
   </entry>
   
   <entry>
     <title>May 2021 status: Communities wrap up and initial work on Forms</title>
-    <link href="https://blog.cryptpad.fr/2021/05/26/status-may-2021/"/>
-    <id>https://blog.cryptpad.fr/2021/05/26/status-may-2021/</id>
+    <link href="https://blog.cryptpad.org/2021/05/26/status-may-2021/"/>
+    <id>https://blog.cryptpad.org/2021/05/26/status-may-2021/</id>
     <published>2021-05-26T08:35:00.000Z</published>
     <updated>2021-05-26T10:15:38.366Z</updated>
     
@@ -110,20 +110,20 @@
     </summary>
     
     
-      <category term="status update" scheme="https://blog.cryptpad.fr/tags/status-update/"/>
+      <category term="status update" scheme="https://blog.cryptpad.org/tags/status-update/"/>
     
-      <category term="forms" scheme="https://blog.cryptpad.fr/tags/forms/"/>
+      <category term="communities" scheme="https://blog.cryptpad.org/tags/communities/"/>
     
-      <category term="communities" scheme="https://blog.cryptpad.fr/tags/communities/"/>
+      <category term="forms" scheme="https://blog.cryptpad.org/tags/forms/"/>
     
-      <category term="documentation" scheme="https://blog.cryptpad.fr/tags/documentation/"/>
+      <category term="documentation" scheme="https://blog.cryptpad.org/tags/documentation/"/>
     
   </entry>
   
   <entry>
     <title>April 2021 status: Calendars and a major new research project</title>
-    <link href="https://blog.cryptpad.fr/2021/04/26/status-april-2021/"/>
-    <id>https://blog.cryptpad.fr/2021/04/26/status-april-2021/</id>
+    <link href="https://blog.cryptpad.org/2021/04/26/status-april-2021/"/>
+    <id>https://blog.cryptpad.org/2021/04/26/status-april-2021/</id>
     <published>2021-04-26T08:35:43.000Z</published>
     <updated>2021-04-26T13:13:57.785Z</updated>
     
@@ -137,22 +137,22 @@
     </summary>
     
     
-      <category term="funding" scheme="https://blog.cryptpad.fr/tags/funding/"/>
+      <category term="funding" scheme="https://blog.cryptpad.org/tags/funding/"/>
     
-      <category term="research" scheme="https://blog.cryptpad.fr/tags/research/"/>
+      <category term="research" scheme="https://blog.cryptpad.org/tags/research/"/>
     
-      <category term="status update" scheme="https://blog.cryptpad.fr/tags/status-update/"/>
+      <category term="status update" scheme="https://blog.cryptpad.org/tags/status-update/"/>
     
-      <category term="calendar" scheme="https://blog.cryptpad.fr/tags/calendar/"/>
+      <category term="calendar" scheme="https://blog.cryptpad.org/tags/calendar/"/>
     
-      <category term="administration" scheme="https://blog.cryptpad.fr/tags/administration/"/>
+      <category term="administration" scheme="https://blog.cryptpad.org/tags/administration/"/>
     
   </entry>
   
   <entry>
     <title>March 2021 status: Public roadmap and Spreadsheet updates</title>
-    <link href="https://blog.cryptpad.fr/2021/03/29/status-march-2021/"/>
-    <id>https://blog.cryptpad.fr/2021/03/29/status-march-2021/</id>
+    <link href="https://blog.cryptpad.org/2021/03/29/status-march-2021/"/>
+    <id>https://blog.cryptpad.org/2021/03/29/status-march-2021/</id>
     <published>2021-03-29T06:28:46.000Z</published>
     <updated>2021-03-29T11:10:31.392Z</updated>
     
@@ -168,14 +168,14 @@
     </summary>
     
     
-      <category term="status update, talk, spreadsheet, roadmap" scheme="https://blog.cryptpad.fr/tags/status-update-talk-spreadsheet-roadmap/"/>
+      <category term="status update, talk, spreadsheet, roadmap" scheme="https://blog.cryptpad.org/tags/status-update-talk-spreadsheet-roadmap/"/>
     
   </entry>
   
   <entry>
     <title>Feb. 2021 status: Dark mode and organisation plans</title>
-    <link href="https://blog.cryptpad.fr/2021/02/24/status-feb-2021/"/>
-    <id>https://blog.cryptpad.fr/2021/02/24/status-feb-2021/</id>
+    <link href="https://blog.cryptpad.org/2021/02/24/status-feb-2021/"/>
+    <id>https://blog.cryptpad.org/2021/02/24/status-feb-2021/</id>
     <published>2021-02-24T06:27:52.000Z</published>
     <updated>2021-02-24T12:41:09.134Z</updated>
     
@@ -189,14 +189,14 @@
     </summary>
     
     
-      <category term="status update" scheme="https://blog.cryptpad.fr/tags/status-update/"/>
+      <category term="status update" scheme="https://blog.cryptpad.org/tags/status-update/"/>
     
   </entry>
   
   <entry>
     <title>CryptPad at FOSDEM 2021</title>
-    <link href="https://blog.cryptpad.fr/2021/02/03/CryptPad-at-FOSDEM-2021/"/>
-    <id>https://blog.cryptpad.fr/2021/02/03/CryptPad-at-FOSDEM-2021/</id>
+    <link href="https://blog.cryptpad.org/2021/02/03/CryptPad-at-FOSDEM-2021/"/>
+    <id>https://blog.cryptpad.org/2021/02/03/CryptPad-at-FOSDEM-2021/</id>
     <published>2021-02-03T13:26:52.000Z</published>
     <updated>2021-02-24T12:42:52.315Z</updated>
     
@@ -211,18 +211,18 @@
     </summary>
     
     
-      <category term="presentation" scheme="https://blog.cryptpad.fr/tags/presentation/"/>
+      <category term="presentation" scheme="https://blog.cryptpad.org/tags/presentation/"/>
     
-      <category term="FOSDEM" scheme="https://blog.cryptpad.fr/tags/FOSDEM/"/>
+      <category term="FOSDEM" scheme="https://blog.cryptpad.org/tags/FOSDEM/"/>
     
-      <category term="talk" scheme="https://blog.cryptpad.fr/tags/talk/"/>
+      <category term="talk" scheme="https://blog.cryptpad.org/tags/talk/"/>
     
   </entry>
   
   <entry>
     <title>No plan survives first contact with the enemy</title>
-    <link href="https://blog.cryptpad.fr/2020/12/31/No-plan-survives-first-contact-with-the-enemy/"/>
-    <id>https://blog.cryptpad.fr/2020/12/31/No-plan-survives-first-contact-with-the-enemy/</id>
+    <link href="https://blog.cryptpad.org/2020/12/31/No-plan-survives-first-contact-with-the-enemy/"/>
+    <id>https://blog.cryptpad.org/2020/12/31/No-plan-survives-first-contact-with-the-enemy/</id>
     <published>2020-12-31T16:57:34.000Z</published>
     <updated>2021-01-21T14:43:32.374Z</updated>
     
@@ -237,14 +237,14 @@ We had some worries about
     </summary>
     
     
-      <category term="roadmap" scheme="https://blog.cryptpad.fr/tags/roadmap/"/>
+      <category term="roadmap" scheme="https://blog.cryptpad.org/tags/roadmap/"/>
     
   </entry>
   
   <entry>
     <title>Recent interviews and presentations</title>
-    <link href="https://blog.cryptpad.fr/2020/12/18/Recent-interviews-and-presentations/"/>
-    <id>https://blog.cryptpad.fr/2020/12/18/Recent-interviews-and-presentations/</id>
+    <link href="https://blog.cryptpad.org/2020/12/18/Recent-interviews-and-presentations/"/>
+    <id>https://blog.cryptpad.org/2020/12/18/Recent-interviews-and-presentations/</id>
     <published>2020-12-18T05:25:11.000Z</published>
     <updated>2021-01-21T14:43:32.374Z</updated>
     
@@ -258,16 +258,16 @@ We had some worries about
     </summary>
     
     
-      <category term="presentation" scheme="https://blog.cryptpad.fr/tags/presentation/"/>
+      <category term="presentation" scheme="https://blog.cryptpad.org/tags/presentation/"/>
     
-      <category term="press" scheme="https://blog.cryptpad.fr/tags/press/"/>
+      <category term="press" scheme="https://blog.cryptpad.org/tags/press/"/>
     
   </entry>
   
   <entry>
     <title>The outage of December 8th, 2020 - a postmortem</title>
-    <link href="https://blog.cryptpad.fr/2020/12/16/The-outage-of-December-8th-2020-a-postmortem/"/>
-    <id>https://blog.cryptpad.fr/2020/12/16/The-outage-of-December-8th-2020-a-postmortem/</id>
+    <link href="https://blog.cryptpad.org/2020/12/16/The-outage-of-December-8th-2020-a-postmortem/"/>
+    <id>https://blog.cryptpad.org/2020/12/16/The-outage-of-December-8th-2020-a-postmortem/</id>
     <published>2020-12-16T10:00:00.000Z</published>
     <updated>2021-01-21T14:43:32.374Z</updated>
     
@@ -281,16 +281,16 @@ We had some worries about
     </summary>
     
     
-      <category term="cloud" scheme="https://blog.cryptpad.fr/tags/cloud/"/>
+      <category term="cloud" scheme="https://blog.cryptpad.org/tags/cloud/"/>
     
-      <category term="storage" scheme="https://blog.cryptpad.fr/tags/storage/"/>
+      <category term="storage" scheme="https://blog.cryptpad.org/tags/storage/"/>
     
   </entry>
   
   <entry>
     <title>CryptPad Funding Status July 2020</title>
-    <link href="https://blog.cryptpad.fr/2020/07/03/CryptPad-Funding-Status-July-2020/"/>
-    <id>https://blog.cryptpad.fr/2020/07/03/CryptPad-Funding-Status-July-2020/</id>
+    <link href="https://blog.cryptpad.org/2020/07/03/CryptPad-Funding-Status-July-2020/"/>
+    <id>https://blog.cryptpad.org/2020/07/03/CryptPad-Funding-Status-July-2020/</id>
     <published>2020-07-03T12:34:09.000Z</published>
     <updated>2020-07-03T18:41:52.097Z</updated>
     
@@ -304,18 +304,18 @@ We had some worries about
     </summary>
     
     
-      <category term="funding" scheme="https://blog.cryptpad.fr/tags/funding/"/>
+      <category term="funding" scheme="https://blog.cryptpad.org/tags/funding/"/>
     
-      <category term="open collective" scheme="https://blog.cryptpad.fr/tags/open-collective/"/>
+      <category term="open collective" scheme="https://blog.cryptpad.org/tags/open-collective/"/>
     
-      <category term="donate" scheme="https://blog.cryptpad.fr/tags/donate/"/>
+      <category term="donate" scheme="https://blog.cryptpad.org/tags/donate/"/>
     
   </entry>
   
   <entry>
     <title>Looking back, looking forward</title>
-    <link href="https://blog.cryptpad.fr/2019/12/31/Looking-back-looking-forward/"/>
-    <id>https://blog.cryptpad.fr/2019/12/31/Looking-back-looking-forward/</id>
+    <link href="https://blog.cryptpad.org/2019/12/31/Looking-back-looking-forward/"/>
+    <id>https://blog.cryptpad.org/2019/12/31/Looking-back-looking-forward/</id>
     <published>2019-12-31T10:36:16.000Z</published>
     <updated>2021-01-21T14:43:32.370Z</updated>
     
@@ -330,14 +330,14 @@ At that point fewer than 10 people used the service on a weekly
     </summary>
     
     
-      <category term="roadmap" scheme="https://blog.cryptpad.fr/tags/roadmap/"/>
+      <category term="roadmap" scheme="https://blog.cryptpad.org/tags/roadmap/"/>
     
   </entry>
   
   <entry>
     <title>Yesterday I made a mess</title>
-    <link href="https://blog.cryptpad.fr/2019/06/14/Yesterday-I-made-a-mess/"/>
-    <id>https://blog.cryptpad.fr/2019/06/14/Yesterday-I-made-a-mess/</id>
+    <link href="https://blog.cryptpad.org/2019/06/14/Yesterday-I-made-a-mess/"/>
+    <id>https://blog.cryptpad.org/2019/06/14/Yesterday-I-made-a-mess/</id>
     <published>2019-06-14T11:59:33.000Z</published>
     <updated>2019-06-14T21:51:01.886Z</updated>
     
@@ -352,18 +352,18 @@ This time it’s not a fun occasion because the only good new
     </summary>
     
     
-      <category term="cloud" scheme="https://blog.cryptpad.fr/tags/cloud/"/>
+      <category term="cloud" scheme="https://blog.cryptpad.org/tags/cloud/"/>
     
-      <category term="storage" scheme="https://blog.cryptpad.fr/tags/storage/"/>
+      <category term="storage" scheme="https://blog.cryptpad.org/tags/storage/"/>
     
-      <category term="data" scheme="https://blog.cryptpad.fr/tags/data/"/>
+      <category term="data" scheme="https://blog.cryptpad.org/tags/data/"/>
     
   </entry>
   
   <entry>
     <title>Our future is collaborative</title>
-    <link href="https://blog.cryptpad.fr/2019/05/27/Our-future-is-collaborative/"/>
-    <id>https://blog.cryptpad.fr/2019/05/27/Our-future-is-collaborative/</id>
+    <link href="https://blog.cryptpad.org/2019/05/27/Our-future-is-collaborative/"/>
+    <id>https://blog.cryptpad.org/2019/05/27/Our-future-is-collaborative/</id>
     <published>2019-05-27T06:50:22.000Z</published>
     <updated>2019-05-27T10:21:13.634Z</updated>
     
@@ -377,20 +377,20 @@ This time it’s not a fun occasion because the only good new
     </summary>
     
     
-      <category term="open-source" scheme="https://blog.cryptpad.fr/tags/open-source/"/>
+      <category term="open-source" scheme="https://blog.cryptpad.org/tags/open-source/"/>
     
-      <category term="funding" scheme="https://blog.cryptpad.fr/tags/funding/"/>
+      <category term="funding" scheme="https://blog.cryptpad.org/tags/funding/"/>
     
-      <category term="roadmap" scheme="https://blog.cryptpad.fr/tags/roadmap/"/>
+      <category term="roadmap" scheme="https://blog.cryptpad.org/tags/roadmap/"/>
     
-      <category term="ngi" scheme="https://blog.cryptpad.fr/tags/ngi/"/>
+      <category term="ngi" scheme="https://blog.cryptpad.org/tags/ngi/"/>
     
   </entry>
   
   <entry>
     <title>Join the team</title>
-    <link href="https://blog.cryptpad.fr/2019/03/18/Join-the-team/"/>
-    <id>https://blog.cryptpad.fr/2019/03/18/Join-the-team/</id>
+    <link href="https://blog.cryptpad.org/2019/03/18/Join-the-team/"/>
+    <id>https://blog.cryptpad.org/2019/03/18/Join-the-team/</id>
     <published>2019-03-18T12:01:21.000Z</published>
     <updated>2019-03-18T19:46:25.478Z</updated>
     
@@ -405,22 +405,22 @@ CryptPad has largely been funded by the &lt;a hr
     </summary>
     
     
-      <category term="open-source" scheme="https://blog.cryptpad.fr/tags/open-source/"/>
+      <category term="open-source" scheme="https://blog.cryptpad.org/tags/open-source/"/>
     
-      <category term="funding" scheme="https://blog.cryptpad.fr/tags/funding/"/>
+      <category term="funding" scheme="https://blog.cryptpad.org/tags/funding/"/>
     
-      <category term="roadmap" scheme="https://blog.cryptpad.fr/tags/roadmap/"/>
+      <category term="roadmap" scheme="https://blog.cryptpad.org/tags/roadmap/"/>
     
-      <category term="privacy" scheme="https://blog.cryptpad.fr/tags/privacy/"/>
+      <category term="privacy" scheme="https://blog.cryptpad.org/tags/privacy/"/>
     
-      <category term="research" scheme="https://blog.cryptpad.fr/tags/research/"/>
+      <category term="research" scheme="https://blog.cryptpad.org/tags/research/"/>
     
   </entry>
   
   <entry>
     <title>CryptPad funding status March 2019 - Thanks to our 100 backers!</title>
-    <link href="https://blog.cryptpad.fr/2019/03/11/CryptPad-funding-status-March-2019/"/>
-    <id>https://blog.cryptpad.fr/2019/03/11/CryptPad-funding-status-March-2019/</id>
+    <link href="https://blog.cryptpad.org/2019/03/11/CryptPad-funding-status-March-2019/"/>
+    <id>https://blog.cryptpad.org/2019/03/11/CryptPad-funding-status-March-2019/</id>
     <published>2019-03-11T14:30:00.000Z</published>
     <updated>2019-03-18T20:03:53.451Z</updated>
     
@@ -436,18 +436,18 @@ We &lt;a href=&quot;/2019/02/2
     </summary>
     
     
-      <category term="funding" scheme="https://blog.cryptpad.fr/tags/funding/"/>
+      <category term="funding" scheme="https://blog.cryptpad.org/tags/funding/"/>
     
-      <category term="open collective" scheme="https://blog.cryptpad.fr/tags/open-collective/"/>
+      <category term="open collective" scheme="https://blog.cryptpad.org/tags/open-collective/"/>
     
-      <category term="donate" scheme="https://blog.cryptpad.fr/tags/donate/"/>
+      <category term="donate" scheme="https://blog.cryptpad.org/tags/donate/"/>
     
   </entry>
   
   <entry>
     <title>Looking for translators</title>
-    <link href="https://blog.cryptpad.fr/2019/03/11/Looking-for-translators/"/>
-    <id>https://blog.cryptpad.fr/2019/03/11/Looking-for-translators/</id>
+    <link href="https://blog.cryptpad.org/2019/03/11/Looking-for-translators/"/>
+    <id>https://blog.cryptpad.org/2019/03/11/Looking-for-translators/</id>
     <published>2019-03-11T05:42:50.000Z</published>
     <updated>2019-05-27T10:12:01.064Z</updated>
     
@@ -462,16 +462,16 @@ We get a lot of attention for the tec
     </summary>
     
     
-      <category term="open-source" scheme="https://blog.cryptpad.fr/tags/open-source/"/>
+      <category term="open-source" scheme="https://blog.cryptpad.org/tags/open-source/"/>
     
-      <category term="quality" scheme="https://blog.cryptpad.fr/tags/quality/"/>
+      <category term="quality" scheme="https://blog.cryptpad.org/tags/quality/"/>
     
   </entry>
   
   <entry>
     <title>Heading to Barcelona</title>
-    <link href="https://blog.cryptpad.fr/2019/02/22/Heading-to-Barcelona/"/>
-    <id>https://blog.cryptpad.fr/2019/02/22/Heading-to-Barcelona/</id>
+    <link href="https://blog.cryptpad.org/2019/02/22/Heading-to-Barcelona/"/>
+    <id>https://blog.cryptpad.org/2019/02/22/Heading-to-Barcelona/</id>
     <published>2019-02-22T05:38:09.000Z</published>
     <updated>2019-02-22T13:04:29.857Z</updated>
     
@@ -485,16 +485,16 @@ We get a lot of attention for the tec
     </summary>
     
     
-      <category term="award" scheme="https://blog.cryptpad.fr/tags/award/"/>
+      <category term="award" scheme="https://blog.cryptpad.org/tags/award/"/>
     
-      <category term="ngi" scheme="https://blog.cryptpad.fr/tags/ngi/"/>
+      <category term="ngi" scheme="https://blog.cryptpad.org/tags/ngi/"/>
     
   </entry>
   
   <entry>
     <title>CryptPad funding status November 2018</title>
-    <link href="https://blog.cryptpad.fr/2018/12/09/CryptPad-funding-status-November-2018/"/>
-    <id>https://blog.cryptpad.fr/2018/12/09/CryptPad-funding-status-November-2018/</id>
+    <link href="https://blog.cryptpad.org/2018/12/09/CryptPad-funding-status-November-2018/"/>
+    <id>https://blog.cryptpad.org/2018/12/09/CryptPad-funding-status-November-2018/</id>
     <published>2018-12-09T14:30:00.000Z</published>
     <updated>2018-12-10T16:37:20.663Z</updated>
     
@@ -509,11 +509,11 @@ We get a lot of attention for the tec
     </summary>
     
     
-      <category term="funding" scheme="https://blog.cryptpad.fr/tags/funding/"/>
+      <category term="funding" scheme="https://blog.cryptpad.org/tags/funding/"/>
     
-      <category term="open collective" scheme="https://blog.cryptpad.fr/tags/open-collective/"/>
+      <category term="open collective" scheme="https://blog.cryptpad.org/tags/open-collective/"/>
     
-      <category term="donate" scheme="https://blog.cryptpad.fr/tags/donate/"/>
+      <category term="donate" scheme="https://blog.cryptpad.org/tags/donate/"/>
     
   </entry>
   
