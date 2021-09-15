@@ -6,7 +6,7 @@
   <link href="//atom.xml" rel="self"/>
   
   <link href="https://blog.cryptpad.org/"/>
-  <updated>2021-08-26T13:03:12.162Z</updated>
+  <updated>2021-09-15T03:50:51.396Z</updated>
   <id>https://blog.cryptpad.org/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Relocating our blog</title>
+    <link href="https://blog.cryptpad.org/2021/09/15/Relocating-our-blog/"/>
+    <id>https://blog.cryptpad.org/2021/09/15/Relocating-our-blog/</id>
+    <published>2021-09-15T03:02:06.000Z</published>
+    <updated>2021-09-15T03:50:51.396Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;This is just a quick announcement to say that we’ve moved our blog from &lt;strong&gt;blog.cryptpad.fr&lt;/strong&gt; to &lt;strong&gt;blog.cryptpad.org&lt;/s
+      
+    
+    </summary>
+    
+    
+      <category term="open-source" scheme="https://blog.cryptpad.org/tags/open-source/"/>
+    
+      <category term="roadmap" scheme="https://blog.cryptpad.org/tags/roadmap/"/>
+    
+      <category term="infrastructure" scheme="https://blog.cryptpad.org/tags/infrastructure/"/>
+    
+  </entry>
   
   <entry>
     <title>August 2021 status: Forms hackathon and a new social media account</title>
@@ -87,9 +112,9 @@
     
       <category term="status update" scheme="https://blog.cryptpad.org/tags/status-update/"/>
     
-      <category term="administration" scheme="https://blog.cryptpad.org/tags/administration/"/>
-    
       <category term="forms" scheme="https://blog.cryptpad.org/tags/forms/"/>
+    
+      <category term="administration" scheme="https://blog.cryptpad.org/tags/administration/"/>
     
   </entry>
   
@@ -112,9 +137,9 @@
     
       <category term="status update" scheme="https://blog.cryptpad.org/tags/status-update/"/>
     
-      <category term="communities" scheme="https://blog.cryptpad.org/tags/communities/"/>
-    
       <category term="forms" scheme="https://blog.cryptpad.org/tags/forms/"/>
+    
+      <category term="communities" scheme="https://blog.cryptpad.org/tags/communities/"/>
     
       <category term="documentation" scheme="https://blog.cryptpad.org/tags/documentation/"/>
     
@@ -154,7 +179,7 @@
     <link href="https://blog.cryptpad.org/2021/03/29/status-march-2021/"/>
     <id>https://blog.cryptpad.org/2021/03/29/status-march-2021/</id>
     <published>2021-03-29T06:28:46.000Z</published>
-    <updated>2021-03-29T11:10:31.392Z</updated>
+    <updated>2021-09-15T03:03:42.722Z</updated>
     
     <summary type="html">
     
@@ -168,7 +193,13 @@
     </summary>
     
     
-      <category term="status update, talk, spreadsheet, roadmap" scheme="https://blog.cryptpad.org/tags/status-update-talk-spreadsheet-roadmap/"/>
+      <category term="talk" scheme="https://blog.cryptpad.org/tags/talk/"/>
+    
+      <category term="roadmap" scheme="https://blog.cryptpad.org/tags/roadmap/"/>
+    
+      <category term="status update" scheme="https://blog.cryptpad.org/tags/status-update/"/>
+    
+      <category term="spreadsheet" scheme="https://blog.cryptpad.org/tags/spreadsheet/"/>
     
   </entry>
   
@@ -488,32 +519,6 @@ We get a lot of attention for the tec
       <category term="award" scheme="https://blog.cryptpad.org/tags/award/"/>
     
       <category term="ngi" scheme="https://blog.cryptpad.org/tags/ngi/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CryptPad funding status November 2018</title>
-    <link href="https://blog.cryptpad.org/2018/12/09/CryptPad-funding-status-November-2018/"/>
-    <id>https://blog.cryptpad.org/2018/12/09/CryptPad-funding-status-November-2018/</id>
-    <published>2018-12-09T14:30:00.000Z</published>
-    <updated>2018-12-10T16:37:20.663Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;img src=&quot;/images/cryptpad-funding-blog-cover-generic.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;I’ve now let a few months pass since the last August status. I’
-      
-    
-    </summary>
-    
-    
-      <category term="funding" scheme="https://blog.cryptpad.org/tags/funding/"/>
-    
-      <category term="open collective" scheme="https://blog.cryptpad.org/tags/open-collective/"/>
-    
-      <category term="donate" scheme="https://blog.cryptpad.org/tags/donate/"/>
     
   </entry>
   
