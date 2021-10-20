@@ -6,7 +6,7 @@
   <link href="//atom.xml" rel="self"/>
   
   <link href="https://blog.cryptpad.org/"/>
-  <updated>2021-09-27T10:17:31.798Z</updated>
+  <updated>2021-10-20T22:28:34.403Z</updated>
   <id>https://blog.cryptpad.org/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Announcing two new applications in early access: Document and Presentation</title>
+    <link href="https://blog.cryptpad.org/2021/10/21/Announcing-new-apps/"/>
+    <id>https://blog.cryptpad.org/2021/10/21/Announcing-new-apps/</id>
+    <published>2021-10-21T05:44:03.000Z</published>
+    <updated>2021-10-20T22:28:34.403Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Today we are beginning to roll out some major new features for CryptPad. We have integrated the two remaining &lt;a href=&quot;https://www.onlyof
+      
+    
+    </summary>
+    
+    
+      <category term="presentation" scheme="https://blog.cryptpad.org/tags/presentation/"/>
+    
+      <category term="interoperability" scheme="https://blog.cryptpad.org/tags/interoperability/"/>
+    
+      <category term="document" scheme="https://blog.cryptpad.org/tags/document/"/>
+    
+  </entry>
   
   <entry>
     <title>September 2021 status: Changing seasons</title>
@@ -497,30 +522,6 @@ We &lt;a href=&quot;/2019/02/2
       <category term="open collective" scheme="https://blog.cryptpad.org/tags/open-collective/"/>
     
       <category term="donate" scheme="https://blog.cryptpad.org/tags/donate/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Looking for translators</title>
-    <link href="https://blog.cryptpad.org/2019/03/11/Looking-for-translators/"/>
-    <id>https://blog.cryptpad.org/2019/03/11/Looking-for-translators/</id>
-    <published>2019-03-11T05:42:50.000Z</published>
-    <updated>2019-05-27T10:12:01.064Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;Our mission is to make privacy-enhancing technologies accessible to people from all over the world.
-We get a lot of attention for the tec
-      
-    
-    </summary>
-    
-    
-      <category term="open-source" scheme="https://blog.cryptpad.org/tags/open-source/"/>
-    
-      <category term="quality" scheme="https://blog.cryptpad.org/tags/quality/"/>
     
   </entry>
   
