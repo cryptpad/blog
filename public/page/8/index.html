@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>CryptPad Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="CryptPad Blog">
+<meta property="og:url" content="https://blog.cryptpad.org/page/8/index.html">
+<meta property="og:site_name" content="CryptPad Blog">
+<meta property="og:locale" content="default">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CryptPad Blog">
+  
+    <link rel="alternate" href="/atom.xml" title="CryptPad Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <!-- <div class="banner" id="banner"></div>
+  <div class="banner" id="banner-overlay"></div> -->
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <img src="/css/images/CryptPad_logo.svg" class="cp-logo" alt="CryptPad Logo">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">CryptPad Blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" href="https://cryptpad.fr">Use CryptPad.fr</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://blog.cryptpad.org"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-cryptpad-analytics-what-we-cant-know-what-we-must-know-what-we-want-to-know" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/07/07/cryptpad-analytics-what-we-cant-know-what-we-must-know-what-we-want-to-know/" class="article-date">
+  <time datetime="2017-07-07T08:11:02.000Z" itemprop="datePublished">2017-07-07</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/07/07/cryptpad-analytics-what-we-cant-know-what-we-must-know-what-we-want-to-know/">CryptPad Analytics &amp; Privacy - What we can&#39;t know, what we must know, what we want to know</a>
+    </h1>
+  
+
+
+        
+            <span class="article-author">
+                by
+                Caleb James DeLisle
+            </span>
+        
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>CryptPad is a Zero Knowledge cloud application, this means we have designed it such
+that we do not have any access to the content which is hosted on our server.
+However, there are other things which we do collect and it is important that
+privacy-minded users understand what we are collecting and why. There are four
+types of information:</p>
+<ul>
+<li>What we can’t know: This is data that CryptPad app encrypts so we will never have
+access to it</li>
+<li>What we must see but don’t collect: This is information which we don’t bother
+to store but because of how the technology works, we necessarily have access to it.</li>
+<li>What we must know: This is metadata which we cannot help but see because of the
+way the technology works</li>
+<li>What we want to know: This is information which we really want to know in order
+to make CryptPad better every day</li>
+</ul>
+<p>We want to know everything about <em>people</em>, we want to know how <em>people</em> use CryptPad,
+why <em>people</em> use CryptPad and how we can make their experience easier. However, we
+don’t want to know anything at all about <em>you</em>.</p>
+<p>This poses a challenge because we want to collect as much aggregate information as we
+can in order to make a great web service, but we don’t want to collect data that can
+be <em>linked</em> in order to tell a story about you.</p>
+<h2 id="What-we-can’t-know"><a href="#What-we-can’t-know" class="headerlink" title="What we can’t know"></a>What we can’t know</h2><p>There are a few things which the Zero Knowledge design of CryptPad does not allow
+us to know at all. These include (obviously) your password and the content of your
+pads, but less obviously, the titles of your pads, the names of the contributors and
+your username (you can even have the same username as someone else on the system, we
+won’t know). The types of your pads are also unknown to us though we could make
+educated guesses by looking at the encrypted data.</p>
+<p><em>It is our promise to you that we will never collect this information.</em></p>
+<h2 id="What-we-could-know-but-don’t-bother-to-collect"><a href="#What-we-could-know-but-don’t-bother-to-collect" class="headerlink" title="What we could know but don’t bother to collect"></a>What we could know but don’t bother to collect</h2><p>There are also some things which we don’t really want to know but we cannot avoid
+seeing it anyway. This includes most importantly the IP addresses of people who
+edited a specific pad. Technically we know your
+<a href="https://en.wikipedia.org/wiki/IP_address" target="_blank" rel="noopener">IP address</a> because it’s how you
+communicate with our server, but most of the actual operations are done using
+commands sent down a <a href="https://en.wikipedia.org/wiki/WebSocket" target="_blank" rel="noopener">WebSocket</a>.
+Once the WebSocket is established, we assign you a random ID and this is how
+you are referenced, what appears in our server logs looks like this:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">198.167.222.70 - - [06/Jul/2017:20:47:45 +0200] &quot;GET /pad/ HTTP/1.1&quot;</span><br><span class="line">304 0 &quot;-&quot; &quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36</span><br><span class="line">(KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36&quot; &quot;-&quot;</span><br></pre></td></tr></table></figure>
+<p>Notice there is no pad ID in there, the pad ID is not in the URL so it doesn’t go
+in the server logs by default.</p>
+<p>Compare this with EtherPad:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  IP Address                                             Pad ID</span><br><span class="line">198.167.222.70 - - [06/Jul/2017:11:54:37 -0700] &quot;GET /p/UNWnpczTkq HTTP/1.1&quot;</span><br><span class="line">200 8920 &quot;https://pad.meshwith.me/&quot; &quot;Mozilla/5.0 (Macintosh; Intel Mac OS X</span><br><span class="line">10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109</span><br><span class="line">Safari/537.36&quot;</span><br></pre></td></tr></table></figure>
+<p><em>You cannot verify that we’re not collecting this so best assume that we are.</em></p>
+<h2 id="What-we-must-know"><a href="#What-we-must-know" class="headerlink" title="What we must know"></a>What we must know</h2><p>There are some things which we need to know in order for CryptPad to function
+properly, we need to know which pads are in your drive in order to impose
+storage limits on logged-in users and to expire pads which nobody cares about.
+However, we don’t know much about who you are. Since we don’t know your username,
+to us you are identified by a public signing key, something like this:</p>
+<p><code>YIBzjPr3beuGgfHNglGfo3xq-dquxsj4Bst-ze7mL9A</code></p>
+<p>We know that <code>YIBzjPr3beuGgfHNglGfo3xq-dquxsj4Bst-ze7mL9A</code> has 392 MB of data in
+their CryptDrive including a pad of some type which has the ID
+<code>fe382219b10c0396de63d2bab7942390</code> and an uploaded which we know as
+<code>ff2fdf9bb99ecc89d29d780780de10efdac14ed15e93b235</code>. One of these pads that they
+have is actually their drive itself, but we don’t strictly know which one (again,
+we can take guesses based on the size of the patches). You can find out what your
+signing key is by looking at in your <a href="https://cryptpad.fr/settings" target="_blank" rel="noopener">settings page</a>.</p>
+<p>We also know when each pad was last accessed so that we can know to delete pads
+which are not in anybody’s CryptDrive and have not been opened in a long time.</p>
+<h3 id="Why-we-can’t-avoid-collecting-IP-addresses"><a href="#Why-we-can’t-avoid-collecting-IP-addresses" class="headerlink" title="Why we can’t avoid collecting IP addresses"></a>Why we can’t avoid collecting IP addresses</h3><p>Being able to know how many <em>different</em> people are using CryptPad is very important
+to us. One rather rude person decided to try to crash our server by creating 647,533
+pads. They didn’t put much thought into their attack because what they were doing
+was not actually creating pads, but it illustrates the problem that if we don’t
+know how many <em>different</em> people are using the server, we don’t have any idea
+whether we are popular or under attack. Worse, we don’t know what features have
+widespread support vs. which ones are only popular with a few prolific users.</p>
+<p>One obvious thought is to simply run the IP addresses through a hash function the
+way we traditionally hash passwords. However this sadly cannot work because there
+are only 4.2 billion IPv4 addresses and constructing a
+<a href="https://en.wikipedia.org/wiki/Rainbow_table" target="_blank" rel="noopener">rainbow table</a> to get back the
+original IP addresses would take only about 1 day of computer time. So in the end
+we simply log the IP addresses and don’t worry about it.</p>
+<h3 id="What-a-pad-looks-like-to-us"><a href="#What-a-pad-looks-like-to-us" class="headerlink" title="What a pad looks like to us"></a>What a pad looks like to us</h3><p>A pad is stored as a file which represents a sequence of encrypted <em>patches</em>.
+These patches change the content of the pad from nothing to whatever it becomes in
+the end. A typical message looks something like this:
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[0,&quot;69d46337f826c0ecd881be59c119a527&quot;,&quot;MSG&quot;,&quot;fe382219b10c0396de63d2bab7942390&quot;,&quot;51Q....&quot;]</span><br></pre></td></tr></table></figure></p>
+<p>It starts with a zero and then your temporary random ID, then it contains the word
+MSG and the ID of the pad which it is sent to, this format is exactly the same as
+what is sent on the wire. Finally it contains the encrypted patch which tells us
+essentially nothing except it gives us a rough idea of just how big the change was.</p>
+<p>Occasionally the client will send a <em>checkpoint</em>, this is a special patch which
+removes all of the content and then puts it all back again. To us, a checkpoint
+looks the same as anything else, it is a big ball of encrypted data, except in this
+case it is flagged as a checkpoint so the server knows it can send only part of
+the history of the pad instead of all of it. However, they do give us a good idea
+of how big the pad actually is at that time.</p>
+<h2 id="What-we-collect-because-we-want-to-know"><a href="#What-we-collect-because-we-want-to-know" class="headerlink" title="What we collect because we want to know"></a>What we collect because we want to know</h2><p>What we really want to understand is your <em>experience</em> with CryptPad and how we can
+make that experience better. So therefore we collect quite a number of data-points
+about where people click and what their browser supports. For example we collect
+the dimensions of your browser. Not because we want to know who you are but because
+we want to know that types of browsers we need to support.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">198.167.222.70 - - [06/Jul/2017:21:26:15 +0200]</span><br><span class="line">&quot;HEAD /common/feedback.html?DIMENSIONS:752x1440=1499369175085 HTTP/1.1&quot; 200 0</span><br><span class="line">&quot;https://cryptpad.fr/settings/&quot; &quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5)</span><br><span class="line">AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36&quot; &quot;-&quot;</span><br></pre></td></tr></table></figure>
+<p>You can see an exhaustive list of things that we collect by checking out the
+<a href="https://github.com/xwiki-labs/cryptpad/search?p=2&amp;q=Cryptpad.feedback&amp;type=&amp;utf8=%E2%9C%93" target="_blank" rel="noopener">feedback functionality</a> in the CryptPad source code but
+as of the time of this writing, we are collecting feedback about the following
+things (usually we just collect the fact that an event occurred, not more).</p>
+<ul>
+<li>Clicking “upgrade account”</li>
+<li>Clicking “support cryptpad”</li>
+<li>Presentation: clicking on “print slides”</li>
+<li>Registering and logging in</li>
+<li>Opening your recent pads as an anonymous user</li>
+<li>Clicking any CKEditor button such as “bold” or “italic”</li>
+<li>Displaying the drive as icons or as a list</li>
+<li>Creating and using templates</li>
+<li>Showing and hiding the userlist or CKEditor menu bar</li>
+<li>Whether your browser is missing certain important features like
+<a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Proxy" target="_blank" rel="noopener">Proxy</a>,
+<a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray" target="_blank" rel="noopener">isArray</a>
+or <a href="https://developer.mozilla.org/en/docs/Web/API/Window/localStorage" target="_blank" rel="noopener">localStorage</a></li>
+<li>Which type of pad you are using</li>
+<li>The dimensions of your browser window</li>
+<li>When you have changed your display name</li>
+<li>Whether you have migrated your CryptDrive from the legacy format</li>
+</ul>
+<p>If you are worried about what we might do with this data, you can disable
+feedback collection in your <a href="https://cryptpad.fr/settings/" target="_blank" rel="noopener">settings page</a>. But
+keep in mind that if you disable it we cannot help but know, because your IP
+address will be in the tiny minority of addresses which access the site but don’t
+send feedback messages.</p>
+<h2 id="What-we-can-learn-from-the-data"><a href="#What-we-can-learn-from-the-data" class="headerlink" title="What we can learn from the data"></a>What we can learn from the data</h2><h3 id="1-People-mostly-use-CryptPad-to-make-a-plain-old-pad"><a href="#1-People-mostly-use-CryptPad-to-make-a-plain-old-pad" class="headerlink" title="1. People mostly use CryptPad to make a plain old pad"></a>1. People mostly use CryptPad to make a plain old pad</h3><p>But the code/markdown pad and the CryptDrive are catching up.
+<img src="/images/Analytics-padtypes.png" alt="Unique IPs per pad type"></p>
+<h3 id="2-Activity-has-been-on-a-very-slow-rise-but-with-a-few-spikes"><a href="#2-Activity-has-been-on-a-very-slow-rise-but-with-a-few-spikes" class="headerlink" title="2. Activity has been on a very slow rise but with a few spikes"></a>2. Activity has been on a very slow rise but with a few spikes</h3><p>This chart shows unique IPs per day hitting CryptPad. You can things are relatively
+flat over time except for a big day in June and then some increased activity in July
+after the UI improvements were rolled out.
+<img src="/images/Analytics-uniques.png" alt="Unique IPs per day"></p>
+<h3 id="3-Browser-window-dimensions-are-all-over-the-map"><a href="#3-Browser-window-dimensions-are-all-over-the-map" class="headerlink" title="3. Browser window dimensions are all over the map"></a>3. Browser window dimensions are all over the map</h3><p>This chart shows bubbles which are bigger depending on how many different IPs
+report the same browser window dimensions. Tragically it seems that there is no
+way to predict what aspect ratio a device using CryptPad is going to have.
+<img src="/images/Analytics-browserdimensions.png" alt="Browser window dimensions"></p>
+<h3 id="4-Lots-of-pads-are-made-and-then-abandoned"><a href="#4-Lots-of-pads-are-made-and-then-abandoned" class="headerlink" title="4. Lots of pads are made and then abandoned"></a>4. Lots of pads are made and then abandoned</h3><p>The first chart shows in blue the number of pads created each day and the number
+of pads which become “abandoned” (have not been touched in 2 weeks). This says
+that perhaps pads are considered ephemeral and not to be used for the long term.
+<img src="/images/Analytics-createdabandoned.png" alt="Created vs. abandoned pads"></p>
+<p>Here we can see the evolution of pads which have been accessed within the last
+day the last week and the last month. There is slow but steady growth in the
+pads active in the past month.
+<img src="/images/Analytics-activepads.png" alt="Number of active pads"></p>
+<h3 id="5-People-use-CryptPad-for-a-while-then-leave"><a href="#5-People-use-CryptPad-for-a-while-then-leave" class="headerlink" title="5. People use CryptPad for a while, then leave"></a>5. People use CryptPad for a while, then leave</h3><p>We measured 15,000 IP addresses which came to CryptPad just to look at one pad and
+then left, but of the 13,000 who stayed longer than that we analyzed the time when
+they first arrived and the time when they made their last visit. About 630 IP
+addressses have been continually using CryptPad for all 45 days.
+<img src="/images/Analytics-peopleleave.png" alt="Number of IPs continuing to access CryptPad">
+We want to make CryptPad a useful tool for helping people get organized and make
+their projects succeed. So whenever people decide that CryptPad is not the right
+answer for them, we care about what went wrong and how we can make it better.</p>
+<h2 id="How-we-analyze-this-data"><a href="#How-we-analyze-this-data" class="headerlink" title="How we analyze this data"></a>How we analyze this data</h2><p>We do all of our analysis ourselves, and we don’t share any of this data with Google
+or other data companies. We’re thankful to
+<a href="https://www.elastic.co/products/kibana" target="_blank" rel="noopener">Kibana/ElasticSearch</a> and
+<a href="https://www.elastic.co/products/logstash" target="_blank" rel="noopener">LogStash</a> for making it possible to do
+in depth analysis on our own computers without resorting to a cloud service.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://blog.cryptpad.org/2017/07/07/cryptpad-analytics-what-we-cant-know-what-we-must-know-what-we-want-to-know/" data-id="cktsjy9vb001ycya8ob3wlg3n" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/analytics/">analytics</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/data/">data</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/privacy/">privacy</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-CryptPad-Jackalope-file-upload-pdf-and-pictures" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/06/21/CryptPad-Jackalope-file-upload-pdf-and-pictures/" class="article-date">
+  <time datetime="2017-06-21T07:18:48.000Z" itemprop="datePublished">2017-06-21</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/06/21/CryptPad-Jackalope-file-upload-pdf-and-pictures/">CryptPad Jackalope - File Upload, PDF and Pictures</a>
+    </h1>
+  
+
+
+        
+            <span class="article-author">
+                by
+                Caleb James DeLisle
+            </span>
+        
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Yesterday we released CryptPad v1.9.0 Jackalope, we have some exciting new features
+which we’ve been working on for a long time. As part of the
+<a href="https://github.com/UCF-project" target="_blank" rel="noopener">UCF project</a> we have implemented a Zero Knowledge
+<code>media-tag</code> in CryptPad for displaying and downloading encrypted files stored in
+CryptPad. Starting now, you can upload files by clicking the upload button or
+dragging them into your CryptDrive. You can also view pictures and PDF files in
+CryptPad and you can drag-and-drop pictures <strong>directly</strong> into presentations. In the
+next release we will hopefully be adding drag-and-drop pictures into the pad.</p>
+<p><img src="/images/CryptPad_drive_with_upload.png" alt="CryptDrive Upload"></p>
+<h2 id="Filenames"><a href="#Filenames" class="headerlink" title="Filenames"></a>Filenames</h2><p>We also made a significant but less visible improvement to the CryptDrive. When you
+make a new pad in CryptPad, it has a <em>title</em>, which anyone in the pad can change, and
+it has a <em>filename</em> which it how the pad is shown in your CryptDrive. Because anyone
+at any time can change the <em>title</em> of a pad, the only way to know the titles of all
+the pads in your drive is to load each and every one of them which would take a long
+time. But the <em>filename</em> is your unique way to refer to a pad, it lives only in
+<em>your</em> CryptDrive and it is the same no matter what <em>title</em> someone gives to the pad.</p>
+<p>Now the CryptDrive UI shows only one name for a pad, this name is just the <em>title</em>
+of the pad at the last time you’d accessed it <strong>unless</strong> you assign it your own
+<em>filename</em>.</p>
+<h2 id="Slide-Preview"><a href="#Slide-Preview" class="headerlink" title="Slide Preview"></a>Slide Preview</h2><p>When you’re using the CryptPad slide app to make a quick presentation, now you can
+see your presentation in the righthand pane while you type. Since presentations are
+written in Markdown, this means you get a live action preview of what your
+presentation slides are going to look like.</p>
+<p><img src="/images/CryptPad_slide_upload_and_preview.png" alt="Slide Preview and Drag &amp; Drop"></p>
+<h2 id="Try-it-now"><a href="#Try-it-now" class="headerlink" title="Try it now"></a>Try it now</h2><p>Head over to <a href="https://cryptpad.fr" target="_blank" rel="noopener">cryptpad.fr</a> and give CryptPad a try !</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://blog.cryptpad.org/2017/06/21/CryptPad-Jackalope-file-upload-pdf-and-pictures/" data-id="cktsjy9tr0004cya8lu32alnd" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/embed/">embed</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/file/">file</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/pdf/">pdf</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/upload/">upload</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-Building-mutually-beneficial-relationships" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/06/02/Building-mutually-beneficial-relationships/" class="article-date">
+  <time datetime="2017-06-02T08:22:47.000Z" itemprop="datePublished">2017-06-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/06/02/Building-mutually-beneficial-relationships/">Building mutually beneficial relationships</a>
+    </h1>
+  
+
+
+        
+            <span class="article-author">
+                by
+                Caleb James DeLisle
+            </span>
+        
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><em>People hosting instances of CryptPad should read at least the
+<a href="/2017/06/02/Building-mutually-beneficial-relationships/#Changes-in-CryptPad">Changes in CryptPad</a>
+section</em></p>
+<p><em>Thanks to Scott Alexander for some of the
+<a href="http://slatestarcodex.com/2014/07/30/meditations-on-moloch/" target="_blank" rel="noopener">ethical foundations</a>
+of this post.</em></p>
+<hr>
+<p>You ever wonder why Open Source software always seems to be slightly harder
+to use and slightly buggier and slightly less <em>polished</em> than proprietary
+competitors?</p>
+<p>How about this: Why is it that good people who want to make good things somehow
+end up making evil things for evil corporations which sell them to other good
+people who would (presumably) rather buy good things.</p>
+<h2 id="It’s-all-about-incentives"><a href="#It’s-all-about-incentives" class="headerlink" title="It’s all about incentives"></a>It’s all about incentives</h2><p>It’s hard to talk about incentives without sounding like a miserly tool, but if
+we’re going to hack ourselves out of a situation that nobody really wants to be in,
+we’re going to need to understand them pretty well.</p>
+<ul>
+<li>Why is Open Source habitually <em>90% of the way there</em> ?</li>
+<li>Why is Facebook more addictive than it is useful ?</li>
+<li>Why is it that when you get something for free, even from a well funded
+government program, it’s reliably worse than something you buy?</li>
+</ul>
+<p>It’s all about incentives.</p>
+<h3 id="In-a-restaurant-you’re-the-customer"><a href="#In-a-restaurant-you’re-the-customer" class="headerlink" title="In a restaurant, you’re the customer"></a>In a restaurant, you’re the customer</h3><p>I love going to restaurants. I have no car and few possessions so restaurants are
+the way I spend my income. Not only do I love food but I love the relationship
+which I have with restaurateurs. When I walk into a restaurant, I want to be fed
+delicious food and they want to be paid, not only that, they want me to be happy
+so I will return many times and bring my friends. I want them to be happy so they
+will give me bigger portions and maybe a little dessert on the house. Our
+incentives are aligned perfectly. We are practically a team.</p>
+<h3 id="In-a-soup-kitchen-you’re-just-a-user"><a href="#In-a-soup-kitchen-you’re-just-a-user" class="headerlink" title="In a soup kitchen, you’re just a user"></a>In a soup kitchen, you’re just a user</h3><p>It is hard to deny the importance of soup kitchens to the fabric of society.
+Part of what makes us able to claim to be civilized is the fact that we don’t let
+people simply die if they’re down on their luck. Soup kitchens, however, are not
+restaurants. When you walk into a soup kitchen, you are generally greeted kindly
+but there is a subtle distinction from a restaurant, at a restaurant you’re the
+customer and at a soup kitchen you’re just a <em>user</em>. Many soup kitchens are
+organized around religious groups and  evangelizing their belief is a significant
+part of their motivation, but even secular organizations are motivated by some
+sort of a higher calling.</p>
+<h3 id="Open-Source-is-a-soup-kitchen"><a href="#Open-Source-is-a-soup-kitchen" class="headerlink" title="Open Source is a soup kitchen"></a>Open Source is a soup kitchen</h3><p>I’ve been developing Open Source both professionally and personally for 7 years
+and I’m going to tell you something that many Open Source developers won’t admit.
+Open Source software is not made for you. Sometimes Open Source developers are
+motivated by the Free Software ideology and they imagine their code as
+transforming the world, sometimes they just want to solve some problem for
+themselves and they give away the resulting code. Open Source software is almost
+never developed for the simple purpose of making another person’s life a little
+easier.</p>
+<h2 id="If-you-aren’t-the-customer-you’re-the-product"><a href="#If-you-aren’t-the-customer-you’re-the-product" class="headerlink" title="If you aren’t the customer you’re the product"></a>If you aren’t the customer you’re the product</h2><p>This aphorism has become popular with the rise of ad-tech and social network
+websites. The phrase invokes an image of free services coming like free grain
+because you are, in fact, the pig on his way to slaughter. In some way this is
+true, Silicon Valley business models are becoming disturbingly like human
+farming.</p>
+<p>However, the phrase also invokes an image of an evil entrepreneur plotting to
+enslave humanity by creating a slick social network. If 1 in 1000 companies is
+successful then logic implies there must be thousands of evil entrepreneurs
+running around everywhere. If this is true then where are all of the failed
+evil plotters? I’ve never met an entrepreneur who was anything less than an
+aspiring saint.</p>
+<p>I think the real reason why social networks become human farms is because people
+don’t want to pay for development of web services and stuck between a successful
+human farm and a failing soup kitchen, entrepreneurs begrudgingly choose to farm.</p>
+<h2 id="Breaking-out"><a href="#Breaking-out" class="headerlink" title="Breaking out"></a>Breaking out</h2><p>If we’re ever going to stop living in a world of farms and soup kitchens, we’re
+going to need to get serious about incentives. Part of my intention in starting
+the CryptPad project is to build something that is not a farm nor a soup kitchen.
+I want to have a mutually beneficial relationship with every one of CryptPad’s
+users, including you. I don’t want to be a charity worker beholden to an NGO or
+a post office clerk drawing a paycheck from the state. I want you to be my boss,
+I want to obsess about making your life better, I want fair exchange of value
+and aligned incentives.</p>
+<h2 id="Changes-in-CryptPad"><a href="#Changes-in-CryptPad" class="headerlink" title="Changes in CryptPad"></a>Changes in CryptPad</h2><p><a href="/2017/05/23/CryptPad-use-it-love-it-support-it/">As you may already know</a>,
+cryptpad.fr now limits your data storage and allows you to buy an account which
+will raise that limit. The code for limits and accounts is also in the CryptPad
+codebase and turned on by default. If you are installing CryptPad, you have
+three choices.</p>
+<ol>
+<li>Leave it exactly as it is: People will be limited to 50MB of storage and they
+will see a <em>Support CryptPad</em> button. In the development time this donated money
+buys, we will pay special consideration to the needs of CryptPad admins like you.</li>
+<li>Share the revenue: If you specify some configuration parameters and send us
+an <a href="mailto:sales@cryptpad.fr" target="_blank" rel="noopener">email</a>, the donation button will become an
+<em>Upgrade Account</em> button, allowing them to take a plan with additional storage
+quota. When people upgrade their account on your server, we will credit you 50%
+of the revenue earned. This helps us pay the cost of development and helps you
+pay the cost of hosting.</li>
+<li>Disable the donate button: If you do this, we hope you will help CryptPad in
+some other way such as by taking an on-premises support contract.</li>
+</ol>
+<p>If you run a public CryptPad instance, please don’t increase the 50MB per user
+storage limit. This limit is what makes people subscribe and what pays for
+CryptPad development. Running a CryptPad instance which offers a “better deal”
+is effectively using the project against itself.</p>
+<p>Finally, new versions of CryptPad always check for new or expired accounts from
+our account server. We have added a parameter called <em>adminEmail</em> which will be
+sent along with the domain and version of CryptPad you’re running. This way we
+can notify you if we’re aware of any a serious problems with your CryptPad
+instance. We take your privacy seriously and will never sell your email or send
+you marketing spam. If, however, you want to keep your CryptPad instance
+completely  hidden from us, you can set this parameter to <strong>false</strong> and it will
+never query the account server.</p>
+<h2 id="Coming-next"><a href="#Coming-next" class="headerlink" title="Coming next"></a>Coming next</h2><p>Our objective is to help you collaborate, stay organized and get things done
+faster and easier. We want to provide maximum value to you and we want you to
+provide value to us so that we can continue doing it. As was said in the
+previous post, the big issues which we are planning to tackle soon are:</p>
+<ul>
+<li>File upload for PDF and image embedding</li>
+<li>Text coloring based on the authors of the document</li>
+<li>Workgroups for team collaboration</li>
+<li>Zero Knowledge spreadsheets</li>
+</ul>
+<p>As always, we will be continuing to put great effort into understanding your
+problems, how you go about solving them, and how we can make little changes to
+make CryptPad fit your needs better.</p>
+<p>Caleb</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://blog.cryptpad.org/2017/06/02/Building-mutually-beneficial-relationships/" data-id="cktsjy9tg0000cya880y6t29b" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cloud/">cloud</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ethics/">ethics</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/open-source/">open-source</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-CryptPad-use-it-love-it-support-it" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/05/23/CryptPad-use-it-love-it-support-it/" class="article-date">
+  <time datetime="2017-05-23T13:10:35.000Z" itemprop="datePublished">2017-05-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/05/23/CryptPad-use-it-love-it-support-it/">CryptPad - use it, love ❤️ it, support it</a>
+    </h1>
+  
+
+
+        
+            <span class="article-author">
+                by
+                Caleb James DeLisle
+            </span>
+        
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>It’s been another release day in our little team. Today we released
+<a href="https://github.com/xwiki-labs/cryptpad/releases/tag/1.7.0" target="_blank" rel="noopener">CryptPad v1.7.0 (Hodag)</a>. The biggest new feature in this version is that when you create a <em>/code/</em> pad, the default highlighting is in markdown syntax and there it is rendered in realtime while you type. Try it out by making a pad at <a href="https://cryptpad.fr/code" target="_blank" rel="noopener">cryptpad.fr/code</a>.</p>
+<p>In this release we also completed something much more important and central to the future of CryptPad. We finished our first version of the payment server which allows you to take a subscription and help support the work that we do.</p>
+<p>Starting with this release we are now imposing a 50MB storage limit for our anonymous users and a 3 month expiration of pads which are not stored by a registered user. </p>
+<p>Instant collaboration is the vision of CryptPad and we are committed to continuing to provide that and even providing 50MB of persistent storage for anyone who is willing to sign up.</p>
+<p>For people who are ready to take the next step, we are now providing subscriptions which will improve how you organize your information while helping CryptPad to grow and improve.</p>
+<h2 id="Plans"><a href="#Plans" class="headerlink" title="Plans"></a>Plans</h2><ol>
+<li>Personal (5GB storage, 5€/month ex. VAT)<ul>
+<li>This is best for an individual using lots of pads for collaboration and note taking. For the price of a sandwich you can stay organized on all of your devices while also keeping your privacy private.</li>
+</ul>
+</li>
+<li>Standard (20GB storage, 10€/month ex. VAT)<ul>
+<li>For the price of lunch, you can have 20GB of storage, enough for not only pads but also for the soon to launch File Upload which will allow Zero Knowledge storage of files such as pictures and PDF documents. With the Standard plan you can add one more friend for free.</li>
+</ul>
+</li>
+<li>Team (50GB storage, 15€/month ex. VAT)<ul>
+<li>If you’re ready to extend your usage of CryptPad to an entire team, we are ready to help you succeed. With a Team plan you get 50GB of data storage in CryptPad, plenty for files and pads. You also get to add <strong>five</strong> people to your plan and you get professional support available in English and French.</li>
+</ul>
+</li>
+</ol>
+<p>Our goal is to make the best collaboration tool available while still being unable to sell or leak your content. Help us succeed, helping you stay organized and help show the world that Zero Knowledge Cloud is possible.</p>
+<h2 id="For-Admins"><a href="#For-Admins" class="headerlink" title="For Admins"></a>For Admins</h2><p>If you’re hosting your own instance of CryptPad, there are a few things you’ll need to do when you upgrade to Hodag. The limits code is still somewhat of a mess and while we get it tied down, you’ll need to do a bit of work to disable it.</p>
+<p>First there is a serverside per-user storage limit defined in <code>config.js</code> You’ll want to set this to a big number like so:</p>
+<pre><code>defaultStorageLimit: Number.MAX_SAFE_INTEGER
+</code></pre><p>Then there is <code>customize/application_config.js</code>. If you’re not familiar with <code>/customize/</code>, you can create this directory and then copy <code>application_config.js</code> over from the <code>/customize.dist/</code> directory so it will not be overwritten. The server will try looking in <code>/customize/</code> first.</p>
+<p>Inside of <code>application_config.js</code> you’ll need to update the <code>enablePinLimit</code> line like so:</p>
+<pre><code>enablePinLimit = false;
+</code></pre><p>If you’re using your own CryptPad installation in a business context, please consider contacting <a href="mailto:sales@cryptpad.fr" target="_blank" rel="noopener">sales@cryptpad.fr</a> for an on-premises support contract. You’ll get help with upgrades and early information about security issues.</p>
+<h2 id="What’s-Next"><a href="#What’s-Next" class="headerlink" title="What’s Next"></a>What’s Next</h2><p>In the coming months, we’re hoping to roll out text coloring based on the authors of the document as well as file upload for PDF and image embedding. Eventually we plan to add Zero Knowledge spreadsheets and workgroups for team collaboration.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://blog.cryptpad.org/2017/05/23/CryptPad-use-it-love-it-support-it/" data-id="cktsjy9ue000ocya8t6tqpisa" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/donate/">donate</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/funding/">funding</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-You-gotta-log-in" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/05/17/You-gotta-log-in/" class="article-date">
+  <time datetime="2017-05-17T06:52:52.000Z" itemprop="datePublished">2017-05-17</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/05/17/You-gotta-log-in/">You gotta log in</a>
+    </h1>
+  
+
+
+        
+            <span class="article-author">
+                by
+                Caleb James DeLisle
+            </span>
+        
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>It’s been two and a half years since the <a href="https://github.com/xwiki-labs/cryptpad/commit/1508c7ba71f5de5e51f061fbef45bc1f18493832" target="_blank" rel="noopener">first commit to CryptPad</a>,
+we no longer have the hideous white and green color-scheme and we’re on our third URL format.
+More importantly we now have a CryptDrive with folders instead of just remembering a few recent
+pads in the browser’s local storage.</p>
+<p>The success of CryptPad as a tool for organizing and collaboration makes us glad to be working on
+the technology, but our desire to avoid collecting metadata has lead to an unsustainable situation.</p>
+<blockquote>
+<p><em>We can’t store data we don’t understand for people we don’t know</em></p>
+</blockquote>
+<p>There has been a proliferation of pads which are not accessed after a while and we don’t know who
+made them or even what type of pad they are. We know that a great many of them are “test pads”,
+if for no other reason, because we made a lot of them. Eventually we will be forced to delete old
+data but we don’t want to delete anything important.</p>
+<p>Starting a few weeks ago we implemented a system called pinning. When you are logged in, your
+browser tells CryptPad all of the things in your drive. We don’t know what’s in them but we know
+they’re important so we shouldn’t delete them. Right now you can log in to CryptPad, go to your
+<a href="https://cryptpad.fr/settings/" target="_blank" rel="noopener">Settings Page</a> and click the <strong>Usage</strong> button to see how much data
+you are pinning.</p>
+<p>We recognize many users of CryptPad would like to use it anonymously and we will continue to support
+anonymous pads, but soon they will begin to be removed from storage after 3 months of inactivity.
+We’ve also simplified the anonymous CryptDrive because we want to send the message loud and clear
+that <em>pads in the anonymous drive are not safe from deletion</em>.</p>
+<p>So please register and log in, you’ll get 50MB of pinning quota with the full features of CryptDrive
+and you can be sure that none of your pads will ever be removed from the server.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://blog.cryptpad.org/2017/05/17/You-gotta-log-in/" data-id="cktsjy9v1001kcya8pbnplkna" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/login/">login</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/storage/">storage</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+
+
+  <nav id="page-nav">
+    <a class="extend prev" rel="prev" href="/page/7/">Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><span class="page-number current">8</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/9/">Next</a>
+  </nav>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/FOSDEM/" style="font-size: 10px;">FOSDEM</a> <a href="/tags/administration/" style="font-size: 11.67px;">administration</a> <a href="/tags/analytics/" style="font-size: 10px;">analytics</a> <a href="/tags/appstore/" style="font-size: 10px;">appstore</a> <a href="/tags/award/" style="font-size: 11.67px;">award</a> <a href="/tags/calendar/" style="font-size: 10px;">calendar</a> <a href="/tags/chain-of-trust/" style="font-size: 10px;">chain of trust</a> <a href="/tags/cloud/" style="font-size: 13.33px;">cloud</a> <a href="/tags/communities/" style="font-size: 10px;">communities</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/data/" style="font-size: 11.67px;">data</a> <a href="/tags/document/" style="font-size: 10px;">document</a> <a href="/tags/documentation/" style="font-size: 10px;">documentation</a> <a href="/tags/donate/" style="font-size: 16.67px;">donate</a> <a href="/tags/embed/" style="font-size: 10px;">embed</a> <a href="/tags/ethics/" style="font-size: 10px;">ethics</a> <a href="/tags/extensibility/" style="font-size: 10px;">extensibility</a> <a href="/tags/file/" style="font-size: 10px;">file</a> <a href="/tags/forms/" style="font-size: 15px;">forms</a> <a href="/tags/funding/" style="font-size: 20px;">funding</a> <a href="/tags/iframe/" style="font-size: 10px;">iframe</a> <a href="/tags/infrastructure/" style="font-size: 10px;">infrastructure</a> <a href="/tags/interoperability/" style="font-size: 13.33px;">interoperability</a> <a href="/tags/login/" style="font-size: 10px;">login</a> <a href="/tags/media-tag/" style="font-size: 10px;">media-tag</a> <a href="/tags/ngi/" style="font-size: 16.67px;">ngi</a> <a href="/tags/open-collective/" style="font-size: 15px;">open collective</a> <a href="/tags/open-source/" style="font-size: 15px;">open-source</a> <a href="/tags/pdf/" style="font-size: 10px;">pdf</a> <a href="/tags/performance/" style="font-size: 11.67px;">performance</a> <a href="/tags/presentation/" style="font-size: 13.33px;">presentation</a> <a href="/tags/press/" style="font-size: 10px;">press</a> <a href="/tags/privacy/" style="font-size: 13.33px;">privacy</a> <a href="/tags/quality/" style="font-size: 11.67px;">quality</a> <a href="/tags/release/" style="font-size: 11.67px;">release</a> <a href="/tags/research/" style="font-size: 15px;">research</a> <a href="/tags/roadmap/" style="font-size: 18.33px;">roadmap</a> <a href="/tags/security/" style="font-size: 15px;">security</a> <a href="/tags/shared-worker/" style="font-size: 10px;">shared worker</a> <a href="/tags/signing/" style="font-size: 10px;">signing</a> <a href="/tags/social-media/" style="font-size: 10px;">social media</a> <a href="/tags/spreadsheet/" style="font-size: 10px;">spreadsheet</a> <a href="/tags/status-update/" style="font-size: 18.33px;">status update</a> <a href="/tags/storage/" style="font-size: 13.33px;">storage</a> <a href="/tags/subresource-integrity/" style="font-size: 10px;">subresource integrity</a> <a href="/tags/talk/" style="font-size: 11.67px;">talk</a> <a href="/tags/upload/" style="font-size: 10px;">upload</a> <a href="/tags/web-worker/" style="font-size: 10px;">web worker</a> <a href="/tags/xss/" style="font-size: 10px;">xss</a> <a href="/tags/zero-knowledge/" style="font-size: 13.33px;">zero knowledge</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">October 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/09/">September 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">August 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/06/">June 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/05/">May 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">February 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/10/27/status-2021-10/">October 2021 status: A pitch and a farewell </a>
+          </li>
+        
+          <li>
+            <a href="/2021/10/21/Announcing-new-apps/">Announcing two new applications in early access: Document and Presentation</a>
+          </li>
+        
+          <li>
+            <a href="/2021/09/27/status-2021-09/">September 2021 status: Changing seasons</a>
+          </li>
+        
+          <li>
+            <a href="/2021/09/15/Relocating-our-blog/">Relocating our blog</a>
+          </li>
+        
+          <li>
+            <a href="/2021/08/26/status-2021-08/">August 2021 status: Forms hackathon and a new social media account</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 XWiki Labs<br>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="https://cryptpad.fr" class="mobile-nav-link">Use CryptPad.fr</a>
+  
+</nav>
+    
+
+<script src="/js/jquery.min.js"></script>
+
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

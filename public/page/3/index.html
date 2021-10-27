@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>CryptPad Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="CryptPad Blog">
+<meta property="og:url" content="https://blog.cryptpad.org/page/3/index.html">
+<meta property="og:site_name" content="CryptPad Blog">
+<meta property="og:locale" content="default">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CryptPad Blog">
+  
+    <link rel="alternate" href="/atom.xml" title="CryptPad Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <!-- <div class="banner" id="banner"></div>
+  <div class="banner" id="banner-overlay"></div> -->
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <img src="/css/images/CryptPad_logo.svg" class="cp-logo" alt="CryptPad Logo">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">CryptPad Blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" href="https://cryptpad.fr">Use CryptPad.fr</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://blog.cryptpad.org"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-status-feb-2021" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2021/02/24/status-feb-2021/" class="article-date">
+  <time datetime="2021-02-24T06:27:52.000Z" itemprop="datePublished">2021-02-24</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/02/24/status-feb-2021/">Feb. 2021 status: Dark mode and organisation plans</a>
+    </h1>
+  
+
+
+        
+            <span class="article-author">
+                by
+                David Benqué
+            </span>
+        
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>This is a new format of post we are starting on the blog: publishing the monthly updates that were until now only circulated in the internal XWiki newsletter. This will be an opportunity to regularly catch up on new features, research projects, funding/budget updates, and any other relevant news.</p>
+<h2 id="FOSDEM-presentations"><a href="#FOSDEM-presentations" class="headerlink" title="FOSDEM presentations"></a>FOSDEM presentations</h2><p>Aaron and David presented different aspects of CryptPad at FOSDEM 2021. Please see the <a href="https://blog.cryptpad.fr/2021/02/03/CryptPad-at-FOSDEM-2021/" target="_blank" rel="noopener">updated blog post</a> for videos of both presentations.</p>
+<h2 id="Dark-mode"><a href="#Dark-mode" class="headerlink" title="Dark mode"></a>Dark mode</h2><p>This month we followed up on the rebranding started with version 4.0 by thoroughly refactoring how styles, especially colors, are applied across CryptPad. This allows for better maintainance and easier customisation. The first custom theme is the long requested <strong>dark mode</strong>.</p>
+<p>CryptPad will now follow the browser or operating system preference by default, and switch to a dark theme accordingly. The theme can also be set manually in Settings &gt; Appearance.</p>
+<p><img src="/images/dark-drive.png" alt="The CryptDrive in dark mode"></p>
+<p>Following the introduction of the dark theme in our 4.2 release, we noticed a few problems and got to work on correcting them. The most noticeable issue was the use of a dark background for rich text documents. Wanting to offer a “true” dark mode, we had intially switched the editor itself to a dark background, and made the default text color contrast with that automatically. It soon became apparent that this was a problematic choice in rich text documents where users are able to set colors for text. It may lead to text being un-readable depending on the theme used. One particularly painful example was a document about making web content accessible written in black text on a dark background. We reverted our decision and opted for a light background in the editor even when the rest of the interface is dark. There is a reason mainstream editors such as Microsoft Word do it this way. You can expect more polish on the dark theme in the upcoming 4.3 release.</p>
+<p><img src="/images/dark-shame.png" alt="Web accessibility guide shown with black text on a dark background"></p>
+<p><em>The web content accessibility guide that prompted us to revert our decision on the dark theme rich text editor. <a href="https://cryptpad.fr/pad/#/2/pad/view/nOPkDL0nzbEi1DXnpEED0nqORBPF6pqS3SOUrKBqV9o/embed/" target="_blank" rel="noopener">The guide</a> is by AccessiBloc.</em></p>
+<h2 id="Organization-plans"><a href="#Organization-plans" class="headerlink" title="Organization plans"></a>Organization plans</h2><p>On cryptpad.fr, another long-awaited feature were the <strong>Organization plans</strong>. We have been communicating this pricing on request for the last few months but the plans are now <a href="https://cryptpad.fr/accounts/#org" target="_blank" rel="noopener">live in the cryptpad.fr interface</a>. These bigger plans have the additional option to download a personalised signed Data Processing Agreement (DPA) for organsations that need to demonstrate they operate according to the GDPR.</p>
+<p>These plans come with 1 business day support and increased storage shared between a number of user accounts, priced as follows: </p>
+<ul>
+<li><strong>25 Users</strong> with 100GB of storage for 500€ a year (ex. VAT)</li>
+<li><strong>100 Users</strong> with 150GB of storage for 1000€ a year (ex. VAT)</li>
+</ul>
+<p>An additional On Premises option is available for organizations that require their own CryptPad instance, with installation and maintainance support by the development team. </p>
+<p>We were happy to welcome the first couple of subscribers on these plans and hope that they will contribute to making CryptPad financially sustainable in the longer term.</p>
+<p><img src="/images/dark-accounts.png" alt="The new organization plans on cryptpad.fr in dark mode."></p>
+<h2 id="A-popular-toolkit"><a href="#A-popular-toolkit" class="headerlink" title="A popular toolkit"></a>A popular toolkit</h2><p>We had an unexpected spike in traffic early in the month after the following tweet linked to a toolkit made on cryptpad.fr.</p>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Here’s an updated toolkit by people on the ground in India if you want to help. (They removed their previous document as it was outdated.)<a href="https://twitter.com/hashtag/StandWithFarmers" target="_blank" rel="noopener">#StandWithFarmers</a> <a href="https://twitter.com/hashtag/FarmersProtest" target="_blank" rel="noopener">#FarmersProtest</a> <a href="https://cryptpad.fr/pad/#/2/pad/view/ehTz+drfKPwi4fP5dn0mivwVCKhwNe7OD1YHDiBUj0Y/" target="_blank" rel="noopener">https://cryptpad.fr/pad/#/2/pad/vi…</a></p>&mdash; Greta Thunberg (@GretaThunberg) <a href="https://twitter.com/GretaThunberg/status/1357054451769606147" target="_blank" rel="noopener">February 3, 2021</a></blockquote>
+
+<p>This brought a lot of traffic to the service, as illustrated by the spike below. While this was a surprise, our infrastructure was prepared for it and held up very well.</p>
+<p><img src="/images/greta-stonks.png" alt="graph showing a big spike in visits to CryptPad.fr"></p>
+<h2 id="Delivered-NGI-Trust-project-Secure-Mobile-Collaboration"><a href="#Delivered-NGI-Trust-project-Secure-Mobile-Collaboration" class="headerlink" title="Delivered: NGI Trust project: Secure Mobile Collaboration"></a>Delivered: NGI Trust project: Secure Mobile Collaboration</h2><p>We have wrapped up this exploratory project about using CryptPad on mobile devices. There will be dedicated posts about this project in the near future. This project allowed us to scope out, in depth, the options available to make CryptPad work as an “app”. As a summary of our findings, here is what we plan to include in the new Frequently Asked Questions section of our documentation that will be part of the next release: </p>
+<hr>
+<h3 id="FAQ-Are-you-planning-a-mobile-app"><a href="#FAQ-Are-you-planning-a-mobile-app" class="headerlink" title="FAQ: Are you planning a mobile app?"></a>FAQ: Are you planning a mobile app?</h3><p>We are not planning a dedicated mobile application for the following reasons:</p>
+<ul>
+<li>It would dramatically increase the amount of code that has to be developed and maintained, effectively creating other “versions” of CryptPad for iOS and Android.</li>
+<li>CryptPad is open source and can be hosted by anyone who wants to offer the service. Therefore, users of a mobile application would have to specify which CryptPad instance they want to connect to, which would be confusing. To complicate things further, each instance may be running a different version of the software, depending on whether or not the latest updates were applied by the administrators.  </li>
+</ul>
+<p>To address these problems, the development team is working on making CryptPad a “Progressive Web App”. This means that it can be used on mobile through the web browser, behaving like an application while being the same software that runs on desktop browsers. This has the benefit of turning every CryptPad instance into a web app provider, rather than putting the burden of choosing the right instance on the user.</p>
+<hr>
+<p>This approach has already started to inform new developments for CryptPad, for example the use of IndexedDB for caching documents which is already deployed. Further improvements will follow, including a full “offline” mode. </p>
+<p>This wraps up our first monthly status post. In March we will be shifting back to our NLNet Communities project and attempt to finish the outstanding deliverables around documentation for developers and instance administrators. </p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://blog.cryptpad.org/2021/02/24/status-feb-2021/" data-id="cktsjy9v9001xcya8thgpsin5" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/status-update/">status update</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-CryptPad-at-FOSDEM-2021" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2021/02/03/CryptPad-at-FOSDEM-2021/" class="article-date">
+  <time datetime="2021-02-03T13:26:52.000Z" itemprop="datePublished">2021-02-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/02/03/CryptPad-at-FOSDEM-2021/">CryptPad at FOSDEM 2021</a>
+    </h1>
+  
+
+
+        
+            <span class="article-author">
+                by
+                David Benqué
+            </span>
+        
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>(this post was edited on 24th Feb. 2021 to include links to videos and corrections)</p>
+<p>The CryptPad team is taking part in the 2021 online edition of <a href="https://fosdem.org/2021/" target="_blank" rel="noopener">FOSDEM</a>. We will use this opportunity to reflect on the past year from a couple of different perspectives. </p>
+<p>Aaron MacSween’s presentation is about the technical challenges faced by the team this year. The massive influx of users working from home pushed us to scale CryptPad to accomodate an additional 60K weekly active users. This was made easier by the platform’s unique architecture, where most of the “expensive” work involving cryptography happens on the client rather than the server. Additional challenges involved a <a href="https://blog.cryptpad.fr/2020/12/16/The-outage-of-December-8th-2020-a-postmortem/" target="_blank" rel="noopener">27 hour outage</a> due to a cooling malfunction at our hosting provider. While the outage itself was out of our control, it brought into sharp relief that our procedures to mitigate uncertainty had not scaled with our user-base. Aaron will speak about what we plan to do to avoid such situations in future. </p>
+<p>In the design devroom, I will reflect on my first year as the designer on the CryptPad team. My work has been spread across many different areas, from UI design to answering support tickets, writing the product and documentation, as well as visual identity. All of these elements boil down to one thing: communication. I will show some examples of work produced this year as attempts to improve how CryptPad communicates, from onboarding to daily-use. I will conclude with one of the challenges for the year ahead: accessibility. Communication is all well and good, but of no use if it cannot be heard on a screen reader. </p>
+<p>Talks are pre-recorded and will be aired on <strong>Saturday 6th February</strong>. For more information, abstracts, and broadcast time with Q&amp;A session, see the indications below.</p>
+<p>This blog post will be updated with video embeds once these are available.</p>
+<h3 id="Living-on-the-edge-with-CryptPad"><a href="#Living-on-the-edge-with-CryptPad" class="headerlink" title="Living on the edge with CryptPad"></a><a href="https://fosdem.org/2021/schedule/event/cryptpad/" target="_blank" rel="noopener">Living on the edge with CryptPad</a></h3><ul>
+<li><strong>Speaker</strong>: Aaron MacSween</li>
+</ul>
+<p>Due to unforeseen circumstances, Aaron was unable to include his presentation in the FOSDEM track. However he still recorded it so we are making it available here and on our PeerTube channel. </p>
+<p><a href="https://peertube.xwiki.com/videos/watch/96a0c839-3e29-4ffd-b6e3-201bc3c6bc36" target="_blank" rel="noopener">Watch on the CryptPad Peertube channel</a></p>
+<h3 id="Communicating-CryptPad"><a href="#Communicating-CryptPad" class="headerlink" title="Communicating CryptPad"></a><a href="https://fosdem.org/2021/schedule/event/communicating_cryptpad/" target="_blank" rel="noopener">Communicating CryptPad</a></h3><ul>
+<li><strong>Speaker</strong>: David Benqué</li>
+<li><strong>Track</strong>: <a href="https://fosdem.org/2021/schedule/track/open_source_design/" target="_blank" rel="noopener">Open Source Design devroom</a></li>
+<li><strong>Room</strong>: <a href="https://fosdem.org/2021/schedule/room/ddesign/" target="_blank" rel="noopener">D.design</a></li>
+<li><strong>Day</strong>: <a href="https://fosdem.org/2021/schedule/day/saturday/" target="_blank" rel="noopener">Saturday</a></li>
+<li><strong>Start</strong>: <a href="https://fosdem.org/2021/schedule/day/saturday/#1330" target="_blank" rel="noopener">13:30</a> (CET)</li>
+<li><strong>End</strong>: <a href="https://fosdem.org/2021/schedule/day/saturday/#1350" target="_blank" rel="noopener">13:50</a> (CET)</li>
+</ul>
+<p><a href="https://peertube.xwiki.com/videos/watch/5339bbc1-ec4b-46ef-b064-6060d40ea272" target="_blank" rel="noopener">Watch on the CryptPad Peertube channel</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://blog.cryptpad.org/2021/02/03/CryptPad-at-FOSDEM-2021/" data-id="cktsjy9tu0005cya8fbuidjsg" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/FOSDEM/">FOSDEM</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/presentation/">presentation</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/talk/">talk</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-No-plan-survives-first-contact-with-the-enemy" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/12/31/No-plan-survives-first-contact-with-the-enemy/" class="article-date">
+  <time datetime="2020-12-31T16:57:34.000Z" itemprop="datePublished">2020-12-31</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/12/31/No-plan-survives-first-contact-with-the-enemy/">No plan survives first contact with the enemy</a>
+    </h1>
+  
+
+
+        
+            <span class="article-author">
+                by
+                Aaron MacSween
+            </span>
+        
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>In 2019 we finished a four-year research project that had covered the majority of CryptPad’s development costs.
+We had some worries about how we would continue to fund our team, but we were fortunate enough to meet and form a good relationship with members of Europe’s <a href="https://www.ngi.eu/" target="_blank" rel="noopener">Next Generation Internet Initiative</a>.</p>
+<p>We received 50000 Euros from <a href="https://nlnet.nl/" target="_blank" rel="noopener">NLnet</a> as a part of their <a href="https://nlnet.nl/PET/" target="_blank" rel="noopener">NGI0 Privacy Enhancing Technologies</a> grant program.
+Though we’d planned to finish this project (<a href="https://nlnet.nl/project/Cryptpad/" target="_blank" rel="noopener">CryptPad Teams</a>) before the end of 2019, research projects at this scale require a faster pace than we were used to.
+We’d had an intern join our team over the summer, our plan didn’t really account for vacation days, another salaried worker joined our team in November, and in general there were just many distractions that made everything take a bit longer than expected</p>
+<p>We mostly made up a lot of the difference with an increasing number of <a href="https://opencollective.com/cryptpad" target="_blank" rel="noopener">donations</a> and subscriptions via our <a href="https://cryptpad.fr/accounts/" target="_blank" rel="noopener">premium accounts portal</a>, and we had written a number of new grant proposals for the coming year.
+Our second NLnet proposal (<a href="https://nlnet.nl/project/Cryptpad-Communities/" target="_blank" rel="noopener">CryptPad for Communities</a>) had already been accepted, but we were waiting to sign the final contract before making any announcements.
+So, with 2020 on the horizon I wrote <a href="https://blog.cryptpad.fr/2019/12/31/Looking-back-looking-forward/" target="_blank" rel="noopener">an article</a> which alluded to our plans while we waited to hear back about which of our remaining proposals would be accepted.</p>
+<h2 id="2020’s-projects"><a href="#2020’s-projects" class="headerlink" title="2020’s projects"></a>2020’s projects</h2><p>In early 2020 we were still finishing up the final components of <em>CryptPad Teams</em>.
+In addition to the remaining technical features we were also required to complete two audits of the platform: one to assess CryptPad’s accessibility and another quick scan of its security features.
+We didn’t really know how long these would take, and we hadn’t budgeted additional time for them, so these delayed our other projects and added a little bit to our 2019 deficit.</p>
+<p>We already knew to expect another 50000 Euros from NLnet for our <em>Communities</em> project, but since the status of our other proposals was still uncertain we decided to attend the <a href="https://opencollective.com/open-source-speed-dating/events/open-source-speed-dating-fosdem-2020-96f78c6c" target="_blank" rel="noopener">Open-Source Speed Dating session</a> at <a href="https://archive.fosdem.org/2020/" target="_blank" rel="noopener">FOSDEM</a>.
+Two of our team members pitched a project to speed up CryptPad’s page loading times, making for a total of three pending proposals.</p>
+<p>As it turned out, we heard about all three projects in the space of a few days and all three were accepted.
+We weren’t expecting all of these proposals to be successful, so we had to adjust a lot of our plans to ensure we could manage all of their respective deadlines, but on paper it all seemed manageable.</p>
+<h3 id="CryptPad-for-communities"><a href="#CryptPad-for-communities" class="headerlink" title="CryptPad for communities"></a>CryptPad for communities</h3><p>We’d already begun working on <strong>Communities</strong>‘ features quite early in the year.
+The project included a number of high-level themes, but the overall goal was to make it easier for groups of various sizes to adopt or transition to CryptPad instead of proprietary alternatives.</p>
+<p>Firstly, we’d heard from small businesses and social initiatives that they wanted to use CryptPad but needed some new features before they could make the switch.
+We made major changes to our Kanban, rich text, and spreadsheet editors.</p>
+<p>CryptPad’s admin panel, which used to be very limited, now features a variety of controls for adding or modifying quotas for particular users, along with a variety of other configuration options to make it easier to run your own CryptPad instance.
+We still need to add the ability to restrict registration and unregistered usage, but we expect to deliver this in early 2021.</p>
+<p>Finally, we launched <a href="https://docs.cryptpad.fr/en/" target="_blank" rel="noopener">our documentation platform</a>, which is available in English, French, and (courtesy of some dedicated contributors) German.
+There is currently only a user guide, but we’ll soon offer a thorough installation guide for admins and some technical documentation for contributors.</p>
+<h3 id="Secure-Mobile-Collaboration"><a href="#Secure-Mobile-Collaboration" class="headerlink" title="Secure Mobile Collaboration"></a>Secure Mobile Collaboration</h3><p>The goal of this project was to experiment with different technologies and ultimately prototype some dedicated mobile and desktop apps for CryptPad.
+Our intent was to make CryptPad usable on mobile devices while also improving security by distributing static builds of our source code with cryptographic signatures so their authenticity could be verified.</p>
+<p>We pitched this project to <a href="https://www.ngi.eu/ngi-projects/ngi-trust/" target="_blank" rel="noopener">NGI TRUST</a> at the end of November 2019 and framed it as an experiment since we weren’t sure we’d be able to maintain dedicated apps in addition to the web platform we already offer.
+Nevertheless, we know that mobile support is important to our users and we wanted to dedicate time to investigate our options.</p>
+<p>We expect to finish this project soon but our approach has diverged from its early goals in some very notable ways.
+For now I’ll just say that a lot of time and effort has gone towards addressing the intended problems and that you can expect a dedicated blog post or two about this in the near future.</p>
+<h3 id="Dialogue"><a href="#Dialogue" class="headerlink" title="Dialogue"></a>Dialogue</h3><p>Not long after proposing <em>Communities</em> to NLnet we pitched this third <em>PET</em> project.
+It can take several months for these proposals to pass through their various stages of review, and each project only funds our team for part of the year, so it’s important that we line up our next project before the current ones finish.
+At the same time, we can’t (legally) get paid by multiple funding bodies for the same work, so we need to ensure that projects don’t overlap.</p>
+<p>We applied for this and the NGI TRUST grant concurrently, but we didn’t expect to win both.
+NLnet’s deadlines are considerably less strict, however, so we’ve prioritized SMC and saved <a href="https://nlnet.nl/project/CryptPadForms/" target="_blank" rel="noopener">Dialogue</a> for the coming year.
+All <em>NGI0 PET</em> projects have to be completed by late 2021, so we expect this to be our last.</p>
+<p>CryptPad is currently specialized mostly for real-time document editing, and our cryptographic permissions system reflects that.
+The main idea behind this project is to develop a new set of applications with different permission schemes that support more granular permissions for document components instead of all-or-nothing permissions for whole documents.</p>
+<p>We already offer a <em>poll</em> application, but it uses the same <em>editor/viewer</em> roles as our document editors, which really doesn’t match users’ expectations.
+This current implementation will be phased out in favour of the new scheme to support distinct roles for authors (who can ask questions and determine who can answer them), responders (who can submit answers), and viewers (who can see responses).
+We’re also going to add support for more complex surveys with multiple questions, implement a reminder system to notify authors and viewers when their polls have closed, and add some more instance admin functionality so that we and other people hosting CryptPad can communicate with their users via the existing notification system.</p>
+<h3 id="MOSS"><a href="#MOSS" class="headerlink" title="MOSS"></a>MOSS</h3><p>The requirements of <a href="https://www.mozilla.org/en-US/moss/" target="_blank" rel="noopener">Mozilla’s Open-Source Support</a> program were considerably less formal than those of NLnet and NGI TRUST.
+We received 10000 USD, which converted to about 9000 Euros at the time we received it, and we promised to use it to improve page loading times.
+There wasn’t any contract or formal definition of how we’d planned to do this, and no deadline given.</p>
+<p>This funding model was extremely helpful for us this year and did a fantastic job of living up to its name and goal of supporting open-source.
+Our European funding partners provide all or most of their financial support as their deliverables or the entire project are completed.
+By contrast, MOSS solved some immediate cash-flow issues during this difficult year and afforded us the flexibility to fulfill our promises in between our other deadlines.</p>
+<p>So far we’ve followed up on these goals by profiling page loading times on different devices to determine where to best spend our efforts.
+We’ve made a number of small optimizations on the client along with some big server improvements that were frequently the cause of bottlenecks when establishing a new connection to the server.
+There’s still much more to do in this regard, and we plan to post ongoing updates as we find more room for improvement.</p>
+<h2 id="A-year-of-surprises"><a href="#A-year-of-surprises" class="headerlink" title="A year of surprises"></a>A year of surprises</h2><p>With the exception of our MOSS grant, everything I’ve mentioned so far was planned and proposed late in 2019.
+We’d set our objectives for 2020 early on and had carefully considered how we could coordinate our multiple projects and how their features could complement each other.
+As you might imagine, very little went according to plan.</p>
+<p>i vaguely recall a few headlines about a respiratory illness being discovered in China late last year, but I didn’t give it much thought and obviously didn’t foresee the impact it would have on our plans for the year, let alone everything else it affected.
+As the epidemic became more widespread, was upgraded to pandemic status, and triggered lockdowns across the world increasingly more people moved to working online.
+Previously, I was happy with our success when we saw ten to fifteen thousand users in a week, but those numbers quickly doubled, tripled, and quadrupled in a matter of months as offices and classrooms started relying heavily on our platform.</p>
+<p><img src="/images/2020-users.png" alt="Unique IPs per visiting CryptPad.fr per day"></p>
+<p>We made some significant changes to our server code to keep up with demand and eliminated some of our client’s code that was particularly expensive for the server.
+The precise technical details of exactly what we did to adapt to the dramatic increase in usage deserve their own article, but in general we suddenly had to pay a lot more attention to our infrastructure than was previously the case.
+We started regularly allocating more disk space to the server and, as 2020 ends, we now store more than six times more user data than we did this time last year.</p>
+<p>One major lesson we’ve learned, however, is that it’s been far easier to scale our infrastructure than manual support for the platform.
+Our surge of new users came along with a matching increase in support tickets, emails, GitHub iissues, and questions on social media.
+We prioritized the documentation that we were writing as a part of our <em>Communities</em> project, however, we still had to take time to answer the questions of people who hadn’t found those docs or whose questions were not clearly answered therein.</p>
+<p>We’re still working to streamline this process, but our ability to respond to individual questions is a frequent bottleneck for our team.
+This typically makes it more difficult to stay on top of our usual development cycle, and leaves less time than we’d like for promoting the project via public events or blog articles.
+Having too many users is a fantastic problem to have, though, so this is less a complaint and more an acknowledgement of a challenge that we need to address.
+We can’t afford to be just <em>a team of software developers</em> that also happen to <em>maintain and support a platform</em> when both activities are equally important to our continued success.</p>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>After the year we’ve had it’s tempting to view the future as increasingly uncertain, but the reality is that nothing was ever certain to begin with.
+We’re still making plans for 2021, but our plans now include more caveats and fallbacks to (hopefully) lessen the impact of whatever else we don’t see coming.</p>
+<p>With all the unexpected stress of this year it’s difficult to remember the good things, but we’ve had an incredible increase in support from our users.
+Contributors have helped to add some significant features to the platform this year and have <a href="https://weblate.cryptpad.fr/projects/cryptpad/app/" target="_blank" rel="noopener">translated CryptPad</a> into a number of languages.
+In the past two months subscriptions and donations have covered one of our three team members’ salaries.
+Our yearly revenue has once again <em>more than doubled</em> compared to the previous twelve months, and if these trend continues we’ll be able to fund our current team’s salaries without having to depend on grants.</p>
+<p>There’s a lot more to be said about our goals for the future, but we still have a number of projects to complete, so for now I’ll prefer not to think too far ahead.
+Instead, I’ll leave you with a bit of a teaser for our upcoming 4.0.0 release…</p>
+<p><img src="/images/NYE-2020.png" alt="CryptPad 4.0.0, coming in January 2021!"></p>
+<p>Thanks so much to everyone who’s supported us in any way throughout this difficult year.</p>
+<p>We wish you all the best in 2021!</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://blog.cryptpad.org/2020/12/31/No-plan-survives-first-contact-with-the-enemy/" data-id="cktsjy9ur0014cya8hpvv6x2f" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/roadmap/">roadmap</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-Recent-interviews-and-presentations" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/12/18/Recent-interviews-and-presentations/" class="article-date">
+  <time datetime="2020-12-18T05:25:11.000Z" itemprop="datePublished">2020-12-18</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/12/18/Recent-interviews-and-presentations/">Recent interviews and presentations</a>
+    </h1>
+  
+
+
+        
+            <span class="article-author">
+                by
+                David Benqué
+            </span>
+        
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>CryptPad and the team have received some attention recently through various channels: a Reddit AMA thread, podcast, presentation, and blog interview. Whether you prefer to read, watch or listen there is a way for you to get an up-to-date presentation of CryptPad.</p>
+<p>Aaron MacSween was invited for an <a href="https://www.reddit.com/r/privacy/comments/k1uonq/im_aaron_macsween_project_lead_for_cryptpad_the/" target="_blank" rel="noopener">Ask Me Anything (AMA) thread on r/privacy</a> on Reddit. The thread started on November 27th 2020 and lasted for a couple of days. 98 questions were raised about everything from CryptPad’s business model, to future development plans, the broader state of open-source software, and the EU’s recent debates against encryption.</p>
+<p>Aaron was also a guest on the <a href="https://www.jamesmullarkey.com/2020/11/imagine-google-docs-but-without-the-spyware-with-aaron-macsween/" target="_blank" rel="noopener">We Don’t Stream podcast</a> in an episode titled <em>Imagine Google Docs but without the spyware</em>. This was a general presentation of CryptPad, the origin story and the motivations behind it. Each guest is asked to nominate an NGO to encourage donations. Aaron chose the <a href="https://supporters.eff.org/donate/join-eff-today" target="_blank" rel="noopener">Electronic Frontier Foundation</a> so please consider supporting them.</p>
+<p>Ludovic Dubost was <a href="https://www.websiteplanet.com/blog/interview-ludovic-dubost/" target="_blank" rel="noopener">interviewed on Website Planet</a>, answering questions about XWiki and CryptPad. The interview covers the founding of XWiki, the effects of the COVID crisis on the company and CryptPad, as well as the future of the open-source industry.</p>
+<p>Ludovic also presented CryptPad at <a href="https://eslib.re/2020/" target="_blank" rel="noopener">esLibre 2020</a>, a Spanish open-source conference organised this year by King Juan Carlos University. Like many others this year this was a “virtual” event, the video is available on our <a href="https://peertube.xwiki.com/videos/watch/019829b0-908c-48dd-88a4-6e9799b986f9" target="_blank" rel="noopener">PeerTube channel</a>. Ludovic covered the background of the project and gave a demo-tour of CryptPad.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://blog.cryptpad.org/2020/12/18/Recent-interviews-and-presentations/" data-id="cktsjy9us0016cya8nngq8zwj" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/presentation/">presentation</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/press/">press</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-The-outage-of-December-8th-2020-a-postmortem" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/12/16/The-outage-of-December-8th-2020-a-postmortem/" class="article-date">
+  <time datetime="2020-12-16T10:00:00.000Z" itemprop="datePublished">2020-12-16</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/12/16/The-outage-of-December-8th-2020-a-postmortem/">The outage of December 8th, 2020 - a postmortem</a>
+    </h1>
+  
+
+
+        
+            <span class="article-author">
+                by
+                Aaron MacSween
+            </span>
+        
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>On December 8th, 2020 a malfunction in the water-cooling system at a data-center in Roubaix, France caused an unrecoverable error in the physical machine which hosts CryptPad.fr. The service was unavailable for approximately 27 hours while we diagnosed a corrupted OS, provisioned a new server, and migrated user data to the new system.</p>
+<h2 id="What-happened"><a href="#What-happened" class="headerlink" title="What happened"></a>What happened</h2><p>Our team works remotely across three different timezones, so for the sake of simplicity I’ll summarize the timeline of the service outage in Central European Time (CET) using a 24-hour clock.</p>
+<h3 id="December-8-05-30-Server-update-deployed"><a href="#December-8-05-30-Server-update-deployed" class="headerlink" title="December 8, 05:30 - Server update deployed"></a>December 8, 05:30 - Server update deployed</h3><p>I occasionally start my working days very early in the morning when we have as few users connected as possible. On the days where a server restart is necessary, I do it at this time to minimize the number of active users that might be inconvenienced by the momentary service interruption.</p>
+<p>During the process of deploying a minor patch to optimize how the service loads and evicts document metadata I noticed that our monthly full-disk backup was running. We run a less intensive incremental backup on a daily basis, but having a regular full-disk backup ensures that restoration does not become increasingly difficult over time.</p>
+<p>We’ve been breaking our records for the highest ever number of concurrent users on CryptPad.fr on a regular basis, so I tend to pay close attention to how our server is performing and how small changes in our code affect its performance.</p>
+<p><img src="/images/3000-connections.png" alt="A record number of concurrently connected clients, as reported by our admin panel"></p>
+<p>My colleagues hadn’t started their shifts yet, but I left a message informing them that the server would probably be under more load than usual. We were considering also deploying an update to our client code, but we usually avoid doing so on backup days to help ensure that things go smoothly.</p>
+<p><img src="/images/poor-server-performance.png" alt="Me jinxing our server for the day"></p>
+<h3 id="December-8-12-42-CryptPad-goes-down"><a href="#December-8-12-42-CryptPad-goes-down" class="headerlink" title="December 8, 12:42 - CryptPad goes down"></a>December 8, 12:42 - CryptPad goes down</h3><p>CryptPad is developed by a company called <a href="https://xwiki.com/" target="_blank" rel="noopener">XWiki</a>. We host everything using virtual machines provisioned on the same dedicated physical servers as the rest of the company’s infrastructure. Performance metrics and monitoring for our other sites suggests that the host machine did not fail instantly, rather, its performance degraded over a relatively short period of time. Some services failed sooner as the host system tried to de-prioritize less critical systems.</p>
+<p>The last line in our server’s log was written to the disk at 12:42. I was away from my desk to eat a meal, so I didn’t notice that anything had gone wrong. I returned to find some user reports sent at around 13:00 that the service had been unavailable for some time. We occasionally receive such reports that turn out to be user error (typos in URLs or DNS problems), but in this case it was easy to confirm as a systemic problem since my CryptPad tabs were also disconnected.</p>
+<p>My first assumption was that an error in the the code I’d deployed earlier in the day that had caused the server to crash. I tried to log into our servers from my terminal with no success, then tried to ping the server’s domain name, then its raw IP address, at which point I realized that the machine was completely powered down or otherwise unreachable.</p>
+<p>The last time we were surprised with this kind of outage was in <a href="https://www.theregister.com/2017/11/09/ovh_datacenters_go_titsup/" target="_blank" rel="noopener">November 2017</a> when a power outage and a generator failure took several data-centers completely offline. That outage lasted 3.5 hours, which seemed very bad at the time, but I was expecting something similar.</p>
+<h3 id="December-8-13-35-Infra-is-on-it"><a href="#December-8-13-35-Infra-is-on-it" class="headerlink" title="December 8, 13:35 - Infra is on it"></a>December 8, 13:35 - Infra is on it</h3><p>Since the same physical infrastructure hosts a large number of sites the outage had been noticed by many of our company’s employees almost instantly. We have lots of monitoring in place to send warnings when things are performing poorly (or not at all), but I learned via our company’s internal chat service that at least one of our physical servers had had a critical failure and that Kevin (our resident infra expert) was working on it. CryptPad’s track record for uptime until this point was very good, and most of that was due to Kevin, so I tried to leave him alone so he could focus on diagnosing and possibly fixing the problem. Since there didn’t seem to be anything I could do on that front to help the situation I started to respond to the related GitHub issues and messages in our public chat channel to inform our users what was going on.</p>
+<p>At this point I also noticed several messages from my colleagues congratulating me on my five-year anniversary at the company. I’d forgotten the date, and grateful as I was for the wishes, this wasn’t how I’d expected to celebrate the milestone.</p>
+<h3 id="December-8-15-00-Host-machine-comes-back-online"><a href="#December-8-15-00-Host-machine-comes-back-online" class="headerlink" title="December 8, 15:00 - Host machine comes back online"></a>December 8, 15:00 - Host machine comes back online</h3><p>By 15:00 the physical server that had gone offline had been powered back up. This meant that VMware (the software we use to host many virtual machines on one very powerful machine) was running again, though some more work was needed to bring many of its hosted VMs back online. Kevin immediately began running a range of integrity checks to confirm that the hardware was functioning correctly before relaunching services. Some VMs that required fewer resources were able to be re-launched very quickly, but CryptPad requires more storage than most of the wikis we host, and disk checks tend to require more time than other diagnostics.</p>
+<p>At 15:40 these disk integrity checks were interrupted when one of the data-center technicians (who I’m sure was also having a bad day) had to take the server back offline to transfer our hardware to a new location in the same building. Access was restored just a few minutes later, but we had to restart our integrity checks.</p>
+<h3 id="December-8-16-20-First-disk-integrity-check-completes"><a href="#December-8-16-20-First-disk-integrity-check-completes" class="headerlink" title="December 8, 16:20 - First disk integrity check completes"></a>December 8, 16:20 - First disk integrity check completes</h3><p>Forty minutes after the manual intervention, the first of three disk checkups had completed. VMware was reporting that all systems were operational, however, the VM that usually hosts our API server was failing to boot. Kevin was able to launch a Debian rescue system from a live disk and mount the system for inspection, but there was still no obvious indication why the system wouldn’t boot. He proceeded to launch checks for the remaining two disks while he continued to search for the cause of the failure.</p>
+<h3 id="December-8-18-30-Initial-failure-traced-to-a-cooling-malfunction"><a href="#December-8-18-30-Initial-failure-traced-to-a-cooling-malfunction" class="headerlink" title="December 8, 18:30 - Initial failure traced to a cooling malfunction"></a>December 8, 18:30 - Initial failure traced to a cooling malfunction</h3><p>Throughout the duration of this downtime Kevin had been on and off the phone with the data-center technicians getting updates about what had happened and whether we should expect any further problems. By 18:30 we were informed of the cooling system’s malfunction. While it was somewhat comforting to know that the problem had nothing to do with code we’d written, it was also frustrating to be reminded that there will likely always be physical events like this that we can neither control nor predict.</p>
+<p><img src="/images/physical-internet.png" alt=""></p>
+<p>As twitter user <a href="https://twitter.com/RimaSghaier/status/1336398196109697025" target="_blank" rel="noopener">@RimaSghaier</a> noted, the internet is still <em>very physical</em>.</p>
+<h3 id="December-8-19-30-File-transfer-commences"><a href="#December-8-19-30-File-transfer-commences" class="headerlink" title="December 8, 19:30 - File transfer commences"></a>December 8, 19:30 - File transfer commences</h3><p>By 19:30, between myself, Kevin, Ludovic (the company’s CEO), and one of Ludovic’s friends who has some more experience with the intricacies of bootable filesystems,  we’d made no progress diagnosing why the affected VM would not boot outside of the environment of the rescue disk. We had access to all the system’s files and all of the integrity checks had passed, but there seemed to be problem with the root filesystem. We decided that the safest thing to do was to provision a new VM and begin transferring the relevant files. We could interrupt the process if we discovered the reason for the failure, but it was already late in the day and we had no promising leads.</p>
+<p>It took only a few minutes to provision a nearly identical VM and we immediately began transferring files via the data-center’s internal network. Unfortunately, there was around 750GB of data to transfer at a variable rate that did not seem very promising.</p>
+<p>Until this point I’d been very hopeful that <em>at any minute</em> we would find some trick to get the original server back online. As it became increasingly apparent that this was unlikely and that we’d need to wait for the file transfer to finish we shifted our focus to damage control.</p>
+<p>The API server that hosts our database and Nodejs server had been offline, but we actually serve our static assets (HTML, Javascript, etc) from a different machine that had stayed online. I’d been distracted by the actual system outage and hadn’t thought to update our front-end to inform all our users of what was going on, though I had been posting to our <a href="https://social.weho.st/@cryptpad" target="_blank" rel="noopener">Mastodon</a> and <a href="https://twitter.com/cryptpad" target="_blank" rel="noopener">Twitter</a> accounts.</p>
+<p>I hacked together and deployed some very basic HTML as quickly as I could, explaining what was happening and directing users to our social media for updates. This was deployed by 19:43.</p>
+<p><img src="/images/cryptpad-down-page.png" alt="CryptPad&#39;s down page"></p>
+<h3 id="December-8-20-00-I-try-to-get-some-sleep"><a href="#December-8-20-00-I-try-to-get-some-sleep" class="headerlink" title="December 8, 20:00 - I try to get some sleep"></a>December 8, 20:00 - I try to get some sleep</h3><p>Finally, after about 7 hours of downtime and a 14.5 hour shift on my part, we left the servers alone to continue their work and decided to get some rest for the following day. We expected the file transfer to take at least 10 more hours to complete, so I set my alarm for the following morning and called it a day.</p>
+<h3 id="December-9-16-14"><a href="#December-9-16-14" class="headerlink" title="December 9, 16:14"></a>December 9, 16:14</h3><p>December 9th was not especially eventful. I spent most of the day idly monitoring the progress of the network file transfer. I was far too distracted to be productive with anything else, and anyway it seemed prudent to save my energy for when the transfer completed.</p>
+<p>By about 13:30 the transfer was 90% complete and I began to pre-configure as much as possible on the new system so that we could bring everything back up as quickly as possible. I prepared and reviewed a list of final tasks with Kevin and Yann in the final 30 minutes of the transfer, and we started working as soon as it finished.</p>
+<p>We were able to complete the system’s setup in around 20 minutes, including a last-minute configuration fix to restrict the service to our IP addresses before we launched it. This restriction allowed us to access CryptPad as normal before anyone else. We took about ten minutes to test the platform, loading any documents we’d been editing leading up to the crash and confirming that everything was behaving as expected.</p>
+<p>Finally, by 16:14, after a bit more than 27 hours of downtime, we removed the IP address restriction and removed the downtime notice I’d deployed the evening before.</p>
+<h2 id="Difficulties-and-lessons-learned"><a href="#Difficulties-and-lessons-learned" class="headerlink" title="Difficulties and lessons learned"></a>Difficulties and lessons learned</h2><p>I’ll start by saying in very simple terms that <em>this experience <strong>sucked</strong></em>. I know it was very frustrating for our users who couldn’t access their documents while the server was offline. I certainly had a terrible two shifts. It was stressful for everyone on our team, and I suspect it was similarly unpleasant for the data-center technicians as well.</p>
+<p>It should be more obvious given the root meaning of the word <em>internet</em>, but we all depend on many systems functioning to maintain our daily routines. The majority of our users only contact us to report bugs. Kevin and I mostly end up chatting when one of us notices irregular server behaviour. We only contact OVH when our servers have problems, and they probably don’t deal too much with their municipal electricity and fuel providers except when their power goes out and they fall back to using generators. <em>We are most aware of the systems that sustain us when they break</em>.</p>
+<p>On a positive note, though, I was pleasantly surprised by how understanding people were about the situation. One of our paying users cancelled their subscription, but it seems the outage served to remind many people that there are humans working on this project, and so we’ve actually seen an increase in the rate of donations and subscriptions in the week since. We greatly appreciate everyone’s generosity!</p>
+<p>Some users seem to have understandably lost some confidence in our platform, as we’ve seen slightly fewer users at the usual peak hours (2700 concurrent connections instead of 3000). On the other hand, it seems like the downtime page led to a significant increase in our follower count on social media.</p>
+<p>Many of our users rely on CryptPad as a persistent home for their documents, and in these cases downtime is very inconvenient. During the outage, however, I learned about <a href="https://github.com/tosterkamp/random-redirect" target="_blank" rel="noopener">this software</a> which randomly redirects users to publicly hosted instances of open-source software platforms. If you use CryptPad as a place to collaborate rather than a place to store documents, then you could try <a href="https://cryptpad.random-redirect.de/" target="_blank" rel="noopener">cryptpad.random-redirect.de</a> to find alternatives. If you host a CryptPad instance you could even inquire about adding your server to the list. One of the great things about open-source software is that failures that affect one server or service do not need to have global effects.</p>
+<p>Despite the positive aspects of our community’s response to this event, I regret that it took so long migrate to a new machine. The simple fact is that while we (mostly Kevin and Ludovic) have put in a lot of effort to making sure that our hosting infrastructure is reliable, we were unprepared for the task of rapidly migrating our entire database to a new machine. We’re hosting about six times more data now than we were at the start of the year. Until now we’ve had little cause to consider the increasing difficulty of managing this growing dataset and with everything else that has happened this year there has been little opportunity to do so. This event made it abundantly clear that we’re going to have to find the required time.</p>
+<h2 id="What-we-plan-to-do"><a href="#What-we-plan-to-do" class="headerlink" title="What we plan to do"></a>What we plan to do</h2><p>It would be an understatement to say that I have a bit of an idealist stance when it comes to software. This is why I work on open-source, privacy-preserving tech. It’s terrible that modern, web-based software is as fragile as it is. That said, the alternative of emailing static documents to colleagues (or between devices) also makes it difficult to be productive.</p>
+<p>It’s a bit ridiculous that a broken cooling system in northern France can mean that our 20,000 daily active users lose the ability to edit or even read their documents for more than a day. More frustrating is the fact that we were very nearly in a good position to mitigate many of the adverse effects of this outage. We’ve been working on some new <em>offline-first</em> functionality in CryptPad over the last few months and, as noted above, we were considering deploying the first phase of these improvements the day of the outage.</p>
+<p>Our first offline features were deployed yesterday as a part of our <a href="https://github.com/xwiki-labs/cryptpad/releases/3.25.0" target="_blank" rel="noopener">3.25.0 release</a>. Now, every time you load a document in CryptPad you’re also populating an advanced cache in your browser. For now this only has the effect of reducing the total time to load cached documents, since we still wait for confirmation from the server that this is the most recent version of the content before removing the loading screen.</p>
+<p>Our next step will be to merge a branch of our code which will instead load and display the last known state of any document in your local cache in offline mode, regardless of whether you’re able to reach our database server. This would have alleviated some of the inconvenience of our outage, since users were still able to load the platform’s HTML and JavaScript that would have at least let them access cached documents.</p>
+<p>The next major feature will be the use of <a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API" target="_blank" rel="noopener">service-workers</a> to enable browsers to use very advanced caching policies and load our client-side code even while entirely offline, allowing full access to cached documents under almost any circumstance. We expect to deploy these updates in early January 2021 as a part of our upcoming <em>4.0.0</em> release.</p>
+<p><a href="https://www.cs.jhu.edu/~huang/paper/grayfailure-hotos17.pdf" target="_blank" rel="noopener">One of my favourite academic papers</a> defines the term <strong>gray failures</strong>, in which well-intentioned attempts to introduce redundancy into online systems can paradoxically increases the likelihood of service degradation or interruptions. In the last few weeks both Amazon and Google (some of the richest companies on the planet, in case you haven’t heard of them) have experienced severe service outages. There are very few easy answers in this area, but we’re going to learn from this situation and work on solutions that would have helped at least let us recover more quickly.</p>
+<p>If the next data-center failure happens in another three years I hope it will only last a small fraction of the time, and that our software will be so resilient you’ll hardly notice. In the meantime our team greatly appreciates all your support!</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://blog.cryptpad.org/2020/12/16/The-outage-of-December-8th-2020-a-postmortem/" data-id="cktsjy9v4001ocya8a3fqj65h" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cloud/">cloud</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/storage/">storage</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+
+
+  <nav id="page-nav">
+    <a class="extend prev" rel="prev" href="/page/2/">Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/4/">Next</a>
+  </nav>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/FOSDEM/" style="font-size: 10px;">FOSDEM</a> <a href="/tags/administration/" style="font-size: 11.67px;">administration</a> <a href="/tags/analytics/" style="font-size: 10px;">analytics</a> <a href="/tags/appstore/" style="font-size: 10px;">appstore</a> <a href="/tags/award/" style="font-size: 11.67px;">award</a> <a href="/tags/calendar/" style="font-size: 10px;">calendar</a> <a href="/tags/chain-of-trust/" style="font-size: 10px;">chain of trust</a> <a href="/tags/cloud/" style="font-size: 13.33px;">cloud</a> <a href="/tags/communities/" style="font-size: 10px;">communities</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/data/" style="font-size: 11.67px;">data</a> <a href="/tags/document/" style="font-size: 10px;">document</a> <a href="/tags/documentation/" style="font-size: 10px;">documentation</a> <a href="/tags/donate/" style="font-size: 16.67px;">donate</a> <a href="/tags/embed/" style="font-size: 10px;">embed</a> <a href="/tags/ethics/" style="font-size: 10px;">ethics</a> <a href="/tags/extensibility/" style="font-size: 10px;">extensibility</a> <a href="/tags/file/" style="font-size: 10px;">file</a> <a href="/tags/forms/" style="font-size: 15px;">forms</a> <a href="/tags/funding/" style="font-size: 20px;">funding</a> <a href="/tags/iframe/" style="font-size: 10px;">iframe</a> <a href="/tags/infrastructure/" style="font-size: 10px;">infrastructure</a> <a href="/tags/interoperability/" style="font-size: 13.33px;">interoperability</a> <a href="/tags/login/" style="font-size: 10px;">login</a> <a href="/tags/media-tag/" style="font-size: 10px;">media-tag</a> <a href="/tags/ngi/" style="font-size: 16.67px;">ngi</a> <a href="/tags/open-collective/" style="font-size: 15px;">open collective</a> <a href="/tags/open-source/" style="font-size: 15px;">open-source</a> <a href="/tags/pdf/" style="font-size: 10px;">pdf</a> <a href="/tags/performance/" style="font-size: 11.67px;">performance</a> <a href="/tags/presentation/" style="font-size: 13.33px;">presentation</a> <a href="/tags/press/" style="font-size: 10px;">press</a> <a href="/tags/privacy/" style="font-size: 13.33px;">privacy</a> <a href="/tags/quality/" style="font-size: 11.67px;">quality</a> <a href="/tags/release/" style="font-size: 11.67px;">release</a> <a href="/tags/research/" style="font-size: 15px;">research</a> <a href="/tags/roadmap/" style="font-size: 18.33px;">roadmap</a> <a href="/tags/security/" style="font-size: 15px;">security</a> <a href="/tags/shared-worker/" style="font-size: 10px;">shared worker</a> <a href="/tags/signing/" style="font-size: 10px;">signing</a> <a href="/tags/social-media/" style="font-size: 10px;">social media</a> <a href="/tags/spreadsheet/" style="font-size: 10px;">spreadsheet</a> <a href="/tags/status-update/" style="font-size: 18.33px;">status update</a> <a href="/tags/storage/" style="font-size: 13.33px;">storage</a> <a href="/tags/subresource-integrity/" style="font-size: 10px;">subresource integrity</a> <a href="/tags/talk/" style="font-size: 11.67px;">talk</a> <a href="/tags/upload/" style="font-size: 10px;">upload</a> <a href="/tags/web-worker/" style="font-size: 10px;">web worker</a> <a href="/tags/xss/" style="font-size: 10px;">xss</a> <a href="/tags/zero-knowledge/" style="font-size: 13.33px;">zero knowledge</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">October 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/09/">September 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">August 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/06/">June 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/05/">May 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">February 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/10/27/status-2021-10/">October 2021 status: A pitch and a farewell </a>
+          </li>
+        
+          <li>
+            <a href="/2021/10/21/Announcing-new-apps/">Announcing two new applications in early access: Document and Presentation</a>
+          </li>
+        
+          <li>
+            <a href="/2021/09/27/status-2021-09/">September 2021 status: Changing seasons</a>
+          </li>
+        
+          <li>
+            <a href="/2021/09/15/Relocating-our-blog/">Relocating our blog</a>
+          </li>
+        
+          <li>
+            <a href="/2021/08/26/status-2021-08/">August 2021 status: Forms hackathon and a new social media account</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 XWiki Labs<br>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="https://cryptpad.fr" class="mobile-nav-link">Use CryptPad.fr</a>
+  
+</nav>
+    
+
+<script src="/js/jquery.min.js"></script>
+
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

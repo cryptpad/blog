@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Security growing pains | CryptPad Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Update: The issue mentioned in this blog post was assigned CVE-2017-1000051 by Distributed Weakness Filing, thanks Martin Gubri for applying for the number. To sum things up:  Martin Gubri volunteered">
+<meta name="keywords" content="security,xss">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Security growing pains">
+<meta property="og:url" content="https://blog.cryptpad.org/2017/03/06/Security-growing-pains/index.html">
+<meta property="og:site_name" content="CryptPad Blog">
+<meta property="og:description" content="Update: The issue mentioned in this blog post was assigned CVE-2017-1000051 by Distributed Weakness Filing, thanks Martin Gubri for applying for the number. To sum things up:  Martin Gubri volunteered">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-02-23T13:42:48.100Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Security growing pains">
+<meta name="twitter:description" content="Update: The issue mentioned in this blog post was assigned CVE-2017-1000051 by Distributed Weakness Filing, thanks Martin Gubri for applying for the number. To sum things up:  Martin Gubri volunteered">
+  
+    <link rel="alternate" href="/atom.xml" title="CryptPad Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <!-- <div class="banner" id="banner"></div>
+  <div class="banner" id="banner-overlay"></div> -->
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <img src="/css/images/CryptPad_logo.svg" class="cp-logo" alt="CryptPad Logo">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">CryptPad Blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" href="https://cryptpad.fr">Use CryptPad.fr</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://blog.cryptpad.org"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-Security-growing-pains" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/03/06/Security-growing-pains/" class="article-date">
+  <time datetime="2017-03-06T05:34:58.000Z" itemprop="datePublished">2017-03-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Security growing pains
+    </h1>
+  
+
+
+        
+            <span class="article-author">
+                by
+                Caleb James Delisle
+            </span>
+        
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><em>Update: The issue mentioned in this blog post was assigned <a href="https://github.com/distributedweaknessfiling/DWF-CVE-2017-1000000/blob/f2e15ac3468dd382d9ffa3d5acc032c106f3248c/CVE-2017-1000051.json" target="_blank" rel="noopener">CVE-2017-1000051</a> by Distributed Weakness Filing, thanks Martin Gubri for applying for the number.</em></p>
+<p>To sum things up:</p>
+<ol>
+<li><a href="https://github.com/Framartin" target="_blank" rel="noopener">Martin Gubri</a> volunteered to help us with security testing and found multiple XSS vulnerabilities</li>
+<li>We learned things and improved our security in multiple ways and we have plans to build even further improvements</li>
+<li>Update all the things</li>
+</ol>
+<h2 id="Exactly-what-happened"><a href="#Exactly-what-happened" class="headerlink" title="Exactly what happened"></a>Exactly what happened</h2><p>Late Tuesday night after work, I got an email from Martin Gubri telling me that he had found multiple XSS vulnerabilities in CryptPad.
+This is not fun news for anybody, but as the browser stores encryption keys, it is especially bad news.
+I want to reiterate what I said in <a href="https://blog.cryptpad.fr/2017/02/20/Time-to-Encrypt-the-Cloud/" title="Time to Encrypt the Cloud" target="_blank" rel="noopener">our first blog post</a>, CryptPad is just a regular web app but with provable ethics, it is not designed to provide military grade security.</p>
+<p>Though we could have waited until our next release to fix this issue, we decided that we could not feel good working on new features while knowing about an issue which could harm our users.
+However, we wanted to fix the systemic issue which caused XSS to be possible in the first place, not just the symptoms which we became aware of.</p>
+<p>CryptPad uses a modern web feature called <a href="https://en.wikipedia.org/wiki/Content_Security_Policy" target="_blank" rel="noopener">Content Security Policy</a> to prevent attacks such as this one.
+Content Security Policy allows a web server to mandate that javascript can only be loaded from domains which are explicitly authorized.
+Unfortunately, CKEditor <a href="https://dev.ckeditor.com/ticket/8584" target="_blank" rel="noopener">makes heavy usage of inline scripts</a> (scripts which are written directly into the HTML file), so we had made an exception for inline script which represents the most common type of XSS.
+When Martin did a review of our application, he found multiple places where we had not been properly escaping HTML content and sadly all of these were attackable despite our Content Security Policy.</p>
+<h2 id="How-we-reacted"><a href="#How-we-reacted" class="headerlink" title="How we reacted"></a>How we reacted</h2><p>For me, a security bug does not come alone, it is always the result of multiple failures at different levels.
+Zero Knowledge is about resilient software for resilient society and we allowed ourselves to rely entirely on proper escaping.</p>
+<p>On Thursday, March 6th, 2017, we deployed and released a set of patches to our previous <a href="https://github.com/xwiki-labs/cryptpad/releases/tag/1.1.0" target="_blank" rel="noopener">Bunyip release</a>, which we’re calling <a href="https://github.com/xwiki-labs/cryptpad/releases/tag/1.1.1" target="_blank" rel="noopener">1.1.1 <em>Bunyip’s Revenge</em></a>.
+This not only sanitizes XSS in places where we know about but it also implements a strong Content Security Policy everywhere except inside of the CKEditor iframe, which insists on injecting script tags.</p>
+<p>It is important to upgrade as soon as possible because XSS attacks can potentially give an adversary access to all of your pads.
+If you’re using cryptpad.fr on the website then there’s nothing you need to do, everything is fixed.</p>
+<h2 id="Moving-forward"><a href="#Moving-forward" class="headerlink" title="Moving forward"></a>Moving forward</h2><p>We want to find and pioneer better ways of protecting your data on CryptPad.
+We also hope to foster a whole movement of Zero Knowledge web services which feature layered security, protecting users from external threats as well as the mistakes that developers are sure to make.</p>
+<p>Spurred on by the revelation of our own errors, we have reinvigorated a conversation about moving each of the <em>apps</em> such as CKEditor into a <a href="https://www.html5rocks.com/en/tutorials/security/sandboxed-iframes/" target="_blank" rel="noopener">sandboxed iframe</a> where they would be unable to access any of the cryptographic keys or other pads.
+This introduces some difficulty on our end, as we want to provide a resilient platform while making Zero Knowledge an approachable subject for web developers.</p>
+<p>Finally I would like to also publically thank our friend <a href="https://github.com/kpcyrd" target="_blank" rel="noopener"><em>kpcyrd</em></a> for finding another XSS issue back in early December of 2016, before we had official releases or a blog where we could give him credit for his work.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://blog.cryptpad.org/2017/03/06/Security-growing-pains/" data-id="cktsjy9uv0019cya88cajw1ks" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/security/">security</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/xss/">xss</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/03/24/What-is-Zero-Knowledge/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          What is Zero Knowledge
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/02/24/Announcing-biweekly-releases/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Announcing biweekly releases</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/FOSDEM/" style="font-size: 10px;">FOSDEM</a> <a href="/tags/administration/" style="font-size: 11.67px;">administration</a> <a href="/tags/analytics/" style="font-size: 10px;">analytics</a> <a href="/tags/appstore/" style="font-size: 10px;">appstore</a> <a href="/tags/award/" style="font-size: 11.67px;">award</a> <a href="/tags/calendar/" style="font-size: 10px;">calendar</a> <a href="/tags/chain-of-trust/" style="font-size: 10px;">chain of trust</a> <a href="/tags/cloud/" style="font-size: 13.33px;">cloud</a> <a href="/tags/communities/" style="font-size: 10px;">communities</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/data/" style="font-size: 11.67px;">data</a> <a href="/tags/document/" style="font-size: 10px;">document</a> <a href="/tags/documentation/" style="font-size: 10px;">documentation</a> <a href="/tags/donate/" style="font-size: 16.67px;">donate</a> <a href="/tags/embed/" style="font-size: 10px;">embed</a> <a href="/tags/ethics/" style="font-size: 10px;">ethics</a> <a href="/tags/extensibility/" style="font-size: 10px;">extensibility</a> <a href="/tags/file/" style="font-size: 10px;">file</a> <a href="/tags/forms/" style="font-size: 15px;">forms</a> <a href="/tags/funding/" style="font-size: 20px;">funding</a> <a href="/tags/iframe/" style="font-size: 10px;">iframe</a> <a href="/tags/infrastructure/" style="font-size: 10px;">infrastructure</a> <a href="/tags/interoperability/" style="font-size: 13.33px;">interoperability</a> <a href="/tags/login/" style="font-size: 10px;">login</a> <a href="/tags/media-tag/" style="font-size: 10px;">media-tag</a> <a href="/tags/ngi/" style="font-size: 16.67px;">ngi</a> <a href="/tags/open-collective/" style="font-size: 15px;">open collective</a> <a href="/tags/open-source/" style="font-size: 15px;">open-source</a> <a href="/tags/pdf/" style="font-size: 10px;">pdf</a> <a href="/tags/performance/" style="font-size: 11.67px;">performance</a> <a href="/tags/presentation/" style="font-size: 13.33px;">presentation</a> <a href="/tags/press/" style="font-size: 10px;">press</a> <a href="/tags/privacy/" style="font-size: 13.33px;">privacy</a> <a href="/tags/quality/" style="font-size: 11.67px;">quality</a> <a href="/tags/release/" style="font-size: 11.67px;">release</a> <a href="/tags/research/" style="font-size: 15px;">research</a> <a href="/tags/roadmap/" style="font-size: 18.33px;">roadmap</a> <a href="/tags/security/" style="font-size: 15px;">security</a> <a href="/tags/shared-worker/" style="font-size: 10px;">shared worker</a> <a href="/tags/signing/" style="font-size: 10px;">signing</a> <a href="/tags/social-media/" style="font-size: 10px;">social media</a> <a href="/tags/spreadsheet/" style="font-size: 10px;">spreadsheet</a> <a href="/tags/status-update/" style="font-size: 18.33px;">status update</a> <a href="/tags/storage/" style="font-size: 13.33px;">storage</a> <a href="/tags/subresource-integrity/" style="font-size: 10px;">subresource integrity</a> <a href="/tags/talk/" style="font-size: 11.67px;">talk</a> <a href="/tags/upload/" style="font-size: 10px;">upload</a> <a href="/tags/web-worker/" style="font-size: 10px;">web worker</a> <a href="/tags/xss/" style="font-size: 10px;">xss</a> <a href="/tags/zero-knowledge/" style="font-size: 13.33px;">zero knowledge</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">October 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/09/">September 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">August 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/06/">June 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/05/">May 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">February 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/10/27/status-2021-10/">October 2021 status: A pitch and a farewell </a>
+          </li>
+        
+          <li>
+            <a href="/2021/10/21/Announcing-new-apps/">Announcing two new applications in early access: Document and Presentation</a>
+          </li>
+        
+          <li>
+            <a href="/2021/09/27/status-2021-09/">September 2021 status: Changing seasons</a>
+          </li>
+        
+          <li>
+            <a href="/2021/09/15/Relocating-our-blog/">Relocating our blog</a>
+          </li>
+        
+          <li>
+            <a href="/2021/08/26/status-2021-08/">August 2021 status: Forms hackathon and a new social media account</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 XWiki Labs<br>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="https://cryptpad.fr" class="mobile-nav-link">Use CryptPad.fr</a>
+  
+</nav>
+    
+
+<script src="/js/jquery.min.js"></script>
+
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
