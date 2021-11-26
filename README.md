@@ -2,6 +2,10 @@
 
 This project is built using [Hexo](https://hexo.io/) for [the CryptPad Blog](https://blog.cryptpad.fr).
 
+To build use Node 12.14.0
+
+`nvm use 12.14.0`
+
 ## Install hexo
 
 `npm install -g hexo-cli`
