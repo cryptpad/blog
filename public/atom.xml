@@ -6,7 +6,7 @@
   <link href="//atom.xml" rel="self"/>
   
   <link href="https://blog.cryptpad.org/"/>
-  <updated>2021-10-27T11:50:32.397Z</updated>
+  <updated>2021-11-24T15:31:17.093Z</updated>
   <id>https://blog.cryptpad.org/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>November 2021 status: Talks and testimonials</title>
+    <link href="https://blog.cryptpad.org/2021/11/24/status-2021-11/"/>
+    <id>https://blog.cryptpad.org/2021/11/24/status-2021-11/</id>
+    <published>2021-11-24T15:12:48.000Z</published>
+    <updated>2021-11-24T15:31:17.093Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;This month we released some minor fixes with &lt;a href=&quot;https://github.com/xwiki-labs/cryptpad/releases/tag/4.12.1&quot; target=&quot;_blank&quot; rel=&quot;no
+      
+    
+    </summary>
+    
+    
+      <category term="talk" scheme="https://blog.cryptpad.org/tags/talk/"/>
+    
+      <category term="status update" scheme="https://blog.cryptpad.org/tags/status-update/"/>
+    
+      <category term="survey" scheme="https://blog.cryptpad.org/tags/survey/"/>
+    
+  </entry>
   
   <entry>
     <title>October 2021 status: A pitch and a farewell </title>
@@ -492,36 +517,6 @@ This time it’s not a fun occasion because the only good new
       <category term="roadmap" scheme="https://blog.cryptpad.org/tags/roadmap/"/>
     
       <category term="ngi" scheme="https://blog.cryptpad.org/tags/ngi/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Join the team</title>
-    <link href="https://blog.cryptpad.org/2019/03/18/Join-the-team/"/>
-    <id>https://blog.cryptpad.org/2019/03/18/Join-the-team/</id>
-    <published>2019-03-18T12:01:21.000Z</published>
-    <updated>2019-03-18T19:46:25.478Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;We’ve been making a big deal of our funding status for the last while, and for good reason.
-CryptPad has largely been funded by the &lt;a hr
-      
-    
-    </summary>
-    
-    
-      <category term="open-source" scheme="https://blog.cryptpad.org/tags/open-source/"/>
-    
-      <category term="funding" scheme="https://blog.cryptpad.org/tags/funding/"/>
-    
-      <category term="roadmap" scheme="https://blog.cryptpad.org/tags/roadmap/"/>
-    
-      <category term="privacy" scheme="https://blog.cryptpad.org/tags/privacy/"/>
-    
-      <category term="research" scheme="https://blog.cryptpad.org/tags/research/"/>
     
   </entry>
   
