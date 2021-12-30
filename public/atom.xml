@@ -6,7 +6,7 @@
   <link href="//atom.xml" rel="self"/>
   
   <link href="https://blog.cryptpad.org/"/>
-  <updated>2021-11-24T15:31:17.093Z</updated>
+  <updated>2021-12-30T14:06:35.636Z</updated>
   <id>https://blog.cryptpad.org/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Preparing for 2022</title>
+    <link href="https://blog.cryptpad.org/2021/12/30/Preparing-for-2022/"/>
+    <id>https://blog.cryptpad.org/2021/12/30/Preparing-for-2022/</id>
+    <published>2021-12-30T07:22:20.000Z</published>
+    <updated>2021-12-30T14:06:35.636Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;With the end of the year nearly upon us I am keeping up my tradition of writing a &lt;a href=&quot;/tags/retrospective/&quot;&gt;retrospective&lt;/a&gt; of wha
+      
+    
+    </summary>
+    
+    
+      <category term="roadmap" scheme="https://blog.cryptpad.org/tags/roadmap/"/>
+    
+      <category term="status update" scheme="https://blog.cryptpad.org/tags/status-update/"/>
+    
+      <category term="retrospective" scheme="https://blog.cryptpad.org/tags/retrospective/"/>
+    
+  </entry>
   
   <entry>
     <title>November 2021 status: Talks and testimonials</title>
@@ -357,7 +382,7 @@
     <link href="https://blog.cryptpad.org/2020/12/31/No-plan-survives-first-contact-with-the-enemy/"/>
     <id>https://blog.cryptpad.org/2020/12/31/No-plan-survives-first-contact-with-the-enemy/</id>
     <published>2020-12-31T16:57:34.000Z</published>
-    <updated>2021-01-21T14:43:32.374Z</updated>
+    <updated>2021-12-30T14:06:35.636Z</updated>
     
     <summary type="html">
     
@@ -371,6 +396,8 @@ We had some worries about
     
     
       <category term="roadmap" scheme="https://blog.cryptpad.org/tags/roadmap/"/>
+    
+      <category term="retrospective" scheme="https://blog.cryptpad.org/tags/retrospective/"/>
     
   </entry>
   
@@ -450,7 +477,7 @@ We had some worries about
     <link href="https://blog.cryptpad.org/2019/12/31/Looking-back-looking-forward/"/>
     <id>https://blog.cryptpad.org/2019/12/31/Looking-back-looking-forward/</id>
     <published>2019-12-31T10:36:16.000Z</published>
-    <updated>2021-01-21T14:43:32.370Z</updated>
+    <updated>2021-12-30T14:06:35.636Z</updated>
     
     <summary type="html">
     
@@ -464,6 +491,8 @@ At that point fewer than 10 people used the service on a weekly
     
     
       <category term="roadmap" scheme="https://blog.cryptpad.org/tags/roadmap/"/>
+    
+      <category term="retrospective" scheme="https://blog.cryptpad.org/tags/retrospective/"/>
     
   </entry>
   
@@ -490,33 +519,6 @@ This time it’s not a fun occasion because the only good new
       <category term="storage" scheme="https://blog.cryptpad.org/tags/storage/"/>
     
       <category term="data" scheme="https://blog.cryptpad.org/tags/data/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Our future is collaborative</title>
-    <link href="https://blog.cryptpad.org/2019/05/27/Our-future-is-collaborative/"/>
-    <id>https://blog.cryptpad.org/2019/05/27/Our-future-is-collaborative/</id>
-    <published>2019-05-27T06:50:22.000Z</published>
-    <updated>2019-05-27T10:21:13.634Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;For anyone that doesn’t have the time or interest to read the rest of this article, the short version is that the CryptPad team has recei
-      
-    
-    </summary>
-    
-    
-      <category term="open-source" scheme="https://blog.cryptpad.org/tags/open-source/"/>
-    
-      <category term="funding" scheme="https://blog.cryptpad.org/tags/funding/"/>
-    
-      <category term="roadmap" scheme="https://blog.cryptpad.org/tags/roadmap/"/>
-    
-      <category term="ngi" scheme="https://blog.cryptpad.org/tags/ngi/"/>
     
   </entry>
   
