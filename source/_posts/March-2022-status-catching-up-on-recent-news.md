@@ -6,9 +6,6 @@ tags:
   - roadmap
 ---
 
-
-## March 2022 status: catching up on recent news
-
 The beginning of 2022 has been sufficiently busy that we decided to skip two of our usual monthly status update blog posts. Things have not calmed down that much in March, but we didn't want to go any longer without an update.
 
 ## DAPSI wrap-up and FOSDEM
