@@ -6,7 +6,7 @@
   <link href="//atom.xml" rel="self"/>
   
   <link href="https://blog.cryptpad.org/"/>
-  <updated>2021-12-30T14:06:35.636Z</updated>
+  <updated>2022-03-29T12:32:38.453Z</updated>
   <id>https://blog.cryptpad.org/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>March 2022 status: catching up on recent news</title>
+    <link href="https://blog.cryptpad.org/2022/03/29/March-2022-status-catching-up-on-recent-news/"/>
+    <id>https://blog.cryptpad.org/2022/03/29/March-2022-status-catching-up-on-recent-news/</id>
+    <published>2022-03-29T12:07:08.000Z</published>
+    <updated>2022-03-29T12:32:38.453Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;March-2022-status-catching-up-on-recent-news&quot;&gt;&lt;a href=&quot;#March-2022-status-catching-up-on-recent-news&quot; class=&quot;headerlink&quot; title=&quot;Marc
+      
+    
+    </summary>
+    
+    
+      <category term="roadmap" scheme="https://blog.cryptpad.org/tags/roadmap/"/>
+    
+  </entry>
   
   <entry>
     <title>Preparing for 2022</title>
@@ -35,9 +56,9 @@
     
       <category term="roadmap" scheme="https://blog.cryptpad.org/tags/roadmap/"/>
     
-      <category term="status update" scheme="https://blog.cryptpad.org/tags/status-update/"/>
-    
       <category term="retrospective" scheme="https://blog.cryptpad.org/tags/retrospective/"/>
+    
+      <category term="status update" scheme="https://blog.cryptpad.org/tags/status-update/"/>
     
   </entry>
   
@@ -45,8 +66,8 @@
     <title>November 2021 status: Talks and testimonials</title>
     <link href="https://blog.cryptpad.org/2021/11/24/status-2021-11/"/>
     <id>https://blog.cryptpad.org/2021/11/24/status-2021-11/</id>
-    <published>2021-11-24T15:12:48.000Z</published>
-    <updated>2021-11-24T15:31:17.093Z</updated>
+    <published>2021-11-24T09:42:48.000Z</published>
+    <updated>2021-11-26T08:07:32.583Z</updated>
     
     <summary type="html">
     
@@ -83,13 +104,13 @@
     </summary>
     
     
+      <category term="interoperability" scheme="https://blog.cryptpad.org/tags/interoperability/"/>
+    
       <category term="ngi" scheme="https://blog.cryptpad.org/tags/ngi/"/>
     
       <category term="research" scheme="https://blog.cryptpad.org/tags/research/"/>
     
       <category term="status update" scheme="https://blog.cryptpad.org/tags/status-update/"/>
-    
-      <category term="interoperability" scheme="https://blog.cryptpad.org/tags/interoperability/"/>
     
   </entry>
   
@@ -98,7 +119,7 @@
     <link href="https://blog.cryptpad.org/2021/10/21/Announcing-new-apps/"/>
     <id>https://blog.cryptpad.org/2021/10/21/Announcing-new-apps/</id>
     <published>2021-10-21T05:44:03.000Z</published>
-    <updated>2021-10-20T22:28:34.403Z</updated>
+    <updated>2021-10-27T10:53:22.124Z</updated>
     
     <summary type="html">
     
@@ -110,11 +131,11 @@
     </summary>
     
     
-      <category term="presentation" scheme="https://blog.cryptpad.org/tags/presentation/"/>
-    
       <category term="interoperability" scheme="https://blog.cryptpad.org/tags/interoperability/"/>
     
       <category term="document" scheme="https://blog.cryptpad.org/tags/document/"/>
+    
+      <category term="presentation" scheme="https://blog.cryptpad.org/tags/presentation/"/>
     
   </entry>
   
@@ -123,7 +144,7 @@
     <link href="https://blog.cryptpad.org/2021/09/27/status-2021-09/"/>
     <id>https://blog.cryptpad.org/2021/09/27/status-2021-09/</id>
     <published>2021-09-27T11:14:43.000Z</published>
-    <updated>2021-09-27T10:17:31.798Z</updated>
+    <updated>2021-10-27T10:53:22.128Z</updated>
     
     <summary type="html">
     
@@ -135,11 +156,11 @@
     </summary>
     
     
+      <category term="interoperability" scheme="https://blog.cryptpad.org/tags/interoperability/"/>
+    
       <category term="ngi" scheme="https://blog.cryptpad.org/tags/ngi/"/>
     
       <category term="forms" scheme="https://blog.cryptpad.org/tags/forms/"/>
-    
-      <category term="interoperability" scheme="https://blog.cryptpad.org/tags/interoperability/"/>
     
   </entry>
   
@@ -320,9 +341,9 @@
     </summary>
     
     
-      <category term="talk" scheme="https://blog.cryptpad.org/tags/talk/"/>
-    
       <category term="roadmap" scheme="https://blog.cryptpad.org/tags/roadmap/"/>
+    
+      <category term="talk" scheme="https://blog.cryptpad.org/tags/talk/"/>
     
       <category term="status update" scheme="https://blog.cryptpad.org/tags/status-update/"/>
     
@@ -493,32 +514,6 @@ At that point fewer than 10 people used the service on a weekly
       <category term="roadmap" scheme="https://blog.cryptpad.org/tags/roadmap/"/>
     
       <category term="retrospective" scheme="https://blog.cryptpad.org/tags/retrospective/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Yesterday I made a mess</title>
-    <link href="https://blog.cryptpad.org/2019/06/14/Yesterday-I-made-a-mess/"/>
-    <id>https://blog.cryptpad.org/2019/06/14/Yesterday-I-made-a-mess/</id>
-    <published>2019-06-14T11:59:33.000Z</published>
-    <updated>2019-06-14T21:51:01.886Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;Normally when I write a blog post it’s because I have exciting news to share.
-This time it’s not a fun occasion because the only good new
-      
-    
-    </summary>
-    
-    
-      <category term="cloud" scheme="https://blog.cryptpad.org/tags/cloud/"/>
-    
-      <category term="storage" scheme="https://blog.cryptpad.org/tags/storage/"/>
-    
-      <category term="data" scheme="https://blog.cryptpad.org/tags/data/"/>
     
   </entry>
   

@@ -62,6 +62,69 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-March-2022-status-catching-up-on-recent-news" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2022/03/29/March-2022-status-catching-up-on-recent-news/" class="article-date">
+  <time datetime="2022-03-29T12:07:08.000Z" itemprop="datePublished">2022-03-29</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/03/29/March-2022-status-catching-up-on-recent-news/">March 2022 status: catching up on recent news</a>
+    </h1>
+  
+
+
+        
+            <span class="article-author">
+                by
+                Aaron MacSween
+            </span>
+        
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="March-2022-status-catching-up-on-recent-news"><a href="#March-2022-status-catching-up-on-recent-news" class="headerlink" title="March 2022 status: catching up on recent news"></a>March 2022 status: catching up on recent news</h2><p>The beginning of 2022 has been sufficiently busy that we decided to skip two of our usual monthly status update blog posts. Things have not calmed down that much in March, but we didn’t want to go any longer without an update.</p>
+<h2 id="DAPSI-wrap-up-and-FOSDEM"><a href="#DAPSI-wrap-up-and-FOSDEM" class="headerlink" title="DAPSI wrap-up and FOSDEM"></a>DAPSI wrap-up and FOSDEM</h2><p><img src="/images/dapsi-what-normally-happens.png" alt="A diagram depicting a client sending content to a server for conversion"></p>
+<p>In January we concluded the INTEROFFICE project which was sponsored by <a href="https://dapsi.ngi.eu/" target="_blank" rel="noopener">NGI DAPSI</a>. The DAPSI project administrators arranged a final event where all the projects they’d funded summarized their results in brief five-minute pitches. David Benqué, our design lead, managed to fit our most interesting results into this limited timespan. His presentation is available <a href="https://www.youtube.com/watch?v=RQ9Ll-1UEF4&amp;t=2437s" target="_blank" rel="noopener">on YouTube</a>.</p>
+<p><img src="/images/dapsi-with-interoffice.png" alt="A diagram depicting a server sending a conversion engine to a client"></p>
+<p>Approximately two weeks later David gave a somewhat longer presentation at FOSDEM, titled <strong>INTEROFFICE: Making CryptPad more interoperable with common office formats</strong>, in the <em>Collaborative Information and Content Management Applications</em> dev room. The talk’s description, video recording, slides, and links to related talks from the same track can be found on <a href="https://fosdem.org/2022/schedule/event/collabinteroffice/" target="_blank" rel="noopener">FOSDEM’s website</a>.</p>
+<p>Even more information about the project can be found on DAPSI’s website, where we are listed as one of the program’s <a href="https://dapsi.ngi.eu/success-story-interoffice-collaborating-on-office-documents-without-giving-up-privacy/" target="_blank" rel="noopener">success stories</a>.</p>
+<h2 id="Intigriti-bug-bounty-program-and-new-releases"><a href="#Intigriti-bug-bounty-program-and-new-releases" class="headerlink" title="Intigriti bug bounty program and new releases"></a>Intigriti bug bounty program and new releases</h2><p>Late in 2021 we were invited to participate in a bug bounty program coordinated by <a href="https://www.intigriti.com/" target="_blank" rel="noopener">Intigriti</a> and <a href="https://ec.europa.eu/info/news/european-commissions-open-source-programme-office-starts-bug-bounties-2022-jan-19_en" target="_blank" rel="noopener">sponsored</a> by the European Commission. The program began in mid-January and continued up until mid-March, with independent security researchers probing CryptPad’s code looking for issues which could negatively impact users.</p>
+<p>Our 4.13 release addressed a number of security issues which are described in its <a href="https://github.com/xwiki-labs/cryptpad/releases/tag/4.13.0" target="_blank" rel="noopener">release notes</a>, however, we’ve noticed that relatively few third-party instance administrators have applied these updates. Furthermore, many that have updated have not done so correctly, and in some cases this means that their users’ data may be at risk.</p>
+<p>Up until now we’ve tried to make it <em>easier to configure CryptPad correctly</em> by providing our <a href="https://docs.cryptpad.fr/en/admin_guide/installation.html" target="_blank" rel="noopener">admin installation guide</a>, including clear and detailed explanations of the update process in each release’s notes, as well as shipping a built-in diagnostics page which tells administrators what they need to correct. The trouble with this approach is that many admins don’t read the docs, the release notes, or review the diagnostics page. With this in mind, we’re starting to consider that the only reliable way to communicate with admins is through the platform’s code.</p>
+<p>Starting with our upcoming 4.14 release we plan to shift our strategy towards making CryptPad <em>harder to configure incorrectly</em>. We have made a number of changes that cause misconfigured instances to abort loading entirely, rather than proceed without the expected level of security.</p>
+<p>We are also expanding our definition of <em>correct configuration</em> to include things like <em>privacy policies</em> and <em>terms of service</em>. If an instance permits registration of user accounts but has not included either of these links then the diagnostics page will suggest that they add such pages or deactivate registration.</p>
+<p>Some of these features are already live on <a href="https://cryptpad.fr" target="_blank" rel="noopener">cryptpad.fr</a>, and we plan to tag the latest code as a release on GitHub as soon as we’ve finalized its notes.</p>
+<h2 id="What’s-next"><a href="#What’s-next" class="headerlink" title="What’s next"></a>What’s next</h2><p>Our <a href="https://github.com/xwiki-labs/cryptpad/releases/4.7.0" target="_blank" rel="noopener">4.7.0 release</a> release introduced an option permitting administrators to opt-in to inclusion in a directory of public instances. At the time no such directory existed because we wanted to confirm that there was actually interest from a sufficient number of administrators. At this point there are nineteen admins who have indicated their interest, ten of which are running an up-to-date instance which passes its tests, so we’re moving forward with the project.</p>
+<p>We’ve decided to make the 4.14 release the last major version of the 4.0 cycle and have begun preparing for a 5.0 release. We’re going to introduce a new look for CryptPad with a simpler home page, with more information moved out of the platform itself and onto our project site (<a href="https://cryptpad.org" target="_blank" rel="noopener">cryptpad.org</a>), which will also host the public instance directory.</p>
+<p>Since our team consists of only three full-time developers we’re trying to create more ways for the community to get involved with the direction of the open-source project. We’ve created <a href="https://matrix.to/#/#cryptpad:matrix.xwiki.com" target="_blank" rel="noopener">a space on the federated Matrix network</a> where members of the community can connect with each other. It offers dedicated rooms for instance administrators, developers, translators, and general discussion about the project’s roadmap and governance.</p>
+<p>As always, if you like what we’re doing and would like to support our continued effort, you can donate through <a href="https://opencollective.com/cryptpad" target="_blank" rel="noopener">our OpenCollective campaign</a> or purchase a subscription for a premium account on <a href="https://cryptpad.fr" target="_blank" rel="noopener">cryptpad.fr</a>.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://blog.cryptpad.org/2022/03/29/March-2022-status-catching-up-on-recent-news/" data-id="cl1c3ujsx0015rja8owurr939" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/roadmap/">roadmap</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-Preparing-for-2022" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2021/12/30/Preparing-for-2022/" class="article-date">
@@ -126,7 +189,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://blog.cryptpad.org/2021/12/30/Preparing-for-2022/" data-id="ckxt1jkl100001la8jtczrq2v" class="article-share-link">Share</a>
+      <a data-url="https://blog.cryptpad.org/2021/12/30/Preparing-for-2022/" data-id="cl1c3ujt2001brja8d25aln1o" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/retrospective/">retrospective</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/roadmap/">roadmap</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/status-update/">status update</a></li></ul>
@@ -142,7 +205,7 @@
     <article id="post-status-2021-11" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2021/11/24/status-2021-11/" class="article-date">
-  <time datetime="2021-11-24T15:12:48.000Z" itemprop="datePublished">2021-11-24</time>
+  <time datetime="2021-11-24T09:42:48.000Z" itemprop="datePublished">2021-11-24</time>
 </a>
     
   </div>
@@ -181,7 +244,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://blog.cryptpad.org/2021/11/24/status-2021-11/" data-id="ckwg64k560000bfaqus6d4wat" class="article-share-link">Share</a>
+      <a data-url="https://blog.cryptpad.org/2021/11/24/status-2021-11/" data-id="cl1c3ujtj0024rja8ufi9dvj9" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/status-update/">status update</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/survey/">survey</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/talk/">talk</a></li></ul>
@@ -248,7 +311,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://blog.cryptpad.org/2021/10/27/status-2021-10/" data-id="ckv9gqmkk0000x4a84532235m" class="article-share-link">Share</a>
+      <a data-url="https://blog.cryptpad.org/2021/10/27/status-2021-10/" data-id="cl1c3ujti0023rja8pwiaeb8s" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/interoperability/">interoperability</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ngi/">ngi</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/research/">research</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/status-update/">status update</a></li></ul>
@@ -305,65 +368,10 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://blog.cryptpad.org/2021/10/21/Announcing-new-apps/" data-id="ckuz84wra0000zga8m5pqboiy" class="article-share-link">Share</a>
+      <a data-url="https://blog.cryptpad.org/2021/10/21/Announcing-new-apps/" data-id="cl1c3ujs00006rja8l7x705c3" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/document/">document</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/interoperability/">interoperability</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/presentation/">presentation</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-status-2021-09" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2021/09/27/status-2021-09/" class="article-date">
-  <time datetime="2021-09-27T11:14:43.000Z" itemprop="datePublished">2021-09-27</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/09/27/status-2021-09/">September 2021 status: Changing seasons</a>
-    </h1>
-  
-
-
-        
-            <span class="article-author">
-                by
-                Aaron MacSween
-            </span>
-        
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>September is always a busy month for us as many people return from holidays to their regular schedules. Along with the changing of the physical seasons, we’re marking a number of project milestones as well.</p>
-<h2 id="Dropping-support-for-Internet-Explorer"><a href="#Dropping-support-for-Internet-Explorer" class="headerlink" title="Dropping support for Internet Explorer"></a>Dropping support for Internet Explorer</h2><p>Microsoft’s Office365 platform officially stopped supporting Internet Explorer 11 in August, and we decided it was a good time to do the same. Up until our <a href="https://github.com/xwiki-labs/cryptpad/releases/tag/4.11.0" target="_blank" rel="noopener">4.11 release</a> we were careful to maintain compatibility with this browser that had not received any new features since 2013. Moving on from IE lets us rely on modern functionality, simplifying our code and making CryptPad smaller and faster to load.</p>
-<h2 id="End-of-NLnet-PET"><a href="#End-of-NLnet-PET" class="headerlink" title="End of NLnet PET"></a>End of NLnet PET</h2><p>As described in our <a href="https://social.weho.st/web/statuses/106901028968963691" target="_blank" rel="noopener">toots</a> and <a href="https://twitter.com/cryptpad/status/1435901167524007936" target="_blank" rel="noopener">tweets</a> on September 9th, <em>4.11</em> also included significant improvements to our <em>Forms</em> app. With this second round of changes deployed we are nearly ready to close our <a href="https://nlnet.nl/project/CryptPadForms/" target="_blank" rel="noopener">third and final NLnet PET project</a> before NLnet foundation concludes their NGI0 <em>Privacy-Enhancing Technologies</em> program.</p>
-<p>NLnet’s advocacy for open-source software and direct support of its developers has had an incredible impact on our project and hundreds of others like it. If you haven’t already done so, now is a great time to skim through the list of <a href="https://nlnet.nl/project/current.html" target="_blank" rel="noopener">projects they’ve funded</a> to count how many of them you personally use!</p>
-<h2 id="DAPSI-Phase-2"><a href="#DAPSI-Phase-2" class="headerlink" title="DAPSI Phase 2"></a>DAPSI Phase 2</h2><p>We’re also approaching a milestone for the <a href="https://dapsi.ngi.eu/" target="_blank" rel="noopener">NGI DAPSI</a> project that we’ve been working on in parallel. We’ll present our latest research into client-side file format conversion, including some prototypes that we hope to deploy later in the year and our findings from the survey on file format conversion requirements that closed earlier this month. If all goes well we will receive a second round of funding to continue with the proposed work plan.</p>
-<h2 id="A-brief-pause-in-our-regular-release-schedule"><a href="#A-brief-pause-in-our-regular-release-schedule" class="headerlink" title="A brief pause in our regular release schedule"></a>A brief pause in our regular release schedule</h2><p>The next few weeks are likely to be quite intense for us. We’ll be focused on wrapping up our current projects and preparing to launch a new round of projects for 2022. There are several very promising opportunities on our horizon and it looks like we’re going to have to hire to be able to follow through on all of our plans.</p>
-<p>We’ll announce exactly what positions we’re looking to fill within our team and provide updates to our roadmap as soon as a few more details are finalized. A number of important deadlines happen to coincide in a short timespan, so we’ll take a short break from our regular release cycle and resume our usual pace later in October.</p>
-<p>Until then, thanks to all our supporters!</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://blog.cryptpad.org/2021/09/27/status-2021-09/" data-id="cktsodsj70005rba8ca5hnmhm" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/forms/">forms</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/interoperability/">interoperability</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ngi/">ngi</a></li></ul>
 
     </footer>
   </div>
@@ -390,7 +398,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/FOSDEM/" style="font-size: 10px;">FOSDEM</a> <a href="/tags/administration/" style="font-size: 11.43px;">administration</a> <a href="/tags/analytics/" style="font-size: 10px;">analytics</a> <a href="/tags/appstore/" style="font-size: 10px;">appstore</a> <a href="/tags/award/" style="font-size: 11.43px;">award</a> <a href="/tags/calendar/" style="font-size: 10px;">calendar</a> <a href="/tags/chain-of-trust/" style="font-size: 10px;">chain of trust</a> <a href="/tags/cloud/" style="font-size: 12.86px;">cloud</a> <a href="/tags/communities/" style="font-size: 10px;">communities</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/data/" style="font-size: 11.43px;">data</a> <a href="/tags/document/" style="font-size: 10px;">document</a> <a href="/tags/documentation/" style="font-size: 10px;">documentation</a> <a href="/tags/donate/" style="font-size: 15.71px;">donate</a> <a href="/tags/embed/" style="font-size: 10px;">embed</a> <a href="/tags/ethics/" style="font-size: 10px;">ethics</a> <a href="/tags/extensibility/" style="font-size: 10px;">extensibility</a> <a href="/tags/file/" style="font-size: 10px;">file</a> <a href="/tags/forms/" style="font-size: 14.29px;">forms</a> <a href="/tags/funding/" style="font-size: 20px;">funding</a> <a href="/tags/iframe/" style="font-size: 10px;">iframe</a> <a href="/tags/infrastructure/" style="font-size: 10px;">infrastructure</a> <a href="/tags/interoperability/" style="font-size: 12.86px;">interoperability</a> <a href="/tags/login/" style="font-size: 10px;">login</a> <a href="/tags/media-tag/" style="font-size: 10px;">media-tag</a> <a href="/tags/ngi/" style="font-size: 15.71px;">ngi</a> <a href="/tags/open-collective/" style="font-size: 14.29px;">open collective</a> <a href="/tags/open-source/" style="font-size: 14.29px;">open-source</a> <a href="/tags/pdf/" style="font-size: 10px;">pdf</a> <a href="/tags/performance/" style="font-size: 11.43px;">performance</a> <a href="/tags/presentation/" style="font-size: 12.86px;">presentation</a> <a href="/tags/press/" style="font-size: 10px;">press</a> <a href="/tags/privacy/" style="font-size: 12.86px;">privacy</a> <a href="/tags/quality/" style="font-size: 11.43px;">quality</a> <a href="/tags/release/" style="font-size: 11.43px;">release</a> <a href="/tags/research/" style="font-size: 14.29px;">research</a> <a href="/tags/retrospective/" style="font-size: 12.86px;">retrospective</a> <a href="/tags/roadmap/" style="font-size: 17.14px;">roadmap</a> <a href="/tags/security/" style="font-size: 14.29px;">security</a> <a href="/tags/shared-worker/" style="font-size: 10px;">shared worker</a> <a href="/tags/signing/" style="font-size: 10px;">signing</a> <a href="/tags/social-media/" style="font-size: 10px;">social media</a> <a href="/tags/spreadsheet/" style="font-size: 10px;">spreadsheet</a> <a href="/tags/status-update/" style="font-size: 18.57px;">status update</a> <a href="/tags/storage/" style="font-size: 12.86px;">storage</a> <a href="/tags/subresource-integrity/" style="font-size: 10px;">subresource integrity</a> <a href="/tags/survey/" style="font-size: 10px;">survey</a> <a href="/tags/talk/" style="font-size: 12.86px;">talk</a> <a href="/tags/upload/" style="font-size: 10px;">upload</a> <a href="/tags/web-worker/" style="font-size: 10px;">web worker</a> <a href="/tags/xss/" style="font-size: 10px;">xss</a> <a href="/tags/zero-knowledge/" style="font-size: 12.86px;">zero knowledge</a>
+      <a href="/tags/FOSDEM/" style="font-size: 10px;">FOSDEM</a> <a href="/tags/administration/" style="font-size: 11.67px;">administration</a> <a href="/tags/analytics/" style="font-size: 10px;">analytics</a> <a href="/tags/appstore/" style="font-size: 10px;">appstore</a> <a href="/tags/award/" style="font-size: 11.67px;">award</a> <a href="/tags/calendar/" style="font-size: 10px;">calendar</a> <a href="/tags/chain-of-trust/" style="font-size: 10px;">chain of trust</a> <a href="/tags/cloud/" style="font-size: 13.33px;">cloud</a> <a href="/tags/communities/" style="font-size: 10px;">communities</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/data/" style="font-size: 11.67px;">data</a> <a href="/tags/document/" style="font-size: 10px;">document</a> <a href="/tags/documentation/" style="font-size: 10px;">documentation</a> <a href="/tags/donate/" style="font-size: 16.67px;">donate</a> <a href="/tags/embed/" style="font-size: 10px;">embed</a> <a href="/tags/ethics/" style="font-size: 10px;">ethics</a> <a href="/tags/extensibility/" style="font-size: 10px;">extensibility</a> <a href="/tags/file/" style="font-size: 10px;">file</a> <a href="/tags/forms/" style="font-size: 15px;">forms</a> <a href="/tags/funding/" style="font-size: 20px;">funding</a> <a href="/tags/iframe/" style="font-size: 10px;">iframe</a> <a href="/tags/infrastructure/" style="font-size: 10px;">infrastructure</a> <a href="/tags/interoperability/" style="font-size: 13.33px;">interoperability</a> <a href="/tags/login/" style="font-size: 10px;">login</a> <a href="/tags/media-tag/" style="font-size: 10px;">media-tag</a> <a href="/tags/ngi/" style="font-size: 16.67px;">ngi</a> <a href="/tags/open-collective/" style="font-size: 15px;">open collective</a> <a href="/tags/open-source/" style="font-size: 15px;">open-source</a> <a href="/tags/pdf/" style="font-size: 10px;">pdf</a> <a href="/tags/performance/" style="font-size: 11.67px;">performance</a> <a href="/tags/presentation/" style="font-size: 13.33px;">presentation</a> <a href="/tags/press/" style="font-size: 10px;">press</a> <a href="/tags/privacy/" style="font-size: 13.33px;">privacy</a> <a href="/tags/quality/" style="font-size: 11.67px;">quality</a> <a href="/tags/release/" style="font-size: 11.67px;">release</a> <a href="/tags/research/" style="font-size: 15px;">research</a> <a href="/tags/retrospective/" style="font-size: 13.33px;">retrospective</a> <a href="/tags/roadmap/" style="font-size: 18.33px;">roadmap</a> <a href="/tags/security/" style="font-size: 15px;">security</a> <a href="/tags/shared-worker/" style="font-size: 10px;">shared worker</a> <a href="/tags/signing/" style="font-size: 10px;">signing</a> <a href="/tags/social-media/" style="font-size: 10px;">social media</a> <a href="/tags/spreadsheet/" style="font-size: 10px;">spreadsheet</a> <a href="/tags/status-update/" style="font-size: 18.33px;">status update</a> <a href="/tags/storage/" style="font-size: 13.33px;">storage</a> <a href="/tags/subresource-integrity/" style="font-size: 10px;">subresource integrity</a> <a href="/tags/survey/" style="font-size: 10px;">survey</a> <a href="/tags/talk/" style="font-size: 13.33px;">talk</a> <a href="/tags/upload/" style="font-size: 10px;">upload</a> <a href="/tags/web-worker/" style="font-size: 10px;">web worker</a> <a href="/tags/xss/" style="font-size: 10px;">xss</a> <a href="/tags/zero-knowledge/" style="font-size: 13.33px;">zero knowledge</a>
     </div>
   </div>
 
@@ -399,7 +407,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/12/">December 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/11/">November 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">October 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/09/">September 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">August 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/06/">June 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/05/">May 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">February 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">March 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/12/">December 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/11/">November 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">October 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/09/">September 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">August 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/06/">June 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/05/">May 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">February 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li></ul>
     </div>
   </div>
 
@@ -410,6 +418,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2022/03/29/March-2022-status-catching-up-on-recent-news/">March 2022 status: catching up on recent news</a>
+          </li>
         
           <li>
             <a href="/2021/12/30/Preparing-for-2022/">Preparing for 2022</a>
@@ -427,10 +439,6 @@
             <a href="/2021/10/21/Announcing-new-apps/">Announcing two new applications in early access: Document and Presentation</a>
           </li>
         
-          <li>
-            <a href="/2021/09/27/status-2021-09/">September 2021 status: Changing seasons</a>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -444,7 +452,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2021 XWiki Labs<br>
+      &copy; 2022 XWiki Labs<br>
     </div>
   </div>
 </footer>
