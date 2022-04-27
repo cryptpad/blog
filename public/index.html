@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>CryptPad Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="CryptPad Blog">
+<meta property="og:url" content="https://blog.cryptpad.org/index.html">
+<meta property="og:site_name" content="CryptPad Blog">
+<meta property="og:locale" content="default">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CryptPad Blog">
+  
+    <link rel="alternate" href="/atom.xml" title="CryptPad Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <!-- <div class="banner" id="banner"></div>
+  <div class="banner" id="banner-overlay"></div> -->
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <img src="/css/images/CryptPad_logo.svg" class="cp-logo" alt="CryptPad Logo">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">CryptPad Blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" href="https://cryptpad.fr">Use CryptPad.fr</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://blog.cryptpad.org"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-status-2022-04" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2022/04/27/status-2022-04/" class="article-date">
+  <time datetime="2022-04-27T12:53:00.000Z" itemprop="datePublished">2022-04-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/04/27/status-2022-04/">April 2022 status: The public instance list goes live</a>
+    </h1>
+  
+
+
+        
+            <span class="article-author">
+                by
+                David Benqué
+            </span>
+        
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>We have been talking about <a href="https://cryptpad.org" target="_blank" rel="noopener">our project site</a> for a while. Its main purpose is to improve communication about CryptPad (the open-source project) and to differentiate it from <a href="https://cryptpad.fr" target="_blank" rel="noopener">Cryptpad.fr</a> (the flagship instance we administer). Last week we added an important feature to the site: <a href="https://cryptpad.org/instances/" target="_blank" rel="noopener">the list of public CryptPad instances</a>.</p>
+<p><img src="/images/project-site-preview.png" alt="Screenshot of the updated project site. Clicking &quot;Try CryptPad&quot; takes visitors to the public instance list">  </p>
+<p>The purpose of this list is to make the meaning of “open-source” clearer, as most people don’t otherwise know or care about it: CryptPad can be hosted by anyone who likes, and they are free to offer the service, even in a commercial capacity. For us the development team, this list is also a new way for instance administrators to contribute to the project. <a href="https://cryptpad.fr" target="_blank" rel="noopener">Cryptpad.fr</a> exists to provide financial support for development through its paid plans. Administering this instance, for example responding to support tickets, is a significant part of our workload. When a third-party instance accepts to take care of “free” users and their associated support questions it effectively helps us to dedicate more time to improving CryptPad itself for everyone.</p>
+<p>Publishing this list is not straightforward however, especially for a privacy-focused project like CryptPad. What if we inadvertently direct people to a careless or malicious instance that puts their data at risk? To address this we put in place <a href="https://docs.cryptpad.fr/en/admin_guide/admin_panel.html#list-my-instance-in-public-directories" target="_blank" rel="noopener">a set of criteria</a> that an instance has to meet in order to be listed:</p>
+<ul>
+<li>It has to be up-to-date with the latest version, meaning the latest security fixes will be applied</li>
+<li>It has to pass a comprehensive series of tests to ensure all recommended security settings are enabled</li>
+<li>Some basic information has to be provided such as the location where encrypted data is hosted and a privacy policy</li>
+</ul>
+<p>In addition to this the instance administrators have, of course, to opt-in for their instance to be listed.</p>
+<p>As of today the list is still short, with only 2 instances aside from CryptPad.fr. However we expect to see this number rise as more of the ~20 administrators who have opted in bring their instance in line with the requirements.</p>
+<p><iframe src="https://social.weho.st/@cryptpad/108073662309134459/embed" class="mastodon-embed" style="max-width: 100%; border: 0" width="400" allowfullscreen="allowfullscreen"></iframe><script src="https://social.weho.st/embed.js" async="async"></script></p>
+<p>In addition to the list requirements, we have released two versions this month that take a stronger stance on enforcing correct configuration for <em>all</em> CryptPad instances. We want to prevent CryptPad from providing a false sense of security to users while being misconfigured by administrators and actually putting user information at risk. This is why from version <a href="https://github.com/xwiki-labs/cryptpad/releases/tag/4.14.0" target="_blank" rel="noopener">4.14.0</a> and <a href="https://github.com/xwiki-labs/cryptpad/releases/tag/4.14.1" target="_blank" rel="noopener">4.14.1</a> CryptPad will not work unless the security guarantees we expect are actually implemented.</p>
+<p>Over the coming weeks we plan to add more information to the <a href="https://cryptpad.org" target="_blank" rel="noopener">project site</a>. Some time ago we launched <a href="https://cryptpad.fr/form/#/3/form/view/0684aee21b4a36ed9dc41cfca9a27246/" target="_blank" rel="noopener">a survey</a> in which we asked people to tell us what they love about CryptPad. Their responses will be displayed on the home-page. We will also be promoting hosted instances with “Your Own CryptPad” aimed at different sectors: education, NGOs, and enterprise. These will be installed and maintained by the development team for organizations who want the benefits of their own instance.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://blog.cryptpad.org/2022/04/27/status-2022-04/" data-id="cl2hkzq2f0002j3aqnicty8m9" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/project-site/">project site</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/security/">security</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/status-update/">status update</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-March-2022-status-catching-up-on-recent-news" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2022/03/29/March-2022-status-catching-up-on-recent-news/" class="article-date">
+  <time datetime="2022-03-29T16:37:08.000Z" itemprop="datePublished">2022-03-29</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/03/29/March-2022-status-catching-up-on-recent-news/">March 2022 status: catching up on recent news</a>
+    </h1>
+  
+
+
+        
+            <span class="article-author">
+                by
+                Aaron MacSween
+            </span>
+        
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>The beginning of 2022 has been sufficiently busy that we decided to skip two of our usual monthly status update blog posts. Things have not calmed down that much in March, but we didn’t want to go any longer without an update.</p>
+<h2 id="DAPSI-wrap-up-and-FOSDEM"><a href="#DAPSI-wrap-up-and-FOSDEM" class="headerlink" title="DAPSI wrap-up and FOSDEM"></a>DAPSI wrap-up and FOSDEM</h2><p><img src="/images/dapsi-what-normally-happens.png" alt="A diagram depicting a client sending content to a server for conversion"></p>
+<p>In January we concluded the INTEROFFICE project which was sponsored by <a href="https://dapsi.ngi.eu/" target="_blank" rel="noopener">NGI DAPSI</a>. The DAPSI project administrators arranged a final event where all the projects they’d funded summarized their results in brief five-minute pitches. David Benqué, our design lead, managed to fit our most interesting results into this limited timespan. His presentation is available <a href="https://www.youtube.com/watch?v=RQ9Ll-1UEF4&amp;t=2437s" target="_blank" rel="noopener">on YouTube</a>.</p>
+<p><img src="/images/dapsi-with-interoffice.png" alt="A diagram depicting a server sending a conversion engine to a client"></p>
+<p>Approximately two weeks later David gave a somewhat longer presentation at FOSDEM, titled <strong>INTEROFFICE: Making CryptPad more interoperable with common office formats</strong>, in the <em>Collaborative Information and Content Management Applications</em> dev room. The talk’s description, video recording, slides, and links to related talks from the same track can be found on <a href="https://fosdem.org/2022/schedule/event/collabinteroffice/" target="_blank" rel="noopener">FOSDEM’s website</a>.</p>
+<p>Even more information about the project can be found on DAPSI’s website, where we are listed as one of the program’s <a href="https://dapsi.ngi.eu/success-story-interoffice-collaborating-on-office-documents-without-giving-up-privacy/" target="_blank" rel="noopener">success stories</a>.</p>
+<h2 id="Intigriti-bug-bounty-program-and-new-releases"><a href="#Intigriti-bug-bounty-program-and-new-releases" class="headerlink" title="Intigriti bug bounty program and new releases"></a>Intigriti bug bounty program and new releases</h2><p>Late in 2021 we were invited to participate in a bug bounty program coordinated by <a href="https://www.intigriti.com/" target="_blank" rel="noopener">Intigriti</a> and <a href="https://ec.europa.eu/info/news/european-commissions-open-source-programme-office-starts-bug-bounties-2022-jan-19_en" target="_blank" rel="noopener">sponsored</a> by the European Commission. The program began in mid-January and continued up until mid-March, with independent security researchers probing CryptPad’s code looking for issues which could negatively impact users.</p>
+<p>Our 4.13 release addressed a number of security issues which are described in its <a href="https://github.com/xwiki-labs/cryptpad/releases/tag/4.13.0" target="_blank" rel="noopener">release notes</a>, however, we’ve noticed that relatively few third-party instance administrators have applied these updates. Furthermore, many that have updated have not done so correctly, and in some cases this means that their users’ data may be at risk.</p>
+<p>Up until now we’ve tried to make it <em>easier to configure CryptPad correctly</em> by providing our <a href="https://docs.cryptpad.fr/en/admin_guide/installation.html" target="_blank" rel="noopener">admin installation guide</a>, including clear and detailed explanations of the update process in each release’s notes, as well as shipping a built-in diagnostics page which tells administrators what they need to correct. The trouble with this approach is that many admins don’t read the docs, the release notes, or review the diagnostics page. With this in mind, we’re starting to consider that the only reliable way to communicate with admins is through the platform’s code.</p>
+<p>Starting with our upcoming 4.14 release we plan to shift our strategy towards making CryptPad <em>harder to configure incorrectly</em>. We have made a number of changes that cause misconfigured instances to abort loading entirely, rather than proceed without the expected level of security.</p>
+<p>We are also expanding our definition of <em>correct configuration</em> to include things like <em>privacy policies</em> and <em>terms of service</em>. If an instance permits registration of user accounts but has not included either of these links then the diagnostics page will suggest that they add such pages or deactivate registration.</p>
+<p>Some of these features are already live on <a href="https://cryptpad.fr" target="_blank" rel="noopener">cryptpad.fr</a>, and we plan to tag the latest code as a release on GitHub as soon as we’ve finalized its notes.</p>
+<h2 id="What’s-next"><a href="#What’s-next" class="headerlink" title="What’s next"></a>What’s next</h2><p>Our <a href="https://github.com/xwiki-labs/cryptpad/releases/4.7.0" target="_blank" rel="noopener">4.7.0 release</a> release introduced an option permitting administrators to opt-in to inclusion in a directory of public instances. At the time no such directory existed because we wanted to confirm that there was actually interest from a sufficient number of administrators. At this point there are nineteen admins who have indicated their interest, ten of which are running an up-to-date instance which passes its tests, so we’re moving forward with the project.</p>
+<p>We’ve decided to make the 4.14 release the last major version of the 4.0 cycle and have begun preparing for a 5.0 release. We’re going to introduce a new look for CryptPad with a simpler home page, with more information moved out of the platform itself and onto our project site (<a href="https://cryptpad.org" target="_blank" rel="noopener">cryptpad.org</a>), which will also host the public instance directory.</p>
+<p>Since our team consists of only three full-time developers we’re trying to create more ways for the community to get involved with the direction of the open-source project. We’ve created <a href="https://matrix.to/#/#cryptpad:matrix.xwiki.com" target="_blank" rel="noopener">a space on the federated Matrix network</a> where members of the community can connect with each other. It offers dedicated rooms for instance administrators, developers, translators, and general discussion about the project’s roadmap and governance.</p>
+<p>As always, if you like what we’re doing and would like to support our continued effort, you can donate through <a href="https://opencollective.com/cryptpad" target="_blank" rel="noopener">our OpenCollective campaign</a> or purchase a subscription for a premium account on <a href="https://cryptpad.fr" target="_blank" rel="noopener">cryptpad.fr</a>.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://blog.cryptpad.org/2022/03/29/March-2022-status-catching-up-on-recent-news/" data-id="cl2hkzq200000j3aq9qmkwb8j" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/roadmap/">roadmap</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-Preparing-for-2022" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2021/12/30/Preparing-for-2022/" class="article-date">
+  <time datetime="2021-12-30T07:22:20.000Z" itemprop="datePublished">2021-12-30</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/12/30/Preparing-for-2022/">Preparing for 2022</a>
+    </h1>
+  
+
+
+        
+            <span class="article-author">
+                by
+                Aaron MacSween
+            </span>
+        
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>With the end of the year nearly upon us I am keeping up my tradition of writing a <a href="/tags/retrospective/">retrospective</a> of what the CryptPad team has done over the past twelve months and an overview of our plans for the next twelve.</p>
+<h2 id="The-year-in-retrospect"><a href="#The-year-in-retrospect" class="headerlink" title="The year in retrospect"></a>The year in retrospect</h2><h3 id="NGI-research"><a href="#NGI-research" class="headerlink" title="NGI research"></a>NGI research</h3><p>We’ve been very fortunate to have received continued support from the European Commission’s <a href="https://www.ngi.eu/" target="_blank" rel="noopener">Next Generation Internet Initiative</a>. We completed two research projects funded by <a href="https://nlnet.nl/PET/" target="_blank" rel="noopener">NGI0 PET</a> and launched a new project funded by <a href="https://dapsi.ngi.eu/" target="_blank" rel="noopener">NGI DAPSI</a> which will wrap up in January.</p>
+<p>We released the last components of the <a href="https://nlnet.nl/project/Cryptpad-Communities/" target="_blank" rel="noopener"><em>CryptPad for Communities</em> project</a> which made the platform quite a bit easier to set up and administrate. We deployed our <a href="https://docs.cryptpad.fr/en/admin_guide/index.html" target="_blank" rel="noopener">administrator guide</a>, added a variety of configuration options on the <a href="https://docs.cryptpad.fr/en/admin_guide/admin_panel.html" target="_blank" rel="noopener">admin panel</a>, and developed an instance diagnostics page to automatically detect common configuration issues and suggest remediations.</p>
+<p>NGI0 also funded this year’s <a href="https://nlnet.nl/project/CryptPadForms/" target="_blank" rel="noopener"><em>Dialogue</em> project</a> which comprised of a new <em>Form</em> app and a variety of supporting features, including a new <em>calendar</em> app, an internal reminders API, and more admin panel features for broadcasting instance-wide announcements.</p>
+<p>In <a href="/2021/04/26/status-april-2021/">our April status update</a> we introduced the DAPSI-funded <em>INTEROFFICE</em> project, through which we’ve aimed to improve interoperability with other platforms through the use of common file extensions. Unlike most online platforms which convert between formats on their cloud infrastructure, we’ve had to develop new methods which process data entirely in your browser so that your private data is never revealed to anyone.</p>
+<p><img src="/images/expected-conversion-workflows.png" alt="A graph of desired workflows for conversion between different formats based on the results of our user studies"></p>
+<p>Our <a href="/2021/10/21/Announcing-new-apps/">October status update</a> went further, announcing our integration of OnlyOffice’s Document and Presentation editors. These are fully open-source and available to anyone self-hosting the platform but remain in <em>early access</em> for premium users on <a href="https://cryptpad.fr" target="_blank" rel="noopener">CryptPad.fr</a>. This phased release model is new for us, but so far it’s been very effective as a means to solicit quality feedback from a few active users without us getting overwhelmed by duplicated bug reports.</p>
+<h3 id="Community-contributions"><a href="#Community-contributions" class="headerlink" title="Community contributions"></a>Community contributions</h3><p>Each new feature we add to the platform requires text in the form of labels for buttons, descriptions of the effects of different account and document settings, and of course various warnings, prompts, and error messages. CryptPad is hosted on hundreds of different servers all around the world and used by people who don’t necessarily speak English or French. As such, all that text needs to be translated.</p>
+<p>For the past few years, German-speaking members of our community have very reliably kept up with all the new text we’ve added, and have even gone as far as to translate our user guide. This year they’ve been joined by native speakers of Japanese, Russian, and Brazilian Portuguese to make the platform more accessible to a much broader range of people.</p>
+<p><img src="/images/translations-status-2021-12.png" alt="Status of CryptPad&#39;s translations as of December 2021 with six languages at least 99% complete"></p>
+<h3 id="Project-maintenance-and-administration"><a href="#Project-maintenance-and-administration" class="headerlink" title="Project maintenance and administration"></a>Project maintenance and administration</h3><p>Revenue from premium accounts on CryptPad.fr goes towards answering premium support tickets first. Any funds that are left over are combined with donations to our <a href="https://opencollective.com/cryptpad" target="_blank" rel="noopener">OpenCollective campaign</a> to fund all the work that isn’t covered by our research grants. That allows us to review translations, keep our documentation up to date, write detailed release notes, triage bug reports, and answer questions submitted via email or social media.</p>
+<p>This year there have been multiple occasions when a new version of a major browser broke support for critical features, forcing us to drop whatever we were doing at the time and find alternative solutions for these regressions. When code isn’t simply rotting out from underneath us, there are always critical security notices that need to be attended to, most recently with the sudden disclosure of <a href="https://en.wikipedia.org/wiki/Log4Shell" target="_blank" rel="noopener">vulnerabilities in the log4j library</a>.</p>
+<p>This year we saw an increasing number of subscriptions and donations from our supporters which allowed us to keep up with these surprises and to catch up on a bit of a backlog of maintenance. It helped that 2021 was overall somewhat less surprising than 2020, but we don’t want to rely on that continuing to be the case.</p>
+<h2 id="What-the-future-holds"><a href="#What-the-future-holds" class="headerlink" title="What the future holds"></a>What the future holds</h2><p>Our general plan for the coming year is to scale back the proportion of our budget which is covered by European research grants and to focus more heavily on projects sponsored directly by clients. To that end, we’ll soon add a number of pages to our project website (<a href="https://cryptpad.org" target="_blank" rel="noopener">CryptPad.org</a>) which will differentiate the open-source project from our commercial offering on CryptPad.fr. We’ll list various support packages tailored for <em>education</em>, <em>enterprises</em>, and <em>NGOs</em>.</p>
+<p><img src="/images/cryptpad-org-2021-12.png" alt="Screenshot of CryptPad.org, providing general information about the open-source project"></p>
+<p>Earlier this year we included options in the platform’s admin panel to allow administrators to mark their instance as intended for public usage, and to opt-in to inclusion in a directory of public instances. We wanted to wait and see if there was sufficient interest in such a listing before we went to the trouble of building it. The good news is that at this point 11 operators have opted in, so it seems worthwhile to build. The bad news is that a number of these don’t seem to be configured correctly. We plan to reach out to these administrators in the near future to rectify these concerns before including them in the directory.</p>
+<h3 id="Wrapping-up-our-the-INTEROFFICE-project"><a href="#Wrapping-up-our-the-INTEROFFICE-project" class="headerlink" title="Wrapping up our the INTEROFFICE project"></a>Wrapping up our the INTEROFFICE project</h3><p>The last remaining milestone for our INTEROFFICE project is to publish our client-side office conversion utilities as an open-source software library usable outside of CryptPad. After that our work and that of the other grantees will be evaluated by NGI DAPSI’s expert reviewers, but this won’t be the end of our efforts to improve office functionality.</p>
+<p>Local computation (executing functions on your device instead of one in the cloud) is a critical component of privacy-respecting software, but there are other clear advantages to it. It enables more functionality to continue to operate when you are offline or on an unstable network connection. It also makes it feasible to host web services on less powerful devices, potentially making network infrastructure accessible to a wider audience. We hope that these diverse interests will align more developers to work toward the same goals for the public’s benefit.</p>
+<p>We plan to present the results of this project at FOSDEM in early February and hopefully to continue working with the broader community to make this approach the norm.</p>
+<h3 id="Stronger-and-more-diverse-authentication-measures"><a href="#Stronger-and-more-diverse-authentication-measures" class="headerlink" title="Stronger and more diverse authentication measures"></a>Stronger and more diverse authentication measures</h3><p>Many administrators of third-party instances will be happy to hear that we’re going to start working on adding support for identity provider services like LDAP and SSO. This will allow them to restrict who can access their services, adding an extra layer of security for existing users of their service.</p>
+<p>We’ll complement this top-down approach to security with another bottom-up method, employing various second-factor authentication methods to give individual users more control over access to their account. We hope to introduce both app-based TOTP and emailed magic links. We’ll publish a survey in the near future to determine how to prioritize these and possibly other methods.</p>
+<h3 id="Better-support-for-offline-access"><a href="#Better-support-for-offline-access" class="headerlink" title="Better support for offline access"></a>Better support for offline access</h3><p>With all of our pending research projects wrapping up we’re going to revisit some promising prototypes which we developed in late 2020. We experimented with using the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API" target="_blank" rel="noopener">Service Worker API</a> to cache CryptPad’s browser code, allowing it to be loaded as normal even while fully offline. The basic concept is pretty simple, but it required a lot of additional controls in the UI to choose to operate offline, to update the cached version, to allow persistent storage on the device to be used, and so on.</p>
+<p>Solving these basic usability problems related to offline functionality will provide a solid basis for us to develop CryptPad to be more like a mobile or desktop application, paving the way for more advanced (and highly requested) features like filesystem synchronization.</p>
+<h3 id="Accessibility"><a href="#Accessibility" class="headerlink" title="Accessibility"></a>Accessibility</h3><p>We’ve corresponded with a number of groups that aim to improve the state of accessibility in open-source software, but we’ve lacked the time to follow through on their recommendations in a meaningful way. This is going to be a clear priority for our team with dedicated time on our roadmap in the new year.</p>
+<h3 id="Hiring"><a href="#Hiring" class="headerlink" title="Hiring"></a>Hiring</h3><p>There’s a lot more that we would like to do in 2022, but realistically the work described above is likely to take a lot of time to get right. In order to accomplish more of our goals we’ll need to hire additional team members, possibly as many as three.</p>
+<p>If you are a web application developer with an interest in privacy and usability we want to hear from you. Our team works remotely, but for accounting purposes we’d prefer candidates from within the EU. We offer flexible working hours, competitive salaries for western Europe, four-day weeks every second week, and the opportunity to serve the public interest through free software.</p>
+<p>If you think you could help us accomplish our goals, send us (<a href="mailto:jobs@cryptpad.fr" target="_blank" rel="noopener">jobs@cryptpad.fr</a>) a brief introduction and a CV or resume indicating your relevant qualifications or experience. We tend to receive a disproportionate number of applications from certain demographics. To account for that bias, we’d like to encourage members of communities that are underrepresented in the tech industry to overcome their hesitation and apply. We want to hear to from you!</p>
+<h2 id="Get-ready"><a href="#Get-ready" class="headerlink" title="Get ready!"></a>Get ready!</h2><p>We’ve gotten this far because we’ve had your help. You’ve introduced CryptPad to friends, family, and colleagues. You’ve written <a href="https://marker.io/blog/write-bug-report" target="_blank" rel="noopener">great bug reports</a> that have helped us find and fix stubborn problems. You’ve <a href="https://social.weho.st/@cryptpad" target="_blank" rel="noopener">boosted</a>, <a href="https://twitter.com/cryptpad" target="_blank" rel="noopener">retweeted</a>, and <a href="https://pixelfed.social/cryptpad_design" target="_blank" rel="noopener">liked</a> our updates. You’ve <a href="https://weblate.cryptpad.fr/projects/cryptpad/app/" target="_blank" rel="noopener">translated the platform</a> for your community, <a href="https://cryptpad.fr/accounts/" target="_blank" rel="noopener">subscribed to a premium subscription</a>, <a href="https://opencollective.com/cryptpad" target="_blank" rel="noopener">donated to our cause</a>, all of which have had a tremendous impact.</p>
+<p>We’re extremely grateful for all your support, proud of what we’ve created together, and excited to continue this journey with you in the new year!</p>
+<p>See you in 2022!</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://blog.cryptpad.org/2021/12/30/Preparing-for-2022/" data-id="ckxt1jkl100001la8jtczrq2v" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/retrospective/">retrospective</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/roadmap/">roadmap</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/status-update/">status update</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-status-2021-11" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2021/11/24/status-2021-11/" class="article-date">
+  <time datetime="2021-11-24T15:12:48.000Z" itemprop="datePublished">2021-11-24</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/11/24/status-2021-11/">November 2021 status: Talks and testimonials</a>
+    </h1>
+  
+
+
+        
+            <span class="article-author">
+                by
+                David Benqué
+            </span>
+        
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>This month we released some minor fixes with <a href="https://github.com/xwiki-labs/cryptpad/releases/tag/4.12.1" target="_blank" rel="noopener">4.12.1</a>. We have been busy making preparations for the upcoming upgrade to OnlyOffice 6.4.2. This will include the much-requested conditional formatting in Sheets and dark mode support. We have also spent time considering strategy and long-term goals as we prepare the project website, which brings us to:</p>
+<h2 id="Call-for-project-site-testimonials"><a href="#Call-for-project-site-testimonials" class="headerlink" title="Call for project site testimonials"></a>Call for project site testimonials</h2><p>As we have <a href="https://blog.cryptpad.org/2021/09/15/Relocating-our-blog/">mentioned before</a> we are currently working on a project website for CryptPad. This will be used to promote the project and to better communicate the distinction between CryptPad and cryptpad.fr (the flagship instance).</p>
+<p>The new site will include a public instance list, new pricing for hosted instances, and pages tailored to various sectors such as NGOs, education, and enterprise.</p>
+<p>We are planning to include testimonials on the site. If you use CryptPad and have a few minutes to share some words of support using <a href="https://cryptpad.fr/form/#/2/form/view/1NDX7MEkhzNz1FCrcjCxmvjgIj24QjWNncZygR60Ch8/" target="_blank" rel="noopener">our new survey</a>, that would be much appreciated.</p>
+<h2 id="Recent-and-upcoming-talks"><a href="#Recent-and-upcoming-talks" class="headerlink" title="Recent and upcoming talks"></a>Recent and upcoming talks</h2><p>Ludovic presented CryptPad at the <a href="https://www.campus-du-libre.org/prog.php" target="_blank" rel="noopener">Campus du Libre</a> on 6th November in Lyon. We don’t have video (yet) but the <a href="https://www.campus-du-libre.org/Supports/CampusDuLibre2021-CryptPad.pdf" target="_blank" rel="noopener">slides are online</a> (in French).</p>
+<p>David will present CryptPad to a healthcare and free software audience on December 10th as part of <a href="https://www.gnuhealthcon.org/2021/" target="_blank" rel="noopener">GNU Health Con 2021</a>.</p>
+<p><img src="/images/GHcon.png" alt="Promotion image for CryptPad at GNU Health Con 2012"></p>
+<p>That’s it for this month. We are looking forward to launching the new OnlyOffice editors, you will probably read about that in the next status update.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://blog.cryptpad.org/2021/11/24/status-2021-11/" data-id="ckwg64k560000bfaqus6d4wat" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/status-update/">status update</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/survey/">survey</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/talk/">talk</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-status-2021-10" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2021/10/27/status-2021-10/" class="article-date">
+  <time datetime="2021-10-27T05:27:29.000Z" itemprop="datePublished">2021-10-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/10/27/status-2021-10/">October 2021 status: A pitch and a farewell </a>
+    </h1>
+  
+
+
+        
+            <span class="article-author">
+                by
+                David Benqué
+            </span>
+        
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>This month we released CryptPad <a href="https://github.com/xwiki-labs/cryptpad/releases/4.12.0" target="_blank" rel="noopener">4.12</a> with some much anticipated new applications.</p>
+<h2 id="NGI-DAPSI-Pitch-Day"><a href="#NGI-DAPSI-Pitch-Day" class="headerlink" title="NGI DAPSI Pitch Day"></a>NGI DAPSI Pitch Day</h2><p>On the first day of the month we took part in the DAPSI Pitch Day. All of the funded projects gave updates on their progress. We were in very good company alongside <a href="https://delta.chat" target="_blank" rel="noopener">Delta Chat</a>, <a href="https://postmarketos.org/" target="_blank" rel="noopener">postmarketOS</a>, and <a href="https://dapsi.ngi.eu/meet-the-round-2-innovators-moving-to-phase-2/" target="_blank" rel="noopener">many more</a>. All projects were succesful in moving to phase 2.</p>
+<p><a href="https://twitter.com/cryptpad/status/1443875782376542231" target="_blank" rel="noopener"><img src="/images/DAPSI_pitch_tweet.png" alt="Tweet from NGI DAPSI about the pitch day"></a></p>
+<p>We were happy to present the progress on INTEROFFICE, our project to improve the import/export of popular office formats to/from CryptPad. Most of the technical work on Web Assembly converters is done. This means all conversions happen in the browser (rather that on the server like in most other tools) and we can do this without seeing any of the content that is being converted.</p>
+<p>Part of the project is to release this work as open-source packages so other projects can benefit from this work. We are planning to do this in December once the libraries have been thoroughly tested on CryptPad.</p>
+<p><img src="/images/open-in_preview.png" alt="Preview of the new &quot;Open in...&quot; feature. Right clicking a compatible file in the drive shows this menu"></p>
+<p>CryptPad users will benefit too, with new functionality becoming available on the platform. Files in popular formats such as .docx, .xlsx, .pptx, .odt, .ods, and .odp are no longer being treated only as static files once they are uploaded to CryptPad. A new menu item called “Open in …” makes them editable in the corresponding application. Which brings us to: </p>
+<h2 id="Two-new-app-releases"><a href="#Two-new-app-releases" class="headerlink" title="Two new app releases"></a>Two new app releases</h2><p>We have long been planning to add OnlyOffice’s Document and Presentation applications to CryptPad, completing the suite that  started with Spreadsheet in 2019. The improved inter-operability we built with INTEROFFICE makes this a good time to finally release these applications, to make the most our of the new imports and exports. As part of the <a href="https://github.com/xwiki-labs/cryptpad/releases/4.12.0" target="_blank" rel="noopener">4.12 release</a> we launched these new apps as “early access”, which means only subscribers on cryptpad.fr can create new documents and they are available on other instances if administrators opt-in. We <a href="https://blog.cryptpad.org/2021/10/21/Announcing-new-apps/">wrote about this in more detail in our last post</a>.</p>
+<p><img src="/images/OO-doc-preview.png" alt="Preview of the new Document application."></p>
+<p><img src="/images/OO-slide-preview.png" alt="Preview of the new Presentation application."></p>
+<p>This launch made us reconsider our current release schedule. We may revisit this in the near future and move towards a slower pace where each release would have bigger changes. This would potentially come with a more readable naming scheme as well, perhaps taking a leaf out of Canonical’s playbook where Ubuntu releases are time-stamped rather than numbered. We will come back to this, likely in the new year, and write about any changes here.</p>
+<h2 id="NGI0-PET-coming-to-an-end"><a href="#NGI0-PET-coming-to-an-end" class="headerlink" title="NGI0 PET coming to an end"></a>NGI0 PET coming to an end</h2><p>This month marks the end of the <a href="https://nlnet.nl/PET" target="_blank" rel="noopener">NGI0 <em>Privacy Enhancing Technologies</em></a> program (previously known as NLnet PET), that will wrap up on October 31st. CryptPad has benefited a lot from this funding, with 3 projects over 3 years. To name but a few, these are some of the major features that were made possible through this support: </p>
+<ul>
+<li>Teams (incl. team drive, roles, etc)</li>
+<li>Full documentation for users, administrators, and developers</li>
+<li>Calendars</li>
+<li>The Form application</li>
+</ul>
+<p>We are very thankful for this ongoing support. NGI0 created an approachable way for development teams like ours to access funds from the European Commission, creating real impact with minimal red tape. The fund was established by NLnet with financial support from the European Commission’s <a href="https://ngi.eu" target="_blank" rel="noopener">Next Generation Internet</a> programme, under the aegis of DG Communications Networks, Content and Technology under <a href="https://cordis.europa.eu/project/id/825310" target="_blank" rel="noopener">grant agreement No 825310</a>.</p>
+<p>This concludes this month’s updates. Next up for the team is some thorough testing of the new applications and fixing any issues that get reported by early-access testers. Besides this we will be continuing with work on INTEROFFICE towards the project conclusion in January 2022.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://blog.cryptpad.org/2021/10/27/status-2021-10/" data-id="ckv9gqmkk0000x4a84532235m" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/interoperability/">interoperability</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ngi/">ngi</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/research/">research</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/status-update/">status update</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+
+
+  <nav id="page-nav">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/2/">Next</a>
+  </nav>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/FOSDEM/" style="font-size: 10px;">FOSDEM</a> <a href="/tags/administration/" style="font-size: 11.43px;">administration</a> <a href="/tags/analytics/" style="font-size: 10px;">analytics</a> <a href="/tags/appstore/" style="font-size: 10px;">appstore</a> <a href="/tags/award/" style="font-size: 11.43px;">award</a> <a href="/tags/calendar/" style="font-size: 10px;">calendar</a> <a href="/tags/chain-of-trust/" style="font-size: 10px;">chain of trust</a> <a href="/tags/cloud/" style="font-size: 12.86px;">cloud</a> <a href="/tags/communities/" style="font-size: 10px;">communities</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/data/" style="font-size: 11.43px;">data</a> <a href="/tags/document/" style="font-size: 10px;">document</a> <a href="/tags/documentation/" style="font-size: 10px;">documentation</a> <a href="/tags/donate/" style="font-size: 15.71px;">donate</a> <a href="/tags/embed/" style="font-size: 10px;">embed</a> <a href="/tags/ethics/" style="font-size: 10px;">ethics</a> <a href="/tags/extensibility/" style="font-size: 10px;">extensibility</a> <a href="/tags/file/" style="font-size: 10px;">file</a> <a href="/tags/forms/" style="font-size: 14.29px;">forms</a> <a href="/tags/funding/" style="font-size: 20px;">funding</a> <a href="/tags/iframe/" style="font-size: 10px;">iframe</a> <a href="/tags/infrastructure/" style="font-size: 10px;">infrastructure</a> <a href="/tags/interoperability/" style="font-size: 12.86px;">interoperability</a> <a href="/tags/login/" style="font-size: 10px;">login</a> <a href="/tags/media-tag/" style="font-size: 10px;">media-tag</a> <a href="/tags/ngi/" style="font-size: 15.71px;">ngi</a> <a href="/tags/open-collective/" style="font-size: 14.29px;">open collective</a> <a href="/tags/open-source/" style="font-size: 14.29px;">open-source</a> <a href="/tags/pdf/" style="font-size: 10px;">pdf</a> <a href="/tags/performance/" style="font-size: 11.43px;">performance</a> <a href="/tags/presentation/" style="font-size: 12.86px;">presentation</a> <a href="/tags/press/" style="font-size: 10px;">press</a> <a href="/tags/privacy/" style="font-size: 12.86px;">privacy</a> <a href="/tags/project-site/" style="font-size: 10px;">project site</a> <a href="/tags/quality/" style="font-size: 11.43px;">quality</a> <a href="/tags/release/" style="font-size: 11.43px;">release</a> <a href="/tags/research/" style="font-size: 14.29px;">research</a> <a href="/tags/retrospective/" style="font-size: 12.86px;">retrospective</a> <a href="/tags/roadmap/" style="font-size: 17.14px;">roadmap</a> <a href="/tags/security/" style="font-size: 15.71px;">security</a> <a href="/tags/shared-worker/" style="font-size: 10px;">shared worker</a> <a href="/tags/signing/" style="font-size: 10px;">signing</a> <a href="/tags/social-media/" style="font-size: 10px;">social media</a> <a href="/tags/spreadsheet/" style="font-size: 10px;">spreadsheet</a> <a href="/tags/status-update/" style="font-size: 18.57px;">status update</a> <a href="/tags/storage/" style="font-size: 12.86px;">storage</a> <a href="/tags/subresource-integrity/" style="font-size: 10px;">subresource integrity</a> <a href="/tags/survey/" style="font-size: 10px;">survey</a> <a href="/tags/talk/" style="font-size: 12.86px;">talk</a> <a href="/tags/upload/" style="font-size: 10px;">upload</a> <a href="/tags/web-worker/" style="font-size: 10px;">web worker</a> <a href="/tags/xss/" style="font-size: 10px;">xss</a> <a href="/tags/zero-knowledge/" style="font-size: 12.86px;">zero knowledge</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/04/">April 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">March 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/12/">December 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/11/">November 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">October 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/09/">September 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">August 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/06/">June 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/05/">May 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">February 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2022/04/27/status-2022-04/">April 2022 status: The public instance list goes live</a>
+          </li>
+        
+          <li>
+            <a href="/2022/03/29/March-2022-status-catching-up-on-recent-news/">March 2022 status: catching up on recent news</a>
+          </li>
+        
+          <li>
+            <a href="/2021/12/30/Preparing-for-2022/">Preparing for 2022</a>
+          </li>
+        
+          <li>
+            <a href="/2021/11/24/status-2021-11/">November 2021 status: Talks and testimonials</a>
+          </li>
+        
+          <li>
+            <a href="/2021/10/27/status-2021-10/">October 2021 status: A pitch and a farewell </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2022 XWiki Labs<br>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="https://cryptpad.fr" class="mobile-nav-link">Use CryptPad.fr</a>
+  
+</nav>
+    
+
+<script src="/js/jquery.min.js"></script>
+
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
