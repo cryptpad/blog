@@ -1,0 +1,12 @@
+---
+layout: layouts/main
+eleventyExcludeFromCollections: true
+---
+
+<h1>CryptPad Blog</h1>
+
+<ul>
+{% for item in collections.all | reverse %}
+    <li><a href="{{ item.url }}" >{{ item.data.title }}</a> {{ item.data.tags }} </li>
+{% endfor %}
+</ul>
