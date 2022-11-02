@@ -3,13 +3,12 @@ layout: layouts/main
 eleventyExcludeFromCollections: true
 ---
 
-<ul>
+
 {% for item in collections.all | reverse %}
-    <li>
-        <a href="{{ item.url }}" >{{ item.data.title }}</a><br>
+    <article>
+        <a href="{{ item.url }}" ><h2>{{ item.data.title }}</h2></a><br>
         {% for tag in item.data.tags %}
             <a href="/tags/{{ tag | slugify }}">{{ tag }}</a> 
         {% endfor %}
-    </li>
+    </article>
 {% endfor %}
-</ul>
