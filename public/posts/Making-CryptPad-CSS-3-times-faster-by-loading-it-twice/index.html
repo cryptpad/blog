@@ -1,20 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title></title>
-
-</head>
-
-<body>
-    <div class="container">
-        <main>
-            
-            <script src="https://cryptpad.fr/common/media-tag-nacl.min.js"></script>
+<script src="https://cryptpad.fr/common/media-tag-nacl.min.js"></script>
 <p>In CryptPad development, we have always tried to push the limits of the technology. As you might know, we don't minify any of our javascript code and we have no build system, yet CryptPad is still faster than many similar projects which do. In recent profiling, we determined that the biggest cause of slow loading was compilng of less stylesheets.</p>
 <p>All of the styles for CryptPad are written in <a href="http://lesscss.org/">Less</a> CSS templating language and because we don't have a build system, when you load a page on CryptPad, it downloads the less compiler and runs it in your browser. When the less has been compiled the first time, it is cached in the browser's <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage">localStorage</a> so that it doesn't need to be compiled again (until next release). Unfortunately, the way we structured CryptPad Less code led to this taking a long time.</p>
 <p>CSS by its nature is very much like object inheritence, a design pattern popular in the 1990s which has <a href="https://link.springer.com/chapter/10.1007/1-85233-856-3_23">since</a> <a href="https://codeburst.io/inheritance-is-evil-stop-using-it-6c4f1caf5117">been</a> <a href="http://neethack.com/2017/04/Why-inheritance-is-bad/">discredited</a>. In a bid to keep our styles under control, we decided to make heavy use of Less <a href="http://lesscss.org/features/#mixins-feature">mixins</a>. The idea was that we didn't want our CSS code to &quot;speak until it was spoken to&quot;.</p>
@@ -191,10 +175,3 @@
 <h2>There you have it</h2>
 <p>Every Less file now gets loaded twice, first it is loaded by the <code>@include (reference)</code> call, where it is parsed in order to expose the <code>.&lt;filename&gt;_main()</code> mixin, then it is loaded a second time as an independent file. Importantly, however, once it is compiled it is stored into localStorage and the toolbar CSS which is compiled when you go to the Rich Text app is the exact same CSS which will be used when you go to the Code/Markdown app. This feature is available in the <code>staging</code> branch of the CryptPad project and will be on CryptPad.fr in the next release.</p>
 <p>We could make it even faster, by separating the main content of the Less files from the <code>.&lt;filename&gt;_vars()</code> and <code>.&lt;filename&gt;_main()</code> mixins, essentially making header files, in C/C++ parlance. And if we find in future profiling that less compiling remains a signficant performance penalty, there's a good chance that we will.</p>
-
-            
-        </main>
-    </div>
-</body>
-
-</html>

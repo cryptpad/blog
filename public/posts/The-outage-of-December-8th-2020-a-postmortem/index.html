@@ -1,20 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title></title>
-
-</head>
-
-<body>
-    <div class="container">
-        <main>
-            
-            <p>On December 8th, 2020 a malfunction in the water-cooling system at a data-center in Roubaix, France caused an unrecoverable error in the physical machine which hosts CryptPad.fr. The service was unavailable for approximately 27 hours while we diagnosed a corrupted OS, provisioned a new server, and migrated user data to the new system.</p>
+<p>On December 8th, 2020 a malfunction in the water-cooling system at a data-center in Roubaix, France caused an unrecoverable error in the physical machine which hosts CryptPad.fr. The service was unavailable for approximately 27 hours while we diagnosed a corrupted OS, provisioned a new server, and migrated user data to the new system.</p>
 <h2>What happened</h2>
 <p>Our team works remotely across three different timezones, so for the sake of simplicity I'll summarize the timeline of the service outage in Central European Time (CET) using a 24-hour clock.</p>
 <h3>December 8, 05:30 - Server update deployed</h3>
@@ -70,10 +54,3 @@
 <p>The next major feature will be the use of <a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">service-workers</a> to enable browsers to use very advanced caching policies and load our client-side code even while entirely offline, allowing full access to cached documents under almost any circumstance. We expect to deploy these updates in early January 2021 as a part of our upcoming <em>4.0.0</em> release.</p>
 <p><a href="https://www.cs.jhu.edu/~huang/paper/grayfailure-hotos17.pdf">One of my favourite academic papers</a> defines the term <strong>gray failures</strong>, in which well-intentioned attempts to introduce redundancy into online systems can paradoxically increases the likelihood of service degradation or interruptions. In the last few weeks both Amazon and Google (some of the richest companies on the planet, in case you haven't heard of them) have experienced severe service outages. There are very few easy answers in this area, but we're going to learn from this situation and work on solutions that would have helped at least let us recover more quickly.</p>
 <p>If the next data-center failure happens in another three years I hope it will only last a small fraction of the time, and that our software will be so resilient you'll hardly notice. In the meantime our team greatly appreciates all your support!</p>
-
-            
-        </main>
-    </div>
-</body>
-
-</html>
