@@ -18,8 +18,8 @@ eleventyExcludeFromCollections: true
             {% endif %}
             <h2>{{ item.data.title }}</h2>
         </a>
-        {% if item.data.description %}
-            <p>{{ item.data.description}}</p>
+        {% if item.data.summary %}
+            <p>{{ item.data.summary}}</p>
         {% endif %}
         <p class="meta-info">
             {{ item.date | postDate }}
