@@ -5,10 +5,14 @@ eleventyExcludeFromCollections: true
 
 
 {% for item in collections.all | reverse %}
-    <article>
-        <a href="{{ item.url }}" ><h2>{{ item.data.title }}</h2></a><br>
-        {% for tag in item.data.tags %}
-            <a href="/tags/{{ tag | slugify }}">{{ tag }}</a> 
-        {% endfor %}
+    <article class="list">
+        <a href="{{ item.url }}" ><h2>{{ item.data.title }}</h2></a>
+        <p>
+            {{ item.description}}
+            {{ item.date | postDate }}
+            {% for tag in item.data.tags %}
+                <a href="/tags/{{ tag | slugify }}">{{ tag }}</a>
+            {% endfor %}
+        </p>
     </article>
 {% endfor %}

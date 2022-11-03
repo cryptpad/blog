@@ -1,15 +1,61 @@
 
 @import "reset.less";
+@import "colors.less";
+@import "../../source/fonts/open-sans-fontface/open-sans.less";
+
+@radius: .5rem;
 
 :root {
---background: #EEEEEE;
---primary: #212121;
+    --col-background: @cryptpad_color_grey_100;
+    --col-primary: @cryptpad_color_grey_900;
+    --col-link: @cryptpad_color_brand;
+    --col-link-vis: fade(@cryptpad_color_brand, 50%);
+    --col-card: @cryptpad_color_grey_200;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+        --background: @cryptpad_color_grey_900;
+        --primary: @cryptpad_color_grey_200;
+        --col-link: @cryptpad_color_brand_300;
+        --col-link-vis: fade(@cryptpad_color_brand_300, 80%);
+        --col-card: @cryptpad_color_grey_850;
+    }
 }
 
 body {
-background-color: var(--background);
-color: var(--primary);
+    background-color: var(--background);
+    color: var(--primary);
+    text-align: center;
+    font-family: 'Open Sans';
+    .container {
+        margin: 2rem auto;
+        text-align: left;
+        max-width: 70ch;
+        nav {
+            margin-bottom: 5rem;
+        }
+        // main {
+
+        // }
+    }
 }
-body article h2 {
-color: aqua;
+
+h1 {
+    font-size: 2.5rem;
+}
+
+a {
+    color: var(--col-link);
+    text-decoration: none;
+    &:visited {
+        color: var(--col-link-vis);
+    }
+}
+
+article.list {
+    margin-bottom: 2rem;
+    background-color: var(--col-card);
+    padding: 0.5rem 1rem;
+    border-radius: @radius;
 }
