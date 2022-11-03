@@ -1,18 +1,42 @@
 ---
+pagination:
+    data: collections.all
+    reverse: true
+    size: 5
+    alias: posts
+
 layout: layouts/main
 eleventyExcludeFromCollections: true
 ---
 
 
-{% for item in collections.all | reverse %}
+{% for item in posts %}
     <article class="list">
-        <a href="{{ item.url }}" ><h2>{{ item.data.title }}</h2></a>
-        <p>
-            {{ item.description}}
+        <a href="{{ item.url }}" >
+            {% if item.data.cover %}
+            <img src="{{ item.data.cover }}" aria-hidden="true"></img>
+            {% endif %}
+            <h2>{{ item.data.title }}</h2>
+        </a>
+        {% if item.data.description %}
+            <p>{{ item.data.description}}</p>
+        {% endif %}
+        <p class="meta-info">
             {{ item.date | postDate }}
             {% for tag in item.data.tags %}
-                <a href="/tags/{{ tag | slugify }}">{{ tag }}</a>
+                <a class="tag" href="/tags/{{ tag | slugify }}">{{ tag }}</a>
             {% endfor %}
         </p>
     </article>
 {% endfor %}
+
+<nav class="pagination" aria-labelledby="my-pagination">
+    Page {{pagination.pageNumber + 1 }} of {{ pagination.pageLinks.length }}
+  <ol>
+    {# First and Last buttons commented out #}
+    {# {% if page.url != pagination.href.first %}<li><a href="{{ pagination.href.first }}">First</a></li>{% endif %} #}
+    {% if pagination.href.previous %}<li><a href="{{ pagination.href.previous }}">Newer</a></li>{% endif %}
+    {% if pagination.href.next %}<li><a href="{{ pagination.href.next }}">Older</a></li>{% endif %}
+    {# {% if page.url != pagination.href.last %}<li><a href="{{ pagination.href.last }}">Last</a></li>{% endif %} #}
+  </ol>
+</nav>

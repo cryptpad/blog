@@ -11,21 +11,25 @@
     --col-link: @cryptpad_color_brand;
     --col-link-vis: fade(@cryptpad_color_brand, 50%);
     --col-card: @cryptpad_color_grey_200;
+    --col-tag: @cryptpad_color_grey_300;
+    --col-tag-fg: @cryptpad_color_grey_900;
 }
 
 @media (prefers-color-scheme: dark) {
 	:root {
-        --background: @cryptpad_color_grey_900;
-        --primary: @cryptpad_color_grey_200;
+        --col-background: @cryptpad_color_grey_900;
+        --col-primary: @cryptpad_color_grey_200;
         --col-link: @cryptpad_color_brand_300;
         --col-link-vis: fade(@cryptpad_color_brand_300, 80%);
         --col-card: @cryptpad_color_grey_850;
+        --col-tag: @cryptpad_color_grey_700;
+        --col-tag-fg: @cryptpad_color_grey_200;
     }
 }
 
 body {
-    background-color: var(--background);
-    color: var(--primary);
+    background-color: var(--col-background);
+    color: var(--col-primary);
     text-align: center;
     font-family: 'Open Sans';
     .container {
@@ -53,9 +57,30 @@ a {
     }
 }
 
+a.tag {
+    background-color: var(--col-tag);
+    padding: 0.01rem 0.4rem;
+    color: var(--col-primary);
+    border-radius: @radius;
+}
+
 article.list {
     margin-bottom: 2rem;
     background-color: var(--col-card);
     padding: 0.5rem 1rem;
-    border-radius: @radius;
+.pagination {
+    text-align: center;
+    line-height: 180%;
+    ol {
+        li {
+            display: inline;
+            background-color: var(--col-card);
+            padding: 0.5rem;
+            border-radius: @radius;
+            font-size: 1.2em;
+            line-height: 4em;
+        }
+    }
 }
+
+
