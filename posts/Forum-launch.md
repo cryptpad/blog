@@ -2,6 +2,8 @@
 title: "Welcome to the CryptPad forum!"
 date: 2022-10-03
 author: David Benqué
+cover: /images/forum-launch.png
+summary: We are opening a new forum as the central place for feedback and discussion around CryptPad
 tags:
   - forum
   - community

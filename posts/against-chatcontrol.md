@@ -2,6 +2,7 @@
 title: "Against #chatcontrol"
 date: 2022-05-19 17:05:00
 author: Aaron MacSween
+summary: Something terrible is happening in the EU and we need help to stop it
 tags:
   - cloud
   - ethics

@@ -1,10 +1,27 @@
 {% extends "layouts/main.njk" %}
 
+{% if cover %}
+    {% set cover = cover %}
+{% else %}
+    {% set cover = site.image %}
+{% endif %}
+
+{% block head %}
+    {{ seo.og_tags(
+        title= title,
+        url= site.url + page.url,
+        desc= summary,
+        image= site.url + cover
+    ) }}
+{% endblock %}
+
 {% block content %}
     <h1>{{title}}</h1>
-    {% if author %}
-        By: {{ author }}
-    {% endif %}
+    <p>
+        {% if author %}
+            By: {{ author }}
+        {% endif %}
+    </p>
 
     {{ content | safe }}
 

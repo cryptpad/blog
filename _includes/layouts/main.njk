@@ -8,6 +8,21 @@
     <link rel="stylesheet" href="/style.css">
 
     <title></title>
+    {% import "components/seo.njk" as seo %}
+
+    {% block head %}
+        {{ seo.og_tags(
+            title=site.title,
+            url=site.url,
+            desc=site.summary,
+            image= site.url + site.image
+        ) }}
+    {% endblock %}
+
+    <link rel="alternate" href="/atom.xml" title="CryptPad Blog" type="application/atom+xml">
+
+    <link rel="icon" href="/favicon.png">
+
 
 </head>
 

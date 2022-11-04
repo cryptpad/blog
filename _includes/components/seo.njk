@@ -1,0 +1,12 @@
+
+{% macro og_tags(title='', url='', image='', desc='') %}
+    <meta property="og:type" content="webpage">
+    <meta property="og:title" content="{{ title }}">
+    <meta property="og:url" content="{{ url }}">
+    <meta property="og:page_name" content="{{ title }}">
+    <meta property="og:locale" content="default">
+    <meta property="og:image" content="{{ image }}">
+    <meta property="og:description" content="{{ desc }}">
+    <meta name="twitter:card" content="{{ desc }}">
+    <meta name="twitter:title" content="{{ title }}">
+{% endmacro %}

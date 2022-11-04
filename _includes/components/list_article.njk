@@ -1,17 +1,17 @@
-    <article class="list">
-        <a href="{{ post.url }}" >
-            {% if post.data.cover %}
+<article class="list">
+    <a href="{{ post.url }}" >
+        {% if post.data.cover %}
             <img src="{{ post.data.cover }}" aria-hidden="true"></img>
-            {% endif %}
-            <h2>{{ post.data.title }}</h2>
-        </a>
-        {% if post.data.summary %}
-            <p>{{ post.data.summary}}</p>
         {% endif %}
-        <p class="meta-info">
-            {{ post.date | postDate }}
-            {% for tag in post.data.tags %}
-                <a class="tag" href="/tags/{{ tag | slugify }}">{{ tag }}</a>
-            {% endfor %}
-        </p>
-    </article>
+        <h2>{{ post.data.title }}</h2>
+    </a>
+    {% if post.data.summary %}
+        <p>{{ post.data.summary}}</p>
+    {% endif %}
+    <p class="meta-info">
+        {{ post.date | postDate }}
+        {% for tag in post.data.tags %}
+            <a class="tag" href="/tags/{{ tag | slugify }}">{{ tag }}</a>
+        {% endfor %}
+    </p>
+</article>

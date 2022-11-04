@@ -8,6 +8,26 @@
     <link rel="stylesheet" href="/style.css">
 
     <title></title>
+    
+
+    
+    
+    <meta property="og:type" content="webpage">
+    <meta property="og:title" content="Faster loads with SharedWorker &amp; ServiceWorker">
+    <meta property="og:url" content="http://localhost:8080/2018/06/22/Faster-loads-with-SharedWorker-ServiceWorker/">
+    <meta property="og:page_name" content="Faster loads with SharedWorker &amp; ServiceWorker">
+    <meta property="og:locale" content="default">
+    <meta property="og:image" content="http://localhost:8080/theme/og-default.png">
+    <meta property="og:description" content="">
+    <meta name="twitter:card" content="">
+    <meta name="twitter:title" content="Faster loads with SharedWorker &amp; ServiceWorker">
+
+
+
+    <link rel="alternate" href="/atom.xml" title="CryptPad Blog" type="application/atom+xml">
+
+    <link rel="icon" href="/favicon.png">
+
 
 </head>
 
@@ -19,9 +39,11 @@
         <main>
             
     <h1>Faster loads with SharedWorker &amp; ServiceWorker</h1>
-    
-        By: Caleb James DeLisle
-    
+    <p>
+        
+            By: Caleb James DeLisle
+        
+    </p>
 
     <p>When CryptPad was first created, the only thing to load was the CryptPad code itself and the pad which you were editing. Recently edited pads were remembered in the browser's <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage">localStorage</a> which was not portable between computers but allowed some recent history to be kept.</p>
 <p>However, we wanted to allow people to login and manage their pads on all of their devices so we created the CryptDrive. Anyone who has used CryptPad but never logged in is encouraged to <a href="https://cryptpad.fr/register">register and login</a> (it's free) and check out their drive. CryptDrive is basically just a realtime pad containing a JSON structure with links to all of your pads as well as their titles and other information. When you update the title of a pad, it changes the pad itself but it also changes your drive so that you can see the title of the pad in your drive. This is of course not perfect because if someone else changes the title of a pad, your drive will not be updated until you look at the pad again, but doing everything with the server completely blind to the content isn't easy, and this works reasonably well.</p>

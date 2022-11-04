@@ -15,7 +15,7 @@
     <link href="https://blog.cryptpad.org/2022/10/28/status-2022-10/"/>
     <updated>2022-10-28T00:00:00Z</updated>
     <id>https://blog.cryptpad.org/2022/10/28/status-2022-10/</id>
-    <summary xml:lang="en" type="html">🗓️🔁 Repeating events in Calendar, 🎛️ Filter by document type in the drive, 👨‍🔬 Theo joined the team, and more...</summary>
+    <summary xml:lang="en" type="html">Repeating events in Calendar, Filter by document type in the drive, Theo joined the team, and more...</summary>
     <content xml:lang="en" type="html">&lt;h2&gt;📰 Review from Ubuntu Buzz&lt;/h2&gt;
 &lt;p&gt;CryptPad received &lt;a href=&quot;https://www.ubuntubuzz.com/2022/10/cryptpad-review-google-docs-forms-alternative-and-a-self-hosting-bliss.html&quot;&gt;an in-depth and positive review from Ubuntu Buzz&lt;/a&gt;. They had already covered our Forms application &lt;a href=&quot;https://www.ubuntubuzz.com/2022/01/how-to-create-online-forms-with-cryptpad-an-alternative-to-google-forms.html&quot;&gt;earlier this year&lt;/a&gt; and it great to see them keep up to date with our work. Thank you Ade Malsasa Akbar!&lt;/p&gt;
 &lt;h2&gt;🗓️🔁 Repeating events in Calendar&lt;/h2&gt;
@@ -43,7 +43,7 @@
     <link href="https://blog.cryptpad.org/2022/10/03/Forum-launch/"/>
     <updated>2022-10-03T00:00:00Z</updated>
     <id>https://blog.cryptpad.org/2022/10/03/Forum-launch/</id>
-    <summary xml:lang="en" type="html"></summary>
+    <summary xml:lang="en" type="html">We are opening a new forum as the central place for feedback and discussion around CryptPad</summary>
     <content xml:lang="en" type="html">&lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/forum-launch.png&quot; alt=&quot;the cryptpad forum logo surrounded by two party poppers&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;We are opening &lt;a href=&quot;https://forum.cryptpad.org/&quot;&gt;a new forum&lt;/a&gt; as the central place for feedback and discussion around CryptPad. At the moment we receive feature requests, bug reports, and other feedback through various channels:&lt;/p&gt;
 &lt;ul&gt;
@@ -67,7 +67,7 @@
     <link href="https://blog.cryptpad.org/2022/09/29/status-2022-09/"/>
     <updated>2022-09-29T00:00:00Z</updated>
     <id>https://blog.cryptpad.org/2022/09/29/status-2022-09/</id>
-    <summary xml:lang="en" type="html"></summary>
+    <summary xml:lang="en" type="html">Theo will be joining us in October and we have signed another hire to start in January 2023</summary>
     <content xml:lang="en" type="html">&lt;h2&gt;5.1 release&lt;/h2&gt;
 &lt;p&gt;This month we released &lt;a href=&quot;https://github.com/xwiki-labs/cryptpad/releases/tag/5.1.0&quot;&gt;CryptPad 5.1&lt;/a&gt; that includes:&lt;/p&gt;
 &lt;ul&gt;
@@ -91,7 +91,7 @@
     <link href="https://blog.cryptpad.org/2022/08/30/status-2022-08/"/>
     <updated>2022-08-30T00:00:00Z</updated>
     <id>https://blog.cryptpad.org/2022/08/30/status-2022-08/</id>
-    <summary xml:lang="en" type="html"></summary>
+    <summary xml:lang="en" type="html">The end of Maxime&#39;s internship and Mathilde&#39;s first month</summary>
     <content xml:lang="en" type="html">&lt;p&gt;Monthly status posts are back!&lt;/p&gt;
 &lt;h2&gt;End of Maxime&#39;s internship&lt;/h2&gt;
 &lt;p&gt;August 31st is Maxime Cesson&#39;s last day with the CryptPad team. His 2 months with us have been very productive. Maxime went from &amp;quot;zero-knowledge&amp;quot; of JavaScript to having his code deployed in production in a few weeks.&lt;/p&gt;
@@ -111,7 +111,7 @@
     <link href="https://blog.cryptpad.org/2022/05/19/against-chatcontrol/"/>
     <updated>2022-05-19T17:05:00Z</updated>
     <id>https://blog.cryptpad.org/2022/05/19/against-chatcontrol/</id>
-    <summary xml:lang="en" type="html"></summary>
+    <summary xml:lang="en" type="html">Something terrible is happening in the EU and we need help to stop it</summary>
     <content xml:lang="en" type="html">&lt;p&gt;Something terrible is happening in the EU and we need help to stop it. Many people are very busy and understandably don&#39;t have the time to engage deeply with politics. I&#39;ll start with a brief summary and link to some resources on simple actions you can take to help prevent a bad law from being passed.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/chatcontrol-cryptpad-graphic.png&quot; alt=&quot;no #ChatControl - EU citizens, make your voices heard to stop this dangerous proposal. It would do nothing to protect the most vulenerable, and put everone at risk. Contact your MEP. Give feedback through the EU portal&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;The short version&lt;/h2&gt;

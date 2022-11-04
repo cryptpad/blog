@@ -8,6 +8,26 @@
     <link rel="stylesheet" href="/style.css">
 
     <title></title>
+    
+
+    
+    
+    <meta property="og:type" content="webpage">
+    <meta property="og:title" content="Making CryptPad CSS 3 times faster, by loading it twice">
+    <meta property="og:url" content="http://localhost:8080/2018/07/20/Making-CryptPad-CSS-3-times-faster-by-loading-it-twice/">
+    <meta property="og:page_name" content="Making CryptPad CSS 3 times faster, by loading it twice">
+    <meta property="og:locale" content="default">
+    <meta property="og:image" content="http://localhost:8080/theme/og-default.png">
+    <meta property="og:description" content="">
+    <meta name="twitter:card" content="">
+    <meta name="twitter:title" content="Making CryptPad CSS 3 times faster, by loading it twice">
+
+
+
+    <link rel="alternate" href="/atom.xml" title="CryptPad Blog" type="application/atom+xml">
+
+    <link rel="icon" href="/favicon.png">
+
 
 </head>
 
@@ -19,9 +39,11 @@
         <main>
             
     <h1>Making CryptPad CSS 3 times faster, by loading it twice</h1>
-    
-        By: Caleb James DeLisle
-    
+    <p>
+        
+            By: Caleb James DeLisle
+        
+    </p>
 
     <script src="https://cryptpad.fr/common/media-tag-nacl.min.js"></script>
 <p>In CryptPad development, we have always tried to push the limits of the technology. As you might know, we don't minify any of our javascript code and we have no build system, yet CryptPad is still faster than many similar projects which do. In recent profiling, we determined that the biggest cause of slow loading was compilng of less stylesheets.</p>

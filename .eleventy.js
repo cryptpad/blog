@@ -5,7 +5,8 @@ module.exports = (function(eleventyConfig) {
     eleventyConfig.addPlugin(pluginRss);
     // Copy /images to /public
     eleventyConfig.addPassthroughCopy('images');
-    eleventyConfig.addPassthroughCopy({'source/fonts/': 'fonts/'})
+    eleventyConfig.addPassthroughCopy({'source/fonts/': 'fonts/'});
+    eleventyConfig.addPassthroughCopy({'source/theme/': 'theme/'});
 
     // Debug filter
     eleventyConfig.addFilter("log", (d) => {

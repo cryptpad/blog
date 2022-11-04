@@ -8,6 +8,26 @@
     <link rel="stylesheet" href="/style.css">
 
     <title></title>
+    
+
+    
+    
+    <meta property="og:type" content="webpage">
+    <meta property="og:title" content="Signing CryptPad">
+    <meta property="og:url" content="http://localhost:8080/2018/06/15/Signing-CryptPad/">
+    <meta property="og:page_name" content="Signing CryptPad">
+    <meta property="og:locale" content="default">
+    <meta property="og:image" content="http://localhost:8080/theme/og-default.png">
+    <meta property="og:description" content="">
+    <meta name="twitter:card" content="">
+    <meta name="twitter:title" content="Signing CryptPad">
+
+
+
+    <link rel="alternate" href="/atom.xml" title="CryptPad Blog" type="application/atom+xml">
+
+    <link rel="icon" href="/favicon.png">
+
 
 </head>
 
@@ -19,9 +39,11 @@
         <main>
             
     <h1>Signing CryptPad</h1>
-    
-        By: Caleb James DeLisle
-    
+    <p>
+        
+            By: Caleb James DeLisle
+        
+    </p>
 
     <p>CryptPad was designed with a view that privacy should be default and cryptography should be invisible. In order to do this, we made use of the web-app model so people could just go to cryptpad.fr and immediately begin using the app, no installation necessary. However, this model has a known flaw, the server can decide what client-side code it will send to any given user, allowing a compromized server to serve code with a back-door vulnerability.</p>
 <p>Recently, I did an experiment to make CryptPad more secure against these types of attacks by signing the code. CryptPad is a unique webapp, even without considering the encryption aspect. There is no build system, the code we write is exactly the same as what your web browser runs. All of the CryptPad html, javascript and resources are static files which are served by a plain old web server. The data persistance is managed by an API server which the web browser communicates with using an HTML5 WebSocket. Finally, in order to add a layer of security against possible Cross Site Scripting attacks, CryptPad makes use of a <a href="https://blog.cryptpad.fr/2017/08/30/CryptPad-s-new-Secure-Cross-Domain-Iframe/">cross domain iframe</a>, protecting your encryption keys from the majority of the CryptPad code in the same way that your online bank is protected from that sketchy porn site open in another tab.</p>
