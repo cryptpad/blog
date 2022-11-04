@@ -1,0 +1,10 @@
+<nav class="pagination" aria-labelledby="my-pagination">
+    Page {{pagination.pageNumber + 1 }} of {{ pagination.pageLinks.length }}
+  <ol>
+    {# First and Last buttons commented out #}
+    {# {% if page.url != pagination.href.first %}<li><a href="{{ pagination.href.first }}">First</a></li>{% endif %} #}
+    {% if pagination.href.previous %}<li><a href="{{ pagination.href.previous }}">Newer</a></li>{% endif %}
+    {% if pagination.href.next %}<li><a href="{{ pagination.href.next }}">Older</a></li>{% endif %}
+    {# {% if page.url != pagination.href.last %}<li><a href="{{ pagination.href.last }}">Last</a></li>{% endif %} #}
+  </ol>
+</nav>

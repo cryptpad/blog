@@ -9,9 +9,8 @@ eleventyExcludeFromCollections: true
 ---
 <h2>Posts tagged “{{ tag }}”</h2>
 
-<ul>
 {% set taglist = collections[ tag ] %}
+
 {% for post in taglist | reverse %}
-  <li><a href="{{ post.url | url }}">{{ post.data.title }}</a></li>
+  {% include "components/list_article.njk" %}
 {% endfor %}
-</ul>

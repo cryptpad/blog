@@ -9,34 +9,8 @@ layout: layouts/main
 eleventyExcludeFromCollections: true
 ---
 
-
-{% for item in posts %}
-    <article class="list">
-        <a href="{{ item.url }}" >
-            {% if item.data.cover %}
-            <img src="{{ item.data.cover }}" aria-hidden="true"></img>
-            {% endif %}
-            <h2>{{ item.data.title }}</h2>
-        </a>
-        {% if item.data.summary %}
-            <p>{{ item.data.summary}}</p>
-        {% endif %}
-        <p class="meta-info">
-            {{ item.date | postDate }}
-            {% for tag in item.data.tags %}
-                <a class="tag" href="/tags/{{ tag | slugify }}">{{ tag }}</a>
-            {% endfor %}
-        </p>
-    </article>
+{% for post in posts %}
+    {% include "components/list_article.njk" %}
 {% endfor %}
 
-<nav class="pagination" aria-labelledby="my-pagination">
-    Page {{pagination.pageNumber + 1 }} of {{ pagination.pageLinks.length }}
-  <ol>
-    {# First and Last buttons commented out #}
-    {# {% if page.url != pagination.href.first %}<li><a href="{{ pagination.href.first }}">First</a></li>{% endif %} #}
-    {% if pagination.href.previous %}<li><a href="{{ pagination.href.previous }}">Newer</a></li>{% endif %}
-    {% if pagination.href.next %}<li><a href="{{ pagination.href.next }}">Older</a></li>{% endif %}
-    {# {% if page.url != pagination.href.last %}<li><a href="{{ pagination.href.last }}">Last</a></li>{% endif %} #}
-  </ol>
-</nav>
+{% include "components/pagination.njk" %}
