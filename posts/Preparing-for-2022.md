@@ -3,9 +3,10 @@ title: Preparing for 2022
 date: 2021-12-30 12:52:20
 author: Aaron MacSween
 tags:
-  - retrospective
-  - roadmap
-  - status update
+- retrospective
+- roadmap
+- status update
+cover: /images/expected-conversion-workflows.png
 ---
 
 With the end of the year nearly upon us I am keeping up my tradition of writing a [retrospective](/tags/retrospective/) of what the CryptPad team has done over the past twelve months and an overview of our plans for the next twelve.

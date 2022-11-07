@@ -3,8 +3,9 @@ title: Looking for translators
 date: 2019-03-11 11:12:50
 author: Aaron MacSween
 tags:
-  - open-source
-  - quality
+- open-source
+- quality
+cover: /images/translations-status.png
 ---
 
 Our mission is to make privacy-enhancing technologies accessible to people from all over the world.

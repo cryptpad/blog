@@ -3,9 +3,10 @@ title: Yesterday I made a mess
 date: 2019-06-14 17:29:33
 author: Aaron MacSween
 tags:
-  - cloud
-  - storage
-  - data
+- cloud
+- storage
+- data
+cover: /images/archived-shared-folder-appearance.png
 ---
 
 Normally when I write a blog post it's because I have exciting news to share.

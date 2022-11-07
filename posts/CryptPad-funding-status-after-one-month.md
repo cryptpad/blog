@@ -3,9 +3,10 @@ title: CryptPad funding status after one month
 date: 2018-08-04 11:26:23
 author: Ludovic Dubost
 tags:
-  - funding
-  - open collective
-  - donate
+- funding
+- open collective
+- donate
+cover: /images/cryptpad-funding-blog-cover.png
 ---
 
 ![one month funding status](/images/cryptpad-funding-blog-cover.png)

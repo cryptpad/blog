@@ -1,12 +1,13 @@
 ---
-title: "May 2021 status: Communities wrap up and initial work on Forms"
+title: 'May 2021 status: Communities wrap up and initial work on Forms'
 date: 2021-05-26 14:05:00
-author: David Benqué
+author: "David Benqué"
 tags:
-  - status update
-  - communities
-  - forms
-  - documentation
+- status update
+- communities
+- forms
+- documentation
+cover: /images/calendar-dark.png
 ---
 
 This month we released CryptPad [4.5.0](https://github.com/xwiki-labs/cryptpad/releases/4.5.0), featuring the public debut of the Calendar application that was [in beta since 4.4.0](https://blog.cryptpad.fr/2021/04/26/status-april-2021/).   

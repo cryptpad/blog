@@ -3,9 +3,10 @@ title: CryptPad funding status March 2019 - Thanks to our 100 backers!
 date: 2019-03-11 20:00:00
 author: Ludovic Dubost
 tags:
-  - funding
-  - open collective
-  - donate
+- funding
+- open collective
+- donate
+cover: /images/cryptpad-funding-blog-cover-generic.png
 ---
 
 ![](/images/cryptpad-funding-blog-cover-generic.png)

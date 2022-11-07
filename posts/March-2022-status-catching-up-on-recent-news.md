@@ -3,7 +3,8 @@ title: 'March 2022 status: catching up on recent news'
 date: 2022-03-29 17:37:08
 author: Aaron MacSween
 tags:
-  - roadmap
+- roadmap
+cover: /images/dapsi-what-normally-happens.png
 ---
 
 The beginning of 2022 has been sufficiently busy that we decided to skip two of our usual monthly status update blog posts. Things have not calmed down that much in March, but we didn't want to go any longer without an update.

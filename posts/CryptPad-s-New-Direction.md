@@ -3,9 +3,10 @@ title: CryptPad's New Direction
 date: 2017-08-18 12:14:39
 author: Caleb James DeLisle
 tags:
-  - security
-  - extensibility
-  - quality
+- security
+- extensibility
+- quality
+cover: /images/cryptpad_old_mainpage.png
 ---
 
 > If you are hosting CryptPad, please make sure you are up to date. [CryptPad 1.13.0 (Naiad)](https://github.com/xwiki-labs/cryptpad/releases/tag/1.13.0) fixed a major security issue.

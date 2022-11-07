@@ -1,9 +1,10 @@
 ---
-title: "Feb. 2021 status: Dark mode and organisation plans"
+title: 'Feb. 2021 status: Dark mode and organisation plans'
 date: 2021-02-24 11:57:52
-author: David Benqué
+author: "David Benqué"
 tags:
-  - status update
+- status update
+cover: /images/dark-drive.png
 ---
 
 This is a new format of post we are starting on the blog: publishing the monthly updates that were until now only circulated in the internal XWiki newsletter. This will be an opportunity to regularly catch up on new features, research projects, funding/budget updates, and any other relevant news.

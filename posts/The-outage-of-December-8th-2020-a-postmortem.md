@@ -3,8 +3,9 @@ title: The outage of December 8th, 2020 - a postmortem
 date: 2020-12-16 15:30:00
 author: Aaron MacSween
 tags:
-  - cloud
-  - storage
+- cloud
+- storage
+cover: /images/3000-connections.png
 ---
 
 

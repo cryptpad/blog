@@ -1,12 +1,13 @@
 ---
-title: "March 2021 status: Public roadmap and Spreadsheet updates"
+title: 'March 2021 status: Public roadmap and Spreadsheet updates'
 date: 2021-03-29 11:58:46
-author: David Benqué
+author: "David Benqué"
 tags:
-  - status update
-  - talk
-  - spreadsheet
-  - roadmap
+- status update
+- talk
+- spreadsheet
+- roadmap
+cover: /images/roadmap-kanban.png
 ---
 
 This month we released two versions of CryptPad, 4.2 and 4.3. Both improved CryptPad's stability and performance: 

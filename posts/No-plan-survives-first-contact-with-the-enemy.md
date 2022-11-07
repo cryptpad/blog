@@ -3,8 +3,9 @@ title: No plan survives first contact with the enemy
 date: 2020-12-31 22:27:34
 author: Aaron MacSween
 tags:
-  - retrospective
-  - roadmap
+- retrospective
+- roadmap
+cover: /images/2020-users.png
 ---
 
 

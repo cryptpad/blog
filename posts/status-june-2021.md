@@ -1,11 +1,12 @@
 ---
-title: "June 2021 status: Forms and a call to instance administrators"
+title: 'June 2021 status: Forms and a call to instance administrators'
 date: 2021-06-28 11:24:33
-author: David Benqué
+author: "David Benqué"
 tags:
-  - status update
-  - administration
-  - forms
+- status update
+- administration
+- forms
+cover: /images/form-preview.png
 ---
 
 This month we released two versions of CryptPad. [4.6](https://github.com/xwiki-labs/cryptpad/releases/tag/4.6.0) was a stability update addressing many minor issues while the team prepared for [4.7](https://github.com/xwiki-labs/cryptpad/releases/tag/4.7.0) and a major new feature: the new *Forms* application.

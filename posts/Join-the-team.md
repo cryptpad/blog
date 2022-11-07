@@ -3,11 +3,12 @@ title: Join the team
 date: 2019-03-18 17:31:21
 author: Aaron MacSween
 tags:
-  - funding
-  - open-source
-  - privacy
-  - research
-  - roadmap
+- funding
+- open-source
+- privacy
+- research
+- roadmap
+cover: /images/xwiki-awards-tweet.png
 ---
 
 We've been making a big deal of our funding status for the last while, and for good reason.

@@ -1,19 +1,19 @@
 ---
-title: "Against #chatcontrol"
+title: 'Against #chatcontrol'
 date: 2022-05-19 17:05:00
 author: Aaron MacSween
-cover: images/chatcontrol-cryptpad-graphic.png
+cover: /images/chatcontrol-cryptpad-graphic.png
 summary: Something terrible is happening in the EU and we need help to stop it
 tags:
-  - cloud
-  - ethics
-  - funding
-  - privacy
-  - press
-  - security
-  - social media
-  - storage
-  - chatcontrol
+- cloud
+- ethics
+- funding
+- privacy
+- press
+- security
+- social media
+- storage
+- chatcontrol
 ---
 
 Something terrible is happening in the EU and we need help to stop it. Many people are very busy and understandably don't have the time to engage deeply with politics. I'll start with a brief summary and link to some resources on simple actions you can take to help prevent a bad law from being passed.

@@ -3,9 +3,10 @@ title: CryptPad funding status August 2018
 date: 2018-09-12 14:14:16
 author: Ludovic Dubost
 tags:
-  - funding
-  - open collective
-  - donate
+- funding
+- open collective
+- donate
+cover: /images/cryptpad-funding-blog-cover-generic.png
 ---
 
 ![](/images/cryptpad-funding-blog-cover-generic.png)

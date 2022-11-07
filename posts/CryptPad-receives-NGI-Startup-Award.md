@@ -1,12 +1,12 @@
 ---
-title: >-
-  CryptPad receives NGI Startup Award
+title: CryptPad receives NGI Startup Award
 date: 2018-11-13 15:29:32
 author: Alina Luchian
 tags:
-  - privacy
-  - award
-  - ngi
+- privacy
+- award
+- ngi
+cover: /images/cryptpad_ngi_award.png
 ---
 
 ![](/images/cryptpad_ngi_award.png)
