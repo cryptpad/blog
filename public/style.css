@@ -42,6 +42,26 @@ li::before {
   content: "\200B";
   /* add zero-width space */
 }
+:root {
+  --col-background: #F5F5F5;
+  --col-primary: #212121;
+  --col-link: #0087FF;
+  --col-link-vis: rgba(0, 135, 255, 0.5);
+  --col-card: #EEEEEE;
+  --col-tag: #E0E0E0;
+  --col-tag-fg: #212121;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --col-background: #212121;
+    --col-primary: #EEEEEE;
+    --col-link: #99cfff;
+    --col-link-vis: rgba(153, 207, 255, 0.8);
+    --col-card: #323232;
+    --col-tag: #616161;
+    --col-tag-fg: #EEEEEE;
+  }
+}
 /* Open Sans @font-face kit */
 /* BEGIN Light */
 @font-face {
@@ -139,26 +159,6 @@ li::before {
   font-weight: 500;
   src: url("fonts/IBM-Plex/IBMPlexMono-Medium.woff2") format("woff2"), url("fonts/IBM-Plex/IBMPlexMono-Medium.woff") format("woff");
 }
-:root {
-  --col-background: #F5F5F5;
-  --col-primary: #212121;
-  --col-link: #0087FF;
-  --col-link-vis: rgba(0, 135, 255, 0.5);
-  --col-card: #EEEEEE;
-  --col-tag: #E0E0E0;
-  --col-tag-fg: #212121;
-}
-@media (prefers-color-scheme: dark) {
-  :root {
-    --col-background: #212121;
-    --col-primary: #EEEEEE;
-    --col-link: #99cfff;
-    --col-link-vis: rgba(153, 207, 255, 0.8);
-    --col-card: #323232;
-    --col-tag: #616161;
-    --col-tag-fg: #EEEEEE;
-  }
-}
 body {
   background-color: var(--col-background);
   color: var(--col-primary);
@@ -175,6 +175,7 @@ body .container nav {
 }
 h1 {
   font-size: 2.5rem;
+  line-height: 1.2em;
 }
 a {
   color: var(--col-link);
@@ -216,4 +217,41 @@ article.list .meta-info {
   border-radius: 0.5rem;
   font-size: 1.2em;
   line-height: 4em;
+}
+article.post {
+  margin-bottom: 8rem;
+}
+article.post h1 {
+  margin-bottom: 1rem;
+}
+article.post p {
+  margin-bottom: 1rem;
+}
+article.post p a {
+  text-decoration: underline;
+}
+article.post ul,
+article.post ol {
+  list-style: disc;
+  padding-left: 1em;
+}
+article.post iframe {
+  margin: 1rem 1rem 1rem 0;
+}
+.article-pagination {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: flex-end;
+}
+.article-pagination a {
+  background-color: var(--col-card);
+  border-radius: 0.5rem;
+  padding: 0.2rem 0.7rem;
+  color: var(--col-primary);
+  max-width: 40%;
+}
+.article-pagination a .title {
+  color: var(--col-link);
 }

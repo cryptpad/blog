@@ -38,14 +38,14 @@
         </nav>
         <main>
             
-    <h1>CryptPad&#39;s new Secure Cross-Domain Iframe</h1>
-    <p>
-        
-            By: Caleb James DeLisle
-        
-    </p>
-
-    <script src="https://cryptpad.fr/common/media-tag-nacl.min.js"></script>
+    <article class="post">
+        <h1>CryptPad&#39;s new Secure Cross-Domain Iframe</h1>
+        <p class="meta">
+            
+                By: Caleb James DeLisle
+            
+        </p>
+        <script src="https://cryptpad.fr/common/media-tag-nacl.min.js"></script>
 <p>CryptPad version 1.14 (Codename <a href="https://en.wikipedia.org/wiki/Ouroboros">Ouroboros</a>) has been released and the most exciting new feature is one you cannot even see. As you may remember from the <a href="/2017/03/06/Security-growing-pains/">Security Growing Pains</a> post, <a href="https://en.wikipedia.org/wiki/Content_Security_Policy">Content Security Policy</a> is a significant part of CryptPad's security model, and it is unfortunately incompatible with <a href="https://ckeditor.com/">CKEditor</a>, the Open Source text editor used in CryptPad.</p>
 <p>With this release, we have done a significant re-architecture of the CryptPad codebase. Starting with the /pad/ application, the CryptPad UI has begun a process of moving into an iframe which is hosted on a different domain: <em>sandbox.cryptpad.info</em>. Moving the visual content to a different domain means that even in the event of a <a href="https://en.wikipedia.org/wiki/Cross-site_scripting">Cross-site scripting</a> security vulnerability, most of your private information such as the pads in your CryptDrive, will not be at risk.</p>
 <p>In this version we updated only the /pad/ application to use the cross-domain iframe because it is the only app which requires <em>inline script</em>. This prevented us from using Content Security Policy to block the most significant vector for Cross Site Scripting attacks but now with the cross-domain iframe, such attacks are mitigated.</p>
@@ -65,7 +65,16 @@ can be seen on this blog because it is using the <a href="https://github.com/UCF
 </code></pre>
 <p>With this you can embed files from your CryptDrive into any website you want.</p>
 
+    </article>
 
+    <nav class="article-pagination" aria-label="Pagination">
+        
+            <a href="/2018/02/23/One-year-of-biweekly-releases/">Newer: <span class="title">One year of biweekly releases</span></a>
+        
+        
+            <a href="/2017/08/18/CryptPad-s-New-Direction/">Older: <span class="title">CryptPad&#39;s New Direction</span></a>
+        
+    </nav>
 
         </main>
     </div>

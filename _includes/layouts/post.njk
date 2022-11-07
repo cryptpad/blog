@@ -1,3 +1,7 @@
+
+{% set previousPost = collections.all | getPreviousCollectionItem(page) %}
+{% set nextPost = collections.all | getNextCollectionItem(page) %}
+
 {% extends "layouts/main.njk" %}
 
 {% if cover %}
@@ -16,13 +20,23 @@
 {% endblock %}
 
 {% block content %}
-    <h1>{{title}}</h1>
-    <p>
-        {% if author %}
-            By: {{ author }}
+    <article class="post">
+        <h1>{{title}}</h1>
+        <p class="meta">
+            {% if author %}
+                By: {{ author }}
+            {% endif %}
+        </p>
+        {{ content | safe }}
+    </article>
+
+    <nav class="article-pagination" aria-label="Pagination">
+        {% if nextPost %}
+            <a href="{{ nextPost.url }}">Newer: <span class="title">{{ nextPost.data.title }}</span></a>
         {% endif %}
-    </p>
-
-    {{ content | safe }}
-
+        {% if previousPost %}
+            <a href="{{ previousPost.url }}">Older: <span class="title">{{ previousPost.data.title }}</span></a>
+        {% endif %}
+    </nav>
 {% endblock %}
+

@@ -2,6 +2,7 @@
 title: "Against #chatcontrol"
 date: 2022-05-19 17:05:00
 author: Aaron MacSween
+cover: images/chatcontrol-cryptpad-graphic.png
 summary: Something terrible is happening in the EU and we need help to stop it
 tags:
   - cloud
@@ -39,7 +40,7 @@ That would mean that at any time we could be served with a "detection order" and
 
 > [Client-Side Scanning] has been promoted as a magical technological fix for the conflict between the privacy of people’s data and communications and the desire by intelligence and law enforcement agencies for more comprehensive investigative tools. A thorough analysis shows that the promise of CSS solutions is an illusion.
 >
-> <footer><cite>from [The Risks of Client-Side Scanning report](https://arxiv.org/abs/2110.07450)</cite></footer>
+> from [The Risks of Client-Side Scanning report](https://arxiv.org/abs/2110.07450)
 
 In October 2021 a group of fourteen broadly respected experts in the fields of cryptography, privacy, security, and digital policy collectively published a report of the risks of deploying client-side scanning as a tool for combatting child abuse. The report makes it very clear that the technologies are highly experimental and unreliable. They suffer from high rates of both false negatives (failing to detect their intended targets) and false positives (incorrectly identifying benign content as harmful). Worse still, these detection tools are usually trained with biased data sets that are far less accurate when applied to underrepresented subjects. Typically this means people of color, members of the LGBTQ+ community, and people with disabilities, making it very likely that this surveillance will disproportionately affect people who are already marginalized.
 
@@ -52,7 +53,7 @@ It probably sounds like the techniques involved are incredibly sophisticated, an
 
 > "The ability of citizens to freely use digital devices, to create and store content, and to communicate with others depends strongly on our ability to feel safe in doing so. The introduction of scanning on our personal devices—devices that keep information from to-do notes to texts and photos from loved ones—tears at the heart of privacy of individual citizens. Such bulk surveillance can result in a significant chilling effect on freedom of speech and, indeed, on democracy itself."
 >
-> <footer><cite>from [The Risks of Client-Side Scanning report](https://arxiv.org/abs/2110.07450)</cite></footer>
+> from [The Risks of Client-Side Scanning report](https://arxiv.org/abs/2110.07450)
 
 There is broad consensus among people familiar with the proposed technologies that they are not sufficiently accurate for widespread deployment. That might be good enough to stop this bill, but it's likely that we'll just have to fight such legislation again in the near future when scanning technologies become marginally more accurate. There are deeper reasons why it's important to say not only that such an approach is unacceptable now, but that it will _never_ be acceptable.
 
@@ -80,4 +81,4 @@ In recent years Europe has earned a solid reputation as a welcome home to leader
 
 > Given recent experience in multiple countries of hostile-state interference in elections and referenda, it should be a national-security priority to resist attempts to spy on and influence law-abiding citizens. CSS makes law-abiding citizens more vulnerable with their personal devices searchable on an industrial scale. Plainly put, it is a dangerous technology. Even if deployed initially to scan for child sex-abuse material, content that is clearly illegal, there would be enormous pressure to expand its scope. We would then be hard-pressed to find any way to resist its expansion or to control abuse of the system.
 >
-> <footer><cite>from [The Risks of Client-Side Scanning report](https://arxiv.org/abs/2110.07450)</cite></footer>
+> from [The Risks of Client-Side Scanning report](https://arxiv.org/abs/2110.07450)

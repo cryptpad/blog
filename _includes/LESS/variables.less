@@ -1,0 +1,24 @@
+@radius: .5rem;
+@radius_L: 0.8rem;
+
+:root {
+    --col-background: @cryptpad_color_grey_100;
+    --col-primary: @cryptpad_color_grey_900;
+    --col-link: @cryptpad_color_brand;
+    --col-link-vis: fade(@cryptpad_color_brand, 50%);
+    --col-card: @cryptpad_color_grey_200;
+    --col-tag: @cryptpad_color_grey_300;
+    --col-tag-fg: @cryptpad_color_grey_900;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+        --col-background: @cryptpad_color_grey_900;
+        --col-primary: @cryptpad_color_grey_200;
+        --col-link: @cryptpad_color_brand_300;
+        --col-link-vis: fade(@cryptpad_color_brand_300, 80%);
+        --col-card: @cryptpad_color_grey_850;
+        --col-tag: @cryptpad_color_grey_700;
+        --col-tag-fg: @cryptpad_color_grey_200;
+    }
+}
