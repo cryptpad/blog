@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style.css">
 
-    <title></title>
+    <title></title> {# XXX TODO: add page title #}
     {% import "components/seo.njk" as seo %}
 
     {% block head %}
@@ -30,8 +30,10 @@
     <div class="container">
         <nav>
             <a href="/"><h1>CryptPad Blog</h1></a>
+            {# XXX TODO: add logo + links to .org site, social media, RSS feed #}
         </nav>
         <main>
+            {# XXX TODO TBC: side bar with: archives by year, top tags, ... #}
             {% block content %}
             {{ content | safe }}
             {% endblock %}
