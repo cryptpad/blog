@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "cryptpad-blog-utils"
+version = "0.1.0"
+description = ""
+authors = ["David Benque <david.benque@xwiki.com>"]
+readme = "README.md"
+packages = [{include = "cryptpad_blog_utils"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+editfrontmatter = "^0.0.1"
+markdown = "<3.2"
+
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.17.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
