@@ -1,6 +1,7 @@
 
 > This place is not a place of honor... no highly esteemed deed is commemorated here... nothing valued is here. 
 
+2022-11-08
 
 This folder contains quick scripts to edit YAML metadata in bulk when moving from Hexo to 11ty
 
