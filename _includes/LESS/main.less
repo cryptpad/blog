@@ -17,9 +17,9 @@ body {
         nav {
             margin-bottom: 5rem;
         }
-        // main {
-
-        // }
+        main {
+            margin: 0 1rem;
+        }
     }
 }
 
@@ -33,6 +33,21 @@ a {
     text-decoration: none;
     &:visited {
         color: var(--col-link-vis);
+    }
+}
+
+nav.main {
+    margin: 0 1rem;
+    a {
+        display: flex;
+        align-items: center;
+        .cp-logo {
+            max-width: 3.6rem;
+            margin-right: 1.5rem;
+        }
+        h1 {
+            font-size: 3rem;
+        }
     }
 }
 
@@ -52,6 +67,7 @@ article.list {
         width: 100%;
         max-height: 15rem;
         object-fit: cover;
+        object-position: center center; // center top
         border-radius: @radius;
     }
     .meta-info {
@@ -81,6 +97,7 @@ article.post {
         margin-bottom: 1rem;
     }
     p {
+        font-size: 1.2em;
         margin-bottom: 1rem;
         a {
             text-decoration: underline;

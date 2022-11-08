@@ -187,6 +187,20 @@ a {
 a:visited {
   color: var(--col-link-vis);
 }
+nav.main {
+  margin: 0 1rem;
+}
+nav.main a {
+  display: flex;
+  align-items: center;
+}
+nav.main a .cp-logo {
+  max-width: 3.6rem;
+  margin-right: 1.5rem;
+}
+nav.main a h1 {
+  font-size: 3rem;
+}
 a.tag {
   background-color: var(--col-tag);
   padding: 0.01rem 0.4rem;
@@ -229,6 +243,7 @@ article.post h1 {
   margin-bottom: 1rem;
 }
 article.post p {
+  font-size: 1.2em;
   margin-bottom: 1rem;
 }
 article.post p a {
