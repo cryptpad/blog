@@ -1,7 +1,3 @@
----
-eleventyExcludeFromCollections: true
----
-
 
 ## Installation
 
