@@ -8,6 +8,7 @@ tags:
 - forms
 - documentation
 cover: /images/calendar-dark.png
+summary: This month we released CryptPad 4.5.0, featuring the public debut of the Calendar application that was in beta since 4.4.0.
 ---
 
 This month we released CryptPad [4.5.0](https://github.com/xwiki-labs/cryptpad/releases/4.5.0), featuring the public debut of the Calendar application that was [in beta since 4.4.0](https://blog.cryptpad.fr/2021/04/26/status-april-2021/).   

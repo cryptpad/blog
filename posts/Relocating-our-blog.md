@@ -3,9 +3,11 @@ title: Relocating our blog
 date: 2021-09-15 08:32:06
 author: Aaron MacSween
 tags:
-  - infrastructure
-  - open-source
-  - roadmap
+- infrastructure
+- open-source
+- roadmap
+summary: This is just a quick announcement to say that we've moved our blog from blog.cryptpad.fr
+  to blog.cryptpad.org.
 ---
 
 This is just a quick announcement to say that we've moved our blog from **blog.cryptpad.fr** to **blog.cryptpad.org**. Visitors to the old URL will be automatically redirected to the new one. Anyone who has subscribed to its RSS feed will continue to get updates for the new address.

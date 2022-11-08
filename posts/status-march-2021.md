@@ -8,6 +8,7 @@ tags:
 - spreadsheet
 - roadmap
 cover: /images/roadmap-kanban.png
+summary: "This month we released two versions of CryptPad, 4.2 and 4.3. Both improved CryptPad's stability and performance"
 ---
 
 This month we released two versions of CryptPad, 4.2 and 4.3. Both improved CryptPad's stability and performance: 

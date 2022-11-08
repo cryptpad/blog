@@ -9,6 +9,7 @@ tags:
 - research
 - roadmap
 cover: /images/xwiki-awards-tweet.png
+summary: We've been making a big deal of our funding status for the last while, and for good reason. CryptPad has largely been funded by the OpenPaaS research and development project, funded by BPIFrance...
 ---
 
 We've been making a big deal of our funding status for the last while, and for good reason.

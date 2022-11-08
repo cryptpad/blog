@@ -5,6 +5,7 @@ author: Caleb James DeLisle
 tags:
   - donate
   - funding
+summary: It's been another release day in our little team. Today we released CryptPad v1.7.0 (Hodag). The biggest new feature in this version is that when you create a /code/ pad, the default highlighting is in markdown syntax and there it is rendered in realtime while you type.
 ---
 
 It's been another release day in our little team. Today we released

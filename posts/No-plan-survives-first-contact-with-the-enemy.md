@@ -6,6 +6,7 @@ tags:
 - retrospective
 - roadmap
 cover: /images/2020-users.png
+summary: In 2019 we finished a four-year research project that had covered the majority of CryptPad's development costs. We had some worries about how we would continue to fund our team, but we were fortunate enough to meet and form a good relationship with members of Europe's Next Generation Internet Initiative.
 ---
 
 

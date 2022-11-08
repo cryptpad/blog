@@ -3,9 +3,10 @@ title: Signing CryptPad
 date: 2018-06-15 12:07:05
 author: Caleb James DeLisle
 tags:
-  - signing
-  - subresource integrity
-  - chain of trust
+- signing
+- subresource integrity
+- chain of trust
+summary: CryptPad was designed with a view that privacy should be default and cryptography should be invisible. In order to do this, we made use of the web-app model so people could just go to cryptpad.fr and immediately begin using the app, no installation necessary. However, this model has a known flaw...
 ---
 
 CryptPad was designed with a view that privacy should be default and cryptography should be invisible. In order to do this, we made use of the web-app model so people could just go to cryptpad.fr and immediately begin using the app, no installation necessary. However, this model has a known flaw, the server can decide what client-side code it will send to any given user, allowing a compromized server to serve code with a back-door vulnerability.

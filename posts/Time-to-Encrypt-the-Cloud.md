@@ -3,7 +3,8 @@ title: Time to Encrypt the Cloud
 date: 2017-02-20 17:54:02
 author: Caleb James DeLisle
 tags:
-  - zero knowledge
+- zero knowledge
+summary: From typing a business letter to taking pictures with friends, the internet has changed every part of our lives. We don't just share information with people, we also want it synced across our computers, tablets, and phones.
 ---
 
 From typing a business letter to taking pictures with friends, the internet has changed every part of our lives.

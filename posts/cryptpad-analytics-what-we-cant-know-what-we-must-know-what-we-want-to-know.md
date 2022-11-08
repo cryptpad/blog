@@ -8,6 +8,7 @@ tags:
 - data
 - privacy
 cover: /images/Analytics-padtypes.png
+summary: 'CryptPad is a Zero Knowledge cloud application, this means we have designed it such that we do not have any access to the content which is hosted on our server. However, there are other things which we do collect and it is important that privacy-minded users understand what we are collecting and why'
 ---
 
 CryptPad is a Zero Knowledge cloud application, this means we have designed it such

@@ -1,11 +1,12 @@
 ---
 title: CryptPad at FOSDEM 2021
 date: 2021-02-03 18:56:52
-author: David Benqué
+author: "David Benqu\xE9"
 tags:
-  - presentation
-  - FOSDEM
-  - talk
+- presentation
+- FOSDEM
+- talk
+summary: The CryptPad team is taking part in the 2021 online edition of FOSDEM. We will use this opportunity to reflect on the past year from a couple of different perspectives. 
 ---
 
 (this post was edited on 24th Feb. 2021 to include links to videos and corrections)

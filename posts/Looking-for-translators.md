@@ -6,6 +6,7 @@ tags:
 - open-source
 - quality
 cover: /images/translations-status.png
+summary: Our mission is to make privacy-enhancing technologies accessible to people from all over the world. We get a lot of attention for the technology that we build, but that technology may be of limited use to those who can't understand what it's doing.
 ---
 
 Our mission is to make privacy-enhancing technologies accessible to people from all over the world.

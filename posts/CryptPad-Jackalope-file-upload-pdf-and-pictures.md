@@ -8,6 +8,7 @@ tags:
 - upload
 - embed
 cover: /images/CryptPad_drive_with_upload.png
+summary: Yesterday we released CryptPad v1.9.0 Jackalope, we have some exciting new features which we've been working on for a long time.
 ---
 
 Yesterday we released CryptPad v1.9.0 Jackalope, we have some exciting new features

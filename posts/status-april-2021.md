@@ -9,6 +9,7 @@ tags:
 - research
 - funding
 cover: /images/BETA-calendar-preview.png
+summary: "This month we released CryptPad 4.4.0, and 4.5.0 is just around the corner: a new calendar app, improvements for instance administrators, and a new research project"
 ---
 
 

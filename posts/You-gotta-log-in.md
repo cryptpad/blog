@@ -3,8 +3,9 @@ title: You gotta log in
 date: 2017-05-17 12:22:52
 author: Caleb James DeLisle
 tags:
-  - login
-  - storage
+- login
+- storage
+summary: It's been two and a half years since the first commit to CryptPad, we no longer have the hideous white and green color-scheme and we're on our third URL format.
 ---
 
 It's been two and a half years since the [first commit to CryptPad](https://github.com/xwiki-labs/cryptpad/commit/1508c7ba71f5de5e51f061fbef45bc1f18493832),

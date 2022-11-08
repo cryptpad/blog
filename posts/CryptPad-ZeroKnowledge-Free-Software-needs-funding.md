@@ -3,8 +3,9 @@ title: 'CryptPad #ZeroKnowledge Free Software needs funding'
 date: 2018-07-06 14:37:18
 author: Caleb James DeLisle
 tags:
-  - zero knowledge
-  - funding
+- zero knowledge
+- funding
+summary: On October 31, 2014 the CryptPad project was first published, back then it was nothing more than a simple rich text pad and a horribly ugly front page.
 ---
 
 [Version française ? 🇫🇷](http://blog.ludovic.org/xwiki/bin/view/Blog/Aidez%20le%20projet%20libre%20CryptPad)

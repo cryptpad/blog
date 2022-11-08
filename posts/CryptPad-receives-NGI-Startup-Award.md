@@ -7,6 +7,7 @@ tags:
 - award
 - ngi
 cover: /images/cryptpad_ngi_award.png
+summary: Europe's Next Generation Internet initiative awarded CryptPad the Privacy and trust-enhanced technologies startup award
 ---
 
 ![](/images/cryptpad_ngi_award.png)

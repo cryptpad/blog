@@ -3,8 +3,9 @@ title: Funding CryptPad
 date: 2017-04-20 12:15:09
 author: Aaron MacSween
 tags:
-  - research
-  - funding
+- research
+- funding
+summary: 'CryptPad started as a novel idea: provide a means for people to collaborate on the web, without their data being exposed to the server that connects them'
 ---
 
 CryptPad started as a novel idea:

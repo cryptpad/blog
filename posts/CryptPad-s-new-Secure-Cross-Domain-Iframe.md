@@ -3,10 +3,11 @@ title: CryptPad's new Secure Cross-Domain Iframe
 date: 2017-08-30 16:53:00
 author: Caleb James DeLisle
 tags:
-  - security
-  - appstore
-  - iframe
-  - media-tag
+- security
+- appstore
+- iframe
+- media-tag
+summary: CryptPad version 1.14 (Codename Ouroboros) has been released and the most exciting new feature is one you cannot even see.
 ---
 
 <script src="https://cryptpad.fr/common/media-tag-nacl.min.js"></script>

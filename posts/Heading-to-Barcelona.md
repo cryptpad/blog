@@ -3,8 +3,9 @@ title: Heading to Barcelona
 date: 2019-02-22 11:08:09
 author: Aaron MacSween
 tags:
-  - ngi
-  - award
+- ngi
+- award
+summary: There's a fairly long list of people who have helped make CryptPad what it is today, but on a day-to-day basis its improvements are driven primarily by myself and a colleague who would rather push code than take credit for his work.
 ---
 
 There's a fairly long list of people who have helped make CryptPad what it is today, but on a day-to-day basis its improvements are driven primarily by myself and a colleague who would rather push code than take credit for his work.

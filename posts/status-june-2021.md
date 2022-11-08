@@ -7,6 +7,7 @@ tags:
 - administration
 - forms
 cover: /images/form-preview.png
+summary: 'This month we released two versions of CryptPad. 4.6 was a stability update addressing many minor issues while the team prepared for 4.7 and a major new feature: the new Forms application.'
 ---
 
 This month we released two versions of CryptPad. [4.6](https://github.com/xwiki-labs/cryptpad/releases/tag/4.6.0) was a stability update addressing many minor issues while the team prepared for [4.7](https://github.com/xwiki-labs/cryptpad/releases/tag/4.7.0) and a major new feature: the new *Forms* application.

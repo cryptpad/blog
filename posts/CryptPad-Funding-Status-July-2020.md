@@ -3,9 +3,10 @@ title: CryptPad Funding Status July 2020
 date: 2020-07-03 18:04:09
 author: Ludovic Dubost
 tags:
-  - funding
-  - open collective
-  - donate
+- funding
+- open collective
+- donate
+summary: We have not been very active on the CryptPad blog lately, however, we have been very active making new releases to CryptPad.
 ---
 
 We have not been very active on the CryptPad blog lately, however, we have been very active making [new releases to CryptPad](https://github.com/xwiki-labs/cryptpad/releases/).

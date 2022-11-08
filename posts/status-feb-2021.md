@@ -5,6 +5,7 @@ author: "David Benqué"
 tags:
 - status update
 cover: /images/dark-drive.png
+summary: 'This is a new format of post we are starting on the blog: publishing the monthly updates that were until now only circulated in the internal XWiki newsletter.'
 ---
 
 This is a new format of post we are starting on the blog: publishing the monthly updates that were until now only circulated in the internal XWiki newsletter. This will be an opportunity to regularly catch up on new features, research projects, funding/budget updates, and any other relevant news.

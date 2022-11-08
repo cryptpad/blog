@@ -8,6 +8,7 @@ tags:
 - research
 - status update
 cover: /images/forms-usage-pie-chart.png
+summary: This month we released two versions of CryptPad. 4.8.0 included some early work on INTEROFFICE format conversions. 4.9.0 addressed some early feedback on the Forms application as well as requests for a way to add links (URLs) to the Drive and to share them with contacts.
 ---
 
 This month we released two versions of CryptPad. [4.8.0](https://github.com/xwiki-labs/cryptpad/releases/tag/4.8.0) included some early work on [INTEROFFICE](https://dapsi.ngi.eu/meet-interoffice-and-its-cryptpad-project/) format conversions. [4.9.0](https://github.com/xwiki-labs/cryptpad/releases/tag/4.9.0) addressed some early feedback on the Forms application as well as requests for a way to add links (URLs) to the Drive and to share them with contacts. 

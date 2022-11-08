@@ -1,10 +1,11 @@
 ---
-title: 'Looking back, looking forward'
+title: Looking back, looking forward
 date: 2019-12-31 16:06:16
 author: Aaron MacSween
 tags:
-  - retrospective
-  - roadmap
+- retrospective
+- roadmap
+summary: It was four years ago when I first started working full-time on CryptPad. At that point fewer than 10 people used the service on a weekly basis.
 ---
 
 It was four years ago when I first started working full-time on CryptPad.

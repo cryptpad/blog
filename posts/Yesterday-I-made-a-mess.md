@@ -7,6 +7,7 @@ tags:
 - storage
 - data
 cover: /images/archived-shared-folder-appearance.png
+summary: Normally when I write a blog post it's because I have exciting news to share. This time it's not a fun occasion because the only good news I have is that the bad news isn't permanent.
 ---
 
 Normally when I write a blog post it's because I have exciting news to share.

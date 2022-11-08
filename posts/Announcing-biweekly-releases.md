@@ -3,7 +3,8 @@ title: Announcing biweekly releases
 date: 2017-02-24 16:26:03
 author: Aaron MacSween
 tags:
-  - release
+- release
+summary: When I joined the research team at XWiki a little over a year ago, CryptPad was very much an experiment. We had ideas of what we wanted to accomplish, but we didn't know whether it would work at all...
 ---
 
 When I joined the research team at [XWiki](http://www.xwiki.com/en/team/) a little over a year ago, CryptPad was very much an experiment.

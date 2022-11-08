@@ -7,6 +7,7 @@ tags:
 - extensibility
 - quality
 cover: /images/cryptpad_old_mainpage.png
+summary: CryptPad was born on Halloween 2014, at that time it was a skunkworks project inside of XWiki SAS. The UI was hidious green and white and the only feature was the CKEditor based pad. We have come a long way.
 ---
 
 > If you are hosting CryptPad, please make sure you are up to date. [CryptPad 1.13.0 (Naiad)](https://github.com/xwiki-labs/cryptpad/releases/tag/1.13.0) fixed a major security issue.

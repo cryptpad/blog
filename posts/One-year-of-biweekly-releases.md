@@ -3,9 +3,10 @@ title: One year of biweekly releases
 date: 2018-02-23 14:37:15
 author: Aaron MacSween
 tags:
-  - release
-  - security
-  - roadmap
+- release
+- security
+- roadmap
+summary: Approximately one year ago, we published an article about our intention to follow a biweekly release schedule. Since then, we've thought of every second Tuesday as release day.
 ---
 
 Approximately one year ago, we published an article about our intention to follow a [biweekly release schedule](/2017/02/24/Announcing-biweekly-releases/).

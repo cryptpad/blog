@@ -3,10 +3,11 @@ title: Our future is collaborative
 date: 2019-05-27 12:20:22
 author: Aaron MacSween
 tags:
-  - roadmap
-  - funding
-  - ngi
-  - open-source
+- roadmap
+- funding
+- ngi
+- open-source
+summary: For anyone that doesn't have the time or interest to read the rest of this article, the short version is that the CryptPad team has received a 50000 Euro grant from NLnet foundation. This funding will be directed towards the design and development of team-centric features in a project we're calling CryptPad Teams.
 ---
 
 For anyone that doesn't have the time or interest to read the rest of this article, the short version is that the CryptPad team has received a 50000 Euro grant from [NLnet foundation](https://nlnet.nl/foundation/). This funding will be directed towards the design and development of _team-centric_ features in a project we're calling _CryptPad Teams_.

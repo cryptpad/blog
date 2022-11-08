@@ -7,6 +7,7 @@ tags:
 - open collective
 - donate
 cover: /images/cryptpad-funding-blog-cover-generic.png
+summary: I've now let a few months pass since the last August status. I'm sorry about that as I have been very busy with XWiki SAS activities as well as conferences including CryptPad talks.
 ---
 
 ![](/images/cryptpad-funding-blog-cover-generic.png)

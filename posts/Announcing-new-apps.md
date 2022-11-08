@@ -7,6 +7,7 @@ tags:
 - document
 - presentation
 cover: /images/OO-doc-preview.png
+summary: Today we are beginning to roll out some major new features for CryptPad. We have integrated the two remaining OnlyOffice editors for text documents and presentations into CryptPad's real-time encrypted collaboration engine. This completes the OnlyOffice suite, as spreadsheets have been available for some time.
 ---
 
 Today we are beginning to roll out some major new features for CryptPad. We have integrated the two remaining [OnlyOffice](https://www.onlyoffice.com/) editors for text documents and presentations into CryptPad's real-time encrypted collaboration engine. This completes the OnlyOffice suite, as spreadsheets have been available for some time. Like our spreadsheet editor, these two new applications [only rely on OnlyOffice's client-side components, not its server](https://docs.cryptpad.fr/en/FAQ.html#what-is-the-relationship-between-cryptpad-and-onlyoffice).

@@ -3,9 +3,10 @@ title: Building mutually beneficial relationships
 date: 2017-06-02 13:52:47
 author: Caleb James DeLisle
 tags:
-  - open-source
-  - cloud
-  - ethics
+- open-source
+- cloud
+- ethics
+summary: You ever wonder why Open Source software always seems to be slightly harder to use and slightly buggier and slightly less polished than proprietary competitors?
 ---
  
 *People hosting instances of CryptPad should read at least the
@@ -18,9 +19,7 @@ of this post.*
  
 ---
  
-You ever wonder why Open Source software always seems to be slightly harder
-to use and slightly buggier and slightly less *polished* than proprietary
-competitors?
+You ever wonder why Open Source software always seems to be slightly harder to use and slightly buggier and slightly less *polished* than proprietary competitors?
  
 How about this: Why is it that good people who want to make good things somehow
 end up making evil things for evil corporations which sell them to other good

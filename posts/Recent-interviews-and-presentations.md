@@ -5,7 +5,7 @@ author: David Benqué
 tags:
   - presentation
   - press
-
+summary: 'CryptPad and the team have received some attention recently through various channels: a Reddit AMA thread, podcast, presentation, and blog interview.'
 ---
 
 

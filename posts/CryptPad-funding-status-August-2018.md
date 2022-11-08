@@ -7,6 +7,7 @@ tags:
 - open collective
 - donate
 cover: /images/cryptpad-funding-blog-cover-generic.png
+summary: We have now passed the summer since we have started the OpenCollective for CryptPad and started our campaign for funding CryptPad and ensuring its future in 2019, so I wanted to give an update on this funding initiative.
 ---
 
 ![](/images/cryptpad-funding-blog-cover-generic.png)

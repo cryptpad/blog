@@ -3,8 +3,9 @@ title: What is Zero Knowledge
 date: 2017-03-24 14:42:03
 author: Caleb James DeLisle
 tags:
-  - zero knowledge
-  - security
+- zero knowledge
+- security
+summary: We have gotten a lot of questions about the concept of Zero Knowledge, the vision and ethics as well as the exact meaning.
 ---
 
 We have gotten a lot of questions about the concept of Zero Knowledge, the vision and ethics as well as the exact meaning.

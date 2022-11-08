@@ -7,6 +7,7 @@ tags:
 - open collective
 - donate
 cover: /images/cryptpad-funding-blog-cover-generic.png
+summary: The beginning of the year has been busy. We traveled to Barcelona to officially receive our NGI Award. Spreadsheet functionality was officially released in CryptPad and our funding has been progressing since our last status in November.
 ---
 
 ![](/images/cryptpad-funding-blog-cover-generic.png)
