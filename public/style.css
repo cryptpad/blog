@@ -3105,6 +3105,7 @@ article.post iframe {
 }
 .article-tags ul {
   list-style: none;
+  display: inline;
 }
 .article-tags ul li {
   display: inline-block;
