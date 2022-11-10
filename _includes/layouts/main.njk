@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style.css">
 
-    <title></title> {# XXX TODO: add page title #}
+    <title>{% block pagetitle %}{% endblock %}CryptPad Blog</title> {# XXX TODO: add page title #}
     {% import "components/seo.njk" as seo %}
 
     {% block head %}
@@ -27,41 +27,29 @@
 </head>
 
 <body>
-    <div class="container">
-        <nav class="main">
+    <main class="container">
+        <header>
             <a href="/">
-                <img class="cp-logo" src="/theme/CryptPad_logo.svg" alt="CryptPad Logo">
+                <img class="cp-logo" src="/theme/CryptPad_logo.svg" alt="Logo">
                 <h1>CryptPad Blog</h1>
             </a>
-        </nav>
-        <main>
-            {# XXX TODO TBC: side bar with: archives by year, top tags, ... #}
-            {% block toptags %}
-            <section id="top-tags" class="home">
+        </header>
+        {% block toptags %}
+        <section id="top-tags" class="home">
+        {% endblock %}
+            {% include "components/top-tags.njk" %}
+        </section>
+        <section id="content">
+            {% block content %}
+            {{ content | safe }}
             {% endblock %}
-                <h3>Top Tags</h3>
-                <ul>
-                    {% for tag in collections | topTags %}
-                        <li><a class="tag" href="/tags/{{tag.name | slugify }}">{{ tag.name }}</a><span class="count">{{tag.count}}</span></li>
-                    {% endfor %}
-                </ul>
-            </section>
-            <section id="content">
-                {% block content %}
-                {{ content | safe }}
-                {% endblock %}
-            </section>
-            {% block social %}
-                <section id="social" class="home">
-            {% endblock %}
-                {# XXX TODO: links to .org site, forum, chat, social media, RSS feed #}
-                <ul>
-                    <li>RSS</li>
-                    <li>Mastodon</li>
-                </ul>
-            </section>
-        </main>
-    </div>
+        </section>
+        {% block social %}
+            <section id="social" class="home">
+        {% endblock %}
+            {% include "components/social-links.njk" %}
+        </section>
+    </main>
 </body>
 
 </html>

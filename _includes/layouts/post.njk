@@ -4,6 +4,8 @@
 
 {% extends "layouts/main.njk" %}
 
+{% block pagetitle %}{{ title }} | {% endblock %}
+
 {% if cover %}
     {% set cover = cover %}
 {% else %}

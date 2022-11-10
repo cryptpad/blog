@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style.css">
 
-    <title></title> 
+    <title>CryptPad Blog</title> 
     
 
     
@@ -32,46 +32,54 @@
 </head>
 
 <body>
-    <div class="container">
-        <nav class="main">
+    <main class="container">
+        <header>
             <a href="/">
-                <img class="cp-logo" src="/theme/CryptPad_logo.svg" alt="CryptPad Logo">
+                <img class="cp-logo" src="/theme/CryptPad_logo.svg" alt="Logo">
                 <h1>CryptPad Blog</h1>
             </a>
-        </nav>
-        <main>
+        </header>
+        
+        <section id="top-tags" class="home">
+        
+            <h3>Top Tags</h3>
+<ul>
+
+    <li>
+        <a class="tag" href="/tags/status-update">status update</a><span class="count">14</span></li>
+
+    <li>
+        <a class="tag" href="/tags/funding">funding</a><span class="count">13</span></li>
+
+    <li>
+        <a class="tag" href="/tags/roadmap">roadmap</a><span class="count">10</span></li>
+
+    <li>
+        <a class="tag" href="/tags/security">security</a><span class="count">7</span></li>
+
+    <li>
+        <a class="tag" href="/tags/donate">donate</a><span class="count">6</span></li>
+
+    <li>
+        <a class="tag" href="/tags/ngi">ngi</a><span class="count">6</span></li>
+
+    <li>
+        <a class="tag" href="/tags/open-source">open-source</a><span class="count">5</span></li>
+
+    <li>
+        <a class="tag" href="/tags/open-collective">open collective</a><span class="count">5</span></li>
+
+    <li>
+        <a class="tag" href="/tags/research">research</a><span class="count">5</span></li>
+
+    <li>
+        <a class="tag" href="/tags/forms">forms</a><span class="count">5</span></li>
+
+</ul>
+        </section>
+        <section id="content">
             
             
-            <section id="top-tags" class="home">
-            
-                <h3>Top Tags</h3>
-                <ul>
-                    
-                        <li><a class="tag" href="/tags/status-update">status update</a><span class="count">14</span></li>
-                    
-                        <li><a class="tag" href="/tags/funding">funding</a><span class="count">13</span></li>
-                    
-                        <li><a class="tag" href="/tags/roadmap">roadmap</a><span class="count">10</span></li>
-                    
-                        <li><a class="tag" href="/tags/security">security</a><span class="count">7</span></li>
-                    
-                        <li><a class="tag" href="/tags/donate">donate</a><span class="count">6</span></li>
-                    
-                        <li><a class="tag" href="/tags/ngi">ngi</a><span class="count">6</span></li>
-                    
-                        <li><a class="tag" href="/tags/open-source">open-source</a><span class="count">5</span></li>
-                    
-                        <li><a class="tag" href="/tags/open-collective">open collective</a><span class="count">5</span></li>
-                    
-                        <li><a class="tag" href="/tags/research">research</a><span class="count">5</span></li>
-                    
-                        <li><a class="tag" href="/tags/forms">forms</a><span class="count">5</span></li>
-                    
-                </ul>
-            </section>
-            <section id="content">
-                
-                
 
 
 <h2>3 Posts tagged “retrospective”</h2>
@@ -85,18 +93,21 @@
         <h2>Preparing for 2022</h2>
     </a>
     
-        <p>With the end of the year nearly upon us I am keeping up my tradition of writing a retrospective of what the CryptPad team has done over the past twelve months and an overview of our plans for the next twelve.</p>
+        <p class="summary">With the end of the year nearly upon us I am keeping up my tradition of writing a retrospective of what the CryptPad team has done over the past twelve months and an overview of our plans for the next twelve.</p>
     
     <p class="meta-info">
         30 Dec 2021
-        
-            <a class="tag" href="/tags/retrospective">retrospective</a>
-        
-            <a class="tag" href="/tags/roadmap">roadmap</a>
-        
-            <a class="tag" href="/tags/status-update">status update</a>
-        
     </p>
+    <i class="fa fa-tags" aria-hidden="true"></i>
+    <ul aria-label="Tags">
+    
+        <li><a class="tag" href="/tags/retrospective">retrospective</a></li>
+    
+        <li><a class="tag" href="/tags/roadmap">roadmap</a></li>
+    
+        <li><a class="tag" href="/tags/status-update">status update</a></li>
+    
+    </ul>
 </article>
 
 
@@ -108,16 +119,19 @@
         <h2>No plan survives first contact with the enemy</h2>
     </a>
     
-        <p>In 2019 we finished a four-year research project that had covered the majority of CryptPad&#39;s development costs. We had some worries about how we would continue to fund our team, but we were fortunate enough to meet and form a good relationship with members of Europe&#39;s Next Generation Internet Initiative.</p>
+        <p class="summary">In 2019 we finished a four-year research project that had covered the majority of CryptPad&#39;s development costs. We had some worries about how we would continue to fund our team, but we were fortunate enough to meet and form a good relationship with members of Europe&#39;s Next Generation Internet Initiative.</p>
     
     <p class="meta-info">
         31 Dec 2020
-        
-            <a class="tag" href="/tags/retrospective">retrospective</a>
-        
-            <a class="tag" href="/tags/roadmap">roadmap</a>
-        
     </p>
+    <i class="fa fa-tags" aria-hidden="true"></i>
+    <ul aria-label="Tags">
+    
+        <li><a class="tag" href="/tags/retrospective">retrospective</a></li>
+    
+        <li><a class="tag" href="/tags/roadmap">roadmap</a></li>
+    
+    </ul>
 </article>
 
 
@@ -127,32 +141,71 @@
         <h2>Looking back, looking forward</h2>
     </a>
     
-        <p>It was four years ago when I first started working full-time on CryptPad. At that point fewer than 10 people used the service on a weekly basis.</p>
+        <p class="summary">It was four years ago when I first started working full-time on CryptPad. At that point fewer than 10 people used the service on a weekly basis.</p>
     
     <p class="meta-info">
         31 Dec 2019
-        
-            <a class="tag" href="/tags/retrospective">retrospective</a>
-        
-            <a class="tag" href="/tags/roadmap">roadmap</a>
-        
     </p>
+    <i class="fa fa-tags" aria-hidden="true"></i>
+    <ul aria-label="Tags">
+    
+        <li><a class="tag" href="/tags/retrospective">retrospective</a></li>
+    
+        <li><a class="tag" href="/tags/roadmap">roadmap</a></li>
+    
+    </ul>
 </article>
 
 
-                
-            </section>
             
-                <section id="social" class="home">
-            
-                
-                <ul>
-                    <li>RSS</li>
-                    <li>Mastodon</li>
-                </ul>
-            </section>
-        </main>
-    </div>
+        </section>
+        
+            <section id="social" class="home">
+        
+            <ul>
+    <li>
+        <a href="/atom.xml">
+            <i aria-hidden="true" class="fa fa-rss"></i>RSS Feed
+        </a>
+    </li>
+    <li>
+        <a href="https://cryptpad.org">
+            <i aria-hidden="true" class="fa fa-globe"></i>Project website
+        </a>
+    </li>
+    <li>
+        <a href="https://opencollective.com/cryptpad/contribute">
+            <i aria-hidden="true" class="fa fa-open-collective"></i>OpenCollective
+        </a>
+    </li>
+    <li>
+        <a href="https://forum.cryptpad.org">
+            <i aria-hidden="true" class="fa fa-bullhorn"></i>Forum
+        </a>
+    </li>
+    <li>
+        <a href="https://matrix.to/#/#cryptpad:matrix.xwiki.com">
+            <i aria-hidden="true" class="fa fa-matrix-org"></i>Chat (Matrix)
+        </a>
+    </li>
+    <li>
+        <a rel="me" href="https://fosstodon.org/@cryptpad">
+            <i aria-hidden="true" class="fa fa-mastodon"></i>Mastodon
+        </a>
+    </li>
+    <li>
+        <a href="https://peertube.xwiki.com/c/cryptpad_channel/videos">
+            <i aria-hidden="true" class="fa fa-peertube"></i>Peertube
+        </a>
+    </li>
+    <li>
+        <a href="https://pixelfed.social/cryptpad_design">
+            <i aria-hidden="true" class="fa fa-pixelfed"></i>Pixelfed
+        </a>
+    </li>
+</ul>
+        </section>
+    </main>
 </body>
 
 </html>

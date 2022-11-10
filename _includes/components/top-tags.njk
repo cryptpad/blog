@@ -1,0 +1,7 @@
+<h3>Top Tags</h3>
+<ul>
+{% for tag in collections | topTags %}
+    <li>
+        <a class="tag" href="/tags/{{tag.name | slugify }}">{{ tag.name }}</a><span class="count">{{tag.count}}</span></li>
+{% endfor %}
+</ul>

@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style.css">
 
-    <title></title> 
+    <title>CryptPad Blog</title> 
     
 
     
@@ -32,46 +32,54 @@
 </head>
 
 <body>
-    <div class="container">
-        <nav class="main">
+    <main class="container">
+        <header>
             <a href="/">
-                <img class="cp-logo" src="/theme/CryptPad_logo.svg" alt="CryptPad Logo">
+                <img class="cp-logo" src="/theme/CryptPad_logo.svg" alt="Logo">
                 <h1>CryptPad Blog</h1>
             </a>
-        </nav>
-        <main>
+        </header>
+        
+        <section id="top-tags" class="home">
+        
+            <h3>Top Tags</h3>
+<ul>
+
+    <li>
+        <a class="tag" href="/tags/status-update">status update</a><span class="count">14</span></li>
+
+    <li>
+        <a class="tag" href="/tags/funding">funding</a><span class="count">13</span></li>
+
+    <li>
+        <a class="tag" href="/tags/roadmap">roadmap</a><span class="count">10</span></li>
+
+    <li>
+        <a class="tag" href="/tags/security">security</a><span class="count">7</span></li>
+
+    <li>
+        <a class="tag" href="/tags/donate">donate</a><span class="count">6</span></li>
+
+    <li>
+        <a class="tag" href="/tags/ngi">ngi</a><span class="count">6</span></li>
+
+    <li>
+        <a class="tag" href="/tags/open-source">open-source</a><span class="count">5</span></li>
+
+    <li>
+        <a class="tag" href="/tags/open-collective">open collective</a><span class="count">5</span></li>
+
+    <li>
+        <a class="tag" href="/tags/research">research</a><span class="count">5</span></li>
+
+    <li>
+        <a class="tag" href="/tags/forms">forms</a><span class="count">5</span></li>
+
+</ul>
+        </section>
+        <section id="content">
             
             
-            <section id="top-tags" class="home">
-            
-                <h3>Top Tags</h3>
-                <ul>
-                    
-                        <li><a class="tag" href="/tags/status-update">status update</a><span class="count">14</span></li>
-                    
-                        <li><a class="tag" href="/tags/funding">funding</a><span class="count">13</span></li>
-                    
-                        <li><a class="tag" href="/tags/roadmap">roadmap</a><span class="count">10</span></li>
-                    
-                        <li><a class="tag" href="/tags/security">security</a><span class="count">7</span></li>
-                    
-                        <li><a class="tag" href="/tags/donate">donate</a><span class="count">6</span></li>
-                    
-                        <li><a class="tag" href="/tags/ngi">ngi</a><span class="count">6</span></li>
-                    
-                        <li><a class="tag" href="/tags/open-source">open-source</a><span class="count">5</span></li>
-                    
-                        <li><a class="tag" href="/tags/open-collective">open collective</a><span class="count">5</span></li>
-                    
-                        <li><a class="tag" href="/tags/research">research</a><span class="count">5</span></li>
-                    
-                        <li><a class="tag" href="/tags/forms">forms</a><span class="count">5</span></li>
-                    
-                </ul>
-            </section>
-            <section id="content">
-                
-                
 
     <article class="list">
     <a href="/2018/06/15/Signing-CryptPad/" >
@@ -79,18 +87,21 @@
         <h2>Signing CryptPad</h2>
     </a>
     
-        <p>CryptPad was designed with a view that privacy should be default and cryptography should be invisible. In order to do this, we made use of the web-app model so people could just go to cryptpad.fr and immediately begin using the app, no installation necessary. However, this model has a known flaw...</p>
+        <p class="summary">CryptPad was designed with a view that privacy should be default and cryptography should be invisible. In order to do this, we made use of the web-app model so people could just go to cryptpad.fr and immediately begin using the app, no installation necessary. However, this model has a known flaw...</p>
     
     <p class="meta-info">
         15 Jun 2018
-        
-            <a class="tag" href="/tags/signing">signing</a>
-        
-            <a class="tag" href="/tags/subresource-integrity">subresource integrity</a>
-        
-            <a class="tag" href="/tags/chain-of-trust">chain of trust</a>
-        
     </p>
+    <i class="fa fa-tags" aria-hidden="true"></i>
+    <ul aria-label="Tags">
+    
+        <li><a class="tag" href="/tags/signing">signing</a></li>
+    
+        <li><a class="tag" href="/tags/subresource-integrity">subresource integrity</a></li>
+    
+        <li><a class="tag" href="/tags/chain-of-trust">chain of trust</a></li>
+    
+    </ul>
 </article>
 
 
@@ -100,18 +111,21 @@
         <h2>One year of biweekly releases</h2>
     </a>
     
-        <p>Approximately one year ago, we published an article about our intention to follow a biweekly release schedule. Since then, we&#39;ve thought of every second Tuesday as release day.</p>
+        <p class="summary">Approximately one year ago, we published an article about our intention to follow a biweekly release schedule. Since then, we&#39;ve thought of every second Tuesday as release day.</p>
     
     <p class="meta-info">
         23 Feb 2018
-        
-            <a class="tag" href="/tags/release">release</a>
-        
-            <a class="tag" href="/tags/security">security</a>
-        
-            <a class="tag" href="/tags/roadmap">roadmap</a>
-        
     </p>
+    <i class="fa fa-tags" aria-hidden="true"></i>
+    <ul aria-label="Tags">
+    
+        <li><a class="tag" href="/tags/release">release</a></li>
+    
+        <li><a class="tag" href="/tags/security">security</a></li>
+    
+        <li><a class="tag" href="/tags/roadmap">roadmap</a></li>
+    
+    </ul>
 </article>
 
 
@@ -121,20 +135,23 @@
         <h2>CryptPad&#39;s new Secure Cross-Domain Iframe</h2>
     </a>
     
-        <p>CryptPad version 1.14 (Codename Ouroboros) has been released and the most exciting new feature is one you cannot even see.</p>
+        <p class="summary">CryptPad version 1.14 (Codename Ouroboros) has been released and the most exciting new feature is one you cannot even see.</p>
     
     <p class="meta-info">
         30 Aug 2017
-        
-            <a class="tag" href="/tags/security">security</a>
-        
-            <a class="tag" href="/tags/appstore">appstore</a>
-        
-            <a class="tag" href="/tags/iframe">iframe</a>
-        
-            <a class="tag" href="/tags/media-tag">media-tag</a>
-        
     </p>
+    <i class="fa fa-tags" aria-hidden="true"></i>
+    <ul aria-label="Tags">
+    
+        <li><a class="tag" href="/tags/security">security</a></li>
+    
+        <li><a class="tag" href="/tags/appstore">appstore</a></li>
+    
+        <li><a class="tag" href="/tags/iframe">iframe</a></li>
+    
+        <li><a class="tag" href="/tags/media-tag">media-tag</a></li>
+    
+    </ul>
 </article>
 
 
@@ -146,18 +163,21 @@
         <h2>CryptPad&#39;s New Direction</h2>
     </a>
     
-        <p>CryptPad was born on Halloween 2014, at that time it was a skunkworks project inside of XWiki SAS. The UI was hidious green and white and the only feature was the CKEditor based pad. We have come a long way.</p>
+        <p class="summary">CryptPad was born on Halloween 2014, at that time it was a skunkworks project inside of XWiki SAS. The UI was hidious green and white and the only feature was the CKEditor based pad. We have come a long way.</p>
     
     <p class="meta-info">
         18 Aug 2017
-        
-            <a class="tag" href="/tags/security">security</a>
-        
-            <a class="tag" href="/tags/extensibility">extensibility</a>
-        
-            <a class="tag" href="/tags/quality">quality</a>
-        
     </p>
+    <i class="fa fa-tags" aria-hidden="true"></i>
+    <ul aria-label="Tags">
+    
+        <li><a class="tag" href="/tags/security">security</a></li>
+    
+        <li><a class="tag" href="/tags/extensibility">extensibility</a></li>
+    
+        <li><a class="tag" href="/tags/quality">quality</a></li>
+    
+    </ul>
 </article>
 
 
@@ -169,18 +189,21 @@
         <h2>CryptPad Analytics &amp; Privacy - What we can&#39;t know, what we must know, what we want to know</h2>
     </a>
     
-        <p>CryptPad is a Zero Knowledge cloud application, this means we have designed it such that we do not have any access to the content which is hosted on our server. However, there are other things which we do collect and it is important that privacy-minded users understand what we are collecting and why</p>
+        <p class="summary">CryptPad is a Zero Knowledge cloud application, this means we have designed it such that we do not have any access to the content which is hosted on our server. However, there are other things which we do collect and it is important that privacy-minded users understand what we are collecting and why</p>
     
     <p class="meta-info">
         7 Jul 2017
-        
-            <a class="tag" href="/tags/analytics">analytics</a>
-        
-            <a class="tag" href="/tags/data">data</a>
-        
-            <a class="tag" href="/tags/privacy">privacy</a>
-        
     </p>
+    <i class="fa fa-tags" aria-hidden="true"></i>
+    <ul aria-label="Tags">
+    
+        <li><a class="tag" href="/tags/analytics">analytics</a></li>
+    
+        <li><a class="tag" href="/tags/data">data</a></li>
+    
+        <li><a class="tag" href="/tags/privacy">privacy</a></li>
+    
+    </ul>
 </article>
 
 
@@ -195,19 +218,55 @@
     
   </ol>
 </nav>
-                
-            </section>
             
-                <section id="social" class="home">
-            
-                
-                <ul>
-                    <li>RSS</li>
-                    <li>Mastodon</li>
-                </ul>
-            </section>
-        </main>
-    </div>
+        </section>
+        
+            <section id="social" class="home">
+        
+            <ul>
+    <li>
+        <a href="/atom.xml">
+            <i aria-hidden="true" class="fa fa-rss"></i>RSS Feed
+        </a>
+    </li>
+    <li>
+        <a href="https://cryptpad.org">
+            <i aria-hidden="true" class="fa fa-globe"></i>Project website
+        </a>
+    </li>
+    <li>
+        <a href="https://opencollective.com/cryptpad/contribute">
+            <i aria-hidden="true" class="fa fa-open-collective"></i>OpenCollective
+        </a>
+    </li>
+    <li>
+        <a href="https://forum.cryptpad.org">
+            <i aria-hidden="true" class="fa fa-bullhorn"></i>Forum
+        </a>
+    </li>
+    <li>
+        <a href="https://matrix.to/#/#cryptpad:matrix.xwiki.com">
+            <i aria-hidden="true" class="fa fa-matrix-org"></i>Chat (Matrix)
+        </a>
+    </li>
+    <li>
+        <a rel="me" href="https://fosstodon.org/@cryptpad">
+            <i aria-hidden="true" class="fa fa-mastodon"></i>Mastodon
+        </a>
+    </li>
+    <li>
+        <a href="https://peertube.xwiki.com/c/cryptpad_channel/videos">
+            <i aria-hidden="true" class="fa fa-peertube"></i>Peertube
+        </a>
+    </li>
+    <li>
+        <a href="https://pixelfed.social/cryptpad_design">
+            <i aria-hidden="true" class="fa fa-pixelfed"></i>Pixelfed
+        </a>
+    </li>
+</ul>
+        </section>
+    </main>
 </body>
 
 </html>

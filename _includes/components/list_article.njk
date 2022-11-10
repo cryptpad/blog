@@ -6,12 +6,15 @@
         <h2>{{ post.data.title }}</h2>
     </a>
     {% if post.data.summary %}
-        <p>{{ post.data.summary}}</p>
+        <p class="summary">{{ post.data.summary}}</p>
     {% endif %}
     <p class="meta-info">
         {{ post.date | postDate }}
-        {% for tag in post.data.tags %}
-            <a class="tag" href="/tags/{{ tag | slugify }}">{{ tag }}</a>
-        {% endfor %}
     </p>
+    <i class="fa fa-tags" aria-hidden="true"></i>
+    <ul aria-label="Tags">
+    {% for tag in post.data.tags %}
+        <li><a class="tag" href="/tags/{{ tag | slugify }}">{{ tag }}</a></li>
+    {% endfor %}
+    </ul>
 </article>
