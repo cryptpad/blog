@@ -2914,8 +2914,7 @@ body .container header {
 }
 body .container header a {
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  flex-direction: row;
 }
 body .container header a .cp-logo {
   max-width: 3.6rem;
@@ -2923,6 +2922,12 @@ body .container header a .cp-logo {
 }
 body .container header a h1 {
   font-size: 2.5rem;
+}
+@media screen and (max-width: 340px) {
+  body .container header a {
+    align-content: left;
+    flex-direction: column;
+  }
 }
 body .container #content {
   margin: 0 auto;
@@ -3028,6 +3033,9 @@ a.tag {
   #social {
     grid-area: bottom2;
   }
+  #social li {
+    display: inline-block;
+  }
 }
 article.list {
   margin-bottom: 1rem;
@@ -3097,10 +3105,9 @@ article.post iframe {
 }
 .article-tags ul {
   list-style: none;
-  display: inline;
 }
 .article-tags ul li {
-  display: inline;
+  display: inline-block;
 }
 .article-pagination {
   width: 100%;

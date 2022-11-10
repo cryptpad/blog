@@ -26,14 +26,17 @@ body {
             margin-bottom: 3rem;
             a {
                 display: flex;
-                align-items: center;
-                justify-content: flex-start;
+                flex-direction: row;
                 .cp-logo {
                     max-width: 3.6rem;
                     margin-right: 1.5rem;
                 }
                 h1 {
                     font-size: 2.5rem;
+                }
+                @media screen and (max-width: 340px) {
+                    align-content: left;
+                    flex-direction: column;
                 }
             }
         }
@@ -138,6 +141,9 @@ a.tag {
     }
     @media screen and (max-width: @screen_S) {
         .social-in-footer();
+        li {
+            display: inline-block;
+        }
     }
 }
 
@@ -216,9 +222,8 @@ article.post {
     }
     ul {
         list-style: none;
-        display: inline;
         li {
-            display: inline;
+            display: inline-block;
         }
     }
 }
