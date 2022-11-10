@@ -27,15 +27,18 @@
 
 {% block content %}
     <article class="post">
-        <h1>{{title}}</h1>
-        <p class="meta">
-            {% if author %}
-                {{ author }} - 
-            {% endif %}
-            {{ date | postDate }}
-                {# XXX TODO TBC add Mastodon share button? #}
-                {# https://github.com/Aly-ve/Mastodon-share-button #}
-        </p>
+        <section class="header">
+            <h1>{{title}}</h1>
+            <p class="meta">
+                {% if author %}
+                    {{ author }} -
+                {% endif %}
+                {{ date | postDate }}
+                    {# XXX TODO TBC add Mastodon share button? #}
+                    {# https://github.com/Aly-ve/Mastodon-share-button #}
+            </p>
+            {% include "components/article-tags.njk" %}
+        </section>
         {{ content | safe }}
     </article>
 

@@ -80,15 +80,27 @@
         <section id="content">
             
     <article class="post">
-        <h1>Making CryptPad CSS 3 times faster, by loading it twice</h1>
-        <p class="meta">
-            
-                Caleb James DeLisle - 
-            
-            20 Jul 2018
+        <section class="header">
+            <h1>Making CryptPad CSS 3 times faster, by loading it twice</h1>
+            <p class="meta">
                 
+                    Caleb James DeLisle -
                 
-        </p>
+                20 Jul 2018
+                    
+                    
+            </p>
+            <div class="article-tags">
+    <i class="fa fa-tags" aria-hidden="true"></i>
+    <ul class="tags" aria-label="Tags">
+    
+        <li><a class="tag" href="/tags/performance">performance</a></li>
+    
+        <li><a class="tag" href="/tags/css">css</a></li>
+    
+    </ul>
+</div>
+        </section>
         <script src="https://cryptpad.fr/common/media-tag-nacl.min.js"></script>
 <p>In CryptPad development, we have always tried to push the limits of the technology. As you might know, we don't minify any of our javascript code and we have no build system, yet CryptPad is still faster than many similar projects which do. In recent profiling, we determined that the biggest cause of slow loading was compilng of less stylesheets.</p>
 <p>All of the styles for CryptPad are written in <a href="http://lesscss.org/">Less</a> CSS templating language and because we don't have a build system, when you load a page on CryptPad, it downloads the less compiler and runs it in your browser. When the less has been compiled the first time, it is cached in the browser's <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage">localStorage</a> so that it doesn't need to be compiled again (until next release). Unfortunately, the way we structured CryptPad Less code led to this taking a long time.</p>

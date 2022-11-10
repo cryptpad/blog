@@ -80,15 +80,29 @@
         <section id="content">
             
     <article class="post">
-        <h1>Signing CryptPad</h1>
-        <p class="meta">
-            
-                Caleb James DeLisle - 
-            
-            15 Jun 2018
+        <section class="header">
+            <h1>Signing CryptPad</h1>
+            <p class="meta">
                 
+                    Caleb James DeLisle -
                 
-        </p>
+                15 Jun 2018
+                    
+                    
+            </p>
+            <div class="article-tags">
+    <i class="fa fa-tags" aria-hidden="true"></i>
+    <ul class="tags" aria-label="Tags">
+    
+        <li><a class="tag" href="/tags/signing">signing</a></li>
+    
+        <li><a class="tag" href="/tags/subresource-integrity">subresource integrity</a></li>
+    
+        <li><a class="tag" href="/tags/chain-of-trust">chain of trust</a></li>
+    
+    </ul>
+</div>
+        </section>
         <p>CryptPad was designed with a view that privacy should be default and cryptography should be invisible. In order to do this, we made use of the web-app model so people could just go to cryptpad.fr and immediately begin using the app, no installation necessary. However, this model has a known flaw, the server can decide what client-side code it will send to any given user, allowing a compromized server to serve code with a back-door vulnerability.</p>
 <p>Recently, I did an experiment to make CryptPad more secure against these types of attacks by signing the code. CryptPad is a unique webapp, even without considering the encryption aspect. There is no build system, the code we write is exactly the same as what your web browser runs. All of the CryptPad html, javascript and resources are static files which are served by a plain old web server. The data persistance is managed by an API server which the web browser communicates with using an HTML5 WebSocket. Finally, in order to add a layer of security against possible Cross Site Scripting attacks, CryptPad makes use of a <a href="https://blog.cryptpad.fr/2017/08/30/CryptPad-s-new-Secure-Cross-Domain-Iframe/">cross domain iframe</a>, protecting your encryption keys from the majority of the CryptPad code in the same way that your online bank is protected from that sketchy porn site open in another tab.</p>
 <p>Since CryptPad has no build system, there are many small javascript files which must be loaded. To do this, CryptPad uses <a href="http://requirejs.org/">RequireJS</a>. While many small files are generally considered to be bad for website performance, RequireJS uses the HTML5 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script">async attribute</a> to tell the browser not to block loading of other things while waiting for the scripts to load. Secondly, RequireJS also allows version numbers to be added to the script URLs which allows us to cache almost everything in the browser. Finally, we use the <a href="https://en.wikipedia.org/wiki/HTTP/2">HTTP/2</a> protocol to serve resources because it allows multiple requests to be sent at the same time, while HTTP/2 is incompatible with WebSocket, this is ok because the web-app is served from a different server from the API server.</p>

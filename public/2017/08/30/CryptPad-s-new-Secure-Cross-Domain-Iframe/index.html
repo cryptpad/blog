@@ -80,15 +80,31 @@
         <section id="content">
             
     <article class="post">
-        <h1>CryptPad&#39;s new Secure Cross-Domain Iframe</h1>
-        <p class="meta">
-            
-                Caleb James DeLisle - 
-            
-            30 Aug 2017
+        <section class="header">
+            <h1>CryptPad&#39;s new Secure Cross-Domain Iframe</h1>
+            <p class="meta">
                 
+                    Caleb James DeLisle -
                 
-        </p>
+                30 Aug 2017
+                    
+                    
+            </p>
+            <div class="article-tags">
+    <i class="fa fa-tags" aria-hidden="true"></i>
+    <ul class="tags" aria-label="Tags">
+    
+        <li><a class="tag" href="/tags/security">security</a></li>
+    
+        <li><a class="tag" href="/tags/appstore">appstore</a></li>
+    
+        <li><a class="tag" href="/tags/iframe">iframe</a></li>
+    
+        <li><a class="tag" href="/tags/media-tag">media-tag</a></li>
+    
+    </ul>
+</div>
+        </section>
         <script src="https://cryptpad.fr/common/media-tag-nacl.min.js"></script>
 <p>CryptPad version 1.14 (Codename <a href="https://en.wikipedia.org/wiki/Ouroboros">Ouroboros</a>) has been released and the most exciting new feature is one you cannot even see. As you may remember from the <a href="/2017/03/06/Security-growing-pains/">Security Growing Pains</a> post, <a href="https://en.wikipedia.org/wiki/Content_Security_Policy">Content Security Policy</a> is a significant part of CryptPad's security model, and it is unfortunately incompatible with <a href="https://ckeditor.com/">CKEditor</a>, the Open Source text editor used in CryptPad.</p>
 <p>With this release, we have done a significant re-architecture of the CryptPad codebase. Starting with the /pad/ application, the CryptPad UI has begun a process of moving into an iframe which is hosted on a different domain: <em>sandbox.cryptpad.info</em>. Moving the visual content to a different domain means that even in the event of a <a href="https://en.wikipedia.org/wiki/Cross-site_scripting">Cross-site scripting</a> security vulnerability, most of your private information such as the pads in your CryptDrive, will not be at risk.</p>

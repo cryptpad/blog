@@ -3049,15 +3049,8 @@ article.list .meta-info {
   line-height: 180%;
   display: inline;
 }
-article.list i {
+article.list .article-tags {
   margin-left: 1rem;
-}
-article.list ul {
-  list-style: none;
-  display: inline;
-}
-article.list ul li {
-  display: inline;
 }
 .pagination {
   text-align: center;
@@ -3075,8 +3068,11 @@ article.post {
   grid-area: main;
   margin-bottom: 8rem;
 }
+article.post .header {
+  margin-bottom: 3rem;
+}
 article.post h1 {
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 article.post p {
   font-size: 1.2em;
@@ -3085,13 +3081,26 @@ article.post p {
 article.post p a {
   text-decoration: underline;
 }
-article.post ul,
-article.post ol {
+article.post ul:not(.tags),
+article.post ol:not(.tags) {
   list-style: disc;
   padding-left: 1em;
 }
 article.post iframe {
   margin: 1rem 1rem 1rem 0;
+}
+.article-tags {
+  display: inline;
+}
+.article-tags i {
+  margin-right: 0.5rem;
+}
+.article-tags ul {
+  list-style: none;
+  display: inline;
+}
+.article-tags ul li {
+  display: inline;
 }
 .article-pagination {
   width: 100%;

@@ -160,15 +160,8 @@ article.list {
         line-height: 180%;
         display: inline;
     }
-    i {
+    .article-tags {
         margin-left: 1rem;
-    }
-    ul {
-        list-style: none;
-        display: inline;
-        li {
-            display: inline;
-        }
     }
 }
 
@@ -187,11 +180,15 @@ article.list {
     }
 }
 
+
 article.post {
     grid-area: main;
-    margin-bottom: 8rem;;
+    margin-bottom: 8rem;
+    .header {
+        margin-bottom: 3rem;
+    }
     h1 {
-        margin-bottom: 1rem;
+        margin-bottom: 0.5rem;
     }
     p {
         font-size: 1.2em;
@@ -201,12 +198,28 @@ article.post {
         }
     }
     ul, ol {
-        list-style: disc;
-        // list-style-position: inside;
-        padding-left: 1em;
+        &:not(.tags) {
+                list-style: disc;
+            // list-style-position: inside;
+            padding-left: 1em;
+        }
     }
     iframe {
         margin: 1rem 1rem 1rem 0;
+    }
+}
+
+.article-tags {
+    display: inline;
+    i {
+        margin-right: 0.5rem;
+    }
+    ul {
+        list-style: none;
+        display: inline;
+        li {
+            display: inline;
+        }
     }
 }
 
