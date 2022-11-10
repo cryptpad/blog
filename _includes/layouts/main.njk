@@ -29,20 +29,22 @@
 <body>
     <main class="container">
         <header>
+            {% block back_home %}
+            {% endblock %}
             <a href="/">
                 <img class="cp-logo" src="/theme/CryptPad_logo.svg" alt="Logo">
                 <h1>CryptPad Blog</h1>
             </a>
         </header>
-        {% block toptags %}
-        <section id="top-tags" class="home">
-        {% endblock %}
-            {% include "components/top-tags.njk" %}
-        </section>
         <section id="content">
             {% block content %}
             {{ content | safe }}
             {% endblock %}
+        </section>
+        {% block toptags %}
+        <section id="top-tags" class="home">
+        {% endblock %}
+            {% include "components/top-tags.njk" %}
         </section>
         {% block social %}
             <section id="social" class="home">

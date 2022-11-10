@@ -21,8 +21,10 @@
     ) }}
 {% endblock %}
 
-{% block toptags %}
-<section id="top-tags" class="post">
+{% block back_home %}
+    <a href="/" class="back-home">
+        <i class="fa fa-arrow-left" aria-hidden="true"></i> <i class="fa fa-home" aria-hidden="true"></i> Homepage
+    </a>
 {% endblock %}
 
 {% block content %}
@@ -50,6 +52,10 @@
             <a href="{{ previousPost.url }}">Older: <span class="title">{{ previousPost.data.title }}</span></a>
         {% endif %}
     </nav>
+{% endblock %}
+
+{% block toptags %}
+<section id="top-tags" class="post">
 {% endblock %}
 
 {% block social %}

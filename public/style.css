@@ -2902,7 +2902,7 @@ body {
   font-family: 'Open Sans';
 }
 body .container {
-  margin: 2rem auto;
+  margin: 1.7rem auto;
   display: grid;
   grid-template-areas: ". header ." "left main right" ". bottom1 ." ". bottom2 .";
   grid-template-columns: 1fr fit-content(70ch) 1fr;
@@ -2928,6 +2928,10 @@ body .container header a h1 {
     align-content: left;
     flex-direction: column;
   }
+}
+body .container header a.back-home {
+  display: block;
+  margin-bottom: 1rem;
 }
 body .container #content {
   margin: 0 auto;
@@ -3086,7 +3090,7 @@ article.post h1 {
   margin-bottom: 0.5rem;
 }
 article.post p {
-  font-size: 1.2em;
+  font-size: 1.1em;
   margin-bottom: 1rem;
 }
 article.post p a {
