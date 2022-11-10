@@ -19,14 +19,18 @@
     ) }}
 {% endblock %}
 
+{% block toptags %}
+<section id="top-tags" class="post">
+{% endblock %}
+
 {% block content %}
     <article class="post">
         <h1>{{title}}</h1>
         <p class="meta">
             {% if author %}
-                By: {{ author }}
+                {{ author }} - 
             {% endif %}
-                {# XXX add date #}
+            {{ date | postDate }}
                 {# XXX TODO TBC add Mastodon share button? #}
                 {# https://github.com/Aly-ve/Mastodon-share-button #}
         </p>
@@ -43,3 +47,6 @@
     </nav>
 {% endblock %}
 
+{% block social %}
+    <section id="social" class="post">
+{% endblock %}

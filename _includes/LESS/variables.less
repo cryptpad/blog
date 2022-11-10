@@ -1,13 +1,21 @@
-@radius: .5rem;
+
+
+// Breakpoints
+@screen_S: 800px;
+
+// Rounded corners
+@radius: 0.5rem;
 @radius_L: 0.8rem;
 
 :root {
     --col-background: @cryptpad_color_grey_100;
     --col-primary: @cryptpad_color_grey_900;
+    --col-primary-fade: fade(@cryptpad_color_grey_900, 10%);
+    --col-brand-fade: fade(@cryptpad_color_brand, 30%);
     --col-link: @cryptpad_color_brand;
     --col-link-vis: fade(@cryptpad_color_brand, 50%);
-    --col-card: @cryptpad_color_grey_200;
-    --col-tag: @cryptpad_color_grey_300;
+    --col-card: @cryptpad_color_grey_300;
+    --col-tag: @cryptpad_color_grey_400;
     --col-tag-fg: @cryptpad_color_grey_900;
 }
 
@@ -15,6 +23,8 @@
 	:root {
         --col-background: @cryptpad_color_grey_900;
         --col-primary: @cryptpad_color_grey_200;
+        --col-primary-fade: fade(@cryptpad_color_grey_200, 10%);
+        --col-brand-fade: fade(@cryptpad_color_brand, 30%);
         --col-link: @cryptpad_color_brand_300;
         --col-link-vis: fade(@cryptpad_color_brand_300, 80%);
         --col-card: @cryptpad_color_grey_850;

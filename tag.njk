@@ -7,10 +7,10 @@ permalink: /tags/{{ tag | slugify }}/
 layout: "layouts/main.njk"
 eleventyExcludeFromCollections: true
 ---
-{# XXX: fix this title #}
-<h2>Posts tagged “{{ tag }}”</h2>
 
 {% set taglist = collections[ tag ] %}
+
+<h2>{{ taglist | length }} Posts tagged “{{ tag }}”</h2>
 
 {% for post in taglist | reverse %}
   {% include "components/list_article.njk" %}

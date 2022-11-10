@@ -33,13 +33,33 @@
                 <img class="cp-logo" src="/theme/CryptPad_logo.svg" alt="CryptPad Logo">
                 <h1>CryptPad Blog</h1>
             </a>
-            {# XXX TODO: links to .org site, social media, RSS feed #}
         </nav>
         <main>
             {# XXX TODO TBC: side bar with: archives by year, top tags, ... #}
-            {% block content %}
-            {{ content | safe }}
+            {% block toptags %}
+            <section id="top-tags" class="home">
             {% endblock %}
+                <h3>Top Tags</h3>
+                <ul>
+                    {% for tag in collections | topTags %}
+                        <li><a class="tag" href="/tags/{{tag.name | slugify }}">{{ tag.name }}</a><span class="count">{{tag.count}}</span></li>
+                    {% endfor %}
+                </ul>
+            </section>
+            <section id="content">
+                {% block content %}
+                {{ content | safe }}
+                {% endblock %}
+            </section>
+            {% block social %}
+                <section id="social" class="home">
+            {% endblock %}
+                {# XXX TODO: links to .org site, forum, chat, social media, RSS feed #}
+                <ul>
+                    <li>RSS</li>
+                    <li>Mastodon</li>
+                </ul>
+            </section>
         </main>
     </div>
 </body>
