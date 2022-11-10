@@ -3012,6 +3012,9 @@ a.tag {
   grid-area: right;
   min-width: 11rem;
 }
+#social ul {
+  margin-bottom: 2rem;
+}
 #social a {
   color: var(--col-primary);
   background-color: var(--col-brand-fade);
