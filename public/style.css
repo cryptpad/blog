@@ -2922,6 +2922,7 @@ body .container header a .cp-logo {
 }
 body .container header a h1 {
   font-size: 2.5rem;
+  line-height: 170%;
 }
 @media screen and (max-width: 340px) {
   body .container header a {
