@@ -28,7 +28,7 @@
 &lt;h2&gt;👨‍🔬 Theo joined the team&lt;/h2&gt;
 &lt;p&gt;Theo has officially joined the team, and begun his investigation of how cryptography is used in CryptPad. He has started adding comments to the code, writing documentation, reviewing the state of the art, and drafting a whitepaper that will summarise his findings.&lt;/p&gt;
 &lt;!-- XXX non dark theme diagram, re-export as Mermaid SVG and use their light/dark themes --&gt;
-&lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/mermaid-crypto.png&quot; alt=&quot;Key derivation for editable documents&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/mermaid-diagram-theo-intro.png&quot; alt=&quot;Key derivation for editable documents&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;📢 Forum open to the public&lt;/h2&gt;
 &lt;p&gt;Our &lt;a href=&quot;https://forum.cryptpad.org/&quot;&gt;forum&lt;/a&gt; is now &lt;a href=&quot;https://blog.cryptpad.org/2022/10/03/Forum-launch/&quot;&gt;officially open to the public&lt;/a&gt;. We have started receiving feedback through this new channel and it is already proving easier to keep track of it than in ephemeral chats and/or GitHub issues. If you have requests, bug reports, or any questions about CryptPad please &lt;a href=&quot;https://forum.cryptpad.org/&quot;&gt;join and let us know&lt;/a&gt;.&lt;/p&gt;
 &lt;h2&gt;🌐 New public instances&lt;/h2&gt;

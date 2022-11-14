@@ -29,4 +29,9 @@ module.exports = (function(eleventyConfig) {
         tags = tags.slice(0, 10); // take top 10
         return tags;
     });
+    // set nunjucks as markdown template engine
+    // could be useful for custom processing like mermaid
+    // return {
+    //     markdownTemplateEngine: "njk, md"
+    // }
 });
