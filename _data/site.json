@@ -1,6 +1,6 @@
 {
     "title": "CryptPad Blog",
-    "url": "http://localhost:8080",
+    "url": "http://blog.cryptpad.org",
     "summary": "News from the end-to-end encrypted collaboration suite",
     "image": "/theme/og-default.png"
 }
