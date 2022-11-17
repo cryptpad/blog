@@ -1,5 +1,5 @@
 ---
-title: Cryptpad et le monde de l'éducation en France 
+title: CryptPad et le monde de l'éducation en France 
 date: 2022-11-17
 author: Arnaud Laprévote
 lang: fr
