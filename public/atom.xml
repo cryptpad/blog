@@ -4,12 +4,35 @@
   <subtitle>News from the end-to-end encrypted collaboration suite</subtitle>
   <link href="https://blog.cryptpad.org/atom.xml" rel="self"/>
   <link href="https://blog.cryptpad.org"/>
-  <updated>2022-11-17T00:00:00Z</updated>
+  <updated>2022-11-28T00:00:00Z</updated>
   <id>https://blog.cryptpad.org</id>
   <author>
     <name>CryptPad Team</name>
     <email>contact@cryptpad.fr</email>
   </author>
+  <entry>
+    <title>November 2022 status</title>
+    <link href="https://blog.cryptpad.org/2022/11/28/status-2022-11/"/>
+    <updated>2022-11-28T00:00:00Z</updated>
+    <id>https://blog.cryptpad.org/2022/11/28/status-2022-11/</id>
+    <summary xml:lang="en" type="html">New blog design, Arnaud Laprévote joins the team, Le Monde uses CryptPad, Social media channels</summary>
+    <content xml:lang="en" type="html">&lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/2022-new-blog.png&quot; alt=&quot;Screenshot of the new blog design split between light and dark mode&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;🎨 New blog design&lt;/h2&gt;
+&lt;p&gt;You may have noticed the refreshed design of &lt;a href=&quot;https://blog.cryptpad.org/&quot;&gt;our blog&lt;/a&gt;. In addition to providing a clearer overview of recent posts it now supports dark mode, gives us more control over the content of the RSS feed, and is overall much easier to maintain than the previous setup. We would like to thank &lt;a href=&quot;https://www.11ty.dev/&quot;&gt;Eleventy&lt;/a&gt; for providing such a great and open-source static site generator!&lt;/p&gt;
+&lt;h2&gt;🧑‍💼 Arnaud Laprévote joins the team&lt;/h2&gt;
+&lt;p&gt;We welcome another new member to the team this month. Arnaud Laprévote, who you may have met in our &lt;a href=&quot;https://blog.cryptpad.org/2022/11/17/FR-education-2022-11/&quot;&gt;last post&lt;/a&gt; (in French) has extensive experience in the French open-source software industry. He was previously CEO of &lt;a href=&quot;https://en.wikipedia.org/wiki/Mandriva_Linux&quot;&gt;Mandriva&lt;/a&gt; and Lybero, and worked in research at France&#39;s &lt;em&gt;National Institute for Research in Digital Science and Technology&lt;/em&gt; (INRIA). Arnaud&#39;s role will involve managing research project across our team and parent company XWiki. He will also lead business efforts such as selling managed CryptPad instances and other partnerships.&lt;/p&gt;
+&lt;h2&gt;📰 Le Monde uses CryptPad&lt;/h2&gt;
+&lt;p&gt;We were happy to see French national newspaper Le Monde &lt;a href=&quot;https://www.lemonde.fr/international/video/2022/11/17/comment-les-stocks-d-armes-et-de-munitions-de-la-russie-ont-ete-severement-entames-par-des-attaques-ciblees-ukrainiennes_6150240_3210.html&quot;&gt;use CryptPad to share the sources of an article&lt;/a&gt;. This enables their journalists in the field in Ukraine, as well as anyone accessing the content, to protect their privacy.&lt;/p&gt;
+&lt;h2&gt;📢 Social media channels&lt;/h2&gt;
+&lt;p&gt;We have followed a &amp;quot;Fediverse first&amp;quot; approach to our social media presence for a long time. We provide an alternative to the big platforms when it comes to collaborative office suites, so it seems logical to use alternative social media such as &lt;a href=&quot;https://fosstodon.org/@cryptpad&quot;&gt;Mastodon&lt;/a&gt;, &lt;a href=&quot;https://peertube.xwiki.com/c/cryptpad_channel/videos&quot;&gt;PeerTube&lt;/a&gt; or &lt;a href=&quot;https://pixelfed.social/cryptpad_design&quot;&gt;Pixelfed&lt;/a&gt; for our communication.&lt;/p&gt;
+&lt;p&gt;Until now we used Twitter to re-post our Mastodon content, and also monitored the account for any questions or mentions. Given the current events unfolding at Twitter, and the many abhorrent stances taken by its new CEO, we &lt;a href=&quot;https://nitter.net/cryptpad/status/1590277396431015938&quot;&gt;asked our followers&lt;/a&gt; what we should do with the account. We will respect the preference of 77.5% of the 40 voters and keep the account active for now. We will however divest the time spent monitoring Twitter and have disabled cross posting. We encourage our followers to join the wave of people moving to Mastodon and the Fediverse.&lt;/p&gt;
+&lt;h2&gt;🔭 Next up&lt;/h2&gt;
+&lt;p&gt;We are working on features for the next version of CryptPad, due for release before the end of the calendar year. In addition to &lt;a href=&quot;https://blog.cryptpad.org/2022/10/28/status-2022-10/&quot;&gt;repeating events in Calendar&lt;/a&gt; we are also making a number of long-requested improvements to Forms.&lt;/p&gt;
+</content>
+    <category term="status update" scheme="https://blog.cryptpad.org/tags/status update/"/>
+    <category term="team" scheme="https://blog.cryptpad.org/tags/team/"/>
+    <category term="in use" scheme="https://blog.cryptpad.org/tags/in use/"/>
+  </entry>
   <entry>
     <title>CryptPad et le monde de l&#39;éducation en France</title>
     <link href="https://blog.cryptpad.org/2022/11/17/FR-education-2022-11/"/>
