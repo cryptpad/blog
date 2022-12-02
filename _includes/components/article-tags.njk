@@ -1,8 +1,10 @@
 <div class="article-tags">
-    <i class="fa fa-tags" aria-hidden="true"></i>
-    <ul class="tags" aria-label="Tags">
-    {% for tag in post.data.tags or tags %}
-        <li><a class="tag" href="/tags/{{ tag | slugify }}">{{ tag }}</a></li>
-    {% endfor %}
-    </ul>
+    {% if post.data.tags or tags %}
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        <ul class="tags" aria-label="Tags">
+        {% for tag in post.data.tags or tags %}
+            <li><a class="tag" href="/tags/{{ tag | slugify }}">{{ tag }}</a></li>
+        {% endfor %}
+        </ul>
+    {% endif %}
 </div>
