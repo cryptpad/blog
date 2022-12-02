@@ -1,0 +1,239 @@
+/**
+Dark theme based on https://github.com/PrismJS/prism-themes/blob/master/themes/prism-dracula.css
+ * Dracula Theme originally by Zeno Rocha [@zenorocha]
+ * https://draculatheme.com/
+ *
+ * Ported for PrismJS by Albert Vallverdu [@byverdu]
+ */
+
+ :root {
+    --col-background-code:  @cryptpad_color_grey_200;
+ }
+ @media (prefers-color-scheme: dark) {
+	:root {
+    --col-background-code:  @cryptpad_color_grey_850;
+    }
+}
+
+ code[class*="language-"],
+ pre[class*="language-"] {
+     color: var(--col-primary);
+     background: none;
+     font-family: "IBM Plex Mono", monospace;
+     text-align: left;
+     white-space: pre;
+     word-spacing: normal;
+     word-break: normal;
+     word-wrap: nowrap;
+     line-height: 1.5;
+     -moz-tab-size: 4;
+     -o-tab-size: 4;
+     tab-size: 4;
+     -webkit-hyphens: none;
+     -moz-hyphens: none;
+     -ms-hyphens: none;
+     hyphens: none;
+ }
+
+ /* Code blocks */
+ pre[class*="language-"] {
+     padding: 1em;
+     margin: .5em 0;
+     overflow: auto;
+     border-radius: @radius;
+     overflow-x: scroll;
+     display: block;
+     width: 60ch; // XXX width is not responsive
+ }
+
+ :not(pre) > code[class*="language-"],
+ pre[class*="language-"] {
+     background: var(--col-background-code);
+ }
+
+ /* Inline code */
+ :not(pre) > code[class*="language-"] {
+     padding: .1em;
+     border-radius: .3em;
+     white-space: normal;
+ }
+
+ .token.comment,
+ .token.prolog,
+ .token.doctype,
+ .token.cdata {
+     opacity: 0.75;
+ }
+
+ .token.punctuation {
+     color: #f8f8f2;
+ }
+
+ .namespace {
+     opacity: .7;
+ }
+
+ .token.property,
+ .token.tag,
+ .token.constant,
+ .token.symbol,
+ .token.deleted {
+     color: #ff79c6;
+ }
+
+ .token.boolean,
+ .token.number {
+     color: #bd93f9;
+ }
+
+ .token.selector,
+ .token.attr-name,
+ .token.string,
+ .token.char,
+ .token.builtin,
+ .token.inserted {
+     color: #50fa7b;
+ }
+
+ .token.operator,
+ .token.entity,
+ .token.url,
+ .language-css .token.string,
+ .style .token.string,
+ .token.variable {
+     color: #f8f8f2;
+ }
+
+ .token.atrule,
+ .token.attr-value,
+ .token.function,
+ .token.class-name {
+     color: #f1fa8c;
+ }
+
+ .token.keyword {
+     color: #8be9fd;
+ }
+
+ .token.regex,
+ .token.important {
+     color: #ffb86c;
+ }
+
+ .token.important,
+ .token.bold {
+     font-weight: bold;
+ }
+
+ .token.italic {
+     font-style: italic;
+ }
+
+ .token.entity {
+     cursor: help;
+ }
+
+
+////////// Light theme colors taken from:
+/// https://github.com/PrismJS/prism-themes/blob/master/themes/prism-coldark-cold.css
+
+@media (prefers-color-scheme: light) {
+    .token.comment,
+    .token.prolog,
+    .token.doctype,
+    .token.cdata {
+        opacity: 0.75;
+    }
+
+    .token.punctuation {
+        color: #111b27;
+    }
+
+    .token.delimiter.important,
+    .token.selector .parent,
+    .token.tag,
+    .token.tag .token.punctuation {
+        color: #006d6d;
+    }
+
+    .token.attr-name,
+    .token.boolean,
+    .token.boolean.important,
+    .token.number,
+    .token.constant,
+    .token.selector .token.attribute {
+        color: #755f00;
+    }
+
+    .token.class-name,
+    .token.key,
+    .token.parameter,
+    .token.property,
+    .token.property-access,
+    .token.variable {
+        color: #005a8e;
+    }
+
+    .token.attr-value,
+    .token.inserted,
+    .token.color,
+    .token.selector .token.value,
+    .token.string,
+    .token.string .token.url-link {
+        color: #116b00;
+    }
+
+    .token.builtin,
+    .token.keyword-array,
+    .token.package,
+    .token.regex {
+        color: #af00af;
+    }
+
+    .token.function,
+    .token.selector .token.class,
+    .token.selector .token.id {
+        color: #7c00aa;
+    }
+
+    .token.atrule .token.rule,
+    .token.combinator,
+    .token.keyword,
+    .token.operator,
+    .token.pseudo-class,
+    .token.pseudo-element,
+    .token.selector,
+    .token.unit {
+        color: #a04900;
+    }
+
+    .token.deleted,
+    .token.important {
+        color: #c22f2e;
+    }
+
+    .token.keyword-this,
+    .token.this {
+        color: #005a8e;
+    }
+
+    .token.important,
+    .token.keyword-this,
+    .token.this,
+    .token.bold {
+        font-weight: bold;
+    }
+
+    .token.delimiter.important {
+        font-weight: inherit;
+    }
+
+    .token.italic {
+        font-style: italic;
+    }
+
+    .token.entity {
+        cursor: help;
+    }
+
+}
