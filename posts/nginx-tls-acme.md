@@ -162,6 +162,8 @@ This command should produce the following output.
 ```
 
 ## Going forward
+Your certificates will now be automatically renewed before their expiration date (after 90 days). We encourage you to monitor them to avoid downtime due to a failure to renew them.
+
 Now you just have to continue the installation process described in [the administrator guide](https://docs.cryptpad.org/en/admin_guide/installation.html#install-and-configure-nginx), copying the example configuration file provided and edit it to match your configuration.
 
 # Summary
