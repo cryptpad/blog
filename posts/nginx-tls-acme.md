@@ -18,11 +18,8 @@ Today we'll be diving into an important step during CryptPad setup when deployin
 ## Prerequisites
 
 * You have read and followed the installation steps in the [administrator guide](https://docs.cryptpad.org/en/admin_guide/).
-
-
 * You are already familiar with Linux or UNIX systems, a command line text editor and basic command line use.
 Unless stated otherwise, all commands listed in this article are meant to be run as superuser, `root`.
-
 * You have two different domains available, it's a strong requirement [explained in the documentation](https://docs.cryptpad.org/en/admin_guide/installation.html#admin-domain-config). You know how to setup their DNS zone file and have added proper entries for both IPv4 & IPv6.
 
 ## Dependencies
