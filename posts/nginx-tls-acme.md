@@ -1,6 +1,6 @@
 ---
 title: How to setup TLS certificates for CryptPad
-date: 2022-12-08
+date: 2022-12-12
 author: "Mathilde Grünig"
 summary: A complete tutorial about Nginx TLS configuration with acme.sh
 tags:
@@ -13,35 +13,40 @@ Hello!
 
 This is the first of a new series of articles for the CryptPad blog. Let me introduce you: tutorials! 📚
 
-Today we'll be diving into an important step during CryptPad setup when deploying your own instance: TLS certificates generation.
+Today we'll be diving into an important step during CryptPad setup when deploying your own instance: TLS certificate generation.
 
-# Prerequisites
+## Prerequisites
+
 * You have read and followed the installation steps in the [administrator guide](https://docs.cryptpad.org/en/admin_guide/).
+
+
 * You are already familiar with Linux or UNIX systems, a command line text editor and basic command line use.
 Unless stated otherwise, all commands listed in this article are meant to be run as superuser, `root`.
+
 * You have two different domains available, it's a strong requirement [explained in the documentation](https://docs.cryptpad.org/en/admin_guide/installation.html#admin-domain-config). You know how to setup their DNS zone file and have added proper entries for both IPv4 & IPv6.
 
-# Dependencies
+## Dependencies
+
 As Nginx is a basic requirement for CryptPad we'll assume that [you have already installed it](https://nginx.org/en/linux_packages.html#Debian). However, we still need a way to generate our TLS certificates.
 
 Luckily, since 2015 and thanks to [Let's Encrypt](https://letsencrypt.org), something that was once expensive and kind of a hassle to setup has been greatly simplified. Now you can get TLS certificates for free and provision them in a super simple way thanks to a variety of clients available. We will focus on [acme.sh](https://github.com/acmesh-official/acme.sh), *a pure Unix shell script implementing ACME client protocol*.
 
-Let's start by installing it and specifying an email address for the account registration:
+Let's start by cloning the git repository.
+
 ```bash
-curl https://get.acme.sh | sh -s email=my@example.com
+git clone https://github.com/acmesh-official/acme.sh.git
+```
+
+Then move inside the new folder and install it by specifying an email address for the account registration:
+
+```bash
+cd ./acme.sh
+./acme.sh --install -m my@example.com
 ```
 
 This command should produce the following output.
-```bash
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-100  1032    0  1032    0     0   6615      0 --:--:-- --:--:-- --:--:--  6615
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-100  214k  100  214k    0     0  7146k      0 --:--:-- --:--:-- --:--:-- 6916k
-[Fri 02 Dec 2022 09:13:22 AM CET] Installing from online archive.
-[Fri 02 Dec 2022 09:13:22 AM CET] Downloading https://github.com/acmesh-official/acme.sh/archive/master.tar.gz
-[Fri 02 Dec 2022 09:13:23 AM CET] Extracting master.tar.gz
+
+```
 [Fri 02 Dec 2022 09:13:23 AM CET] It is recommended to install socat first.
 [Fri 02 Dec 2022 09:13:23 AM CET] We use socat for standalone server if you use standalone mode.
 [Fri 02 Dec 2022 09:13:23 AM CET] If you don't use standalone mode, just ignore this warning.
@@ -58,24 +63,29 @@ This command should produce the following output.
 
 You can safely ignore the socat warning since we won't use the standalone mode.
 
-# Configuration
-## acme.sh
+## Configuration
+
+### acme.sh
+
 It's a great ACME client because of its simplicity and the fact that it just works and then gets out of your way.
 
 The maintainers of acme.sh have a sponsored partnership with ZeroSSL to set up their Certificate Authority (CA) as acme.sh's default. But ZeroSSL free services can be unreliable. That's why we prefer Let's Encrypt, which is more reliable and also operated by a nonprofit organization.
 
 We need to change a single parameter to switch the CA from ZeroSSL to Let's Encrypt.
 We do this with the following command:
+
 ```bash
 acme.sh --set-default-ca --server letsencrypt
 ```
 
-Which produce this result:
+Which produces this result:
+
 ```bash
 [Fri 02 Dec 2022 09:22:27 AM CET] Changed default CA to: https://acme-v02.api.letsencrypt.org/directory
 ```
 
-## Nginx
+### Nginx
+
 Now we can configure Nginx!
 
 First we create a directory where the ACME token will be put for authenticating before certificates retrieval. 
@@ -88,7 +98,7 @@ Then we create a directory where the certificates will be stored when installed.
 mkdir -p /etc/ssl/lets-encrypt/your-main-domain.com
 ```
 
-We also need to create a Nginx configuration file for acme.sh webroot.
+We also need to create an Nginx configuration file for acme.sh webroot.
 ```nginx
 cat <<EOT >> /etc/nginx/letsencrypt-webroot
 location ^~ /.well-known/acme-challenge {
@@ -116,16 +126,18 @@ Finally, if we get no warning or errors, we reload the configuration to apply th
 nginx -s reload
 ```
 
-# Certificates generation
-Now that we configured acme.sh & Nginx we can finally issue our certificates. We'll validate them against two domains, the main one and the one dedicated to the sandbox.
+## Certificate generation
+
+Now that we have configured acme.sh & Nginx we can finally issue our certificates. We'll validate them against two domains, the main one and the one dedicated to the sandbox.
 ```bash
 acme.sh --issue -d your-main-domain.com -d your-sandbox-domain.com -w /var/www/le_root/
 ```
 
 This command should produce the following output.
-```bash
+
+```
 [Fri 02 Dec 2022 09:23:23 AM CET] Using stage ACME_DIRECTORY: https://acme-staging.api.letsencrypt.org/directory
-[[Fri 02 Dec 2022 09:23:23 AM CET] Creating domain key
+[Fri 02 Dec 2022 09:23:23 AM CET] Creating domain key
 [Fri 02 Dec 2022 09:23:23 AM CET] The domain key is here: /root/acme/.acme.sh/your-main-domain.com/your-main-domain.com.key
 [Fri 02 Dec 2022 09:23:23 AM CET] Single domain='your-main-domain.com'
 [Fri 02 Dec 2022 09:23:24 AM CET] Getting domain auth token for each domain
@@ -154,7 +166,8 @@ acme.sh --install-cert -d your-main-domain.com -d your-sandbox-domain.com \
 ```
 
 This command should produce the following output.
-```bash
+
+```
 [Fri 02 Dec 2022 09:25:38 AM CET] Installing key to:/etc/ssl/lets-encrypt/your-main-domain.com/key
 [Fri 02 Dec 2022 09:25:38 AM CET] Installing full chain to:/etc/ssl/lets-encrypt/your-main-domain.com/cert
 [Fri 02 Dec 2022 09:25:38 AM CET] Run reload cmd: systemctl reload nginx.service
@@ -162,11 +175,11 @@ This command should produce the following output.
 ```
 
 ## Going forward
-Your certificates will now be automatically renewed before their expiration date (after 90 days). We encourage you to monitor them to avoid downtime due to a failure to renew them.
 
 Now you just have to continue the installation process described in [the administrator guide](https://docs.cryptpad.org/en/admin_guide/installation.html#install-and-configure-nginx), copying the example configuration file provided and edit it to match your configuration.
 
-# Summary
+## Summary
+
 It's done! In this tutorial we've seen how to install acme.sh, adapt Nginx configuration to handle TLS certificates generation and what are the next steps going forward. Thank you very much for reading this far, and for your interest in CryptPad!
 
 In case of need, don't hesitate to join the [community forum](https://forum.cryptpad.org) or the [Matrix space](https://matrix.to/#/#cryptpad:matrix.xwiki.com). You can also follow CryptPad on the fediverse with the [official Mastodon account](https://fosstodon.org/@cryptpad).
