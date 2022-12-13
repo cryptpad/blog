@@ -11,7 +11,7 @@ tags:
 
 Hello!
 
-This is the first of a new series of articles for the CryptPad blog. Let me introduce you: tutorials! 📚
+This is the first of a new series of articles for the CryptPad blog. Let me introduce you to: tutorials! 📚
 
 Today we'll be diving into an important step during CryptPad setup when deploying your own instance: TLS certificate generation.
 
