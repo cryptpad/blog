@@ -1,8 +1,10 @@
 const { DateTime } = require("luxon");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
 module.exports = (function(eleventyConfig) {
     eleventyConfig.addPlugin(pluginRss);
+    eleventyConfig.addPlugin(syntaxHighlight);
     // Copy /images to /public
     eleventyConfig.addPassthroughCopy('images');
     eleventyConfig.addPassthroughCopy({'source/fonts/': 'fonts/'});

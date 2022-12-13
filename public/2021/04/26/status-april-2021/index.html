@@ -95,8 +95,7 @@
 </ul>
 <p>Instance administrators are set to receive more support as we wrap up our <a href="https://nlnet.nl/project/Cryptpad-Communities/">Communities</a> project. The last of our 3 documentation guides will cover instance installation and administration, and the only remaining feature of the project will allow admins to restrict registration on their instance.</p>
 <p>While we are on the topic of administration, we have added <a href="https://github.com/xwiki-labs/cryptpad/commit/4d5d809447130710728ea85caf53c38f084ebb26">one line</a> to the <a href="https://github.com/xwiki-labs/cryptpad/blob/main/docs/example.nginx.conf">example Nginx configuration</a> for CryptPad.</p>
-<pre><code class="language-diff">+ add_header Permissions-Policy interest-cohort=();
-</code></pre>
+<pre class="language-diff"><code class="language-diff"><span class="token inserted-sign inserted"><span class="token prefix inserted">+</span><span class="token line"> add_header Permissions-Policy interest-cohort=();</code></pre>
 <p>This opts the instance out of <a href="https://www.eff.org/deeplinks/2021/03/googles-floc-terrible-idea">Google's FLoC network</a>, we encourage all administrators to make this change.</p>
 <h2>INTEROFFICE for DAPSI</h2>
 <p>Finally, we are delighted to announce that we have secured €100K in funding from the <a href="https://dapsi.ngi.eu/">NGI Data Portability &amp; Services Incubator</a> (DAPSI). Our project is called INTEROFFICE: INTER-operable Office File Formats Integrated with Client-side Encryption.</p>
@@ -137,7 +136,7 @@
         <a class="tag" href="/tags/roadmap">roadmap</a><span class="count">10</span></li>
 
     <li>
-        <a class="tag" href="/tags/security">security</a><span class="count">7</span></li>
+        <a class="tag" href="/tags/security">security</a><span class="count">8</span></li>
 
     <li>
         <a class="tag" href="/tags/donate">donate</a><span class="count">6</span></li>

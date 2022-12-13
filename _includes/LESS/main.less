@@ -2,6 +2,7 @@
 @import "reset.less";
 @import "colors.less";
 @import "variables.less";
+@import "syntax-highlighting.less";
 @import "fonts/open-sans.less";
 @import "fonts/IBM-Plex.less";
 @import "fonts/fork-awesome.less";
@@ -19,7 +20,7 @@ body {
                             "left main right"
                             ". bottom1 ."
                             ". bottom2 .";
-        grid-template-columns: 1fr fit-content(70ch) 1fr;
+        grid-template-columns: 1fr fit-content(80ch) 1fr;
         grid-gap: 2rem;
         header {
             grid-area: header;
@@ -49,6 +50,8 @@ body {
             margin: 0 auto;
             text-align: left;
             grid-area: main;
+            min-width: 0;
+            max-width: 100%;
         }
     }
 }
@@ -196,13 +199,18 @@ article.list {
 
 
 article.post {
-    grid-area: main;
     margin-bottom: 8rem;
     .header {
         margin-bottom: 3rem;
     }
     h1 {
         margin-bottom: 0.5rem;
+    }
+    h2 {
+        margin: 2rem 0 0.5rem 0;
+    }
+    h3 {
+        margin: 1rem 0 0.5rem 0;
     }
     p {
         font-size: 1.1em;
@@ -216,6 +224,7 @@ article.post {
                 list-style: disc;
             // list-style-position: inside;
             padding-left: 1em;
+            margin-bottom: 1rem;
         }
     }
     iframe {
