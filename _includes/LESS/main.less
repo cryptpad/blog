@@ -20,7 +20,7 @@ body {
                             "left main right"
                             ". bottom1 ."
                             ". bottom2 .";
-        grid-template-columns: 1fr fit-content(70ch) 1fr;
+        grid-template-columns: 1fr fit-content(80ch) 1fr;
         grid-gap: 2rem;
         header {
             grid-area: header;
@@ -50,6 +50,8 @@ body {
             margin: 0 auto;
             text-align: left;
             grid-area: main;
+            min-width: 0;
+            max-width: 100%;
         }
     }
 }
@@ -197,7 +199,6 @@ article.list {
 
 
 article.post {
-    grid-area: main;
     margin-bottom: 8rem;
     .header {
         margin-bottom: 3rem;

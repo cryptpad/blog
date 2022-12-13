@@ -8,6 +8,7 @@ Dark theme based on https://github.com/PrismJS/prism-themes/blob/master/themes/p
 
  :root {
     --col-background-code:  @cryptpad_color_grey_200;
+    --col-fg-inline-code: #e83e8c;
  }
  @media (prefers-color-scheme: dark) {
 	:root {
@@ -15,47 +16,40 @@ Dark theme based on https://github.com/PrismJS/prism-themes/blob/master/themes/p
     }
 }
 
- code[class*="language-"],
- pre[class*="language-"] {
-     color: var(--col-primary);
-     background: none;
-     font-family: "IBM Plex Mono", monospace;
-     text-align: left;
-     white-space: pre;
-     word-spacing: normal;
-     word-break: normal;
-     word-wrap: nowrap;
-     line-height: 1.5;
-     -moz-tab-size: 4;
-     -o-tab-size: 4;
-     tab-size: 4;
-     -webkit-hyphens: none;
-     -moz-hyphens: none;
-     -ms-hyphens: none;
-     hyphens: none;
+
+ pre {
+    overflow: auto;
+    white-space: pre;
+    padding: 1em;
+    border-radius: @radius;
+    text-align: left;
+    max-width: 100%;
+    min-width: 0;
+    line-height: 1.5;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+    code {
+        color: var(--col-primary);
+        font-family: "IBM Plex Mono", monospace;
+    }
  }
 
- /* Code blocks */
- pre[class*="language-"] {
-     padding: 1em;
-     margin: .5em 0;
-     overflow: auto;
-     border-radius: @radius;
-     overflow-x: scroll;
-     display: block;
-     width: 60ch; // XXX width is not responsive
- }
-
- :not(pre) > code[class*="language-"],
- pre[class*="language-"] {
+ :not(pre) > code,
+ pre {
      background: var(--col-background-code);
  }
 
  /* Inline code */
- :not(pre) > code[class*="language-"] {
-     padding: .1em;
+ :not(pre) > code {
      border-radius: .3em;
      white-space: normal;
+     color: var(--col-fg-inline-code);
+     padding: 0 .3em;
  }
 
  .token.comment,

@@ -66,6 +66,201 @@ li::before {
     --col-tag-fg: #EEEEEE;
   }
 }
+/**
+Dark theme based on https://github.com/PrismJS/prism-themes/blob/master/themes/prism-dracula.css
+ * Dracula Theme originally by Zeno Rocha [@zenorocha]
+ * https://draculatheme.com/
+ *
+ * Ported for PrismJS by Albert Vallverdu [@byverdu]
+ */
+:root {
+  --col-background-code: #EEEEEE;
+  --col-fg-inline-code: #e83e8c;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --col-background-code: #323232;
+  }
+}
+pre {
+  overflow: auto;
+  white-space: pre;
+  padding: 1em;
+  border-radius: 0.5rem;
+  text-align: left;
+  max-width: 100%;
+  min-width: 0;
+  line-height: 1.5;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+pre code {
+  color: var(--col-primary);
+  font-family: "IBM Plex Mono", monospace;
+}
+:not(pre) > code,
+pre {
+  background: var(--col-background-code);
+}
+/* Inline code */
+:not(pre) > code {
+  border-radius: 0.3em;
+  white-space: normal;
+  color: var(--col-fg-inline-code);
+  padding: 0 0.3em;
+}
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  opacity: 0.75;
+}
+.token.punctuation {
+  color: #f8f8f2;
+}
+.namespace {
+  opacity: 0.7;
+}
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #ff79c6;
+}
+.token.boolean,
+.token.number {
+  color: #bd93f9;
+}
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: #50fa7b;
+}
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+  color: #f8f8f2;
+}
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+  color: #f1fa8c;
+}
+.token.keyword {
+  color: #8be9fd;
+}
+.token.regex,
+.token.important {
+  color: #ffb86c;
+}
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+.token.italic {
+  font-style: italic;
+}
+.token.entity {
+  cursor: help;
+}
+@media (prefers-color-scheme: light) {
+  .token.comment,
+  .token.prolog,
+  .token.doctype,
+  .token.cdata {
+    opacity: 0.75;
+  }
+  .token.punctuation {
+    color: #111b27;
+  }
+  .token.delimiter.important,
+  .token.selector .parent,
+  .token.tag,
+  .token.tag .token.punctuation {
+    color: #006d6d;
+  }
+  .token.attr-name,
+  .token.boolean,
+  .token.boolean.important,
+  .token.number,
+  .token.constant,
+  .token.selector .token.attribute {
+    color: #755f00;
+  }
+  .token.class-name,
+  .token.key,
+  .token.parameter,
+  .token.property,
+  .token.property-access,
+  .token.variable {
+    color: #005a8e;
+  }
+  .token.attr-value,
+  .token.inserted,
+  .token.color,
+  .token.selector .token.value,
+  .token.string,
+  .token.string .token.url-link {
+    color: #116b00;
+  }
+  .token.builtin,
+  .token.keyword-array,
+  .token.package,
+  .token.regex {
+    color: #af00af;
+  }
+  .token.function,
+  .token.selector .token.class,
+  .token.selector .token.id {
+    color: #7c00aa;
+  }
+  .token.atrule .token.rule,
+  .token.combinator,
+  .token.keyword,
+  .token.operator,
+  .token.pseudo-class,
+  .token.pseudo-element,
+  .token.selector,
+  .token.unit {
+    color: #a04900;
+  }
+  .token.deleted,
+  .token.important {
+    color: #c22f2e;
+  }
+  .token.keyword-this,
+  .token.this {
+    color: #005a8e;
+  }
+  .token.important,
+  .token.keyword-this,
+  .token.this,
+  .token.bold {
+    font-weight: bold;
+  }
+  .token.delimiter.important {
+    font-weight: inherit;
+  }
+  .token.italic {
+    font-style: italic;
+  }
+  .token.entity {
+    cursor: help;
+  }
+}
 /* Open Sans @font-face kit */
 /* BEGIN Light */
 @font-face {
@@ -2905,7 +3100,7 @@ body .container {
   margin: 1.7rem auto;
   display: grid;
   grid-template-areas: ". header ." "left main right" ". bottom1 ." ". bottom2 .";
-  grid-template-columns: 1fr fit-content(70ch) 1fr;
+  grid-template-columns: 1fr fit-content(80ch) 1fr;
   grid-gap: 2rem;
 }
 body .container header {
@@ -2938,6 +3133,8 @@ body .container #content {
   margin: 0 auto;
   text-align: left;
   grid-area: main;
+  min-width: 0;
+  max-width: 100%;
 }
 h1 {
   font-size: 2.5rem;
@@ -3081,7 +3278,6 @@ article.list .article-tags {
   line-height: 4em;
 }
 article.post {
-  grid-area: main;
   margin-bottom: 8rem;
 }
 article.post .header {

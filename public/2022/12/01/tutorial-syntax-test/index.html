@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+
+    <title>Syntax highlighting test | CryptPad Blog</title> 
+    
+
+    
+    
+    <meta property="og:type" content="webpage">
+    <meta property="og:title" content="Syntax highlighting test">
+    <meta property="og:url" content="http://blog.cryptpad.org/2022/12/01/tutorial-syntax-test/">
+    <meta property="og:page_name" content="Syntax highlighting test">
+    <meta property="og:locale" content="default">
+    <meta property="og:image" content="http://blog.cryptpad.org/theme/og-default.png">
+    <meta property="og:description" content="This post should not be published it is only to test syntax highlighting">
+    <meta name="twitter:card" content="This post should not be published it is only to test syntax highlighting">
+    <meta name="twitter:title" content="Syntax highlighting test">
+
+
+
+    <link rel="alternate" href="/atom.xml" title="CryptPad Blog" type="application/atom+xml">
+
+    <link rel="icon" href="/theme/favicon.png">
+
+
+</head>
+
+<body>
+    <main class="container">
+        <header>
+            
+    <a href="/" class="back-home">
+        <i class="fa fa-arrow-left" aria-hidden="true"></i> <i class="fa fa-home" aria-hidden="true"></i> Homepage
+    </a>
+
+            <a href="/">
+                <img class="cp-logo" src="/theme/CryptPad_logo.svg" aria-hidden="true" alt="">
+                <h1>CryptPad Blog</h1>
+            </a>
+        </header>
+        <section id="content">
+            
+    <article class="post" lang="en">
+        <section class="header">
+            <h1>Syntax highlighting test</h1>
+            <p class="meta">
+                
+                    David Benqué -
+                
+                1 Dec 2022
+                    
+                    
+            </p>
+            <div class="article-tags">
+    <i class="fa fa-tags" aria-hidden="true"></i>
+    <ul class="tags" aria-label="Tags">
+    
+    </ul>
+</div>
+        </section>
+        <pre class="language-js"><code class="language-js">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">eleventyConfig</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br>    eleventyConfig<span class="token punctuation">.</span><span class="token function">addPlugin</span><span class="token punctuation">(</span>pluginRss<span class="token punctuation">)</span><span class="token punctuation">;</span><br>    eleventyConfig<span class="token punctuation">.</span><span class="token function">addPlugin</span><span class="token punctuation">(</span>syntaxHighlight<span class="token punctuation">)</span><span class="token punctuation">;</span><br>    <span class="token comment">// Copy /images to /public</span><br>    eleventyConfig<span class="token punctuation">.</span><span class="token function">addPassthroughCopy</span><span class="token punctuation">(</span><span class="token string">'images'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>    eleventyConfig<span class="token punctuation">.</span><span class="token function">addPassthroughCopy</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string-property property">'source/fonts/'</span><span class="token operator">:</span> <span class="token string">'fonts/'</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>    eleventyConfig<span class="token punctuation">.</span><span class="token function">addPassthroughCopy</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string-property property">'source/theme/'</span><span class="token operator">:</span> <span class="token string">'theme/'</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br><br>    <span class="token comment">// Debug filter</span><br>    eleventyConfig<span class="token punctuation">.</span><span class="token function">addFilter</span><span class="token punctuation">(</span><span class="token string">"log"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">d</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span><br>        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>d<span class="token punctuation">)</span><span class="token punctuation">;</span><br>      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br><br>    <span class="token comment">// Filter to display dates</span><br>    eleventyConfig<span class="token punctuation">.</span><span class="token function">addFilter</span><span class="token punctuation">(</span><span class="token string">"postDate"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">dateObj</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span><br>        <span class="token comment">// see Luxon ref to change format https://moment.github.io/luxon/#/formatting</span><br>        <span class="token keyword">return</span> DateTime<span class="token punctuation">.</span><span class="token function">fromJSDate</span><span class="token punctuation">(</span>dateObj<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toLocaleString</span><span class="token punctuation">(</span>DateTime<span class="token punctuation">.</span><span class="token constant">DATE_MED</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br><br>    eleventyConfig<span class="token punctuation">.</span><span class="token function">addFilter</span><span class="token punctuation">(</span><span class="token string">"topTags"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">d</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span><br>        <span class="token keyword">let</span> tags <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span><br>        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token punctuation">[</span>key<span class="token punctuation">,</span> value<span class="token punctuation">]</span> <span class="token keyword">of</span> Object<span class="token punctuation">.</span><span class="token function">entries</span><span class="token punctuation">(</span>d<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br>            tags<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token literal-property property">name</span><span class="token operator">:</span> key<span class="token punctuation">,</span> <span class="token literal-property property">count</span><span class="token operator">:</span> value<span class="token punctuation">.</span>length<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>        <span class="token punctuation">}</span><span class="token punctuation">;</span><br>        tags<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">a<span class="token punctuation">,</span> b</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token function">parseFloat</span><span class="token punctuation">(</span>b<span class="token punctuation">.</span>count<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token function">parseFloat</span><span class="token punctuation">(</span>a<span class="token punctuation">.</span>count<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>        tags<span class="token punctuation">.</span><span class="token function">shift</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// remove first item "all"</span><br>        tags <span class="token operator">=</span> tags<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// take top 10</span><br>        <span class="token keyword">return</span> tags<span class="token punctuation">;</span><br>    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>    <span class="token comment">// set nunjucks as markdown template engine</span><br>    <span class="token comment">// could be useful for custom processing like mermaid</span><br>    <span class="token comment">// return {</span><br>    <span class="token comment">//     markdownTemplateEngine: "njk, md"</span><br>    <span class="token comment">// }</span><br><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br></code></pre>
+
+    </article>
+
+    <nav class="article-pagination" aria-label="Pagination">
+        
+            <a href="/2022/12/12/nginx-tls-acme/">Newer: <span class="title">How to setup TLS certificates for CryptPad</span></a>
+        
+        
+            <a href="/2022/11/28/status-2022-11/">Older: <span class="title">November 2022 status</span></a>
+        
+    </nav>
+
+        </section>
+        
+<section id="top-tags" class="post">
+
+            <h3><i class="fa fa-tags" aria-hidden="true"></i> Top Tags</h3>
+<ul>
+
+    <li>
+        <a class="tag" href="/tags/status-update">status update</a><span class="count">15</span></li>
+
+    <li>
+        <a class="tag" href="/tags/funding">funding</a><span class="count">13</span></li>
+
+    <li>
+        <a class="tag" href="/tags/roadmap">roadmap</a><span class="count">10</span></li>
+
+    <li>
+        <a class="tag" href="/tags/security">security</a><span class="count">8</span></li>
+
+    <li>
+        <a class="tag" href="/tags/donate">donate</a><span class="count">6</span></li>
+
+    <li>
+        <a class="tag" href="/tags/ngi">ngi</a><span class="count">6</span></li>
+
+    <li>
+        <a class="tag" href="/tags/open-source">open-source</a><span class="count">5</span></li>
+
+    <li>
+        <a class="tag" href="/tags/open-collective">open collective</a><span class="count">5</span></li>
+
+    <li>
+        <a class="tag" href="/tags/research">research</a><span class="count">5</span></li>
+
+    <li>
+        <a class="tag" href="/tags/forms">forms</a><span class="count">5</span></li>
+
+</ul>
+        </section>
+        
+    <section id="social" class="post">
+
+            <h3><i class="fa fa-link" aria-hidden="true"></i> Links</h3>
+<ul>
+    <li>
+        <a href="https://cryptpad.org">
+            <i aria-hidden="true" class="fa fa-globe"></i>Project website
+        </a>
+    </li>
+    <li>
+        <a href="https://opencollective.com/cryptpad/contribute">
+            <i aria-label="OpenCollective" class="fa fa-open-collective"></i>Donate
+        </a>
+    </li>
+</ul>
+<ul>
+    <li>
+        <a href="https://forum.cryptpad.org">
+            <i aria-hidden="true" class="fa fa-bullhorn"></i>Forum
+        </a>
+    </li>
+    <li>
+        <a href="https://matrix.to/#/#cryptpad:matrix.xwiki.com">
+            <i aria-hidden="true" class="fa fa-matrix-org"></i>Chat (Matrix)
+        </a>
+    </li>
+    <li>
+        <a rel="me" href="https://fosstodon.org/@cryptpad">
+            <i aria-hidden="true" class="fa fa-mastodon"></i>Mastodon
+        </a>
+    </li>
+    <li>
+        <a href="https://peertube.xwiki.com/c/cryptpad_channel/videos">
+            <i aria-hidden="true" class="fa fa-peertube"></i>Peertube
+        </a>
+    </li>
+    <li>
+        <a href="https://pixelfed.social/cryptpad_design">
+            <i aria-hidden="true" class="fa fa-pixelfed"></i>Pixelfed
+        </a>
+    </li>
+</ul>
+<ul>
+    <li>
+        <a href="/atom.xml">
+            <i aria-hidden="true" class="fa fa-rss"></i>RSS Feed
+        </a>
+    </li>
+</ul>
+        </section>
+    </main>
+</body>
+
+</html>
