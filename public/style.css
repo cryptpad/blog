@@ -3286,6 +3286,12 @@ article.post .header {
 article.post h1 {
   margin-bottom: 0.5rem;
 }
+article.post h2 {
+  margin: 2rem 0 0.5rem 0;
+}
+article.post h3 {
+  margin: 1rem 0 0.5rem 0;
+}
 article.post p {
   font-size: 1.1em;
   margin-bottom: 1rem;
@@ -3297,6 +3303,7 @@ article.post ul:not(.tags),
 article.post ol:not(.tags) {
   list-style: disc;
   padding-left: 1em;
+  margin-bottom: 1rem;
 }
 article.post iframe {
   margin: 1rem 1rem 1rem 0;
