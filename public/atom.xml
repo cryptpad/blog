@@ -4,12 +4,54 @@
   <subtitle>News from the end-to-end encrypted collaboration suite</subtitle>
   <link href="https://blog.cryptpad.org/atom.xml" rel="self"/>
   <link href="https://blog.cryptpad.org"/>
-  <updated>2022-12-12T00:00:00Z</updated>
+  <updated>2022-12-21T00:00:00Z</updated>
   <id>https://blog.cryptpad.org</id>
   <author>
     <name>CryptPad Team</name>
     <email>contact@cryptpad.fr</email>
   </author>
+  <entry>
+    <title>December 2022 status</title>
+    <link href="https://blog.cryptpad.org/2022/12/21/status-2022-12/"/>
+    <updated>2022-12-21T00:00:00Z</updated>
+    <id>https://blog.cryptpad.org/2022/12/21/status-2022-12/</id>
+    <summary xml:lang="en" type="html">CryptPad 5.2.0 and 5.2.1, Bitwarden Open Source Security Summit, and a sneak peek to 2023</summary>
+    <content xml:lang="en" type="html">&lt;h2&gt;🚀 New version (and fixes)&lt;/h2&gt;
+&lt;p&gt;This month we released &lt;a href=&quot;https://github.com/xwiki-labs/cryptpad/releases/tag/5.2.0&quot;&gt;CryptPad 5.2.0&lt;/a&gt;, introducing some new and long-requested features&lt;/p&gt;
+&lt;h3&gt;📊 New Forms settings&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/new-form-settings.png&quot; alt=&quot;preview of the new forms settings dialog&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Submit multiple times and/or edit and delete past responses&lt;/li&gt;
+&lt;li&gt;Notifications for form owners&lt;/li&gt;
+&lt;li&gt;Form authors can delete all responses&lt;/li&gt;
+&lt;li&gt;JSON export&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The settings area was getting crowded, so we refactored them into a modal window with a summary in the main editor view.&lt;/p&gt;
+&lt;h3&gt;🗓️ 🔁 Repeating Calendar events&lt;/h3&gt;
+&lt;p&gt;We already &lt;a href=&quot;https://blog.cryptpad.org/2022/10/28/status-2022-10/&quot;&gt;talked about this back in October&lt;/a&gt; but the feature is now available to everyone.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Quick default patterns (daily, weekly, etc)&lt;/li&gt;
+&lt;li&gt;Custom patterns&lt;/li&gt;
+&lt;li&gt;Edit this, future, or all events&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;🤝 Team drive on-boarding improvements&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Invite links can now be used a set number of times instead of only once&lt;/li&gt;
+&lt;li&gt;Set the initial role for links instead of inviting everyone as viewer and promoting manually&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;🩹 Bug fixes&lt;/h3&gt;
+&lt;p&gt;Following the release we identified a few bugs with help from the community. We released the fixes as &lt;a href=&quot;https://github.com/xwiki-labs/cryptpad/releases/tag/5.2.1&quot;&gt;CryptPad 5.2.1&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;🛡️ Bitwarden Open Source Security Summit&lt;/h2&gt;
+&lt;p&gt;David did a quick presentation of CryptPad at the Open Source Security Summit 2022 organized by &lt;a href=&quot;https://bitwarden.com/&quot;&gt;Bitwarden&lt;/a&gt; on 8th December. The individual speaker videos should be available on their &lt;a href=&quot;https://www.youtube.com/playlist?list=PL-IZTwAxWO4VMST3rtJTQPvNc277Xh1wW&quot;&gt;YouTube channel&lt;/a&gt; in the coming weeks.&lt;/p&gt;
+&lt;h2&gt;🔭 What&#39;s next&lt;/h2&gt;
+&lt;p&gt;We are excited to welcome another team member first thing in the new year, a senior developer that we will introduce soon.&lt;/p&gt;
+&lt;p&gt;We are also looking forward to implementing some important new features next year, namely Single-Sign-On and Multi-factor authentication. We will be doing this thanks to a grant from &lt;a href=&quot;https://nlnet.nl/project/CryptPad-Auth/&quot;&gt;NLNet and NGI AUSSURE&lt;/a&gt;. There will be much more information to come on this when the project starts.&lt;/p&gt;
+</content>
+    <category term="status update" scheme="https://blog.cryptpad.org/tags/status update/"/>
+    <category term="forms" scheme="https://blog.cryptpad.org/tags/forms/"/>
+    <category term="calendar" scheme="https://blog.cryptpad.org/tags/calendar/"/>
+    <category term="teams" scheme="https://blog.cryptpad.org/tags/teams/"/>
+  </entry>
   <entry>
     <title>How to setup TLS certificates for CryptPad</title>
     <link href="https://blog.cryptpad.org/2022/12/12/tutorial-nginx-tls-acme/"/>
