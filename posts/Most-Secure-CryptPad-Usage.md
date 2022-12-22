@@ -10,8 +10,12 @@ tags:
 - tutorials
 ---
 
-  While we do the most possible to make CryptPad secure, the security depends on
+
+Goals:
+* While we do the most possible to make CryptPad secure, the security depends on
   how it's used.
+* Explain a bit of how it works under the hood for tech-savy people.
+* Give concrete actions for a safe CryptPad usage.
 
 ## 🧑‍🏫 Preliminaries
 
@@ -131,16 +135,74 @@ We outline some basic security measurements.
 
 ## 📄 Documents
 
-* Introduction about CryptPad encryption
-* Cryptpad sends the keys to the documents (view or edit depending on what you choose) as part of the link, so it is only as safe as the communication channels used to send these links. If you consider a channel to be unsafe, or if it is publicly accessible, you may want to isolate some some of your documents from it. I have read bad things about Telegram but it may be necessary to reach people. If that is the case you could, for example, limit the sending of edit links to Signal chats with disapearing messages.
+CryptPad uses symmetrical encryption with a per-document secret key to make
+your documents unreadable for anyone who has not access to the corresponding
+keys. CryptPad also allows you to differentiate between read-only and write
+access to a document. For that, anyone who wants to modify a document needs to
+prove that they own the private signing key linked to the document. For this,
+they sign their modifications and other people working on the same document can
+verify that the modification was indeed done by a person that is allowed to do
+so.
+
+CryptPad keeps these technical details "under the hood" and provides a simple
+interface to [share
+documents](https://docs.cryptpad.org/en/user_guide/share_and_access.html#sharing-a-link)
+via links. Such a link essentially contains the symmetric key for encryption and
+decryption, for verifying signatures as well as the one for creating signatures
+(in case of read/write access).
+
+
+<p style="text-align: center;">
+<img title="Share via link" src="https://docs.cryptpad.org/en/_images/modal-share-link.png">
+</p>
+
+
+⚠️ This implies that the document is only as safe as the communication channels
+used to send these links.
+If you consider a channel to be unsafe, or if it is publicly accessible, you
+may want to isolate some some of your documents from it, e.g., limit the sending
+of edit links to Signal chats with disapearing messages.
+
+Another possibility to safely share the access is to [send it over CryptPad's
+mailbox system to your
+contacts](https://docs.cryptpad.org/en/user_guide/share_and_access.html#sharing-with-contacts).
+This way, you do not have to use a secondary (potentially insecure communication
+channel).
+
+<p style="text-align: center;">
+<img title="Share with contacts" src="https://docs.cryptpad.org/en/_images/modal-share-contacts.png">
+</p>
+
+### 🔒 Per-Document Passwords
+
+For additional safety, you can [protect a document with a
+password](https://docs.cryptpad.org/en/user_guide/share_and_access.html#access-tab).
+The document is then only available if you have both, the sharing link and the
+password.
+This is especially useful for the case where you do not have a secure
+communication channel to share the link, as you can send the link and the
+password over two _distinct_ channels (e.g., text messaging and email).
+This way, the attacker has to sniff on both channels at the same time which
+makes it a lot more difficult.
+
+When you share documents with your contacts directly on CryptPad, communications
+are encrypted and we assume that you want to give them access.
+Therefore the password is remembered and sent with the document when you share
+it.
+The recipient, or yourself, are not asked for it when opening the document.
 
 ### 💨 Self-Destruction
 
+CryptPad allows you to make [self-destructing
+documents](https://docs.cryptpad.org/en/user_guide/security.html#self-destructing-documents)
+which will be destroyed either after the set expiration time or after the shared
+document was opened the first time.
+
+This feature is especially useful if you have to share sensitive data that
+should not be accessible for ever.
+You could, e.g., use it to share a password to a peer.
 
 ## 🧑 Contacts
-
-* Once someone is your contact on CryptPad, the safest way to share content with them is to use the Contact tab in the Share menu. This way no link is exposed outside of CryptPad's end-to-end encryption. They are then notified via the bell in the toolbar.
-
 
 * Note that usernames are not unique on CryptPad, we identify people by the combination of username + password. Depending on context, it may be wise to verify contact request through another channel.
 
