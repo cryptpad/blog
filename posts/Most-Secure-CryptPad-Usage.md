@@ -106,7 +106,7 @@ There are three main building blocks:
    <img title="Signature" src="https://unsplash.com/photos/pegxjW_1YOU/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8MTZ8fHNpZ25hdHVyZXxlbnwwfHx8fDE2NzE2NzA3ODQ&force=true&w=640" width=400>
    </p>
 
-## 🧗The Basics
+## 🧗 The Basics
 
 We outline some basic security measurements.
 
@@ -151,10 +151,36 @@ We outline some basic security measurements.
 
 ## 🕵️ Anonymity
 
-* Use Tor
-* Use burner account / use no account
+CryptPad does only provide a weak form of anonymity and does not hide your
+IP address.
+The server can furthermore theoretically link IP addresses of people who are often colaborating on the same documents.
+Of course, we do not run these analytics for our flagship instance, but we want
+you to have to trust us as little as possible.
+You may want therefore use the following tools and techniques:
+
+* The [Tor browser](https://www.torproject.org/download/) to connect to
+CryptPad and hide your IP address.
+* A burner account that is only used for specific high-risk actions such as
+  working on a small set of documents or publishing sensitive information to
+  prevent the possibility of linking IP addresses of colaborating people.
+* [Tails](https://tails.boum.org/) for leaving no traces on your local device.
+
+## 💡 Other Tools
+
+CryptPad is designed to be a general, easy-to-use office suite.
+As such it may not always fit your specific needs.
+We redirect you to other tools and services that are not affiliated to CryptPad
+for the following actions:
+
+* A [password
+  manager](https://ssd.eff.org/module/animated-overview-using-password-managers-stay-safe-online)
+  to have control over your passwords.
+* [Secure Drop](https://securedrop.org/) for whistleblowing.
+* [Signal](https://signal.org/) for secure real-time messaging.
 
 ## 📚 References
+
+About CryptPad:
 
 * The [security section](https://docs.cryptpad.org/en/user_guide/security.html)
   in our user guide explains the use of CryptPad's security features.
@@ -165,6 +191,10 @@ We outline some basic security measurements.
 * We have published a [white paper](https://cryptpad.org/TODO) describing the
   securty mechanism and the cryptography used in CryptPad. This paper is
   targeted to people who are already familiar with cryptography.
+
+More general:
+* The [surveillance self-defense guide](https://ssd.eff.org/) by the Electronic
+  Frontier Foundation (EFF)
 
 ## 🙋 Questions?
 
