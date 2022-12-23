@@ -1,21 +1,28 @@
 ---
-title: The title of the post # TODO
+title: The most secure way to use CryptPad
 date: 2022-12-24 # TODO
 author: Theo von Arx
 lang: en
-summary: # TODO
-cover: /images/forms_chart_timeline.png
+summary: We show you in which scenario CryptPad is secure, and give you ideas for concrete actions for a safe CryptPad usage.
+cover: /images/swallow_key.png
 tags:
 - security
 - tutorials
+- privacy
 ---
 
+You're looking for a privacy-focused collaboration tool?
+Well, you already found it!
+But what does privacy in this context actually mean?
+And how is it technically enforced?
+Are there any additional precautiousness needed for an extra safe usage of
+CryptPad?
 
-Goals:
-* While we do the most possible to make CryptPad secure, the security depends on
-  how it's used.
-* Explain a bit of how it works under the hood for tech-savy people.
-* Give concrete actions for a safe CryptPad usage.
+In this blog post we will answer these and other questions.
+We will show you in which scenario CryptPad is secure, and give you ideas for
+concrete actions for a safe CryptPad usage.
+While we do the most possible to make CryptPad secure, the security also depends
+on how you use it.
 
 ## 🧑‍🏫 Preliminaries
 
@@ -122,7 +129,7 @@ We outline some basic security measurements.
 * Ensure that you are connecting to the CryptPad instance over
   [HTTPS](https://ssd.eff.org/module/what-should-i-know-about-encryption#transport-layer-encryption-example-https).
 * All security mechanisms are only as strong as your password is.
-  If your password is easy guessable, attackers can get full access to all your
+  If your password is easily guessable, attackers can get full access to all your
   data stored on CryptPad.
   We recommend you to either generate a random password using a [password
   manager](https://ssd.eff.org/module/animated-overview-using-password-managers-stay-safe-online) or to [choose
@@ -136,7 +143,7 @@ We outline some basic security measurements.
 ## 📄 Documents
 
 CryptPad uses symmetrical encryption with a per-document secret key to make
-your documents unreadable for anyone who has not access to the corresponding
+your documents unreadable for anyone who has no access to the corresponding
 keys. CryptPad also allows you to differentiate between read-only and write
 access to a document. For that, anyone who wants to modify a document needs to
 prove that they own the private signing key linked to the document. For this,
@@ -144,6 +151,7 @@ they sign their modifications and other people working on the same document can
 verify that the modification was indeed done by a person that is allowed to do
 so.
 
+### ♻ Sharing
 CryptPad keeps these technical details "under the hood" and provides a simple
 interface to [share
 documents](https://docs.cryptpad.org/en/user_guide/share_and_access.html#sharing-a-link)
@@ -160,18 +168,30 @@ decryption, for verifying signatures as well as the one for creating signatures
 ⚠️ This implies that the document is only as safe as the communication channels
 used to send these links.
 If you consider a channel to be unsafe, or if it is publicly accessible, you
-may want to isolate some some of your documents from it, e.g., limit the sending
+may want to isolate some of your documents from it, e.g., limit the sending
 of edit links to Signal chats with disapearing messages.
 
 Another possibility to safely share the access is to [send it over CryptPad's
 mailbox system to your
 contacts](https://docs.cryptpad.org/en/user_guide/share_and_access.html#sharing-with-contacts).
-This way, you do not have to use a secondary (potentially insecure communication
-channel).
+This way, you do not have to use a secondary (potentially insecure) communication
+channel.
 
 <p style="text-align: center;">
 <img title="Share with contacts" src="https://docs.cryptpad.org/en/_images/modal-share-contacts.png">
 </p>
+
+### ⛔ Restricting Access
+
+Links are not revokable, but you can shut down access to a document using the
+Access List feature.
+
+<p style="text-align: center;">
+<img title="Access List" src="https://docs.cryptpad.org/en/_images/modal-access-list.png">
+</p>
+
+This way, only the selected persons have access to the document, independently
+of who has received the sharing link.
 
 ### 🔒 Per-Document Passwords
 
@@ -186,8 +206,8 @@ This way, the attacker has to sniff on both channels at the same time which
 makes it a lot more difficult.
 
 When you share documents with your contacts directly on CryptPad, communications
-are encrypted and we assume that you want to give them access.
-Therefore the password is remembered and sent with the document when you share
+are encrypted, and we assume that you want to give them access.
+Therefore, the password is remembered and sent with the document when you share
 it.
 The recipient, or yourself, are not asked for it when opening the document.
 
@@ -204,12 +224,24 @@ You could, e.g., use it to share a password to a peer.
 
 ## 🧑 Contacts
 
-* Note that usernames are not unique on CryptPad, we identify people by the combination of username + password. Depending on context, it may be wise to verify contact request through another channel.
+As shown above, adding your peers as CryptPad contacts lets you more easily and
+safely share documents.
+You can moreover restrict access of a document to specific contacts and exchange
+text messages with them.
+
+The easiest way to add someone to your contacts is to [share the link to your
+profile](https://docs.cryptpad.org/en/user_guide/collaboration.html#add-a-contact)
+over a secure communication to your peer and request to add each other as
+contacts.
+
+⚠️  Note that usernames are not unique on CryptPad.
+Depending on context, it may be wise to verify a received contact request
+through another secure channel.
 
 ## 🧑‍🤝‍🧑 Teams
+
 * Make sure you or the team is set as "owner" when you create documents, this will give you full control including to destroy a document if it contains sensitive information and the link escapes your control.
 
-* Links are not revokable, but you can shut down access to a document using the Access List feature.
 
 ## 🕵️ Anonymity
 
