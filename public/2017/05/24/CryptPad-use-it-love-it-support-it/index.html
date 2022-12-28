@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+
+    <title>CryptPad - use it, love ❤️ it, support it | CryptPad Blog</title> 
+    
+
+    
+    
+    <meta property="og:type" content="webpage">
+    <meta property="og:title" content="CryptPad - use it, love ❤️ it, support it">
+    <meta property="og:url" content="http://blog.cryptpad.org/2017/05/24/CryptPad-use-it-love-it-support-it/">
+    <meta property="og:page_name" content="CryptPad - use it, love ❤️ it, support it">
+    <meta property="og:locale" content="default">
+    <meta property="og:image" content="http://blog.cryptpad.org/theme/og-default.png">
+    <meta property="og:description" content="It&#39;s been another release day in our little team. Today we released CryptPad v1.7.0 (Hodag). The biggest new feature in this version is that when you create a /code/ pad, the default highlighting is in markdown syntax and there it is rendered in realtime while you type.">
+    <meta name="twitter:card" content="It&#39;s been another release day in our little team. Today we released CryptPad v1.7.0 (Hodag). The biggest new feature in this version is that when you create a /code/ pad, the default highlighting is in markdown syntax and there it is rendered in realtime while you type.">
+    <meta name="twitter:title" content="CryptPad - use it, love ❤️ it, support it">
+
+
+
+    <link rel="alternate" href="/atom.xml" title="CryptPad Blog" type="application/atom+xml">
+
+    <link rel="icon" href="/theme/favicon.png">
+
+
+</head>
+
+<body>
+    <main class="container">
+        <header>
+            
+    <a href="/" class="back-home">
+        <i class="fa fa-arrow-left" aria-hidden="true"></i> <i class="fa fa-home" aria-hidden="true"></i> Homepage
+    </a>
+
+            <a href="/">
+                <img class="cp-logo" src="/theme/CryptPad_logo.svg" aria-hidden="true" alt="">
+                <h1>CryptPad Blog</h1>
+            </a>
+        </header>
+        <section id="content">
+            
+    <article class="post" lang="en">
+        <section class="header">
+            <h1>CryptPad - use it, love ❤️ it, support it</h1>
+            <p class="meta">
+                
+                    Caleb James DeLisle -
+                
+                24 May 2017
+                    
+                    
+            </p>
+            <div class="article-tags">
+    
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        <ul class="tags" aria-label="Tags">
+        
+            <li><a class="tag" href="/tags/donate">donate</a></li>
+        
+            <li><a class="tag" href="/tags/funding">funding</a></li>
+        
+        </ul>
+    
+</div>
+        </section>
+        <p>It's been another release day in our little team. Today we released
+<a href="https://github.com/xwiki-labs/cryptpad/releases/tag/1.7.0">CryptPad v1.7.0 (Hodag)</a>. The biggest new feature in this version is that when you create a <em>/code/</em> pad, the default highlighting is in markdown syntax and there it is rendered in realtime while you type. Try it out by making a pad at <a href="https://cryptpad.fr/code">cryptpad.fr/code</a>.</p>
+<p>In this release we also completed something much more important and central to the future of CryptPad. We finished our first version of the payment server which allows you to take a subscription and help support the work that we do.</p>
+<p>Starting with this release we are now imposing a 50MB storage limit for our anonymous users and a 3 month expiration of pads which are not stored by a registered user.</p>
+<p>Instant collaboration is the vision of CryptPad and we are committed to continuing to provide that and even providing 50MB of persistent storage for anyone who is willing to sign up.</p>
+<p>For people who are ready to take the next step, we are now providing subscriptions which will improve how you organize your information while helping CryptPad to grow and improve.</p>
+<h2>Plans</h2>
+<ol>
+<li>Personal (5GB storage, 5€/month ex. VAT)
+<ul>
+<li>This is best for an individual using lots of pads for collaboration and note taking. For the price of a sandwich you can stay organized on all of your devices while also keeping your privacy private.</li>
+</ul>
+</li>
+<li>Standard (20GB storage, 10€/month ex. VAT)
+<ul>
+<li>For the price of lunch, you can have 20GB of storage, enough for not only pads but also for the soon to launch File Upload which will allow Zero Knowledge storage of files such as pictures and PDF documents. With the Standard plan you can add one more friend for free.</li>
+</ul>
+</li>
+<li>Team (50GB storage, 15€/month ex. VAT)
+<ul>
+<li>If you're ready to extend your usage of CryptPad to an entire team, we are ready to help you succeed. With a Team plan you get 50GB of data storage in CryptPad, plenty for files and pads. You also get to add <strong>five</strong> people to your plan and you get professional support available in English and French.</li>
+</ul>
+</li>
+</ol>
+<p>Our goal is to make the best collaboration tool available while still being unable to sell or leak your content. Help us succeed, helping you stay organized and help show the world that Zero Knowledge Cloud is possible.</p>
+<h2>For Admins</h2>
+<p>If you're hosting your own instance of CryptPad, there are a few things you'll need to do when you upgrade to Hodag. The limits code is still somewhat of a mess and while we get it tied down, you'll need to do a bit of work to disable it.</p>
+<p>First there is a serverside per-user storage limit defined in <code>config.js</code> You'll want to set this to a big number like so:</p>
+<pre><code>defaultStorageLimit: Number.MAX_SAFE_INTEGER
+</code></pre>
+<p>Then there is <code>customize/application_config.js</code>. If you're not familiar with <code>/customize/</code>, you can create this directory and then copy <code>application_config.js</code> over from the <code>/customize.dist/</code> directory so it will not be overwritten. The server will try looking in <code>/customize/</code> first.</p>
+<p>Inside of <code>application_config.js</code> you'll need to update the <code>enablePinLimit</code> line like so:</p>
+<pre><code>enablePinLimit = false;
+</code></pre>
+<p>If you're using your own CryptPad installation in a business context, please consider contacting <a href="mailto:sales@cryptpad.fr">sales@cryptpad.fr</a> for an on-premises support contract. You'll get help with upgrades and early information about security issues.</p>
+<h2>What's Next</h2>
+<p>In the coming months, we're hoping to roll out text coloring based on the authors of the document as well as file upload for PDF and image embedding. Eventually we plan to add Zero Knowledge spreadsheets and workgroups for team collaboration.</p>
+
+    </article>
+
+    <nav class="article-pagination" aria-label="Pagination">
+        
+            <a href="/2017/06/02/Building-mutually-beneficial-relationships/">Newer: <span class="title">Building mutually beneficial relationships</span></a>
+        
+        
+            <a href="/2017/05/17/You-gotta-log-in/">Older: <span class="title">You gotta log in</span></a>
+        
+    </nav>
+
+        </section>
+        
+<section id="top-tags" class="post">
+
+            <h3><i class="fa fa-tags" aria-hidden="true"></i> Top Tags</h3>
+<ul>
+
+    <li>
+        <a class="tag" href="/tags/status-update">status update</a><span class="count">17</span></li>
+
+    <li>
+        <a class="tag" href="/tags/funding">funding</a><span class="count">13</span></li>
+
+    <li>
+        <a class="tag" href="/tags/roadmap">roadmap</a><span class="count">10</span></li>
+
+    <li>
+        <a class="tag" href="/tags/security">security</a><span class="count">8</span></li>
+
+    <li>
+        <a class="tag" href="/tags/donate">donate</a><span class="count">6</span></li>
+
+    <li>
+        <a class="tag" href="/tags/ngi">ngi</a><span class="count">6</span></li>
+
+    <li>
+        <a class="tag" href="/tags/forms">forms</a><span class="count">6</span></li>
+
+    <li>
+        <a class="tag" href="/tags/open-source">open-source</a><span class="count">5</span></li>
+
+    <li>
+        <a class="tag" href="/tags/open-collective">open collective</a><span class="count">5</span></li>
+
+    <li>
+        <a class="tag" href="/tags/research">research</a><span class="count">5</span></li>
+
+</ul>
+        </section>
+        
+    <section id="social" class="post">
+
+            <h3><i class="fa fa-link" aria-hidden="true"></i> Links</h3>
+<ul>
+    <li>
+        <a href="https://cryptpad.org">
+            <i aria-hidden="true" class="fa fa-globe"></i>Project website
+        </a>
+    </li>
+    <li>
+        <a href="https://opencollective.com/cryptpad/contribute">
+            <i aria-label="OpenCollective" class="fa fa-open-collective"></i>Donate
+        </a>
+    </li>
+</ul>
+<ul>
+    <li>
+        <a href="https://forum.cryptpad.org">
+            <i aria-hidden="true" class="fa fa-bullhorn"></i>Forum
+        </a>
+    </li>
+    <li>
+        <a href="https://matrix.to/#/#cryptpad:matrix.xwiki.com">
+            <i aria-hidden="true" class="fa fa-matrix-org"></i>Chat (Matrix)
+        </a>
+    </li>
+    <li>
+        <a rel="me" href="https://fosstodon.org/@cryptpad">
+            <i aria-hidden="true" class="fa fa-mastodon"></i>Mastodon
+        </a>
+    </li>
+    <li>
+        <a href="https://peertube.xwiki.com/c/cryptpad_channel/videos">
+            <i aria-hidden="true" class="fa fa-peertube"></i>Peertube
+        </a>
+    </li>
+    <li>
+        <a href="https://pixelfed.social/cryptpad_design">
+            <i aria-hidden="true" class="fa fa-pixelfed"></i>Pixelfed
+        </a>
+    </li>
+</ul>
+<ul>
+    <li>
+        <a href="/atom.xml">
+            <i aria-hidden="true" class="fa fa-rss"></i>RSS Feed
+        </a>
+    </li>
+</ul>
+        </section>
+    </main>
+</body>
+
+</html>
