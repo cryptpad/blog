@@ -24,9 +24,16 @@ the communication between the server and the client.
 We present the encryption of pads as the core functionality of CryptPad.
 We further show how the login mechanism works and how we establish secure
 communication between different users.
-Finally, we show how we enable communication and access control within a team.
+Finally, we discuss how we enable secure communication and access control within
+a team.
 
 This white paper is part of the [CryptPad Blueprints
 Project](https://nlnet.nl/project/CryptPad-Blueprints/) and was founded through
 the [NGI0 Entrust Fund](https://nlnet.nl/entrust). We thank
 [NLnet](https://nlnet.nl/) for their support.
+
+We wish you a good read!
+You can reach us on [our forum](https://forum.cryptpad.org/),
+[Matrix](https://matrix.to/#/#cryptpad:matrix.xwiki.com),
+[Mastodon](https://fosstodon.org/@cryptpad), or
+via [Email](mailto:contact@cryptpad.fr).
