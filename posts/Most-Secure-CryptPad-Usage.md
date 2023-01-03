@@ -15,7 +15,7 @@ You're looking for a privacy-focused collaboration tool?
 Well, you already found it!
 But what does privacy in this context actually mean?
 And how is it technically enforced?
-Are there any additional precautiousness needed for an extra safe usage of
+Are there any additional precautiousness needed for an extra-safe usage of
 CryptPad?
 
 In this blog post we will answer these and other questions.
@@ -38,53 +38,58 @@ If we can defend against a strong
 [adversary](https://ssd.eff.org/glossary/adversary),
 we can also defend against a weaker one.
 
-CryptPad is a web application: you visit the website of your instance (e.g.
+The first assumption about the adversarial capabilities follows directly from
+CryptPad's architecture.
+CryptPad is a web application: you visit the website of your
+[instance](https://docs.cryptpad.org/en/user_guide/instances.html) (e.g.
 <https://cryptpad.fr>) and automatically download the client code that will be
 executed locally on your computer.
-If you received bogus code from this server, you cannot establish any security,
+If you receive bogus code from this server, you cannot establish any security,
 as this bogus code may, e.g., send all your documents in plaintext to the
 server.
 Hence, you must trust the server to not run any _active_
-[attacks](https://ssd.eff.org/glossary/attack) (i.e., run
-a modified CryptPad server software). We nevertheless defend against a
-_honest-but-curious_ (i.e. passive) server which plays according to the
-rules, but could try to inter sensitive data by simply sniffing.
+[attacks](https://ssd.eff.org/glossary/attack) (i.e., not to run
+a modified CryptPad server software).
+
+We nevertheless defend against a _honest-but-curious_ (i.e., passive) server.
+The section assumption is thus that the server plays according to the
+rules, but could try to interfere sensitive data by simply sniffing on all
+received data.
 This scenario includes the possibility that a third-party gets access to the
 server and can see all data and logs.
-This has already happened in the past when
-[a server running CryptPad was seized by the police](https://newsrnd.com/tech/2022-06-24-data-confiscated-from-pirate-party-servers.SJxeH5I79q.html).
+CryptPad already defended against such an adversary in the past when
+[an instance server was seized by the police](https://newsrnd.com/tech/2022-06-24-data-confiscated-from-pirate-party-servers.SJxeH5I79q.html).
+We therefore consider this scenario to be highly realistic.
 
 Lastly, we assume the attackers to have network capability. This would be the case
-for, e.g., the system admin managing the network in your office, your [internet service
+for, e.g., the system administrator managing the network in your office, your [internet service
 provider](https://en.wikipedia.org/wiki/Internet_service_provider), or secret
 services. The attackers may even use active network capabilities, that is they
-can sniff your web traffic, as well as replay, drop or modify data sent over the
+can sniff your web traffic, and also replay, drop or modify data sent over the
 network.
 
-### 🔎 Security and Privacy
+<!-- ### 🔎 Security and Privacy -->
 
-The notions of _security_ and _privacy_ are often mixed, however they do not
-refer to the same concept.
-In the context of CryptPad, the two notions can be differentiated as follows:
+<!-- The notions of _security_ and _privacy_ are often mixed, however they do not -->
+<!-- refer to the same concept. -->
+<!-- In the context of CryptPad, the two notions can be differentiated as follows: -->
 
-* **Security:** An adversary cannot read or modify your documents, your
-  messages, or the teams your belonging to.
-* **Privacy:** An adversary cannot link your activity to other profiles, your
-  name or to any of your sensitive data.
+<!-- * **Security:** An adversary cannot read or modify your documents, your -->
+<!--   messages, or the teams your belonging to. -->
+<!-- * **Privacy:** An adversary cannot link your activity to other profiles, your -->
+<!--   name or to any of your sensitive data. -->
 
-CryptPad aims to give you both.
-However, as any other website you're visiting, the server can see your
-[IP address](https://ssd.eff.org/glossary/ip-address) and your ["user
-agent"](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent)
-(browser and [operating system](https://ssd.eff.org/glossary/operating-system)).
+<!-- CryptPad aims to give you both. -->
+<!-- However, as any other website you're visiting, the server can see your -->
+<!-- [IP address](https://ssd.eff.org/glossary/ip-address) and your ["user -->
+<!-- agent"](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent) -->
+<!-- (browser and [operating system](https://ssd.eff.org/glossary/operating-system)). -->
 
 ### 🔑 Encryption
 
 One of the key features of CryptPad is [end-to-end
 encryption](https://ssd.eff.org/glossary/end-to-end-encryption).
-Let us give you a rough idea of what encryption is and how we use it in
-CryptPad.
-
+Let us give you a rough idea of what encryption is.
 There are three main building blocks:
 
 1. **Symmetric Encryption** works similar to a box with a lock: We can put
@@ -117,16 +122,20 @@ There are three main building blocks:
    <img title="Signature" src="https://unsplash.com/photos/pegxjW_1YOU/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8MTZ8fHNpZ25hdHVyZXxlbnwwfHx8fDE2NzE2NzA3ODQ&force=true&w=640" width=400>
    </p>
 
+For CryptPad, we use all of these building blocks to achieve different goals.
+We will explain the usage below in the section about Documents.
+
 ## 🧗 The Basics
 
-We outline some basic security measurements.
+We outline some basic measurements that allow you to significantly increase the
+security of your CryptPad usage:
 
 * CryptPad is [open source](https://ssd.eff.org/glossary/open-source-software)
   software and as such there are [various
   instances](https://cryptpad.org/instances/) running it. While we host the
   [flagship instance](https://cryptpad.fr) you might choose a different one
-  depending, e.g., on the jurisdication.
-* Ensure that you are connecting to the CryptPad instance over
+  depending on, e.g., the jurisdication.
+* Ensure that you are connecting to the chosen CryptPad instance over
   [HTTPS](https://ssd.eff.org/module/what-should-i-know-about-encryption#transport-layer-encryption-example-https).
 * All security mechanisms are only as strong as your password is.
   If your password is easily guessable, attackers can get full access to all your
@@ -140,6 +149,22 @@ We outline some basic security measurements.
   access your data on CryptPad. Otherwise, anybody with access to your device
   can also access your data on CryptPad.
 
+## 🧑 Contacts
+
+As we will show below, adding your peers as CryptPad contacts lets you more
+easily and safely share documents.
+You can moreover restrict access of a document to specific contacts and exchange
+text messages with them.
+
+The easiest way to add someone to your contacts is to [share the link to your
+profile](https://docs.cryptpad.org/en/user_guide/collaboration.html#add-a-contact)
+over a secure communication to your peer and request to add each other as
+contacts.
+
+⚠️  Note that usernames are not unique on CryptPad.
+Depending on context, it may be wise to verify a received contact request
+through another secure channel.
+
 ## 📄 Documents
 
 CryptPad uses symmetrical encryption with a per-document secret key to make
@@ -148,8 +173,7 @@ keys. CryptPad also allows you to differentiate between read-only and write
 access to a document. For that, anyone who wants to modify a document needs to
 prove that they own the private signing key linked to the document. For this,
 they sign their modifications and other people working on the same document can
-verify that the modification was indeed done by a person that is allowed to do
-so.
+verify that the modification was indeed done by an authorized person.
 
 ### ♻ Sharing
 CryptPad keeps these technical details "under the hood" and provides a simple
@@ -183,7 +207,10 @@ channel.
 
 ### ⛔ Restricting Access
 
-Links are not revokable, but you can shut down access to a document using the
+As CryptPad operates with static keys, the shared access is not revokable.
+This means that by default anyone who was granted access will forever be able to
+read (and modify) a document.
+To prevent this, you can shut down access to a document using the
 Access List feature.
 
 <p style="text-align: center;">
@@ -192,6 +219,11 @@ Access List feature.
 
 This way, only the selected persons have access to the document, independently
 of who has received the sharing link.
+
+Also make sure you or your [team](https://docs.cryptpad.org/en/user_guide/collaboration.html#teams)
+is set as "owner" when you create documents.
+This will give you full control including the possibility to destroy a document
+if it contains sensitive information or the link escapes your control.
 
 ### 🔒 Per-Document Passwords
 
@@ -222,31 +254,12 @@ This feature is especially useful if you have to share sensitive data that
 should not be accessible for ever.
 You could, e.g., use it to share a password to a peer.
 
-## 🧑 Contacts
-
-As shown above, adding your peers as CryptPad contacts lets you more easily and
-safely share documents.
-You can moreover restrict access of a document to specific contacts and exchange
-text messages with them.
-
-The easiest way to add someone to your contacts is to [share the link to your
-profile](https://docs.cryptpad.org/en/user_guide/collaboration.html#add-a-contact)
-over a secure communication to your peer and request to add each other as
-contacts.
-
-⚠️  Note that usernames are not unique on CryptPad.
-Depending on context, it may be wise to verify a received contact request
-through another secure channel.
-
-## 🧑‍🤝‍🧑 Teams
-
-* Make sure you or the team is set as "owner" when you create documents, this will give you full control including to destroy a document if it contains sensitive information and the link escapes your control.
-
-
 ## 🕵️ Anonymity
 
 CryptPad does only provide a weak form of anonymity and does not hide your
-IP address.
+[IP address](https://ssd.eff.org/glossary/ip-address) or your ["user
+agent"](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent)
+(browser and [operating system](https://ssd.eff.org/glossary/operating-system)).
 The server can furthermore theoretically link IP addresses of people who are often colaborating on the same documents.
 Of course, we do not run these analytics for our flagship instance, but we want
 you to have to trust us as little as possible.
