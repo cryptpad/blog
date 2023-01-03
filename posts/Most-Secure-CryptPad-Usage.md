@@ -1,5 +1,5 @@
 ---
-title: The most secure way to use CryptPad
+title: The Most Secure Way To Use CryptPad
 date: 2022-12-24 # TODO
 author: Theo von Arx
 lang: en
