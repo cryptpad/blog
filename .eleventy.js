@@ -1,3 +1,6 @@
+
+const markdownIt = require("markdown-it");
+const markdownItAttrs = require('markdown-it-attrs')
 const { DateTime } = require("luxon");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
@@ -9,6 +12,24 @@ module.exports = (function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy('images');
     eleventyConfig.addPassthroughCopy({'source/fonts/': 'fonts/'});
     eleventyConfig.addPassthroughCopy({'source/theme/': 'theme/'});
+
+    // filter to parse markdown
+    const md = new markdownIt({
+        html: true,
+      });
+
+    eleventyConfig.addFilter("markdown", (content) => {
+    return md.render(content);
+    });
+
+    // enable classes and attributes in markdown
+    const markdownItOptions = {
+      html: true,
+      linkify: true
+    }
+
+    const markdownLib = markdownIt(markdownItOptions).use(markdownItAttrs)
+    eleventyConfig.setLibrary('md', markdownLib)
 
     // Debug filter
     eleventyConfig.addFilter("log", (d) => {
