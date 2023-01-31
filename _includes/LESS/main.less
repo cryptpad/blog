@@ -225,6 +225,12 @@ article.post {
             // list-style-position: inside;
             padding-left: 1em;
             margin-bottom: 1rem;
+            li {
+                ul {
+                    list-style: circle;
+                    margin-bottom: 0px; // nested lists
+                }
+            }
         }
     }
     iframe {
