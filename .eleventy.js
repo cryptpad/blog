@@ -15,11 +15,11 @@ module.exports = (function(eleventyConfig) {
 
     // filter to parse markdown
     const md = new markdownIt({
-        html: true,
-      });
+      html: true,
+    });
 
     eleventyConfig.addFilter("markdown", (content) => {
-    return md.render(content);
+      return md.render(content);
     });
 
     // enable classes and attributes in markdown

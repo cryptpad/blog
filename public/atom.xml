@@ -4,12 +4,84 @@
   <subtitle>News from the end-to-end encrypted collaboration suite</subtitle>
   <link href="https://blog.cryptpad.org/atom.xml" rel="self"/>
   <link href="https://blog.cryptpad.org"/>
-  <updated>2022-12-29T00:00:00Z</updated>
+  <updated>2023-01-31T00:00:00Z</updated>
   <id>https://blog.cryptpad.org</id>
   <author>
     <name>CryptPad Team</name>
     <email>contact@cryptpad.fr</email>
   </author>
+  <entry>
+    <title>January 2023 status</title>
+    <link href="https://blog.cryptpad.org/2023/01/31/status-2023-01/"/>
+    <updated>2023-01-31T00:00:00Z</updated>
+    <id>https://blog.cryptpad.org/2023/01/31/status-2023-01/</id>
+    <summary xml:lang="en" type="html">New pricing for hosted instances, Wolfgang joins the team, CryptPad Blueprints officially starts, FOSDEM presentations</summary>
+    <content xml:lang="en" type="html">&lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/instance-education.png&quot; alt=&quot;screenshot of customized cryptpad instance for education&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;🎟️ New pricing for hosted instances&lt;/h2&gt;
+&lt;p&gt;The project site has &lt;a href=&quot;https://cryptpad.org/pricing/&quot;&gt;new pages&lt;/a&gt; dedicated to &lt;a href=&quot;https://cryptpad.org/pricing/education/&quot;&gt;Education&lt;/a&gt;, &lt;a href=&quot;https://cryptpad.org/pricing/nonprofit/&quot;&gt;Nonprofits&lt;/a&gt;, and &lt;a href=&quot;https://cryptpad.org/pricing/enterprise/&quot;&gt;Enterprise&lt;/a&gt;. This is an opportunity to showcase some instance customizations and put forward some key arguments for CryptPad in each of these sectors. We are also launching our pricing range for managed instances, with the following basis:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Enterprise&lt;/li&gt;
+&lt;li&gt;Nonprofit (50% off Enterprise)&lt;/li&gt;
+&lt;li&gt;Education (50% off Enterprise + only staff are counted)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;While self-hosting remains a free option for everyone, managed instances are a way for companies and organizations to contribute to the long-term stability of the project.&lt;/p&gt;
+&lt;h2&gt;🧑‍🔬 Wolfgang joins the team&lt;/h2&gt;
+&lt;p&gt;We are thrilled to welcome Wolfgang Ginolas to the team. He started first thing in 2023 as an R&amp;amp;D Engineer, bringing 14 years of experience in full-stack software development. Wolfgang will tackle some of the important challenges ahead, such as improving OnlyOffice integrations, and many more...&lt;/p&gt;
+&lt;h2&gt;🔬🔭 CryptPad Blueprints officially starts&lt;/h2&gt;
+&lt;p&gt;Even though work has started since Theo &lt;a href=&quot;https://blog.cryptpad.org/2022/10/28/status-2022-10/&quot;&gt;joined the team back in October&lt;/a&gt;, the CryptPad &lt;a href=&quot;https://nlnet.nl/project/CryptPad-Blueprints/&quot;&gt;Blueprints&lt;/a&gt; project has now been fully signed-off as part of the &lt;a href=&quot;https://nlnet.nl/entrust/&quot;&gt;NGI0 Entrust fund&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Blueprints&lt;/em&gt; is perhaps the most R&amp;amp;D project we have done to date. It is about thoroughly documenting the use of cryptography in CryptPad, and paving the way  towards the &amp;quot;next generation&amp;quot; of the project. This will be done through a set of deliverables that range from documentation to experimental protoypes, including but not limited to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Whitepaper documenting the use of cryptography in CryptPad
+&lt;ul&gt;
+&lt;li&gt;Including a detailed threat model&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Guide for users on how to use CryptPad in the most secure way&lt;/li&gt;
+&lt;li&gt;Experimental prototypes and/or mockups for future features:
+&lt;ul&gt;
+&lt;li&gt;Offline first editing with Conflict Free Replicated Data Types (CRDTs)&lt;/li&gt;
+&lt;li&gt;Perfect forward secrecy for a more fine-grained degree of access control e.g. to the document history&lt;/li&gt;
+&lt;li&gt;Account-recovery mechanism making use of social secret sharing&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Look for these as we start publishing outcomes in the coming weeks and months. If you&#39;d like to hear about this work from Theo himself, catch his presentation at FOSDEM this Saturday Feb. 4th, which brings us to:&lt;/p&gt;
+&lt;h2&gt;📢 FOSDEM presentations&lt;/h2&gt;
+&lt;p&gt;A few people of the team will be at FOSDEM in Brussels this weekend, so please come say hi if you are around. We&#39;ll be giving the following presentations&lt;/p&gt;
+&lt;h3&gt;Whom Do You Trust?&lt;/h3&gt;
+&lt;p&gt;Privacy and Collaboration in CryptPad&lt;/p&gt;
+&lt;p&gt;Speaker: Theo von Arx (Cryptography researcher, CryptPad team)&lt;br /&gt;
+Day: Saturday&lt;br /&gt;
+Start: 15:00&lt;br /&gt;
+End: 15:25&lt;br /&gt;
+Location: UA2.118 (Henriot)&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://fosdem.org/2023/schedule/event/security_whom_do_you_trust/&quot;&gt;https://fosdem.org/2023/schedule/event/security_whom_do_you_trust/&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;The Importance of Collaborative Applications for European Digital Sovereignty&lt;/h3&gt;
+&lt;p&gt;Progress and challenges of alternatives facing the BigTechs&lt;/p&gt;
+&lt;p&gt;Speaker: Ludovic Dubost (XWiki CEO)&lt;br /&gt;
+Day: Saturday&lt;br /&gt;
+Start: 15:45&lt;br /&gt;
+End: 16:45&lt;br /&gt;
+Location: H.1301 (Cornil)&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://fosdem.org/2023/schedule/event/sovcloud_the_importance_of_collaborative_applications_for_european_digital_sovereignty/&quot;&gt;https://fosdem.org/2023/schedule/event/sovcloud_the_importance_of_collaborative_applications_for_european_digital_sovereignty/&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;Privacy and Collaboration&lt;/h3&gt;
+&lt;p&gt;How CryptPad lets you have both&lt;/p&gt;
+&lt;p&gt;Speaker: David Benqué (Project lead, CryptPad team)&lt;br /&gt;
+Day: Saturday&lt;br /&gt;
+Start: 18:00&lt;br /&gt;
+End: 18:25&lt;br /&gt;
+Location: K.4.601&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://fosdem.org/2023/schedule/event/collab_cryptpad/&quot;&gt;https://fosdem.org/2023/schedule/event/collab_cryptpad/&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;🔭 Next up&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Similar to &lt;em&gt;Blueprints&lt;/em&gt;, CryptPad &lt;a href=&quot;https://nlnet.nl/project/CryptPad-Auth/&quot;&gt;AUTH&lt;/a&gt; has been in the final stage of approval for some time, so we are looking forward to getting it over the line and start implementing new authentication features.&lt;/li&gt;
+&lt;li&gt;We have a number of big partnership projects lined up for 2023, each with the potential for adding new and important features to CryptPad in the year(s) to come. We hope to be able to say more in the next monthly status.&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    <category term="status update" scheme="https://blog.cryptpad.org/tags/status update/"/>
+    <category term="Blueprints" scheme="https://blog.cryptpad.org/tags/Blueprints/"/>
+    <category term="team" scheme="https://blog.cryptpad.org/tags/team/"/>
+  </entry>
   <entry>
     <title>Stepping down</title>
     <link href="https://blog.cryptpad.org/2022/12/29/stepping-down/"/>
@@ -30,7 +102,7 @@ Mathilde has taken on the role of platform administrator and community organizer
 We will have a new member joining in January, and there are still &lt;a href=&quot;https://cryptpad.org/jobs/&quot;&gt;open positions on the team&lt;/a&gt; which you might be able to fill.
 I am leaving the project in excellent hands.&lt;/p&gt;
 &lt;p&gt;And of course, CryptPad is not just the product of our team&#39;s work, but also the sum of many contributions from the wider community.
-I&#39;m very thankful for the support of our past and present funders from BPI France, Mozilla, members of Europe&#39;s NGI initiative, subscribers on CryptPad.fr, and everyone who has donated to our &lt;a href=&quot;https://opencollective.com/cryptpad#category-CONTRIBUTE&quot;&gt;OpenCollective campaign&lt;/a&gt;.&lt;/p&gt;
+I&#39;m very thankful for the support of our past and present funders from BPI France, Mozilla, members of Europe&#39;s NGI initiative, subscribers on &lt;a href=&quot;http://cryptpad.fr/&quot;&gt;CryptPad.fr&lt;/a&gt;, and everyone who has donated to our &lt;a href=&quot;https://opencollective.com/cryptpad#category-CONTRIBUTE&quot;&gt;OpenCollective campaign&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Once again, thank you to all of you who helped make these last seven years what they were, and have a great 2023!&lt;/p&gt;
 </content>
     <category term="team" scheme="https://blog.cryptpad.org/tags/team/"/>
@@ -116,9 +188,9 @@ Unless stated otherwise, all commands listed in this article are meant to be run
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;You can safely ignore the socat warning since we won&#39;t use the standalone mode.&lt;/p&gt;
 &lt;h2&gt;Configuration&lt;/h2&gt;
-&lt;h3&gt;acme.sh&lt;/h3&gt;
+&lt;h3&gt;&lt;a href=&quot;http://acme.sh/&quot;&gt;acme.sh&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;It&#39;s a great ACME client because of its simplicity and the fact that it just works and then gets out of your way.&lt;/p&gt;
-&lt;p&gt;The maintainers of acme.sh have a sponsored partnership with ZeroSSL to set up their Certificate Authority (CA) as acme.sh&#39;s default. But ZeroSSL free services can be unreliable. That&#39;s why we prefer Let&#39;s Encrypt, which is more reliable and also operated by a nonprofit organization.&lt;/p&gt;
+&lt;p&gt;The maintainers of &lt;a href=&quot;http://acme.sh/&quot;&gt;acme.sh&lt;/a&gt; have a sponsored partnership with ZeroSSL to set up their Certificate Authority (CA) as &lt;a href=&quot;http://acme.sh/&quot;&gt;acme.sh&lt;/a&gt;&#39;s default. But ZeroSSL free services can be unreliable. That&#39;s why we prefer Let&#39;s Encrypt, which is more reliable and also operated by a nonprofit organization.&lt;/p&gt;
 &lt;p&gt;We need to change a single parameter to switch the CA from ZeroSSL to Let&#39;s Encrypt.
 We do this with the following command:&lt;/p&gt;
 &lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;acme.sh --set-default-ca &lt;span class=&quot;token parameter variable&quot;&gt;--server&lt;/span&gt; letsencrypt&lt;/code&gt;&lt;/pre&gt;
@@ -130,7 +202,7 @@ We do this with the following command:&lt;/p&gt;
 &lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;mkdir&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-p&lt;/span&gt; /var/www/le_root/.well-known/acme-challenge&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Then we create a directory where the certificates will be stored when installed.&lt;/p&gt;
 &lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;mkdir&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-p&lt;/span&gt; /etc/ssl/lets-encrypt/your-main-domain.com&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;We also need to create an Nginx configuration file for acme.sh webroot.&lt;/p&gt;
+&lt;p&gt;We also need to create an Nginx configuration file for &lt;a href=&quot;http://acme.sh/&quot;&gt;acme.sh&lt;/a&gt; webroot.&lt;/p&gt;
 &lt;pre class=&quot;language-nginx&quot;&gt;&lt;code class=&quot;language-nginx&quot;&gt;&lt;span class=&quot;token directive&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;cat&lt;/span&gt; &amp;lt;&amp;lt;EOT &gt;&gt; /etc/nginx/letsencrypt-webroot&lt;br /&gt;location ^~ /.well-known/acme-challenge&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br /&gt;    &lt;span class=&quot;token directive&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;allow&lt;/span&gt; all&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br /&gt;    &lt;span class=&quot;token directive&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;expires&lt;/span&gt; -1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br /&gt;    &lt;span class=&quot;token directive&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;add_header&lt;/span&gt; Cache-Control no-store&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br /&gt;    &lt;span class=&quot;token directive&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;alias&lt;/span&gt; /var/www/le_root/.well-known/acme-challenge/&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;br /&gt;EOT&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;We link it to the default Nginx configuration file, pasting those lines below the &lt;code&gt;listen&lt;/code&gt; directive in &lt;code&gt;/etc/nginx/conf.d/default.conf&lt;/code&gt;:&lt;/p&gt;
 &lt;pre class=&quot;language-nginx&quot;&gt;&lt;code class=&quot;language-nginx&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# Let&#39;s Encrypt webroot&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;token directive&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;include&lt;/span&gt; letsencrypt-webroot&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
@@ -139,7 +211,7 @@ We do this with the following command:&lt;/p&gt;
 &lt;p&gt;Finally, if we get no warning or errors, we reload the configuration to apply the last changes.&lt;/p&gt;
 &lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;nginx &lt;span class=&quot;token parameter variable&quot;&gt;-s&lt;/span&gt; reload&lt;/code&gt;&lt;/pre&gt;
 &lt;h2&gt;Certificate generation&lt;/h2&gt;
-&lt;p&gt;Now that we have configured acme.sh &amp;amp; Nginx we can finally issue our certificates. We&#39;ll validate them against two domains, the main one and the one dedicated to the sandbox.&lt;/p&gt;
+&lt;p&gt;Now that we have configured &lt;a href=&quot;http://acme.sh/&quot;&gt;acme.sh&lt;/a&gt; &amp;amp; Nginx we can finally issue our certificates. We&#39;ll validate them against two domains, the main one and the one dedicated to the sandbox.&lt;/p&gt;
 &lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;acme.sh &lt;span class=&quot;token parameter variable&quot;&gt;--issue&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-d&lt;/span&gt; your-main-domain.com &lt;span class=&quot;token parameter variable&quot;&gt;-d&lt;/span&gt; your-sandbox-domain.com &lt;span class=&quot;token parameter variable&quot;&gt;-w&lt;/span&gt; /var/www/le_root/&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;This command should produce the following output.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;[Fri 02 Dec 2022 09:23:23 AM CET] Using stage ACME_DIRECTORY: https://acme-staging.api.letsencrypt.org/directory
@@ -173,7 +245,7 @@ We do this with the following command:&lt;/p&gt;
 &lt;h2&gt;Going forward&lt;/h2&gt;
 &lt;p&gt;Now you just have to continue the installation process described in &lt;a href=&quot;https://docs.cryptpad.org/en/admin_guide/installation.html#install-and-configure-nginx&quot;&gt;the administrator guide&lt;/a&gt;, copying the example configuration file provided and edit it to match your configuration.&lt;/p&gt;
 &lt;h2&gt;Summary&lt;/h2&gt;
-&lt;p&gt;It&#39;s done! In this tutorial we&#39;ve seen how to install acme.sh, adapt Nginx configuration to handle TLS certificates generation and what are the next steps going forward. Thank you very much for reading this far, and for your interest in CryptPad!&lt;/p&gt;
+&lt;p&gt;It&#39;s done! In this tutorial we&#39;ve seen how to install &lt;a href=&quot;http://acme.sh/&quot;&gt;acme.sh&lt;/a&gt;, adapt Nginx configuration to handle TLS certificates generation and what are the next steps going forward. Thank you very much for reading this far, and for your interest in CryptPad!&lt;/p&gt;
 &lt;p&gt;In case of need, don&#39;t hesitate to join the &lt;a href=&quot;https://forum.cryptpad.org/&quot;&gt;community forum&lt;/a&gt; or the &lt;a href=&quot;https://matrix.to/#/#cryptpad:matrix.xwiki.com&quot;&gt;Matrix space&lt;/a&gt;. You can also follow CryptPad on the fediverse with the &lt;a href=&quot;https://fosstodon.org/@cryptpad&quot;&gt;official Mastodon account&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Have a great day!&lt;/p&gt;
 </content>
@@ -211,11 +283,11 @@ We do this with the following command:&lt;/p&gt;
     <id>https://blog.cryptpad.org/2022/11/17/FR-education-2022-11/</id>
     <summary xml:lang="en" type="html">🇫🇷 Post in French - Le Journal Officiel a publié le 15 novembre 2022 une réponse du ministre de l&#39;Éducation Nationale à une question parlementaire</summary>
     <content xml:lang="en" type="html">&lt;p&gt;Le Journal Officiel a publié le 15 novembre 2022 une réponse du ministre de l&#39;Éducation Nationale à une question parlementaire ( &lt;a href=&quot;https://questions.assemblee-nationale.fr/q16/16-971QE.htm&quot;&gt;https://questions.assemblee-nationale.fr/q16/16-971QE.htm&lt;/a&gt; ). Le député Philippe Latombe interrogeait le ministre sur l&#39;usage de la suite bureautique Microsoft Office 365 dans sa version gratuite par les élèves et les enseignants. Le ministre a rappelé dans sa réponse les instructions qui ont été transmises au rectorat. Le résumé : comme Office 365 (ou l&#39;équivalent chez Google) tombe sous le droit extra-européen, &lt;strong&gt;ces solutions sont interdites&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;La communauté CryptPad, son équipe de développement et la société qui soutient ce développement (XWiki SAS), sont très heureuses de ce rappel. Les académies peuvent d&#39;ors et déjà utiliser https://cryptpad.fr directement, même sans compte.&lt;/p&gt;
+&lt;p&gt;La communauté CryptPad, son équipe de développement et la société qui soutient ce développement (XWiki SAS), sont très heureuses de ce rappel. Les académies peuvent d&#39;ors et déjà utiliser &lt;a href=&quot;https://cryptpad.fr/&quot;&gt;https://cryptpad.fr&lt;/a&gt; directement, même sans compte.&lt;/p&gt;
 &lt;p&gt;En Allemagne, par exemple, le secteur éducatif a depuis longtemps compris le besoin essentiel de se protéger du modèle GAFAM. Au-delà de la surveillance et autres exploitations commerciales des données produites en milieu scolaire, &lt;a href=&quot;https://www.hrw.org/StudentsNotProducts&quot;&gt;soulignées par Human Rights Watch,&lt;/a&gt; ces entreprises conditionnent l&#39;apprentissage et les usages futurs des élèves. De nombreuses structures éducatives utilisent CryptPad en Allemagne, et nous sommes en discussion avec plusieurs partenaires pour amplifier ces usages.&lt;/p&gt;
 &lt;p&gt;CryptPad est une suite bureautique complète, chiffrée de bout en bout, avec les plus hautes exigences concernant la sécurité, la confidentialité et l&#39;absence de traçabilité des usages. Le chiffrement et le déchiffrement se font dans le navigateur, donc aucune donnée non chiffrée ne quitte l&#39;appareil des utilisateur·ices. Aucune donnée personnelle n&#39;est demandée pour créer un compte, pas même une addresse email. Les administrateur·ices du système ne peuvent pas accéder aux documents ou comptes, et les logs sont réduits au minimum. Ces données chiffrées sont hébergées en France par OVH.&lt;/p&gt;
-&lt;p&gt;CryptPad est un logiciel libre, vous pouvez donc mettre en place votre propre serveur sans que nous n&#39;en ayons la moindre idée. Évidemment, si vous souhaitez que le projet perdure, nous ne saurions trop vous conseiller de &lt;a href=&quot;https://opencollective.com/cryptpad/contribute&quot;&gt;nous soutenir que ce soit par un don, si possible récurrent&lt;/a&gt;, un abonnement sur la plateforme https://cryptpad.fr, un achat de service à l&#39;équipe de développement, ou bien en contribuant directement au développement.&lt;/p&gt;
-&lt;p&gt;Vous souhaitez avoir plus d&#39;informations ou de l&#39;aide ? &lt;a href=&quot;https://cryptpad.fr/form/#/2/form/view/kk-fRzy7YTN+SEYUNWxElLb5pLwTS2DXZtp4sOcnoYQ/&quot;&gt;Remplissez ce questionnaire&lt;/a&gt; (données stockées dans cryptpad.fr, chiffrées de bout en bout 😉 ) et nous nous ferons un plaisir de revenir vers vous pour vous aider.&lt;/p&gt;
+&lt;p&gt;CryptPad est un logiciel libre, vous pouvez donc mettre en place votre propre serveur sans que nous n&#39;en ayons la moindre idée. Évidemment, si vous souhaitez que le projet perdure, nous ne saurions trop vous conseiller de &lt;a href=&quot;https://opencollective.com/cryptpad/contribute&quot;&gt;nous soutenir que ce soit par un don, si possible récurrent&lt;/a&gt;, un abonnement sur la plateforme &lt;a href=&quot;https://cryptpad.fr/&quot;&gt;https://cryptpad.fr&lt;/a&gt;, un achat de service à l&#39;équipe de développement, ou bien en contribuant directement au développement.&lt;/p&gt;
+&lt;p&gt;Vous souhaitez avoir plus d&#39;informations ou de l&#39;aide ? &lt;a href=&quot;https://cryptpad.fr/form/#/2/form/view/kk-fRzy7YTN+SEYUNWxElLb5pLwTS2DXZtp4sOcnoYQ/&quot;&gt;Remplissez ce questionnaire&lt;/a&gt; (données stockées dans &lt;a href=&quot;http://cryptpad.fr/&quot;&gt;cryptpad.fr&lt;/a&gt;, chiffrées de bout en bout 😉 ) et nous nous ferons un plaisir de revenir vers vous pour vous aider.&lt;/p&gt;
 </content>
     <category term="France" scheme="https://blog.cryptpad.org/tags/France/"/>
     <category term="education" scheme="https://blog.cryptpad.org/tags/education/"/>
@@ -260,7 +332,7 @@ We do this with the following command:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://matrix.to/#/#cryptpad:matrix.xwiki.com&quot;&gt;Matrix chat&lt;/a&gt; (great for synchronous communication, not ideal for keeping track of ideas over time)&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/xwiki-labs/cryptpad/issues&quot;&gt;GitHub issues&lt;/a&gt; (great for developers, not ideal for people who don&#39;t write code)&lt;/li&gt;
-&lt;li&gt;Support tickets on CryptPad.fr (only visible by the sender and the instance admins)&lt;/li&gt;
+&lt;li&gt;Support tickets on &lt;a href=&quot;http://cryptpad.fr/&quot;&gt;CryptPad.fr&lt;/a&gt; (only visible by the sender and the instance admins)&lt;/li&gt;
 &lt;li&gt;Email, word of mouth, and anything else that gets lost if we don&#39;t write it down&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;This forum is now the main place to submit feedback such as feature requests, ideas for improvements, and bug reports. It will allow the community to keep track of these discussions and contribute to them. We hope this place becomes part living documentation part pre-roadmap for the project.&lt;/p&gt;
@@ -292,7 +364,7 @@ We do this with the following command:&lt;/p&gt;
 &lt;p&gt;We are also happy to announce that we have signed with antoher new hire, a senior developer from Germany. We will give more details on this when they join the team full-time in January 2023.&lt;/p&gt;
 &lt;h2&gt;Next up&lt;/h2&gt;
 &lt;p&gt;We took advantage of the XWiki seminar hackathon last week to set up a &lt;a href=&quot;https://forum.cryptpad.org/&quot;&gt;new forum for CryptPad&lt;/a&gt; using &lt;a href=&quot;https://flarum.org/&quot;&gt;Flarum&lt;/a&gt;. We will be sharing the details shortly. This new forum will centralize discussions around CryptPad, part living documentation part pre-roadmap for the project.&lt;/p&gt;
-&lt;p&gt;Calendar improvements didn&#39;t quite make it into 5.1, but they are coming along nicely. The much-requested feature of recurring events will defintely be part of the next release, and deployed to Cryptpad.fr before that.&lt;/p&gt;
+&lt;p&gt;Calendar improvements didn&#39;t quite make it into 5.1, but they are coming along nicely. The much-requested feature of recurring events will defintely be part of the next release, and deployed to &lt;a href=&quot;http://cryptpad.fr/&quot;&gt;Cryptpad.fr&lt;/a&gt; before that.&lt;/p&gt;
 </content>
     <category term="status update" scheme="https://blog.cryptpad.org/tags/status update/"/>
     <category term="cryptpad team" scheme="https://blog.cryptpad.org/tags/cryptpad team/"/>
@@ -306,9 +378,9 @@ We do this with the following command:&lt;/p&gt;
     <content xml:lang="en" type="html">&lt;p&gt;Monthly status posts are back!&lt;/p&gt;
 &lt;h2&gt;End of Maxime&#39;s internship&lt;/h2&gt;
 &lt;p&gt;August 31st is Maxime Cesson&#39;s last day with the CryptPad team. His 2 months with us have been very productive. Maxime went from &amp;quot;zero-knowledge&amp;quot; of JavaScript to having his code deployed in production in a few weeks.&lt;/p&gt;
-&lt;p&gt;He addressed &lt;a href=&quot;https://github.com/xwiki-labs/cryptpad/issues?q=is%3Aissue+is%3Aopen+label%3A%22Junior+friendly%22+label%3A%22Fixed+in+staging%22+&quot;&gt;a number of &amp;quot;junior friendly&amp;quot; issues&lt;/a&gt; as well as the not-so-junior &lt;a href=&quot;https://github.com/xwiki-labs/cryptpad/issues/438&quot;&gt;document type filter for the drive&lt;/a&gt;. Some of these features are already live on cryptpad.fr and they will all be included in the next version of CryptPad. We are very happy with Maxime&#39;s contributions and wish him all the best for his future endeavours. He will go on to complete the last year of his studies while working in cyber-security.&lt;/p&gt;
+&lt;p&gt;He addressed &lt;a href=&quot;https://github.com/xwiki-labs/cryptpad/issues?q=is%3Aissue+is%3Aopen+label%3A%22Junior+friendly%22+label%3A%22Fixed+in+staging%22+&quot;&gt;a number of &amp;quot;junior friendly&amp;quot; issues&lt;/a&gt; as well as the not-so-junior &lt;a href=&quot;https://github.com/xwiki-labs/cryptpad/issues/438&quot;&gt;document type filter for the drive&lt;/a&gt;. Some of these features are already live on &lt;a href=&quot;http://cryptpad.fr/&quot;&gt;cryptpad.fr&lt;/a&gt; and they will all be included in the next version of CryptPad. We are very happy with Maxime&#39;s contributions and wish him all the best for his future endeavours. He will go on to complete the last year of his studies while working in cyber-security.&lt;/p&gt;
 &lt;h2&gt;Mathilde&#39;s first month&lt;/h2&gt;
-&lt;p&gt;Mathilde Blanchemanche joined the team full-time on August 1st as instance administrator for cryptpad.fr. Effectively her role incudes support, engaging with the community (on Matrix, Github, and possibly new platforms coming soon), managing the bug-fixing pipeline, and more things that we are still figuring out.&lt;/p&gt;
+&lt;p&gt;Mathilde Blanchemanche joined the team full-time on August 1st as instance administrator for &lt;a href=&quot;http://cryptpad.fr/&quot;&gt;cryptpad.fr&lt;/a&gt;. Effectively her role incudes support, engaging with the community (on Matrix, Github, and possibly new platforms coming soon), managing the bug-fixing pipeline, and more things that we are still figuring out.&lt;/p&gt;
 &lt;p&gt;Mathilde has hit the ground running. She brought us to INBOX ZERO on support tickets after just over a week on the job, and has engaged with countless GitHub issues that were left without a response, sometimes for years.&lt;/p&gt;
 &lt;p&gt;This will continue into next month and beyond. In addition, she will contribute to user-research for some features we have in mind, and continue planning how to improve our efficiency and openness in dealing with incoming bug-reports and feature-requests.&lt;/p&gt;
 &lt;h2&gt;Next up&lt;/h2&gt;
@@ -389,7 +461,7 @@ We do this with the following command:&lt;/p&gt;
 &lt;li&gt;Some basic information has to be provided such as the location where encrypted data is hosted and a privacy policy&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;In addition to this the instance administrators have, of course, to opt-in for their instance to be listed.&lt;/p&gt;
-&lt;p&gt;As of today the list is still short, with only 2 instances aside from CryptPad.fr. However we expect to see this number rise as more of the ~20 administrators who have opted in bring their instance in line with the requirements.&lt;/p&gt;
+&lt;p&gt;As of today the list is still short, with only 2 instances aside from &lt;a href=&quot;http://cryptpad.fr/&quot;&gt;CryptPad.fr&lt;/a&gt;. However we expect to see this number rise as more of the ~20 administrators who have opted in bring their instance in line with the requirements.&lt;/p&gt;
 &lt;iframe src=&quot;https://social.weho.st/@cryptpad/108073662309134459/embed&quot; class=&quot;mastodon-embed&quot; style=&quot;max-width: 100%; border: 0&quot; width=&quot;400&quot; allowfullscreen=&quot;allowfullscreen&quot;&gt;&lt;/iframe&gt;&lt;script src=&quot;https://social.weho.st/embed.js&quot; async=&quot;async&quot;&gt;&lt;/script&gt;
 &lt;p&gt;In addition to the list requirements, we have released two versions this month that take a stronger stance on enforcing correct configuration for &lt;em&gt;all&lt;/em&gt; CryptPad instances. We want to prevent CryptPad from providing a false sense of security to users while being misconfigured by administrators and actually putting user information at risk. This is why from version &lt;a href=&quot;https://github.com/xwiki-labs/cryptpad/releases/tag/4.14.0&quot;&gt;4.14.0&lt;/a&gt; and &lt;a href=&quot;https://github.com/xwiki-labs/cryptpad/releases/tag/4.14.1&quot;&gt;4.14.1&lt;/a&gt; CryptPad will not work unless the security guarantees we expect are actually implemented.&lt;/p&gt;
 &lt;p&gt;Over the coming weeks we plan to add more information to the &lt;a href=&quot;https://cryptpad.org/&quot;&gt;project site&lt;/a&gt;. Some time ago we launched &lt;a href=&quot;https://cryptpad.fr/form/#/3/form/view/0684aee21b4a36ed9dc41cfca9a27246/&quot;&gt;a survey&lt;/a&gt; in which we asked people to tell us what they love about CryptPad. Their responses will be displayed on the home-page. We will also be promoting hosted instances with &amp;quot;Your Own CryptPad&amp;quot; aimed at different sectors: education, NGOs, and enterprise. These will be installed and maintained by the development team for organizations who want the benefits of their own instance.&lt;/p&gt;
@@ -447,11 +519,11 @@ We do this with the following command:&lt;/p&gt;
 &lt;p&gt;For the past few years, German-speaking members of our community have very reliably kept up with all the new text we&#39;ve added, and have even gone as far as to translate our user guide. This year they&#39;ve been joined by native speakers of Japanese, Russian, and Brazilian Portuguese to make the platform more accessible to a much broader range of people.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/translations-status-2021-12.png&quot; alt=&quot;Status of CryptPad&#39;s translations as of December 2021 with six languages at least 99% complete&quot; /&gt;&lt;/p&gt;
 &lt;h3&gt;Project maintenance and administration&lt;/h3&gt;
-&lt;p&gt;Revenue from premium accounts on CryptPad.fr goes towards answering premium support tickets first. Any funds that are left over are combined with donations to our &lt;a href=&quot;https://opencollective.com/cryptpad&quot;&gt;OpenCollective campaign&lt;/a&gt; to fund all the work that isn&#39;t covered by our research grants. That allows us to review translations, keep our documentation up to date, write detailed release notes, triage bug reports, and answer questions submitted via email or social media.&lt;/p&gt;
+&lt;p&gt;Revenue from premium accounts on &lt;a href=&quot;http://cryptpad.fr/&quot;&gt;CryptPad.fr&lt;/a&gt; goes towards answering premium support tickets first. Any funds that are left over are combined with donations to our &lt;a href=&quot;https://opencollective.com/cryptpad&quot;&gt;OpenCollective campaign&lt;/a&gt; to fund all the work that isn&#39;t covered by our research grants. That allows us to review translations, keep our documentation up to date, write detailed release notes, triage bug reports, and answer questions submitted via email or social media.&lt;/p&gt;
 &lt;p&gt;This year there have been multiple occasions when a new version of a major browser broke support for critical features, forcing us to drop whatever we were doing at the time and find alternative solutions for these regressions. When code isn&#39;t simply rotting out from underneath us, there are always critical security notices that need to be attended to, most recently with the sudden disclosure of &lt;a href=&quot;https://en.wikipedia.org/wiki/Log4Shell&quot;&gt;vulnerabilities in the log4j library&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;This year we saw an increasing number of subscriptions and donations from our supporters which allowed us to keep up with these surprises and to catch up on a bit of a backlog of maintenance. It helped that 2021 was overall somewhat less surprising than 2020, but we don&#39;t want to rely on that continuing to be the case.&lt;/p&gt;
 &lt;h2&gt;What the future holds&lt;/h2&gt;
-&lt;p&gt;Our general plan for the coming year is to scale back the proportion of our budget which is covered by European research grants and to focus more heavily on projects sponsored directly by clients. To that end, we&#39;ll soon add a number of pages to our project website (&lt;a href=&quot;https://cryptpad.org/&quot;&gt;CryptPad.org&lt;/a&gt;) which will differentiate the open-source project from our commercial offering on CryptPad.fr. We&#39;ll list various support packages tailored for &lt;em&gt;education&lt;/em&gt;, &lt;em&gt;enterprises&lt;/em&gt;, and &lt;em&gt;NGOs&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Our general plan for the coming year is to scale back the proportion of our budget which is covered by European research grants and to focus more heavily on projects sponsored directly by clients. To that end, we&#39;ll soon add a number of pages to our project website (&lt;a href=&quot;https://cryptpad.org/&quot;&gt;CryptPad.org&lt;/a&gt;) which will differentiate the open-source project from our commercial offering on &lt;a href=&quot;http://cryptpad.fr/&quot;&gt;CryptPad.fr&lt;/a&gt;. We&#39;ll list various support packages tailored for &lt;em&gt;education&lt;/em&gt;, &lt;em&gt;enterprises&lt;/em&gt;, and &lt;em&gt;NGOs&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/cryptpad-org-2021-12.png&quot; alt=&quot;Screenshot of CryptPad.org, providing general information about the open-source project&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;Earlier this year we included options in the platform&#39;s admin panel to allow administrators to mark their instance as intended for public usage, and to opt-in to inclusion in a directory of public instances. We wanted to wait and see if there was sufficient interest in such a listing before we went to the trouble of building it. The good news is that at this point 11 operators have opted in, so it seems worthwhile to build. The bad news is that a number of these don&#39;t seem to be configured correctly. We plan to reach out to these administrators in the near future to rectify these concerns before including them in the directory.&lt;/p&gt;
 &lt;h3&gt;Wrapping up our the INTEROFFICE project&lt;/h3&gt;
@@ -469,7 +541,7 @@ We do this with the following command:&lt;/p&gt;
 &lt;h3&gt;Hiring&lt;/h3&gt;
 &lt;p&gt;There&#39;s a lot more that we would like to do in 2022, but realistically the work described above is likely to take a lot of time to get right. In order to accomplish more of our goals we&#39;ll need to hire additional team members, possibly as many as three.&lt;/p&gt;
 &lt;p&gt;If you are a web application developer with an interest in privacy and usability we want to hear from you. Our team works remotely, but for accounting purposes we&#39;d prefer candidates from within the EU. We offer flexible working hours, competitive salaries for western Europe, four-day weeks every second week, and the opportunity to serve the public interest through free software.&lt;/p&gt;
-&lt;p&gt;If you think you could help us accomplish our goals, send us (jobs@cryptpad.fr) a brief introduction and a CV or resume indicating your relevant qualifications or experience. We tend to receive a disproportionate number of applications from certain demographics. To account for that bias, we&#39;d like to encourage members of communities that are underrepresented in the tech industry to overcome their hesitation and apply. We want to hear to from you!&lt;/p&gt;
+&lt;p&gt;If you think you could help us accomplish our goals, send us (&lt;a href=&quot;mailto:jobs@cryptpad.fr&quot;&gt;jobs@cryptpad.fr&lt;/a&gt;) a brief introduction and a CV or resume indicating your relevant qualifications or experience. We tend to receive a disproportionate number of applications from certain demographics. To account for that bias, we&#39;d like to encourage members of communities that are underrepresented in the tech industry to overcome their hesitation and apply. We want to hear to from you!&lt;/p&gt;
 &lt;h2&gt;Get ready!&lt;/h2&gt;
 &lt;p&gt;We&#39;ve gotten this far because we&#39;ve had your help. You&#39;ve introduced CryptPad to friends, family, and colleagues. You&#39;ve written &lt;a href=&quot;https://marker.io/blog/write-bug-report&quot;&gt;great bug reports&lt;/a&gt; that have helped us find and fix stubborn problems. You&#39;ve &lt;a href=&quot;https://social.weho.st/@cryptpad&quot;&gt;boosted&lt;/a&gt;, &lt;a href=&quot;https://twitter.com/cryptpad&quot;&gt;retweeted&lt;/a&gt;, and &lt;a href=&quot;https://pixelfed.social/cryptpad_design&quot;&gt;liked&lt;/a&gt; our updates. You&#39;ve &lt;a href=&quot;https://weblate.cryptpad.fr/projects/cryptpad/app/&quot;&gt;translated the platform&lt;/a&gt; for your community, &lt;a href=&quot;https://cryptpad.fr/accounts/&quot;&gt;subscribed to a premium subscription&lt;/a&gt;, &lt;a href=&quot;https://opencollective.com/cryptpad&quot;&gt;donated to our cause&lt;/a&gt;, all of which have had a tremendous impact.&lt;/p&gt;
 &lt;p&gt;We&#39;re extremely grateful for all your support, proud of what we&#39;ve created together, and excited to continue this journey with you in the new year!&lt;/p&gt;
@@ -487,7 +559,7 @@ We do this with the following command:&lt;/p&gt;
     <summary xml:lang="en" type="html">This month we released some minor fixes with 4.12.1. We have been busy making preparations for the upcoming upgrade to OnlyOffice 6.4.2.</summary>
     <content xml:lang="en" type="html">&lt;p&gt;This month we released some minor fixes with &lt;a href=&quot;https://github.com/xwiki-labs/cryptpad/releases/tag/4.12.1&quot;&gt;4.12.1&lt;/a&gt;. We have been busy making preparations for the upcoming upgrade to OnlyOffice 6.4.2. This will include the much-requested conditional formatting in Sheets and dark mode support. We have also spent time considering strategy and long-term goals as we prepare the project website, which brings us to:&lt;/p&gt;
 &lt;h2&gt;Call for project site testimonials&lt;/h2&gt;
-&lt;p&gt;As we have &lt;a href=&quot;https://blog.cryptpad.org/2021/09/15/Relocating-our-blog/&quot;&gt;mentioned before&lt;/a&gt; we are currently working on a project website for CryptPad. This will be used to promote the project and to better communicate the distinction between CryptPad and cryptpad.fr (the flagship instance).&lt;/p&gt;
+&lt;p&gt;As we have &lt;a href=&quot;https://blog.cryptpad.org/2021/09/15/Relocating-our-blog/&quot;&gt;mentioned before&lt;/a&gt; we are currently working on a project website for CryptPad. This will be used to promote the project and to better communicate the distinction between CryptPad and &lt;a href=&quot;http://cryptpad.fr/&quot;&gt;cryptpad.fr&lt;/a&gt; (the flagship instance).&lt;/p&gt;
 &lt;p&gt;The new site will include a public instance list, new pricing for hosted instances, and pages tailored to various sectors such as NGOs, education, and enterprise.&lt;/p&gt;
 &lt;p&gt;We are planning to include testimonials on the site. If you use CryptPad and have a few minutes to share some words of support using &lt;a href=&quot;https://cryptpad.fr/form/#/2/form/view/1NDX7MEkhzNz1FCrcjCxmvjgIj24QjWNncZygR60Ch8/&quot;&gt;our new survey&lt;/a&gt;, that would be much appreciated.&lt;/p&gt;
 &lt;h2&gt;Recent and upcoming talks&lt;/h2&gt;
@@ -515,7 +587,7 @@ We do this with the following command:&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/open-in_preview.png&quot; alt=&quot;Preview of the new &amp;quot;Open in...&amp;quot; feature. Right clicking a compatible file in the drive shows this menu&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;CryptPad users will benefit too, with new functionality becoming available on the platform. Files in popular formats such as .docx, .xlsx, .pptx, .odt, .ods, and .odp are no longer being treated only as static files once they are uploaded to CryptPad. A new menu item called &amp;quot;Open in ...&amp;quot; makes them editable in the corresponding application. Which brings us to:&lt;/p&gt;
 &lt;h2&gt;Two new app releases&lt;/h2&gt;
-&lt;p&gt;We have long been planning to add OnlyOffice&#39;s Document and Presentation applications to CryptPad, completing the suite that  started with Spreadsheet in 2019. The improved inter-operability we built with INTEROFFICE makes this a good time to finally release these applications, to make the most our of the new imports and exports. As part of the &lt;a href=&quot;https://github.com/xwiki-labs/cryptpad/releases/4.12.0&quot;&gt;4.12 release&lt;/a&gt; we launched these new apps as &amp;quot;early access&amp;quot;, which means only subscribers on cryptpad.fr can create new documents and they are available on other instances if administrators opt-in. We &lt;a href=&quot;https://blog.cryptpad.org/2021/10/21/Announcing-new-apps/&quot;&gt;wrote about this in more detail in our last post&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;We have long been planning to add OnlyOffice&#39;s Document and Presentation applications to CryptPad, completing the suite that  started with Spreadsheet in 2019. The improved inter-operability we built with INTEROFFICE makes this a good time to finally release these applications, to make the most our of the new imports and exports. As part of the &lt;a href=&quot;https://github.com/xwiki-labs/cryptpad/releases/4.12.0&quot;&gt;4.12 release&lt;/a&gt; we launched these new apps as &amp;quot;early access&amp;quot;, which means only subscribers on &lt;a href=&quot;http://cryptpad.fr/&quot;&gt;cryptpad.fr&lt;/a&gt; can create new documents and they are available on other instances if administrators opt-in. We &lt;a href=&quot;https://blog.cryptpad.org/2021/10/21/Announcing-new-apps/&quot;&gt;wrote about this in more detail in our last post&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/OO-doc-preview.png&quot; alt=&quot;Preview of the new Document application.&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/OO-slide-preview.png&quot; alt=&quot;Preview of the new Presentation application.&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;This launch made us reconsider our current release schedule. We may revisit this in the near future and move towards a slower pace where each release would have bigger changes. This would potentially come with a more readable naming scheme as well, perhaps taking a leaf out of Canonical&#39;s playbook where Ubuntu releases are time-stamped rather than numbered. We will come back to this, likely in the new year, and write about any changes here.&lt;/p&gt;
@@ -545,11 +617,11 @@ We do this with the following command:&lt;/p&gt;
 &lt;p&gt;This work is combined with our ongoing efforts to improve import and export of documents funded by &lt;a href=&quot;https://dapsi.ngi.eu/&quot;&gt;NGI DAPSI&lt;/a&gt;. As a result CryptPad will be much more inter-operable with existing office suites and their file formats, for example with the ability to import and export &lt;em&gt;docx&lt;/em&gt;, &lt;em&gt;pptx&lt;/em&gt;, and &lt;em&gt;xslx&lt;/em&gt; files, as well as the open document formats &lt;em&gt;odt&lt;/em&gt;, &lt;em&gt;odp&lt;/em&gt;, and &lt;em&gt;ods&lt;/em&gt;. Additionally, documents in these formats that are uploaded to CryptPad will no longer be treated only as static files. A new &amp;quot;Open in&amp;quot; menu makes them editable in the corresponding CryptPad application.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/OO-doc-preview.png&quot; alt=&quot;Preview of the new Document application.&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/OO-slide-preview.png&quot; alt=&quot;Preview of the new Presentation application.&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;When we launched OnlyOffice spreadsheets &lt;a href=&quot;https://github.com/xwiki-labs/cryptpad/releases/2.16.0&quot;&gt;at the beginning of 2019&lt;/a&gt; we were inundated with support tickets as teething issues inevitably surfaced. As a team of three people handling both development and the administration of cryptpad.fr, support is a key part of our work but also the most time consuming. With two new OnlyOffice applications included in this launch we are very conscious of the risk that our effort to provide an accessible service interferes with our practical ability to improve its underlying technology. The solution we have settled on is to launch the new Document and Presentation applications as &lt;em&gt;early access&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;On cryptpad.fr this means that — at least for now — only people with a subscription will be able to create new documents and presentations in the new applications. They will see a warning that these applications are experimental and should not yet be trusted with important data. Anyone else will be able to open and/or edit these documents as normal when they are shared. Based on how this initial period goes, we&#39;ll decide how and when to relax these limitations.&lt;/p&gt;
+&lt;p&gt;When we launched OnlyOffice spreadsheets &lt;a href=&quot;https://github.com/xwiki-labs/cryptpad/releases/2.16.0&quot;&gt;at the beginning of 2019&lt;/a&gt; we were inundated with support tickets as teething issues inevitably surfaced. As a team of three people handling both development and the administration of &lt;a href=&quot;http://cryptpad.fr/&quot;&gt;cryptpad.fr&lt;/a&gt;, support is a key part of our work but also the most time consuming. With two new OnlyOffice applications included in this launch we are very conscious of the risk that our effort to provide an accessible service interferes with our practical ability to improve its underlying technology. The solution we have settled on is to launch the new Document and Presentation applications as &lt;em&gt;early access&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;On &lt;a href=&quot;http://cryptpad.fr/&quot;&gt;cryptpad.fr&lt;/a&gt; this means that — at least for now — only people with a subscription will be able to create new documents and presentations in the new applications. They will see a warning that these applications are experimental and should not yet be trusted with important data. Anyone else will be able to open and/or edit these documents as normal when they are shared. Based on how this initial period goes, we&#39;ll decide how and when to relax these limitations.&lt;/p&gt;
 &lt;p&gt;To be clear, CryptPad is free software and will remain as such. The code for these new integrations is freely available, and will be available to all other CryptPad instances if the administrators choose to enable early-access applications.&lt;/p&gt;
 &lt;p&gt;We think this gradual rollout will result in a smoother launch and ultimately in a better experience with CryptPad for everyone. We are not interested in putting paywalls around various parts of the platform but we do have to find ways to manage our workloads in order to continue developing it. Projects such as NGI DAPSI come with deadlines that have to be met in order for us to receive their funding.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Early access&lt;/em&gt; means that everything remains open-source, and eventually will be available to everyone. It rewards people who support the project with a first view of much anticipated applications. This is a new thing for us, but we believe this delay to access new applications is a relatively minor step. The bigger picture is that we are working towards the long-term success of CryptPad. This involves being fully funded by our users while they currently account for only 1/3 of our budget (subscriptions on cryptpad.fr and donations combined). EU research projects such as NGI DAPSI currently cover the remaining 2/3. We have more ideas to encourage people to support the project, and to involve them in the future of the platform. One of them is giving subscribers a vote on our roadmap to decide which new features get prioritized. We will come back to this in due course.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Early access&lt;/em&gt; means that everything remains open-source, and eventually will be available to everyone. It rewards people who support the project with a first view of much anticipated applications. This is a new thing for us, but we believe this delay to access new applications is a relatively minor step. The bigger picture is that we are working towards the long-term success of CryptPad. This involves being fully funded by our users while they currently account for only 1/3 of our budget (subscriptions on &lt;a href=&quot;http://cryptpad.fr/&quot;&gt;cryptpad.fr&lt;/a&gt; and donations combined). EU research projects such as NGI DAPSI currently cover the remaining 2/3. We have more ideas to encourage people to support the project, and to involve them in the future of the platform. One of them is giving subscribers a vote on our roadmap to decide which new features get prioritized. We will come back to this in due course.&lt;/p&gt;
 &lt;p&gt;Everyone benefits from sustainable open-source. Our recent work has advanced the state of the art in document conversion in the browser, rather than on the server where user data is exposed. This will be released independently of CryptPad so other projects can reuse it. If you are eager to see this in action, and to test the new Document and Presentation applications, please consider subscribing to a plan on &lt;a href=&quot;https://cryptpad.fr/&quot;&gt;cryptpad.fr&lt;/a&gt; to help make CryptPad sustainable for everyone.&lt;/p&gt;
 </content>
     <category term="interoperability" scheme="https://blog.cryptpad.org/tags/interoperability/"/>
@@ -585,8 +657,8 @@ We do this with the following command:&lt;/p&gt;
     <updated>2021-09-15T08:32:06Z</updated>
     <id>https://blog.cryptpad.org/2021/09/15/Relocating-our-blog/</id>
     <summary xml:lang="en" type="html">This is just a quick announcement to say that we&#39;ve moved our blog from blog.cryptpad.fr to blog.cryptpad.org.</summary>
-    <content xml:lang="en" type="html">&lt;p&gt;This is just a quick announcement to say that we&#39;ve moved our blog from &lt;strong&gt;blog.cryptpad.fr&lt;/strong&gt; to &lt;strong&gt;blog.cryptpad.org&lt;/strong&gt;. Visitors to the old URL will be automatically redirected to the new one. Anyone who has subscribed to its RSS feed will continue to get updates for the new address.&lt;/p&gt;
-&lt;p&gt;This blog is the first of a few services that we plan to host under the &lt;em&gt;CryptPad.org&lt;/em&gt; domain. Our goal is to provide some better separation between &lt;em&gt;CryptPad&lt;/em&gt; (the open-source project) and &lt;em&gt;CryptPad.fr&lt;/em&gt; (the public instance that we host). In the near future we plan to introduce a project website featuring general information, an overview of our roadmap and finances, and a directory of public instances.&lt;/p&gt;
+    <content xml:lang="en" type="html">&lt;p&gt;This is just a quick announcement to say that we&#39;ve moved our blog from &lt;strong&gt;&lt;a href=&quot;http://blog.cryptpad.fr/&quot;&gt;blog.cryptpad.fr&lt;/a&gt;&lt;/strong&gt; to &lt;strong&gt;&lt;a href=&quot;http://blog.cryptpad.org/&quot;&gt;blog.cryptpad.org&lt;/a&gt;&lt;/strong&gt;. Visitors to the old URL will be automatically redirected to the new one. Anyone who has subscribed to its RSS feed will continue to get updates for the new address.&lt;/p&gt;
+&lt;p&gt;This blog is the first of a few services that we plan to host under the &lt;em&gt;&lt;a href=&quot;http://cryptpad.org/&quot;&gt;CryptPad.org&lt;/a&gt;&lt;/em&gt; domain. Our goal is to provide some better separation between &lt;em&gt;CryptPad&lt;/em&gt; (the open-source project) and &lt;em&gt;&lt;a href=&quot;http://cryptpad.fr/&quot;&gt;CryptPad.fr&lt;/a&gt;&lt;/em&gt; (the public instance that we host). In the near future we plan to introduce a project website featuring general information, an overview of our roadmap and finances, and a directory of public instances.&lt;/p&gt;
 </content>
     <category term="infrastructure" scheme="https://blog.cryptpad.org/tags/infrastructure/"/>
     <category term="open-source" scheme="https://blog.cryptpad.org/tags/open-source/"/>
@@ -626,13 +698,13 @@ We do this with the following command:&lt;/p&gt;
 &lt;p&gt;During both release cycles, since the launch of Forms last month, we have been conducting a lot of research. First about the use of the Forms application itself, and now also to inform work on INTEROFFICE.&lt;/p&gt;
 &lt;h2&gt;Forms survey and interviews&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/forms-usage-pie-chart.png&quot; alt=&quot;The majority of more than 300 participants in our survey indicated that they use forms in a professional or research context&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;The first thing we did after launching the new Forms application was to use it to survey people on cryptpad.fr. We asked them about their use of online forms and recruited some volunteers for one-to-one interviews. These are still ongoing. Once they are complete and analyzed, we will use all of the findings to inform the next round of developments on Forms.&lt;/p&gt;
+&lt;p&gt;The first thing we did after launching the new Forms application was to use it to survey people on &lt;a href=&quot;http://cryptpad.fr/&quot;&gt;cryptpad.fr&lt;/a&gt;. We asked them about their use of online forms and recruited some volunteers for one-to-one interviews. These are still ongoing. Once they are complete and analyzed, we will use all of the findings to inform the next round of developments on Forms.&lt;/p&gt;
 &lt;p&gt;In the meantime, &lt;a href=&quot;https://github.com/xwiki-labs/cryptpad/releases/tag/4.9.0&quot;&gt;4.9.0&lt;/a&gt; included some minor improvements (e.g. randomizing ordered-list questions) and bug fixes based on early feedback. Unfortunately one of the bugs affected our own &lt;a href=&quot;https://cryptpad.fr/form/#/2/form/view/kdhTrcywvS+ToQ3r4DI75sbfz+uyUPlHRWJhyWF7pVI/&quot;&gt;survey about file import/export&lt;/a&gt; (see next section). We found that setting an expiration date far enough into the future (above 23 days) caused the Submit button to disappear. So if you filled it out and weren&#39;t able to submit, know that this is now fixed!&lt;/p&gt;
 &lt;h2&gt;INTEROFFICE survey&lt;/h2&gt;
 &lt;p&gt;We have started work on INTEROFFICE, our project about improving conversion between document formats in CryptPad (and in the browser in general). We already have some knowledge of requested conversions from a couple years worth of support tickets and feature requests. However after seeing the relatively high number of responses to the Forms survey (300+), we decided to conduct one for file import/export to get even more insight into what people use and request.&lt;/p&gt;
 &lt;p&gt;The &lt;a href=&quot;https://cryptpad.fr/form/#/2/form/view/kdhTrcywvS+ToQ3r4DI75sbfz+uyUPlHRWJhyWF7pVI/&quot;&gt;File import/export survey&lt;/a&gt; will be open until the 8th of September. Please fill it out if you haven&#39;t already, and now you can actually submit!&lt;/p&gt;
 &lt;h2&gt;Other news&lt;/h2&gt;
-&lt;p&gt;The work on INTEROFFICE also includes a series of business mentoring sessions as part of the DAPSI project. This month we started putting some of the advice received into practice by preparing a new project website that we hope to launch this fall. This will include a list of public instances to share the load of free users with cryptpad.fr. The project site will be separate from the flagship instance and it will offer a range of services to host your own instance, from one day installation help to fully managed service.&lt;/p&gt;
+&lt;p&gt;The work on INTEROFFICE also includes a series of business mentoring sessions as part of the DAPSI project. This month we started putting some of the advice received into practice by preparing a new project website that we hope to launch this fall. This will include a list of public instances to share the load of free users with &lt;a href=&quot;http://cryptpad.fr/&quot;&gt;cryptpad.fr&lt;/a&gt;. The project site will be separate from the flagship instance and it will offer a range of services to host your own instance, from one day installation help to fully managed service.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/cryptpad-in-japanese.png&quot; alt=&quot;CryptPad&#39;s home page in Japanese&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;🇯🇵 CryptPad is now fully translated to Japanese. Big thanks to &lt;a href=&quot;https://mstdn.progressiv.dev/@suguru&quot;&gt;@suguru@mstdn.progressiv.dev&lt;/a&gt; for all the work!&lt;/p&gt;
 &lt;p&gt;This wraps up our news for the month. The coming cycle will be on the quiet side as the team takes turns taking much needed breaks.&lt;/p&gt;
@@ -683,7 +755,7 @@ We do this with the following command:&lt;/p&gt;
     <id>https://blog.cryptpad.org/2021/05/26/status-may-2021/</id>
     <summary xml:lang="en" type="html">This month we released CryptPad 4.5.0, featuring the public debut of the Calendar application that was in beta since 4.4.0.</summary>
     <content xml:lang="en" type="html">&lt;p&gt;This month we released CryptPad &lt;a href=&quot;https://github.com/xwiki-labs/cryptpad/releases/4.5.0&quot;&gt;4.5.0&lt;/a&gt;, featuring the public debut of the Calendar application that was &lt;a href=&quot;https://blog.cryptpad.fr/2021/04/26/status-april-2021/&quot;&gt;in beta since 4.4.0&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;We reached a couple of milestones this month with over 100K registered users on cryptpad.fr, the end of the Communities project, and the start of Interoffice (DAPSI).&lt;/p&gt;
+&lt;p&gt;We reached a couple of milestones this month with over 100K registered users on &lt;a href=&quot;http://cryptpad.fr/&quot;&gt;cryptpad.fr&lt;/a&gt;, the end of the Communities project, and the start of Interoffice (DAPSI).&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/calendar-dark.png&quot; alt=&quot;The calendar application shown in dark mode, now ready for public use!&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;Wrapping up the Communities project&lt;/h2&gt;
 &lt;p&gt;Besides Calendars, CryptPad 4.5.0 also introduced &lt;em&gt;restricted registrations&lt;/em&gt; for administrators who want to limit access to their instance.&lt;/p&gt;
@@ -775,7 +847,7 @@ We do this with the following command:&lt;/p&gt;
 &lt;h2&gt;Public Roadmap&lt;/h2&gt;
 &lt;p&gt;We have been working to make more use of CryptPad itself to communicate about the project. The first major step in this direction is the introduction of our &lt;a href=&quot;https://cryptpad.fr/kanban/#/2/kanban/view/PLM0C3tFWvYhd+EPzXrbT+NxB76Z5DtZhAA5W5hG9wo/&quot;&gt;Public Roadmap Kanban&lt;/a&gt; where we detail all of the research projects we are currently working on. We summarise each project, funding amount, and associated features. Using the tags feature to filter one project gives an overview of its completion status. We find this very useful and hope you will find it informative.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://cryptpad.fr/kanban/#/2/kanban/view/PLM0C3tFWvYhd+EPzXrbT+NxB76Z5DtZhAA5W5hG9wo/&quot;&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/roadmap-kanban.png&quot; alt=&quot;The Public Roadmap Kanban&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;The next steps planned in this direction include a review of the onboarding document (the first document that is placed in new user&#39;s CryptDrives), as well as a rewrite of the Privacy Policy for cryptpad.fr. This last one is nearly complete and will be published as a rich text document.&lt;/p&gt;
+&lt;p&gt;The next steps planned in this direction include a review of the onboarding document (the first document that is placed in new user&#39;s CryptDrives), as well as a rewrite of the Privacy Policy for &lt;a href=&quot;http://cryptpad.fr/&quot;&gt;cryptpad.fr&lt;/a&gt;. This last one is nearly complete and will be published as a rich text document.&lt;/p&gt;
 &lt;h2&gt;Cleaned up translations&lt;/h2&gt;
 &lt;p&gt;We have started an effort to reduce the amount of work needed to translate CryptPad. As the development team we maintain English and French, and an active German speaking community maintains the German translation in near real-time for which we are very grateful. We want to encourage people to translate CryptPad in other languages, and to complete the many languages where the translation has been started but not completed.&lt;/p&gt;
 &lt;p&gt;Past efforts towards this have included moving the Frequently Asked Questions out of the platform to &lt;a href=&quot;https://docs.cryptpad.fr/en/FAQ.html&quot;&gt;a dedicated page in the documentation&lt;/a&gt;. This month we have taken further steps with automated scripts to detect un-used translations. These were left over from previous versions of CryptPad and were sometimes hard to detect in the code. There is now less work for translators, and better assurance that no time will be wasted translating text that isn&#39;t actually used in the product.&lt;/p&gt;
@@ -804,7 +876,7 @@ We do this with the following command:&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/dark-shame.png&quot; alt=&quot;Web accessibility guide shown with black text on a dark background&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;The web content accessibility guide that prompted us to revert our decision on the dark theme rich text editor. &lt;a href=&quot;https://cryptpad.fr/pad/#/2/pad/view/nOPkDL0nzbEi1DXnpEED0nqORBPF6pqS3SOUrKBqV9o/embed/&quot;&gt;The guide&lt;/a&gt; is by AccessiBloc.&lt;/em&gt;&lt;/p&gt;
 &lt;h2&gt;Organization plans&lt;/h2&gt;
-&lt;p&gt;On cryptpad.fr, another long-awaited feature were the &lt;strong&gt;Organization plans&lt;/strong&gt;. We have been communicating this pricing on request for the last few months but the plans are now &lt;a href=&quot;https://cryptpad.fr/accounts/#org&quot;&gt;live in the cryptpad.fr interface&lt;/a&gt;. These bigger plans have the additional option to download a personalised signed Data Processing Agreement (DPA) for organsations that need to demonstrate they operate according to the GDPR.&lt;/p&gt;
+&lt;p&gt;On &lt;a href=&quot;http://cryptpad.fr/&quot;&gt;cryptpad.fr&lt;/a&gt;, another long-awaited feature were the &lt;strong&gt;Organization plans&lt;/strong&gt;. We have been communicating this pricing on request for the last few months but the plans are now &lt;a href=&quot;https://cryptpad.fr/accounts/#org&quot;&gt;live in the cryptpad.fr interface&lt;/a&gt;. These bigger plans have the additional option to download a personalised signed Data Processing Agreement (DPA) for organsations that need to demonstrate they operate according to the GDPR.&lt;/p&gt;
 &lt;p&gt;These plans come with 1 business day support and increased storage shared between a number of user accounts, priced as follows:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;25 Users&lt;/strong&gt; with 100GB of storage for 500€ a year (ex. VAT)&lt;/li&gt;
@@ -814,7 +886,7 @@ We do this with the following command:&lt;/p&gt;
 &lt;p&gt;We were happy to welcome the first couple of subscribers on these plans and hope that they will contribute to making CryptPad financially sustainable in the longer term.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/dark-accounts.png&quot; alt=&quot;The new organization plans on cryptpad.fr in dark mode.&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;A popular toolkit&lt;/h2&gt;
-&lt;p&gt;We had an unexpected spike in traffic early in the month after the following tweet linked to a toolkit made on cryptpad.fr.&lt;/p&gt;
+&lt;p&gt;We had an unexpected spike in traffic early in the month after the following tweet linked to a toolkit made on &lt;a href=&quot;http://cryptpad.fr/&quot;&gt;cryptpad.fr&lt;/a&gt;.&lt;/p&gt;
 &lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Here’s an updated toolkit by people on the ground in India if you want to help. (They removed their previous document as it was outdated.)&lt;a href=&quot;https://twitter.com/hashtag/StandWithFarmers&quot;&gt;#StandWithFarmers&lt;/a&gt; &lt;a href=&quot;https://twitter.com/hashtag/FarmersProtest&quot;&gt;#FarmersProtest&lt;/a&gt; &lt;a href=&quot;https://cryptpad.fr/pad/#/2/pad/view/ehTz+drfKPwi4fP5dn0mivwVCKhwNe7OD1YHDiBUj0Y/&quot;&gt;https://cryptpad.fr/pad/#/2/pad/vi...&lt;/a&gt;&lt;/p&gt;&amp;mdash; Greta Thunberg (@GretaThunberg) &lt;a href=&quot;https://twitter.com/GretaThunberg/status/1357054451769606147&quot;&gt;February 3, 2021&lt;/a&gt;&lt;/blockquote&gt;
 &lt;p&gt;This brought a lot of traffic to the service, as illustrated by the spike below. While this was a surprise, our infrastructure was prepared for it and held up very well.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/greta-stonks.png&quot; alt=&quot;graph showing a big spike in visits to CryptPad.fr&quot; /&gt;&lt;/p&gt;
@@ -836,9 +908,9 @@ We do this with the following command:&lt;/p&gt;
   </entry>
   <entry>
     <title>CryptPad at FOSDEM 2021</title>
-    <link href="https://blog.cryptpad.org/2021/02/04/CryptPad-at-FOSDEM-2021/"/>
+    <link href="https://blog.cryptpad.org/2021/02/03/CryptPad-at-FOSDEM-2021/"/>
     <updated>2021-02-03T18:56:52Z</updated>
-    <id>https://blog.cryptpad.org/2021/02/04/CryptPad-at-FOSDEM-2021/</id>
+    <id>https://blog.cryptpad.org/2021/02/03/CryptPad-at-FOSDEM-2021/</id>
     <summary xml:lang="en" type="html">The CryptPad team is taking part in the 2021 online edition of FOSDEM. We will use this opportunity to reflect on the past year from a couple of different perspectives.</summary>
     <content xml:lang="en" type="html">&lt;p&gt;(this post was edited on 24th Feb. 2021 to include links to videos and corrections)&lt;/p&gt;
 &lt;p&gt;The CryptPad team is taking part in the 2021 online edition of &lt;a href=&quot;https://fosdem.org/2021/&quot;&gt;FOSDEM&lt;/a&gt;. We will use this opportunity to reflect on the past year from a couple of different perspectives.&lt;/p&gt;
@@ -869,9 +941,9 @@ We do this with the following command:&lt;/p&gt;
   </entry>
   <entry>
     <title>No plan survives first contact with the enemy</title>
-    <link href="https://blog.cryptpad.org/2021/01/01/No-plan-survives-first-contact-with-the-enemy/"/>
+    <link href="https://blog.cryptpad.org/2020/12/31/No-plan-survives-first-contact-with-the-enemy/"/>
     <updated>2020-12-31T22:27:34Z</updated>
-    <id>https://blog.cryptpad.org/2021/01/01/No-plan-survives-first-contact-with-the-enemy/</id>
+    <id>https://blog.cryptpad.org/2020/12/31/No-plan-survives-first-contact-with-the-enemy/</id>
     <summary xml:lang="en" type="html">In 2019 we finished a four-year research project that had covered the majority of CryptPad&#39;s development costs. We had some worries about how we would continue to fund our team, but we were fortunate enough to meet and form a good relationship with members of Europe&#39;s Next Generation Internet Initiative.</summary>
     <content xml:lang="en" type="html">&lt;p&gt;In 2019 we finished a four-year research project that had covered the majority of CryptPad&#39;s development costs.
 We had some worries about how we would continue to fund our team, but we were fortunate enough to meet and form a good relationship with members of Europe&#39;s &lt;a href=&quot;https://www.ngi.eu/&quot;&gt;Next Generation Internet Initiative&lt;/a&gt;.&lt;/p&gt;
@@ -982,13 +1054,13 @@ Instead, I&#39;ll leave you with a bit of a teaser for our upcoming 4.0.0 releas
     <updated>2020-12-16T15:30:00Z</updated>
     <id>https://blog.cryptpad.org/2020/12/16/The-outage-of-December-8th-2020-a-postmortem/</id>
     <summary xml:lang="en" type="html">On December 8th, 2020 a malfunction in the water-cooling system at a data-center in Roubaix, France caused an unrecoverable error in the physical machine which hosts CryptPad.fr.</summary>
-    <content xml:lang="en" type="html">&lt;p&gt;On December 8th, 2020 a malfunction in the water-cooling system at a data-center in Roubaix, France caused an unrecoverable error in the physical machine which hosts CryptPad.fr. The service was unavailable for approximately 27 hours while we diagnosed a corrupted OS, provisioned a new server, and migrated user data to the new system.&lt;/p&gt;
+    <content xml:lang="en" type="html">&lt;p&gt;On December 8th, 2020 a malfunction in the water-cooling system at a data-center in Roubaix, France caused an unrecoverable error in the physical machine which hosts &lt;a href=&quot;http://cryptpad.fr/&quot;&gt;CryptPad.fr&lt;/a&gt;. The service was unavailable for approximately 27 hours while we diagnosed a corrupted OS, provisioned a new server, and migrated user data to the new system.&lt;/p&gt;
 &lt;h2&gt;What happened&lt;/h2&gt;
 &lt;p&gt;Our team works remotely across three different timezones, so for the sake of simplicity I&#39;ll summarize the timeline of the service outage in Central European Time (CET) using a 24-hour clock.&lt;/p&gt;
 &lt;h3&gt;December 8, 05:30 - Server update deployed&lt;/h3&gt;
 &lt;p&gt;I occasionally start my working days very early in the morning when we have as few users connected as possible. On the days where a server restart is necessary, I do it at this time to minimize the number of active users that might be inconvenienced by the momentary service interruption.&lt;/p&gt;
 &lt;p&gt;During the process of deploying a minor patch to optimize how the service loads and evicts document metadata I noticed that our monthly full-disk backup was running. We run a less intensive incremental backup on a daily basis, but having a regular full-disk backup ensures that restoration does not become increasingly difficult over time.&lt;/p&gt;
-&lt;p&gt;We&#39;ve been breaking our records for the highest ever number of concurrent users on CryptPad.fr on a regular basis, so I tend to pay close attention to how our server is performing and how small changes in our code affect its performance.&lt;/p&gt;
+&lt;p&gt;We&#39;ve been breaking our records for the highest ever number of concurrent users on &lt;a href=&quot;http://cryptpad.fr/&quot;&gt;CryptPad.fr&lt;/a&gt; on a regular basis, so I tend to pay close attention to how our server is performing and how small changes in our code affect its performance.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/3000-connections.png&quot; alt=&quot;A record number of concurrently connected clients, as reported by our admin panel&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;My colleagues hadn&#39;t started their shifts yet, but I left a message informing them that the server would probably be under more load than usual. We were considering also deploying an update to our client code, but we usually avoid doing so on backup days to help ensure that things go smoothly.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/poor-server-performance.png&quot; alt=&quot;Me jinxing our server for the day&quot; /&gt;&lt;/p&gt;
@@ -1148,12 +1220,12 @@ The good news is that these files were archived, not deleted, and that everythin
 Users of other instances have nothing to worry about unless their administrator did the exact same thing as I did, which is unlikely.&lt;/p&gt;
 &lt;p&gt;Secondly, the issue is limited to shared folders and non-owned files contained within them.
 If you don&#39;t use shared folders you won&#39;t be affected.&lt;/p&gt;
-&lt;p&gt;Thirdly, as far as we can tell you need to have visited CryptPad.fr between May 28th and June 13th in order to have run some incorrect code.&lt;/p&gt;
+&lt;p&gt;Thirdly, as far as we can tell you need to have visited &lt;a href=&quot;http://cryptpad.fr/&quot;&gt;CryptPad.fr&lt;/a&gt; between May 28th and June 13th in order to have run some incorrect code.&lt;/p&gt;
 &lt;p&gt;Finally, nothing was archived unless it had not been active within the preceding 90 days.
 In the case of shared folders, this would mean any change to the content or structure of the shared folder, such as adding or removing a document or renaming or moving any of its contents.
 In the case of pads, if a user with the rights to edit the document loaded it without making any changes, that would classify it as active.&lt;/p&gt;
 &lt;p&gt;To summarise:&lt;/p&gt;
-&lt;p&gt;Some of your data could have been archived if you visited https://CryptPad.fr between May 28th and June 13th (2019) and have one or more shared folders in your CryptDrive which have not been modified within the last 90 days.&lt;/p&gt;
+&lt;p&gt;Some of your data could have been archived if you visited &lt;a href=&quot;https://cryptpad.fr/&quot;&gt;https://CryptPad.fr&lt;/a&gt; between May 28th and June 13th (2019) and have one or more shared folders in your CryptDrive which have not been modified within the last 90 days.&lt;/p&gt;
 &lt;h2&gt;Checking if you were affected&lt;/h2&gt;
 &lt;p&gt;It should be fairly easy to tell if your account was affected by opening your CryptDrive.
 Affected shared folders will be visible in the tree on the left of your drive because they&#39;ll have lost their titles, as highlighted in red below:&lt;/p&gt;
@@ -1162,12 +1234,12 @@ Affected shared folders will be visible in the tree on the left of your drive be
 &lt;p&gt;As I said, none of the data was deleted, just archived.
 It&#39;s still on the same server that hosts the rest of our database, it&#39;s just been moved to a different location to make it inaccessible.&lt;/p&gt;
 &lt;p&gt;I&#39;ve already restored all of those files which were archived except for 237 cases.
-Affected Users that visited CryptPad.fr between the removal and restoration of the data would have automatically created a new folder in the same location as the old one, and that complicates things for us.
+Affected Users that visited &lt;a href=&quot;http://cryptpad.fr/&quot;&gt;CryptPad.fr&lt;/a&gt; between the removal and restoration of the data would have automatically created a new folder in the same location as the old one, and that complicates things for us.
 Since we don&#39;t know whether they might have decided to put new documents in that folder in the meantime, it&#39;s dangerous for us to overwrite the new data with the old.&lt;/p&gt;
 &lt;p&gt;It&#39;s going to take us a few days to figure out if we can use some fancier methodology to identify what data we can safely reinstate.
 In the meantime, we&#39;ve already fixed the underlying issues that caused this data to be miscategorized, and developed some new tooling for safely diagnosing and restoring archived data.&lt;/p&gt;
 &lt;p&gt;Since we know that those affected by this error visited since our last release day and that they had content older than 90 days, we assume they&#39;re going to come back to the platform.
-If you do come back and see something resembling the image above, please do let us know by emailing us at contact@cryptpad.fr.
+If you do come back and see something resembling the image above, please do let us know by emailing us at &lt;a href=&quot;mailto:contact@cryptpad.fr&quot;&gt;contact@cryptpad.fr&lt;/a&gt;.
 We can manually restore any files that haven&#39;t already been restored.&lt;/p&gt;
 &lt;p&gt;I&#39;m very sorry for any inconvenience this might have caused and I&#39;m grateful that the damage wasn&#39;t worse.
 I&#39;ll take this as an opportunity to prove my commitment to protecting user data, whether it be from surveillance or from my own mistakes.&lt;/p&gt;
@@ -1380,7 +1452,7 @@ Don&#39;t let that stop you from contacting us, though!&lt;/p&gt;
 We&#39;re willing to make exceptions for promising candidates, but we&#39;d like to know that you care about the topic.
 There are probably better options available if you just want &lt;em&gt;a job&lt;/em&gt;.&lt;/p&gt;
 &lt;h2&gt;If you are interested...&lt;/h2&gt;
-&lt;p&gt;Contact us at jobs@cryptpad.fr with a recent CV and a brief introduction explaining what you&#39;d bring to the team.&lt;/p&gt;
+&lt;p&gt;Contact us at &lt;a href=&quot;mailto:jobs@cryptpad.fr&quot;&gt;jobs@cryptpad.fr&lt;/a&gt; with a recent CV and a brief introduction explaining what you&#39;d bring to the team.&lt;/p&gt;
 </content>
     <category term="funding" scheme="https://blog.cryptpad.org/tags/funding/"/>
     <category term="open-source" scheme="https://blog.cryptpad.org/tags/open-source/"/>
@@ -1390,9 +1462,9 @@ There are probably better options available if you just want &lt;em&gt;a job&lt;
   </entry>
   <entry>
     <title>CryptPad funding status March 2019 - Thanks to our 100 backers!</title>
-    <link href="https://blog.cryptpad.org/2019/03/12/CryptPad-funding-status-March-2019/"/>
+    <link href="https://blog.cryptpad.org/2019/03/11/CryptPad-funding-status-March-2019/"/>
     <updated>2019-03-11T20:00:00Z</updated>
-    <id>https://blog.cryptpad.org/2019/03/12/CryptPad-funding-status-March-2019/</id>
+    <id>https://blog.cryptpad.org/2019/03/11/CryptPad-funding-status-March-2019/</id>
     <summary xml:lang="en" type="html">The beginning of the year has been busy. We traveled to Barcelona to officially receive our NGI Award. Spreadsheet functionality was officially released in CryptPad and our funding has been progressing since our last status in November.</summary>
     <content xml:lang="en" type="html">&lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/cryptpad-funding-blog-cover-generic.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;The beginning of the year has been busy.
@@ -1417,12 +1489,12 @@ It&#39;s also available on the &lt;a href=&quot;https://opencollective.com/crypt
 Check it out and see our ambitious objectives for this project.
 We are already making progress on this roadmap.&lt;/p&gt;
 &lt;p&gt;To finish, I&#39;d like to give progress on CryptPad&#39;s usage.
-We are now reaching close to 250 instances of CryptPad running around the world, and the official cryptpad.fr instance is growing regularly.
+We are now reaching close to 250 instances of CryptPad running around the world, and the official &lt;a href=&quot;http://cryptpad.fr/&quot;&gt;cryptpad.fr&lt;/a&gt; instance is growing regularly.
 The growth of CryptPad noticed in November has not stopped and now we have more than 1500 weekly drive users (from 1000 in November), more than 7000 weekly pad users (from 6000 in November).&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/cryptpad-201902-driveuniqueweek.png&quot; alt=&quot;cryptpad drive stats&quot; /&gt;
 &lt;img src=&quot;https://blog.cryptpad.org/images/cryptpad-201902-padsuniqueweek.png&quot; alt=&quot;cryptpad pad stats&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;A special note to our German users where CryptPad is growing quickly.
-We have noticed on Twitter that teachers promoting are CryptPad in their community and there are now more users from Germany than from the US, making it the top country representing 25% of the CryptPad.fr users and also of the CryptPad hosted instances.&lt;/p&gt;
+We have noticed on Twitter that teachers promoting are CryptPad in their community and there are now more users from Germany than from the US, making it the top country representing 25% of the &lt;a href=&quot;http://cryptpad.fr/&quot;&gt;CryptPad.fr&lt;/a&gt; users and also of the CryptPad hosted instances.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/cryptpad-201902-countries.png&quot; alt=&quot;cryptpad countries&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://cryptpad.fr/&quot;&gt;Try CryptPad&lt;/a&gt;, love it, &lt;a href=&quot;https://opencollective.com/cryptpad/&quot;&gt;take care of it&lt;/a&gt;, and even better &lt;a href=&quot;https://github.com/xwiki-labs/cryptpad&quot;&gt;come help&lt;/a&gt;!&lt;/p&gt;
 &lt;p&gt;Ludovic Dubost &amp;amp; the CryptPad Team&lt;/p&gt;
@@ -1480,9 +1552,9 @@ Come say hi, tell me what you&#39;d like to see, and you might see it land in an
   </entry>
   <entry>
     <title>CryptPad funding status November 2018</title>
-    <link href="https://blog.cryptpad.org/2018/12/10/CryptPad-funding-status-November-2018/"/>
+    <link href="https://blog.cryptpad.org/2018/12/09/CryptPad-funding-status-November-2018/"/>
     <updated>2018-12-09T20:00:00Z</updated>
-    <id>https://blog.cryptpad.org/2018/12/10/CryptPad-funding-status-November-2018/</id>
+    <id>https://blog.cryptpad.org/2018/12/09/CryptPad-funding-status-November-2018/</id>
     <summary xml:lang="en" type="html">I&#39;ve now let a few months pass since the last August status. I&#39;m sorry about that as I have been very busy with XWiki SAS activities as well as conferences including CryptPad talks.</summary>
     <content xml:lang="en" type="html">&lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/cryptpad-funding-blog-cover-generic.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;I&#39;ve now let a few months pass since the last August status. I&#39;m sorry about that as I have been very busy with XWiki SAS activities as well as conferences including CryptPad talks.&lt;/p&gt;
@@ -1504,7 +1576,7 @@ Come say hi, tell me what you&#39;d like to see, and you might see it land in an
 &lt;p&gt;Now we need more help ! First we need to be able to sustain our team, but also we need to be able to expand, especially if we want to have Open Source software in the Zero-Knowledge space. Proprietary closed source software providing some form of Zero-Knowledge will probably start growing with extensive funding. If we want independent free-software alternatives for this type of software, then we need to group our effort and fund open source solutions like CryptPad. We have ambitious objectives for CryptPad and we cannot achieve these with only two developers.&lt;/p&gt;
 &lt;p&gt;Since the launch of the campaign we have also published a &lt;a href=&quot;https://blog.cryptpad.org/tags/roadmap/&quot;&gt;roadmap for CryptPad&lt;/a&gt; of what we would like to achieve with the funding. It&#39;s also available on the &lt;a href=&quot;https://opencollective.com/cryptpad/#about&quot;&gt;OpenCollective web site&lt;/a&gt;. Come check it out and see our ambitious objectives for this project. We are already making progress on this roadmap.&lt;/p&gt;
 &lt;p&gt;Aaron and Yann, our CryptPad developers, have released the shared folders feature, one of the most demanded feature. We have also worked on improving the reliability of the synchronization engine (chainpad).&lt;/p&gt;
-&lt;p&gt;To finish, I&#39;d like to give progress on CryptPad&#39;s usage. We are now reaching close to 200 instances of CryptPad running around the world, and the official cryptpad.fr instance is growing regularly. We have seen a surge in the last weeks, maybe related to the conferences, and we have now more than 1000 drive users, and 6000 pad visitors per week. The activity has almost doubled in 4 month.&lt;/p&gt;
+&lt;p&gt;To finish, I&#39;d like to give progress on CryptPad&#39;s usage. We are now reaching close to 200 instances of CryptPad running around the world, and the official &lt;a href=&quot;http://cryptpad.fr/&quot;&gt;cryptpad.fr&lt;/a&gt; instance is growing regularly. We have seen a surge in the last weeks, maybe related to the conferences, and we have now more than 1000 drive users, and 6000 pad visitors per week. The activity has almost doubled in 4 month.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/cryptpad-201811-stats-drive.png&quot; alt=&quot;cryptpad drive stats&quot; /&gt;
 &lt;img src=&quot;https://blog.cryptpad.org/images/cryptpad-201811-stats-pads.png&quot; alt=&quot;cryptpad pad stats&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://cryptpad.fr/&quot;&gt;Try CryptPad&lt;/a&gt;, love it, &lt;a href=&quot;https://opencollective.com/cryptpad/&quot;&gt;take care of it&lt;/a&gt;, and even better &lt;a href=&quot;https://github.com/xwiki-labs/cryptpad&quot;&gt;come help&lt;/a&gt; !&lt;/p&gt;
@@ -1528,7 +1600,7 @@ Come say hi, tell me what you&#39;d like to see, and you might see it land in an
 &lt;blockquote&gt;
 &lt;p&gt;&lt;em&gt;Our promise is that our software &lt;strong&gt;cannot&lt;/strong&gt; spy on its users, and that your data is safe.&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;We are also very happy that our users and supporters are recognized. Since we launched our online service CryptPad.fr as part of the OpenPaaS-NG research project, funded by BPI France, CryptPad&#39;s usage and support has continously grown. With more than 10000 users weekly and also the support from paying users and donations through our Open Collective, we are all participating in helping restore our privacy.&lt;/p&gt;
+&lt;p&gt;We are also very happy that our users and supporters are recognized. Since we launched our online service &lt;a href=&quot;http://cryptpad.fr/&quot;&gt;CryptPad.fr&lt;/a&gt; as part of the OpenPaaS-NG research project, funded by BPI France, CryptPad&#39;s usage and support has continously grown. With more than 10000 users weekly and also the support from paying users and donations through our Open Collective, we are all participating in helping restore our privacy.&lt;/p&gt;
 &lt;p&gt;It is difficult for all of us to give up powerful Internet services and software which bring us great value, but at the same time we do not like to see how our data is being used for advertisement, political means or malicious hacking. Today this NGI Award is showing that it is possible to take back our privacy, while getting powerful and easy to use services. We built CryptPad to show how far a team can go to empower users and increase their expectation of privacy from online services. While it was previously accepted that collaborative editing meant sacrificing confidentiality, we’ve not only proven that private editing is possible, but we’ve made our entire platform open source to ensure that this technology remains available.&lt;/p&gt;
 &lt;h3&gt;Want to be a part of it?&lt;/h3&gt;
 &lt;ul&gt;
@@ -1538,7 +1610,7 @@ Come say hi, tell me what you&#39;d like to see, and you might see it land in an
 &lt;/ul&gt;
 &lt;h3&gt;Show your support&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Buy an upgraded account from Cryptpad.fr, run by the CryptPad development team, or contribute to our &lt;a href=&quot;https://opencollective.com/cryptpad&quot;&gt;Open Collective&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Buy an upgraded account from &lt;a href=&quot;http://cryptpad.fr/&quot;&gt;Cryptpad.fr&lt;/a&gt;, run by the CryptPad development team, or contribute to our &lt;a href=&quot;https://opencollective.com/cryptpad&quot;&gt;Open Collective&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;If you install the Open Source code of CryptPad on your own servers, consider buying a support contract.&lt;/li&gt;
 &lt;li&gt;If you’re a web developer, think about Zero Knowledge for your next web app.&lt;/li&gt;
 &lt;/ul&gt;
@@ -1781,7 +1853,7 @@ It offers a variety of editors and other multi-user applications: rich text, cod
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Going through it step-by-step, the &lt;code&gt;.help_vars()&lt;/code&gt; mixin takes parameters but it defines default values, then it creates some Less variables which are accessed after it is used. &lt;code&gt;.help_main()&lt;/code&gt; calls &lt;code&gt;.help_vars()&lt;/code&gt; and passes it arguments, then takes it&#39;s results and assigns them to CSS variables. Then the main block of the Less file also calls &lt;code&gt;.help_vars()&lt;/code&gt; but without any arguments, so the defaults are used. Then in the main block, each usage of a CSS variable also has the usage of the less variable. The less variable provides the default value, the one which IE will see, and then the CSS variable provides the specified value, the one which will be different per CryptPad application.&lt;/p&gt;
 &lt;h2&gt;There you have it&lt;/h2&gt;
-&lt;p&gt;Every Less file now gets loaded twice, first it is loaded by the &lt;code&gt;@include (reference)&lt;/code&gt; call, where it is parsed in order to expose the &lt;code&gt;.&amp;lt;filename&amp;gt;_main()&lt;/code&gt; mixin, then it is loaded a second time as an independent file. Importantly, however, once it is compiled it is stored into localStorage and the toolbar CSS which is compiled when you go to the Rich Text app is the exact same CSS which will be used when you go to the Code/Markdown app. This feature is available in the &lt;code&gt;staging&lt;/code&gt; branch of the CryptPad project and will be on CryptPad.fr in the next release.&lt;/p&gt;
+&lt;p&gt;Every Less file now gets loaded twice, first it is loaded by the &lt;code&gt;@include (reference)&lt;/code&gt; call, where it is parsed in order to expose the &lt;code&gt;.&amp;lt;filename&amp;gt;_main()&lt;/code&gt; mixin, then it is loaded a second time as an independent file. Importantly, however, once it is compiled it is stored into localStorage and the toolbar CSS which is compiled when you go to the Rich Text app is the exact same CSS which will be used when you go to the Code/Markdown app. This feature is available in the &lt;code&gt;staging&lt;/code&gt; branch of the CryptPad project and will be on &lt;a href=&quot;http://cryptpad.fr/&quot;&gt;CryptPad.fr&lt;/a&gt; in the next release.&lt;/p&gt;
 &lt;p&gt;We could make it even faster, by separating the main content of the Less files from the &lt;code&gt;.&amp;lt;filename&amp;gt;_vars()&lt;/code&gt; and &lt;code&gt;.&amp;lt;filename&amp;gt;_main()&lt;/code&gt; mixins, essentially making header files, in C/C++ parlance. And if we find in future profiling that less compiling remains a signficant performance penalty, there&#39;s a good chance that we will.&lt;/p&gt;
 </content>
     <category term="performance" scheme="https://blog.cryptpad.org/tags/performance/"/>
@@ -1795,7 +1867,7 @@ It offers a variety of editors and other multi-user applications: rich text, cod
     <summary xml:lang="en" type="html">CryptPad was started as an experimental platform as part of the OpenPaaS::NG research project. Since then it has developed into a suite of editors for many different types of documents, all without ever leaking the content that you edit to the server or the server operators.</summary>
     <content xml:lang="en" type="html">&lt;p&gt;CryptPad was started as an experimental platform as part of the &lt;a href=&quot;http://ng.open-paas.org/&quot;&gt;OpenPaaS::NG research project&lt;/a&gt;. Since then it has developed into a suite of editors for many different types of documents, all without ever leaking the content that you edit to the server or the server operators. Now, in order to keep the project moving, we need your help.&lt;/p&gt;
 &lt;p&gt;We have created a roadmap of the features which we would like to develop over the next year and &lt;strong&gt;we&#39;re hoping to raise 60,000€&lt;/strong&gt; to finance it. Fortunately, &lt;strong&gt;XWiki SAS is willing to match your donations euro-for-euro&lt;/strong&gt;. XWiki SAS is a company with open source at its heart and it was the company where CryptPad was first envisioned. XWiki SAS normally sells days of development time at about 1,000€ each, but since this project is dear to our hearts, we are also discounting the structure costs (things like the office and business taxes) for this project. &lt;strong&gt;We believe in CryptPad, but in order to succeed, we need you to believe in it too&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;The following is a 48 week roadmap which will fund one developer to work on CryptPad. You can donate to this roadmap on https://opencollective.com/cryptpad or on https://accounts.cryptpad.fr/#/donate, if you would like to make a donation by wire transfer or by cryptocurrency, please get in touch with us at &lt;a href=&quot;mailto:sales@cryptpad.fr&quot;&gt;sales@cryptpad.fr&lt;/a&gt; and if you are involved in EU research projects and would like to work with us and this cutting edge Privacy Enhancing Technology, please contact &lt;a href=&quot;mailto:research@xwiki.com&quot;&gt;research@xwiki.com&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The following is a 48 week roadmap which will fund one developer to work on CryptPad. You can donate to this roadmap on &lt;a href=&quot;https://opencollective.com/cryptpad&quot;&gt;https://opencollective.com/cryptpad&lt;/a&gt; or on &lt;a href=&quot;https://accounts.cryptpad.fr/#/donate&quot;&gt;https://accounts.cryptpad.fr/#/donate&lt;/a&gt;, if you would like to make a donation by wire transfer or by cryptocurrency, please get in touch with us at &lt;a href=&quot;mailto:sales@cryptpad.fr&quot;&gt;sales@cryptpad.fr&lt;/a&gt; and if you are involved in EU research projects and would like to work with us and this cutting edge Privacy Enhancing Technology, please contact &lt;a href=&quot;mailto:research@xwiki.com&quot;&gt;research@xwiki.com&lt;/a&gt;.&lt;/p&gt;
 &lt;h1&gt;Goal 1 - Spreadsheets &amp;amp; Office Documents&lt;/h1&gt;
 &lt;p&gt;CryptPad is excellent for quick editing of meeting notes and plans, and it is able to store and view images and PDF files, but it does not allow editing of more complex types of files such as spreadsheets and word documents. Fortunately there is an open source web-based editor called OnlyOffice which allows editing these complex document types, but it is a highly complex piece of software and we will need time and effort to integrate it into CryptPad. Even after it is fully integrated, the conversion of xlsx files to OnlyOffice&#39;s internal format will still need to be carried out be specialized software either on the user&#39;s computer, or on a cloud service (not Zero-Knowledge!). However, we think that editing of spreadsheets and other documents in OnlyOffice is achievable without leaking any of the content back to the CryptPad server, so your spreadsheets will remain a secret.&lt;/p&gt;
 &lt;ul&gt;
@@ -1893,9 +1965,9 @@ It offers a variety of editors and other multi-user applications: rich text, cod
 &lt;p&gt;Now we are turning a corner, the OpenPaaS::NG project will end in April of 2019 and in order to keep improving, CryptPad will need new sources of funding.&lt;/p&gt;
 &lt;p&gt;Until now, the vast majority of CryptPad code has been developed by XWiki SAS and with the future of research financing in question, we want to be completely clear about our intentions. We don&#39;t want to take financing that is incompatible with the open spirit of CryptPad so while we will look for research projects, subscriptions and donations, we want to maintain the community spirit of CryptPad.&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;We will continue to host&lt;/strong&gt; https://cryptpad.fr/: We want to thank everyone who has subscribed to paid accounts, with your support (currently 1,5K/year) this server pays for itself and we consider this a valuable public service which should continue.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;We will continue to host&lt;/strong&gt; &lt;a href=&quot;https://cryptpad.fr/:&quot;&gt;https://cryptpad.fr/:&lt;/a&gt; We want to thank everyone who has subscribed to paid accounts, with your support (currently 1,5K/year) this server pays for itself and we consider this a valuable public service which should continue.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;XWiki SAS will continue to fund the team through the OpenPAAS project till the end of the project&lt;/strong&gt;. Following this our intention is to try to keep at least 1 developer active on the project (50,000€ per year) using alternative funding or through new research projects. If we can&#39;t find a research project we&#39;ll evaluate our capacity to keep it alive based on the subscriptions and contributions we have received.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;We will begin making the CryptPad finances public&lt;/strong&gt;: All of the money that comes in and goes out of the CryptPad project, including the money paid by subscriptions to https://cryptpad.fr/ will be published so that you can see how the project earns and spend money, and be convinced that it&#39;s worth supporting us. You will be able to follow the project&#39;s finances by going to &lt;a href=&quot;https://opencollective.com/cryptpad&quot;&gt;CryptPad on OpenCollective&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;We will begin making the CryptPad finances public&lt;/strong&gt;: All of the money that comes in and goes out of the CryptPad project, including the money paid by subscriptions to &lt;a href=&quot;https://cryptpad.fr/&quot;&gt;https://cryptpad.fr/&lt;/a&gt; will be published so that you can see how the project earns and spend money, and be convinced that it&#39;s worth supporting us. You will be able to follow the project&#39;s finances by going to &lt;a href=&quot;https://opencollective.com/cryptpad&quot;&gt;CryptPad on OpenCollective&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;Currently, the funding from our subscriptions and donations is not enough to finance even one developer, nevermind the present team of two. We need your help to grow this revenue through April 2019 and show that this can take over funding even if we don&#39;t find a research project before then. All revenue received till April 2019 will be used to fund development after April 2019.&lt;/p&gt;
 &lt;h2&gt;What we would like to do&lt;/h2&gt;
@@ -1928,9 +2000,9 @@ It offers a variety of editors and other multi-user applications: rich text, cod
   </entry>
   <entry>
     <title>Faster loads with SharedWorker &amp; ServiceWorker</title>
-    <link href="https://blog.cryptpad.org/2018/06/23/Faster-loads-with-SharedWorker-ServiceWorker/"/>
+    <link href="https://blog.cryptpad.org/2018/06/22/Faster-loads-with-SharedWorker-ServiceWorker/"/>
     <updated>2018-06-22T21:21:58Z</updated>
-    <id>https://blog.cryptpad.org/2018/06/23/Faster-loads-with-SharedWorker-ServiceWorker/</id>
+    <id>https://blog.cryptpad.org/2018/06/22/Faster-loads-with-SharedWorker-ServiceWorker/</id>
     <summary xml:lang="en" type="html">When CryptPad was first created, the only thing to load was the CryptPad code itself and the pad which you were editing. Recently edited pads were remembered in the browser&#39;s localStorage which was not portable between computers but allowed some recent history to be kept.</summary>
     <content xml:lang="en" type="html">&lt;p&gt;When CryptPad was first created, the only thing to load was the CryptPad code itself and the pad which you were editing. Recently edited pads were remembered in the browser&#39;s &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage&quot;&gt;localStorage&lt;/a&gt; which was not portable between computers but allowed some recent history to be kept.&lt;/p&gt;
 &lt;p&gt;However, we wanted to allow people to login and manage their pads on all of their devices so we created the CryptDrive. Anyone who has used CryptPad but never logged in is encouraged to &lt;a href=&quot;https://cryptpad.fr/register&quot;&gt;register and login&lt;/a&gt; (it&#39;s free) and check out their drive. CryptDrive is basically just a realtime pad containing a JSON structure with links to all of your pads as well as their titles and other information. When you update the title of a pad, it changes the pad itself but it also changes your drive so that you can see the title of the pad in your drive. This is of course not perfect because if someone else changes the title of a pad, your drive will not be updated until you look at the pad again, but doing everything with the server completely blind to the content isn&#39;t easy, and this works reasonably well.&lt;/p&gt;
@@ -1970,7 +2042,7 @@ It offers a variety of editors and other multi-user applications: rich text, cod
     <updated>2018-06-15T12:07:05Z</updated>
     <id>https://blog.cryptpad.org/2018/06/15/Signing-CryptPad/</id>
     <summary xml:lang="en" type="html">CryptPad was designed with a view that privacy should be default and cryptography should be invisible. In order to do this, we made use of the web-app model so people could just go to cryptpad.fr and immediately begin using the app, no installation necessary. However, this model has a known flaw...</summary>
-    <content xml:lang="en" type="html">&lt;p&gt;CryptPad was designed with a view that privacy should be default and cryptography should be invisible. In order to do this, we made use of the web-app model so people could just go to cryptpad.fr and immediately begin using the app, no installation necessary. However, this model has a known flaw, the server can decide what client-side code it will send to any given user, allowing a compromized server to serve code with a back-door vulnerability.&lt;/p&gt;
+    <content xml:lang="en" type="html">&lt;p&gt;CryptPad was designed with a view that privacy should be default and cryptography should be invisible. In order to do this, we made use of the web-app model so people could just go to &lt;a href=&quot;http://cryptpad.fr/&quot;&gt;cryptpad.fr&lt;/a&gt; and immediately begin using the app, no installation necessary. However, this model has a known flaw, the server can decide what client-side code it will send to any given user, allowing a compromized server to serve code with a back-door vulnerability.&lt;/p&gt;
 &lt;p&gt;Recently, I did an experiment to make CryptPad more secure against these types of attacks by signing the code. CryptPad is a unique webapp, even without considering the encryption aspect. There is no build system, the code we write is exactly the same as what your web browser runs. All of the CryptPad html, javascript and resources are static files which are served by a plain old web server. The data persistance is managed by an API server which the web browser communicates with using an HTML5 WebSocket. Finally, in order to add a layer of security against possible Cross Site Scripting attacks, CryptPad makes use of a &lt;a href=&quot;https://blog.cryptpad.fr/2017/08/30/CryptPad-s-new-Secure-Cross-Domain-Iframe/&quot;&gt;cross domain iframe&lt;/a&gt;, protecting your encryption keys from the majority of the CryptPad code in the same way that your online bank is protected from that sketchy porn site open in another tab.&lt;/p&gt;
 &lt;p&gt;Since CryptPad has no build system, there are many small javascript files which must be loaded. To do this, CryptPad uses &lt;a href=&quot;http://requirejs.org/&quot;&gt;RequireJS&lt;/a&gt;. While many small files are generally considered to be bad for website performance, RequireJS uses the HTML5 &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script&quot;&gt;async attribute&lt;/a&gt; to tell the browser not to block loading of other things while waiting for the scripts to load. Secondly, RequireJS also allows version numbers to be added to the script URLs which allows us to cache almost everything in the browser. Finally, we use the &lt;a href=&quot;https://en.wikipedia.org/wiki/HTTP/2&quot;&gt;HTTP/2&lt;/a&gt; protocol to serve resources because it allows multiple requests to be sent at the same time, while HTTP/2 is incompatible with WebSocket, this is ok because the web-app is served from a different server from the API server.&lt;/p&gt;
 &lt;h2&gt;Chain of Trust&lt;/h2&gt;
@@ -2105,7 +2177,7 @@ We plan to add support for spreadsheets, and possibly other applications so that
 &lt;h3&gt;Scalability&lt;/h3&gt;
 &lt;p&gt;One advantage CryptPad has over other conventional collaboration platforms is that a lot of the difficult computation is run in the users&#39; browsers, rather than on our server.
 This means that we can support a very large number of clients without a noticeable decrease in performance.
-Even so, the number of people using &lt;em&gt;CryptPad.fr&lt;/em&gt; and the amount they use it has increased dramatically.&lt;/p&gt;
+Even so, the number of people using &lt;em&gt;&lt;a href=&quot;http://cryptpad.fr/&quot;&gt;CryptPad.fr&lt;/a&gt;&lt;/em&gt; and the amount they use it has increased dramatically.&lt;/p&gt;
 &lt;p&gt;Though excessive popularity is a wonderful problem to have, we&#39;d like to avoid a situation where users have difficulty accessing our service, so improved scalability is something we&#39;d like to work on.&lt;/p&gt;
 &lt;h2&gt;Conclusion&lt;/h2&gt;
 &lt;p&gt;We haven&#39;t yet decided how long we intend for this release cycle to last, and we don&#39;t have a set list of the exact goals we&#39;d like to accomplish.
@@ -2127,7 +2199,7 @@ Feel free to reach out to us through any of the methods listed on &lt;a href=&qu
     <summary xml:lang="en" type="html">CryptPad version 1.14 (Codename Ouroboros) has been released and the most exciting new feature is one you cannot even see.</summary>
     <content xml:lang="en" type="html">&lt;script src=&quot;https://cryptpad.fr/common/media-tag-nacl.min.js&quot;&gt;&lt;/script&gt;
 &lt;p&gt;CryptPad version 1.14 (Codename &lt;a href=&quot;https://en.wikipedia.org/wiki/Ouroboros&quot;&gt;Ouroboros&lt;/a&gt;) has been released and the most exciting new feature is one you cannot even see. As you may remember from the &lt;a href=&quot;https://blog.cryptpad.org/2017/03/06/Security-growing-pains/&quot;&gt;Security Growing Pains&lt;/a&gt; post, &lt;a href=&quot;https://en.wikipedia.org/wiki/Content_Security_Policy&quot;&gt;Content Security Policy&lt;/a&gt; is a significant part of CryptPad&#39;s security model, and it is unfortunately incompatible with &lt;a href=&quot;https://ckeditor.com/&quot;&gt;CKEditor&lt;/a&gt;, the Open Source text editor used in CryptPad.&lt;/p&gt;
-&lt;p&gt;With this release, we have done a significant re-architecture of the CryptPad codebase. Starting with the /pad/ application, the CryptPad UI has begun a process of moving into an iframe which is hosted on a different domain: &lt;em&gt;sandbox.cryptpad.info&lt;/em&gt;. Moving the visual content to a different domain means that even in the event of a &lt;a href=&quot;https://en.wikipedia.org/wiki/Cross-site_scripting&quot;&gt;Cross-site scripting&lt;/a&gt; security vulnerability, most of your private information such as the pads in your CryptDrive, will not be at risk.&lt;/p&gt;
+&lt;p&gt;With this release, we have done a significant re-architecture of the CryptPad codebase. Starting with the /pad/ application, the CryptPad UI has begun a process of moving into an iframe which is hosted on a different domain: &lt;em&gt;&lt;a href=&quot;http://sandbox.cryptpad.info/&quot;&gt;sandbox.cryptpad.info&lt;/a&gt;&lt;/em&gt;. Moving the visual content to a different domain means that even in the event of a &lt;a href=&quot;https://en.wikipedia.org/wiki/Cross-site_scripting&quot;&gt;Cross-site scripting&lt;/a&gt; security vulnerability, most of your private information such as the pads in your CryptDrive, will not be at risk.&lt;/p&gt;
 &lt;p&gt;In this version we updated only the /pad/ application to use the cross-domain iframe because it is the only app which requires &lt;em&gt;inline script&lt;/em&gt;. This prevented us from using Content Security Policy to block the most significant vector for Cross Site Scripting attacks but now with the cross-domain iframe, such attacks are mitigated.&lt;/p&gt;
 &lt;p&gt;&lt;media-tag src=&quot;https://files.cryptpad.fr/blob/b5/b5cd676935a5b23c158f38a84b7f3dfd3dc96ab3aafddd62&quot; data-crypto-key=&quot;cryptpad:FBD19VUsNtgIxwjMGSOZcswciQzDixfuBY7dVWVwRG0=&quot; data-attr-width=&quot;50%&quot;&gt;&lt;/media-tag&gt;&lt;/p&gt;
 &lt;p&gt;Going forward, we plan to implement a standardized CryptPad application API so that new applications can be developed, installed and used in CryptPad. Today, the CryptPad API which is exposed to apps such as /pad/ and /code/ is not standardized and there is no clear line between the apps themselves and the CryptPad internals. As we move toward the a standard app API, we will define a standard representation of a CryptPad application with such additional aspects as the app&#39;s color-scheme and icons.&lt;/p&gt;
@@ -2483,7 +2555,7 @@ I want to obsess about making your life better, I want fair exchange of value
 and aligned incentives.&lt;/p&gt;
 &lt;h2&gt;Changes in CryptPad&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://blog.cryptpad.org/2017/05/23/CryptPad-use-it-love-it-support-it/&quot;&gt;As you may already know&lt;/a&gt;,
-cryptpad.fr now limits your data storage and allows you to buy an account which
+&lt;a href=&quot;http://cryptpad.fr/&quot;&gt;cryptpad.fr&lt;/a&gt; now limits your data storage and allows you to buy an account which
 will raise that limit. The code for limits and accounts is also in the CryptPad
 codebase and turned on by default. If you are installing CryptPad, you have
 three choices.&lt;/p&gt;
@@ -2534,9 +2606,9 @@ make CryptPad fit your needs better.&lt;/p&gt;
   </entry>
   <entry>
     <title>CryptPad - use it, love ❤️ it, support it</title>
-    <link href="https://blog.cryptpad.org/2017/05/24/CryptPad-use-it-love-it-support-it/"/>
+    <link href="https://blog.cryptpad.org/2017/05/23/CryptPad-use-it-love-it-support-it/"/>
     <updated>2017-05-23T18:40:35Z</updated>
-    <id>https://blog.cryptpad.org/2017/05/24/CryptPad-use-it-love-it-support-it/</id>
+    <id>https://blog.cryptpad.org/2017/05/23/CryptPad-use-it-love-it-support-it/</id>
     <summary xml:lang="en" type="html">It&#39;s been another release day in our little team. Today we released CryptPad v1.7.0 (Hodag). The biggest new feature in this version is that when you create a /code/ pad, the default highlighting is in markdown syntax and there it is rendered in realtime while you type.</summary>
     <content xml:lang="en" type="html">&lt;p&gt;It&#39;s been another release day in our little team. Today we released
 &lt;a href=&quot;https://github.com/xwiki-labs/cryptpad/releases/tag/1.7.0&quot;&gt;CryptPad v1.7.0 (Hodag)&lt;/a&gt;. The biggest new feature in this version is that when you create a &lt;em&gt;/code/&lt;/em&gt; pad, the default highlighting is in markdown syntax and there it is rendered in realtime while you type. Try it out by making a pad at &lt;a href=&quot;https://cryptpad.fr/code&quot;&gt;cryptpad.fr/code&lt;/a&gt;.&lt;/p&gt;
@@ -2727,7 +2799,7 @@ There is still much to do, but working together, we can accomplish great things.
 &lt;h3&gt;3. Does it claim to be Zero Knowledge or End-to-end Encrypted ?&lt;/h3&gt;
 &lt;p&gt;This is perhaps the most important question, because when a service provider makes the public statement that they are Zero Knowledge, they show they are prepared to risk their reputation if they are discovered to be storing your content in a way they can access. Some Zero Knowledge providers prefer the term &lt;em&gt;End-to-end Encrypted&lt;/em&gt; which has gained significant popularity with messaging apps. There is no functional difference between a Zero Knowledge application and one which advertizes End-to-end Encryption.&lt;/p&gt;
 &lt;h2&gt;Talk to us&lt;/h2&gt;
-&lt;p&gt;CryptPad is developed by a team of 3 people with generous financing from BPIFrance through the &lt;a href=&quot;http://ng.open-paas.org/about-us.html&quot;&gt;OpenPaaS::NG Research Project&lt;/a&gt;. Our mission is to make Cloud Computing more ethical by promoting Zero Knowledge Cloud Services and show young entrepreneurs that it is possible to make a living while being ethical with peoples&#39; data. Meet us in our IRC/Matrix channel on Freenode and at: https://riot.im/app/#/room/#cryptpad:matrix.org&lt;/p&gt;
+&lt;p&gt;CryptPad is developed by a team of 3 people with generous financing from BPIFrance through the &lt;a href=&quot;http://ng.open-paas.org/about-us.html&quot;&gt;OpenPaaS::NG Research Project&lt;/a&gt;. Our mission is to make Cloud Computing more ethical by promoting Zero Knowledge Cloud Services and show young entrepreneurs that it is possible to make a living while being ethical with peoples&#39; data. Meet us in our IRC/Matrix channel on Freenode and at: &lt;a href=&quot;https://riot.im/app/#/room/#cryptpad:matrix.org&quot;&gt;https://riot.im/app/#/room/#cryptpad:matrix.org&lt;/a&gt;&lt;/p&gt;
 </content>
     <category term="zero knowledge" scheme="https://blog.cryptpad.org/tags/zero knowledge/"/>
     <category term="security" scheme="https://blog.cryptpad.org/tags/security/"/>
@@ -2761,7 +2833,7 @@ Zero Knowledge is about resilient software for resilient society and we allowed 
 &lt;p&gt;On Thursday, March 6th, 2017, we deployed and released a set of patches to our previous &lt;a href=&quot;https://github.com/xwiki-labs/cryptpad/releases/tag/1.1.0&quot;&gt;Bunyip release&lt;/a&gt;, which we&#39;re calling &lt;a href=&quot;https://github.com/xwiki-labs/cryptpad/releases/tag/1.1.1&quot;&gt;1.1.1 &lt;em&gt;Bunyip&#39;s Revenge&lt;/em&gt;&lt;/a&gt;.
 This not only sanitizes XSS in places where we know about but it also implements a strong Content Security Policy everywhere except inside of the CKEditor iframe, which insists on injecting script tags.&lt;/p&gt;
 &lt;p&gt;It is important to upgrade as soon as possible because XSS attacks can potentially give an adversary access to all of your pads.
-If you&#39;re using cryptpad.fr on the website then there&#39;s nothing you need to do, everything is fixed.&lt;/p&gt;
+If you&#39;re using &lt;a href=&quot;http://cryptpad.fr/&quot;&gt;cryptpad.fr&lt;/a&gt; on the website then there&#39;s nothing you need to do, everything is fixed.&lt;/p&gt;
 &lt;h2&gt;Moving forward&lt;/h2&gt;
 &lt;p&gt;We want to find and pioneer better ways of protecting your data on CryptPad.
 We also hope to foster a whole movement of Zero Knowledge web services which feature layered security, protecting users from external threats as well as the mistakes that developers are sure to make.&lt;/p&gt;
@@ -2899,44 +2971,44 @@ We did this not only because Open Source is in our culture, but also because we 
 &lt;ul&gt;
 &lt;li&gt;Sync backups to Google or Dropbox and force them to become Zero Knowledge
 &lt;ul&gt;
-&lt;li&gt;https://cryptomator.org/&lt;/li&gt;
-&lt;li&gt;Source Code: https://github.com/cryptomator/cryptomator&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://cryptomator.org/&quot;&gt;https://cryptomator.org/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Source Code: &lt;a href=&quot;https://github.com/cryptomator/cryptomator&quot;&gt;https://github.com/cryptomator/cryptomator&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;Easy chrome extension for gmail users to send &amp;amp; receive end-to-end encrypted email
 &lt;ul&gt;
-&lt;li&gt;https://cryptup.org/&lt;/li&gt;
-&lt;li&gt;Source Code: https://github.com/tomholub/cryptup-chrome&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://cryptup.org/&quot;&gt;https://cryptup.org/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Source Code: &lt;a href=&quot;https://github.com/tomholub/cryptup-chrome&quot;&gt;https://github.com/tomholub/cryptup-chrome&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;Send and receive end-to-end encrypted email using your normal email account (Mobile, Desktop version coming soon)
 &lt;ul&gt;
-&lt;li&gt;https://prettyeasyprivacy.com/&lt;/li&gt;
-&lt;li&gt;https://cacert.pep.foundation/trac&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://prettyeasyprivacy.com/&quot;&gt;https://prettyeasyprivacy.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://cacert.pep.foundation/trac&quot;&gt;https://cacert.pep.foundation/trac&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;Send end-to-end encrypted text messages on a phone or computer
 &lt;ul&gt;
-&lt;li&gt;https://wire.com/en/&lt;/li&gt;
-&lt;li&gt;https://github.com/wireapp/&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://wire.com/en/&quot;&gt;https://wire.com/en/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/wireapp/&quot;&gt;https://github.com/wireapp/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;Send end-to-end encrypted text messages on your phone
 &lt;ul&gt;
-&lt;li&gt;https://whispersystems.org/&lt;/li&gt;
-&lt;li&gt;Source Code: https://github.com/whispersystems&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://whispersystems.org/&quot;&gt;https://whispersystems.org/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Source Code: &lt;a href=&quot;https://github.com/whispersystems&quot;&gt;https://github.com/whispersystems&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;Type or paste a message and give the link to friends
 &lt;ul&gt;
-&lt;li&gt;https://ncry.pt/  (Source code: https://github.com/luggs-co/ncrypt)&lt;/li&gt;
-&lt;li&gt;https://privatebin.net/ (Source code: https://github.com/PrivateBin/PrivateBin)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://ncry.pt/&quot;&gt;https://ncry.pt/&lt;/a&gt;  (Source code: &lt;a href=&quot;https://github.com/luggs-co/ncrypt&quot;&gt;https://github.com/luggs-co/ncrypt&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://privatebin.net/&quot;&gt;https://privatebin.net/&lt;/a&gt; (Source code: &lt;a href=&quot;https://github.com/PrivateBin/PrivateBin&quot;&gt;https://github.com/PrivateBin/PrivateBin&lt;/a&gt;)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;Chat online with lots of people at once
 &lt;ul&gt;
-&lt;li&gt;https://riot.im/  &lt;strong&gt;NOTE:&lt;/strong&gt; End-to-end encryption mode in beta so currently disabled by default&lt;/li&gt;
-&lt;li&gt;Source code: https://github.com/vector-im&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://riot.im/&quot;&gt;https://riot.im/&lt;/a&gt;  &lt;strong&gt;NOTE:&lt;/strong&gt; End-to-end encryption mode in beta so currently disabled by default&lt;/li&gt;
+&lt;li&gt;Source code: &lt;a href=&quot;https://github.com/vector-im&quot;&gt;https://github.com/vector-im&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -2946,26 +3018,26 @@ decision of some organizations to keep parts of their codebases proprietary.&lt;
 &lt;ul&gt;
 &lt;li&gt;Data backup
 &lt;ul&gt;
-&lt;li&gt;https://www.boxcryptor.com/en&lt;/li&gt;
-&lt;li&gt;https://whisp.ly/en&lt;/li&gt;
-&lt;li&gt;https://www.sync.com/&lt;/li&gt;
-&lt;li&gt;https://www.pcloud.com&lt;/li&gt;
-&lt;li&gt;https://spideroak.com/personal/spideroak-one&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.boxcryptor.com/en&quot;&gt;https://www.boxcryptor.com/en&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://whisp.ly/en&quot;&gt;https://whisp.ly/en&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.sync.com/&quot;&gt;https://www.sync.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.pcloud.com/&quot;&gt;https://www.pcloud.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://spideroak.com/personal/spideroak-one&quot;&gt;https://spideroak.com/personal/spideroak-one&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;Chat and instant messaging
 &lt;ul&gt;
-&lt;li&gt;https://spideroak.com/personal/semaphor&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://spideroak.com/personal/semaphor&quot;&gt;https://spideroak.com/personal/semaphor&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;Send and receive end-to-end encrypted email
 &lt;ul&gt;
-&lt;li&gt;https://protonmail.com/&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://protonmail.com/&quot;&gt;https://protonmail.com/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;Web of trust and proof of identity
 &lt;ul&gt;
-&lt;li&gt;https://keybase.io/&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://keybase.io/&quot;&gt;https://keybase.io/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
