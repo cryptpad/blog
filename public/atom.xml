@@ -4,12 +4,49 @@
   <subtitle>News from the end-to-end encrypted collaboration suite</subtitle>
   <link href="https://blog.cryptpad.org/atom.xml" rel="self"/>
   <link href="https://blog.cryptpad.org"/>
-  <updated>2023-01-31T00:00:00Z</updated>
+  <updated>2023-02-01T00:00:00Z</updated>
   <id>https://blog.cryptpad.org</id>
   <author>
     <name>CryptPad Team</name>
     <email>contact@cryptpad.fr</email>
   </author>
+  <entry>
+    <title>Cryptography White Paper</title>
+    <link href="https://blog.cryptpad.org/2023/02/01/Whitepaper/"/>
+    <updated>2023-02-01T00:00:00Z</updated>
+    <id>https://blog.cryptpad.org/2023/02/01/Whitepaper/</id>
+    <summary xml:lang="en" type="html">We proudly present the cryptography white paper summarizing the cryptography used in CryptPad.</summary>
+    <content xml:lang="en" type="html">&lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/whitepaper.png&quot; alt=&quot;White Paper Screenshot&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;We proudly present the &lt;a href=&quot;https://blog.cryptpad.org/images/whitepaper.pdf&quot;&gt;cryptography white paper&lt;/a&gt;
+summarizing the cryptography used in CryptPad.
+The paper is targeted at people that are familiar with cryptography, but
+obviously available for everyone interested in CryptPad.&lt;/p&gt;
+&lt;p&gt;In this white paper, we discuss CryptPad&#39;s underlying threat model, and explain
+the communication between the server and the client.
+We present the encryption of documents as the core functionality of CryptPad.
+We further show how the login mechanism works and how we establish secure
+communication between different users.
+Finally, we discuss how we enable secure communication and access control within
+a team.&lt;/p&gt;
+&lt;p&gt;This white paper is part of the &lt;a href=&quot;https://nlnet.nl/project/CryptPad-Blueprints/&quot;&gt;CryptPad Blueprints
+Project&lt;/a&gt; and is funded through
+the &lt;a href=&quot;https://nlnet.nl/entrust&quot;&gt;NGI0 Entrust Fund&lt;/a&gt;. We thank
+&lt;a href=&quot;https://nlnet.nl/&quot;&gt;NLnet&lt;/a&gt; for their support. All of the project&#39;s outputs, including this whitepaper, will be made available through a dedicated website as the project progresses.&lt;/p&gt;
+&lt;p&gt;We wish you a good read!
+You can reach us with any questions or comments on &lt;a href=&quot;https://forum.cryptpad.org/&quot;&gt;our forum&lt;/a&gt;,
+&lt;a href=&quot;https://matrix.to/#/#cryptpad:matrix.xwiki.com&quot;&gt;Matrix&lt;/a&gt;,
+&lt;a href=&quot;https://fosstodon.org/@cryptpad&quot;&gt;Mastodon&lt;/a&gt;, or
+via &lt;a href=&quot;mailto:contact@cryptpad.fr&quot;&gt;Email&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://blog.cryptpad.org/images/whitepaper.pdf&quot;&gt;&lt;i class=&quot;fa fa-file-pdf-o&quot;&gt;&lt;/i&gt; PDF Download&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;iframe src=&quot;https://blog.cryptpad.org/images/whitepaper.pdf#view=fit&amp;toolbar=0&amp;navpanes=0&quot; width=&quot;100%&quot; height=&quot;450px&quot;&gt;&lt;/iframe&gt;
+</content>
+    <category term="security" scheme="https://blog.cryptpad.org/tags/security/"/>
+    <category term="documentation" scheme="https://blog.cryptpad.org/tags/documentation/"/>
+    <category term="privacy" scheme="https://blog.cryptpad.org/tags/privacy/"/>
+    <category term="research" scheme="https://blog.cryptpad.org/tags/research/"/>
+    <category term="ngi" scheme="https://blog.cryptpad.org/tags/ngi/"/>
+    <category term="Blueprints" scheme="https://blog.cryptpad.org/tags/Blueprints/"/>
+  </entry>
   <entry>
     <title>January 2023 status</title>
     <link href="https://blog.cryptpad.org/2023/01/31/status-2023-01/"/>
