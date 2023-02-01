@@ -16,7 +16,7 @@
     <updated>2023-02-01T00:00:00Z</updated>
     <id>https://blog.cryptpad.org/2023/02/01/Whitepaper/</id>
     <summary xml:lang="en" type="html">We proudly present the cryptography white paper summarizing the cryptography used in CryptPad.</summary>
-    <content xml:lang="en" type="html">&lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/whitepaper.png&quot; alt=&quot;White Paper Screenshot&quot; /&gt;&lt;/p&gt;
+    <content xml:lang="en" type="html">&lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/whitepaper-diagram.png&quot; alt=&quot;Figure 3: Key derivation for a form&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;We proudly present the &lt;a href=&quot;https://blog.cryptpad.org/images/whitepaper.pdf&quot;&gt;cryptography white paper&lt;/a&gt;
 summarizing the cryptography used in CryptPad.
 The paper is targeted at people that are familiar with cryptography, but

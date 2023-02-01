@@ -13,7 +13,7 @@ cover: /images/whitepaper-diagram.png
 summary: We proudly present the cryptography white paper summarizing the cryptography used in CryptPad.
 ---
 
-![White Paper Screenshot](/images/whitepaper.png)
+![Figure 3: Key derivation for a form](/images/whitepaper-diagram.png)
 
 We proudly present the [cryptography white paper](/images/whitepaper.pdf)
 summarizing the cryptography used in CryptPad.
