@@ -20,6 +20,8 @@ summarizing the cryptography used in CryptPad.
 The paper is targeted at people that are familiar with cryptography, but
 obviously available for everyone interested in CryptPad.
 
+<a class="btn" href="/images/whitepaper.pdf"><i class="fa fa-file-pdf-o"></i> Whitepaper PDF - 355kB</a>
+
 In this white paper, we discuss CryptPad's underlying threat model, and explain
 the communication between the server and the client.
 We present the encryption of documents as the core functionality of CryptPad.
@@ -39,6 +41,5 @@ You can reach us with any questions or comments on [our forum](https://forum.cry
 [Mastodon](https://fosstodon.org/@cryptpad), or
 via [Email](mailto:contact@cryptpad.fr).
 
-**[<i class="fa fa-file-pdf-o"></i> PDF Download](/images/whitepaper.pdf)**
 
-<iframe src="/images/whitepaper.pdf#view=fit&toolbar=0&navpanes=0" width="100%" height="450px"></iframe>
+<!-- <iframe src="/images/whitepaper.pdf#view=fit&toolbar=0&navpanes=0" width="100%" height="450px"></iframe> -->

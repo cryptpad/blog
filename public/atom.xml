@@ -21,6 +21,7 @@
 summarizing the cryptography used in CryptPad.
 The paper is targeted at people that are familiar with cryptography, but
 obviously available for everyone interested in CryptPad.&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;btn&quot; href=&quot;https://blog.cryptpad.org/images/whitepaper.pdf&quot;&gt;&lt;i class=&quot;fa fa-file-pdf-o&quot;&gt;&lt;/i&gt; Whitepaper PDF - 355kB&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;In this white paper, we discuss CryptPad&#39;s underlying threat model, and explain
 the communication between the server and the client.
 We present the encryption of documents as the core functionality of CryptPad.
@@ -37,8 +38,7 @@ You can reach us with any questions or comments on &lt;a href=&quot;https://foru
 &lt;a href=&quot;https://matrix.to/#/#cryptpad:matrix.xwiki.com&quot;&gt;Matrix&lt;/a&gt;,
 &lt;a href=&quot;https://fosstodon.org/@cryptpad&quot;&gt;Mastodon&lt;/a&gt;, or
 via &lt;a href=&quot;mailto:contact@cryptpad.fr&quot;&gt;Email&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://blog.cryptpad.org/images/whitepaper.pdf&quot;&gt;&lt;i class=&quot;fa fa-file-pdf-o&quot;&gt;&lt;/i&gt; PDF Download&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;iframe src=&quot;https://blog.cryptpad.org/images/whitepaper.pdf#view=fit&amp;toolbar=0&amp;navpanes=0&quot; width=&quot;100%&quot; height=&quot;450px&quot;&gt;&lt;/iframe&gt;
+&lt;!-- &lt;iframe src=&quot;/images/whitepaper.pdf#view=fit&amp;toolbar=0&amp;navpanes=0&quot; width=&quot;100%&quot; height=&quot;450px&quot;&gt;&lt;/iframe&gt; --&gt;
 </content>
     <category term="security" scheme="https://blog.cryptpad.org/tags/security/"/>
     <category term="documentation" scheme="https://blog.cryptpad.org/tags/documentation/"/>

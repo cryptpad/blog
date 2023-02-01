@@ -3156,6 +3156,17 @@ a.tag {
   color: var(--col-primary);
   border-radius: 0.5rem;
 }
+a.btn {
+  padding: 1rem;
+  border-radius: 0.8rem;
+  text-decoration: none;
+  margin: 1rem 0;
+  display: inline-block;
+  text-decoration: none !important;
+  background-color: var(--col-link);
+  color: var(--col-background);
+  box-shadow: 0px 0px 5px 1px #00000030;
+}
 #top-tags {
   grid-area: left;
   min-width: 11rem;
