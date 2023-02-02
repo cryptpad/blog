@@ -1,6 +1,6 @@
 ---
-title: Cryptography White Paper
-date: 2023-02-01
+title: CryptPad White Paper
+date: 2023-02-02
 author: "Theo von Arx"
 tags:
 - security
@@ -10,17 +10,17 @@ tags:
 - ngi
 - Blueprints
 cover: /images/whitepaper-diagram.png
-summary: We proudly present the cryptography white paper summarizing the cryptography used in CryptPad.
+summary: We proudly present the CryptPad white paper summarizing the use of cryptography in CryptPad.
 ---
 
-![Figure 3: Key derivation for a form](/images/whitepaper-diagram.png)
+![Figure: Key derivation for a form](/images/whitepaper-diagram.png)
 
-We proudly present the [cryptography white paper](/images/whitepaper.pdf)
-summarizing the cryptography used in CryptPad.
-The paper is targeted at people that are familiar with cryptography, but
+We proudly present the [CryptPad white paper](/images/whitepaper.pdf)
+summarizing the use of cryptography in CryptPad.
+The paper is targeted at people who are familiar with cryptography, but
 obviously available for everyone interested in CryptPad.
 
-<a class="btn" href="/images/whitepaper.pdf"><i class="fa fa-file-pdf-o"></i> Whitepaper PDF - 355kB</a>
+<a class="btn" href="/images/whitepaper.pdf"><i class="fa fa-file-pdf-o"></i> White Paper PDF - 355kB</a>
 
 In this white paper, we discuss CryptPad's underlying threat model, and explain
 the communication between the server and the client.
@@ -33,7 +33,7 @@ a team.
 This white paper is part of the [CryptPad Blueprints
 Project](https://nlnet.nl/project/CryptPad-Blueprints/) and is funded through
 the [NGI0 Entrust Fund](https://nlnet.nl/entrust). We thank
-[NLnet](https://nlnet.nl/) for their support. All of the project's outputs, including this whitepaper, will be made available through a dedicated website as the project progresses.
+[NLnet](https://nlnet.nl/) for their support. All of the project's outputs, including this white paper, will be made available through a dedicated website as the project progresses.
 
 We wish you a good read!
 You can reach us with any questions or comments on [our forum](https://forum.cryptpad.org/),
