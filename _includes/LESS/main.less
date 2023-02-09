@@ -56,8 +56,6 @@ body {
     }
 }
 
-
-
 h1 {
     font-size: 2.5rem;
     line-height: 1.2em;
@@ -209,7 +207,6 @@ article.list {
     }
 }
 
-
 article.post {
     margin-bottom: 8rem;
     .header {
@@ -247,6 +244,19 @@ article.post {
     }
     iframe {
         margin: 1rem 1rem 1rem 0;
+    }
+    table {
+        width: 100%;
+        margin-bottom: 1rem;
+        th {
+            background-color: var(--col-primary-fade);
+        }
+        tr:nth-child(even) {
+            background: var(--col-primary-fade);
+        }
+        th, td {
+            padding: 0.5rem;
+        }
     }
 }
 
