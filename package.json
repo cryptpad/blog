@@ -8,7 +8,7 @@
   },
   "scripts": {
     "generate": "npx @11ty/eleventy --input=. --output=public",
-    "build": "npx @11ty/eleventy --input=. --output=public",
+    "build": "rm -rf public && npx @11ty/eleventy --input=. --output=public",
     "dev": "npx @11ty/eleventy --serve --output=public"
   }
 }
