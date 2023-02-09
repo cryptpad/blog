@@ -3324,6 +3324,20 @@ article.post ol:not(.tags) li ul {
 article.post iframe {
   margin: 1rem 1rem 1rem 0;
 }
+article.post table {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+article.post table th {
+  background-color: var(--col-primary-fade);
+}
+article.post table tr:nth-child(even) {
+  background: var(--col-primary-fade);
+}
+article.post table th,
+article.post table td {
+  padding: 0.5rem;
+}
 .article-tags {
   display: inline;
 }
