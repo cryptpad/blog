@@ -4,12 +4,45 @@
   <subtitle>News from the end-to-end encrypted collaboration suite</subtitle>
   <link href="https://blog.cryptpad.org/atom.xml" rel="self"/>
   <link href="https://blog.cryptpad.org"/>
-  <updated>2023-02-09T00:00:00Z</updated>
+  <updated>2023-02-28T00:00:00Z</updated>
   <id>https://blog.cryptpad.org</id>
   <author>
     <name>CryptPad Team</name>
     <email>contact@cryptpad.fr</email>
   </author>
+  <entry>
+    <title>February 2023 status</title>
+    <link href="https://blog.cryptpad.org/2023/02/28/status-2023-02/"/>
+    <updated>2023-02-28T00:00:00Z</updated>
+    <id>https://blog.cryptpad.org/2023/02/28/status-2023-02/</id>
+    <summary xml:lang="en" type="html">Lots of prototypes and CryptPad AUTH officially starts</summary>
+    <content xml:lang="en" type="html">&lt;h2&gt;🚧 Lots of prototypes&lt;/h2&gt;
+&lt;p&gt;Since the start of the year we have been working on a few projects in parallel, so we are accumulating prototypes for a variety of new experimental features:&lt;/p&gt;
+&lt;h3&gt;Nextcloud&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/proto-nextcloud.png&quot; alt=&quot;screenshot of CryptPad code app running in Nextcloud&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Wolfgang and Yann have been working on an integration with &lt;a href=&quot;https://nextcloud.com/&quot;&gt;Nextcloud&lt;/a&gt;. A minimal CryptPad instance (as in limited to the Code/Markdown application for now) opens documents in temporary collaborative editing sessions, with all changes synced back to Nextcloud for storage.&lt;/p&gt;
+&lt;h3&gt;Diagrams&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/proto-diagram.png&quot; alt=&quot;screenshot of Diagram app in CryptPad&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Wolfgang has been working on integrating &lt;a href=&quot;https://www.diagrams.net/&quot;&gt;Draw.io&lt;/a&gt; as a CryptPad application. Early tests are looking very promising, there are still a few key challenges ahead such as import/export, inserting images, increasing security (CSP headers).&lt;/p&gt;
+&lt;h3&gt;Notes&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/proto-notes.png&quot; alt=&quot;the Code and Markdown Slide apps merging into the Notes app&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Yann and David are working on the early stages of Notes, a new application that will combine the current Code and Markdown Slides apps. We plan on supporting different &amp;quot;modes&amp;quot; that will 1) preserve existing features and 2) improve the visibility and experience of using Markdown on CryptPad. Yann currently has most existing Code features working in &lt;a href=&quot;https://codemirror.net/&quot;&gt;CodeMirror 6&lt;/a&gt; (current apps use CodeMirror 5). Next steps are to use &lt;a href=&quot;https://revealjs.com/&quot;&gt;reveal.js&lt;/a&gt; for the slide mode and to design a single-pane note mode with Markdown inline preview.&lt;/p&gt;
+&lt;h3&gt;Yjs&lt;/h3&gt;
+&lt;p&gt;As part of our &lt;a href=&quot;https://blog.cryptpad.org/tags/blueprints/&quot;&gt;Blueprints project&lt;/a&gt;, Theo has put together a working prototype of CryptPad&#39;s Code application over &lt;a href=&quot;https://yjs.dev/&quot;&gt;Yjs&lt;/a&gt;. This will likely remain at an experimental stage for now, but it will be made available with the other project deliverables.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;As you may have noticed, each of these prototypes integrates or relies on other open-source projects. CryptPad wouldn&#39;t exist without this broader ecosystem so we encourage you to check out and support all of these projects: &lt;a href=&quot;https://nextcloud.com/&quot;&gt;Nextcloud&lt;/a&gt;, &lt;a href=&quot;https://www.diagrams.net/&quot;&gt;Draw.io&lt;/a&gt;, &lt;a href=&quot;https://codemirror.net/&quot;&gt;CodeMirror&lt;/a&gt;, &lt;a href=&quot;https://revealjs.com/&quot;&gt;reveal.js&lt;/a&gt;, and &lt;a href=&quot;https://yjs.dev/&quot;&gt;Yjs&lt;/a&gt;. We will in turn make all of these prototypes available and open-source when they are ready, whether or not they are integrated into a future version of CryptPad.&lt;/p&gt;
+&lt;h2&gt;🔑 🪪 AUTH officially starts&lt;/h2&gt;
+&lt;p&gt;We are happy to announce that we have finally signed off the &lt;a href=&quot;https://nlnet.nl/project/CryptPad-Auth/&quot;&gt;CryptPad AUTH&lt;/a&gt; project with NLNet, as part of the &lt;a href=&quot;https://nlnet.nl/assure/&quot;&gt;NGI ASSURE&lt;/a&gt; grant programme. The project&#39;s main goal is to make CryptPad more secure by adding support for external authentication methods. We will be working to add suport for two main types of services: identity providers (such as OpenID, LDAP, etc) and two factor authenticators (such as Time-based One-time Passwords). We know these are much requested features for many people looking to integrate CryptPad with existing infrastructure (e.g. in enterprise) so we look forward to making them available.&lt;/p&gt;
+&lt;h2&gt;🔭 Next up&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;The various prototypes presented here are all part of different projects and partnerships with their own time-frames. We will be aligning those with our own roadmap and planning how and when each of them will make their way into future versions of CryptPad.&lt;/li&gt;
+&lt;li&gt;We are &lt;a href=&quot;https://fosstodon.org/@cryptpad/109875016889111728&quot;&gt;still hiring&lt;/a&gt; please look at our &lt;a href=&quot;https://cryptpad.org/jobs/&quot;&gt;available roles&lt;/a&gt; and share them with anyone who might be interested.&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    <category term="status update" scheme="https://blog.cryptpad.org/tags/status update/"/>
+    <category term="ngi" scheme="https://blog.cryptpad.org/tags/ngi/"/>
+    <category term="auth" scheme="https://blog.cryptpad.org/tags/auth/"/>
+  </entry>
   <entry>
     <title>CryptPad Funding Status January 2023</title>
     <link href="https://blog.cryptpad.org/2023/02/09/CryptPad-Funding-Status-January-2023/"/>
