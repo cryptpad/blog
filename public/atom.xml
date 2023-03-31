@@ -4,12 +4,35 @@
   <subtitle>News from the end-to-end encrypted collaboration suite</subtitle>
   <link href="https://blog.cryptpad.org/atom.xml" rel="self"/>
   <link href="https://blog.cryptpad.org"/>
-  <updated>2023-02-28T00:00:00Z</updated>
+  <updated>2023-03-31T00:00:00Z</updated>
   <id>https://blog.cryptpad.org</id>
   <author>
     <name>CryptPad Team</name>
     <email>contact@cryptpad.fr</email>
   </author>
+  <entry>
+    <title>March 2023 status</title>
+    <link href="https://blog.cryptpad.org/2023/03/31/status-2023-03/"/>
+    <updated>2023-03-31T00:00:00Z</updated>
+    <id>https://blog.cryptpad.org/2023/03/31/status-2023-03/</id>
+    <summary xml:lang="en" type="html">Welcoming Zuzanna to the team, and saying goodbye to Aaron and Theo</summary>
+    <content xml:lang="en" type="html">&lt;h2&gt;👩‍🔬 Zuzanna Łudzik joins the team&lt;/h2&gt;
+&lt;p&gt;Last week we welcomed Zuzanna to the team as a junior developer. She studied neuroscience and climate science before retraining as a software engineer and working for charities and educational companies. She will start by looking at how to improve Quality Assurance for CryptPad, and will no doubt end up contributing to more areas.&lt;/p&gt;
+&lt;h2&gt;👋 Farewell to Aaron MacSween&lt;/h2&gt;
+&lt;p&gt;This month was Aaron&#39;s last with the team, as &lt;a href=&quot;https://blog.cryptpad.org/2022/12/29/stepping-down/&quot;&gt;he announced&lt;/a&gt; at the end of 2022 he will be taking a well-deserved holiday before focusing on his work as an independent privacy and security researcher.&lt;/p&gt;
+&lt;p&gt;On behalf of the whole team I&#39;d like to thank Aaron for the 7 years of relentless work he has committed to CryptPad. By this I don&#39;t just mean 5400+ commits on our &lt;code&gt;main&lt;/code&gt; branch but also all the work as project lead: securing grants to fund the project, driving the roadmap, all while endlessly monitoring prod, building a customer base, and making CryptPad known and used by thousands.&lt;/p&gt;
+&lt;p&gt;Aaron we wish you the very best in your future endeavours, and we hope that you&#39;ll be back to visit!&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/Cryptpad-2.png&quot; alt=&quot;screenshot of the CryptPad 2.0.0 homepage&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;As a farewell postcard, this is CryptPad 2.0.0 released around the time Aaron became project lead in 2018. Note that Sheets, shared folders, Teams, Contacts, and so many other features are missing...&lt;/p&gt;
+&lt;h2&gt;👋 Farewell to Theo von Arx&lt;/h2&gt;
+&lt;p&gt;We are also saying good bye to Theo as his 6 months of work on &lt;a href=&quot;https://nlnet.nl/project/CryptPad-Blueprints/&quot;&gt;Blueprints&lt;/a&gt; are coming to an end. Theo has been applying his cryptography expertise to CryptPad to both document how it currently works and pave the way for future developments. These contributions will help improve the product in months and years to come. We are very grateful to Theo for all the work he produced. The &lt;a href=&quot;https://blog.cryptpad.org/2023/02/02/Whitepaper/&quot;&gt;Cryptpad whitepaper&lt;/a&gt; is already published and we will be gathering all the other outputs in a dedicated R&amp;amp;D website in the coming weeks. Theo is going to start a PhD at ETH Zurich and we wish him the very best on his future projects!&lt;/p&gt;
+&lt;h2&gt;🔭 Next up&lt;/h2&gt;
+&lt;p&gt;With all of these changes in the team we have been busy with handing off various projects (AUTH, Blueprints) and onboarding. Following our quarterly schedule we should have released a new version of CryptPad about now, but we are pushing this back to prioritize team communication and workload management.&lt;/p&gt;
+&lt;p&gt;As mentioned &lt;a href=&quot;https://blog.cryptpad.org/2023/02/28/status-2023-02/&quot;&gt;last month&lt;/a&gt;, we have lots of prototypes around, as well as improvements to Forms and OnlyOffice. We will package some of these into a new release in the coming weeks. Maybe even before the next status!&lt;/p&gt;
+</content>
+    <category term="status update" scheme="https://blog.cryptpad.org/tags/status update/"/>
+    <category term="team" scheme="https://blog.cryptpad.org/tags/team/"/>
+  </entry>
   <entry>
     <title>February 2023 status</title>
     <link href="https://blog.cryptpad.org/2023/02/28/status-2023-02/"/>
