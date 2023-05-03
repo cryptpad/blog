@@ -4,12 +4,35 @@
   <subtitle>News from the end-to-end encrypted collaboration suite</subtitle>
   <link href="https://blog.cryptpad.org/atom.xml" rel="self"/>
   <link href="https://blog.cryptpad.org"/>
-  <updated>2023-03-31T00:00:00Z</updated>
+  <updated>2023-05-03T00:00:00Z</updated>
   <id>https://blog.cryptpad.org</id>
   <author>
     <name>CryptPad Team</name>
     <email>contact@cryptpad.fr</email>
   </author>
+  <entry>
+    <title>April 2023 status</title>
+    <link href="https://blog.cryptpad.org/2023/05/03/status-2023-04/"/>
+    <updated>2023-05-03T00:00:00Z</updated>
+    <id>https://blog.cryptpad.org/2023/05/03/status-2023-04/</id>
+    <summary xml:lang="en" type="html">5.3 release, new status pages, and some team updates</summary>
+    <content xml:lang="en" type="html">&lt;h2&gt;🚀 CryptPad 5.3&lt;/h2&gt;
+&lt;p&gt;At the time of writing we are in the last stages of wrapping up CryptPad 5.3 for release. This version upgrades all of the OnlyOffice applications (Spreadsheet, Document, Presentation) to version 7.1. We improved the Form application with Condorcet voting results (ordered list questions) as well as bug fixes and minor tweaks. Please see the &lt;a href=&quot;https://github.com/xwiki-labs/cryptpad/releases/tag/5.3.0&quot;&gt;Changelog&lt;/a&gt; for the full details.&lt;/p&gt;
+&lt;h2&gt;🚦 New status pages&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/status-page.png&quot; alt=&quot;status page screenshot&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;We are introducing two new pages to check on the status of CryptPad and its related services. &lt;a href=&quot;https://uptime.cryptpad.org/status/cryptpad&quot;&gt;🚦 CryptPad Status&lt;/a&gt; shows the availability of our flagship instance &lt;a href=&quot;http://cryptpad.fr/&quot;&gt;CryptPad.fr&lt;/a&gt; and all other sites maintained by the development team (documentation, project website, this blog, and so on). &lt;a href=&quot;https://uptime.cryptpad.org/status/public-instances&quot;&gt;🚦 CryptPad Instances Status&lt;/a&gt; shows all &lt;a href=&quot;https://cryptpad.org/instances/&quot;&gt;public instances listed on our website&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;We are very grateful to &lt;a href=&quot;https://uptime.kuma.pet/&quot;&gt;Uptime Kuma&lt;/a&gt; for providing a simple, easy to use, and &lt;a href=&quot;https://github.com/louislam/uptime-kuma&quot;&gt;open-source&lt;/a&gt; monitoring tool.&lt;/p&gt;
+&lt;h2&gt;🛠️ Team&lt;/h2&gt;
+&lt;p&gt;There is more movement on the team this month. Unfortunately Arnaud Laprévote will not stay with XWiki, so he will also stop contributing to CryptPad&#39;s business and research efforts. We thank Arnaud for the ideas, leads, and projects generated in the last few months and whish him well for future endeavours.&lt;/p&gt;
+&lt;p&gt;On the hiring front, we are in the last stages of contractual work for a great &lt;a href=&quot;https://cryptpad.org/jobs/#privacy-eng&quot;&gt;Privacy and Cryptography Engineer&lt;/a&gt;. We hope to report some exciting news on this in the next monthly status!&lt;/p&gt;
+&lt;h2&gt;🔭 Next up&lt;/h2&gt;
+&lt;p&gt;We will be pushing forward on the various research projects in the next month. Some partnerships have now officially been announced so we will say more about them soon. Most importantly we will be planning which of our prototype features to prioritize for the next release!&lt;/p&gt;
+</content>
+    <category term="status update" scheme="https://blog.cryptpad.org/tags/status update/"/>
+    <category term="onlyoffice" scheme="https://blog.cryptpad.org/tags/onlyoffice/"/>
+    <category term="infrastructure" scheme="https://blog.cryptpad.org/tags/infrastructure/"/>
+    <category term="team" scheme="https://blog.cryptpad.org/tags/team/"/>
+  </entry>
   <entry>
     <title>March 2023 status</title>
     <link href="https://blog.cryptpad.org/2023/03/31/status-2023-03/"/>
