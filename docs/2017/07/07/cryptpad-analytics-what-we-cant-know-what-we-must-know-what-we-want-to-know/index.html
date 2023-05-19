@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+
+    <title>CryptPad Analytics &amp; Privacy - What we can&#39;t know, what we must know, what we want to know | CryptPad Blog</title> 
+    
+
+    
+    
+    <meta property="og:type" content="webpage">
+    <meta property="og:title" content="CryptPad Analytics &amp; Privacy - What we can&#39;t know, what we must know, what we want to know">
+    <meta property="og:url" content="http://blog.cryptpad.org/2017/07/07/cryptpad-analytics-what-we-cant-know-what-we-must-know-what-we-want-to-know/">
+    <meta property="og:page_name" content="CryptPad Analytics &amp; Privacy - What we can&#39;t know, what we must know, what we want to know">
+    <meta property="og:locale" content="default">
+    <meta property="og:image" content="http://blog.cryptpad.org/images/Analytics-padtypes.png">
+    <meta property="og:description" content="CryptPad is a Zero Knowledge cloud application, this means we have designed it such that we do not have any access to the content which is hosted on our server. However, there are other things which we do collect and it is important that privacy-minded users understand what we are collecting and why">
+    <meta name="twitter:card" content="CryptPad is a Zero Knowledge cloud application, this means we have designed it such that we do not have any access to the content which is hosted on our server. However, there are other things which we do collect and it is important that privacy-minded users understand what we are collecting and why">
+    <meta name="twitter:title" content="CryptPad Analytics &amp; Privacy - What we can&#39;t know, what we must know, what we want to know">
+
+
+
+    <link rel="alternate" href="/atom.xml" title="CryptPad Blog" type="application/atom+xml">
+
+    <link rel="icon" href="/theme/favicon.png">
+
+
+</head>
+
+<body>
+    <main class="container">
+        <header>
+            
+    <a href="/" class="back-home">
+        <i class="fa fa-arrow-left" aria-hidden="true"></i> <i class="fa fa-home" aria-hidden="true"></i> Homepage
+    </a>
+
+            <a href="/">
+                <img class="cp-logo" src="/theme/CryptPad_logo.svg" aria-hidden="true" alt="">
+                <h1>CryptPad Blog</h1>
+            </a>
+        </header>
+        <section id="content">
+            
+    <article class="post" lang="en">
+        <section class="header">
+            <h1>CryptPad Analytics &amp; Privacy - What we can&#39;t know, what we must know, what we want to know</h1>
+            <p class="meta">
+                
+                    Caleb James DeLisle -
+                
+                Jul 7, 2017
+                    
+                    
+            </p>
+            <div class="article-tags">
+    
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        <ul class="tags" aria-label="Tags">
+        
+            <li><a class="tag" href="/tags/analytics">analytics</a></li>
+        
+            <li><a class="tag" href="/tags/data">data</a></li>
+        
+            <li><a class="tag" href="/tags/privacy">privacy</a></li>
+        
+        </ul>
+    
+</div>
+        </section>
+        <p>CryptPad is a Zero Knowledge cloud application, this means we have designed it such
+that we do not have any access to the content which is hosted on our server.
+However, there are other things which we do collect and it is important that
+privacy-minded users understand what we are collecting and why. There are four
+types of information:</p>
+<ul>
+<li>What we can't know: This is data that CryptPad app encrypts so we will never have
+access to it</li>
+<li>What we must see but don't collect: This is information which we don't bother
+to store but because of how the technology works, we necessarily have access to it.</li>
+<li>What we must know: This is metadata which we cannot help but see because of the
+way the technology works</li>
+<li>What we want to know: This is information which we really want to know in order
+to make CryptPad better every day</li>
+</ul>
+<p>We want to know everything about <em>people</em>, we want to know how <em>people</em> use CryptPad,
+why <em>people</em> use CryptPad and how we can make their experience easier. However, we
+don't want to know anything at all about <em>you</em>.</p>
+<p>This poses a challenge because we want to collect as much aggregate information as we
+can in order to make a great web service, but we don't want to collect data that can
+be <em>linked</em> in order to tell a story about you.</p>
+<h2>What we can't know</h2>
+<p>There are a few things which the Zero Knowledge design of CryptPad does not allow
+us to know at all. These include (obviously) your password and the content of your
+pads, but less obviously, the titles of your pads, the names of the contributors and
+your username (you can even have the same username as someone else on the system, we
+won't know). The types of your pads are also unknown to us though we could make
+educated guesses by looking at the encrypted data.</p>
+<p><em>It is our promise to you that we will never collect this information.</em></p>
+<h2>What we could know but don't bother to collect</h2>
+<p>There are also some things which we don't really want to know but we cannot avoid
+seeing it anyway. This includes most importantly the IP addresses of people who
+edited a specific pad. Technically we know your
+<a href="https://en.wikipedia.org/wiki/IP_address">IP address</a> because it's how you
+communicate with our server, but most of the actual operations are done using
+commands sent down a <a href="https://en.wikipedia.org/wiki/WebSocket">WebSocket</a>.
+Once the WebSocket is established, we assign you a random ID and this is how
+you are referenced, what appears in our server logs looks like this:</p>
+<pre><code>198.167.222.70 - - [06/Jul/2017:20:47:45 +0200] &quot;GET /pad/ HTTP/1.1&quot;
+304 0 &quot;-&quot; &quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36
+(KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36&quot; &quot;-&quot;
+</code></pre>
+<p>Notice there is no pad ID in there, the pad ID is not in the URL so it doesn't go
+in the server logs by default.</p>
+<p>Compare this with EtherPad:</p>
+<pre><code>  IP Address                                             Pad ID
+198.167.222.70 - - [06/Jul/2017:11:54:37 -0700] &quot;GET /p/UNWnpczTkq HTTP/1.1&quot;
+200 8920 &quot;https://pad.meshwith.me/&quot; &quot;Mozilla/5.0 (Macintosh; Intel Mac OS X
+10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109
+Safari/537.36&quot;
+</code></pre>
+<p><em>You cannot verify that we're not collecting this so best assume that we are.</em></p>
+<h2>What we must know</h2>
+<p>There are some things which we need to know in order for CryptPad to function
+properly, we need to know which pads are in your drive in order to impose
+storage limits on logged-in users and to expire pads which nobody cares about.
+However, we don't know much about who you are. Since we don't know your username,
+to us you are identified by a public signing key, something like this:</p>
+<p><code>YIBzjPr3beuGgfHNglGfo3xq-dquxsj4Bst-ze7mL9A</code></p>
+<p>We know that <code>YIBzjPr3beuGgfHNglGfo3xq-dquxsj4Bst-ze7mL9A</code> has 392 MB of data in
+their CryptDrive including a pad of some type which has the ID
+<code>fe382219b10c0396de63d2bab7942390</code> and an uploaded which we know as
+<code>ff2fdf9bb99ecc89d29d780780de10efdac14ed15e93b235</code>. One of these pads that they
+have is actually their drive itself, but we don't strictly know which one (again,
+we can take guesses based on the size of the patches). You can find out what your
+signing key is by looking at in your <a href="https://cryptpad.fr/settings">settings page</a>.</p>
+<p>We also know when each pad was last accessed so that we can know to delete pads
+which are not in anybody's CryptDrive and have not been opened in a long time.</p>
+<h3>Why we can't avoid collecting IP addresses</h3>
+<p>Being able to know how many <em>different</em> people are using CryptPad is very important
+to us. One rather rude person decided to try to crash our server by creating 647,533
+pads. They didn't put much thought into their attack because what they were doing
+was not actually creating pads, but it illustrates the problem that if we don't
+know how many <em>different</em> people are using the server, we don't have any idea
+whether we are popular or under attack. Worse, we don't know what features have
+widespread support vs. which ones are only popular with a few prolific users.</p>
+<p>One obvious thought is to simply run the IP addresses through a hash function the
+way we traditionally hash passwords. However this sadly cannot work because there
+are only 4.2 billion IPv4 addresses and constructing a
+<a href="https://en.wikipedia.org/wiki/Rainbow_table">rainbow table</a> to get back the
+original IP addresses would take only about 1 day of computer time. So in the end
+we simply log the IP addresses and don't worry about it.</p>
+<h3>What a pad looks like to us</h3>
+<p>A pad is stored as a file which represents a sequence of encrypted <em>patches</em>.
+These patches change the content of the pad from nothing to whatever it becomes in
+the end. A typical message looks something like this:</p>
+<pre><code>[0,&quot;69d46337f826c0ecd881be59c119a527&quot;,&quot;MSG&quot;,&quot;fe382219b10c0396de63d2bab7942390&quot;,&quot;51Q....&quot;]
+</code></pre>
+<p>It starts with a zero and then your temporary random ID, then it contains the word
+MSG and the ID of the pad which it is sent to, this format is exactly the same as
+what is sent on the wire. Finally it contains the encrypted patch which tells us
+essentially nothing except it gives us a rough idea of just how big the change was.</p>
+<p>Occasionally the client will send a <em>checkpoint</em>, this is a special patch which
+removes all of the content and then puts it all back again. To us, a checkpoint
+looks the same as anything else, it is a big ball of encrypted data, except in this
+case it is flagged as a checkpoint so the server knows it can send only part of
+the history of the pad instead of all of it. However, they do give us a good idea
+of how big the pad actually is at that time.</p>
+<h2>What we collect because we want to know</h2>
+<p>What we really want to understand is your <em>experience</em> with CryptPad and how we can
+make that experience better. So therefore we collect quite a number of data-points
+about where people click and what their browser supports. For example we collect
+the dimensions of your browser. Not because we want to know who you are but because
+we want to know that types of browsers we need to support.</p>
+<pre><code>198.167.222.70 - - [06/Jul/2017:21:26:15 +0200]
+&quot;HEAD /common/feedback.html?DIMENSIONS:752x1440=1499369175085 HTTP/1.1&quot; 200 0
+&quot;https://cryptpad.fr/settings/&quot; &quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5)
+AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36&quot; &quot;-&quot;
+</code></pre>
+<p>You can see an exhaustive list of things that we collect by checking out the
+<a href="https://github.com/xwiki-labs/cryptpad/search?p=2&amp;q=Cryptpad.feedback&amp;type=&amp;utf8=%E2%9C%93">feedback functionality</a> in the CryptPad source code but
+as of the time of this writing, we are collecting feedback about the following
+things (usually we just collect the fact that an event occurred, not more).</p>
+<ul>
+<li>Clicking &quot;upgrade account&quot;</li>
+<li>Clicking &quot;support cryptpad&quot;</li>
+<li>Presentation: clicking on &quot;print slides&quot;</li>
+<li>Registering and logging in</li>
+<li>Opening your recent pads as an anonymous user</li>
+<li>Clicking any CKEditor button such as &quot;bold&quot; or &quot;italic&quot;</li>
+<li>Displaying the drive as icons or as a list</li>
+<li>Creating and using templates</li>
+<li>Showing and hiding the userlist or CKEditor menu bar</li>
+<li>Whether your browser is missing certain important features like
+<a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Proxy">Proxy</a>,
+<a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray">isArray</a>
+or <a href="https://developer.mozilla.org/en/docs/Web/API/Window/localStorage">localStorage</a></li>
+<li>Which type of pad you are using</li>
+<li>The dimensions of your browser window</li>
+<li>When you have changed your display name</li>
+<li>Whether you have migrated your CryptDrive from the legacy format</li>
+</ul>
+<p>If you are worried about what we might do with this data, you can disable
+feedback collection in your <a href="https://cryptpad.fr/settings/">settings page</a>. But
+keep in mind that if you disable it we cannot help but know, because your IP
+address will be in the tiny minority of addresses which access the site but don't
+send feedback messages.</p>
+<h2>What we can learn from the data</h2>
+<h3>1. People mostly use CryptPad to make a plain old pad</h3>
+<p>But the code/markdown pad and the CryptDrive are catching up.
+<img src="/images/Analytics-padtypes.png" alt="Unique IPs per pad type"></p>
+<h3>2. Activity has been on a very slow rise but with a few spikes</h3>
+<p>This chart shows unique IPs per day hitting CryptPad. You can things are relatively
+flat over time except for a big day in June and then some increased activity in July
+after the UI improvements were rolled out.
+<img src="/images/Analytics-uniques.png" alt="Unique IPs per day"></p>
+<h3>3. Browser window dimensions are all over the map</h3>
+<p>This chart shows bubbles which are bigger depending on how many different IPs
+report the same browser window dimensions. Tragically it seems that there is no
+way to predict what aspect ratio a device using CryptPad is going to have.
+<img src="/images/Analytics-browserdimensions.png" alt="Browser window dimensions"></p>
+<h3>4. Lots of pads are made and then abandoned</h3>
+<p>The first chart shows in blue the number of pads created each day and the number
+of pads which become &quot;abandoned&quot; (have not been touched in 2 weeks). This says
+that perhaps pads are considered ephemeral and not to be used for the long term.
+<img src="/images/Analytics-createdabandoned.png" alt="Created vs. abandoned pads"></p>
+<p>Here we can see the evolution of pads which have been accessed within the last
+day the last week and the last month. There is slow but steady growth in the
+pads active in the past month.
+<img src="/images/Analytics-activepads.png" alt="Number of active pads"></p>
+<h3>5. People use CryptPad for a while, then leave</h3>
+<p>We measured 15,000 IP addresses which came to CryptPad just to look at one pad and
+then left, but of the 13,000 who stayed longer than that we analyzed the time when
+they first arrived and the time when they made their last visit. About 630 IP
+addressses have been continually using CryptPad for all 45 days.
+<img src="/images/Analytics-peopleleave.png" alt="Number of IPs continuing to access CryptPad">
+We want to make CryptPad a useful tool for helping people get organized and make
+their projects succeed. So whenever people decide that CryptPad is not the right
+answer for them, we care about what went wrong and how we can make it better.</p>
+<h2>How we analyze this data</h2>
+<p>We do all of our analysis ourselves, and we don't share any of this data with Google
+or other data companies. We're thankful to
+<a href="https://www.elastic.co/products/kibana">Kibana/ElasticSearch</a> and
+<a href="https://www.elastic.co/products/logstash">LogStash</a> for making it possible to do
+in depth analysis on our own computers without resorting to a cloud service.</p>
+
+    </article>
+
+    <nav class="article-pagination" aria-label="Pagination">
+        
+            <a href="/2017/08/18/CryptPad-s-New-Direction/">Newer: <span class="title">CryptPad&#39;s New Direction</span></a>
+        
+        
+            <a href="/2017/06/21/CryptPad-Jackalope-file-upload-pdf-and-pictures/">Older: <span class="title">CryptPad Jackalope - File Upload, PDF and Pictures</span></a>
+        
+    </nav>
+
+        </section>
+        
+<section id="top-tags" class="post">
+
+            <h3><i class="fa fa-tags" aria-hidden="true"></i> Top Tags</h3>
+<ul>
+
+    <li>
+        <a class="tag" href="/tags/status-update">status update</a><span class="count">21</span></li>
+
+    <li>
+        <a class="tag" href="/tags/funding">funding</a><span class="count">14</span></li>
+
+    <li>
+        <a class="tag" href="/tags/roadmap">roadmap</a><span class="count">10</span></li>
+
+    <li>
+        <a class="tag" href="/tags/security">security</a><span class="count">9</span></li>
+
+    <li>
+        <a class="tag" href="/tags/ngi">ngi</a><span class="count">8</span></li>
+
+    <li>
+        <a class="tag" href="/tags/donate">donate</a><span class="count">7</span></li>
+
+    <li>
+        <a class="tag" href="/tags/open-collective">open collective</a><span class="count">6</span></li>
+
+    <li>
+        <a class="tag" href="/tags/research">research</a><span class="count">6</span></li>
+
+    <li>
+        <a class="tag" href="/tags/forms">forms</a><span class="count">6</span></li>
+
+    <li>
+        <a class="tag" href="/tags/open-source">open-source</a><span class="count">5</span></li>
+
+</ul>
+        </section>
+        
+    <section id="social" class="post">
+
+            <h3><i class="fa fa-link" aria-hidden="true"></i> Links</h3>
+<ul>
+    <li>
+        <a href="https://cryptpad.org">
+            <i aria-hidden="true" class="fa fa-globe"></i>Project website
+        </a>
+    </li>
+    <li>
+        <a href="https://opencollective.com/cryptpad/contribute">
+            <i aria-label="OpenCollective" class="fa fa-open-collective"></i>Donate
+        </a>
+    </li>
+</ul>
+<ul>
+    <li>
+        <a href="https://forum.cryptpad.org">
+            <i aria-hidden="true" class="fa fa-bullhorn"></i>Forum
+        </a>
+    </li>
+    <li>
+        <a href="https://matrix.to/#/#cryptpad:matrix.xwiki.com">
+            <i aria-hidden="true" class="fa fa-matrix-org"></i>Chat (Matrix)
+        </a>
+    </li>
+    <li>
+        <a rel="me" href="https://fosstodon.org/@cryptpad">
+            <i aria-hidden="true" class="fa fa-mastodon"></i>Mastodon
+        </a>
+    </li>
+    <li>
+        <a href="https://peertube.xwiki.com/c/cryptpad_channel/videos">
+            <i aria-hidden="true" class="fa fa-peertube"></i>Peertube
+        </a>
+    </li>
+    <li>
+        <a href="https://pixelfed.social/cryptpad_design">
+            <i aria-hidden="true" class="fa fa-pixelfed"></i>Pixelfed
+        </a>
+    </li>
+</ul>
+<ul>
+    <li>
+        <a href="/atom.xml">
+            <i aria-hidden="true" class="fa fa-rss"></i>RSS Feed
+        </a>
+    </li>
+</ul>
+        </section>
+    </main>
+</body>
+
+</html>

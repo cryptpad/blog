@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+
+    <title>March 2022 status: catching up on recent news | CryptPad Blog</title> 
+    
+
+    
+    
+    <meta property="og:type" content="webpage">
+    <meta property="og:title" content="March 2022 status: catching up on recent news">
+    <meta property="og:url" content="http://blog.cryptpad.org/2022/03/29/March-2022-status-catching-up-on-recent-news/">
+    <meta property="og:page_name" content="March 2022 status: catching up on recent news">
+    <meta property="og:locale" content="default">
+    <meta property="og:image" content="http://blog.cryptpad.org/images/dapsi-what-normally-happens.png">
+    <meta property="og:description" content="The beginning of 2022 has been sufficiently busy that we decided to skip two of our usual monthly status update blog posts. Things have not calmed down that much in March, but we didn&#39;t want to go any longer without an update.">
+    <meta name="twitter:card" content="The beginning of 2022 has been sufficiently busy that we decided to skip two of our usual monthly status update blog posts. Things have not calmed down that much in March, but we didn&#39;t want to go any longer without an update.">
+    <meta name="twitter:title" content="March 2022 status: catching up on recent news">
+
+
+
+    <link rel="alternate" href="/atom.xml" title="CryptPad Blog" type="application/atom+xml">
+
+    <link rel="icon" href="/theme/favicon.png">
+
+
+</head>
+
+<body>
+    <main class="container">
+        <header>
+            
+    <a href="/" class="back-home">
+        <i class="fa fa-arrow-left" aria-hidden="true"></i> <i class="fa fa-home" aria-hidden="true"></i> Homepage
+    </a>
+
+            <a href="/">
+                <img class="cp-logo" src="/theme/CryptPad_logo.svg" aria-hidden="true" alt="">
+                <h1>CryptPad Blog</h1>
+            </a>
+        </header>
+        <section id="content">
+            
+    <article class="post" lang="en">
+        <section class="header">
+            <h1>March 2022 status: catching up on recent news</h1>
+            <p class="meta">
+                
+                    Aaron MacSween -
+                
+                Mar 29, 2022
+                    
+                    
+            </p>
+            <div class="article-tags">
+    
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        <ul class="tags" aria-label="Tags">
+        
+            <li><a class="tag" href="/tags/roadmap">roadmap</a></li>
+        
+            <li><a class="tag" href="/tags/status-update">status update</a></li>
+        
+        </ul>
+    
+</div>
+        </section>
+        <p>The beginning of 2022 has been sufficiently busy that we decided to skip two of our usual monthly status update blog posts. Things have not calmed down that much in March, but we didn't want to go any longer without an update.</p>
+<h2>DAPSI wrap-up and FOSDEM</h2>
+<p><img src="/images/dapsi-what-normally-happens.png" alt="A diagram depicting a client sending content to a server for conversion"></p>
+<p>In January we concluded the INTEROFFICE project which was sponsored by <a href="https://dapsi.ngi.eu/">NGI DAPSI</a>. The DAPSI project administrators arranged a final event where all the projects they'd funded summarized their results in brief five-minute pitches. David Benqué, our design lead, managed to fit our most interesting results into this limited timespan. His presentation is available <a href="https://www.youtube.com/watch?v=RQ9Ll-1UEF4&amp;t=2437s">on YouTube</a>.</p>
+<p><img src="/images/dapsi-with-interoffice.png" alt="A diagram depicting a server sending a conversion engine to a client"></p>
+<p>Approximately two weeks later David gave a somewhat longer presentation at FOSDEM, titled <strong>INTEROFFICE: Making CryptPad more interoperable with common office formats</strong>, in the <em>Collaborative Information and Content Management Applications</em> dev room. The talk's description, video recording, slides, and links to related talks from the same track can be found on <a href="https://fosdem.org/2022/schedule/event/collabinteroffice/">FOSDEM's website</a>.</p>
+<p>Even more information about the project can be found on DAPSI's website, where we are listed as one of the program's <a href="https://dapsi.ngi.eu/success-story-interoffice-collaborating-on-office-documents-without-giving-up-privacy/">success stories</a>.</p>
+<h2>Intigriti bug bounty program and new releases</h2>
+<p>Late in 2021 we were invited to participate in a bug bounty program coordinated by <a href="https://www.intigriti.com/">Intigriti</a> and <a href="https://ec.europa.eu/info/news/european-commissions-open-source-programme-office-starts-bug-bounties-2022-jan-19_en">sponsored</a> by the European Commission. The program began in mid-January and continued up until mid-March, with independent security researchers probing CryptPad's code looking for issues which could negatively impact users.</p>
+<p>Our 4.13 release addressed a number of security issues which are described in its <a href="https://github.com/xwiki-labs/cryptpad/releases/tag/4.13.0">release notes</a>, however, we've noticed that relatively few third-party instance administrators have applied these updates. Furthermore, many that have updated have not done so correctly, and in some cases this means that their users' data may be at risk.</p>
+<p>Up until now we've tried to make it <em>easier to configure CryptPad correctly</em> by providing our <a href="https://docs.cryptpad.fr/en/admin_guide/installation.html">admin installation guide</a>, including clear and detailed explanations of the update process in each release's notes, as well as shipping a built-in diagnostics page which tells administrators what they need to correct. The trouble with this approach is that many admins don't read the docs, the release notes, or review the diagnostics page. With this in mind, we're starting to consider that the only reliable way to communicate with admins is through the platform's code.</p>
+<p>Starting with our upcoming 4.14 release we plan to shift our strategy towards making CryptPad <em>harder to configure incorrectly</em>. We have made a number of changes that cause misconfigured instances to abort loading entirely, rather than proceed without the expected level of security.</p>
+<p>We are also expanding our definition of <em>correct configuration</em> to include things like <em>privacy policies</em> and <em>terms of service</em>. If an instance permits registration of user accounts but has not included either of these links then the diagnostics page will suggest that they add such pages or deactivate registration.</p>
+<p>Some of these features are already live on <a href="https://cryptpad.fr">cryptpad.fr</a>, and we plan to tag the latest code as a release on GitHub as soon as we've finalized its notes.</p>
+<h2>What's next</h2>
+<p>Our <a href="https://github.com/xwiki-labs/cryptpad/releases/4.7.0">4.7.0 release</a> release introduced an option permitting administrators to opt-in to inclusion in a directory of public instances. At the time no such directory existed because we wanted to confirm that there was actually interest from a sufficient number of administrators. At this point there are nineteen admins who have indicated their interest, ten of which are running an up-to-date instance which passes its tests, so we're moving forward with the project.</p>
+<p>We've decided to make the 4.14 release the last major version of the 4.0 cycle and have begun preparing for a 5.0 release. We're going to introduce a new look for CryptPad with a simpler home page, with more information moved out of the platform itself and onto our project site (<a href="https://cryptpad.org">cryptpad.org</a>), which will also host the public instance directory.</p>
+<p>Since our team consists of only three full-time developers we're trying to create more ways for the community to get involved with the direction of the open-source project. We've created <a href="https://matrix.to/#/#cryptpad:matrix.xwiki.com">a space on the federated Matrix network</a> where members of the community can connect with each other. It offers dedicated rooms for instance administrators, developers, translators, and general discussion about the project's roadmap and governance.</p>
+<p>As always, if you like what we're doing and would like to support our continued effort, you can donate through <a href="https://opencollective.com/cryptpad">our OpenCollective campaign</a> or purchase a subscription for a premium account on <a href="https://cryptpad.fr">cryptpad.fr</a>.</p>
+
+    </article>
+
+    <nav class="article-pagination" aria-label="Pagination">
+        
+            <a href="/2022/04/27/status-2022-04/">Newer: <span class="title">April 2022 status: The public instance list goes live</span></a>
+        
+        
+            <a href="/2021/12/30/Preparing-for-2022/">Older: <span class="title">Preparing for 2022</span></a>
+        
+    </nav>
+
+        </section>
+        
+<section id="top-tags" class="post">
+
+            <h3><i class="fa fa-tags" aria-hidden="true"></i> Top Tags</h3>
+<ul>
+
+    <li>
+        <a class="tag" href="/tags/status-update">status update</a><span class="count">21</span></li>
+
+    <li>
+        <a class="tag" href="/tags/funding">funding</a><span class="count">14</span></li>
+
+    <li>
+        <a class="tag" href="/tags/roadmap">roadmap</a><span class="count">10</span></li>
+
+    <li>
+        <a class="tag" href="/tags/security">security</a><span class="count">9</span></li>
+
+    <li>
+        <a class="tag" href="/tags/ngi">ngi</a><span class="count">8</span></li>
+
+    <li>
+        <a class="tag" href="/tags/donate">donate</a><span class="count">7</span></li>
+
+    <li>
+        <a class="tag" href="/tags/open-collective">open collective</a><span class="count">6</span></li>
+
+    <li>
+        <a class="tag" href="/tags/research">research</a><span class="count">6</span></li>
+
+    <li>
+        <a class="tag" href="/tags/forms">forms</a><span class="count">6</span></li>
+
+    <li>
+        <a class="tag" href="/tags/open-source">open-source</a><span class="count">5</span></li>
+
+</ul>
+        </section>
+        
+    <section id="social" class="post">
+
+            <h3><i class="fa fa-link" aria-hidden="true"></i> Links</h3>
+<ul>
+    <li>
+        <a href="https://cryptpad.org">
+            <i aria-hidden="true" class="fa fa-globe"></i>Project website
+        </a>
+    </li>
+    <li>
+        <a href="https://opencollective.com/cryptpad/contribute">
+            <i aria-label="OpenCollective" class="fa fa-open-collective"></i>Donate
+        </a>
+    </li>
+</ul>
+<ul>
+    <li>
+        <a href="https://forum.cryptpad.org">
+            <i aria-hidden="true" class="fa fa-bullhorn"></i>Forum
+        </a>
+    </li>
+    <li>
+        <a href="https://matrix.to/#/#cryptpad:matrix.xwiki.com">
+            <i aria-hidden="true" class="fa fa-matrix-org"></i>Chat (Matrix)
+        </a>
+    </li>
+    <li>
+        <a rel="me" href="https://fosstodon.org/@cryptpad">
+            <i aria-hidden="true" class="fa fa-mastodon"></i>Mastodon
+        </a>
+    </li>
+    <li>
+        <a href="https://peertube.xwiki.com/c/cryptpad_channel/videos">
+            <i aria-hidden="true" class="fa fa-peertube"></i>Peertube
+        </a>
+    </li>
+    <li>
+        <a href="https://pixelfed.social/cryptpad_design">
+            <i aria-hidden="true" class="fa fa-pixelfed"></i>Pixelfed
+        </a>
+    </li>
+</ul>
+<ul>
+    <li>
+        <a href="/atom.xml">
+            <i aria-hidden="true" class="fa fa-rss"></i>RSS Feed
+        </a>
+    </li>
+</ul>
+        </section>
+    </main>
+</body>
+
+</html>

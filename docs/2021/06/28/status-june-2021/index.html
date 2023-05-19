@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+
+    <title>June 2021 status: Forms and a call to instance administrators | CryptPad Blog</title> 
+    
+
+    
+    
+    <meta property="og:type" content="webpage">
+    <meta property="og:title" content="June 2021 status: Forms and a call to instance administrators">
+    <meta property="og:url" content="http://blog.cryptpad.org/2021/06/28/status-june-2021/">
+    <meta property="og:page_name" content="June 2021 status: Forms and a call to instance administrators">
+    <meta property="og:locale" content="default">
+    <meta property="og:image" content="http://blog.cryptpad.org/images/form-preview.png">
+    <meta property="og:description" content="This month we released two versions of CryptPad. 4.6 was a stability update addressing many minor issues while the team prepared for 4.7 and a major new feature: the new Forms application.">
+    <meta name="twitter:card" content="This month we released two versions of CryptPad. 4.6 was a stability update addressing many minor issues while the team prepared for 4.7 and a major new feature: the new Forms application.">
+    <meta name="twitter:title" content="June 2021 status: Forms and a call to instance administrators">
+
+
+
+    <link rel="alternate" href="/atom.xml" title="CryptPad Blog" type="application/atom+xml">
+
+    <link rel="icon" href="/theme/favicon.png">
+
+
+</head>
+
+<body>
+    <main class="container">
+        <header>
+            
+    <a href="/" class="back-home">
+        <i class="fa fa-arrow-left" aria-hidden="true"></i> <i class="fa fa-home" aria-hidden="true"></i> Homepage
+    </a>
+
+            <a href="/">
+                <img class="cp-logo" src="/theme/CryptPad_logo.svg" aria-hidden="true" alt="">
+                <h1>CryptPad Blog</h1>
+            </a>
+        </header>
+        <section id="content">
+            
+    <article class="post" lang="en">
+        <section class="header">
+            <h1>June 2021 status: Forms and a call to instance administrators</h1>
+            <p class="meta">
+                
+                    David Benqué -
+                
+                Jun 28, 2021
+                    
+                    
+            </p>
+            <div class="article-tags">
+    
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        <ul class="tags" aria-label="Tags">
+        
+            <li><a class="tag" href="/tags/status-update">status update</a></li>
+        
+            <li><a class="tag" href="/tags/administration">administration</a></li>
+        
+            <li><a class="tag" href="/tags/forms">forms</a></li>
+        
+        </ul>
+    
+</div>
+        </section>
+        <p>This month we released two versions of CryptPad. <a href="https://github.com/xwiki-labs/cryptpad/releases/tag/4.6.0">4.6</a> was a stability update addressing many minor issues while the team prepared for <a href="https://github.com/xwiki-labs/cryptpad/releases/tag/4.7.0">4.7</a> and a major new feature: the new <em>Forms</em> application.</p>
+<h2>Say hello to Forms!</h2>
+<p><img src="/images/form-preview.png" alt="Preview of the new Form application"></p>
+<p>The <em>Poll</em> application in CryptPad was aimed at choosing a meeting date between a group of people. However it had some major shortcomings including &quot;all or nothing&quot; edit rights where participants could modify other people's answers. Part of our <a href="https://nlnet.nl/project/CryptPadForms/">Dialogue</a> project proposal was to address these issues in a complete re-write of the application. Another aspect of the project aims to provide a new application for online surveys beyond simple polls.</p>
+<p>The new <em>Form</em> application is an answer to both of these proposals. Polls are now one of 8 question types that can be added to an online form. Earlier in the project we <a href="https://blog.cryptpad.fr/2021/04/26/status-april-2021/">spun out the reminders API element of forms into a full blown calendar app</a>. With <em>Forms</em> we are merging a variety of use cases into one application. As we have <a href="https://social.weho.st/@cryptpad/106419898274848746">indicated</a> polls created with the old application remain available, but the creation of new ones is discouraged and all our future development efforts will be directed at <em>Forms</em>.</p>
+<p>We released the first Beta version of forms with CryptPad <a href="https://github.com/xwiki-labs/cryptpad/releases/tag/4.7.0">4.7.0</a> (on June 16th). There are many things we still want to improve, including:</p>
+<ul>
+<li>Export of responses (e.g. to .CSV)</li>
+<li>Better visualization of responses (e.g. with simple bar charts)</li>
+<li>&quot;Required&quot; questions that would print an error if left empty</li>
+<li>Notifications for form authors (e.g. when someone has responded)</li>
+<li>A default &quot;poll&quot; template to make it easy to replicate the behaviour of the deprecated <em>Poll</em> app</li>
+</ul>
+<p>We are gathering feedback on these and anything else that might be improved, using the <em>Form</em> app itself for a feedback survey that is open until <strong>July 12th</strong>. Please <a href="https://cryptpad.fr/form/#/2/form/view/gYs4QS7DetInCXy0z2CQoUW6CwN6kaR2utGsftDzp58/">let us know of any comments on the application</a> and what you would like to see improved, especially if you use online forms regularly. We really appreciate the time of nearly 100 people who have already sent in their comments. These will inform our work as we improve <em>Forms</em> this summer.</p>
+<p>Details on how to use the <em>Form</em> application are available in the <a href="https://docs.cryptpad.fr/en/user_guide/apps/form.html">CryptPad User Guide</a>.</p>
+<h2>A call to instance administrators</h2>
+<p>This month we sent out our first—and last—mass email to CryptPad instance administrators. This was a strange feeling for a team that spends most of its time working on ways to <strong>not</strong> know anything about its users. However we felt that version 4.7.0 was a good time to remind all admins to upgrade to latest version, and to ask for their consent for future communications as this is now managed directly from the admin panel.</p>
+<p>First of all, how did we have their email? The configuration for a new instance includes providing an email contact for the administrator, and this is sent to the development team in the daily &quot;ping&quot; that lets us know how many declared CryptPad instances are active. This is all detailed in the configuration file that admins read when setting up their instance.</p>
+<p>In both releases this month we have made improvements to the administration panel of CryptPad instances. More settings, such as the setup for the Support ticket mailbox, are now available from the panel rather than buried in configuration files. This also includes new settings for administrators to manage how they communicate (or not) with the development team.</p>
+<p>The &quot;mass email&quot; was to encourage all administrators to upgrade to the latest 4.7.0 version in order to 1) benefit from all of the new features and security improvements made to CryptPad in the last few months (or years depending on the version they were on) and 2) manage further communication with the development team going forward. These communications will include security notifications and other things such as inclusion in a directory of open instances that we are working on setting up.</p>
+<hr>
+<p>There is one last bit of news to wrap up: CryptPad is now included in <a href="https://catalogue.numerique.gouv.fr/solutions/cryptpad">Catalogue GouvTech, a software directory curated by the French state</a></p>
+<p>The next month will be spent improving <em>Forms</em> and starting work on our <a href="https://blog.cryptpad.fr/2021/04/26/status-april-2021/">INTEROFFICE project</a> for <a href="https://dapsi.ngi.eu">DAPSI</a>, working towards improved import/export and document conversions from within CryptPad.</p>
+
+    </article>
+
+    <nav class="article-pagination" aria-label="Pagination">
+        
+            <a href="/2021/06/29/status-july-2021/">Newer: <span class="title">July 2021 status: Research on Forms and file import/export</span></a>
+        
+        
+            <a href="/2021/05/26/status-may-2021/">Older: <span class="title">May 2021 status: Communities wrap up and initial work on Forms</span></a>
+        
+    </nav>
+
+        </section>
+        
+<section id="top-tags" class="post">
+
+            <h3><i class="fa fa-tags" aria-hidden="true"></i> Top Tags</h3>
+<ul>
+
+    <li>
+        <a class="tag" href="/tags/status-update">status update</a><span class="count">21</span></li>
+
+    <li>
+        <a class="tag" href="/tags/funding">funding</a><span class="count">14</span></li>
+
+    <li>
+        <a class="tag" href="/tags/roadmap">roadmap</a><span class="count">10</span></li>
+
+    <li>
+        <a class="tag" href="/tags/security">security</a><span class="count">9</span></li>
+
+    <li>
+        <a class="tag" href="/tags/ngi">ngi</a><span class="count">8</span></li>
+
+    <li>
+        <a class="tag" href="/tags/donate">donate</a><span class="count">7</span></li>
+
+    <li>
+        <a class="tag" href="/tags/open-collective">open collective</a><span class="count">6</span></li>
+
+    <li>
+        <a class="tag" href="/tags/research">research</a><span class="count">6</span></li>
+
+    <li>
+        <a class="tag" href="/tags/forms">forms</a><span class="count">6</span></li>
+
+    <li>
+        <a class="tag" href="/tags/open-source">open-source</a><span class="count">5</span></li>
+
+</ul>
+        </section>
+        
+    <section id="social" class="post">
+
+            <h3><i class="fa fa-link" aria-hidden="true"></i> Links</h3>
+<ul>
+    <li>
+        <a href="https://cryptpad.org">
+            <i aria-hidden="true" class="fa fa-globe"></i>Project website
+        </a>
+    </li>
+    <li>
+        <a href="https://opencollective.com/cryptpad/contribute">
+            <i aria-label="OpenCollective" class="fa fa-open-collective"></i>Donate
+        </a>
+    </li>
+</ul>
+<ul>
+    <li>
+        <a href="https://forum.cryptpad.org">
+            <i aria-hidden="true" class="fa fa-bullhorn"></i>Forum
+        </a>
+    </li>
+    <li>
+        <a href="https://matrix.to/#/#cryptpad:matrix.xwiki.com">
+            <i aria-hidden="true" class="fa fa-matrix-org"></i>Chat (Matrix)
+        </a>
+    </li>
+    <li>
+        <a rel="me" href="https://fosstodon.org/@cryptpad">
+            <i aria-hidden="true" class="fa fa-mastodon"></i>Mastodon
+        </a>
+    </li>
+    <li>
+        <a href="https://peertube.xwiki.com/c/cryptpad_channel/videos">
+            <i aria-hidden="true" class="fa fa-peertube"></i>Peertube
+        </a>
+    </li>
+    <li>
+        <a href="https://pixelfed.social/cryptpad_design">
+            <i aria-hidden="true" class="fa fa-pixelfed"></i>Pixelfed
+        </a>
+    </li>
+</ul>
+<ul>
+    <li>
+        <a href="/atom.xml">
+            <i aria-hidden="true" class="fa fa-rss"></i>RSS Feed
+        </a>
+    </li>
+</ul>
+        </section>
+    </main>
+</body>
+
+</html>

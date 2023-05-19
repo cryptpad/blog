@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+
+    <title>Feb. 2021 status: Dark mode and organisation plans | CryptPad Blog</title> 
+    
+
+    
+    
+    <meta property="og:type" content="webpage">
+    <meta property="og:title" content="Feb. 2021 status: Dark mode and organisation plans">
+    <meta property="og:url" content="http://blog.cryptpad.org/2021/02/24/status-feb-2021/">
+    <meta property="og:page_name" content="Feb. 2021 status: Dark mode and organisation plans">
+    <meta property="og:locale" content="default">
+    <meta property="og:image" content="http://blog.cryptpad.org/images/dark-drive.png">
+    <meta property="og:description" content="This is a new format of post we are starting on the blog: publishing the monthly updates that were until now only circulated in the internal XWiki newsletter.">
+    <meta name="twitter:card" content="This is a new format of post we are starting on the blog: publishing the monthly updates that were until now only circulated in the internal XWiki newsletter.">
+    <meta name="twitter:title" content="Feb. 2021 status: Dark mode and organisation plans">
+
+
+
+    <link rel="alternate" href="/atom.xml" title="CryptPad Blog" type="application/atom+xml">
+
+    <link rel="icon" href="/theme/favicon.png">
+
+
+</head>
+
+<body>
+    <main class="container">
+        <header>
+            
+    <a href="/" class="back-home">
+        <i class="fa fa-arrow-left" aria-hidden="true"></i> <i class="fa fa-home" aria-hidden="true"></i> Homepage
+    </a>
+
+            <a href="/">
+                <img class="cp-logo" src="/theme/CryptPad_logo.svg" aria-hidden="true" alt="">
+                <h1>CryptPad Blog</h1>
+            </a>
+        </header>
+        <section id="content">
+            
+    <article class="post" lang="en">
+        <section class="header">
+            <h1>Feb. 2021 status: Dark mode and organisation plans</h1>
+            <p class="meta">
+                
+                    David Benqué -
+                
+                Feb 24, 2021
+                    
+                    
+            </p>
+            <div class="article-tags">
+    
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        <ul class="tags" aria-label="Tags">
+        
+            <li><a class="tag" href="/tags/status-update">status update</a></li>
+        
+        </ul>
+    
+</div>
+        </section>
+        <p>This is a new format of post we are starting on the blog: publishing the monthly updates that were until now only circulated in the internal XWiki newsletter. This will be an opportunity to regularly catch up on new features, research projects, funding/budget updates, and any other relevant news.</p>
+<h2>FOSDEM presentations</h2>
+<p>Aaron and David presented different aspects of CryptPad at FOSDEM 2021. Please see the <a href="https://blog.cryptpad.fr/2021/02/03/CryptPad-at-FOSDEM-2021/">updated blog post</a> for videos of both presentations.</p>
+<h2>Dark mode</h2>
+<p>This month we followed up on the rebranding started with version 4.0 by thoroughly refactoring how styles, especially colors, are applied across CryptPad. This allows for better maintainance and easier customisation. The first custom theme is the long requested <strong>dark mode</strong>.</p>
+<p>CryptPad will now follow the browser or operating system preference by default, and switch to a dark theme accordingly. The theme can also be set manually in Settings &gt; Appearance.</p>
+<p><img src="/images/dark-drive.png" alt="The CryptDrive in dark mode"></p>
+<p>Following the introduction of the dark theme in our 4.2 release, we noticed a few problems and got to work on correcting them. The most noticeable issue was the use of a dark background for rich text documents. Wanting to offer a &quot;true&quot; dark mode, we had intially switched the editor itself to a dark background, and made the default text color contrast with that automatically. It soon became apparent that this was a problematic choice in rich text documents where users are able to set colors for text. It may lead to text being un-readable depending on the theme used. One particularly painful example was a document about making web content accessible written in black text on a dark background. We reverted our decision and opted for a light background in the editor even when the rest of the interface is dark. There is a reason mainstream editors such as Microsoft Word do it this way. You can expect more polish on the dark theme in the upcoming 4.3 release.</p>
+<p><img src="/images/dark-shame.png" alt="Web accessibility guide shown with black text on a dark background"></p>
+<p><em>The web content accessibility guide that prompted us to revert our decision on the dark theme rich text editor. <a href="https://cryptpad.fr/pad/#/2/pad/view/nOPkDL0nzbEi1DXnpEED0nqORBPF6pqS3SOUrKBqV9o/embed/">The guide</a> is by AccessiBloc.</em></p>
+<h2>Organization plans</h2>
+<p>On <a href="http://cryptpad.fr">cryptpad.fr</a>, another long-awaited feature were the <strong>Organization plans</strong>. We have been communicating this pricing on request for the last few months but the plans are now <a href="https://cryptpad.fr/accounts/#org">live in the cryptpad.fr interface</a>. These bigger plans have the additional option to download a personalised signed Data Processing Agreement (DPA) for organsations that need to demonstrate they operate according to the GDPR.</p>
+<p>These plans come with 1 business day support and increased storage shared between a number of user accounts, priced as follows:</p>
+<ul>
+<li><strong>25 Users</strong> with 100GB of storage for 500€ a year (ex. VAT)</li>
+<li><strong>100 Users</strong> with 150GB of storage for 1000€ a year (ex. VAT)</li>
+</ul>
+<p>An additional On Premises option is available for organizations that require their own CryptPad instance, with installation and maintainance support by the development team.</p>
+<p>We were happy to welcome the first couple of subscribers on these plans and hope that they will contribute to making CryptPad financially sustainable in the longer term.</p>
+<p><img src="/images/dark-accounts.png" alt="The new organization plans on cryptpad.fr in dark mode."></p>
+<h2>A popular toolkit</h2>
+<p>We had an unexpected spike in traffic early in the month after the following tweet linked to a toolkit made on <a href="http://cryptpad.fr">cryptpad.fr</a>.</p>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Here’s an updated toolkit by people on the ground in India if you want to help. (They removed their previous document as it was outdated.)<a href="https://twitter.com/hashtag/StandWithFarmers">#StandWithFarmers</a> <a href="https://twitter.com/hashtag/FarmersProtest">#FarmersProtest</a> <a href="https://cryptpad.fr/pad/#/2/pad/view/ehTz+drfKPwi4fP5dn0mivwVCKhwNe7OD1YHDiBUj0Y/">https://cryptpad.fr/pad/#/2/pad/vi...</a></p>&mdash; Greta Thunberg (@GretaThunberg) <a href="https://twitter.com/GretaThunberg/status/1357054451769606147">February 3, 2021</a></blockquote>
+<p>This brought a lot of traffic to the service, as illustrated by the spike below. While this was a surprise, our infrastructure was prepared for it and held up very well.</p>
+<p><img src="/images/greta-stonks.png" alt="graph showing a big spike in visits to CryptPad.fr"></p>
+<h2>Delivered: NGI Trust project: Secure Mobile Collaboration</h2>
+<p>We have wrapped up this exploratory project about using CryptPad on mobile devices. There will be dedicated posts about this project in the near future. This project allowed us to scope out, in depth, the options available to make CryptPad work as an &quot;app&quot;. As a summary of our findings, here is what we plan to include in the new Frequently Asked Questions section of our documentation that will be part of the next release:</p>
+<hr>
+<h3>FAQ: Are you planning a mobile app?</h3>
+<p>We are not planning a dedicated mobile application for the following reasons:</p>
+<ul>
+<li>It would dramatically increase the amount of code that has to be developed and maintained, effectively creating other &quot;versions&quot; of CryptPad for iOS and Android.</li>
+<li>CryptPad is open source and can be hosted by anyone who wants to offer the service. Therefore, users of a mobile application would have to specify which CryptPad instance they want to connect to, which would be confusing. To complicate things further, each instance may be running a different version of the software, depending on whether or not the latest updates were applied by the administrators.</li>
+</ul>
+<p>To address these problems, the development team is working on making CryptPad a &quot;Progressive Web App&quot;. This means that it can be used on mobile through the web browser, behaving like an application while being the same software that runs on desktop browsers. This has the benefit of turning every CryptPad instance into a web app provider, rather than putting the burden of choosing the right instance on the user.</p>
+<hr>
+<p>This approach has already started to inform new developments for CryptPad, for example the use of IndexedDB for caching documents which is already deployed. Further improvements will follow, including a full &quot;offline&quot; mode.</p>
+<p>This wraps up our first monthly status post. In March we will be shifting back to our NLNet Communities project and attempt to finish the outstanding deliverables around documentation for developers and instance administrators.</p>
+
+    </article>
+
+    <nav class="article-pagination" aria-label="Pagination">
+        
+            <a href="/2021/03/29/status-march-2021/">Newer: <span class="title">March 2021 status: Public roadmap and Spreadsheet updates</span></a>
+        
+        
+            <a href="/2021/02/03/CryptPad-at-FOSDEM-2021/">Older: <span class="title">CryptPad at FOSDEM 2021</span></a>
+        
+    </nav>
+
+        </section>
+        
+<section id="top-tags" class="post">
+
+            <h3><i class="fa fa-tags" aria-hidden="true"></i> Top Tags</h3>
+<ul>
+
+    <li>
+        <a class="tag" href="/tags/status-update">status update</a><span class="count">21</span></li>
+
+    <li>
+        <a class="tag" href="/tags/funding">funding</a><span class="count">14</span></li>
+
+    <li>
+        <a class="tag" href="/tags/roadmap">roadmap</a><span class="count">10</span></li>
+
+    <li>
+        <a class="tag" href="/tags/security">security</a><span class="count">9</span></li>
+
+    <li>
+        <a class="tag" href="/tags/ngi">ngi</a><span class="count">8</span></li>
+
+    <li>
+        <a class="tag" href="/tags/donate">donate</a><span class="count">7</span></li>
+
+    <li>
+        <a class="tag" href="/tags/open-collective">open collective</a><span class="count">6</span></li>
+
+    <li>
+        <a class="tag" href="/tags/research">research</a><span class="count">6</span></li>
+
+    <li>
+        <a class="tag" href="/tags/forms">forms</a><span class="count">6</span></li>
+
+    <li>
+        <a class="tag" href="/tags/open-source">open-source</a><span class="count">5</span></li>
+
+</ul>
+        </section>
+        
+    <section id="social" class="post">
+
+            <h3><i class="fa fa-link" aria-hidden="true"></i> Links</h3>
+<ul>
+    <li>
+        <a href="https://cryptpad.org">
+            <i aria-hidden="true" class="fa fa-globe"></i>Project website
+        </a>
+    </li>
+    <li>
+        <a href="https://opencollective.com/cryptpad/contribute">
+            <i aria-label="OpenCollective" class="fa fa-open-collective"></i>Donate
+        </a>
+    </li>
+</ul>
+<ul>
+    <li>
+        <a href="https://forum.cryptpad.org">
+            <i aria-hidden="true" class="fa fa-bullhorn"></i>Forum
+        </a>
+    </li>
+    <li>
+        <a href="https://matrix.to/#/#cryptpad:matrix.xwiki.com">
+            <i aria-hidden="true" class="fa fa-matrix-org"></i>Chat (Matrix)
+        </a>
+    </li>
+    <li>
+        <a rel="me" href="https://fosstodon.org/@cryptpad">
+            <i aria-hidden="true" class="fa fa-mastodon"></i>Mastodon
+        </a>
+    </li>
+    <li>
+        <a href="https://peertube.xwiki.com/c/cryptpad_channel/videos">
+            <i aria-hidden="true" class="fa fa-peertube"></i>Peertube
+        </a>
+    </li>
+    <li>
+        <a href="https://pixelfed.social/cryptpad_design">
+            <i aria-hidden="true" class="fa fa-pixelfed"></i>Pixelfed
+        </a>
+    </li>
+</ul>
+<ul>
+    <li>
+        <a href="/atom.xml">
+            <i aria-hidden="true" class="fa fa-rss"></i>RSS Feed
+        </a>
+    </li>
+</ul>
+        </section>
+    </main>
+</body>
+
+</html>

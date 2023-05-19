@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+
+    <title>April 2022 status: The public instance list goes live | CryptPad Blog</title> 
+    
+
+    
+    
+    <meta property="og:type" content="webpage">
+    <meta property="og:title" content="April 2022 status: The public instance list goes live">
+    <meta property="og:url" content="http://blog.cryptpad.org/2022/04/27/status-2022-04/">
+    <meta property="og:page_name" content="April 2022 status: The public instance list goes live">
+    <meta property="og:locale" content="default">
+    <meta property="og:image" content="http://blog.cryptpad.org/images/project-site-preview.png">
+    <meta property="og:description" content="We have been talking about our project site for a while ... Last week we added an important feature to the site: the list of public CryptPad instances.">
+    <meta name="twitter:card" content="We have been talking about our project site for a while ... Last week we added an important feature to the site: the list of public CryptPad instances.">
+    <meta name="twitter:title" content="April 2022 status: The public instance list goes live">
+
+
+
+    <link rel="alternate" href="/atom.xml" title="CryptPad Blog" type="application/atom+xml">
+
+    <link rel="icon" href="/theme/favicon.png">
+
+
+</head>
+
+<body>
+    <main class="container">
+        <header>
+            
+    <a href="/" class="back-home">
+        <i class="fa fa-arrow-left" aria-hidden="true"></i> <i class="fa fa-home" aria-hidden="true"></i> Homepage
+    </a>
+
+            <a href="/">
+                <img class="cp-logo" src="/theme/CryptPad_logo.svg" aria-hidden="true" alt="">
+                <h1>CryptPad Blog</h1>
+            </a>
+        </header>
+        <section id="content">
+            
+    <article class="post" lang="en">
+        <section class="header">
+            <h1>April 2022 status: The public instance list goes live</h1>
+            <p class="meta">
+                
+                    David Benqué -
+                
+                Apr 27, 2022
+                    
+                    
+            </p>
+            <div class="article-tags">
+    
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        <ul class="tags" aria-label="Tags">
+        
+            <li><a class="tag" href="/tags/status-update">status update</a></li>
+        
+            <li><a class="tag" href="/tags/security">security</a></li>
+        
+            <li><a class="tag" href="/tags/project-site">project site</a></li>
+        
+        </ul>
+    
+</div>
+        </section>
+        <p>We have been talking about <a href="https://cryptpad.org">our project site</a> for a while. Its main purpose is to improve communication about CryptPad (the open-source project) and to differentiate it from <a href="https://cryptpad.fr">Cryptpad.fr</a> (the flagship instance we administer). Last week we added an important feature to the site: <a href="https://cryptpad.org/instances/">the list of public CryptPad instances</a>.</p>
+<p><img src="/images/project-site-preview.png" alt="Screenshot of the updated project site. Clicking &quot;Try CryptPad&quot; takes visitors to the public instance list"></p>
+<p>The purpose of this list is to make the meaning of &quot;open-source&quot; clearer, as most people don't otherwise know or care about it: CryptPad can be hosted by anyone who likes, and they are free to offer the service, even in a commercial capacity. For us the development team, this list is also a new way for instance administrators to contribute to the project. <a href="https://cryptpad.fr">Cryptpad.fr</a> exists to provide financial support for development through its paid plans. Administering this instance, for example responding to support tickets, is a significant part of our workload. When a third-party instance accepts to take care of &quot;free&quot; users and their associated support questions it effectively helps us to dedicate more time to improving CryptPad itself for everyone.</p>
+<p>Publishing this list is not straightforward however, especially for a privacy-focused project like CryptPad. What if we inadvertently direct people to a careless or malicious instance that puts their data at risk? To address this we put in place <a href="https://docs.cryptpad.fr/en/admin_guide/admin_panel.html#list-my-instance-in-public-directories">a set of criteria</a> that an instance has to meet in order to be listed:</p>
+<ul>
+<li>It has to be up-to-date with the latest version, meaning the latest security fixes will be applied</li>
+<li>It has to pass a comprehensive series of tests to ensure all recommended security settings are enabled</li>
+<li>Some basic information has to be provided such as the location where encrypted data is hosted and a privacy policy</li>
+</ul>
+<p>In addition to this the instance administrators have, of course, to opt-in for their instance to be listed.</p>
+<p>As of today the list is still short, with only 2 instances aside from <a href="http://CryptPad.fr">CryptPad.fr</a>. However we expect to see this number rise as more of the ~20 administrators who have opted in bring their instance in line with the requirements.</p>
+<iframe src="https://social.weho.st/@cryptpad/108073662309134459/embed" class="mastodon-embed" style="max-width: 100%; border: 0" width="400" allowfullscreen="allowfullscreen"></iframe><script src="https://social.weho.st/embed.js" async="async"></script>
+<p>In addition to the list requirements, we have released two versions this month that take a stronger stance on enforcing correct configuration for <em>all</em> CryptPad instances. We want to prevent CryptPad from providing a false sense of security to users while being misconfigured by administrators and actually putting user information at risk. This is why from version <a href="https://github.com/xwiki-labs/cryptpad/releases/tag/4.14.0">4.14.0</a> and <a href="https://github.com/xwiki-labs/cryptpad/releases/tag/4.14.1">4.14.1</a> CryptPad will not work unless the security guarantees we expect are actually implemented.</p>
+<p>Over the coming weeks we plan to add more information to the <a href="https://cryptpad.org">project site</a>. Some time ago we launched <a href="https://cryptpad.fr/form/#/3/form/view/0684aee21b4a36ed9dc41cfca9a27246/">a survey</a> in which we asked people to tell us what they love about CryptPad. Their responses will be displayed on the home-page. We will also be promoting hosted instances with &quot;Your Own CryptPad&quot; aimed at different sectors: education, NGOs, and enterprise. These will be installed and maintained by the development team for organizations who want the benefits of their own instance.</p>
+
+    </article>
+
+    <nav class="article-pagination" aria-label="Pagination">
+        
+            <a href="/2022/05/19/against-chatcontrol/">Newer: <span class="title">Against #chatcontrol</span></a>
+        
+        
+            <a href="/2022/03/29/March-2022-status-catching-up-on-recent-news/">Older: <span class="title">March 2022 status: catching up on recent news</span></a>
+        
+    </nav>
+
+        </section>
+        
+<section id="top-tags" class="post">
+
+            <h3><i class="fa fa-tags" aria-hidden="true"></i> Top Tags</h3>
+<ul>
+
+    <li>
+        <a class="tag" href="/tags/status-update">status update</a><span class="count">21</span></li>
+
+    <li>
+        <a class="tag" href="/tags/funding">funding</a><span class="count">14</span></li>
+
+    <li>
+        <a class="tag" href="/tags/roadmap">roadmap</a><span class="count">10</span></li>
+
+    <li>
+        <a class="tag" href="/tags/security">security</a><span class="count">9</span></li>
+
+    <li>
+        <a class="tag" href="/tags/ngi">ngi</a><span class="count">8</span></li>
+
+    <li>
+        <a class="tag" href="/tags/donate">donate</a><span class="count">7</span></li>
+
+    <li>
+        <a class="tag" href="/tags/open-collective">open collective</a><span class="count">6</span></li>
+
+    <li>
+        <a class="tag" href="/tags/research">research</a><span class="count">6</span></li>
+
+    <li>
+        <a class="tag" href="/tags/forms">forms</a><span class="count">6</span></li>
+
+    <li>
+        <a class="tag" href="/tags/open-source">open-source</a><span class="count">5</span></li>
+
+</ul>
+        </section>
+        
+    <section id="social" class="post">
+
+            <h3><i class="fa fa-link" aria-hidden="true"></i> Links</h3>
+<ul>
+    <li>
+        <a href="https://cryptpad.org">
+            <i aria-hidden="true" class="fa fa-globe"></i>Project website
+        </a>
+    </li>
+    <li>
+        <a href="https://opencollective.com/cryptpad/contribute">
+            <i aria-label="OpenCollective" class="fa fa-open-collective"></i>Donate
+        </a>
+    </li>
+</ul>
+<ul>
+    <li>
+        <a href="https://forum.cryptpad.org">
+            <i aria-hidden="true" class="fa fa-bullhorn"></i>Forum
+        </a>
+    </li>
+    <li>
+        <a href="https://matrix.to/#/#cryptpad:matrix.xwiki.com">
+            <i aria-hidden="true" class="fa fa-matrix-org"></i>Chat (Matrix)
+        </a>
+    </li>
+    <li>
+        <a rel="me" href="https://fosstodon.org/@cryptpad">
+            <i aria-hidden="true" class="fa fa-mastodon"></i>Mastodon
+        </a>
+    </li>
+    <li>
+        <a href="https://peertube.xwiki.com/c/cryptpad_channel/videos">
+            <i aria-hidden="true" class="fa fa-peertube"></i>Peertube
+        </a>
+    </li>
+    <li>
+        <a href="https://pixelfed.social/cryptpad_design">
+            <i aria-hidden="true" class="fa fa-pixelfed"></i>Pixelfed
+        </a>
+    </li>
+</ul>
+<ul>
+    <li>
+        <a href="/atom.xml">
+            <i aria-hidden="true" class="fa fa-rss"></i>RSS Feed
+        </a>
+    </li>
+</ul>
+        </section>
+    </main>
+</body>
+
+</html>

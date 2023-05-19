@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+
+    <title>One year of biweekly releases | CryptPad Blog</title> 
+    
+
+    
+    
+    <meta property="og:type" content="webpage">
+    <meta property="og:title" content="One year of biweekly releases">
+    <meta property="og:url" content="http://blog.cryptpad.org/2018/02/23/One-year-of-biweekly-releases/">
+    <meta property="og:page_name" content="One year of biweekly releases">
+    <meta property="og:locale" content="default">
+    <meta property="og:image" content="http://blog.cryptpad.org/theme/og-default.png">
+    <meta property="og:description" content="Approximately one year ago, we published an article about our intention to follow a biweekly release schedule. Since then, we&#39;ve thought of every second Tuesday as release day.">
+    <meta name="twitter:card" content="Approximately one year ago, we published an article about our intention to follow a biweekly release schedule. Since then, we&#39;ve thought of every second Tuesday as release day.">
+    <meta name="twitter:title" content="One year of biweekly releases">
+
+
+
+    <link rel="alternate" href="/atom.xml" title="CryptPad Blog" type="application/atom+xml">
+
+    <link rel="icon" href="/theme/favicon.png">
+
+
+</head>
+
+<body>
+    <main class="container">
+        <header>
+            
+    <a href="/" class="back-home">
+        <i class="fa fa-arrow-left" aria-hidden="true"></i> <i class="fa fa-home" aria-hidden="true"></i> Homepage
+    </a>
+
+            <a href="/">
+                <img class="cp-logo" src="/theme/CryptPad_logo.svg" aria-hidden="true" alt="">
+                <h1>CryptPad Blog</h1>
+            </a>
+        </header>
+        <section id="content">
+            
+    <article class="post" lang="en">
+        <section class="header">
+            <h1>One year of biweekly releases</h1>
+            <p class="meta">
+                
+                    Aaron MacSween -
+                
+                Feb 23, 2018
+                    
+                    
+            </p>
+            <div class="article-tags">
+    
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        <ul class="tags" aria-label="Tags">
+        
+            <li><a class="tag" href="/tags/release">release</a></li>
+        
+            <li><a class="tag" href="/tags/security">security</a></li>
+        
+            <li><a class="tag" href="/tags/roadmap">roadmap</a></li>
+        
+        </ul>
+    
+</div>
+        </section>
+        <p>Approximately one year ago, we published an article about our intention to follow a <a href="/2017/02/24/Announcing-biweekly-releases/">biweekly release schedule</a>.
+Since then, we've thought of every second Tuesday as <em>release day</em>.
+Starting with <a href="https://github.com/xwiki-labs/cryptpad/releases/tag/1.0.0">the letter A</a> on February 21st, 2017 and ending with <a href="https://github.com/xwiki-labs/cryptpad/releases/tag/1.25.0">the letter Z</a> on January 30th, 2018, we went through the whole latin alphabet.</p>
+<p>Throughout this self-imposed regimen, we managed to meet each deadline, though on occasion we had to stay at the office later than usual.
+Any time a release was more difficult than expected, we considered what went wrong and added a counter-measure to our release checklist (in CryptPad, naturally).
+Each release became easier than the one before, but even so, we found there were some drawbacks to this rigid schedule.</p>
+<h2>Changing our pace</h2>
+<p>Having a regular rhythm for our releases trained us to break up complex features into components that could be implemented within a two week period.
+With that in mind, not all tasks fit neatly within two weeks, and those larger tasks have had a tendency to get pushed to the next release.
+So, now that we've finished one full year of releases, we've started to look more closely at those larger features which we've inadvertently neglected.
+The tendency to procrastinate on especially difficult features is just another challenge to approach, but it's been one which is somewhat more difficult to summarize within a <em>to do</em> list.</p>
+<p>As of CryptPad v1.26.0, we're no longer following the strict biweekly schedule.
+To be clear, this doesn't mean we're slowing down development.
+We're still <em>working on CryptPad consistently</em>.
+We still plan to <em>deliver features to users</em> as soon as they are stable.
+We still plan to <em>deploy on Tuesdays</em>, since it's as early in the week as possible without falling on a Monday and deploying on a Friday is a <em>terrible idea</em>.</p>
+<img src="/images/iamdevloper_deploy_on_friday.jpeg" alt="Should I release on a Friday?" style="width:50%;" />
+<p>Some releases might happen in a single week.
+Others might take stretch to three weeks or a full month, but we'll do our best not to take any longer than that.
+We try to be as transparent as possible with our plans, and so users should expect each release to also specify the projected date for the following release.</p>
+<h2>What's coming next...</h2>
+<p>In the last year, we tried to find a balance between improving user security through the use of our <a href="2017/08/30/CryptPad-s-new-Secure-Cross-Domain-Iframe/">sandboxing techniques</a>, and implementing the productivity features necessary for people to consider the security improvements an <em>added bonus</em> rather than an impractical ideology.
+The core of our philosophy is that <em>security</em> and <em>ease of use</em> must be packaged together in order for tools like CryptPad to benefit users.</p>
+<p>While CryptPad is considerably more than a <em>proof-of-concept</em>, we don't consider it anywhere close to being finished.
+As heavy users of CryptPad ourselves, we are aware of its rough edges.
+Our community has been very supportive with our continued development, though, so we're excited to be able to improve the following areas!</p>
+<h3>Sharing</h3>
+<p>We spend a lot of time passing links between each other when collaborating on a project.
+In order to do so <em>privately</em>, the sender and the receiver must both use an encrypted messenger, or else the message could be intercepted by a malicious third-party.
+The necessity of having to use a second tool makes it so that CryptPad must always be used as <em>part of the solution</em>, rather than solving a user's problem outright.</p>
+<p>We'd like to approach this problem with two improvements:</p>
+<ol>
+<li>integrate our existing encrypted messenger better with the rest of CryptPad's functionality (as per <a href="https://github.com/xwiki-labs/cryptpad/issues/79">this issue</a>)</li>
+<li>develop a method of sharing entire folder structures from a users drive, so that sharing can scale to support large-scale projects, a feature we call <em>Workgroups</em></li>
+</ol>
+<h3>Layered protection</h3>
+<p>Even if the link for a pad is shared securely, there is the possibility that somebody discovers that link through other (possibly malicious) means.
+We're interested in developing CryptPad's basic two-tier permission system (edit/view) to address such concerns.
+This could be accomplished in very different ways:</p>
+<ul>
+<li>add the ability to protect a pad with a password, so that anyone who finds the link must also know a secret value in order to retrieve the pad's history from the server</li>
+<li>add the ability to encrypt messages such that only a designated set of users can decrypt them using public-key cryptography</li>
+</ul>
+<p>So far CryptPad only features a very limited set of cryptographic techniques.
+Going forward, we hope to find ways to implement a more granular permission system which does not rely on the server behaving correctly.
+Some of these features are more in the realm of <em>applied-cryptography research</em> than <em>web application development</em>, so it's very likely they'll be implemented later, but we're excited about them nevertheless.</p>
+<h3>Increased trustworthiness</h3>
+<p>Even though CryptPad performs its encryption in your browser, there is always the possibility that a compromised server could send malicious code to the browser which would cause it to reveal its secrets.
+We're interested in developing features which would mitigate these kinds of attacks against users, through a combination of modern browser features like <a href="https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity">sub-resource integrity</a>, and perhaps a registry of verified code signatures signed by us, the developers.</p>
+<p>It's very difficult to make a web application secure against those responsible for delivering its source to your browser.
+We're actively searching for any kind of technique for securing that makes CryptPad a more robust platform for storing your data privately, even against ourselves.</p>
+<h3>Password usability</h3>
+<p>CryptPad's login system looks quite conventional at first glance, since it has a field for a <em>user-name</em> and <em>password</em> like most other web applications.
+Unlike those other applications, we never learn your user-name and password.
+Instead, your browser uses those fields to generate a unique secret value which you use to encrypt your drive, and accomplish a range of other tasks.
+The downside of this approach is that if a user forgets their username or password, we can't help them gain access to their documents.
+If we could, we'd be able to access their documents ourselves.</p>
+<p>Fortunately, we're not the only team building web applications that use cryptography, and so there has been some research into how to improve password-based workflows without revealing secrets data to the server's host (us).
+We've already received emails from users who've inadvertently locked themselves out of their accounts with no way to recover their data, and that's a situation we'd like to help people avoid, so this is a feature we're looking forward to offering.</p>
+<h3>More applications</h3>
+<p>Lots of users have requested that we add a few more applications to CryptPad, and we've been listening!
+We plan to add support for spreadsheets, and possibly other applications so that people don't have to fall back to using an unencrypted CryptPad alternative.</p>
+<h3>Scalability</h3>
+<p>One advantage CryptPad has over other conventional collaboration platforms is that a lot of the difficult computation is run in the users' browsers, rather than on our server.
+This means that we can support a very large number of clients without a noticeable decrease in performance.
+Even so, the number of people using <em><a href="http://CryptPad.fr">CryptPad.fr</a></em> and the amount they use it has increased dramatically.</p>
+<p>Though excessive popularity is a wonderful problem to have, we'd like to avoid a situation where users have difficulty accessing our service, so improved scalability is something we'd like to work on.</p>
+<h2>Conclusion</h2>
+<p>We haven't yet decided how long we intend for this release cycle to last, and we don't have a set list of the exact goals we'd like to accomplish.
+We're taking a step back to decide where we'd like to go next.</p>
+<p>We recognize that CryptPad's growth over the last year was driven largely by word of mouth between friends and colleagues who care about privacy.
+By moving towards a more flexible schedule, we hope to make it easier to adapt to the frequent feedback we receive from people using CryptPad to help them accomplish a multitude of goals.</p>
+<p>We're very interested in hearing what you think about this change.
+Feel free to reach out to us through any of the methods listed on <a href="https://cryptpad.fr/contact.html">our contact page</a>.</p>
+
+    </article>
+
+    <nav class="article-pagination" aria-label="Pagination">
+        
+            <a href="/2018/06/15/Signing-CryptPad/">Newer: <span class="title">Signing CryptPad</span></a>
+        
+        
+            <a href="/2017/08/30/CryptPad-s-new-Secure-Cross-Domain-Iframe/">Older: <span class="title">CryptPad&#39;s new Secure Cross-Domain Iframe</span></a>
+        
+    </nav>
+
+        </section>
+        
+<section id="top-tags" class="post">
+
+            <h3><i class="fa fa-tags" aria-hidden="true"></i> Top Tags</h3>
+<ul>
+
+    <li>
+        <a class="tag" href="/tags/status-update">status update</a><span class="count">21</span></li>
+
+    <li>
+        <a class="tag" href="/tags/funding">funding</a><span class="count">14</span></li>
+
+    <li>
+        <a class="tag" href="/tags/roadmap">roadmap</a><span class="count">10</span></li>
+
+    <li>
+        <a class="tag" href="/tags/security">security</a><span class="count">9</span></li>
+
+    <li>
+        <a class="tag" href="/tags/ngi">ngi</a><span class="count">8</span></li>
+
+    <li>
+        <a class="tag" href="/tags/donate">donate</a><span class="count">7</span></li>
+
+    <li>
+        <a class="tag" href="/tags/open-collective">open collective</a><span class="count">6</span></li>
+
+    <li>
+        <a class="tag" href="/tags/research">research</a><span class="count">6</span></li>
+
+    <li>
+        <a class="tag" href="/tags/forms">forms</a><span class="count">6</span></li>
+
+    <li>
+        <a class="tag" href="/tags/open-source">open-source</a><span class="count">5</span></li>
+
+</ul>
+        </section>
+        
+    <section id="social" class="post">
+
+            <h3><i class="fa fa-link" aria-hidden="true"></i> Links</h3>
+<ul>
+    <li>
+        <a href="https://cryptpad.org">
+            <i aria-hidden="true" class="fa fa-globe"></i>Project website
+        </a>
+    </li>
+    <li>
+        <a href="https://opencollective.com/cryptpad/contribute">
+            <i aria-label="OpenCollective" class="fa fa-open-collective"></i>Donate
+        </a>
+    </li>
+</ul>
+<ul>
+    <li>
+        <a href="https://forum.cryptpad.org">
+            <i aria-hidden="true" class="fa fa-bullhorn"></i>Forum
+        </a>
+    </li>
+    <li>
+        <a href="https://matrix.to/#/#cryptpad:matrix.xwiki.com">
+            <i aria-hidden="true" class="fa fa-matrix-org"></i>Chat (Matrix)
+        </a>
+    </li>
+    <li>
+        <a rel="me" href="https://fosstodon.org/@cryptpad">
+            <i aria-hidden="true" class="fa fa-mastodon"></i>Mastodon
+        </a>
+    </li>
+    <li>
+        <a href="https://peertube.xwiki.com/c/cryptpad_channel/videos">
+            <i aria-hidden="true" class="fa fa-peertube"></i>Peertube
+        </a>
+    </li>
+    <li>
+        <a href="https://pixelfed.social/cryptpad_design">
+            <i aria-hidden="true" class="fa fa-pixelfed"></i>Pixelfed
+        </a>
+    </li>
+</ul>
+<ul>
+    <li>
+        <a href="/atom.xml">
+            <i aria-hidden="true" class="fa fa-rss"></i>RSS Feed
+        </a>
+    </li>
+</ul>
+        </section>
+    </main>
+</body>
+
+</html>

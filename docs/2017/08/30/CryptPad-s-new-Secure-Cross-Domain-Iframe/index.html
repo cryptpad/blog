@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+
+    <title>CryptPad&#39;s new Secure Cross-Domain Iframe | CryptPad Blog</title> 
+    
+
+    
+    
+    <meta property="og:type" content="webpage">
+    <meta property="og:title" content="CryptPad&#39;s new Secure Cross-Domain Iframe">
+    <meta property="og:url" content="http://blog.cryptpad.org/2017/08/30/CryptPad-s-new-Secure-Cross-Domain-Iframe/">
+    <meta property="og:page_name" content="CryptPad&#39;s new Secure Cross-Domain Iframe">
+    <meta property="og:locale" content="default">
+    <meta property="og:image" content="http://blog.cryptpad.org/theme/og-default.png">
+    <meta property="og:description" content="CryptPad version 1.14 (Codename Ouroboros) has been released and the most exciting new feature is one you cannot even see.">
+    <meta name="twitter:card" content="CryptPad version 1.14 (Codename Ouroboros) has been released and the most exciting new feature is one you cannot even see.">
+    <meta name="twitter:title" content="CryptPad&#39;s new Secure Cross-Domain Iframe">
+
+
+
+    <link rel="alternate" href="/atom.xml" title="CryptPad Blog" type="application/atom+xml">
+
+    <link rel="icon" href="/theme/favicon.png">
+
+
+</head>
+
+<body>
+    <main class="container">
+        <header>
+            
+    <a href="/" class="back-home">
+        <i class="fa fa-arrow-left" aria-hidden="true"></i> <i class="fa fa-home" aria-hidden="true"></i> Homepage
+    </a>
+
+            <a href="/">
+                <img class="cp-logo" src="/theme/CryptPad_logo.svg" aria-hidden="true" alt="">
+                <h1>CryptPad Blog</h1>
+            </a>
+        </header>
+        <section id="content">
+            
+    <article class="post" lang="en">
+        <section class="header">
+            <h1>CryptPad&#39;s new Secure Cross-Domain Iframe</h1>
+            <p class="meta">
+                
+                    Caleb James DeLisle -
+                
+                Aug 30, 2017
+                    
+                    
+            </p>
+            <div class="article-tags">
+    
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        <ul class="tags" aria-label="Tags">
+        
+            <li><a class="tag" href="/tags/security">security</a></li>
+        
+            <li><a class="tag" href="/tags/appstore">appstore</a></li>
+        
+            <li><a class="tag" href="/tags/iframe">iframe</a></li>
+        
+            <li><a class="tag" href="/tags/media-tag">media-tag</a></li>
+        
+        </ul>
+    
+</div>
+        </section>
+        <script src="https://cryptpad.fr/common/media-tag-nacl.min.js"></script>
+<p>CryptPad version 1.14 (Codename <a href="https://en.wikipedia.org/wiki/Ouroboros">Ouroboros</a>) has been released and the most exciting new feature is one you cannot even see. As you may remember from the <a href="/2017/03/06/Security-growing-pains/">Security Growing Pains</a> post, <a href="https://en.wikipedia.org/wiki/Content_Security_Policy">Content Security Policy</a> is a significant part of CryptPad's security model, and it is unfortunately incompatible with <a href="https://ckeditor.com/">CKEditor</a>, the Open Source text editor used in CryptPad.</p>
+<p>With this release, we have done a significant re-architecture of the CryptPad codebase. Starting with the /pad/ application, the CryptPad UI has begun a process of moving into an iframe which is hosted on a different domain: <em><a href="http://sandbox.cryptpad.info">sandbox.cryptpad.info</a></em>. Moving the visual content to a different domain means that even in the event of a <a href="https://en.wikipedia.org/wiki/Cross-site_scripting">Cross-site scripting</a> security vulnerability, most of your private information such as the pads in your CryptDrive, will not be at risk.</p>
+<p>In this version we updated only the /pad/ application to use the cross-domain iframe because it is the only app which requires <em>inline script</em>. This prevented us from using Content Security Policy to block the most significant vector for Cross Site Scripting attacks but now with the cross-domain iframe, such attacks are mitigated.</p>
+<p><media-tag src="https://files.cryptpad.fr/blob/b5/b5cd676935a5b23c158f38a84b7f3dfd3dc96ab3aafddd62" data-crypto-key="cryptpad:FBD19VUsNtgIxwjMGSOZcswciQzDixfuBY7dVWVwRG0=" data-attr-width="50%"></media-tag></p>
+<p>Going forward, we plan to implement a standardized CryptPad application API so that new applications can be developed, installed and used in CryptPad. Today, the CryptPad API which is exposed to apps such as /pad/ and /code/ is not standardized and there is no clear line between the apps themselves and the CryptPad internals. As we move toward the a standard app API, we will define a standard representation of a CryptPad application with such additional aspects as the app's color-scheme and icons.</p>
+<p>Fundementally, this unexciting change to CryptPad begins a new phase in development, we plan to move from a set of integrated prepackaged applications to an ecosystem of applications for collaborating on different types of content with the same encryption under the hood.</p>
+<h2>But Wait, There's more</h2>
+<p>The pictures in this blog post are not hosted on the blog, they are in fact Zero Knowledge files uploaded on CryptPad. They
+can be seen on this blog because it is using the <a href="https://github.com/UCF-project/media-tag">Media Tag</a> which was developed as part of the UCF Project with the support of <a href="http://www.systematic-paris-region.org/">Systematic</a>, <a href="https://www.bpifrance.fr/">BPIFrance</a> and the <a href="https://www.paris.fr/">City of Paris</a>.</p>
+<p><media-tag src="https://files.cryptpad.fr/blob/3c/3c9b5b3fb00b7dc35e15851606132585e8b69b06a51556eb" data-crypto-key="cryptpad:VE4raHL5VFReAXxioTaFZwt6q2jpxX+bdFHAFeoivZQ=" data-attr-width="40%"></media-tag></p>
+<p>Media Tag allows files on CryptPad to be included in any website (such as this blog). All you have to do to include a file from CryptPad is simply include the Media Tag loader and then add a Media Tag to your document, just like the following:</p>
+<pre class="language-html"><code class="language-html"><span class="token comment">&lt;!-- At the top of your HTML file --></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://cryptpad.fr/common/media-tag-nacl.min.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span><br><br><span class="token comment">&lt;!-- Where you'd like the image to be located --></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>media-tag</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://files.cryptpad.fr/blob/3c/3c9b5b3fb00b7dc35e15851606132585e8b69b06a51556eb<span class="token punctuation">"</span></span> <span class="token attr-name">data-crypto-key</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>cryptpad:VE4raHL5VFReAXxioTaFZwt6q2jpxX+bdFHAFeoivZQ=<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>media-tag</span><span class="token punctuation">></span></span></code></pre>
+<p>With this you can embed files from your CryptDrive into any website you want.</p>
+
+    </article>
+
+    <nav class="article-pagination" aria-label="Pagination">
+        
+            <a href="/2018/02/23/One-year-of-biweekly-releases/">Newer: <span class="title">One year of biweekly releases</span></a>
+        
+        
+            <a href="/2017/08/18/CryptPad-s-New-Direction/">Older: <span class="title">CryptPad&#39;s New Direction</span></a>
+        
+    </nav>
+
+        </section>
+        
+<section id="top-tags" class="post">
+
+            <h3><i class="fa fa-tags" aria-hidden="true"></i> Top Tags</h3>
+<ul>
+
+    <li>
+        <a class="tag" href="/tags/status-update">status update</a><span class="count">21</span></li>
+
+    <li>
+        <a class="tag" href="/tags/funding">funding</a><span class="count">14</span></li>
+
+    <li>
+        <a class="tag" href="/tags/roadmap">roadmap</a><span class="count">10</span></li>
+
+    <li>
+        <a class="tag" href="/tags/security">security</a><span class="count">9</span></li>
+
+    <li>
+        <a class="tag" href="/tags/ngi">ngi</a><span class="count">8</span></li>
+
+    <li>
+        <a class="tag" href="/tags/donate">donate</a><span class="count">7</span></li>
+
+    <li>
+        <a class="tag" href="/tags/open-collective">open collective</a><span class="count">6</span></li>
+
+    <li>
+        <a class="tag" href="/tags/research">research</a><span class="count">6</span></li>
+
+    <li>
+        <a class="tag" href="/tags/forms">forms</a><span class="count">6</span></li>
+
+    <li>
+        <a class="tag" href="/tags/open-source">open-source</a><span class="count">5</span></li>
+
+</ul>
+        </section>
+        
+    <section id="social" class="post">
+
+            <h3><i class="fa fa-link" aria-hidden="true"></i> Links</h3>
+<ul>
+    <li>
+        <a href="https://cryptpad.org">
+            <i aria-hidden="true" class="fa fa-globe"></i>Project website
+        </a>
+    </li>
+    <li>
+        <a href="https://opencollective.com/cryptpad/contribute">
+            <i aria-label="OpenCollective" class="fa fa-open-collective"></i>Donate
+        </a>
+    </li>
+</ul>
+<ul>
+    <li>
+        <a href="https://forum.cryptpad.org">
+            <i aria-hidden="true" class="fa fa-bullhorn"></i>Forum
+        </a>
+    </li>
+    <li>
+        <a href="https://matrix.to/#/#cryptpad:matrix.xwiki.com">
+            <i aria-hidden="true" class="fa fa-matrix-org"></i>Chat (Matrix)
+        </a>
+    </li>
+    <li>
+        <a rel="me" href="https://fosstodon.org/@cryptpad">
+            <i aria-hidden="true" class="fa fa-mastodon"></i>Mastodon
+        </a>
+    </li>
+    <li>
+        <a href="https://peertube.xwiki.com/c/cryptpad_channel/videos">
+            <i aria-hidden="true" class="fa fa-peertube"></i>Peertube
+        </a>
+    </li>
+    <li>
+        <a href="https://pixelfed.social/cryptpad_design">
+            <i aria-hidden="true" class="fa fa-pixelfed"></i>Pixelfed
+        </a>
+    </li>
+</ul>
+<ul>
+    <li>
+        <a href="/atom.xml">
+            <i aria-hidden="true" class="fa fa-rss"></i>RSS Feed
+        </a>
+    </li>
+</ul>
+        </section>
+    </main>
+</body>
+
+</html>
