@@ -13,7 +13,7 @@ module.exports = function () {
   }
 
   const inputFile = path.join(__dirname, "../_includes/LESS/main.less");
-  const outputFile = path.join(__dirname, "../public/style.css");
+  const outputFile = path.join(__dirname, "../docs/style.css");
 
   fs.readFile(inputFile, function (error, data) {
     data = data.toString();
