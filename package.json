@@ -7,8 +7,8 @@
     "markdown-it-attrs": "^4.1.6"
   },
   "scripts": {
-    "generate": "npx @11ty/eleventy --input=. --output=public",
-    "build": "rm -rf public && npx @11ty/eleventy --input=. --output=public",
-    "dev": "npx @11ty/eleventy --serve --output=public"
+    "generate": "npx @11ty/eleventy --input=. --output=docs",
+    "build": "rm -rf public && npx @11ty/eleventy --input=. --output=docs",
+    "dev": "npx @11ty/eleventy --serve --output=docs"
   }
 }
