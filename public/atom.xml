@@ -4,12 +4,38 @@
   <subtitle>News from the end-to-end encrypted collaboration suite</subtitle>
   <link href="https://blog.cryptpad.org/atom.xml" rel="self"/>
   <link href="https://blog.cryptpad.org"/>
-  <updated>2023-05-03T00:00:00Z</updated>
+  <updated>2023-06-01T00:00:00Z</updated>
   <id>https://blog.cryptpad.org</id>
   <author>
     <name>CryptPad Team</name>
     <email>contact@cryptpad.fr</email>
   </author>
+  <entry>
+    <title>May 2023 status</title>
+    <link href="https://blog.cryptpad.org/2023/06/01/status-2023-05/"/>
+    <updated>2023-06-01T00:00:00Z</updated>
+    <id>https://blog.cryptpad.org/2023/06/01/status-2023-05/</id>
+    <summary xml:lang="en" type="html">GitHub re-org, Docker container, Faye joins the team</summary>
+    <content xml:lang="en" type="html">&lt;h2&gt;🗃️ GitHub re-organization&lt;/h2&gt;
+&lt;p&gt;Although the team unanimously agrees that there are &lt;a href=&quot;https://sfconservancy.org/GiveUpGitHub/&quot;&gt;very good reasons to leave GitHub&lt;/a&gt;, we have decided to stay there for a little while longer. CryptPad has been on GitHub since the very beginning, that is nearly 9 years of building visibility for the project. On top of this the team is changing and growing a lot currently. I feel that our priority should be to spend our time learning how to work well together rather than undertaking a big move on top of our workload.&lt;/p&gt;
+&lt;p&gt;To make the most out of our remaining time on GitHub, we are doing some reorganization. We are moving to the &lt;a href=&quot;https://github.com/cryptpad&quot;&gt;CryptPad Organization&lt;/a&gt; which we created a couple years back but never used. The move is currently ongoing. The main CryptPad repository, documentation, and blog have been moved, the rest of our projects and packages are still under &lt;a href=&quot;https://github.com/xwiki-labs&quot;&gt;XWiki Labs&lt;/a&gt; and will follow in the coming weeks. GitHub should redirect requests to the old location but you can now use &lt;code&gt;git clone https://github.com/cryptpad/cryptpad.git&lt;/code&gt; to get the latest code.&lt;/p&gt;
+&lt;p&gt;We will keep our eye on a few great open-source forge projects (for example &lt;a href=&quot;https://forgejo.org/&quot;&gt;Forgejo&lt;/a&gt; self-hosted or as part of &lt;a href=&quot;https://codeberg.org/&quot;&gt;Codeberg&lt;/a&gt;) to prepare a move out of GitHub in future.&lt;/p&gt;
+&lt;h2&gt;🐳 Docker container&lt;/h2&gt;
+&lt;p&gt;There has long been a demand for deploying CryptPad using Docker. As long as the team was &lt;em&gt;tiny&lt;/em&gt; (2 or 3) we did not have the resources to maintain a container, so Docker was a &amp;quot;community&amp;quot; effort thanks to &lt;a href=&quot;https://github.com/promasu&quot;&gt;Promasu&lt;/a&gt; volunteering his time 🙏 2 years ago with &lt;a href=&quot;https://github.com/cryptpad/cryptpad/releases/tag/3.17.0&quot;&gt;3.17.0&lt;/a&gt; we even made a point of moving all Docker related files to their &lt;a href=&quot;https://github.com/xwiki-labs/cryptpad-docker&quot;&gt;own repository&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Today the team has a bit more capacity (6) and some of our &lt;a href=&quot;https://blog.cryptpad.org/2023/02/09/CryptPad-Funding-Status-January-2023/&quot;&gt;ongoing projects for 2023&lt;/a&gt; include funding for Docker and Kubernetes deployment. We will therefore be able to move the dockerfile back to main CrytpPad repository and maintain it for each new release. We want to thank Promasu for all the work done over many years. It has become harder for him to find the time to do this work so we are happy to take it forward. Expect an update on the new container in a future status post and/or in the changelog!&lt;/p&gt;
+&lt;h2&gt;🧑‍🔬 Faye joins the team&lt;/h2&gt;
+&lt;p&gt;We are delighted to welcome Faye Duxovni to the team as a privacy and cryptography engineer. Her focus will be on CryptPad&#39;s security and on making cryptography useful to people. She was previously at Element working on technical specifications as well as user-facing implementations for their end-to-end encrypted chat. We are thrilled to have Faye and her expertise on board!&lt;/p&gt;
+&lt;h2&gt;🔭 Next steps&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Turning our attention back to the &lt;a href=&quot;https://www.drawio.com/&quot;&gt;Draw.io&lt;/a&gt; integration prototype and working towards its release&lt;/li&gt;
+&lt;li&gt;Preparing for the XWiki annual seminar at the end of the month&lt;/li&gt;
+&lt;li&gt;Getting ready to welcome Daria and Diana, our two summer interns as part of the &lt;a href=&quot;https://stagiipebune.ro/&quot;&gt;Stagii pe Bune&lt;/a&gt; program in Romania&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    <category term="status update" scheme="https://blog.cryptpad.org/tags/status update/"/>
+    <category term="docker" scheme="https://blog.cryptpad.org/tags/docker/"/>
+    <category term="team" scheme="https://blog.cryptpad.org/tags/team/"/>
+  </entry>
   <entry>
     <title>April 2023 status</title>
     <link href="https://blog.cryptpad.org/2023/05/03/status-2023-04/"/>
@@ -623,7 +649,7 @@ We do this with the following command:&lt;/p&gt;
 [Fri 02 Dec 2022 09:23:28 AM CET] And the full chain certs is there:  /root/acme/.acme.sh/your-main-domain.com/fullchain.cer 
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;After retrieving the certificates we will now install them in their proper directory. We&#39;ll also specify the command to be run for reloading Nginx after the certificates auto-renewal.&lt;/p&gt;
-&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;acme.sh --install-cert &lt;span class=&quot;token parameter variable&quot;&gt;-d&lt;/span&gt; your-main-domain.com &lt;span class=&quot;token parameter variable&quot;&gt;-d&lt;/span&gt; your-sandbox-domain.com &lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;&lt;br /&gt;--key-file /etc/ssl/lets-encrypt/your-main-domain.com/key &lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;&lt;br /&gt;--fullchain-file /etc/ssl/lets-encrypt/your-main-domain.com/cert &lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;token parameter variable&quot;&gt;--reloadcmd&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;systemctl reload nginx.service&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;acme.sh --install-cert &lt;span class=&quot;token parameter variable&quot;&gt;-d&lt;/span&gt; your-main-domain.com &lt;span class=&quot;token parameter variable&quot;&gt;-d&lt;/span&gt; your-sandbox-domain.com &lt;span class=&quot;token punctuation&quot;&gt;&#92;&lt;/span&gt;&lt;br /&gt;--key-file /etc/ssl/lets-encrypt/your-main-domain.com/key &lt;span class=&quot;token punctuation&quot;&gt;&#92;&lt;/span&gt;&lt;br /&gt;--fullchain-file /etc/ssl/lets-encrypt/your-main-domain.com/cert &lt;span class=&quot;token punctuation&quot;&gt;&#92;&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;token parameter variable&quot;&gt;--reloadcmd&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;systemctl reload nginx.service&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;This command should produce the following output.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;[Fri 02 Dec 2022 09:25:38 AM CET] Installing key to:/etc/ssl/lets-encrypt/your-main-domain.com/key
 [Fri 02 Dec 2022 09:25:38 AM CET] Installing full chain to:/etc/ssl/lets-encrypt/your-main-domain.com/cert
