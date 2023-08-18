@@ -15,7 +15,7 @@
     <link href="https://blog.cryptpad.org/2023/08/18/status-2023-summer-02/"/>
     <updated>2023-08-18T00:00:00Z</updated>
     <id>https://blog.cryptpad.org/2023/08/18/status-2023-summer-02/</id>
-    <summary xml:lang="en" type="html">Late update: Summer internships &amp; hackathon projects</summary>
+    <summary xml:lang="en" type="html">CryptPad 5.4.0, New Diagram app, 2 Factor Authentication</summary>
     <content xml:lang="en" type="html">&lt;p&gt;As promised, this is the second part of our summer status. It is all about the new 5.4.0 version of CryptPad which is now live and released.&lt;/p&gt;
 &lt;h2&gt;🚀 CryptPad 5.4.0&lt;/h2&gt;
 &lt;p&gt;We deployed the new version to our &lt;a href=&quot;https://cryptpad.fr/&quot;&gt;flagship instance&lt;/a&gt; on July 20th. With members of the team taking summer breaks, we took our time to test the new features, bring the &lt;a href=&quot;https://docs.cryptpad.org/&quot;&gt;documentation&lt;/a&gt; up to date, gather feedback and translations. We released &lt;a href=&quot;https://github.com/cryptpad/cryptpad/releases/tag/5.4.0&quot;&gt;5.4.0 on GitHub&lt;/a&gt; on August 10th. The major new feature are:&lt;/p&gt;
@@ -42,7 +42,7 @@
 &lt;li&gt;New setting to destroy all of the documents you own in one click&lt;/li&gt;
 &lt;li&gt;The full release notes are &lt;a href=&quot;https://github.com/cryptpad/cryptpad/releases/tag/5.4.0&quot;&gt;on GitHub&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;🚀 🪂 Cryptpad 5.4.1&lt;/h2&gt;
+&lt;h2&gt;🚀 🪂 CryptPad 5.4.1&lt;/h2&gt;
 &lt;p&gt;Even though we had plenty of time to test things on &lt;em&gt;our&lt;/em&gt; instance, problems occured after the release with a number of configuration issues and &lt;a href=&quot;https://github.com/cryptpad/cryptpad/commit/a3772cf92c448e893cf8e021cfe9149939d3fd6c&quot;&gt;typos&lt;/a&gt; causing upgrading issues on other instances. We are tracking these and will release &lt;a href=&quot;https://github.com/cryptpad/cryptpad/milestone/3&quot;&gt;5.4.1&lt;/a&gt; ASAP to make the fixes available.&lt;/p&gt;
 &lt;h2&gt;🔭 Next up&lt;/h2&gt;
 &lt;ul&gt;
