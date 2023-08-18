@@ -8,7 +8,7 @@ tags:
 - diagram
 - auth
 cover: /images/diagram-screenshot.png
-summary: "Late update: Summer internships & hackathon projects"
+summary: "CryptPad 5.4.0, New Diagram app, 2 Factor Authentication"
 ---
 
 
@@ -46,7 +46,7 @@ How-to for your Cryptpad.fr account:
 - New setting to destroy all of the documents you own in one click
 - The full release notes are [on GitHub](https://github.com/cryptpad/cryptpad/releases/tag/5.4.0)
 
-## 🚀 🪂 Cryptpad 5.4.1
+## 🚀 🪂 CryptPad 5.4.1
 
 Even though we had plenty of time to test things on _our_ instance, problems occured after the release with a number of configuration issues and [typos](https://github.com/cryptpad/cryptpad/commit/a3772cf92c448e893cf8e021cfe9149939d3fd6c) causing upgrading issues on other instances. We are tracking these and will release [5.4.1](https://github.com/cryptpad/cryptpad/milestone/3) ASAP to make the fixes available.
 
