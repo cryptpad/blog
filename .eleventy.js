@@ -52,6 +52,16 @@ module.exports = (function(eleventyConfig) {
         tags = tags.slice(0, 10); // take top 10
         return tags;
     });
+
+    eleventyConfig.addCollection("allTags", function(collectionApi) {
+      const tagsList = new Set();
+      collectionApi.getAll().map( item => {
+          if (item.data.tags) { // handle pages that don't have tags
+              item.data.tags.map( tag => tagsList.add(tag))
+          }
+      });
+      return tagsList;
+  });
     // set nunjucks as markdown template engine
     // could be useful for custom processing like mermaid
     // return {
