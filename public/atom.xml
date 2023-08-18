@@ -4,12 +4,58 @@
   <subtitle>News from the end-to-end encrypted collaboration suite</subtitle>
   <link href="https://blog.cryptpad.org/atom.xml" rel="self"/>
   <link href="https://blog.cryptpad.org"/>
-  <updated>2023-07-17T00:00:00Z</updated>
+  <updated>2023-08-18T00:00:00Z</updated>
   <id>https://blog.cryptpad.org</id>
   <author>
     <name>CryptPad Team</name>
     <email>contact@cryptpad.fr</email>
   </author>
+  <entry>
+    <title>Summer 2023 status - part 2</title>
+    <link href="https://blog.cryptpad.org/2023/08/18/status-2023-summer-02/"/>
+    <updated>2023-08-18T00:00:00Z</updated>
+    <id>https://blog.cryptpad.org/2023/08/18/status-2023-summer-02/</id>
+    <summary xml:lang="en" type="html">Late update: Summer internships &amp; hackathon projects</summary>
+    <content xml:lang="en" type="html">&lt;p&gt;As promised, this is the second part of our summer status. It is all about the new 5.4.0 version of CryptPad which is now live and released.&lt;/p&gt;
+&lt;h2&gt;🚀 CryptPad 5.4.0&lt;/h2&gt;
+&lt;p&gt;We deployed the new version to our &lt;a href=&quot;https://cryptpad.fr/&quot;&gt;flagship instance&lt;/a&gt; on July 20th. With members of the team taking summer breaks, we took our time to test the new features, bring the &lt;a href=&quot;https://docs.cryptpad.org/&quot;&gt;documentation&lt;/a&gt; up to date, gather feedback and translations. We released &lt;a href=&quot;https://github.com/cryptpad/cryptpad/releases/tag/5.4.0&quot;&gt;5.4.0 on GitHub&lt;/a&gt; on August 10th. The major new feature are:&lt;/p&gt;
+&lt;h3&gt;🎨 New Diagram app&lt;/h3&gt;
+&lt;p&gt;The Diagram application is an integration of &lt;a href=&quot;https://www.drawio.com/&quot;&gt;Draw.io&lt;/a&gt; into CryptPad&#39;s encrypted real-time collaboration.&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;btn&quot; href=&quot;https://cryptpad.fr/diagram/&quot;&gt;&lt;i class=&quot;fa fa-external-link&quot;&gt;&lt;/i&gt; Try the Diagram app on cryptpad.fr&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/diagram-screenshot.png&quot; alt=&quot;screenshot of the new diagram application&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;🔑🔑 2 Factor Authentication&lt;/h3&gt;
+&lt;p&gt;You can now protect your account with 2 factor authentication using one-time passwords.&lt;/p&gt;
+&lt;p&gt;How-to for your &lt;a href=&quot;http://cryptpad.fr/&quot;&gt;Cryptpad.fr&lt;/a&gt; account:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Settings &amp;gt; Security &amp;amp; Privacy&lt;/li&gt;
+&lt;li&gt;Enter your password&lt;/li&gt;
+&lt;li&gt;Save the recovery code&lt;/li&gt;
+&lt;li&gt;Snap the QR code with a 2FA app of your choice&lt;/li&gt;
+&lt;li&gt;Confirm with a code&lt;/li&gt;
+&lt;li&gt;✅ 2FA is enabled&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;2FA is the first deliverable for the &lt;a href=&quot;https://nlnet.nl/project/CryptPad-Auth/&quot;&gt;CryptPad AUTH&lt;/a&gt; project, ahead of the upcoming SSO features. We are very grateful to NLnet and NGI Assure for the support in making CryptPad more secure.&lt;/p&gt;
+&lt;h3&gt;🎁 and more&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;We dropped Bower, an &lt;a href=&quot;https://github.com/cryptpad/cryptpad/issues/295#issuecomment-1373267211&quot;&gt;outdated tool&lt;/a&gt; to manage client-side dependencies&lt;/li&gt;
+&lt;li&gt;In addition to the Diagram application, Mermaid.js is also upgraded to 10.2.4 adding more diagram types such as &lt;a href=&quot;https://mermaid.js.org/syntax/mindmap.html&quot;&gt;mindmap&lt;/a&gt; and &lt;a href=&quot;https://mermaid.js.org/syntax/timeline.html&quot;&gt;timeline&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;New setting to destroy all of the documents you own in one click&lt;/li&gt;
+&lt;li&gt;The full release notes are &lt;a href=&quot;https://github.com/cryptpad/cryptpad/releases/tag/5.4.0&quot;&gt;on GitHub&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;🚀 🪂 Cryptpad 5.4.1&lt;/h2&gt;
+&lt;p&gt;Even though we had plenty of time to test things on &lt;em&gt;our&lt;/em&gt; instance, problems occured after the release with a number of configuration issues and &lt;a href=&quot;https://github.com/cryptpad/cryptpad/commit/a3772cf92c448e893cf8e021cfe9149939d3fd6c&quot;&gt;typos&lt;/a&gt; causing upgrading issues on other instances. We are tracking these and will release &lt;a href=&quot;https://github.com/cryptpad/cryptpad/milestone/3&quot;&gt;5.4.1&lt;/a&gt; ASAP to make the fixes available.&lt;/p&gt;
+&lt;h2&gt;🔭 Next up&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;We&#39;ll be resuming monthly status updates at the end of each month starting with September&lt;/li&gt;
+&lt;li&gt;SSO authentication features are next on the roadmap for the AUTH project&lt;/li&gt;
+&lt;li&gt;We are in the final talks for an exciting new hire for the team, we&#39;ll say more in the next couple of months&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    <category term="status update" scheme="https://blog.cryptpad.org/tags/status update/"/>
+    <category term="release" scheme="https://blog.cryptpad.org/tags/release/"/>
+    <category term="diagram" scheme="https://blog.cryptpad.org/tags/diagram/"/>
+    <category term="auth" scheme="https://blog.cryptpad.org/tags/auth/"/>
+  </entry>
   <entry>
     <title>Summer 2023 status - part 1</title>
     <link href="https://blog.cryptpad.org/2023/07/17/status-2023-summer-01/"/>

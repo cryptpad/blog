@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+
+    <title>Summer 2023 status - part 2 | CryptPad Blog</title> 
+    
+
+    
+    
+    <meta property="og:type" content="webpage">
+    <meta property="og:title" content="Summer 2023 status - part 2">
+    <meta property="og:url" content="http://blog.cryptpad.org/2023/08/18/status-2023-summer-02/">
+    <meta property="og:page_name" content="Summer 2023 status - part 2">
+    <meta property="og:locale" content="default">
+    <meta property="og:image" content="http://blog.cryptpad.org/images/diagram-screenshot.png">
+    <meta property="og:description" content="Late update: Summer internships &amp; hackathon projects">
+    <meta name="twitter:card" content="Late update: Summer internships &amp; hackathon projects">
+    <meta name="twitter:title" content="Summer 2023 status - part 2">
+
+
+
+    <link rel="alternate" href="/atom.xml" title="CryptPad Blog" type="application/atom+xml">
+
+    <link rel="icon" href="/theme/favicon.png">
+
+
+</head>
+
+<body>
+    <main class="container">
+        <header>
+            
+    <a href="/" class="back-home">
+        <i class="fa fa-arrow-left" aria-hidden="true"></i> <i class="fa fa-home" aria-hidden="true"></i> Homepage
+    </a>
+
+            <a href="/">
+                <img class="cp-logo" src="/theme/CryptPad_logo.svg" aria-hidden="true" alt="">
+                <h1>CryptPad Blog</h1>
+            </a>
+        </header>
+        <section id="content">
+            
+    <article class="post" lang="en">
+        <section class="header">
+            <h1>Summer 2023 status - part 2</h1>
+            <p class="meta">
+                
+                    David Benqué -
+                
+                18 Aug 2023
+                    
+                    
+            </p>
+            <div class="article-tags">
+    
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        <ul class="tags" aria-label="Tags">
+        
+            <li><a class="tag" href="/tags/status-update">status update</a></li>
+        
+            <li><a class="tag" href="/tags/release">release</a></li>
+        
+            <li><a class="tag" href="/tags/diagram">diagram</a></li>
+        
+            <li><a class="tag" href="/tags/auth">auth</a></li>
+        
+        </ul>
+    
+</div>
+        </section>
+        <p>As promised, this is the second part of our summer status. It is all about the new 5.4.0 version of CryptPad which is now live and released.</p>
+<h2>🚀 CryptPad 5.4.0</h2>
+<p>We deployed the new version to our <a href="https://cryptpad.fr">flagship instance</a> on July 20th. With members of the team taking summer breaks, we took our time to test the new features, bring the <a href="https://docs.cryptpad.org">documentation</a> up to date, gather feedback and translations. We released <a href="https://github.com/cryptpad/cryptpad/releases/tag/5.4.0">5.4.0 on GitHub</a> on August 10th. The major new feature are:</p>
+<h3>🎨 New Diagram app</h3>
+<p>The Diagram application is an integration of <a href="https://www.drawio.com/">Draw.io</a> into CryptPad's encrypted real-time collaboration.</p>
+<p><a class="btn" href="https://cryptpad.fr/diagram/"><i class="fa fa-external-link"></i> Try the Diagram app on cryptpad.fr</a></p>
+<p><img src="/images/diagram-screenshot.png" alt="screenshot of the new diagram application"></p>
+<h3>🔑🔑 2 Factor Authentication</h3>
+<p>You can now protect your account with 2 factor authentication using one-time passwords.</p>
+<p>How-to for your <a href="http://Cryptpad.fr">Cryptpad.fr</a> account:</p>
+<ol>
+<li>Settings &gt; Security &amp; Privacy</li>
+<li>Enter your password</li>
+<li>Save the recovery code</li>
+<li>Snap the QR code with a 2FA app of your choice</li>
+<li>Confirm with a code</li>
+<li>✅ 2FA is enabled</li>
+</ol>
+<p>2FA is the first deliverable for the <a href="https://nlnet.nl/project/CryptPad-Auth/">CryptPad AUTH</a> project, ahead of the upcoming SSO features. We are very grateful to NLnet and NGI Assure for the support in making CryptPad more secure.</p>
+<h3>🎁 and more</h3>
+<ul>
+<li>We dropped Bower, an <a href="https://github.com/cryptpad/cryptpad/issues/295#issuecomment-1373267211">outdated tool</a> to manage client-side dependencies</li>
+<li>In addition to the Diagram application, Mermaid.js is also upgraded to 10.2.4 adding more diagram types such as <a href="https://mermaid.js.org/syntax/mindmap.html">mindmap</a> and <a href="https://mermaid.js.org/syntax/timeline.html">timeline</a></li>
+<li>New setting to destroy all of the documents you own in one click</li>
+<li>The full release notes are <a href="https://github.com/cryptpad/cryptpad/releases/tag/5.4.0">on GitHub</a></li>
+</ul>
+<h2>🚀 🪂 Cryptpad 5.4.1</h2>
+<p>Even though we had plenty of time to test things on <em>our</em> instance, problems occured after the release with a number of configuration issues and <a href="https://github.com/cryptpad/cryptpad/commit/a3772cf92c448e893cf8e021cfe9149939d3fd6c">typos</a> causing upgrading issues on other instances. We are tracking these and will release <a href="https://github.com/cryptpad/cryptpad/milestone/3">5.4.1</a> ASAP to make the fixes available.</p>
+<h2>🔭 Next up</h2>
+<ul>
+<li>We'll be resuming monthly status updates at the end of each month starting with September</li>
+<li>SSO authentication features are next on the roadmap for the AUTH project</li>
+<li>We are in the final talks for an exciting new hire for the team, we'll say more in the next couple of months</li>
+</ul>
+
+    </article>
+
+    <nav class="article-pagination" aria-label="Pagination">
+        
+        
+            <a href="/2023/07/17/status-2023-summer-01/">Older: <span class="title">Summer 2023 status - part 1</span></a>
+        
+    </nav>
+
+        </section>
+        
+<section id="top-tags" class="post">
+
+            <h3><i class="fa fa-tags" aria-hidden="true"></i> Top Tags</h3>
+<ul>
+
+    <li>
+        <a class="tag" href="/tags/status-update">status update</a><span class="count">24</span></li>
+
+    <li>
+        <a class="tag" href="/tags/funding">funding</a><span class="count">14</span></li>
+
+    <li>
+        <a class="tag" href="/tags/roadmap">roadmap</a><span class="count">10</span></li>
+
+    <li>
+        <a class="tag" href="/tags/security">security</a><span class="count">9</span></li>
+
+    <li>
+        <a class="tag" href="/tags/ngi">ngi</a><span class="count">8</span></li>
+
+    <li>
+        <a class="tag" href="/tags/donate">donate</a><span class="count">7</span></li>
+
+    <li>
+        <a class="tag" href="/tags/team">team</a><span class="count">7</span></li>
+
+    <li>
+        <a class="tag" href="/tags/open-collective">open collective</a><span class="count">6</span></li>
+
+    <li>
+        <a class="tag" href="/tags/research">research</a><span class="count">6</span></li>
+
+    <li>
+        <a class="tag" href="/tags/forms">forms</a><span class="count">6</span></li>
+
+</ul>
+        </section>
+        
+    <section id="social" class="post">
+
+            <h3><i class="fa fa-link" aria-hidden="true"></i> Links</h3>
+<ul>
+    <li>
+        <a href="https://cryptpad.org">
+            <i aria-hidden="true" class="fa fa-globe"></i>Project website
+        </a>
+    </li>
+    <li>
+        <a href="https://opencollective.com/cryptpad/contribute">
+            <i aria-label="OpenCollective" class="fa fa-open-collective"></i>Donate
+        </a>
+    </li>
+</ul>
+<ul>
+    <li>
+        <a href="https://forum.cryptpad.org">
+            <i aria-hidden="true" class="fa fa-bullhorn"></i>Forum
+        </a>
+    </li>
+    <li>
+        <a href="https://matrix.to/#/#cryptpad:matrix.xwiki.com">
+            <i aria-hidden="true" class="fa fa-matrix-org"></i>Chat (Matrix)
+        </a>
+    </li>
+    <li>
+        <a rel="me" href="https://fosstodon.org/@cryptpad">
+            <i aria-hidden="true" class="fa fa-mastodon"></i>Mastodon
+        </a>
+    </li>
+    <li>
+        <a href="https://peertube.xwiki.com/c/cryptpad_channel/videos">
+            <i aria-hidden="true" class="fa fa-peertube"></i>Peertube
+        </a>
+    </li>
+    <li>
+        <a href="https://pixelfed.social/cryptpad_design">
+            <i aria-hidden="true" class="fa fa-pixelfed"></i>Pixelfed
+        </a>
+    </li>
+</ul>
+<ul>
+    <li>
+        <a href="/atom.xml">
+            <i aria-hidden="true" class="fa fa-rss"></i>RSS Feed
+        </a>
+    </li>
+</ul>
+        </section>
+    </main>
+</body>
+
+</html>
