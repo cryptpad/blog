@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+
+    <title>September 2023 status | CryptPad Blog</title> 
+    
+
+    
+    
+    <meta property="og:type" content="webpage">
+    <meta property="og:title" content="September 2023 status">
+    <meta property="og:url" content="http://blog.cryptpad.org/2023/10/03/status-2023-09/">
+    <meta property="og:page_name" content="September 2023 status">
+    <meta property="og:locale" content="default">
+    <meta property="og:image" content="http://blog.cryptpad.org/theme/og-default.png">
+    <meta property="og:description" content="CryptPad 5.5.0 nearly ready, Daria and Diana stay on the team and Fabrice joins">
+    <meta name="twitter:card" content="CryptPad 5.5.0 nearly ready, Daria and Diana stay on the team and Fabrice joins">
+    <meta name="twitter:title" content="September 2023 status">
+
+
+
+    <link rel="alternate" href="/atom.xml" title="CryptPad Blog" type="application/atom+xml">
+
+    <link rel="icon" href="/theme/favicon.png">
+
+
+</head>
+
+<body>
+    <main class="container">
+        <header>
+            
+    <a href="/" class="back-home">
+        <i class="fa fa-arrow-left" aria-hidden="true"></i> <i class="fa fa-home" aria-hidden="true"></i> Homepage
+    </a>
+
+            <a href="/">
+                <img class="cp-logo" src="/theme/CryptPad_logo.svg" aria-hidden="true" alt="">
+                <h1>CryptPad Blog</h1>
+            </a>
+        </header>
+        <section id="content">
+            
+    <article class="post" lang="en">
+        <section class="header">
+            <h1>September 2023 status</h1>
+            <p class="meta">
+                
+                    David Benqué -
+                
+                3 Oct 2023
+                    
+                    
+            </p>
+            <div class="article-tags">
+    
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        <ul class="tags" aria-label="Tags">
+        
+            <li><a class="tag" href="/tags/status-update">status update</a></li>
+        
+            <li><a class="tag" href="/tags/team">team</a></li>
+        
+            <li><a class="tag" href="/tags/release">release</a></li>
+        
+        </ul>
+    
+</div>
+        </section>
+        <p>After two &quot;summer statuses&quot; we resume our monthly updates.</p>
+<h2>🚀🔭 CryptPad 5.5 coming soon</h2>
+<p>The team is preparing the latest version of CryptPad. At the time of writing we are planning to deploy 5.5 to <a href="http://CryptPad.fr">CryptPad.fr</a> this week and make it available on GitHub shortly after if all goes well. Highlights for this release will include:</p>
+<h3>Moderation and deletion features</h3>
+<p>Instance administrators will now have the option to archive a whole  account, including all documents where the account is the only owner. This enables admins to take stronger action in moderation cases where more than a single document is in breach of the instance's terms of service.</p>
+<p>We also took this opportunity to better communicate <em>why</em> a document is not accessible. Previously, CryptPad would display confusing messages such as this one if a document had been deleted or if its password was changed:</p>
+<blockquote>
+<p>The document you are trying to open no longer exists or is protected with a new password. Enter the correct password to access the content.</p>
+</blockquote>
+<p>With 5.5.0 CryptPad will give more information in cases where the document or account was:</p>
+<ul>
+<li>Deleted by an owner</li>
+<li>Deleted by an admin (user account or document)</li>
+<li>Deleted for inactivity (documents not stored in a user drive and inactive)</li>
+<li>Protected with a new password (user account or document)</li>
+</ul>
+<h3>OnlyOffice upgrade</h3>
+<p>CryptPad 5.5.0 includes an upgraded version of OnlyOffice applications (7.3.3.60) and fixes some import/export bugs for office documents.</p>
+<h3>End-to-end testing</h3>
+<p>For this release we are making use of the end-to-end testing suite that Zuzanna has been developing for the last few months. It has been a <em>lot</em> of work to program all of the test cases using <a href="https://playwright.dev/">Playwright</a> but these efforts are finally starting to pay off as the tests have already identified a few bugs. We'll continue these efforts to improve the quality assurance of CryptPad in future releases.</p>
+<h3>Acessibility and mobile fixes</h3>
+<p>With Daria and Diana's internships coming to an end, we are releasing their contributions. They mostly have to do with improvements related to <a href="https://github.com/orgs/cryptpad/projects/5">accessibility</a> and using CryptPad on <a href="https://github.com/orgs/cryptpad/projects/6">mobile</a>.</p>
+<h2>🧑‍🔬 🧑‍🔬 Daria and Diana are joining the team</h2>
+<p>Speaking of Daria and Diana, we are happy to announce that they will remain on the team after their internships finish. They will each take a part time role while also completing the last year of their studies. Their work will continue to focus on improving the CryptPad front-end for better accessibility and mobile usability, two areas that need a lot of continued improvement.</p>
+<h2>🧑‍🔬 Fabrice joins the team</h2>
+<p>We have another addition to the team this month: <a href="https://fmouhart.epheme.re/">Fabrice Mouhartem</a>. Fabrice is a cryptography researcher who completed his PhD at École Nationale Supérieure (ENS) in Lyon, France (2018). His recent post-docs at ENS and PQShield focused on building provable cryptographic protocols based on both classical and post-quantum assumptions. His role on the CryptPad team will be split between research on how to get CryptPad post-quantum ready, and contributing features and bug fixes to the code. We look forward to having Fabrice's expertise on the team!</p>
+<h2>🔭 What's next</h2>
+<ul>
+<li>Continuing work on our document API and authentication features</li>
+<li>Wrapping up the Blueprints project with a website that details all outcomes and provides a place for future research and prototypes</li>
+</ul>
+
+    </article>
+
+    <nav class="article-pagination" aria-label="Pagination">
+        
+        
+            <a href="/2023/08/18/status-2023-summer-02/">Older: <span class="title">Summer 2023 status - part 2</span></a>
+        
+    </nav>
+
+        </section>
+        
+<section id="top-tags" class="post">
+
+            <h3><i class="fa fa-tags" aria-hidden="true"></i> Top Tags</h3>
+<ul>
+
+    <li>
+        <a class="tag" href="/tags/status-update">status update</a><span class="count">25</span></li>
+
+    <li>
+        <a class="tag" href="/tags/funding">funding</a><span class="count">14</span></li>
+
+    <li>
+        <a class="tag" href="/tags/roadmap">roadmap</a><span class="count">10</span></li>
+
+    <li>
+        <a class="tag" href="/tags/security">security</a><span class="count">9</span></li>
+
+    <li>
+        <a class="tag" href="/tags/ngi">ngi</a><span class="count">8</span></li>
+
+    <li>
+        <a class="tag" href="/tags/team">team</a><span class="count">8</span></li>
+
+    <li>
+        <a class="tag" href="/tags/donate">donate</a><span class="count">7</span></li>
+
+    <li>
+        <a class="tag" href="/tags/open-collective">open collective</a><span class="count">6</span></li>
+
+    <li>
+        <a class="tag" href="/tags/research">research</a><span class="count">6</span></li>
+
+    <li>
+        <a class="tag" href="/tags/forms">forms</a><span class="count">6</span></li>
+
+</ul>
+        </section>
+        
+    <section id="social" class="post">
+
+            <h3><i class="fa fa-link" aria-hidden="true"></i> Links</h3>
+<ul>
+    <li>
+        <a href="https://cryptpad.org">
+            <i aria-hidden="true" class="fa fa-globe"></i>Project website
+        </a>
+    </li>
+    <li>
+        <a href="https://opencollective.com/cryptpad/contribute">
+            <i aria-label="OpenCollective" class="fa fa-open-collective"></i>Donate
+        </a>
+    </li>
+</ul>
+<ul>
+    <li>
+        <a href="https://forum.cryptpad.org">
+            <i aria-hidden="true" class="fa fa-bullhorn"></i>Forum
+        </a>
+    </li>
+    <li>
+        <a href="https://matrix.to/#/#cryptpad:matrix.xwiki.com">
+            <i aria-hidden="true" class="fa fa-matrix-org"></i>Chat (Matrix)
+        </a>
+    </li>
+    <li>
+        <a rel="me" href="https://fosstodon.org/@cryptpad">
+            <i aria-hidden="true" class="fa fa-mastodon"></i>Mastodon
+        </a>
+    </li>
+    <li>
+        <a href="https://peertube.xwiki.com/c/cryptpad_channel/videos">
+            <i aria-hidden="true" class="fa fa-peertube"></i>Peertube
+        </a>
+    </li>
+    <li>
+        <a href="https://pixelfed.social/cryptpad_design">
+            <i aria-hidden="true" class="fa fa-pixelfed"></i>Pixelfed
+        </a>
+    </li>
+</ul>
+<ul>
+    <li>
+        <a href="/atom.xml">
+            <i aria-hidden="true" class="fa fa-rss"></i>RSS Feed
+        </a>
+    </li>
+</ul>
+        </section>
+    </main>
+</body>
+
+</html>

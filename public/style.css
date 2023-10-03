@@ -3338,6 +3338,12 @@ article.post table th,
 article.post table td {
   padding: 0.5rem;
 }
+article.post blockquote {
+  border-left: 1px solid;
+  margin-left: 2rem;
+  padding-left: 1rem;
+  opacity: 0.7;
+}
 .article-tags {
   display: inline;
 }

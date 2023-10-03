@@ -4,12 +4,54 @@
   <subtitle>News from the end-to-end encrypted collaboration suite</subtitle>
   <link href="https://blog.cryptpad.org/atom.xml" rel="self"/>
   <link href="https://blog.cryptpad.org"/>
-  <updated>2023-08-18T00:00:00Z</updated>
+  <updated>2023-10-03T00:00:00Z</updated>
   <id>https://blog.cryptpad.org</id>
   <author>
     <name>CryptPad Team</name>
     <email>contact@cryptpad.fr</email>
   </author>
+  <entry>
+    <title>September 2023 status</title>
+    <link href="https://blog.cryptpad.org/2023/10/03/status-2023-09/"/>
+    <updated>2023-10-03T00:00:00Z</updated>
+    <id>https://blog.cryptpad.org/2023/10/03/status-2023-09/</id>
+    <summary xml:lang="en" type="html">CryptPad 5.5.0 nearly ready, Daria and Diana stay on the team and Fabrice joins</summary>
+    <content xml:lang="en" type="html">&lt;p&gt;After two &amp;quot;summer statuses&amp;quot; we resume our monthly updates.&lt;/p&gt;
+&lt;h2&gt;🚀🔭 CryptPad 5.5 coming soon&lt;/h2&gt;
+&lt;p&gt;The team is preparing the latest version of CryptPad. At the time of writing we are planning to deploy 5.5 to &lt;a href=&quot;http://cryptpad.fr/&quot;&gt;CryptPad.fr&lt;/a&gt; this week and make it available on GitHub shortly after if all goes well. Highlights for this release will include:&lt;/p&gt;
+&lt;h3&gt;Moderation and deletion features&lt;/h3&gt;
+&lt;p&gt;Instance administrators will now have the option to archive a whole  account, including all documents where the account is the only owner. This enables admins to take stronger action in moderation cases where more than a single document is in breach of the instance&#39;s terms of service.&lt;/p&gt;
+&lt;p&gt;We also took this opportunity to better communicate &lt;em&gt;why&lt;/em&gt; a document is not accessible. Previously, CryptPad would display confusing messages such as this one if a document had been deleted or if its password was changed:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The document you are trying to open no longer exists or is protected with a new password. Enter the correct password to access the content.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;With 5.5.0 CryptPad will give more information in cases where the document or account was:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Deleted by an owner&lt;/li&gt;
+&lt;li&gt;Deleted by an admin (user account or document)&lt;/li&gt;
+&lt;li&gt;Deleted for inactivity (documents not stored in a user drive and inactive)&lt;/li&gt;
+&lt;li&gt;Protected with a new password (user account or document)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;OnlyOffice upgrade&lt;/h3&gt;
+&lt;p&gt;CryptPad 5.5.0 includes an upgraded version of OnlyOffice applications (7.3.3.60) and fixes some import/export bugs for office documents.&lt;/p&gt;
+&lt;h3&gt;End-to-end testing&lt;/h3&gt;
+&lt;p&gt;For this release we are making use of the end-to-end testing suite that Zuzanna has been developing for the last few months. It has been a &lt;em&gt;lot&lt;/em&gt; of work to program all of the test cases using &lt;a href=&quot;https://playwright.dev/&quot;&gt;Playwright&lt;/a&gt; but these efforts are finally starting to pay off as the tests have already identified a few bugs. We&#39;ll continue these efforts to improve the quality assurance of CryptPad in future releases.&lt;/p&gt;
+&lt;h3&gt;Acessibility and mobile fixes&lt;/h3&gt;
+&lt;p&gt;With Daria and Diana&#39;s internships coming to an end, we are releasing their contributions. They mostly have to do with improvements related to &lt;a href=&quot;https://github.com/orgs/cryptpad/projects/5&quot;&gt;accessibility&lt;/a&gt; and using CryptPad on &lt;a href=&quot;https://github.com/orgs/cryptpad/projects/6&quot;&gt;mobile&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;🧑‍🔬 🧑‍🔬 Daria and Diana are joining the team&lt;/h2&gt;
+&lt;p&gt;Speaking of Daria and Diana, we are happy to announce that they will remain on the team after their internships finish. They will each take a part time role while also completing the last year of their studies. Their work will continue to focus on improving the CryptPad front-end for better accessibility and mobile usability, two areas that need a lot of continued improvement.&lt;/p&gt;
+&lt;h2&gt;🧑‍🔬 Fabrice joins the team&lt;/h2&gt;
+&lt;p&gt;We have another addition to the team this month: &lt;a href=&quot;https://fmouhart.epheme.re/&quot;&gt;Fabrice Mouhartem&lt;/a&gt;. Fabrice is a cryptography researcher who completed his PhD at École Nationale Supérieure (ENS) in Lyon, France (2018). His recent post-docs at ENS and PQShield focused on building provable cryptographic protocols based on both classical and post-quantum assumptions. His role on the CryptPad team will be split between research on how to get CryptPad post-quantum ready, and contributing features and bug fixes to the code. We look forward to having Fabrice&#39;s expertise on the team!&lt;/p&gt;
+&lt;h2&gt;🔭 What&#39;s next&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Continuing work on our document API and authentication features&lt;/li&gt;
+&lt;li&gt;Wrapping up the Blueprints project with a website that details all outcomes and provides a place for future research and prototypes&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    <category term="status update" scheme="https://blog.cryptpad.org/tags/status update/"/>
+    <category term="team" scheme="https://blog.cryptpad.org/tags/team/"/>
+    <category term="release" scheme="https://blog.cryptpad.org/tags/release/"/>
+  </entry>
   <entry>
     <title>Summer 2023 status - part 2</title>
     <link href="https://blog.cryptpad.org/2023/08/18/status-2023-summer-02/"/>
