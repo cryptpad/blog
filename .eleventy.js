@@ -36,6 +36,9 @@ module.exports = (function(eleventyConfig) {
         console.log(d);
       });
 
+    // typeof for array, using native JS Array.isArray()
+    eleventyConfig.addFilter('isArray', something => Array.isArray(something))
+
     // Filter to display dates
     eleventyConfig.addFilter("postDate", (dateObj) => {
         // see Luxon ref to change format https://moment.github.io/luxon/#/formatting

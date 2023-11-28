@@ -33,7 +33,15 @@
             <h1>{{title}}</h1>
             <p class="meta">
                 {% if author %}
-                    {{ author }} -
+                    {% if author|isArray %}
+                        {# XXX how to make a list with commas only *between* elements and none at the end #}
+                        {# {% set len = author | length %} #}
+                        {% for a in author %}
+                            {{a}} - {# {% if {{loop.index}} < len %}, {% endif %} #}
+                        {% endfor %}
+                    {% else %}
+                        {{ author }} -
+                    {% endif %}
                 {% endif %}
                 {{ date | postDate }}
                     {# XXX TODO TBC add Mastodon share button? #}
