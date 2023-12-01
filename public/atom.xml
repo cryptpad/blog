@@ -4,12 +4,39 @@
   <subtitle>News from the end-to-end encrypted collaboration suite</subtitle>
   <link href="https://blog.cryptpad.org/atom.xml" rel="self"/>
   <link href="https://blog.cryptpad.org"/>
-  <updated>2023-11-02T00:00:00Z</updated>
+  <updated>2023-11-20T00:00:00Z</updated>
   <id>https://blog.cryptpad.org</id>
   <author>
     <name>CryptPad Team</name>
     <email>contact@cryptpad.fr</email>
   </author>
+  <entry>
+    <title>November 2023 status</title>
+    <link href="https://blog.cryptpad.org/2023/11/20/status-2023-11/"/>
+    <updated>2023-11-20T00:00:00Z</updated>
+    <id>https://blog.cryptpad.org/2023/11/20/status-2023-11/</id>
+    <summary xml:lang="en" type="html">Capitole du Libre, Nextcloud integration, Call for testimonials, Team News</summary>
+    <content xml:lang="en" type="html">&lt;h2&gt;🎪 Capitole du Libre&lt;/h2&gt;
+&lt;p&gt;November 18 and 19, the &lt;em&gt;Capitole du Libre&lt;/em&gt; was held in Toulouse, France. It is an annual meeting for free and open ways enthusiasts.
+During this event, Cryptpad was present on a stand that was quite well-received by curious attendees, as well as during two talks by Ludovic Dubost and Clément Aubin about &lt;a href=&quot;https://cfp.capitoledulibre.org/cdl-2023/talk/PWQ8UQ/&quot;&gt;FOSS as a job&lt;/a&gt; and &lt;a href=&quot;https://cfp.capitoledulibre.org/cdl-2023/talk/GTQZDS/&quot;&gt;OpenDesk&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;▶️ Videos should be online at some point in the future on the &lt;a href=&quot;https://www.youtube.com/channel/UCceC8Q8hThsWwmhqkjclcZg/videos&quot;&gt;Capitole du Libre YouTube channel&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;📬 Nextcloud integration&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/2023/11/20/images/nextcloud-app.png&quot; alt=&quot;screenshot of the Nextcloud application&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Wolfgang has been hard at work on our Nextcloud application this month, receiving feedback and fixing issues. This &lt;a href=&quot;https://apps.nextcloud.com/apps/openincryptpad&quot;&gt;Open in CryptPad&lt;/a&gt; integration is part of &lt;a href=&quot;https://xwiki.com/en/Blog/XWiki-joins-OpenDesk/&quot;&gt;OpenDesk&lt;/a&gt;. It provides encrypted real-time collaborative sessions on diagram documents stored on a Nextcloud instance. If this is of interest to you please check out the application in the Nextcloud app store and our &lt;a href=&quot;https://github.com/cryptpad/nextcloud-open-in-cryptpad&quot;&gt;source code repository&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;💌 Still collecting testimonials&lt;/h2&gt;
+&lt;p&gt;Quick reminder that we are still collecting nice words about why you love CryptPad through our &lt;a href=&quot;https://cryptpad.fr/form/#/2/form/view/1NDX7MEkhzNz1FCrcjCxmvjgIj24QjWNncZygR60Ch8/&quot;&gt;Testimonials Survey&lt;/a&gt;. We already have &lt;a href=&quot;https://cryptpad.org/testimonials/&quot;&gt;lots of individual submissions&lt;/a&gt; but please keep them coming. We are especially grateful if you are able to endorse our project on behalf of an organization, company, or institution.&lt;/p&gt;
+&lt;h2&gt;🏠 Team news&lt;/h2&gt;
+&lt;p&gt;Unfortunately Faye did not renew her contract with us after 6 months in the team. We are thankful for her contributions to CryptPad and wish her the very best on her future endeavors.&lt;/p&gt;
+&lt;h2&gt;🔭 What&#39;s next&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;We are still at work on CryptPad 5.6 which we are hoping to release before the end of the year&lt;/li&gt;
+&lt;li&gt;Looking ahead, we are thinking about next year&#39;s priorities. There&#39;s no doubt that improving our OnlyOffice integrations (esp. Document and Presentation) will be high on that list&lt;/li&gt;
+&lt;li&gt;We&#39;re thinking about contributions to this blog beyond the monthly status, perhaps more tutorials, let us know if there is anything you would like us to cover!&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    <category term="status update" scheme="https://blog.cryptpad.org/tags/status update/"/>
+    <category term="translations" scheme="https://blog.cryptpad.org/tags/translations/"/>
+  </entry>
   <entry>
     <title>October 2023 status</title>
     <link href="https://blog.cryptpad.org/2023/11/02/status-2023-10/"/>
