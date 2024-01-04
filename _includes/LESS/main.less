@@ -230,11 +230,14 @@ article.post {
     }
     ul, ol {
         &:not(.tags) {
-                list-style: disc;
+            list-style: disc;
             // list-style-position: inside;
             padding-left: 1em;
             margin-bottom: 1rem;
             li {
+                a {
+                    text-decoration: underline;
+                }
                 ul {
                     list-style: circle;
                     margin-bottom: 0px; // nested lists
