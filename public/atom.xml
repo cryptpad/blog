@@ -26,7 +26,7 @@
 &lt;h3&gt;♿ Accessibility improvements to the drive and toolbars&lt;/h3&gt;
 &lt;p&gt;Finally we are continuing to improve accessibility across CryptPad. In this release the toolbar becomes much more navigable with the keyboard and (most) menus can be used with arrow keys. We will keep pushing on this until full Web Content Accessibility Guidelines (WCAG) compliance.&lt;/p&gt;
 &lt;p&gt;Please see the &lt;a href=&quot;https://github.com/cryptpad/cryptpad/releases/tag/5.6.0&quot;&gt;changelog&lt;/a&gt; for the full list of improvements.&lt;/p&gt;
-&lt;h3&gt;🎁 More teams for &lt;a href=&quot;http://cryptpad.fr/&quot;&gt;CryptPad.fr&lt;/a&gt; subscribers&lt;/h3&gt;
+&lt;h3&gt;🎁 More teams for CryptPad&lt;nolink&gt;.fr subscribers&lt;/nolink&gt;&lt;/h3&gt;
 &lt;p&gt;This release includes a setting to set the number of teams for subscribed users of an instance. We have increased this limit on &lt;a href=&quot;http://cryptpad.fr/&quot;&gt;Cryptpad.fr&lt;/a&gt; from 3 to 10 teams after receiving requests from our supporters. Enjoy these responsibly as joining many teams with lots data in each may impact loading time.&lt;/p&gt;
 &lt;h2&gt;🎙️ Presentation at Grenoble-Alpes University&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/slide-penguins.png&quot; alt=&quot;Slide demonstrating CryptPad&#39;s encrypted collaboration between some cute penguin characters&quot; /&gt;&lt;/p&gt;

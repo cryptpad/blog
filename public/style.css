@@ -3316,6 +3316,10 @@ article.post ol:not(.tags) {
   padding-left: 1em;
   margin-bottom: 1rem;
 }
+article.post ul:not(.tags) li a,
+article.post ol:not(.tags) li a {
+  text-decoration: underline;
+}
 article.post ul:not(.tags) li ul,
 article.post ol:not(.tags) li ul {
   list-style: circle;
