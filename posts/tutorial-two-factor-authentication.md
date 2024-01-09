@@ -178,8 +178,8 @@ Unable to get a code? <i style="color:#0087FF">Recover your account</i>
 You can then click on the “**Recover your account**” link, that will ask your
 username and password again. Once that done, you end up in the page asking for
 your recovery code, however there is also a section to unfold “<i class="fa
-fa-caret-right"></i> **Forgot recovery code**” which shows a datablock that
-an instance administrator needs to disable 2FA for you.
+fa-caret-right"></i> **Forgot recovery code**” which shows a data-block that
+you can give to an instance administrator so that they can disable 2FA for your account.
 
 Now, you can contact your instance administrator, politely explaining the
 situation and attaching this data block, and patiently wait for their answer.
@@ -193,7 +193,7 @@ verifying the identity of the requesting party, you have to go to the database
 section of the administration panel:
 **User menu** > <i class="fa fa-gears"></i> **Administration** > <i class="fa fa-database"></i> **Database**
 
-There, you can go to the **2FA Recovery** section and paste the datablock that
+There you can go to the **2FA Recovery** section and paste the data-block that
 the forgetful user sent you:
 
 ![](/images/2fa-admin-disabling.png)
