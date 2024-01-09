@@ -8,10 +8,9 @@ tags:
 - security
 ---
 
-In this tutorial, let us see how to set two-factor authentication (or 2FA) up in
-CryptPad from end-users point of view. To make a long story short you can look
-at the documentation for the concise explanation
-[here](https://docs.cryptpad.org/en/user_guide/user_account.html#security-privacy).
+In this tutorial we will see how to set up two-factor authentication (or 2FA) in
+CryptPad from an end-user point of view. To make a long story short you can look
+at [the documentation](https://docs.cryptpad.org/en/user_guide/user_account.html#security-privacy) for the concise explanation.
 
 The main purpose of this tutorial is to accompany you through every step and to
 help you understand what is going on behind the scene.
