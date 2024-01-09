@@ -3310,6 +3310,10 @@ article.post p {
 article.post p a {
   text-decoration: underline;
 }
+article.post p img {
+  display: block;
+  margin: auto;
+}
 article.post ul:not(.tags),
 article.post ol:not(.tags) {
   list-style: disc;
