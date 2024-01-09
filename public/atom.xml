@@ -4,12 +4,193 @@
   <subtitle>News from the end-to-end encrypted collaboration suite</subtitle>
   <link href="https://blog.cryptpad.org/atom.xml" rel="self"/>
   <link href="https://blog.cryptpad.org"/>
-  <updated>2024-01-04T00:00:00Z</updated>
+  <updated>2024-01-09T00:00:00Z</updated>
   <id>https://blog.cryptpad.org</id>
   <author>
     <name>CryptPad Team</name>
     <email>contact@cryptpad.fr</email>
   </author>
+  <entry>
+    <title>Setup 2FA for CryptPad</title>
+    <link href="https://blog.cryptpad.org/2024/01/09/tutorial-two-factor-authentication/"/>
+    <updated>2024-01-09T00:00:00Z</updated>
+    <id>https://blog.cryptpad.org/2024/01/09/tutorial-two-factor-authentication/</id>
+    <summary xml:lang="en" type="html">A guide to setup two-factor authentication (2FA) on your favorite CryptPad instance.</summary>
+    <content xml:lang="en" type="html">&lt;p&gt;In this tutorial we will see how to set up two-factor authentication (or 2FA) in
+CryptPad from an end-user point of view. To make a long story short you can look
+at &lt;a href=&quot;https://docs.cryptpad.org/en/user_guide/user_account.html#security-privacy&quot;&gt;the documentation&lt;/a&gt; for the concise explanation.&lt;/p&gt;
+&lt;p&gt;The main purpose of this tutorial is to accompany you through every step and to
+help you understand what is going on behind the scene.&lt;/p&gt;
+&lt;h2&gt;Why does it matter?&lt;/h2&gt;
+&lt;p&gt;Multi-factor authentication is a general term to describe authentication methods
+relying on the combination of multiple ways to confirm you identity. Ideally,
+these should live in different domains:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Something I know: a knowledge that only the authenticating user is aware
+of, traditionally a password or a passphrase, but secret questions also fells
+into this category;&lt;/li&gt;
+&lt;li&gt;Something I have: a form of data that the user can store, but doesn&#39;t
+have to remember. It is usually a cryptographic key that is stored in a device
+(an authentication device, your smartphone, a USB flash drive, and so on);&lt;/li&gt;
+&lt;li&gt;Something I am: everything that is inherent to the identity of the user,
+such as biometry for instance.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The purpose of multi-factor authentication is to strengthen the usual
+username-password authentication method (which fells into the &amp;quot;something I know&amp;quot;
+category), so it does not act as a single-point of failure. With multi-factor
+authentication, even if your password leaks by any means, no one should be able
+to impersonate you based on this information alone. Similarly, biometric data
+inherent to users should not be used as a unique authentication factor as their
+secrecy cannot be guaranteed.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://blog.cryptpad.org/2023/08/18/status-2023-summer-02/&quot;&gt;CryptPad 5.4.0&lt;/a&gt; introduced 2FA using a
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Time-based_one-time_password&quot;&gt;time-based
+one-time-password&lt;/a&gt;
+(or TOTP) approach. The core idea is that upon initialization, a common
+&lt;strong&gt;secret&lt;/strong&gt; is agreed on between CryptPad and the user. Then, the &lt;strong&gt;current
+time&lt;/strong&gt; is used to agree on a common value based on these two pieces of
+information.&lt;/p&gt;
+&lt;p&gt;As a consequence, if you are managing your own CryptPad instance, you
+have to make sure that the date and time of your server remain fairly accurate
+(up to a 30 seconds shift), using
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Network_Time_Protocol&quot;&gt;NTP&lt;/a&gt; for instance.&lt;/p&gt;
+&lt;h2&gt;Prerequisites&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;A running CryptPad instance with version &lt;code&gt;&amp;gt;= 5.4.0&lt;/code&gt;;&lt;/li&gt;
+&lt;li&gt;A CryptPad account on this instance (or you can &lt;a href=&quot;https://docs.cryptpad.org/en/user_guide/user_account.html&quot;&gt;create
+one&lt;/a&gt; now)&lt;/li&gt;
+&lt;li&gt;An external device that supports TOTP (for instance a smartphone with an
+authenticator application, like &lt;a href=&quot;https://getaegis.app/&quot;&gt;Aegis&lt;/a&gt;, that can be
+found on &lt;a href=&quot;https://f-droid.org/en/packages/com.beemdevelopment.aegis/&quot;&gt;F-Droid&lt;/a&gt;
+or &lt;a href=&quot;https://play.google.com/store/apps/details?id=com.beemdevelopment.aegis&quot;&gt;Google Play
+Store&lt;/a&gt;).
+It will later be referred as &lt;em&gt;authentication device&lt;/em&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Step-by-step user guide to setup 2FA on Cryptpad&lt;/h2&gt;
+&lt;p&gt;Now that we have everything we need, let us start. The first step is to
+open your Security &amp;amp; Privacy settings:&lt;br /&gt;
+&lt;strong&gt;User menu&lt;/strong&gt; (top-right avatar to access) &amp;gt; &lt;i class=&quot;fa fa-gear&quot;&gt;&lt;/i&gt;
+&lt;strong&gt;Settings&lt;/strong&gt; &amp;gt; &lt;i class=&quot;fa fa-lock&quot;&gt;&lt;/i&gt; &lt;strong&gt;Security &amp;amp; Privacy&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Then look for the “&lt;strong&gt;Two-Factor Authentication (2FA)&lt;/strong&gt;” section:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/2fa-initialization.png&quot; alt=&quot;2FA is not initialized yet&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Now, you can enter your password to initiate the process. Once you validate, it
+should show an alert telling you to store a recovery code that will be useful to
+disable 2FA in case you don&#39;t have access to your authentication device anymore.
+Thus, you should store it in a safe place:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;recoverable even if you lose your authentication device;&lt;/li&gt;
+&lt;li&gt;accessible even if you don&#39;t have access to your CryptPad account;&lt;/li&gt;
+&lt;li&gt;separated from your password;&lt;/li&gt;
+&lt;li&gt;not easily accessible for a third party.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These make your mobile phone or a “Recovery Code” file in your CryptDrive a bad
+idea. However, you can use an encrypted USB flash drive or a &lt;a href=&quot;https://www.cnil.fr/en/what-you-should-know-about-our-standard-digital-safe-boxes&quot;&gt;digital safe
+box/vault&lt;/a&gt; for instance.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/2fa-recovery-code.png&quot; alt=&quot;2FA recovery code&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Once you stored this recovery code in a safe place, you can click on the “&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt; &lt;strong&gt;Done&lt;/strong&gt;” button, then “&lt;strong&gt;Continue&lt;/strong&gt;”.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/2fa-recovery-code-done.png&quot; alt=&quot;2FA recovery code done&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Then, it should show you a &lt;a href=&quot;https://en.wikipedia.org/wiki/QR_code&quot;&gt;QR code&lt;/a&gt; that
+contains the common secret between CryptPad and yourself.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Warning.&lt;/strong&gt; This is sensitive information, make sure that no one is spying on
+your screen at this point of time.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/2fa-qr-code.png&quot; alt=&quot;QR Code&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;You can now scan the QR code with your authentication device, for instance Aegis
+on android would open the form shown hereunder upon scanning the QR Code,
+allowing you to customize the entry in the application. It could prove useful if
+you have many CryptPad accounts for instance to distinguish them in a glance.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/2fa-aegis-create.png&quot; alt=&quot;Aegis scanner&quot; width=&quot;50%&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Once validated, your CryptPad 2FA verification token would appear as an item in a
+list in the application, with a progress bar telling you how long the shown
+verification code remains valid.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/2fa-aegis-show.png&quot; alt=&quot;Aegis scanner&quot; width=&quot;50%&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Now, it leaves you to enter this verification code in the CryptPad webpage and
+validate with the “&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt; &lt;strong&gt;ENABLE 2FA&lt;/strong&gt;” button.&lt;/p&gt;
+&lt;p&gt;One this is done, you should see the following text:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/2fa-activated.png&quot; alt=&quot;2FA is active on this account&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Congratulations! Your account is now set up to use 2FA using with TOTP.&lt;/p&gt;
+&lt;p&gt;Note that you will be disconnected for all your other sessions once it&#39;s done,
+you have to log in again in these sessions with your verification code.&lt;/p&gt;
+&lt;p&gt;This is done as usual, with the difference that after typing your login and
+password, a validation code from your authentication device will be requested.&lt;/p&gt;
+&lt;h2&gt;More information&lt;/h2&gt;
+&lt;h3&gt;Disabling 2FA&lt;/h3&gt;
+&lt;p&gt;When &lt;strong&gt;disabling 2FA&lt;/strong&gt;, you need a final verification code, so don&#39;t
+remove it from your authentication device &lt;em&gt;before&lt;/em&gt; removing it from CryptPad.
+Otherwise, you would need to retrieve your recovery code from its safe space. Or
+in a last resort, see the “I lost my recovery code!” section below to see how to
+use human intervention by contacting your instance administrators.&lt;/p&gt;
+&lt;h3&gt;What is this text box above the QR Code?&lt;/h3&gt;
+&lt;p&gt;Upon generating the shared secret between you and the server, that is given to
+you in the form of a QR Code, you can also notice that there is a text box above
+the QR code that contains a &lt;em&gt;uniform resource identifier&lt;/em&gt; (URI for short). This
+&lt;a href=&quot;https://github.com/google/google-authenticator/wiki/Key-Uri-Format&quot;&gt;otpauth
+URI&lt;/a&gt;
+represents the secret in a plaintext manner and allows to easily import it into
+applications that don&#39;t rely on a QR code scanner, for instance a password
+manager.&lt;/p&gt;
+&lt;p&gt;As we said previously, it is not recommended to store your password and your
+2FA secret in the same place, as it makes your password manager a single-point
+of failure.&lt;/p&gt;
+&lt;h2&gt;I lost my recovery code!&lt;/h2&gt;
+&lt;h3&gt;User guide&lt;/h3&gt;
+&lt;p&gt;Good thing you use an encrypted flash drive to store your recovery code, however
+its data &lt;a href=&quot;https://en.wikipedia.org/wiki/Flash_memory#Limitations&quot;&gt;got corrupted&lt;/a&gt;
+on the way. What to do now?&lt;/p&gt;
+&lt;p&gt;Stay calm, it is possible for an administrator to disable 2FA for you provided
+that you send the relevant information.&lt;/p&gt;
+&lt;p&gt;For that when logging in, after typing your username and password, there is a link under the verification code prompt:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/2fa-recovery-request.png&quot; alt=&quot;Unable to get a code? Recover your account&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;You can then click on the “&lt;strong&gt;Recover your account&lt;/strong&gt;” link, that will ask your
+username and password again. Once that done, you end up in the page asking for
+your recovery code, however there is also a section to unfold “&lt;i class=&quot;fa
+fa-caret-right&quot;&gt;&lt;/i&gt; &lt;strong&gt;Forgot recovery code&lt;/strong&gt;” which shows a data-block that
+you can give to an instance administrator so that they can disable 2FA for your account.&lt;/p&gt;
+&lt;p&gt;Now, you can contact your instance administrator, politely explaining the
+situation and attaching this data block, and patiently wait for their answer.&lt;/p&gt;
+&lt;h3&gt;Administrator guide&lt;/h3&gt;
+&lt;p&gt;As an instance administrator, upon receiving a request to disable 2FA and
+verifying the identity of the requesting party, you have to go to the database
+section of the administration panel:
+&lt;strong&gt;User menu&lt;/strong&gt; &amp;gt; &lt;i class=&quot;fa fa-gears&quot;&gt;&lt;/i&gt; &lt;strong&gt;Administration&lt;/strong&gt; &amp;gt; &lt;i class=&quot;fa fa-database&quot;&gt;&lt;/i&gt; &lt;strong&gt;Database&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;There you can go to the &lt;strong&gt;2FA Recovery&lt;/strong&gt; section and paste the data-block that
+the forgetful user sent you:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/2fa-admin-disabling.png&quot; alt=&quot;Disabling 2FA for admins&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Then you just have to hit the “&lt;strong&gt;DISABLE&lt;/strong&gt;” button and the “&lt;strong&gt;Are you sure?&lt;/strong&gt;”
+confirmation to validate the user&#39;s query.&lt;/p&gt;
+&lt;h2&gt;Good practices&lt;/h2&gt;
+&lt;p&gt;Activating and using 2FA in itself doesn&#39;t guarantee that your account would
+remain safe whatever what happens, it is just another safety net.&lt;/p&gt;
+&lt;p&gt;However, to ensure that it works as intended, there are some mistakes to avoid.
+For instance, some password managers can act as a storage for your 2FA secrets
+and even generate the verification codes for you. In the event that your
+password is also stored there, then you create a new &lt;a href=&quot;https://en.wikipedia.org/wiki/LastPass#2022_customer_data_and_partially-encrypted_vault_theft&quot;&gt;single-point of
+failure&lt;/a&gt;
+in your password manager. For the sake of honesty, we should mention that is it
+still way better than not having any 2FA at all (as it adds a temporal factor in
+what your password manager outputs in case of phishing attacks for instance). It
+should be avoided in an ideal world, but we are not living in this world.&lt;/p&gt;
+&lt;p&gt;In general, you should avoid at all cost storing your passwords, secret keys and
+recovery keys in a place where it is easily accessible (for instance in a
+&lt;code&gt;my_passwords.csv&lt;/code&gt; file in the clear on your drive, or in a plaintext cloud
+storage).
+The use of a password manager makes it easier for users to manage this part as
+long as one sets up the appropriate measures to keep it secure, for instance
+with the use of a strong primary password, or not leaving your &lt;a href=&quot;https://support.mozilla.org/en-US/kb/password-manager-remember-delete-edit-logins#w_protecting-your-passwords&quot;&gt;computer
+unattended in an unlocked
+state&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;See also&lt;/h2&gt;
+&lt;p&gt;For further information about multi-factor authentication and password
+management, you can see:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Wikipedia. &lt;a href=&quot;https://en.wikipedia.org/wiki/Multi-factor_authentication&quot;&gt;Multi-Factor Authentication&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;NIST blog. &lt;a href=&quot;https://www.nist.gov/blogs/cybersecurity-insights/back-basics-whats-multi-factor-authentication-and-why-should-i-care&quot;&gt;Back to Basics: What’s multi-factor authentication - and why should I care?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;NIST Topics. &lt;a href=&quot;https://www.nist.gov/itl/smallbusinesscyber/guidance-topic/multi-factor-authentication&quot;&gt;Multi-factor authentication&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;i class=&quot;fa fa-file-pdf-o&quot;&gt;&lt;/i&gt; NIST. &lt;a href=&quot;https://csrc.nist.gov/csrc/media/Presentations/2022/multi-factor-authentication-and-sp-800-63-digital/images-media/Federal_Cybersecurity_and_Privacy_Forum_15Feb2022_NIST_Update_Multi-Factor_Authentication_and_SP800-63_Digital_Identity_%20Guidelines.pdf&quot;&gt;NIST Update: Multi-Factor Authentication and SP 800-63 Digital Identity Guidelines&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;i class=&quot;fa fa-file-pdf-o&quot;&gt;&lt;/i&gt; 🇫🇷 ANSSI. &lt;a href=&quot;https://cyber.gouv.fr/publications/recommandations-relatives-lauthentification-multifacteur-et-aux-mots-de-passe&quot;&gt;Recommendations about multi-factor authentication and passwords&lt;/a&gt;. October 2021.&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    <category term="tutorials" scheme="https://blog.cryptpad.org/tags/tutorials/"/>
+    <category term="security" scheme="https://blog.cryptpad.org/tags/security/"/>
+  </entry>
   <entry>
     <title>December 2023 status</title>
     <link href="https://blog.cryptpad.org/2024/01/04/status-2023-12/"/>
