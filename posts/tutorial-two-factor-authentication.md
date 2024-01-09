@@ -2,6 +2,7 @@
 title: Setup 2FA for CryptPad
 date: 2024-01-09
 author: "Fabrice Mouhartem"
+cover: /images/2fa-qr-code.png
 summary: A guide to setup two-factor authentication (2FA) on your favorite CryptPad instance.
 tags:
 - tutorials
