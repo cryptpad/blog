@@ -1,6 +1,6 @@
 ---
 title: Setup 2FA for CryptPad
-date: 2024-01-04
+date: 2024-01-09
 author: "Fabrice Mouhartem"
 summary: A guide to setup two-factor authentication (2FA) on your favorite CryptPad instance.
 tags:
@@ -14,9 +14,6 @@ at [the documentation](https://docs.cryptpad.org/en/user_guide/user_account.html
 
 The main purpose of this tutorial is to accompany you through every step and to
 help you understand what is going on behind the scene.
-
-Moreover, if you administrate a CryptPad instance, some information about 2FA
-are also here for you, prefixed with the badge“`admin`”.
 
 ## Why does it matter?
 
@@ -48,7 +45,7 @@ one-time-password](https://en.wikipedia.org/wiki/Time-based_one-time_password)
 time** is used to agree on a common value based on these two pieces of
 information.
 
-`admin` As a consequence, if you are managing your own CryptPad instance, you
+As a consequence, if you are managing your own CryptPad instance, you
 have to make sure that the date and time of your server remain fairly accurate
 (up to a 30 seconds shift), using
 [NTP](https://en.wikipedia.org/wiki/Network_Time_Protocol) for instance.
@@ -122,9 +119,7 @@ validate with the “<i class="fa fa-check"></i> **ENABLE 2FA**” button.
 
 One this is done, you should see the following text:
 
-<p style="color: #3f7f00">
-<i class="fa fa-check"></i> 2FA is active on this account
-</p>
+![Image: 2FA is active on this account](/images/2fa-activated.png)
 
 Congratulations! Your account is now set up to use 2FA using with TOTP.
 
@@ -173,7 +168,7 @@ that you send the relevant information.
 
 For that when logging in, after typing your username and password, there is a link under the verification code prompt:
 
-Unable to get a code? <i style="color:#0087FF">Recover your account</i>
+![Image: Unable to get a code? Recover your account](/images/2fa-recovery-request.png)
 
 You can then click on the “**Recover your account**” link, that will ask your
 username and password again. Once that done, you end up in the page asking for
@@ -186,8 +181,6 @@ situation and attaching this data block, and patiently wait for their answer.
 
 ### Administrator guide
 
-`admin`
-
 As an instance administrator, upon receiving a request to disable 2FA and
 verifying the identity of the requesting party, you have to go to the database
 section of the administration panel:
@@ -196,7 +189,7 @@ section of the administration panel:
 There you can go to the **2FA Recovery** section and paste the data-block that
 the forgetful user sent you:
 
-![](/images/2fa-admin-disabling.png)
+![Image: Disabling 2FA for admins](/images/2fa-admin-disabling.png)
 
 Then you just have to hit the “**DISABLE**” button and the “**Are you sure?**”
 confirmation to validate the user's query.
