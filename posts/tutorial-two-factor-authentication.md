@@ -119,7 +119,7 @@ validate with the “<i class="fa fa-check"></i> **ENABLE 2FA**” button.
 
 One this is done, you should see the following text:
 
-![2FA is active on this account](/images/2fa-activated.png)
+![Image: 2FA is active on this account](/images/2fa-activated.png)
 
 Congratulations! Your account is now set up to use 2FA using with TOTP.
 
@@ -168,7 +168,7 @@ that you send the relevant information.
 
 For that when logging in, after typing your username and password, there is a link under the verification code prompt:
 
-![Unable to get a code? Recover your account](/images/2fa-recovery-request.png)
+![Image: Unable to get a code? Recover your account](/images/2fa-recovery-request.png)
 
 You can then click on the “**Recover your account**” link, that will ask your
 username and password again. Once that done, you end up in the page asking for
@@ -189,7 +189,7 @@ section of the administration panel:
 There, you can go to the **2FA Recovery** section and paste the datablock that
 the forgetful user sent you:
 
-![](/images/2fa-admin-disabling.png)
+![Image: Disabling 2FA for admins](/images/2fa-admin-disabling.png)
 
 Then you just have to hit the “**DISABLE**” button and the “**Are you sure?**”
 confirmation to validate the user's query.
