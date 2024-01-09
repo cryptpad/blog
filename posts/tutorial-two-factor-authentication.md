@@ -120,9 +120,7 @@ validate with the “<i class="fa fa-check"></i> **ENABLE 2FA**” button.
 
 One this is done, you should see the following text:
 
-<p style="color: #3f7f00">
-<i class="fa fa-check"></i> 2FA is active on this account
-</p>
+![2FA is active on this account](/images/2fa-activated.png)
 
 Congratulations! Your account is now set up to use 2FA using with TOTP.
 
@@ -171,7 +169,7 @@ that you send the relevant information.
 
 For that when logging in, after typing your username and password, there is a link under the verification code prompt:
 
-Unable to get a code? <i style="color:#0087FF">Recover your account</i>
+![Unable to get a code? Recover your account](/images/2fa-recovery-request.png)
 
 You can then click on the “**Recover your account**” link, that will ask your
 username and password again. Once that done, you end up in the page asking for
