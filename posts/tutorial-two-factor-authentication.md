@@ -16,9 +16,6 @@ at the documentation for the concise explanation
 The main purpose of this tutorial is to accompany you through every step and to
 help you understand what is going on behind the scene.
 
-Moreover, if you administrate a CryptPad instance, some information about 2FA
-are also here for you, prefixed with the badge“`admin`”.
-
 ## Why does it matter?
 
 Multi-factor authentication is a general term to describe authentication methods
@@ -49,7 +46,7 @@ one-time-password](https://en.wikipedia.org/wiki/Time-based_one-time_password)
 time** is used to agree on a common value based on these two pieces of
 information.
 
-`admin` As a consequence, if you are managing your own CryptPad instance, you
+As a consequence, if you are managing your own CryptPad instance, you
 have to make sure that the date and time of your server remain fairly accurate
 (up to a 30 seconds shift), using
 [NTP](https://en.wikipedia.org/wiki/Network_Time_Protocol) for instance.
@@ -186,8 +183,6 @@ Now, you can contact your instance administrator, politely explaining the
 situation and attaching this data block, and patiently wait for their answer.
 
 ### Administrator guide
-
-`admin`
 
 As an instance administrator, upon receiving a request to disable 2FA and
 verifying the identity of the requesting party, you have to go to the database
