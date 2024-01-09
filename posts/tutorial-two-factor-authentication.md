@@ -71,7 +71,7 @@ open your Security & Privacy settings:
 
 Then look for the “**Two-Factor Authentication (2FA)**” section:
 
-![Image: 2FA is not initialized yet](/images/2fa-initialization.png)
+![2FA is not initialized yet](/images/2fa-initialization.png)
 
 Now, you can enter your password to initiate the process. Once you validate, it
 should show an alert telling you to store a recovery code that will be useful to
@@ -86,12 +86,12 @@ These make your mobile phone or a “Recovery Code” file in your CryptDrive a 
 idea. However, you can use an encrypted USB flash drive or a [digital safe
 box/vault](https://www.cnil.fr/en/what-you-should-know-about-our-standard-digital-safe-boxes) for instance.
 
-![Image: 2FA recovery code](/images/2fa-recovery-code.png)
+![2FA recovery code](/images/2fa-recovery-code.png)
 
 Once you stored this recovery code in a safe place, you can click on the “<i
 class="fa fa-check"></i> **Done**” button, then “**Continue**”.
 
-![Image: 2FA recovery code done](/images/2fa-recovery-code-done.png)
+![2FA recovery code done](/images/2fa-recovery-code-done.png)
 
 Then, it should show you a [QR code](https://en.wikipedia.org/wiki/QR_code) that
 contains the common secret between CryptPad and yourself.
@@ -99,27 +99,27 @@ contains the common secret between CryptPad and yourself.
 **Warning.** This is sensitive information, make sure that no one is spying on
 your screen at this point of time.
 
-![Image: QR Code](/images/2fa-qr-code.png)
+![QR Code](/images/2fa-qr-code.png)
 
 You can now scan the QR code with your authentication device, for instance Aegis
 on android would open the form shown hereunder upon scanning the QR Code,
 allowing you to customize the entry in the application. It could prove useful if
 you have many CryptPad accounts for instance to distinguish them in a glance.
 
-![Image: Aegis scanner](/images/2fa-aegis-create.png){width=50%}
+![Aegis scanner](/images/2fa-aegis-create.png){width=50%}
 
 Once validated, your CryptPad 2FA verification token would appear as an item in a
 list in the application, with a progress bar telling you how long the shown
 verification code remains valid.
 
-![Image: Aegis scanner](/images/2fa-aegis-show.png){width=50%}
+![Aegis scanner](/images/2fa-aegis-show.png){width=50%}
 
 Now, it leaves you to enter this verification code in the CryptPad webpage and
 validate with the “<i class="fa fa-check"></i> **ENABLE 2FA**” button.
 
 One this is done, you should see the following text:
 
-![Image: 2FA is active on this account](/images/2fa-activated.png)
+![2FA is active on this account](/images/2fa-activated.png)
 
 Congratulations! Your account is now set up to use 2FA using with TOTP.
 
@@ -168,7 +168,7 @@ that you send the relevant information.
 
 For that when logging in, after typing your username and password, there is a link under the verification code prompt:
 
-![Image: Unable to get a code? Recover your account](/images/2fa-recovery-request.png)
+![Unable to get a code? Recover your account](/images/2fa-recovery-request.png)
 
 You can then click on the “**Recover your account**” link, that will ask your
 username and password again. Once that done, you end up in the page asking for
@@ -189,7 +189,7 @@ section of the administration panel:
 There you can go to the **2FA Recovery** section and paste the data-block that
 the forgetful user sent you:
 
-![Image: Disabling 2FA for admins](/images/2fa-admin-disabling.png)
+![Disabling 2FA for admins](/images/2fa-admin-disabling.png)
 
 Then you just have to hit the “**DISABLE**” button and the “**Are you sure?**”
 confirmation to validate the user's query.
