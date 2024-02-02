@@ -4,12 +4,51 @@
   <subtitle>News from the end-to-end encrypted collaboration suite</subtitle>
   <link href="https://blog.cryptpad.org/atom.xml" rel="self"/>
   <link href="https://blog.cryptpad.org"/>
-  <updated>2024-01-09T00:00:00Z</updated>
+  <updated>2024-02-02T00:00:00Z</updated>
   <id>https://blog.cryptpad.org</id>
   <author>
     <name>CryptPad Team</name>
     <email>contact@cryptpad.fr</email>
   </author>
+  <entry>
+    <title>January 2024 status</title>
+    <link href="https://blog.cryptpad.org/2024/02/02/status-2024-01/"/>
+    <updated>2024-02-02T00:00:00Z</updated>
+    <id>https://blog.cryptpad.org/2024/02/02/status-2024-01/</id>
+    <summary xml:lang="en" type="html">CryptPad 5.7.0 and FOSDEM talks</summary>
+    <content xml:lang="en" type="html">&lt;h2&gt;🚀 CryptPad 5.7.0&lt;/h2&gt;
+&lt;p&gt;This release includes some features that could not be included into 5.6.0, namely instance invitations and support for images in diagrams. It also includes bug fixes in the drive, calendar and many other places.&lt;/p&gt;
+&lt;h3&gt;📇 Invitation links and user directory&lt;/h3&gt;
+&lt;p&gt;Instance administrators can now issue invitation links that can be used to create one account each, even if registration is closed on the instance. An optional User Directory can help keep track of the known accounts on the instance. This feature is designed for the needs of enterprise customers who use their own instance, hence allowing administrators access to more information than on a public-facing service&lt;/p&gt;
+&lt;h3&gt;🖼️ Support for images in the Diagram app&lt;/h3&gt;
+&lt;p&gt;Diagram documents now support embedding images.&lt;/p&gt;
+&lt;p&gt;5.7.0 also includes a lot of bug fixes and improvements. See the &lt;a href=&quot;https://github.com/cryptpad/cryptpad/releases/tag/5.7.0&quot;&gt;release notes on GitHub&lt;/a&gt; for the full list.&lt;/p&gt;
+&lt;h2&gt;📢 FOSDEM&lt;/h2&gt;
+&lt;p&gt;CryptPad will be well represented at FOSDEM this year.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;🎙️ Saturday, Feb 3rd, from 12:00 to 12:25 Fabrice will present “&lt;a href=&quot;https://fosdem.org/2024/schedule/event/fosdem-2024-3126-securely-collaborate-with-cryptpad/&quot;&gt;Securely collaborate with CryptPad&lt;/a&gt;”. This talk will give an overview of CryptPad, show the results of the &lt;a href=&quot;https://nlnet.nl/project/CryptPad-Blueprints/&quot;&gt;nlnet Blueprints&lt;/a&gt; project as well as some future directions.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;From the XWiki side, multiple events are also organised:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;🎙️ Saturday, Feb 3rd, from 16:40 to 17:05 Ludovic &amp;amp; Manuel will present &lt;a href=&quot;https://fosdem.org/2024/schedule/event/fosdem-2024-1831-cristal-a-new-wiki-ui-to-rule-them-all/&quot;&gt;Cristal: a new Wiki UI to rule them all&lt;/a&gt;, the new Wiki UI developed by XWiki to allow modularly creating wiki environments from heterogenous sources.&lt;/li&gt;
+&lt;li&gt;🎙️ Saturday, Feb 3rd, from 14:00 to 14:45 Clément and Wieland will present &lt;a href=&quot;https://fosdem.org/2024/schedule/event/fosdem-2024-3274-opendesk-the-open-source-collaborative-suite/&quot;&gt;openDesk - The Open Source collaborative suite&lt;/a&gt;, an open-source collaborative suite that embeds a part of CryptPad in it.&lt;/li&gt;
+&lt;li&gt;🎙️ Sunday, Feb 4th, from 9:00 to 9:50 Ludovic will also present &lt;a href=&quot;https://fosdem.org/2024/schedule/event/fosdem-2024-1830-20-years-of-open-source-building-xwiki-and-cryptpad/&quot;&gt;20 Years of Open Source building XWiki and CryptPad&lt;/a&gt;, where we will learn about the XWiki journey as a FOSS company.&lt;/li&gt;
+&lt;li&gt;🚀 XWiki will also organize &lt;a href=&quot;https://fosdem.org/2024/schedule/track/collaboration-and_content-management/&quot;&gt;the collaboration and content management track&lt;/a&gt; at FOSDEM where some of the above presentations will take place.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Finally, you are free to meet CryptPad and XWiki members &lt;!-- actors? --&gt; for a refresher on Saturday evening:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;🍻 Saturday, Feb 3rd, from 19:00 to 00:00, Brussels time: our first ever post-FOSDEM meetup, packed with open-source talks, beer, and snacks. Register here to meet the XWiki and cryptpad communities: &lt;a href=&quot;https://xwiki.com/en/Blog/XWiki-and-CryptPad-FOSDEM-meetup/&quot;&gt;https://xwiki.com/en/Blog/XWiki-and-CryptPad-FOSDEM-meetup/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;🔭 Next up&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;We will get to work on 5.8.0&lt;/li&gt;
+&lt;li&gt;We hope to release the Blueprints website in the coming weeks&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    <category term="status update" scheme="https://blog.cryptpad.org/tags/status update/"/>
+    <category term="diagram" scheme="https://blog.cryptpad.org/tags/diagram/"/>
+    <category term="administration" scheme="https://blog.cryptpad.org/tags/administration/"/>
+  </entry>
   <entry>
     <title>Setup 2FA for CryptPad</title>
     <link href="https://blog.cryptpad.org/2024/01/09/tutorial-two-factor-authentication/"/>
