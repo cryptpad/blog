@@ -5,6 +5,7 @@ author: Aaron MacSween
 tags:
 - cloud
 - storage
+- postmortem
 cover: /images/3000-connections.png
 summary: On December 8th, 2020 a malfunction in the water-cooling system at a data-center in Roubaix, France caused an unrecoverable error in the physical machine which hosts CryptPad.fr.
 ---
