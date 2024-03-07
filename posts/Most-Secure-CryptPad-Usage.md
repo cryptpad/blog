@@ -85,27 +85,28 @@ network.
 <!-- agent"](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent) -->
 <!-- (browser and [operating system](https://ssd.eff.org/glossary/operating-system)). -->
 
-### 🔑 Encryption
+### 🔑 Cryptography
 
 One of the key features of CryptPad is [end-to-end
-encryption](https://ssd.eff.org/glossary/end-to-end-encryption).
-Let us give you a rough idea of what encryption is.
-There are three main building blocks:
+encryption](https://ssd.eff.org/glossary/end-to-end-encryption). Let us give you
+a rough idea of what encryption and authentication are. There are three main
+building blocks:
 
-1. **Symmetric Encryption** works similar to a box with a lock: We can put
-   something into the box and lock the box by key (encryption).
+1. **Symmetric Encryption** (or public key encryption) works similar to a box
+   with a lock: We can put something into the box and lock the box by key
+   (encryption).
    Only someone with the key can unlock the box and access the content
    (decryption) and modify it.
-   Since we use the same key to lock and unlock the box, we call this scheme
+   Since the same key is used to lock and unlock the box, this scheme is dubbed
    _symmetric_.
    We can further make copies of the key and distribute it to people whom we
    trust, so that they can all lock and unlock the box.
    <p style="text-align: center;">
    <img title="Box with lock" src="https://unsplash.com/photos/i1ZRcrzRX7w/download?ixid=MnwxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjcxNjk4MjU2&force=true&w=640" width=400>
    </p>
-2. **Asymmetric Encryption** differs from symmetric encryption in the way that
-   we use a different key for encryption (this is the _public key_) and
-   decryption (the _private key_).
+2. **Asymmetric Encryption** (or public key encryption: PKE for short) differs
+   from symmetric encryption in that a different key is used for encryption
+   (namely, the _public key_) and decryption (the _private key_).
    You can imagine asymmetric encryption as a special lock on your house's door:
    by distributing the public key, everyone is able to lock the door,
    but only you hold the private key to unlock the house and open it.
@@ -116,8 +117,9 @@ There are three main building blocks:
 3. **Digital Signatures** are closely related to physical seals: Only the
    persons in possession of the seal (which we call the _signing key_) can sign, but
    all other people can verify the authenticity of a document.
-   Digital signatures make it further impossible to modify sealed content
-   without the readers noticing it.
+   In addition, digital signatures also guarantee that no one is able to modify
+   the sealed content without the readers noticing it. A property that regular
+   seals don’t enjoy.
    <p style="text-align: center;">
    <img title="Signature" src="https://unsplash.com/photos/pegxjW_1YOU/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8MTZ8fHNpZ25hdHVyZXxlbnwwfHx8fDE2NzE2NzA3ODQ&force=true&w=640" width=400>
    </p>
