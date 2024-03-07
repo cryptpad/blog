@@ -1,0 +1,15 @@
+---
+Title: All Tags
+layout: "layouts/main.njk"
+eleventyExcludeFromCollections: true
+---
+
+<h1>All Tags</h1>
+
+<ul style="width:100%">
+    {% for tag in collections.allTags %}
+        <li>
+            <a class="tag" href="/tags/{{tag | slugify }}">{{ tag }}</a><span class="count">{{tag.count}}</span>
+        </li>
+    {% endfor %}
+</ul>

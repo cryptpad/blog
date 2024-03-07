@@ -50,10 +50,12 @@
         <section class="header">
             <h1>Making CryptPad CSS 3 times faster, by loading it twice</h1>
             <p class="meta">
-                
-                    Caleb James DeLisle -
-                
                 20 Jul 2018
+                
+                    
+                        - Caleb James DeLisle
+                    
+                
                     
                     
             </p>
@@ -245,7 +247,7 @@
 </code></pre>
 <p>Going through it step-by-step, the <code>.help_vars()</code> mixin takes parameters but it defines default values, then it creates some Less variables which are accessed after it is used. <code>.help_main()</code> calls <code>.help_vars()</code> and passes it arguments, then takes it's results and assigns them to CSS variables. Then the main block of the Less file also calls <code>.help_vars()</code> but without any arguments, so the defaults are used. Then in the main block, each usage of a CSS variable also has the usage of the less variable. The less variable provides the default value, the one which IE will see, and then the CSS variable provides the specified value, the one which will be different per CryptPad application.</p>
 <h2>There you have it</h2>
-<p>Every Less file now gets loaded twice, first it is loaded by the <code>@include (reference)</code> call, where it is parsed in order to expose the <code>.&lt;filename&gt;_main()</code> mixin, then it is loaded a second time as an independent file. Importantly, however, once it is compiled it is stored into localStorage and the toolbar CSS which is compiled when you go to the Rich Text app is the exact same CSS which will be used when you go to the Code/Markdown app. This feature is available in the <code>staging</code> branch of the CryptPad project and will be on CryptPad.fr in the next release.</p>
+<p>Every Less file now gets loaded twice, first it is loaded by the <code>@include (reference)</code> call, where it is parsed in order to expose the <code>.&lt;filename&gt;_main()</code> mixin, then it is loaded a second time as an independent file. Importantly, however, once it is compiled it is stored into localStorage and the toolbar CSS which is compiled when you go to the Rich Text app is the exact same CSS which will be used when you go to the Code/Markdown app. This feature is available in the <code>staging</code> branch of the CryptPad project and will be on <a href="http://CryptPad.fr">CryptPad.fr</a> in the next release.</p>
 <p>We could make it even faster, by separating the main content of the Less files from the <code>.&lt;filename&gt;_vars()</code> and <code>.&lt;filename&gt;_main()</code> mixins, essentially making header files, in C/C++ parlance. And if we find in future profiling that less compiling remains a signficant performance penalty, there's a good chance that we will.</p>
 
     </article>
@@ -267,34 +269,34 @@
 <ul>
 
     <li>
-        <a class="tag" href="/tags/status-update">status update</a><span class="count">16</span></li>
+        <a class="tag" href="/tags/status-update">status update</a><span class="count">30</span></li>
 
     <li>
-        <a class="tag" href="/tags/funding">funding</a><span class="count">13</span></li>
+        <a class="tag" href="/tags/funding">funding</a><span class="count">15</span></li>
 
     <li>
         <a class="tag" href="/tags/roadmap">roadmap</a><span class="count">10</span></li>
 
     <li>
-        <a class="tag" href="/tags/security">security</a><span class="count">8</span></li>
+        <a class="tag" href="/tags/security">security</a><span class="count">10</span></li>
 
     <li>
-        <a class="tag" href="/tags/donate">donate</a><span class="count">6</span></li>
+        <a class="tag" href="/tags/team">team</a><span class="count">9</span></li>
 
     <li>
-        <a class="tag" href="/tags/ngi">ngi</a><span class="count">6</span></li>
+        <a class="tag" href="/tags/ngi">ngi</a><span class="count">8</span></li>
 
     <li>
-        <a class="tag" href="/tags/open-source">open-source</a><span class="count">5</span></li>
+        <a class="tag" href="/tags/donate">donate</a><span class="count">7</span></li>
 
     <li>
-        <a class="tag" href="/tags/open-collective">open collective</a><span class="count">5</span></li>
+        <a class="tag" href="/tags/research">research</a><span class="count">7</span></li>
 
     <li>
-        <a class="tag" href="/tags/research">research</a><span class="count">5</span></li>
+        <a class="tag" href="/tags/open-source">open-source</a><span class="count">6</span></li>
 
     <li>
-        <a class="tag" href="/tags/forms">forms</a><span class="count">5</span></li>
+        <a class="tag" href="/tags/open-collective">open collective</a><span class="count">6</span></li>
 
 </ul>
         </section>

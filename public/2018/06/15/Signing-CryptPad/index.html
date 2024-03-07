@@ -50,10 +50,12 @@
         <section class="header">
             <h1>Signing CryptPad</h1>
             <p class="meta">
-                
-                    Caleb James DeLisle -
-                
                 15 Jun 2018
+                
+                    
+                        - Caleb James DeLisle
+                    
+                
                     
                     
             </p>
@@ -72,7 +74,7 @@
     
 </div>
         </section>
-        <p>CryptPad was designed with a view that privacy should be default and cryptography should be invisible. In order to do this, we made use of the web-app model so people could just go to cryptpad.fr and immediately begin using the app, no installation necessary. However, this model has a known flaw, the server can decide what client-side code it will send to any given user, allowing a compromized server to serve code with a back-door vulnerability.</p>
+        <p>CryptPad was designed with a view that privacy should be default and cryptography should be invisible. In order to do this, we made use of the web-app model so people could just go to <a href="http://cryptpad.fr">cryptpad.fr</a> and immediately begin using the app, no installation necessary. However, this model has a known flaw, the server can decide what client-side code it will send to any given user, allowing a compromized server to serve code with a back-door vulnerability.</p>
 <p>Recently, I did an experiment to make CryptPad more secure against these types of attacks by signing the code. CryptPad is a unique webapp, even without considering the encryption aspect. There is no build system, the code we write is exactly the same as what your web browser runs. All of the CryptPad html, javascript and resources are static files which are served by a plain old web server. The data persistance is managed by an API server which the web browser communicates with using an HTML5 WebSocket. Finally, in order to add a layer of security against possible Cross Site Scripting attacks, CryptPad makes use of a <a href="https://blog.cryptpad.fr/2017/08/30/CryptPad-s-new-Secure-Cross-Domain-Iframe/">cross domain iframe</a>, protecting your encryption keys from the majority of the CryptPad code in the same way that your online bank is protected from that sketchy porn site open in another tab.</p>
 <p>Since CryptPad has no build system, there are many small javascript files which must be loaded. To do this, CryptPad uses <a href="http://requirejs.org/">RequireJS</a>. While many small files are generally considered to be bad for website performance, RequireJS uses the HTML5 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script">async attribute</a> to tell the browser not to block loading of other things while waiting for the scripts to load. Secondly, RequireJS also allows version numbers to be added to the script URLs which allows us to cache almost everything in the browser. Finally, we use the <a href="https://en.wikipedia.org/wiki/HTTP/2">HTTP/2</a> protocol to serve resources because it allows multiple requests to be sent at the same time, while HTTP/2 is incompatible with WebSocket, this is ok because the web-app is served from a different server from the API server.</p>
 <h2>Chain of Trust</h2>
@@ -151,34 +153,34 @@
 <ul>
 
     <li>
-        <a class="tag" href="/tags/status-update">status update</a><span class="count">16</span></li>
+        <a class="tag" href="/tags/status-update">status update</a><span class="count">30</span></li>
 
     <li>
-        <a class="tag" href="/tags/funding">funding</a><span class="count">13</span></li>
+        <a class="tag" href="/tags/funding">funding</a><span class="count">15</span></li>
 
     <li>
         <a class="tag" href="/tags/roadmap">roadmap</a><span class="count">10</span></li>
 
     <li>
-        <a class="tag" href="/tags/security">security</a><span class="count">8</span></li>
+        <a class="tag" href="/tags/security">security</a><span class="count">10</span></li>
 
     <li>
-        <a class="tag" href="/tags/donate">donate</a><span class="count">6</span></li>
+        <a class="tag" href="/tags/team">team</a><span class="count">9</span></li>
 
     <li>
-        <a class="tag" href="/tags/ngi">ngi</a><span class="count">6</span></li>
+        <a class="tag" href="/tags/ngi">ngi</a><span class="count">8</span></li>
 
     <li>
-        <a class="tag" href="/tags/open-source">open-source</a><span class="count">5</span></li>
+        <a class="tag" href="/tags/donate">donate</a><span class="count">7</span></li>
 
     <li>
-        <a class="tag" href="/tags/open-collective">open collective</a><span class="count">5</span></li>
+        <a class="tag" href="/tags/research">research</a><span class="count">7</span></li>
 
     <li>
-        <a class="tag" href="/tags/research">research</a><span class="count">5</span></li>
+        <a class="tag" href="/tags/open-source">open-source</a><span class="count">6</span></li>
 
     <li>
-        <a class="tag" href="/tags/forms">forms</a><span class="count">5</span></li>
+        <a class="tag" href="/tags/open-collective">open collective</a><span class="count">6</span></li>
 
 </ul>
         </section>

@@ -50,10 +50,12 @@
         <section class="header">
             <h1>The outage of December 8th, 2020 - a postmortem</h1>
             <p class="meta">
-                
-                    Aaron MacSween -
-                
                 16 Dec 2020
+                
+                    
+                        - Aaron MacSween
+                    
+                
                     
                     
             </p>
@@ -66,17 +68,19 @@
         
             <li><a class="tag" href="/tags/storage">storage</a></li>
         
+            <li><a class="tag" href="/tags/postmortem">postmortem</a></li>
+        
         </ul>
     
 </div>
         </section>
-        <p>On December 8th, 2020 a malfunction in the water-cooling system at a data-center in Roubaix, France caused an unrecoverable error in the physical machine which hosts CryptPad.fr. The service was unavailable for approximately 27 hours while we diagnosed a corrupted OS, provisioned a new server, and migrated user data to the new system.</p>
+        <p>On December 8th, 2020 a malfunction in the water-cooling system at a data-center in Roubaix, France caused an unrecoverable error in the physical machine which hosts <a href="http://CryptPad.fr">CryptPad.fr</a>. The service was unavailable for approximately 27 hours while we diagnosed a corrupted OS, provisioned a new server, and migrated user data to the new system.</p>
 <h2>What happened</h2>
 <p>Our team works remotely across three different timezones, so for the sake of simplicity I'll summarize the timeline of the service outage in Central European Time (CET) using a 24-hour clock.</p>
 <h3>December 8, 05:30 - Server update deployed</h3>
 <p>I occasionally start my working days very early in the morning when we have as few users connected as possible. On the days where a server restart is necessary, I do it at this time to minimize the number of active users that might be inconvenienced by the momentary service interruption.</p>
 <p>During the process of deploying a minor patch to optimize how the service loads and evicts document metadata I noticed that our monthly full-disk backup was running. We run a less intensive incremental backup on a daily basis, but having a regular full-disk backup ensures that restoration does not become increasingly difficult over time.</p>
-<p>We've been breaking our records for the highest ever number of concurrent users on CryptPad.fr on a regular basis, so I tend to pay close attention to how our server is performing and how small changes in our code affect its performance.</p>
+<p>We've been breaking our records for the highest ever number of concurrent users on <a href="http://CryptPad.fr">CryptPad.fr</a> on a regular basis, so I tend to pay close attention to how our server is performing and how small changes in our code affect its performance.</p>
 <p><img src="/images/3000-connections.png" alt="A record number of concurrently connected clients, as reported by our admin panel"></p>
 <p>My colleagues hadn't started their shifts yet, but I left a message informing them that the server would probably be under more load than usual. We were considering also deploying an update to our client code, but we usually avoid doing so on backup days to help ensure that things go smoothly.</p>
 <p><img src="/images/poor-server-performance.png" alt="Me jinxing our server for the day"></p>
@@ -146,34 +150,34 @@
 <ul>
 
     <li>
-        <a class="tag" href="/tags/status-update">status update</a><span class="count">16</span></li>
+        <a class="tag" href="/tags/status-update">status update</a><span class="count">30</span></li>
 
     <li>
-        <a class="tag" href="/tags/funding">funding</a><span class="count">13</span></li>
+        <a class="tag" href="/tags/funding">funding</a><span class="count">15</span></li>
 
     <li>
         <a class="tag" href="/tags/roadmap">roadmap</a><span class="count">10</span></li>
 
     <li>
-        <a class="tag" href="/tags/security">security</a><span class="count">8</span></li>
+        <a class="tag" href="/tags/security">security</a><span class="count">10</span></li>
 
     <li>
-        <a class="tag" href="/tags/donate">donate</a><span class="count">6</span></li>
+        <a class="tag" href="/tags/team">team</a><span class="count">9</span></li>
 
     <li>
-        <a class="tag" href="/tags/ngi">ngi</a><span class="count">6</span></li>
+        <a class="tag" href="/tags/ngi">ngi</a><span class="count">8</span></li>
 
     <li>
-        <a class="tag" href="/tags/open-source">open-source</a><span class="count">5</span></li>
+        <a class="tag" href="/tags/donate">donate</a><span class="count">7</span></li>
 
     <li>
-        <a class="tag" href="/tags/open-collective">open collective</a><span class="count">5</span></li>
+        <a class="tag" href="/tags/research">research</a><span class="count">7</span></li>
 
     <li>
-        <a class="tag" href="/tags/research">research</a><span class="count">5</span></li>
+        <a class="tag" href="/tags/open-source">open-source</a><span class="count">6</span></li>
 
     <li>
-        <a class="tag" href="/tags/forms">forms</a><span class="count">5</span></li>
+        <a class="tag" href="/tags/open-collective">open collective</a><span class="count">6</span></li>
 
 </ul>
         </section>
