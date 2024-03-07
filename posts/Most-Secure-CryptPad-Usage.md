@@ -195,8 +195,8 @@ CryptPad keeps these technical details "under the hood" and provides a simple
 interface to [share
 documents](https://docs.cryptpad.org/en/user_guide/share_and_access.html#sharing-a-link)
 via links. Such a link essentially contains the symmetric key for encryption and
-decryption, for verifying signatures as well as the one for creating signatures
-(in case of read/write access).
+decryption, for verifying signatures as well as the one for issuing signatures
+(in case of read/write access) in a **non-revokable manner**.
 
 
 <p style="text-align: center;">
@@ -204,11 +204,13 @@ decryption, for verifying signatures as well as the one for creating signatures
 </p>
 
 
-⚠️ This implies that the document is only as safe as the communication channels
-used to send these links. <!-- maybe worth giving an example of a channel here -->
+⚠️ This implies that the document is only as safe as the **weakest**
+communication channel used to send these links. <!-- maybe worth giving an
+example of a channel here -->
 If you consider a channel to be unsafe, or if it is publicly accessible, you
-may want to isolate some of your documents from it, e.g., limit the sending
-of edit links to Signal chats with disapearing messages.
+may want to isolate some of your documents from it. For instance, you can limit
+the sending of edit links to [Signal](https://signal.org/) chats with
+disappearing messages.
 
 <!-- I'm not sure we ever refer to the mailbox system in public documents, so maybe we can find another term to express this rather than the internal name -->
 Another possibility to safely share the access is to [send it over CryptPad's
@@ -221,9 +223,17 @@ channel.
 <img title="Share with contacts" src="https://docs.cryptpad.org/en/_images/modal-share-contacts.png">
 </p>
 
+⚠️ Note that CryptPad documents contain the full edit history by design. It is
+easily accessible to anyone from the [user
+interface](https://docs.cryptpad.org/en/user_guide/apps/general.html#document-history).
+If you made a manipulation error, such at past some text you didn’t want to
+share, while producing the document **before** sharing it, we recommend that you
+copy-paste the version you want to share for collaboration in a new pad before
+sending it to sanitize the history (it also helps tracking changes afterward).
+
 ### ⛔ Restricting Access
 
-As CryptPad operates with static keys, the shared access is not revokable.
+As CryptPad operates with static keys, granted shared accesses are not revokable.
 This means that by default anyone who was granted access will forever be able to
 read (and modify) a document.
 To prevent this, you can shut down access to a document using the
