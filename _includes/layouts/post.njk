@@ -32,18 +32,18 @@
         <section class="header">
             <h1>{{title}}</h1>
             <p class="meta">
+                {{ date | postDate }}
                 {% if author %}
                     {% if author|isArray %}
                         {# XXX how to make a list with commas only *between* elements and none at the end #}
                         {# {% set len = author | length %} #}
                         {% for a in author %}
-                            {{a}} - {# {% if {{loop.index}} < len %}, {% endif %} #}
+                        -  {{a}}{# {% if {{loop.index}} < len %}, {% endif %} #}
                         {% endfor %}
                     {% else %}
-                        {{ author }} -
+                        - {{ author }}
                     {% endif %}
                 {% endif %}
-                {{ date | postDate }}
                     {# XXX TODO TBC add Mastodon share button? #}
                     {# https://github.com/Aly-ve/Mastodon-share-button #}
             </p>
