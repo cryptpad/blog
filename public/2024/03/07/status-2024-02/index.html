@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+
+    <title>February 2024 status | CryptPad Blog</title> 
+    
+
+    
+    
+    <meta property="og:type" content="webpage">
+    <meta property="og:title" content="February 2024 status">
+    <meta property="og:url" content="http://blog.cryptpad.org/2024/03/07/status-2024-02/">
+    <meta property="og:page_name" content="February 2024 status">
+    <meta property="og:locale" content="default">
+    <meta property="og:image" content="http://blog.cryptpad.org/images/lemonde-youtube-thumbnail.png">
+    <meta property="og:description" content="5.7 Documentation, Le Monde using CryptPad, FOSDEM recap, Post-mortems for recent CryptPad.fr outages">
+    <meta name="twitter:card" content="5.7 Documentation, Le Monde using CryptPad, FOSDEM recap, Post-mortems for recent CryptPad.fr outages">
+    <meta name="twitter:title" content="February 2024 status">
+
+
+
+    <link rel="alternate" href="/atom.xml" title="CryptPad Blog" type="application/atom+xml">
+
+    <link rel="icon" href="/theme/favicon.png">
+
+
+</head>
+
+<body>
+    <main class="container">
+        <header>
+            
+    <a href="/" class="back-home">
+        <i class="fa fa-arrow-left" aria-hidden="true"></i> <i class="fa fa-home" aria-hidden="true"></i> Homepage
+    </a>
+
+            <a href="/">
+                <img class="cp-logo" src="/theme/CryptPad_logo.svg" aria-hidden="true" alt="">
+                <h1>CryptPad Blog</h1>
+            </a>
+        </header>
+        <section id="content">
+            
+    <article class="post" lang="en">
+        <section class="header">
+            <h1>February 2024 status</h1>
+            <p class="meta">
+                7 Mar 2024
+                
+                    
+                        
+                        
+                        
+                        -  Fabrice Mouhartem
+                        
+                        -  Mathilde Grünig
+                        
+                        -  Guillaume Delhumeau
+                        
+                        -  David Benqué
+                        
+                    
+                
+                    
+                    
+            </p>
+            <div class="article-tags">
+    
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        <ul class="tags" aria-label="Tags">
+        
+            <li><a class="tag" href="/tags/status-update">status update</a></li>
+        
+            <li><a class="tag" href="/tags/postmortem">postmortem</a></li>
+        
+            <li><a class="tag" href="/tags/fosdem">FOSDEM</a></li>
+        
+            <li><a class="tag" href="/tags/research">research</a></li>
+        
+            <li><a class="tag" href="/tags/documentation">documentation</a></li>
+        
+        </ul>
+    
+</div>
+        </section>
+        <p>This status post is a bit late, to make up for it we are treating you to a larger-than-usual serving of news and content.</p>
+<h3>📚 5.7 Documentation with a new accessibility section</h3>
+<p>We have updated our documentation to <a href="https://docs.cryptpad.org">version 5.7</a>. Alongside documenting new features we are introducing a <a href="https://docs.cryptpad.org/en/user_guide/accessibility.html">new accessibility section</a>. The first thing in this section is a list of channels to provide accessibility feedback including a <a href="https://matrix.to/#/#cryptpad-accessibility:matrix.xwiki.com">new dedicated chat room</a> in our <a href="https://matrix.to/#/#cryptpad:matrix.xwiki.com">Matrix space</a>, and a dedicated email address. We plan to expand this in future, for example with a thorough list of keyboard shortcuts and navigation.</p>
+<h3>📰 Le Monde is using CryptPad again</h3>
+<p><img src="/images/lemonde-youtube-thumbnail.png" alt="Video thumbnail with title in french &quot;C'est la faute des riches?&quot;"></p>
+<p>We are delighted to see CryptPad used once again by French newspaper Le Monde. This time sharing the <a href="https://cryptpad.fr/pad/#/2/pad/view/y7CGhVOTkDMwbIUEA0W-bqTl9qbXnCPkGiTdgZWqebw/">list of references</a> behind a <a href="https://www.youtube.com/watch?v=JQDRb7jE9qQ">video analysing the disproportionate contribution of rich people to climate change</a>.</p>
+<h3>📢 FOSDEM</h3>
+<p><img src="/images/tshirst_cryptpad_xwiki.jpg" alt="photo of two people wearing a CryptPad and XWiki t-shirts next to each other"></p>
+<p>As stated in the previous status report, CryptPad was present at <a href="https://fosdem.org/">FOSDEM</a> along with XWiki.
+It is the biggest free and open-source European event, where communities of different projects can meet, exchange ideas and collaborate.</p>
+<p>CryptPad was present in multiple forms, first with presentations, which recorded videos are available in the following links:</p>
+<ul>
+<li>Fabrice presented “<a href="https://fosdem.org/2024/schedule/event/fosdem-2024-3126-securely-collaborate-with-cryptpad/">Securely collaborate with CryptPad</a>”;</li>
+<li>Clément and Wieland presented “<a href="https://fosdem.org/2024/schedule/event/fosdem-2024-3274-opendesk-the-open-source-collaborative-suite/">openDesk - The Open Source collaborative suite</a>“</li>
+<li>Ludovic, our CEO shared his experience in “<a href="https://fosdem.org/2024/schedule/event/fosdem-2024-1830-20-years-of-open-source-building-xwiki-and-cryptpad/">20 Years of Open Source building XWiki and CryptPad</a>”</li>
+</ul>
+<!-- - “[Cristal: a new Wiki UI to rule them all](https://fosdem.org/2024/schedule/event/fosdem-2024-1831-cristal-a-new-wiki-ui-to-rule-them-all/)” (?) -->
+<p>In a more relaxed fashion, XWiki and CryptPad organized a <a href="https://xwiki.com/en/Blog/XWiki-and-CryptPad-FOSDEM-meetup/">community meetup</a> with their team on Saturday night, where we exchanged with the community more casually.</p>
+<p>All in all we were very glad to exchange with the community during this event and we hope to see you again in future events!</p>
+<h3>🤕 Post-mortems for recent <a href="http://CryptPad.fr">CryptPad.fr</a> outages</h3>
+<p>Users of our flagship instance <a href="http://CryptPad.fr">CryptPad.fr</a> may have noticed some unexpected downtime in the last couple of months. There are 4 recent outages that we'd like to provide some information about, including steps that we are taking to prevent these issues from happening again. Sorry the details below get quite technical, that can't really be avoided if we want to provide a transparent account of these incidents.</p>
+<p>For context, we started migrating <a href="http://cryptpad.fr">cryptpad.fr</a> user data to a new storage back-end system in October 2023. This was a long process where we needed to synchronize more than 4,5 TB of data from our old inefficient file-system to a new one based on BTRFS. The final step of this migration to the new storage system took place on December 13th, 2023 (all dates and times are CET). Some time later we ran into issues:</p>
+<h4>Friday January 12th 2024, 16:00</h4>
+<ul>
+<li>No log-in for accounts with <a href="https://blog.cryptpad.org/2024/01/09/tutorial-two-factor-authentication/">two-factor authentication</a> (2FA) enabled</li>
+<li>No access to uploaded static files (blobs: images, PDFs, etc) and no upload of new files</li>
+<li>Spreadsheet documents opening as blank documents</li>
+</ul>
+<p>Due to human error, blobs weren't served anymore by the Nginx web server. The running user was changed during a maintenance task but we forgot to update the <code>/var/cache/nginx/</code> directory access rights. We realized our mistake when users reported the issue during the weekend and fixed it on Monday January 15th at 10:30.</p>
+<h4>Friday January 19th 2024, 7:30</h4>
+<ul>
+<li>No log-in for accounts with 2FA enabled</li>
+<li>Impossible to create new documents</li>
+<li>Existing documents and drives only shown as read-only</li>
+</ul>
+<p>Our backup system was creating too many snapshots of the BTRFS filesystem because of a race condition. These snapshots took all the available space in the BTRFS pool which made the storage become read-only. We did not have appropriate monitoring in place on the new system to spot this mistake in time to prevent an outage.</p>
+<p>The issue was fixed by identifying and fixing the race condition in our in-house backup software, and adding more space to the server. Service resumed around 9:30 that morning. We then added some monitoring scripts to our Icinga instance with regular, automated checks to be sure the issue wouldn't arise again.</p>
+<h4>Tuesday January 23th 2024, 13:00</h4>
+<ul>
+<li>No log-in for accounts with 2FA enabled</li>
+<li>Impossible to create new documents</li>
+<li>Existing documents and drives only shown as read-only</li>
+</ul>
+<p>With similar symptoms to the previous outage, this one was caused by our failure to make the disk we added the previous week fully available to BTRFS (a filesystem balancing operation was needed to spread the data among the different disks). This resulted in space running out again and producing the same &quot;read-only&quot; effects for our users.</p>
+<p>This took us a bit longer to figure out, service was only restored after 2.5h at around 15:30. Following this we adapted the monitoring scripts on our Icinga instance so the metadata part of the pool is also checked.</p>
+<h4>Tuesday February 13th 2024, 14:00</h4>
+<ul>
+<li>Disconnections when editing documents and accessing the drive</li>
+</ul>
+<p>In this case the server was rebooted while a resource-intensive BTRFS balancing operation was running (still recovering from the last outage). Because this operation was <em>paused</em> but not <em>canceled</em>, it prevented the BTRFS pool from being mounted again.</p>
+<p>The issue was fixed by adding the <code>skip_balance</code> option to the mount command, with service resuming at around 15:00.</p>
+<p>In summary you will have spotted a pattern of compounded teething issues as we got used to the new storage back-end in our production conditions. Beyond adding monitoring, we plan to be more mindful of the load applied on our server and eventually refactor its architecture to be better suited to the needs of our flagship instance.</p>
+<p>We'd like to apologise to our users, free and paying, for the inconvenience caused by these issues. We are grateful for your patience and your trust.</p>
+<h3>🔎 Contributions to Eurocrypt cryptography conference</h3>
+<p>CryptPad is also contributing in theoretical research with contributions <a href="https://eurocrypt.iacr.org/2024/acceptedpapers.php">accepted</a> at <a href="https://iacr.org/meetings/eurocrypt/">Eurocrypt</a> one of the most reputable conferences in cryptography, hosted by the <a href="https://iacr.org/">International Association for Cryptologic Research</a> (IACR), and at the <a href="https://csrc.nist.gov/Events/2024/fifth-pqc-standardization-conference">NIST Post-Quantum standardization Conference</a>, which is the organism leading the current cryptographic effort toward post-quantum transition.</p>
+<p>Both results present a scalable post-quantum signature scheme, named Raccoon, that offers nice properties with regard to thresholdization and masking. Threshold signatures allow guaranteeing that a quorum of users collaborated to produce a signature, henceforth alleviating the single point of failure that certificate authorities represents for instance: some companies already <a href="https://www.securityweek.com/mozilla-may-reject-uae-firms-root-inclusion-request/">attempted to exploit this loophole</a> in the past.</p>
+<p>Moreover, masking is important for hardware implementations of cryptography, especially on embedded devices, as a popular mitigation to <a href="https://en.wikipedia.org/wiki/Side-channel_attack">side channel cryptanalysis</a>.</p>
+<p>The full version of this work is available in the <a href="https://ia.cr/2024/184">IACR preprint archive</a> and more information can be found on the <a href="https://raccoonfamily.org/">Raccoon signature website</a>. This is the result of the joint effort of Shuichi Katsumata, Mary Maller, Fabrice Mouhartem, Rafael del Pino, Thomas Prest and Markku-Juhani Saarinen.</p>
+<!--
+- https://eurocrypt.iacr.org/2024/acceptedpapers.php
+   - Threshold Raccoon: Practical Threshold Signatures from Standard Lattice Assumptions
+       - Shuichi Katsumata, Mary Maller, Rafael del Pino, **Fabrice Mouhartem**, Thomas Prest, Markku-Juhani Saarinen
+       - PQShield LTD & AIST, PQShield LTD & Ethereum Foundation, PQShield SAS, **XWiki SAS (CryptPad)**, PQShield LTD & Tampere University
+- https://csrc.nist.gov/Events/2024/fifth-pqc-standardization-conference
+  - Threshold Raccoon
+    -  Rafael del Pino Thomas Espitau, Shuichi Katsumata, Mary Maller, **Fabrice Mouhartem**, Thomas Prest, Markku-Juhani Saarinen, Kaoru Takemure
+-->
+<h3>🔭 Up next</h3>
+<ul>
+<li>We are nearing full-draft status on the Blueprints R&amp;D website which we are hoping to launch before the next status update</li>
+<li>A new blog post in the <a href="https://blog.cryptpad.org/tags/tutorials/">tutorial series</a> is to be released on how to make the most of CryptPad’s security from a user standpoint</li>
+<li>The team is working hard on features for 5.8 which is planned for the end of Q1 2024 (also the end of this month!)</li>
+</ul>
+
+    </article>
+
+    <nav class="article-pagination" aria-label="Pagination">
+        
+        
+            <a href="/2024/02/15/no-one-cares-intil/">Older: <span class="title">No one cares about open-source, until …</span></a>
+        
+    </nav>
+
+        </section>
+        
+<section id="top-tags" class="post">
+
+            <h3><i class="fa fa-tags" aria-hidden="true"></i> Top Tags</h3>
+<ul>
+
+    <li>
+        <a class="tag" href="/tags/status-update">status update</a><span class="count">30</span></li>
+
+    <li>
+        <a class="tag" href="/tags/funding">funding</a><span class="count">15</span></li>
+
+    <li>
+        <a class="tag" href="/tags/roadmap">roadmap</a><span class="count">10</span></li>
+
+    <li>
+        <a class="tag" href="/tags/security">security</a><span class="count">10</span></li>
+
+    <li>
+        <a class="tag" href="/tags/team">team</a><span class="count">9</span></li>
+
+    <li>
+        <a class="tag" href="/tags/ngi">ngi</a><span class="count">8</span></li>
+
+    <li>
+        <a class="tag" href="/tags/donate">donate</a><span class="count">7</span></li>
+
+    <li>
+        <a class="tag" href="/tags/research">research</a><span class="count">7</span></li>
+
+    <li>
+        <a class="tag" href="/tags/open-source">open-source</a><span class="count">6</span></li>
+
+    <li>
+        <a class="tag" href="/tags/open-collective">open collective</a><span class="count">6</span></li>
+
+</ul>
+        </section>
+        
+    <section id="social" class="post">
+
+            <h3><i class="fa fa-link" aria-hidden="true"></i> Links</h3>
+<ul>
+    <li>
+        <a href="https://cryptpad.org">
+            <i aria-hidden="true" class="fa fa-globe"></i>Project website
+        </a>
+    </li>
+    <li>
+        <a href="https://opencollective.com/cryptpad/contribute">
+            <i aria-label="OpenCollective" class="fa fa-open-collective"></i>Donate
+        </a>
+    </li>
+</ul>
+<ul>
+    <li>
+        <a href="https://forum.cryptpad.org">
+            <i aria-hidden="true" class="fa fa-bullhorn"></i>Forum
+        </a>
+    </li>
+    <li>
+        <a href="https://matrix.to/#/#cryptpad:matrix.xwiki.com">
+            <i aria-hidden="true" class="fa fa-matrix-org"></i>Chat (Matrix)
+        </a>
+    </li>
+    <li>
+        <a rel="me" href="https://fosstodon.org/@cryptpad">
+            <i aria-hidden="true" class="fa fa-mastodon"></i>Mastodon
+        </a>
+    </li>
+    <li>
+        <a href="https://peertube.xwiki.com/c/cryptpad_channel/videos">
+            <i aria-hidden="true" class="fa fa-peertube"></i>Peertube
+        </a>
+    </li>
+    <li>
+        <a href="https://pixelfed.social/cryptpad_design">
+            <i aria-hidden="true" class="fa fa-pixelfed"></i>Pixelfed
+        </a>
+    </li>
+</ul>
+<ul>
+    <li>
+        <a href="/atom.xml">
+            <i aria-hidden="true" class="fa fa-rss"></i>RSS Feed
+        </a>
+    </li>
+</ul>
+        </section>
+    </main>
+</body>
+
+</html>

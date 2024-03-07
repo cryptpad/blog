@@ -4,12 +4,98 @@
   <subtitle>News from the end-to-end encrypted collaboration suite</subtitle>
   <link href="https://blog.cryptpad.org/atom.xml" rel="self"/>
   <link href="https://blog.cryptpad.org"/>
-  <updated>2024-02-15T00:00:00Z</updated>
+  <updated>2024-03-07T00:00:00Z</updated>
   <id>https://blog.cryptpad.org</id>
   <author>
     <name>CryptPad Team</name>
     <email>contact@cryptpad.fr</email>
   </author>
+  <entry>
+    <title>February 2024 status</title>
+    <link href="https://blog.cryptpad.org/2024/03/07/status-2024-02/"/>
+    <updated>2024-03-07T00:00:00Z</updated>
+    <id>https://blog.cryptpad.org/2024/03/07/status-2024-02/</id>
+    <summary xml:lang="en" type="html">5.7 Documentation, Le Monde using CryptPad, FOSDEM recap, Post-mortems for recent CryptPad.fr outages</summary>
+    <content xml:lang="en" type="html">&lt;p&gt;This status post is a bit late, to make up for it we are treating you to a larger-than-usual serving of news and content.&lt;/p&gt;
+&lt;h3&gt;📚 5.7 Documentation with a new accessibility section&lt;/h3&gt;
+&lt;p&gt;We have updated our documentation to &lt;a href=&quot;https://docs.cryptpad.org/&quot;&gt;version 5.7&lt;/a&gt;. Alongside documenting new features we are introducing a &lt;a href=&quot;https://docs.cryptpad.org/en/user_guide/accessibility.html&quot;&gt;new accessibility section&lt;/a&gt;. The first thing in this section is a list of channels to provide accessibility feedback including a &lt;a href=&quot;https://matrix.to/#/#cryptpad-accessibility:matrix.xwiki.com&quot;&gt;new dedicated chat room&lt;/a&gt; in our &lt;a href=&quot;https://matrix.to/#/#cryptpad:matrix.xwiki.com&quot;&gt;Matrix space&lt;/a&gt;, and a dedicated email address. We plan to expand this in future, for example with a thorough list of keyboard shortcuts and navigation.&lt;/p&gt;
+&lt;h3&gt;📰 Le Monde is using CryptPad again&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/lemonde-youtube-thumbnail.png&quot; alt=&quot;Video thumbnail with title in french &amp;quot;C&#39;est la faute des riches?&amp;quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;We are delighted to see CryptPad used once again by French newspaper Le Monde. This time sharing the &lt;a href=&quot;https://cryptpad.fr/pad/#/2/pad/view/y7CGhVOTkDMwbIUEA0W-bqTl9qbXnCPkGiTdgZWqebw/&quot;&gt;list of references&lt;/a&gt; behind a &lt;a href=&quot;https://www.youtube.com/watch?v=JQDRb7jE9qQ&quot;&gt;video analysing the disproportionate contribution of rich people to climate change&lt;/a&gt;.&lt;/p&gt;
+&lt;h3&gt;📢 FOSDEM&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/tshirst_cryptpad_xwiki.jpg&quot; alt=&quot;photo of two people wearing a CryptPad and XWiki t-shirts next to each other&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;As stated in the previous status report, CryptPad was present at &lt;a href=&quot;https://fosdem.org/&quot;&gt;FOSDEM&lt;/a&gt; along with XWiki.
+It is the biggest free and open-source European event, where communities of different projects can meet, exchange ideas and collaborate.&lt;/p&gt;
+&lt;p&gt;CryptPad was present in multiple forms, first with presentations, which recorded videos are available in the following links:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Fabrice presented “&lt;a href=&quot;https://fosdem.org/2024/schedule/event/fosdem-2024-3126-securely-collaborate-with-cryptpad/&quot;&gt;Securely collaborate with CryptPad&lt;/a&gt;”;&lt;/li&gt;
+&lt;li&gt;Clément and Wieland presented “&lt;a href=&quot;https://fosdem.org/2024/schedule/event/fosdem-2024-3274-opendesk-the-open-source-collaborative-suite/&quot;&gt;openDesk - The Open Source collaborative suite&lt;/a&gt;“&lt;/li&gt;
+&lt;li&gt;Ludovic, our CEO shared his experience in “&lt;a href=&quot;https://fosdem.org/2024/schedule/event/fosdem-2024-1830-20-years-of-open-source-building-xwiki-and-cryptpad/&quot;&gt;20 Years of Open Source building XWiki and CryptPad&lt;/a&gt;”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- - “[Cristal: a new Wiki UI to rule them all](https://fosdem.org/2024/schedule/event/fosdem-2024-1831-cristal-a-new-wiki-ui-to-rule-them-all/)” (?) --&gt;
+&lt;p&gt;In a more relaxed fashion, XWiki and CryptPad organized a &lt;a href=&quot;https://xwiki.com/en/Blog/XWiki-and-CryptPad-FOSDEM-meetup/&quot;&gt;community meetup&lt;/a&gt; with their team on Saturday night, where we exchanged with the community more casually.&lt;/p&gt;
+&lt;p&gt;All in all we were very glad to exchange with the community during this event and we hope to see you again in future events!&lt;/p&gt;
+&lt;h3&gt;🤕 Post-mortems for recent &lt;a href=&quot;http://cryptpad.fr/&quot;&gt;CryptPad.fr&lt;/a&gt; outages&lt;/h3&gt;
+&lt;p&gt;Users of our flagship instance &lt;a href=&quot;http://cryptpad.fr/&quot;&gt;CryptPad.fr&lt;/a&gt; may have noticed some unexpected downtime in the last couple of months. There are 4 recent outages that we&#39;d like to provide some information about, including steps that we are taking to prevent these issues from happening again. Sorry the details below get quite technical, that can&#39;t really be avoided if we want to provide a transparent account of these incidents.&lt;/p&gt;
+&lt;p&gt;For context, we started migrating &lt;a href=&quot;http://cryptpad.fr/&quot;&gt;cryptpad.fr&lt;/a&gt; user data to a new storage back-end system in October 2023. This was a long process where we needed to synchronize more than 4,5 TB of data from our old inefficient file-system to a new one based on BTRFS. The final step of this migration to the new storage system took place on December 13th, 2023 (all dates and times are CET). Some time later we ran into issues:&lt;/p&gt;
+&lt;h4&gt;Friday January 12th 2024, 16:00&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;No log-in for accounts with &lt;a href=&quot;https://blog.cryptpad.org/2024/01/09/tutorial-two-factor-authentication/&quot;&gt;two-factor authentication&lt;/a&gt; (2FA) enabled&lt;/li&gt;
+&lt;li&gt;No access to uploaded static files (blobs: images, PDFs, etc) and no upload of new files&lt;/li&gt;
+&lt;li&gt;Spreadsheet documents opening as blank documents&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Due to human error, blobs weren&#39;t served anymore by the Nginx web server. The running user was changed during a maintenance task but we forgot to update the &lt;code&gt;/var/cache/nginx/&lt;/code&gt; directory access rights. We realized our mistake when users reported the issue during the weekend and fixed it on Monday January 15th at 10:30.&lt;/p&gt;
+&lt;h4&gt;Friday January 19th 2024, 7:30&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;No log-in for accounts with 2FA enabled&lt;/li&gt;
+&lt;li&gt;Impossible to create new documents&lt;/li&gt;
+&lt;li&gt;Existing documents and drives only shown as read-only&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Our backup system was creating too many snapshots of the BTRFS filesystem because of a race condition. These snapshots took all the available space in the BTRFS pool which made the storage become read-only. We did not have appropriate monitoring in place on the new system to spot this mistake in time to prevent an outage.&lt;/p&gt;
+&lt;p&gt;The issue was fixed by identifying and fixing the race condition in our in-house backup software, and adding more space to the server. Service resumed around 9:30 that morning. We then added some monitoring scripts to our Icinga instance with regular, automated checks to be sure the issue wouldn&#39;t arise again.&lt;/p&gt;
+&lt;h4&gt;Tuesday January 23th 2024, 13:00&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;No log-in for accounts with 2FA enabled&lt;/li&gt;
+&lt;li&gt;Impossible to create new documents&lt;/li&gt;
+&lt;li&gt;Existing documents and drives only shown as read-only&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;With similar symptoms to the previous outage, this one was caused by our failure to make the disk we added the previous week fully available to BTRFS (a filesystem balancing operation was needed to spread the data among the different disks). This resulted in space running out again and producing the same &amp;quot;read-only&amp;quot; effects for our users.&lt;/p&gt;
+&lt;p&gt;This took us a bit longer to figure out, service was only restored after 2.5h at around 15:30. Following this we adapted the monitoring scripts on our Icinga instance so the metadata part of the pool is also checked.&lt;/p&gt;
+&lt;h4&gt;Tuesday February 13th 2024, 14:00&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Disconnections when editing documents and accessing the drive&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In this case the server was rebooted while a resource-intensive BTRFS balancing operation was running (still recovering from the last outage). Because this operation was &lt;em&gt;paused&lt;/em&gt; but not &lt;em&gt;canceled&lt;/em&gt;, it prevented the BTRFS pool from being mounted again.&lt;/p&gt;
+&lt;p&gt;The issue was fixed by adding the &lt;code&gt;skip_balance&lt;/code&gt; option to the mount command, with service resuming at around 15:00.&lt;/p&gt;
+&lt;p&gt;In summary you will have spotted a pattern of compounded teething issues as we got used to the new storage back-end in our production conditions. Beyond adding monitoring, we plan to be more mindful of the load applied on our server and eventually refactor its architecture to be better suited to the needs of our flagship instance.&lt;/p&gt;
+&lt;p&gt;We&#39;d like to apologise to our users, free and paying, for the inconvenience caused by these issues. We are grateful for your patience and your trust.&lt;/p&gt;
+&lt;h3&gt;🔎 Contributions to Eurocrypt cryptography conference&lt;/h3&gt;
+&lt;p&gt;CryptPad is also contributing in theoretical research with contributions &lt;a href=&quot;https://eurocrypt.iacr.org/2024/acceptedpapers.php&quot;&gt;accepted&lt;/a&gt; at &lt;a href=&quot;https://iacr.org/meetings/eurocrypt/&quot;&gt;Eurocrypt&lt;/a&gt; one of the most reputable conferences in cryptography, hosted by the &lt;a href=&quot;https://iacr.org/&quot;&gt;International Association for Cryptologic Research&lt;/a&gt; (IACR), and at the &lt;a href=&quot;https://csrc.nist.gov/Events/2024/fifth-pqc-standardization-conference&quot;&gt;NIST Post-Quantum standardization Conference&lt;/a&gt;, which is the organism leading the current cryptographic effort toward post-quantum transition.&lt;/p&gt;
+&lt;p&gt;Both results present a scalable post-quantum signature scheme, named Raccoon, that offers nice properties with regard to thresholdization and masking. Threshold signatures allow guaranteeing that a quorum of users collaborated to produce a signature, henceforth alleviating the single point of failure that certificate authorities represents for instance: some companies already &lt;a href=&quot;https://www.securityweek.com/mozilla-may-reject-uae-firms-root-inclusion-request/&quot;&gt;attempted to exploit this loophole&lt;/a&gt; in the past.&lt;/p&gt;
+&lt;p&gt;Moreover, masking is important for hardware implementations of cryptography, especially on embedded devices, as a popular mitigation to &lt;a href=&quot;https://en.wikipedia.org/wiki/Side-channel_attack&quot;&gt;side channel cryptanalysis&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The full version of this work is available in the &lt;a href=&quot;https://ia.cr/2024/184&quot;&gt;IACR preprint archive&lt;/a&gt; and more information can be found on the &lt;a href=&quot;https://raccoonfamily.org/&quot;&gt;Raccoon signature website&lt;/a&gt;. This is the result of the joint effort of Shuichi Katsumata, Mary Maller, Fabrice Mouhartem, Rafael del Pino, Thomas Prest and Markku-Juhani Saarinen.&lt;/p&gt;
+&lt;!--
+- https://eurocrypt.iacr.org/2024/acceptedpapers.php
+   - Threshold Raccoon: Practical Threshold Signatures from Standard Lattice Assumptions
+       - Shuichi Katsumata, Mary Maller, Rafael del Pino, **Fabrice Mouhartem**, Thomas Prest, Markku-Juhani Saarinen
+       - PQShield LTD &amp; AIST, PQShield LTD &amp; Ethereum Foundation, PQShield SAS, **XWiki SAS (CryptPad)**, PQShield LTD &amp; Tampere University
+- https://csrc.nist.gov/Events/2024/fifth-pqc-standardization-conference
+  - Threshold Raccoon
+    -  Rafael del Pino Thomas Espitau, Shuichi Katsumata, Mary Maller, **Fabrice Mouhartem**, Thomas Prest, Markku-Juhani Saarinen, Kaoru Takemure
+--&gt;
+&lt;h3&gt;🔭 Up next&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;We are nearing full-draft status on the Blueprints R&amp;amp;D website which we are hoping to launch before the next status update&lt;/li&gt;
+&lt;li&gt;A new blog post in the &lt;a href=&quot;https://blog.cryptpad.org/tags/tutorials/&quot;&gt;tutorial series&lt;/a&gt; is to be released on how to make the most of CryptPad’s security from a user standpoint&lt;/li&gt;
+&lt;li&gt;The team is working hard on features for 5.8 which is planned for the end of Q1 2024 (also the end of this month!)&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    <category term="status update" scheme="https://blog.cryptpad.org/tags/status update/"/>
+    <category term="postmortem" scheme="https://blog.cryptpad.org/tags/postmortem/"/>
+    <category term="FOSDEM" scheme="https://blog.cryptpad.org/tags/FOSDEM/"/>
+    <category term="research" scheme="https://blog.cryptpad.org/tags/research/"/>
+    <category term="documentation" scheme="https://blog.cryptpad.org/tags/documentation/"/>
+  </entry>
   <entry>
     <title>No one cares about open-source, until …</title>
     <link href="https://blog.cryptpad.org/2024/02/15/no-one-cares-intil/"/>
@@ -1973,6 +2059,7 @@ Instead, I&#39;ll leave you with a bit of a teaser for our upcoming 4.0.0 releas
 </content>
     <category term="cloud" scheme="https://blog.cryptpad.org/tags/cloud/"/>
     <category term="storage" scheme="https://blog.cryptpad.org/tags/storage/"/>
+    <category term="postmortem" scheme="https://blog.cryptpad.org/tags/postmortem/"/>
   </entry>
   <entry>
     <title>CryptPad Funding Status July 2020</title>
