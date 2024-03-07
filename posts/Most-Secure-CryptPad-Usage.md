@@ -13,16 +13,15 @@ tags:
 
 You're looking for a privacy-focused collaboration tool?
 Well, you already found it!
-But what does privacy in this context actually mean?
+But what does “privacy” in this context actually mean?
 And how is it technically enforced?
-Are there any additional precautiouns needed for an extra-safe usage of
-CryptPad?
+Are there any additional precautions needed for an extra-safe usage of CryptPad?
 
 In this blog post we will answer these and other questions.
 We will show you in which scenarios CryptPad is secure, and give you ideas for
 concrete actions for using CryptPad safely.
-While we do as much as possible to make CryptPad secure, its security also depends
-on how you use it.
+While we do as much as possible to make CryptPad secure, its security also
+depends on how you use it.
 
 ## 🧑‍🏫 Preliminaries
 
