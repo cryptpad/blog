@@ -29,7 +29,7 @@ depends on how you use it.
 
 When speaking of security or privacy, we should always define the scenario we
 are speaking of.
-This scenario is the so called [_threat
+This scenario is the so-called [_threat
 model_](https://ssd.eff.org/glossary/threat-model) which defines the
 [adversarial capabilities](https://ssd.eff.org/glossary/capability).
 In general, we aim to think of them to be as powerful as possible.
@@ -44,28 +44,29 @@ CryptPad is a web application: you visit the website of your
 <https://cryptpad.fr>) and automatically download the client code that will be
 executed locally on your computer.
 If you receive bogus code from this server, you cannot establish any security,
-as this bogus code may, e.g., send all your documents in plaintext to the
-server.
+as this bogus code may, as an example, send all your documents in plaintext to
+the server.
 Hence, you must trust the server to not run any _active_
 [attacks](https://ssd.eff.org/glossary/attack) (i.e., not to run
 a modified CryptPad server software).
 
 We nevertheless defend against an _honest-but-curious_ (i.e., passive) server.
-The second assumption is thus that the server plays according to the
-rules, but could try to infer sensitive information by analyzing all
-the data it receives.
+The second assumption is thus that the server plays according to the rules, but
+could try to infer sensitive information by analyzing all the data it receives.
 This scenario includes the possibility that a third-party gets access to the
 server and can see all data and logs.
-CryptPad has already defended against such an adversary in the past when
-[a third-party instance was seized by the police](https://newsrnd.com/tech/2022-06-24-data-confiscated-from-pirate-party-servers.SJxeH5I79q.html).
+CryptPad has already defended against such an adversary in the past when [a
+third-party instance was seized by the
+police](https://newsrnd.com/tech/2022-06-24-data-confiscated-from-pirate-party-servers.SJxeH5I79q.html).
 We therefore consider this scenario to be highly realistic.
 
-Lastly, we assume the attackers to have network capability. This would be the case
-for, e.g., the system administrator managing the network in your office, your [internet service
+Lastly, we assume the attackers to have network capability.
+This would be the case for, e.g., the system administrator managing the network
+in your office, your [internet service
 provider](https://en.wikipedia.org/wiki/Internet_service_provider), or secret
-services. The attackers may even use active network capabilities, that is they
-can sniff your web traffic, and also replay, drop or modify data sent over the
-network.
+services.
+The attackers may even use active network capabilities, that is they can sniff
+your web traffic, and also replay, drop or modify data sent over the network.
 
 <!-- ### 🔎 Security and Privacy -->
 
