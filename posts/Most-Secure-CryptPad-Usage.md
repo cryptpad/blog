@@ -181,13 +181,14 @@ through another secure channel.
 
 ## 📄 Documents
 
-CryptPad uses symmetrical encryption with a per-document secret key to make
-your documents unreadable for anyone who has no access to the corresponding
+CryptPad uses symmetric encryption with a per-document secret key to make
+your documents unreadable for anyone who has no access to their corresponding
 keys. CryptPad also allows you to differentiate between read-only and write
-access to a document. For that, anyone who wants to modify a document needs to
+accesses to a document. For that, anyone wanting to modify a document needs to
 prove that they own the private signing key linked to the document. For this,
 they sign their modifications and other people working on the same document can
-verify that the modification was indeed done by an authorized person.
+verify that the modification was indeed done by an authorized person before
+accepting the changes.
 
 ### ♻ Sharing
 CryptPad keeps these technical details "under the hood" and provides a simple
