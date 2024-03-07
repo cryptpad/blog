@@ -156,6 +156,10 @@ security of your CryptPad usage:
 * Log out of CryptPad after each session to require the password to
   access your data on CryptPad. Otherwise, anybody with access to your device
   can also access your data on CryptPad.
+* We also encourage you to use [two-factor
+  authentication](https://ssd.eff.org/glossary/two-factor-authentication) in
+  your account. [A user guide](/2024/01/09/tutorial-two-factor-authentication/) is
+  available in this blog.
 
 ## 🧑 Contacts
 
