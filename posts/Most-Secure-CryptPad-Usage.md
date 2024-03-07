@@ -1,6 +1,6 @@
 ---
 title: The Most Secure Way To Use CryptPad
-date: 2022-12-24 # TODO
+date: 2024-03-07 # TODO
 author: Theo von Arx
 lang: en
 summary: We show you in which scenario CryptPad is secure, and give you ideas for concrete actions for a safe CryptPad usage.
