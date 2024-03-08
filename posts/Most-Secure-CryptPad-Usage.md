@@ -328,9 +328,9 @@ About CryptPad:
   computation, and architectures of
   resilience"](https://peertube.xwiki.com/w/jAP48FTXpi9CpJnb8SSVDh) is an
   extended explanition about the concepts behind CryptPad.
-* We have published a [white paper](https://cryptpad.org/TODO) describing the
-  security mechanisms and the cryptography used in CryptPad. This paper is
-  targeted to people who are already familiar with cryptography. <!-- XXX update this link before publishing -->
+* We have published a [white paper](https://blog.cryptpad.org/2023/02/02/Whitepaper/)
+  describing the security mechanisms and the cryptography used in CryptPad. This
+  paper is targeted to people who are already familiar with cryptography.
 
 More general:
 * The [surveillance self-defense guide](https://ssd.eff.org/) by the Electronic
