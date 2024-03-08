@@ -61,10 +61,10 @@ police](https://newsrnd.com/tech/2022-06-24-data-confiscated-from-pirate-party-s
 We therefore consider this scenario to be highly realistic.
 
 Lastly, we assume the attackers to have network capability.
-This would be the case for, e.g., the system administrator managing the network
+This would be the case for the system administrator managing the network
 in your office, your [internet service
 provider](https://en.wikipedia.org/wiki/Internet_service_provider), or secret
-services.
+services as well as many others.
 The attackers may even use active network capabilities, that is they can sniff
 your web traffic, and also replay, drop or modify data sent over the network.
 
@@ -142,7 +142,7 @@ security of your CryptPad usage:
   software and as such there are [various
   instances](https://cryptpad.org/instances/) running it. While we host the
   [flagship instance](https://cryptpad.fr) you might choose a different one
-  depending on, e.g., the jurisdiction.
+  depending on the jurisdiction for instance.
 * Ensure that you are connecting to the chosen CryptPad instance over
   [HTTPS](https://ssd.eff.org/module/what-should-i-know-about-encryption#transport-layer-encryption-example-https).
 * All security mechanisms are only as strong as your password is.
