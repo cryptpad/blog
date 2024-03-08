@@ -9,6 +9,9 @@ tags:
 - security
 - tutorials
 - privacy
+- research
+- Blueprints
+- ngi
 ---
 
 You're looking for a privacy-focused collaboration tool?
