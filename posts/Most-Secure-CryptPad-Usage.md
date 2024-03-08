@@ -118,17 +118,28 @@ building blocks:
    " width=400>
    </p>
 3. **Digital Signatures** are closely related to physical seals: Only the
-   persons in possession of the seal (which we call the _signing key_) can sign, but
-   all other people can verify the authenticity of a document.
+   persons in possession of the seal (which we call the _signing key_) can sign,
+   but all other people can verify the authenticity of a document using the
+   public _verification key_ of the emitter.
    In addition, digital signatures also guarantee that no one is able to modify
    the sealed content without the readers noticing it. A property that regular
-   seals don’t enjoy.
+   seals don’t enjoy.  
+   Note that there is a symmetric variant of this primitive called [_message
+   authentication
+   code_](https://en.wikipedia.org/wiki/Message_authentication_code). However,
+   it is rarely used as an independent building block and is jointly used with
+   symmetric encryption to achieve [authenticated
+   encryption](https://en.wikipedia.org/wiki/Authenticated_encryption), that
+   further guarantees that messages are not tampered. As we exclusively use
+   authenticated encryption in CryptPad, we usually use “symmetric encryption”
+   instead in the explanations for simplicity, but actual guarantees are
+   stronger.
    <p style="text-align: center;">
    <img title="Signature" src="https://unsplash.com/photos/pegxjW_1YOU/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8MTZ8fHNpZ25hdHVyZXxlbnwwfHx8fDE2NzE2NzA3ODQ&force=true&w=640" width=400>
    </p>
 
-For CryptPad, we use all of these building blocks to achieve different goals.
-We will explain the usage below in the section about Documents.
+For CryptPad, we combine all of these building blocks to achieve different
+goals. We will explain the usage below in the section pertaining to Documents.
 
 ## 🧗 The Basics
 
