@@ -205,17 +205,20 @@ decryption, for verifying signatures as well as the one for issuing signatures
 
 
 ⚠️ This implies that the document is only as safe as the **weakest**
-communication channel used to send these links. <!-- maybe worth giving an
-example of a channel here -->
+communication channel used to send these links.
+<!-- maybe worth giving an example of a channel here -->
 If you consider a channel to be unsafe, or if it is publicly accessible, you
 may want to isolate some of your documents from it. For instance, you can limit
 the sending of edit links to [Signal](https://signal.org/) chats with
 disappearing messages.
 
-<!-- I'm not sure we ever refer to the mailbox system in public documents, so maybe we can find another term to express this rather than the internal name -->
-Another possibility to safely share the access is to [send it over CryptPad's
-mailbox system to your
+<!-- I'm not sure we ever refer to the mailbox system in public documents, so maybe we can find another term to express this rather than the internal name
+Fabrice: Agreed -->
+Another possibility to safely share the access is to [send it over CryptPad to your
 contacts](https://docs.cryptpad.org/en/user_guide/share_and_access.html#sharing-with-contacts).
+It internally uses the
+[“mailbox”](https://docs.cryptpad.org/en/dev_guide/general.html#encryption)
+system for internal communications, without the CryptPad server knowing better.
 This way, you do not have to use a secondary (potentially insecure) communication
 channel.
 
@@ -283,7 +286,7 @@ document was opened the first time.
 
 This feature is especially useful if you have to share sensitive data that
 should not be accessible forever.
-You could, e.g., use it to share a password to a peer.
+You could use it to share a password to a peer for example.
 
 ## 🕵️ Anonymity
 
@@ -327,7 +330,7 @@ About CryptPad:
 * The talk ["Living on the Edge with CryptPad: privacy, distributed
   computation, and architectures of
   resilience"](https://peertube.xwiki.com/w/jAP48FTXpi9CpJnb8SSVDh) is an
-  extended explanition about the concepts behind CryptPad.
+  extended explanation about the concepts behind CryptPad.
 * We have published a [white paper](https://blog.cryptpad.org/2023/02/02/Whitepaper/)
   describing the security mechanisms and the cryptography used in CryptPad. This
   paper is targeted to people who are already familiar with cryptography.
