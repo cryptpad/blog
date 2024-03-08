@@ -1,6 +1,6 @@
 ---
 title: The Most Secure Way To Use CryptPad
-date: 2024-03-07 # TODO
+date: 2024-03-08 # TODO
 author: Theo von Arx
 lang: en
 summary: We show you in which scenario CryptPad is secure, and give you ideas for concrete actions for a safe CryptPad usage.
@@ -229,7 +229,7 @@ interface](https://docs.cryptpad.org/en/user_guide/apps/general.html#document-hi
 If you made a manipulation error, such at past some text you didn’t want to
 share, while producing the document **before** sharing it, we recommend that you
 copy-paste the version you want to share for collaboration in a new pad before
-sending it to sanitize the history (it also helps tracking changes afterward).
+sending it to sanitize the history (it also helps to track changes afterward).
 
 ### ⛔ Restricting Access
 
@@ -271,6 +271,8 @@ are encrypted, and we assume that you want to give them access.
 Therefore, the password is remembered and sent with the document when you share
 it.
 The recipient, or yourself, are not asked for it when opening the document.
+This implicitly assumes that the security of CryptPad drive is at least as
+strong as the communication channels used to share the document.
 
 ### 💨 Self-Destruction
 
