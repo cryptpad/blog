@@ -106,9 +106,6 @@ building blocks:
    _symmetric_.
    We can further make copies of the key and distribute it to people whom we
    trust, so that they can all lock and unlock the box.
-   <p style="text-align: center;">
-   <img title="Box with lock" src="https://unsplash.com/photos/i1ZRcrzRX7w/download?ixid=MnwxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjcxNjk4MjU2&force=true&w=640" width=400>
-   </p>
 2. **Asymmetric Encryption** (or public key encryption: PKE for short) differs
    from symmetric encryption in that a different key is used for encryption
    (namely, the _public key_) and decryption (the _private key_).
@@ -117,16 +114,19 @@ building blocks:
    decryption) key to yourself. Then, if someone wants to send you a message,
    they put it in a box and close a lock on it.
    Thus, only you can open it while anyone can produce a locked box for you.
+   <!-- <p style="text-align: center;"> -->
+   <!-- <img title="Door with lock" src="https://unsplash.com/photos/aBKo5VHJzSA/download?ixid=MnwxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjcxNjk4Njk4&force=true&w=640 -->
+   <!-- " width=400> -->
+   <!-- </p> -->
    <p style="text-align: center;">
-   <img title="Door with lock" src="https://unsplash.com/photos/aBKo5VHJzSA/download?ixid=MnwxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjcxNjk4Njk4&force=true&w=640
-   " width=400>
+   <img title="Box with a lock" src="https://unsplash.com/photos/i1ZRcrzRX7w/download?ixid=MnwxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjcxNjk4MjU2&force=true&w=640" width=400>
    </p>
 3. **Digital Signatures** are closely related to physical seals: Only the
    persons in possession of the seal (which we call the _signing key_) can sign,
    but all other people can verify the authenticity of a document using the
    public _verification key_ of the emitter.
    In addition, digital signatures also guarantee that no one is able to modify
-   the sealed content without the readers noticing it. A property that regular
+   the sealed content without readers noticing it. A property that regular
    seals don’t enjoy.  
    Note that there is a symmetric variant of this primitive called [_message
    authentication
@@ -139,7 +139,7 @@ building blocks:
    instead in the explanations for simplicity, but actual guarantees are
    stronger.
    <p style="text-align: center;">
-   <img title="Signature" src="https://unsplash.com/photos/pegxjW_1YOU/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8MTZ8fHNpZ25hdHVyZXxlbnwwfHx8fDE2NzE2NzA3ODQ&force=true&w=640" width=400>
+   <img title="Physical seal" src="https://unsplash.com/photos/pegxjW_1YOU/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8MTZ8fHNpZ25hdHVyZXxlbnwwfHx8fDE2NzE2NzA3ODQ&force=true&w=640" width=400>
    </p>
 
 For CryptPad, we combine all of these building blocks to achieve different
@@ -193,7 +193,7 @@ profile](https://docs.cryptpad.org/en/user_guide/collaboration.html#add-a-contac
 over a secure communication to your peer and request to add each other as
 contacts.
 
-⚠️  Note that usernames are not unique on CryptPad.
+⚠️ Note that usernames are not unique on CryptPad.
 Depending on context, it may be wise to verify a received contact request
 through another secure channel.
 
@@ -209,7 +209,7 @@ verify that the modification was indeed done by an authorized person before
 accepting the changes.
 
 ### ♻ Sharing
-CryptPad keeps these technical details "under the hood" and provides a simple
+CryptPad keeps these technical details “under the hood” and provides a simple
 interface to [share
 documents](https://docs.cryptpad.org/en/user_guide/share_and_access.html#sharing-a-link)
 via links. Such a link essentially contains the symmetric key for encryption and
@@ -258,7 +258,9 @@ As CryptPad operates with static keys, granted shared accesses are not revokable
 This means that by default anyone who was granted access will forever be able to
 read (and modify) a document.
 To prevent this, you can shut down access to a document using the
-Access List feature.
+[Access
+List](https://docs.cryptpad.org/en/user_guide/share_and_access.html#access-list)
+feature.
 
 <p style="text-align: center;">
 <img title="Access List" src="https://docs.cryptpad.org/en/_images/modal-access-list.png">
@@ -268,7 +270,7 @@ This way, only the selected persons have access to the document, independently
 of who has received the sharing link.
 
 Also make sure you or your [team](https://docs.cryptpad.org/en/user_guide/collaboration.html#teams)
-is set as "owner" when you create documents.
+is set as “owner” when you create documents.
 This will give you full control including the possibility to destroy a document
 if it contains sensitive information or the link escapes your control.
 
@@ -281,9 +283,10 @@ password.
 This is especially useful for the case where you do not have a secure
 communication channel to share the link, as you can send the link and the
 password over two _distinct_ channels (e.g., text messaging and email).
-This way, the attacker has to sniff on both channels at the same time which
+This way, the attacker has to monitor on both channels at the same time which
 makes it a lot more difficult.
 <!-- maybe "listen" or "monitor" would be clearer than "sniff" ? -->
+<!-- agreed -->
 
 <!-- a diagram of this might be nice... like how David's shredder-unshredder image shows things being unreadable in transit, we could show two independent but readable things being combined? -->
 
@@ -311,10 +314,10 @@ You could use it to share a password to a peer for example.
 <!-- it should be noted who this is hidden from. Peers in the same document can't determine that you're using Firefox/Safari, but the server can -->
 
 CryptPad only provides a weak form of anonymity and does not hide your
-[IP address](https://ssd.eff.org/glossary/ip-address) or your ["user
-agent"](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent)
+[IP address](https://ssd.eff.org/glossary/ip-address) or your [“user
+agent”](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent)
 (browser and [operating system](https://ssd.eff.org/glossary/operating-system)).
-The server can furthermore theoretically link IP addresses of people who are often colaborating on the same documents.
+The server can furthermore theoretically link IP addresses of people who are often collaborating on the same documents.
 Of course, we do not run these analytics for our flagship instance, but we want
 you to have to trust us as little as possible.
 You may want therefore use the following tools and techniques:
@@ -345,13 +348,13 @@ About CryptPad:
 
 * The [security section](https://docs.cryptpad.org/en/user_guide/security.html)
   in our user guide explains the use of CryptPad's security features.
-* The talk ["Living on the Edge with CryptPad: privacy, distributed
+* The talk [“Living on the Edge with CryptPad: privacy, distributed
   computation, and architectures of
-  resilience"](https://peertube.xwiki.com/w/jAP48FTXpi9CpJnb8SSVDh) is an
+  resilience”](https://peertube.xwiki.com/w/jAP48FTXpi9CpJnb8SSVDh) is an
   extended explanation about the concepts behind CryptPad.
 * We have published a [white paper](https://blog.cryptpad.org/2023/02/02/Whitepaper/)
   describing the security mechanisms and the cryptography used in CryptPad. This
-  paper is targeted to people who are already familiar with cryptography.
+  document is intended for people who are already familiar with cryptography.
 
 More general:
 * The [surveillance self-defense guide](https://ssd.eff.org/) by the Electronic
