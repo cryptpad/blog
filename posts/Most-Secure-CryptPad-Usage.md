@@ -370,6 +370,6 @@ This project is part of [CryptPad
 Blueprints](https://nlnet.nl/project/CryptPad-Blueprints/), which is funded
 through the [NGI0 Entrust](https://nlnet.nl/entrust) Fund, a fund established by
 [NLnet](https://nlnet.nl) with financial support from the European Commission's
-[Next Generation Internet](https://ngi.eu) programme, under the aegis of DG
+[Next Generation Internet](https://ngi.eu) program, under the aegis of DG
 Communications Networks, Content and Technology under grant agreement
 N° 101069594.
