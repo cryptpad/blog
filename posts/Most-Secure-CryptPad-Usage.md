@@ -110,9 +110,11 @@ building blocks:
 2. **Asymmetric Encryption** (or public key encryption: PKE for short) differs
    from symmetric encryption in that a different key is used for encryption
    (namely, the _public key_) and decryption (the _private key_).
-   You can imagine asymmetric encryption as a special lock on your house's door:
-   by distributing the public key, everyone is able to lock the door,
-   but only you hold the private key to unlock the house and open it.
+   You can imagine asymmetric encryption as the following system: you distribute
+   open locks (the public encryption key) to everyone and keep the (secret
+   decryption) key to yourself. Then, if someone wants to send you a message,
+   they put it in a box and close a lock on it.
+   Thus, only you can open it while anyone can produce a locked box for you.
    <p style="text-align: center;">
    <img title="Door with lock" src="https://unsplash.com/photos/aBKo5VHJzSA/download?ixid=MnwxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjcxNjk4Njk4&force=true&w=640
    " width=400>
