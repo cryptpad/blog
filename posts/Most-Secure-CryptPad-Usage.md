@@ -6,7 +6,7 @@ author:
   - Fabrice Mouhartem
 lang: en
 summary: We show you in which scenario CryptPad is secure, and give you ideas for concrete actions for a safe CryptPad usage.
-cover: /images/swallow_key.png
+cover: /images/Paris_Pont_des_Arts_--_2014_--_1422.jpg
 tags:
 - security
 - tutorials
@@ -15,6 +15,10 @@ tags:
 - Blueprints
 - ngi
 ---
+
+![Love padlocks at the Pont des Arts, Paris, France (2014) ](/images/Paris_Pont_des_Arts_--_2014_--_1422.jpg)
+
+Photo Dietmar Rabich [Wikimedia Commons CC-BY-SA](https://commons.wikimedia.org/wiki/File:Paris,_Pont_des_Arts_--_2014_--_1422.jpg)
 
 You're looking for a privacy-focused collaboration tool?
 Well, you already found it!
