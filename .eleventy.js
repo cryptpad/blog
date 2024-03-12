@@ -11,6 +11,7 @@ module.exports = (function(eleventyConfig) {
     // Copy /images to /public
     eleventyConfig.addPassthroughCopy('images');
     eleventyConfig.addPassthroughCopy({'source/fonts/': 'fonts/'});
+    eleventyConfig.addPassthroughCopy({'source/js/': 'js/'});
     eleventyConfig.addPassthroughCopy({'source/theme/': 'theme/'});
 
     // filter to parse markdown

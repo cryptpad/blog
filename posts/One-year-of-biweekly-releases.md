@@ -38,7 +38,7 @@ We try to be as transparent as possible with our plans, and so users should expe
 
 ## What's coming next...
 
-In the last year, we tried to find a balance between improving user security through the use of our [sandboxing techniques](2017/08/30/CryptPad-s-new-Secure-Cross-Domain-Iframe/), and implementing the productivity features necessary for people to consider the security improvements an _added bonus_ rather than an impractical ideology.
+In the last year, we tried to find a balance between improving user security through the use of our [sandboxing techniques](/2017/08/30/CryptPad-s-new-Secure-Cross-Domain-Iframe/), and implementing the productivity features necessary for people to consider the security improvements an _added bonus_ rather than an impractical ideology.
 The core of our philosophy is that _security_ and _ease of use_ must be packaged together in order for tools like CryptPad to benefit users.
 
 While CryptPad is considerably more than a _proof-of-concept_, we don't consider it anywhere close to being finished.

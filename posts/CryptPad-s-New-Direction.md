@@ -16,7 +16,7 @@ CryptPad was born on Halloween 2014, at that time it was a skunkworks project in
 
 ![Old CryptPad Main Page](/images/cryptpad_old_mainpage.png)
 
-As was mentioned in [Building Mututally Beneficial Relationships](2017/06/02/Building-mutually-beneficial-relationships/), CryptPad cannot ever be great without people developing the software as their daily job. We have been able to develop this project with the generous support of [BPI France](http://www.bpifrance.fr/) and the [OpenPaaS::NG](http://ng.open-paas.org/) but that support only finances a small team and it will not continue indefinitely.
+As was mentioned in [Building Mututally Beneficial Relationships](/2017/06/02/Building-mutually-beneficial-relationships/), CryptPad cannot ever be great without people developing the software as their daily job. We have been able to develop this project with the generous support of [BPI France](http://www.bpifrance.fr/) and the [OpenPaaS::NG](http://ng.open-paas.org/) but that support only finances a small team and it will not continue indefinitely.
 
 Starting with this release, we are adopting a new look and a reinforced dedication to making a quality product for people whose time is valuable. We're starting this by upgrading the logo and the informational pages.
 
