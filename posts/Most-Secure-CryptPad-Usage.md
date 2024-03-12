@@ -114,13 +114,7 @@ building blocks:
    decryption) key to yourself. Then, if someone wants to send you a message,
    they put it in a box and close a lock on it.
    Thus, only you can open it while anyone can produce a locked box for you.
-   <!-- <p style="text-align: center;"> -->
-   <!-- <img title="Door with lock" src="https://unsplash.com/photos/aBKo5VHJzSA/download?ixid=MnwxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjcxNjk4Njk4&force=true&w=640 -->
-   <!-- " width=400> -->
-   <!-- </p> -->
-   <p style="text-align: center;">
-   <img title="Box with a lock" src="https://unsplash.com/photos/i1ZRcrzRX7w/download?ixid=MnwxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjcxNjk4MjU2&force=true&w=640" width=400>
-   </p>
+   <p><img alt="Box with a lock" src="/images/unsplash-lock_on_a_box.jpg" /></p>
 3. **Digital Signatures** are closely related to physical seals: Only the
    persons in possession of the seal (which we call the _signing key_) can sign,
    but all other people can verify the authenticity of a document using the
@@ -138,9 +132,7 @@ building blocks:
    authenticated encryption in CryptPad, we usually use “symmetric encryption”
    instead in the explanations for simplicity, but actual guarantees are
    stronger.
-   <p style="text-align: center;">
-   <img title="Physical seal" src="https://unsplash.com/photos/pegxjW_1YOU/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8MTZ8fHNpZ25hdHVyZXxlbnwwfHx8fDE2NzE2NzA3ODQ&force=true&w=640" width=400>
-   </p>
+   <p><img alt="Physical seal" src="/images/unsplash-sealed_letter.jpg" /></p>
 
 For CryptPad, we combine all of these building blocks to achieve different
 goals. We will explain the usage below in the section pertaining to Documents.
@@ -217,8 +209,8 @@ decryption, for verifying signatures as well as the one for issuing signatures
 (in case of read/write access) in a **non-revokable manner**.
 
 
-<p style="text-align: center;">
-<img title="Share via link" src="https://docs.cryptpad.org/en/_images/modal-share-link.png">
+<p>
+<img alt="Share via link" style="border-radius: 10px" src="/images/docs-modal-share-link.png">
 </p>
 
 
@@ -240,8 +232,8 @@ system for internal communications, without the CryptPad server knowing better.
 This way, you do not have to use a secondary (potentially insecure) communication
 channel.
 
-<p style="text-align: center;">
-<img title="Share with contacts" src="https://docs.cryptpad.org/en/_images/modal-share-contacts.png">
+<p>
+<img alt="Share with contacts" style="border-radius: 10px" src="/images/docs-modal-share-contacts.png">
 </p>
 
 ⚠️ Note that CryptPad documents contain the full edit history by design. It is
@@ -262,8 +254,8 @@ To prevent this, you can shut down access to a document using the
 List](https://docs.cryptpad.org/en/user_guide/share_and_access.html#access-list)
 feature.
 
-<p style="text-align: center;">
-<img title="Access List" src="https://docs.cryptpad.org/en/_images/modal-access-list.png">
+<p>
+<img alt="Access List" style="border-radius: 10px" src="/images/docs-modal-access-list.png">
 </p>
 
 This way, only the selected persons have access to the document, independently
