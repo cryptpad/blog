@@ -1,7 +1,9 @@
 ---
 title: The Most Secure Way To Use CryptPad
-date: 2024-03-08 # TODO
-author: Theo von Arx
+date: 2024-03-09
+author:
+  - Theo von Arx
+  - Fabrice Mouhartem
 lang: en
 summary: We show you in which scenario CryptPad is secure, and give you ideas for concrete actions for a safe CryptPad usage.
 cover: /images/swallow_key.png
