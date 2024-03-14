@@ -49,7 +49,7 @@ we can also defend against a weaker one.
 The first assumption about the adversarial capabilities follows directly from
 CryptPad's architecture.
 CryptPad is a web application: you visit the website of your
-[instance](https://docs.cryptpad.org/en/user_guide/instances.html) (e.g.
+[instance](https://docs.cryptpad.org/en/user_guide/instances.html) (e.g.,
 <https://cryptpad.fr>) and automatically download the client code that will be
 executed locally on your computer.
 If you receive bogus code from this server, you cannot establish any security,
