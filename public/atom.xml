@@ -4,7 +4,7 @@
   <subtitle>News from the end-to-end encrypted collaboration suite</subtitle>
   <link href="https://blog.cryptpad.org/atom.xml" rel="self"/>
   <link href="https://blog.cryptpad.org"/>
-  <updated>2024-03-09T00:00:00Z</updated>
+  <updated>2024-03-14T00:00:00Z</updated>
   <id>https://blog.cryptpad.org</id>
   <author>
     <name>CryptPad Team</name>
@@ -12,9 +12,9 @@
   </author>
   <entry>
     <title>The Most Secure Way To Use CryptPad</title>
-    <link href="https://blog.cryptpad.org/2024/03/09/Most-Secure-CryptPad-Usage/"/>
-    <updated>2024-03-09T00:00:00Z</updated>
-    <id>https://blog.cryptpad.org/2024/03/09/Most-Secure-CryptPad-Usage/</id>
+    <link href="https://blog.cryptpad.org/2024/03/14/Most-Secure-CryptPad-Usage/"/>
+    <updated>2024-03-14T00:00:00Z</updated>
+    <id>https://blog.cryptpad.org/2024/03/14/Most-Secure-CryptPad-Usage/</id>
     <summary xml:lang="en" type="html">We show you in which scenario CryptPad is secure, and give you ideas for concrete actions for a safe CryptPad usage.</summary>
     <content xml:lang="en" type="html">&lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/Paris_Pont_des_Arts_--_2014_--_1422.jpg&quot; alt=&quot;Love padlocks at the Pont des Arts, Paris, France (2014) &quot; /&gt;&lt;/p&gt;
 &lt;p&gt;Photo Dietmar Rabich &lt;a href=&quot;https://commons.wikimedia.org/wiki/File:Paris,_Pont_des_Arts_--_2014_--_1422.jpg&quot;&gt;Wikimedia Commons CC-BY-SA&lt;/a&gt;&lt;/p&gt;
@@ -42,7 +42,7 @@ we can also defend against a weaker one.&lt;/p&gt;
 &lt;p&gt;The first assumption about the adversarial capabilities follows directly from
 CryptPad&#39;s architecture.
 CryptPad is a web application: you visit the website of your
-&lt;a href=&quot;https://docs.cryptpad.org/en/user_guide/instances.html&quot;&gt;instance&lt;/a&gt; (e.g.
+&lt;a href=&quot;https://docs.cryptpad.org/en/user_guide/instances.html&quot;&gt;instance&lt;/a&gt; (e.g.,
 &lt;a href=&quot;https://cryptpad.fr/&quot;&gt;https://cryptpad.fr&lt;/a&gt;) and automatically download the client code that will be
 executed locally on your computer.
 If you receive bogus code from this server, you cannot establish any security,
@@ -86,7 +86,7 @@ encryption&lt;/a&gt;. Let us give you
 a rough idea of what encryption and authentication are. There are three main
 building blocks:&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Symmetric Encryption&lt;/strong&gt; (or public key encryption) works similar to a box
+&lt;li&gt;&lt;strong&gt;Symmetric Encryption&lt;/strong&gt; (or secret key encryption) works similar to a box
 with a lock: We can put something into the box and lock the box by key
 (encryption).
 Only someone with the key can unlock the box and access the content
