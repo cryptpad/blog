@@ -232,10 +232,18 @@ article.post {
             margin: auto;
         }
     }
-    ul, ol {
+
+    ul {
         &:not(.tags) {
             list-style: disc;
-            // list-style-position: inside;
+        }
+    }
+    ol {
+        list-style-type: decimal;
+    }
+
+    ul, ol {
+        &:not(.tags) {
             padding-left: 1em;
             margin-bottom: 1rem;
             li {
@@ -245,6 +253,9 @@ article.post {
                 ul {
                     list-style: circle;
                     margin-bottom: 0px; // nested lists
+                }
+                p {
+                    margin-top: 1rem;
                 }
             }
         }
