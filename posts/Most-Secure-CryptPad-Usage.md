@@ -1,6 +1,6 @@
 ---
 title: The Most Secure Way To Use CryptPad
-date: 2024-03-09
+date: 2024-03-14
 author:
   - Theo von Arx
   - Fabrice Mouhartem
@@ -101,7 +101,7 @@ encryption](https://ssd.eff.org/glossary/end-to-end-encryption). Let us give you
 a rough idea of what encryption and authentication are. There are three main
 building blocks:
 
-1. **Symmetric Encryption** (or public key encryption) works similar to a box
+1. **Symmetric Encryption** (or secret key encryption) works similar to a box
    with a lock: We can put something into the box and lock the box by key
    (encryption).
    Only someone with the key can unlock the box and access the content
