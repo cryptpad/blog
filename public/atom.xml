@@ -4,12 +4,333 @@
   <subtitle>News from the end-to-end encrypted collaboration suite</subtitle>
   <link href="https://blog.cryptpad.org/atom.xml" rel="self"/>
   <link href="https://blog.cryptpad.org"/>
-  <updated>2024-03-08T00:00:00Z</updated>
+  <updated>2024-03-09T00:00:00Z</updated>
   <id>https://blog.cryptpad.org</id>
   <author>
     <name>CryptPad Team</name>
     <email>contact@cryptpad.fr</email>
   </author>
+  <entry>
+    <title>The Most Secure Way To Use CryptPad</title>
+    <link href="https://blog.cryptpad.org/2024/03/09/Most-Secure-CryptPad-Usage/"/>
+    <updated>2024-03-09T00:00:00Z</updated>
+    <id>https://blog.cryptpad.org/2024/03/09/Most-Secure-CryptPad-Usage/</id>
+    <summary xml:lang="en" type="html">We show you in which scenario CryptPad is secure, and give you ideas for concrete actions for a safe CryptPad usage.</summary>
+    <content xml:lang="en" type="html">&lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/Paris_Pont_des_Arts_--_2014_--_1422.jpg&quot; alt=&quot;Love padlocks at the Pont des Arts, Paris, France (2014) &quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Photo Dietmar Rabich &lt;a href=&quot;https://commons.wikimedia.org/wiki/File:Paris,_Pont_des_Arts_--_2014_--_1422.jpg&quot;&gt;Wikimedia Commons CC-BY-SA&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;You&#39;re looking for a privacy-focused collaboration tool?
+Well, you already found it!
+But what does “privacy” in this context actually mean?
+And how is it technically enforced?
+Are there any additional precautions needed for an extra-safe usage of CryptPad?&lt;/p&gt;
+&lt;p&gt;In this blog post we will answer these and other questions.
+We will show you in which scenarios CryptPad is secure, and give you ideas for
+concrete actions for using CryptPad safely.
+While we do as much as possible to make CryptPad secure, its security also
+depends on how you use it.&lt;/p&gt;
+&lt;h2&gt;🧑‍🏫 Preliminaries&lt;/h2&gt;
+&lt;h3&gt;🗺 Threat model&lt;/h3&gt;
+&lt;p&gt;When speaking of security or privacy, we should always define the scenario we
+are speaking of.
+This scenario is the so-called &lt;a href=&quot;https://ssd.eff.org/glossary/threat-model&quot;&gt;&lt;em&gt;threat
+model&lt;/em&gt;&lt;/a&gt; which defines the
+&lt;a href=&quot;https://ssd.eff.org/glossary/capability&quot;&gt;adversarial capabilities&lt;/a&gt;.
+In general, we aim to think of them to be as powerful as possible.
+If we can defend against a strong
+&lt;a href=&quot;https://ssd.eff.org/glossary/adversary&quot;&gt;adversary&lt;/a&gt;,
+we can also defend against a weaker one.&lt;/p&gt;
+&lt;p&gt;The first assumption about the adversarial capabilities follows directly from
+CryptPad&#39;s architecture.
+CryptPad is a web application: you visit the website of your
+&lt;a href=&quot;https://docs.cryptpad.org/en/user_guide/instances.html&quot;&gt;instance&lt;/a&gt; (e.g.
+&lt;a href=&quot;https://cryptpad.fr/&quot;&gt;https://cryptpad.fr&lt;/a&gt;) and automatically download the client code that will be
+executed locally on your computer.
+If you receive bogus code from this server, you cannot establish any security,
+as this bogus code may, as an example, send all your documents in plaintext to
+the server.
+Hence, you must trust the server to not run any &lt;em&gt;active&lt;/em&gt;
+&lt;a href=&quot;https://ssd.eff.org/glossary/attack&quot;&gt;attacks&lt;/a&gt; (i.e., not to run
+a modified CryptPad server software).&lt;/p&gt;
+&lt;p&gt;We nevertheless defend against an &lt;em&gt;honest-but-curious&lt;/em&gt; (i.e., passive) server.
+The second assumption is thus that the server plays according to the rules, but
+could try to infer sensitive information by analyzing all the data it receives.
+This scenario includes the possibility that a third-party gets access to the
+server and can see all data and logs.
+CryptPad has already defended against such an adversary in the past when &lt;a href=&quot;https://newsrnd.com/tech/2022-06-24-data-confiscated-from-pirate-party-servers.SJxeH5I79q.html&quot;&gt;a
+third-party instance was seized by the
+police&lt;/a&gt;.
+We therefore consider this scenario to be highly realistic.&lt;/p&gt;
+&lt;p&gt;Lastly, we assume the attackers to have network capability.
+This would be the case for the system administrator managing the network
+in your office, your &lt;a href=&quot;https://en.wikipedia.org/wiki/Internet_service_provider&quot;&gt;internet service
+provider&lt;/a&gt;, or secret
+services as well as many others.
+The attackers may even use active network capabilities, that is they can sniff
+your web traffic, and also replay, drop or modify data sent over the network.&lt;/p&gt;
+&lt;!-- ### 🔎 Security and Privacy --&gt;
+&lt;!-- The notions of _security_ and _privacy_ are often mixed, however they do not --&gt;
+&lt;!-- refer to the same concept. --&gt;
+&lt;!-- In the context of CryptPad, the two notions can be differentiated as follows: --&gt;
+&lt;!-- * **Security:** An adversary cannot read or modify your documents, your --&gt;
+&lt;!--   messages, or the teams your belonging to. --&gt;
+&lt;!-- * **Privacy:** An adversary cannot link your activity to other profiles, your --&gt;
+&lt;!--   name or to any of your sensitive data. --&gt;
+&lt;!-- CryptPad aims to give you both. --&gt;
+&lt;!-- However, as any other website you&#39;re visiting, the server can see your --&gt;
+&lt;!-- [IP address](https://ssd.eff.org/glossary/ip-address) and your [&quot;user --&gt;
+&lt;!-- agent&quot;](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent) --&gt;
+&lt;!-- (browser and [operating system](https://ssd.eff.org/glossary/operating-system)). --&gt;
+&lt;h3&gt;🔑 Cryptography&lt;/h3&gt;
+&lt;p&gt;One of the key features of CryptPad is &lt;a href=&quot;https://ssd.eff.org/glossary/end-to-end-encryption&quot;&gt;end-to-end
+encryption&lt;/a&gt;. Let us give you
+a rough idea of what encryption and authentication are. There are three main
+building blocks:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Symmetric Encryption&lt;/strong&gt; (or public key encryption) works similar to a box
+with a lock: We can put something into the box and lock the box by key
+(encryption).
+Only someone with the key can unlock the box and access the content
+(decryption) and modify it.
+Since the same key is used to lock and unlock the box, this scheme is dubbed
+&lt;em&gt;symmetric&lt;/em&gt;.
+We can further make copies of the key and distribute it to people whom we
+trust, so that they can all lock and unlock the box.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Asymmetric Encryption&lt;/strong&gt; (or public key encryption: PKE for short) differs
+from symmetric encryption in that a different key is used for encryption
+(namely, the &lt;em&gt;public key&lt;/em&gt;) and decryption (the &lt;em&gt;private key&lt;/em&gt;).
+You can imagine asymmetric encryption as the following system: you distribute
+open locks (the public encryption key) to everyone and keep the (secret
+decryption) key to yourself. Then, if someone wants to send you a message,
+they put it in a box and close a lock on it.
+Thus, only you can open it while anyone can produce a locked box for you.&lt;p&gt;&lt;img alt=&quot;Box with a lock&quot; src=&quot;https://blog.cryptpad.org/images/unsplash-lock_on_a_box.jpg&quot; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Digital Signatures&lt;/strong&gt; are closely related to physical seals: Only the
+persons in possession of the seal (which we call the &lt;em&gt;signing key&lt;/em&gt;) can sign,
+but all other people can verify the authenticity of a document using the
+public &lt;em&gt;verification key&lt;/em&gt; of the emitter.
+In addition, digital signatures also guarantee that no one is able to modify
+the sealed content without readers noticing it. A property that regular
+seals don’t enjoy.&lt;br /&gt;
+Note that there is a symmetric variant of this primitive called &lt;a href=&quot;https://en.wikipedia.org/wiki/Message_authentication_code&quot;&gt;&lt;em&gt;message
+authentication
+code&lt;/em&gt;&lt;/a&gt;. However,
+it is rarely used as an independent building block and is jointly used with
+symmetric encryption to achieve &lt;a href=&quot;https://en.wikipedia.org/wiki/Authenticated_encryption&quot;&gt;authenticated
+encryption&lt;/a&gt;, that
+further guarantees that messages are not tampered. As we exclusively use
+authenticated encryption in CryptPad, we usually use “symmetric encryption”
+instead in the explanations for simplicity, but actual guarantees are
+stronger.&lt;p&gt;&lt;img alt=&quot;Physical seal&quot; src=&quot;https://blog.cryptpad.org/images/unsplash-sealed_letter.jpg&quot; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;For CryptPad, we combine all of these building blocks to achieve different
+goals. We will explain the usage below in the section pertaining to Documents.&lt;/p&gt;
+&lt;h2&gt;🧗 The Basics&lt;/h2&gt;
+&lt;p&gt;We outline some basic measurements that allow you to significantly increase the
+security of your CryptPad usage:&lt;/p&gt;
+&lt;!-- ensure that you are using an instance that is up-to-date
+  ie. compare against https://github.com/xwiki-labs/cryptpad
+  https://cryptpad.org/instances/ only lists third-party hosts that
+  have updated in a reasonable amount of time
+--&gt;
+&lt;ul&gt;
+&lt;li&gt;CryptPad is &lt;a href=&quot;https://ssd.eff.org/glossary/open-source-software&quot;&gt;open source&lt;/a&gt;
+software and as such there are &lt;a href=&quot;https://cryptpad.org/instances/&quot;&gt;various
+instances&lt;/a&gt; running it. While we host the
+&lt;a href=&quot;https://cryptpad.fr/&quot;&gt;flagship instance&lt;/a&gt; you might choose a different one
+depending on the jurisdiction for instance.&lt;/li&gt;
+&lt;li&gt;Ensure that you are connecting to the chosen CryptPad instance over
+&lt;a href=&quot;https://ssd.eff.org/module/what-should-i-know-about-encryption#transport-layer-encryption-example-https&quot;&gt;HTTPS&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;All security mechanisms are only as strong as your password is.
+If your password is easily guessable, attackers can get full access to all your
+data stored on CryptPad.
+We recommend you to either generate a random password using a &lt;a href=&quot;https://ssd.eff.org/module/animated-overview-using-password-managers-stay-safe-online&quot;&gt;password
+manager&lt;/a&gt; or to &lt;a href=&quot;https://www.eff.org/dice&quot;&gt;choose
+multiple words&lt;/a&gt; in case the password needs to be
+memorizable.
+Use this password only for CryptPad to avoid other services leaking it.&lt;/li&gt;
+&lt;li&gt;Log out of CryptPad after each session to require the password to
+access your data on CryptPad. Otherwise, anybody with access to your device
+can also access your data on CryptPad.&lt;/li&gt;
+&lt;li&gt;Use &lt;a href=&quot;https://ssd.eff.org/glossary/two-factor-authentication&quot;&gt;two-factor
+authentication&lt;/a&gt; in
+your account to add protection against phishing by adding a temporal factor to
+your login.
+&lt;a href=&quot;https://blog.cryptpad.org/2024/01/09/tutorial-two-factor-authentication/&quot;&gt;A user guide&lt;/a&gt; is available
+in this blog.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;🧑 Contacts&lt;/h2&gt;
+&lt;p&gt;As we will show below, adding your peers as CryptPad contacts lets you more
+easily and safely share documents.
+You can moreover restrict access to a document to specific contacts and exchange
+text messages with them.&lt;/p&gt;
+&lt;p&gt;The easiest way to add someone to your contacts is to &lt;a href=&quot;https://docs.cryptpad.org/en/user_guide/collaboration.html#add-a-contact&quot;&gt;share the link to your
+profile&lt;/a&gt;
+over a secure communication to your peer and request to add each other as
+contacts.&lt;/p&gt;
+&lt;p&gt;⚠️ Note that usernames are not unique on CryptPad.
+Depending on context, it may be wise to verify a received contact request
+through another secure channel.&lt;/p&gt;
+&lt;h2&gt;📄 Documents&lt;/h2&gt;
+&lt;p&gt;CryptPad uses symmetric encryption with a per-document secret key to make
+your documents unreadable for anyone who has no access to their corresponding
+keys. CryptPad also allows you to differentiate between read-only and write
+accesses to a document. For that, anyone wanting to modify a document needs to
+prove that they own the private signing key linked to the document. For this,
+they sign their modifications and other people working on the same document can
+verify that the modification was indeed done by an authorized person before
+accepting the changes.&lt;/p&gt;
+&lt;h3&gt;♻ Sharing&lt;/h3&gt;
+&lt;p&gt;CryptPad keeps these technical details “under the hood” and provides a simple
+interface to &lt;a href=&quot;https://docs.cryptpad.org/en/user_guide/share_and_access.html#sharing-a-link&quot;&gt;share
+documents&lt;/a&gt;
+via links. Such a link essentially contains the symmetric key for encryption and
+decryption, for verifying signatures as well as the one for issuing signatures
+(in case of read/write access) in a &lt;strong&gt;non-revokable manner&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;
+&lt;img alt=&quot;Share via link&quot; style=&quot;border-radius: 10px&quot; src=&quot;https://blog.cryptpad.org/images/docs-modal-share-link.png&quot; /&gt;
+&lt;/p&gt;
+&lt;p&gt;⚠️ This implies that the document is only as safe as the &lt;strong&gt;weakest&lt;/strong&gt;
+communication channel used to send these links.&lt;/p&gt;
+&lt;!-- maybe worth giving an example of a channel here --&gt;
+&lt;p&gt;If you consider a channel to be unsafe, or if it is publicly accessible, you
+may want to isolate some of your documents from it. For instance, you can limit
+the sending of edit links to &lt;a href=&quot;https://signal.org/&quot;&gt;Signal&lt;/a&gt; chats with
+disappearing messages.&lt;/p&gt;
+&lt;!-- I&#39;m not sure we ever refer to the mailbox system in public documents, so maybe we can find another term to express this rather than the internal name
+Fabrice: Agreed --&gt;
+&lt;p&gt;Another possibility to safely share the access is to &lt;a href=&quot;https://docs.cryptpad.org/en/user_guide/share_and_access.html#sharing-with-contacts&quot;&gt;send it over CryptPad to your
+contacts&lt;/a&gt;.
+It internally uses the
+&lt;a href=&quot;https://docs.cryptpad.org/en/dev_guide/general.html#encryption&quot;&gt;“mailbox”&lt;/a&gt;
+system for internal communications, without the CryptPad server knowing better.
+This way, you do not have to use a secondary (potentially insecure) communication
+channel.&lt;/p&gt;
+&lt;p&gt;
+&lt;img alt=&quot;Share with contacts&quot; style=&quot;border-radius: 10px&quot; src=&quot;https://blog.cryptpad.org/images/docs-modal-share-contacts.png&quot; /&gt;
+&lt;/p&gt;
+&lt;p&gt;⚠️ Note that CryptPad documents contain the full edit history by design. It is
+easily accessible to anyone from the &lt;a href=&quot;https://docs.cryptpad.org/en/user_guide/apps/general.html#document-history&quot;&gt;user
+interface&lt;/a&gt;.
+If you made a manipulation error, such at past some text you didn’t want to
+share, while producing the document &lt;strong&gt;before&lt;/strong&gt; sharing it, we recommend that you
+copy-paste the version you want to share for collaboration in a new pad before
+sending it to sanitize the history (it also helps to track changes afterward).&lt;/p&gt;
+&lt;h3&gt;⛔ Restricting Access&lt;/h3&gt;
+&lt;p&gt;As CryptPad operates with static keys, granted shared accesses are not revokable.
+This means that by default anyone who was granted access will forever be able to
+read (and modify) a document.
+To prevent this, you can shut down access to a document using the
+&lt;a href=&quot;https://docs.cryptpad.org/en/user_guide/share_and_access.html#access-list&quot;&gt;Access
+List&lt;/a&gt;
+feature.&lt;/p&gt;
+&lt;p&gt;
+&lt;img alt=&quot;Access List&quot; style=&quot;border-radius: 10px&quot; src=&quot;https://blog.cryptpad.org/images/docs-modal-access-list.png&quot; /&gt;
+&lt;/p&gt;
+&lt;p&gt;This way, only the selected persons have access to the document, independently
+of who has received the sharing link.&lt;/p&gt;
+&lt;p&gt;Also make sure you or your &lt;a href=&quot;https://docs.cryptpad.org/en/user_guide/collaboration.html#teams&quot;&gt;team&lt;/a&gt;
+is set as “owner” when you create documents.
+This will give you full control including the possibility to destroy a document
+if it contains sensitive information or the link escapes your control.&lt;/p&gt;
+&lt;h3&gt;🔒 Per-Document Passwords&lt;/h3&gt;
+&lt;p&gt;For additional safety, you can &lt;a href=&quot;https://docs.cryptpad.org/en/user_guide/share_and_access.html#access-tab&quot;&gt;protect a document with a
+password&lt;/a&gt;.
+The document is then only available if you have both, the sharing link and the
+password.
+This is especially useful for the case where you do not have a secure
+communication channel to share the link, as you can send the link and the
+password over two &lt;em&gt;distinct&lt;/em&gt; channels (e.g., text messaging and email).
+This way, the attacker has to monitor on both channels at the same time which
+makes it a lot more difficult.&lt;/p&gt;
+&lt;!-- maybe &quot;listen&quot; or &quot;monitor&quot; would be clearer than &quot;sniff&quot; ? --&gt;
+&lt;!-- agreed --&gt;
+&lt;!-- a diagram of this might be nice... like how David&#39;s shredder-unshredder image shows things being unreadable in transit, we could show two independent but readable things being combined? --&gt;
+&lt;p&gt;When you share documents with your contacts directly on CryptPad, communications
+are encrypted, and we assume that you want to give them access.
+Therefore, the password is remembered and sent with the document when you share
+it.
+The recipient, or yourself, are not asked for it when opening the document.
+This implicitly assumes that the security of CryptPad drive is at least as
+strong as the communication channels used to share the document.&lt;/p&gt;
+&lt;h3&gt;💨 Self-Destruction&lt;/h3&gt;
+&lt;p&gt;CryptPad allows you to make &lt;a href=&quot;https://docs.cryptpad.org/en/user_guide/security.html#self-destructing-documents&quot;&gt;self-destructing
+documents&lt;/a&gt;
+which will be destroyed either after the set expiration time or after the shared
+document was opened the first time.&lt;/p&gt;
+&lt;p&gt;This feature is especially useful if you have to share sensitive data that
+should not be accessible forever.
+You could use it to share a password to a peer for example.&lt;/p&gt;
+&lt;h2&gt;🕵️ Anonymity&lt;/h2&gt;
+&lt;!-- it should be noted who this is hidden from. Peers in the same document can&#39;t determine that you&#39;re using Firefox/Safari, but the server can --&gt;
+&lt;p&gt;CryptPad only provides a weak form of anonymity and does not hide your
+&lt;a href=&quot;https://ssd.eff.org/glossary/ip-address&quot;&gt;IP address&lt;/a&gt; or your &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent&quot;&gt;“user
+agent”&lt;/a&gt;
+(browser and &lt;a href=&quot;https://ssd.eff.org/glossary/operating-system&quot;&gt;operating system&lt;/a&gt;).
+The server can furthermore theoretically link IP addresses of people who are often collaborating on the same documents.
+Of course, we do not run these analytics for our flagship instance, but we want
+you to have to trust us as little as possible.
+You may want therefore use the following tools and techniques:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The &lt;a href=&quot;https://www.torproject.org/download/&quot;&gt;Tor browser&lt;/a&gt; to connect to
+CryptPad and hide your IP address.&lt;/li&gt;
+&lt;li&gt;A burner account that is only used for specific high-risk actions such as
+working on a small set of documents or publishing sensitive information to
+prevent the possibility of linking IP addresses of collaborating people.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://tails.boum.org/&quot;&gt;Tails&lt;/a&gt; for leaving no traces on your local device.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;💡 Other Tools&lt;/h2&gt;
+&lt;p&gt;CryptPad is designed to be a general, easy-to-use office suite.
+As such it may not always fit your specific needs.
+We redirect you to other tools and services that are not affiliated to CryptPad
+for the following actions:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A &lt;a href=&quot;https://ssd.eff.org/module/animated-overview-using-password-managers-stay-safe-online&quot;&gt;password
+manager&lt;/a&gt;
+to have control over your passwords.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://securedrop.org/&quot;&gt;Secure Drop&lt;/a&gt; for whistleblowing.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://signal.org/&quot;&gt;Signal&lt;/a&gt; for secure real-time messaging.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;📚 References&lt;/h2&gt;
+&lt;p&gt;About CryptPad:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The &lt;a href=&quot;https://docs.cryptpad.org/en/user_guide/security.html&quot;&gt;security section&lt;/a&gt;
+in our user guide explains the use of CryptPad&#39;s security features.&lt;/li&gt;
+&lt;li&gt;The talk &lt;a href=&quot;https://peertube.xwiki.com/w/jAP48FTXpi9CpJnb8SSVDh&quot;&gt;“Living on the Edge with CryptPad: privacy, distributed
+computation, and architectures of
+resilience”&lt;/a&gt; is an
+extended explanation about the concepts behind CryptPad.&lt;/li&gt;
+&lt;li&gt;We have published a &lt;a href=&quot;https://blog.cryptpad.org/2023/02/02/Whitepaper/&quot;&gt;white paper&lt;/a&gt;
+describing the security mechanisms and the cryptography used in CryptPad. This
+document is intended for people who are already familiar with cryptography.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;More general:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The &lt;a href=&quot;https://ssd.eff.org/&quot;&gt;surveillance self-defense guide&lt;/a&gt; by the Electronic
+Frontier Foundation (EFF)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;🙋 Questions?&lt;/h2&gt;
+&lt;p&gt;We are happy to help you and answer your questions regarding this blog post.
+You can reach us on &lt;a href=&quot;https://forum.cryptpad.org/&quot;&gt;our forum&lt;/a&gt;,
+&lt;a href=&quot;https://matrix.to/#/#cryptpad:matrix.xwiki.com&quot;&gt;Matrix&lt;/a&gt;,
+&lt;a href=&quot;https://fosstodon.org/@cryptpad&quot;&gt;Mastodon&lt;/a&gt;, or
+&lt;a href=&quot;mailto:contact@cryptpad.fr&quot;&gt;Email&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;🙏 Acknowledgements&lt;/h2&gt;
+&lt;p&gt;This project is part of &lt;a href=&quot;https://nlnet.nl/project/CryptPad-Blueprints/&quot;&gt;CryptPad
+Blueprints&lt;/a&gt;, which is funded
+through the &lt;a href=&quot;https://nlnet.nl/entrust&quot;&gt;NGI0 Entrust&lt;/a&gt; Fund, a fund established by
+&lt;a href=&quot;https://nlnet.nl/&quot;&gt;NLnet&lt;/a&gt; with financial support from the European Commission&#39;s
+&lt;a href=&quot;https://ngi.eu/&quot;&gt;Next Generation Internet&lt;/a&gt; program, under the aegis of DG
+Communications Networks, Content and Technology under grant agreement
+N° 101069594.&lt;/p&gt;
+</content>
+    <category term="security" scheme="https://blog.cryptpad.org/tags/security/"/>
+    <category term="tutorials" scheme="https://blog.cryptpad.org/tags/tutorials/"/>
+    <category term="privacy" scheme="https://blog.cryptpad.org/tags/privacy/"/>
+    <category term="research" scheme="https://blog.cryptpad.org/tags/research/"/>
+    <category term="Blueprints" scheme="https://blog.cryptpad.org/tags/Blueprints/"/>
+    <category term="ngi" scheme="https://blog.cryptpad.org/tags/ngi/"/>
+  </entry>
   <entry>
     <title>CryptPad Funding Status January 2024</title>
     <link href="https://blog.cryptpad.org/2024/03/08/CryptPad-Funding-Status-January-2024/"/>
