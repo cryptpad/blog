@@ -4,12 +4,117 @@
   <subtitle>News from the end-to-end encrypted collaboration suite</subtitle>
   <link href="https://blog.cryptpad.org/atom.xml" rel="self"/>
   <link href="https://blog.cryptpad.org"/>
-  <updated>2024-03-14T00:00:00Z</updated>
+  <updated>2024-03-15T00:00:00Z</updated>
   <id>https://blog.cryptpad.org</id>
   <author>
     <name>CryptPad Team</name>
     <email>contact@cryptpad.fr</email>
   </author>
+  <entry>
+    <title>Pour un usage sécurisé de CryptPad</title>
+    <link href="https://blog.cryptpad.org/2024/03/15/Pour-un-usage-securise-de-CryptPad/"/>
+    <updated>2024-03-15T00:00:00Z</updated>
+    <id>https://blog.cryptpad.org/2024/03/15/Pour-un-usage-securise-de-CryptPad/</id>
+    <summary xml:lang="en" type="html">Nous vous présentons dans quels scénarios CryptPad est sécurisé, et partageons des idées d&#39;actions concrètes pour un usage de CryptPad respectant votre confidentialité.</summary>
+    <content xml:lang="en" type="html">&lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/Paris_Pont_des_Arts_--_2014_--_1422.jpg&quot; alt=&quot;Cadenas d&#39;amour sur le Pont des Arts, Paris, France (2014)&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Photo Dietmar Rabich &lt;a href=&quot;https://commons.wikimedia.org/wiki/File:Paris,_Pont_des_Arts_--_2014_--_1422.jpg&quot;&gt;Wikimedia Commons CC-BY-SA&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Ce billet de blog est une traduction francophone d&#39;&lt;a href=&quot;https://blog.cryptpad.org/2024/03/14/Most-Secure-CryptPad-Usage/&quot;&gt;une première version originale en anglais&lt;/a&gt; rédigée par Théo Von Arx et Fabrice Mouhartem.&lt;/p&gt;
+&lt;p&gt;Vous êtes à la recherche d&#39;un outil de collaboration axé sur la vie privée ? Eh bien, vous l&#39;avez déjà trouvé ! Mais que signifie réellement « vie privée » dans ce contexte ? Et comment est-il techniquement appliqué ? Il y a-t-il des précautions supplémentaires nécessaires pour une utilisation extra-sûre de CryptPad ?&lt;/p&gt;
+&lt;p&gt;Dans ce billet de blog, nous répondrons à ces questions, ainsi qu&#39;à d&#39;autres. Nous vous montrerons dans quels scénarios CryptPad est sécurisé et vous donnerons des idées d&#39;actions concrètes pour utiliser CryptPad en toute confidentialité. Bien que nous fassions tout ce qui est possible pour sécuriser CryptPad, sa sécurité dépend également de la façon dont vous l&#39;utilisez.&lt;/p&gt;
+&lt;h2&gt;🧑‍🏫 Préliminaires&lt;/h2&gt;
+&lt;h3&gt;🗺 Modèle de menace&lt;/h3&gt;
+&lt;p&gt;Lorsque nous parlons de sécurité ou de confidentialité, nous devrions toujours définir le scénario dont nous parlons.
+Ce scénario est ce qu&#39;on appelle le &lt;a href=&quot;https://ssd.eff.org/fr/glossary/modele-de-menaces&quot;&gt;&lt;em&gt;modèle de menace&lt;/em&gt;&lt;/a&gt;, qui définit la &lt;a href=&quot;https://ssd.eff.org/fr/glossary/possibilite-d-action&quot;&gt;possibilité d&#39;action&lt;/a&gt;. En général, nous visons à penser qu&#39;elles sont aussi puissantes que possible. Si nous pouvons nous défendre contre un &lt;a href=&quot;https://ssd.eff.org/fr/glossary/adversaire&quot;&gt;adversaire&lt;/a&gt; fort, nous pouvons également nous défendre contre un adversaire plus faible.&lt;/p&gt;
+&lt;p&gt;La première hypothèse sur les capacités de&#39;un adversaire découle directement de l&#39;architecture de CryptPad. CryptPad est une application web : vous visitez le site web de votre &lt;a href=&quot;https://docs.cryptpad.org/fr/user_guide/instances.html&quot;&gt;instance&lt;/a&gt; (par exemple, &lt;a href=&quot;https://cryptpad.fr/&quot;&gt;https://cryptpad.fr&lt;/a&gt;) et téléchargez automatiquement le code client qui sera exécuté localement sur votre ordinateur. Si vous recevez un code source altéré de ce serveur, vous ne pouvez pas établir de sécurité, car ce mauvais code source peut, par exemple, envoyer tous vos documents en texte clair au serveur.
+Par conséquent, vous devez faire confiance au serveur pour ne pas exécuter d&#39;&lt;a href=&quot;https://ssd.eff.org/fr/glossary/attaque&quot;&gt;attaques &lt;em&gt;active&lt;/em&gt;&lt;/a&gt; (c&#39;est-à-dire pour ne pas exécuter un logiciel de serveur CryptPad modifié).&lt;/p&gt;
+&lt;p&gt;Nous nous défendons néanmoins contre un serveur &lt;em&gt;honnête mais curieux&lt;/em&gt; (c&#39;est-à-dire passif). La deuxième hypothèse est donc que le serveur joue selon les règles, mais pourrait essayer de déduire des informations sensibles en analysant toutes les données qu&#39;il reçoit. Ce scénario inclut la possibilité qu&#39;un tiers ait accès au serveur et puisse voir toutes les données et tous les journaux de logs. CryptPad s&#39;est déjà défendu contre un tel adversaire dans le passé lorsque &lt;a href=&quot;https://newsrnd.com/tech/2022-06-24-data-confiscated-from-pirate-party-servers.SJxeH5I79q.html&quot;&gt;une instance tierce a été saisie par la police&lt;/a&gt;. Nous considérons donc ce scénario comme très réaliste.&lt;/p&gt;
+&lt;p&gt;Enfin, nous supposons que les attaquants ont une capacité de réseau. Ce serait le cas de l&#39;administrateur système qui gère le réseau dans votre bureau, de votre &lt;a href=&quot;https://fr.wikipedia.org/wiki/Fournisseur_d%27acc%C3%A8s_%C3%A0_Internet&quot;&gt;fournisseur d&#39;accès Internet&lt;/a&gt;, ou des services secrets ainsi que de nombreux autres. Les attaquants peuvent même utiliser les capacités de réseau actives, c&#39;est-à-dire qu&#39;ils peuvent épier votre trafic internet, et également analyser, déposer ou modifier les données envoyées sur le réseau.&lt;/p&gt;
+&lt;h3&gt;🔑 Cryptographie&lt;/h3&gt;
+&lt;p&gt;L&#39;une des principales caractéristiques de CryptPad est &lt;a href=&quot;https://ssd.eff.org/fr/glossary/chiffrement-de-bout-en-bout&quot;&gt;le chiffrement de bout en bout&lt;/a&gt;. Laissez-nous vous donner une idée approximative de ce que sont le chiffrement et l&#39;authentification. Il y a trois blocs de construction principaux :&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Le chiffrement symétrique&lt;/strong&gt; (ou chiffrement de clé secrète) fonctionne de la même manière qu&#39;une boîte avec un verrou : nous pouvons mettre quelque chose dans la boîte et verrouiller la boîte par clé (chiffrement). Seule une personne ayant la clé peut déverrouiller la boîte et accéder au contenu (déchiffrement) et le modifier. Étant donné que la même clé est utilisée pour verrouiller et déverrouiller la boîte, ce schéma est surnommé &lt;em&gt;symétrique&lt;/em&gt;. Nous pouvons également faire des copies de la clé et la distribuer aux personnes en qui nous avons confiance, afin qu&#39;elles puissent toutes verrouiller et déverrouiller la boîte.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Le chiffrement asymétrique&lt;/strong&gt; (ou chiffrement de clé publique : Public Key Encryption, PKE pour faire court) diffère du chiffrement symétrique en ce sens qu&#39;une clé différente est utilisée pour le chiffrement (à savoir la &lt;em&gt;clé publique&lt;/em&gt;) et le déchiffrement (la &lt;em&gt;clé privée&lt;/em&gt;). Vous pouvez imaginer le chiffrement asymétrique comme le système suivant : vous distribuez des cadenas ouverts (la clé de chiffrement publique) à tout le monde et gardez la clé (déchiffrement secret) pour vous. Ensuite, si quelqu&#39;un veut vous envoyer un message, il le met dans une boîte et la ferme grâce au cadenas que vous lui avez donné. Ainsi, vous seul·e pouvez l&#39;ouvrir pendant que n&#39;importe qui peut produire une boîte verrouillée pour vous. &lt;p&gt;&lt;img alt=&quot;Boîte avec cadenas&quot; src=&quot;https://blog.cryptpad.org/images/unsplash-lock_on_a_box.jpg&quot; /&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Les signatures numériques&lt;/strong&gt; sont étroitement liées aux sceaux physiques : seules les personnes en possession du sceau (que nous appelons la clé de signature) peuvent signer, mais toutes les autres personnes peuvent vérifier l&#39;authenticité d&#39;un document à l&#39;aide de la clé de vérification publique de l&#39;émetteur. En outre, les signatures numériques garantissent également que personne n&#39;est en mesure de modifier le contenu scellé sans que les lecteur·ices ne s&#39;en aperçoivent. Une propriété que les sceaux conventionnels n&#39;apprécient pas. Notez qu&#39;il existe une variante symétrique de cette primitive appelée &lt;a href=&quot;https://fr.wikipedia.org/wiki/Code_d%27authentification_de_message&quot;&gt;&lt;em&gt;code d&#39;authentification de message&lt;/em&gt;&lt;/a&gt;. Cependant, il est rarement utilisé comme bloc de construction indépendant et est utilisé conjointement avec le chiffrement symétrique pour obtenir &lt;a href=&quot;https://fr.wikipedia.org/wiki/Mode_d%27op%C3%A9ration_(cryptographie)#AEAD_:_chiffrement_authentifi%C3%A9_avec_modes_de_donn%C3%A9es_additionnelles&quot;&gt;le chiffrement authentifié&lt;/a&gt;, ce qui garantit en outre que les messages ne sont pas altérés. Comme nous utilisons exclusivement le chiffrement authentifié dans CryptPad, nous utilisons généralement le &amp;quot;chiffrement symétrique&amp;quot; à la place dans les explications pour plus de simplicité, mais les garanties réelles sont plus fortes. &lt;p&gt;&lt;img alt=&quot;Cachet sur une enveloppe&quot; src=&quot;https://blog.cryptpad.org/images/unsplash-sealed_letter.jpg&quot; /&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Pour CryptPad, nous combinons tous ces blocs de construction pour atteindre différents objectifs. Nous expliquerons l&#39;utilisation ci-dessous dans la section relative aux documents.&lt;/p&gt;
+&lt;h2&gt;🧗 Les bases&lt;/h2&gt;
+&lt;p&gt;Nous décrivons quelques mesures de base qui vous permettent d&#39;augmenter considérablement la sécurité de votre utilisation de CryptPad :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;CryptPad est un logiciel &lt;a href=&quot;https://ssd.eff.org/fr/glossary/logiciels-ouverts&quot;&gt;open source&lt;/a&gt; et, à ce titre, il y a &lt;a href=&quot;https://cryptpad.org/instances/&quot;&gt;diverses instances&lt;/a&gt; qui l&#39;exécutent. Alors que nous hébergeons l&#39;&lt;a href=&quot;https://cryptpad.fr/&quot;&gt;instance phare&lt;/a&gt;, vous pouvez en choisir une autre, en fonction de la juridiction par exemple.&lt;/li&gt;
+&lt;li&gt;Assurez-vous de vous connecter à l&#39;instance CryptPad choisie via &lt;a href=&quot;https://ssd.eff.org/fr/module/que-devrais-je-savoir-au-sujet-du-chiffrement%E2%80%89#exemple-de-chiffrement-de-la-couche-de-transport-https&quot;&gt;HTTPS&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Tous les mécanismes de sécurité sont seulement aussi forts que votre mot de passe. Si votre mot de passe est facilement devinable, les attaquants peuvent obtenir un accès complet à toutes vos données stockées sur CryptPad. Nous vous recommandons soit de générer un mot de passe aléatoire à l&#39;aide d&#39;un &lt;a href=&quot;https://guide.boum.org/en-ligne-outils-gerer-des-mots-de-passe.html#en_ligne-outils-gerer_des_mots_de_passe-utiliser_un_gestionnaire_de_mots_de_passe&quot;&gt;gestionnaire de mots de passe&lt;/a&gt;, ou de &lt;a href=&quot;https://guide.boum.org/hors-connexions-outils-choisir-une-phrase-de-passe.html#hors_connexions-outils-choisir_une_phrase_de_passe&quot;&gt;choisir une bonne phrase de passe&lt;/a&gt; au cas où le mot de passe devrait être mémorisable. Utilisez ce mot de passe uniquement pour CryptPad afin d&#39;éviter que d&#39;autres services ne le divulgue.&lt;/li&gt;
+&lt;li&gt;Déconnectez-vous de CryptPad après chaque session, afin de redemander le mot de passe pour accéder à vos données sur CryptPad. Sinon, toute personne ayant accès à votre appareil peut également accéder à vos données sur CryptPad.&lt;/li&gt;
+&lt;li&gt;Utilisez l&#39;&lt;a href=&quot;https://ssd.eff.org/fr/glossary/authentification-deux-facteurs&quot;&gt;authentification à deux facteurs&lt;/a&gt; dans votre compte pour ajouter une protection contre le phishing en ajoutant un facteur temporel à votre connexion. &lt;a href=&quot;https://blog.cryptpad.org/2024/01/09/tutorial-two-factor-authentication/&quot;&gt;Un tutoriel&lt;/a&gt; (en anglais) à ce sujet est disponible sur ce blog.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;🧑 Contacts&lt;/h2&gt;
+&lt;p&gt;Comme nous le montrerons ci-dessous, l&#39;ajout de vos pairs en tant que contacts CryptPad vous permet de partager des documents plus facilement, ainsi qu&#39;en toute sécurité. Vous pouvez en outre restreindre l&#39;accès à un document à des contacts spécifiques et échanger des messages texte avec eux.&lt;/p&gt;
+&lt;p&gt;La façon la plus simple d&#39;ajouter quelqu&#39;un à vos contacts est de &lt;a href=&quot;https://docs.cryptpad.org/fr/user_guide/collaboration.html#add-a-contact&quot;&gt;partager le lien vers votre profil&lt;/a&gt; via une communication sécurisée avec votre pair et de demander à s&#39;ajouter les un·es les autres en tant que contacts.&lt;/p&gt;
+&lt;p&gt;⚠️ Notez que les noms d&#39;utilisateur·ices ne sont pas uniques sur CryptPad. Selon le contexte, il peut être judicieux de vérifier une demande de contact reçue par un autre canal sécurisé.&lt;/p&gt;
+&lt;h2&gt;📄 Documents&lt;/h2&gt;
+&lt;p&gt;CryptPad utilise un chiffrement symétrique avec une clé secrète par document pour rendre vos documents illisibles pour tous ceux qui n&#39;ont pas accès aux clés correspondantes. CryptPad vous permet également de faire la différence entre les accès en lecture seule et les accès en écriture à un document. Pour cela, toute personne souhaitant modifier un document doit prouver qu&#39;iel possède la clé de signature privée liée au document. Pour cela, iels signent leurs modifications et d&#39;autres personnes travaillant sur le même document peuvent vérifier que la modification a effectivement été effectuée par une personne autorisée avant d&#39;accepter les modifications.&lt;/p&gt;
+&lt;h3&gt;🔄 Partager&lt;/h3&gt;
+&lt;p&gt;CryptPad conserve ces détails techniques « sous le capot » et fournit une interface simple pour &lt;a href=&quot;https://docs.cryptpad.org/fr/user_guide/share_and_access.html#sharing-a-link&quot;&gt;partager des documents&lt;/a&gt; via des liens. Un tel lien contient essentiellement la clé symétrique pour le chiffrement et le déchiffrement, pour la vérification des signatures ainsi que celle pour l&#39;émission des signatures (en cas d&#39;accès en lecture/écriture) d&#39;une manière &lt;strong&gt;non révocable&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;
+&lt;img alt=&quot;Partager avec un lien&quot; style=&quot;border-radius: 10px&quot; src=&quot;https://blog.cryptpad.org/images/docs-modal-share-link.png&quot; /&gt;
+&lt;/p&gt;
+&lt;p&gt;⚠️ Cela implique que le document est seulement aussi sécurisé que le canal de communication &lt;strong&gt;le plus faible&lt;/strong&gt; utilisé pour envoyer ces liens.&lt;/p&gt;
+&lt;p&gt;Si vous considérez qu&#39;un canal n&#39;est pas sûr, ou s&#39;il est accessible au public, vous voudrez peut-être en isoler certains de vos documents. Par exemple, vous pouvez limiter l&#39;envoi de liens d&#39;édition vers les chats &lt;a href=&quot;https://signal.org/&quot;&gt;Signal&lt;/a&gt; avec des messages éphémères qui disparaissent.&lt;/p&gt;
+&lt;p&gt;Une autre possibilité de partager l&#39;accès en toute sécurité est de &lt;a href=&quot;https://docs.cryptpad.org/fr/user_guide/share_and_access.html#sharing-with-contacts&quot;&gt;l&#39;envoyer via CryptPad à vos contacts&lt;/a&gt;. Iel utilisent en interne le système &lt;a href=&quot;https://docs.cryptpad.org/en/dev_guide/general.html#encryption&quot;&gt;&amp;quot;mailbox&amp;quot;&lt;/a&gt; (en anglais) pour les communications internes, sans que le serveur CryptPad ne le sache. De cette façon, vous n&#39;avez pas besoin d&#39;utiliser un canal de communication tiers (potentiellement non sécurisé).&lt;/p&gt;
+&lt;p&gt;
+&lt;img alt=&quot;Partager avec des contacts&quot; style=&quot;border-radius: 10px&quot; src=&quot;https://blog.cryptpad.org/images/docs-modal-share-contacts.png&quot; /&gt;
+&lt;/p&gt;
+&lt;p&gt;⚠️ Notez que les documents CryptPad contiennent l&#39;historique complet des modifications. Il est facilement accessible à n&#39;importe qui à partir de l&#39;&lt;a href=&quot;https://docs.cryptpad.org/fr/user_guide/apps/general.html#document-history&quot;&gt;interface utilisateur·ice&lt;/a&gt;. Si vous avez commis une erreur de manipulation, par exemple au bout d&#39;un texte que vous ne vouliez pas partager, tout en produisant le document &lt;strong&gt;avant&lt;/strong&gt; de le partager, nous vous recommandons de copier-coller la version que vous souhaitez partager pour la collaboration dans un nouveau document avant de l&#39;envoyer pour nettoyer l&#39;historique (cela aide également à suivre les modifications par la suite).&lt;/p&gt;
+&lt;h3&gt;⛔ Restreindre l&#39;accès&lt;/h3&gt;
+&lt;p&gt;Comme CryptPad fonctionne avec des clés statiques, les accès partagés accordés ne sont pas révoquables. Cela signifie que par défaut, toute personne à qui l&#39;accès a été accordé pourra à jamais lire (et modifier) un document. Pour éviter cela, vous pouvez fermer l&#39;accès à un document à l&#39;aide de la fonctionnalité &lt;a href=&quot;https://docs.cryptpad.org/fr/user_guide/share_and_access.html#access-list&quot;&gt;Liste d&#39;accès&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;
+&lt;img alt=&quot;Liste d&#39;accès&quot; style=&quot;border-radius: 10px&quot; src=&quot;https://blog.cryptpad.org/images/docs-modal-access-list.png&quot; /&gt;
+&lt;/p&gt;
+&lt;p&gt;De cette façon, seules les personnes sélectionnées ont accès au document, indépendamment de la personne qui a reçu le lien de partage.&lt;/p&gt;
+&lt;p&gt;Assurez-vous également que vous ou votre &lt;a href=&quot;https://docs.cryptpad.org/fr/user_guide/collaboration.html#teams&quot;&gt;équipe&lt;/a&gt; êtes défini comme « propriétaire » lorsque vous créez des documents. Cela vous donnera un contrôle total, y compris la possibilité de détruire un document s&#39;il contient des informations sensibles ou si le lien échappe à votre contrôle.&lt;/p&gt;
+&lt;h3&gt;🔒 Mots de passe par document&lt;/h3&gt;
+&lt;p&gt;Pour plus de sécurité, vous pouvez &lt;a href=&quot;https://docs.cryptpad.org/fr/user_guide/share_and_access.html#access-tab&quot;&gt;protéger un document avec un mot de passe&lt;/a&gt;. Le document n&#39;est alors disponible que si vous avez les deux, le lien de partage et le mot de passe. Ceci est particulièrement utile dans le cas où vous n&#39;avez pas de canal de communication sécurisé pour partager le lien, car vous pouvez envoyer le lien et le mot de passe sur deux canaux &lt;em&gt;distincts&lt;/em&gt; (par exemple, la messagerie texte et le courrier électronique). De cette façon, l&#39;attaquant doit surveiller les deux canaux en même temps, ce qui le rend beaucoup plus difficile.&lt;/p&gt;
+&lt;p&gt;Lorsque vous partagez des documents avec vos contacts directement sur CryptPad, les communications sont chiffrées, et nous supposons que vous voulez leur donner accès. Par conséquent, le mot de passe est mémorisé et envoyé avec le document lorsque vous le partagez. On ne le demande pas au destinataire, ou à vous-même, lors de l&#39;ouverture du document. Cela suppose implicitement que la sécurité du lecteur CryptPad est au moins aussi forte que les canaux de communication utilisés pour partager le document.&lt;/p&gt;
+&lt;h3&gt;💨 Autodestruction&lt;/h3&gt;
+&lt;p&gt;CryptPad vous permet de créer des &lt;a href=&quot;https://docs.cryptpad.org/fr/user_guide/security.html#self-destructing-documents&quot;&gt;documents qui s&#39;autodétruisent&lt;/a&gt;, ils seront détruits soit après l&#39;heure d&#39;expiration définie, soit après l&#39;ouverture du document partagé la première fois.&lt;/p&gt;
+&lt;p&gt;Cette fonctionnalité est particulièrement utile si vous devez partager des données sensibles qui ne devraient pas être accessibles pour toujours. Vous pouvez l&#39;utiliser pour partager un mot de passe avec une personne par exemple.&lt;/p&gt;
+&lt;h2&gt;🕵️ Anonymat&lt;/h2&gt;
+&lt;p&gt;CryptPad ne fournit qu&#39;une faible forme d&#39;anonymat et ne cache pas votre &lt;a href=&quot;https://guide.boum.org/en-ligne-comprendre-bases-sur-les-reseaux.html#en_ligne-comprendre-bases_sur_les_reseaux-protocole_de_communication-protocole_ip&quot;&gt;adresse IP&lt;/a&gt; ou votre &lt;a href=&quot;https://guide.boum.org/en-ligne-comprendre-traces-sur-toute-la-ligne.html#en_ligne-comprendre-traces_sur_toute_la_ligne-serveur-les_en_tetes_http&quot;&gt;« agent utilisateur »&lt;/a&gt; (navigateur et &lt;a href=&quot;https://ssd.eff.org/fr/glossary/systeme-d-exploitation&quot;&gt;système d&#39;exploitation&lt;/a&gt;). Le serveur peut en outre lier les adresses IP de personnes qui collaborent souvent sur les mêmes documents. Bien sûr, nous n&#39;exécutons pas ces analyses pour notre instance phare, mais nous voulons que vous nous fassiez confiance le moins possible. Vous pouvez donc utiliser les outils et techniques suivants :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Le &lt;a href=&quot;https://www.torproject.org/download/&quot;&gt;Navigateur Tor&lt;/a&gt; pour se connecter à CryptPad et cacher votre adresse IP.&lt;/li&gt;
+&lt;li&gt;Un compte « jetable » qui n&#39;est utilisé que pour des actions spécifiques à haut risque, telles que le travail sur un petit ensemble de documents ou la publication d&#39;informations sensibles pour éviter la possibilité de lier les adresses IP des personnes collaboratrices.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://tails.net/&quot;&gt;Tails&lt;/a&gt; pour ne laisser aucune trace sur votre appareil local.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;💡 Autres outils&lt;/h2&gt;
+&lt;p&gt;CryptPad est conçu pour être une suite bureautique générale et facile à utiliser. En tant que tel, il se peut qu&#39;il ne réponde pas toujours à vos besoins spécifiques. Nous vous redirigons vers d&#39;autres outils et services qui ne sont pas affiliés à CryptPad pour les actions suivantes :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Un &lt;a href=&quot;https://guide.boum.org/en-ligne-outils-gerer-des-mots-de-passe.html#en_ligne-outils-gerer_des_mots_de_passe-utiliser_un_gestionnaire_de_mots_de_passe&quot;&gt;gestionnaire de mots de passe&lt;/a&gt; pour avoir le contrôle de vos mots de passe.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://securedrop.org/&quot;&gt;Secure Drop&lt;/a&gt; pour les lanceur·euses d&#39;alertes.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://signal.org/&quot;&gt;Signal&lt;/a&gt; pour une messagerie sécurisée en temps réel.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;📚 Références&lt;/h2&gt;
+&lt;p&gt;À propos de CryptPad :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;La &lt;a href=&quot;https://docs.cryptpad.org/fr/user_guide/security.html&quot;&gt;section sécurité&lt;/a&gt; dans notre guide de l&#39;utilisateur·ice explique l&#39;utilisation des fonctionnalités de sécurité de CryptPad.&lt;/li&gt;
+&lt;li&gt;La conférence &lt;a href=&quot;https://peertube.xwiki.com/w/jAP48FTXpi9CpJnb8SSVDh&quot;&gt;« Vivre à la périphérie avec CryptPad : confidentialité, calcul distribué et architectures de résilience »&lt;/a&gt; (en anglais) est une explication détaillée des concepts derrière CryptPad.&lt;/li&gt;
+&lt;li&gt;Nous avons publié un &lt;a href=&quot;https://blog.cryptpad.org/2023/02/02/Whitepaper/&quot;&gt;livre blanc&lt;/a&gt; (en anglais) décrivant les mécanismes de sécurité et la cryptographie utilisés dans CryptPad. Ce document est destiné aux personnes qui sont déjà familières avec la cryptographie.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Plus général :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Le &lt;a href=&quot;https://guide.boum.org/pr%C3%A9face-%C3%A0-cette-%C3%A9dition.html&quot;&gt;Guide d&#39;Autodéfence Numérique&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Le &lt;a href=&quot;https://ssd.eff.org/fr/&quot;&gt;guide d&#39;autodéfense de surveillance&lt;/a&gt; par l&#39;Electronic Frontier Foundation (EFF)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;🙋 Questions ?&lt;/h2&gt;
+&lt;p&gt;Nous sommes heureux·ses de vous aider et de répondre à vos questions concernant ce billet de blog. Vous pouvez nous joindre sur &lt;a href=&quot;https://forum.cryptpad.org/&quot;&gt;notre forum&lt;/a&gt;, &lt;a href=&quot;https://matrix.to/#/#cryptpad:matrix.xwiki.com&quot;&gt;Matrix&lt;/a&gt;, &lt;a href=&quot;https://fosstodon.org/@cryptpad&quot;&gt;Mastodon&lt;/a&gt;, ou par &lt;a href=&quot;mailto:contact@cryptpad.org&quot;&gt;e-mail&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;🙏 Remerciements&lt;/h2&gt;
+&lt;p&gt;Ce projet fait partie de &lt;a href=&quot;https://nlnet.nl/project/CryptPad-Blueprints/&quot;&gt;CryptPad Blueprints&lt;/a&gt;, qui est financé par le Fonds &lt;a href=&quot;https://nlnet.nl/entrust&quot;&gt;NGI0 Entrust&lt;/a&gt;, un fonds créé par &lt;a href=&quot;https://nlnet.nl/&quot;&gt;NLnet&lt;/a&gt; avec le soutien financier du programme &lt;a href=&quot;https://ngi.eu/&quot;&gt;Next Generation Internet&lt;/a&gt; de la Commission européenne, sous l&#39;égide de &lt;em&gt;DG Communications Networks, Content and Technology&lt;/em&gt;  dans le cadre de la convention de subvention n° 101069594.&lt;/p&gt;
+</content>
+    <category term="security" scheme="https://blog.cryptpad.org/tags/security/"/>
+    <category term="tutorials" scheme="https://blog.cryptpad.org/tags/tutorials/"/>
+    <category term="privacy" scheme="https://blog.cryptpad.org/tags/privacy/"/>
+    <category term="research" scheme="https://blog.cryptpad.org/tags/research/"/>
+    <category term="Blueprints" scheme="https://blog.cryptpad.org/tags/Blueprints/"/>
+    <category term="ngi" scheme="https://blog.cryptpad.org/tags/ngi/"/>
+  </entry>
   <entry>
     <title>The Most Secure Way To Use CryptPad</title>
     <link href="https://blog.cryptpad.org/2024/03/14/Most-Secure-CryptPad-Usage/"/>
@@ -1160,6 +1265,110 @@ During this event, Cryptpad was present on a stand that was quite well-received 
     <category term="status update" scheme="https://blog.cryptpad.org/tags/status update/"/>
     <category term="team" scheme="https://blog.cryptpad.org/tags/team/"/>
     <category term="release" scheme="https://blog.cryptpad.org/tags/release/"/>
+  </entry>
+  <entry>
+    <title>How to setup second factor authentication (2FA)</title>
+    <link href="https://blog.cryptpad.org/2023/09/25/tutorial-2fa/"/>
+    <updated>2023-09-25T00:00:00Z</updated>
+    <id>https://blog.cryptpad.org/2023/09/25/tutorial-2fa/</id>
+    <summary xml:lang="en" type="html">A complete tutorial about second factor authentication (2FA) and CryptPad</summary>
+    <content xml:lang="en" type="html">&lt;p&gt;Hello!&lt;/p&gt;
+&lt;p&gt;This is the second article for the tutorials series on the CryptPad blog! 📚&lt;/p&gt;
+&lt;p&gt;Today we&#39;ll be taking a look at a new CryptPad 5.4 feature for our users: second factor authentication (2FA).&lt;/p&gt;
+&lt;h2&gt;Prerequisites&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;You have a CryptPad account on an instance running at least version 5.4.0&lt;/li&gt;
+&lt;li&gt;You have
+Unless stated otherwise, all commands listed in this article are meant to be run as superuser, &lt;code&gt;root&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;You have two different domains available, it&#39;s a strong requirement &lt;a href=&quot;https://docs.cryptpad.org/en/admin_guide/installation.html#admin-domain-config&quot;&gt;explained in the documentation&lt;/a&gt;. You know how to setup their DNS zone file and have added proper entries for both IPv4 &amp;amp; IPv6.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Dependencies&lt;/h2&gt;
+&lt;p&gt;As Nginx is a basic requirement for CryptPad we&#39;ll assume that &lt;a href=&quot;https://nginx.org/en/linux_packages.html#Debian&quot;&gt;you have already installed it&lt;/a&gt;. However, we still need a way to generate our TLS certificates.&lt;/p&gt;
+&lt;p&gt;Luckily, since 2015 and thanks to &lt;a href=&quot;https://letsencrypt.org/&quot;&gt;Let&#39;s Encrypt&lt;/a&gt;, something that was once expensive and kind of a hassle to setup has been greatly simplified. Now you can get TLS certificates for free and provision them in a super simple way thanks to a variety of clients available. We will focus on &lt;a href=&quot;https://github.com/acmesh-official/acme.sh&quot;&gt;acme.sh&lt;/a&gt;, &lt;em&gt;a pure Unix shell script implementing ACME client protocol&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Let&#39;s start by cloning the git repository.&lt;/p&gt;
+&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; clone https://github.com/acmesh-official/acme.sh.git&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Then move inside the new folder and install it by specifying an email address for the account registration:&lt;/p&gt;
+&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token builtin class-name&quot;&gt;cd&lt;/span&gt; ./acme.sh&lt;br /&gt;./acme.sh &lt;span class=&quot;token parameter variable&quot;&gt;--install&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-m&lt;/span&gt; my@example.com&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This command should produce the following output.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[Fri 02 Dec 2022 09:13:23 AM CET] It is recommended to install socat first.
+[Fri 02 Dec 2022 09:13:23 AM CET] We use socat for standalone server if you use standalone mode.
+[Fri 02 Dec 2022 09:13:23 AM CET] If you don&#39;t use standalone mode, just ignore this warning.
+[Fri 02 Dec 2022 09:13:23 AM CET] Installing to /root/.acme.sh
+[Fri 02 Dec 2022 09:13:23 AM CET] Installed to /root/.acme.sh/acme.sh
+[Fri 02 Dec 2022 09:13:23 AM CET] Installing alias to &#39;/root/.bashrc&#39;
+[Fri 02 Dec 2022 09:13:23 AM CET] OK, Close and reopen your terminal to start using acme.sh
+[Fri 02 Dec 2022 09:13:23 AM CET] Installing cron job
+38 0 * * * &amp;quot;/root/.acme.sh&amp;quot;/acme.sh --cron --home &amp;quot;/root/.acme.sh&amp;quot; &amp;gt; /dev/null
+[Fri 02 Dec 2022 09:13:23 AM CET] Good, bash is found, so change the shebang to use bash as preferred.
+[Fri 02 Dec 2022 09:13:24 AM CET] OK
+[Fri 02 Dec 2022 09:13:24 AM CET] Install success!
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You can safely ignore the socat warning since we won&#39;t use the standalone mode.&lt;/p&gt;
+&lt;h2&gt;Configuration&lt;/h2&gt;
+&lt;h3&gt;&lt;a href=&quot;http://acme.sh/&quot;&gt;acme.sh&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;It&#39;s a great ACME client because of its simplicity and the fact that it just works and then gets out of your way.&lt;/p&gt;
+&lt;p&gt;The maintainers of &lt;a href=&quot;http://acme.sh/&quot;&gt;acme.sh&lt;/a&gt; have a sponsored partnership with ZeroSSL to set up their Certificate Authority (CA) as &lt;a href=&quot;http://acme.sh/&quot;&gt;acme.sh&lt;/a&gt;&#39;s default. But ZeroSSL free services can be unreliable. That&#39;s why we prefer Let&#39;s Encrypt, which is more reliable and also operated by a nonprofit organization.&lt;/p&gt;
+&lt;p&gt;We need to change a single parameter to switch the CA from ZeroSSL to Let&#39;s Encrypt.
+We do this with the following command:&lt;/p&gt;
+&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;acme.sh --set-default-ca &lt;span class=&quot;token parameter variable&quot;&gt;--server&lt;/span&gt; letsencrypt&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Which produces this result:&lt;/p&gt;
+&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;Fri 02 Dec &lt;span class=&quot;token number&quot;&gt;2022&lt;/span&gt; 09:22:27 AM CET&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; Changed default CA to: https://acme-v02.api.letsencrypt.org/directory&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Nginx&lt;/h3&gt;
+&lt;p&gt;Now we can configure Nginx!&lt;/p&gt;
+&lt;p&gt;First we create a directory where the ACME token will be put for authenticating before certificates retrieval.&lt;/p&gt;
+&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;mkdir&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-p&lt;/span&gt; /var/www/le_root/.well-known/acme-challenge&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Then we create a directory where the certificates will be stored when installed.&lt;/p&gt;
+&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;mkdir&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-p&lt;/span&gt; /etc/ssl/lets-encrypt/your-main-domain.com&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We also need to create an Nginx configuration file for &lt;a href=&quot;http://acme.sh/&quot;&gt;acme.sh&lt;/a&gt; webroot.&lt;/p&gt;
+&lt;pre class=&quot;language-nginx&quot;&gt;&lt;code class=&quot;language-nginx&quot;&gt;&lt;span class=&quot;token directive&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;cat&lt;/span&gt; &amp;lt;&amp;lt;EOT &gt;&gt; /etc/nginx/letsencrypt-webroot&lt;br /&gt;location ^~ /.well-known/acme-challenge&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br /&gt;    &lt;span class=&quot;token directive&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;allow&lt;/span&gt; all&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br /&gt;    &lt;span class=&quot;token directive&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;expires&lt;/span&gt; -1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br /&gt;    &lt;span class=&quot;token directive&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;add_header&lt;/span&gt; Cache-Control no-store&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br /&gt;    &lt;span class=&quot;token directive&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;alias&lt;/span&gt; /var/www/le_root/.well-known/acme-challenge/&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;br /&gt;EOT&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We link it to the default Nginx configuration file, pasting those lines below the &lt;code&gt;listen&lt;/code&gt; directive in &lt;code&gt;/etc/nginx/conf.d/default.conf&lt;/code&gt;:&lt;/p&gt;
+&lt;pre class=&quot;language-nginx&quot;&gt;&lt;code class=&quot;language-nginx&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# Let&#39;s Encrypt webroot&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;token directive&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;include&lt;/span&gt; letsencrypt-webroot&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Then we check if everything is sound.&lt;/p&gt;
+&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;nginx &lt;span class=&quot;token parameter variable&quot;&gt;-t&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Finally, if we get no warning or errors, we reload the configuration to apply the last changes.&lt;/p&gt;
+&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;nginx &lt;span class=&quot;token parameter variable&quot;&gt;-s&lt;/span&gt; reload&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;Certificate generation&lt;/h2&gt;
+&lt;p&gt;Now that we have configured &lt;a href=&quot;http://acme.sh/&quot;&gt;acme.sh&lt;/a&gt; &amp;amp; Nginx we can finally issue our certificates. We&#39;ll validate them against two domains, the main one and the one dedicated to the sandbox.&lt;/p&gt;
+&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;acme.sh &lt;span class=&quot;token parameter variable&quot;&gt;--issue&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-d&lt;/span&gt; your-main-domain.com &lt;span class=&quot;token parameter variable&quot;&gt;-d&lt;/span&gt; your-sandbox-domain.com &lt;span class=&quot;token parameter variable&quot;&gt;-w&lt;/span&gt; /var/www/le_root/&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This command should produce the following output.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[Fri 02 Dec 2022 09:23:23 AM CET] Using stage ACME_DIRECTORY: https://acme-staging.api.letsencrypt.org/directory
+[Fri 02 Dec 2022 09:23:23 AM CET] Creating domain key
+[Fri 02 Dec 2022 09:23:23 AM CET] The domain key is here: /root/acme/.acme.sh/your-main-domain.com/your-main-domain.com.key
+[Fri 02 Dec 2022 09:23:23 AM CET] Single domain=&#39;your-main-domain.com&#39;
+[Fri 02 Dec 2022 09:23:24 AM CET] Getting domain auth token for each domain
+[Fri 02 Dec 2022 09:23:24 AM CET] Getting webroot for domain=&#39;your-main-domain.com&#39;
+[Fri 02 Dec 2022 09:23:25 AM CET] Getting new-authz for domain=&#39;your-main-domain.com&#39;
+[Fri 02 Dec 2022 09:23:25 AM CET] The new-authz request is ok.
+[Fri 02 Dec 2022 09:23:26 AM CET] Verifying:your-main-domain.com
+[Fri 02 Dec 2022 09:23:27 AM CET] Success
+[Fri 02 Dec 2022 09:23:27 AM CET] Verify finished, start to sign.
+[Fri 02 Dec 2022 09:23:27 AM CET] Cert success.
+-----BEGIN CERTIFICATE-----
+...
+-----END CERTIFICATE-----
+[Fri 02 Dec 2022 09:23:28 AM CET] Your cert is in  /root/acme/.acme.sh/your-main-domain.com/your-main-domain.com.cer 
+[Fri 02 Dec 2022 09:23:28 AM CET] Your cert key is in  /root/acme/.acme.sh/your-main-domain.com/your-main-domain.com.key 
+[Fri 02 Dec 2022 09:23:28 AM CET] The intermediate CA cert is in  /root/acme/.acme.sh/your-main-domain.com/ca.cer 
+[Fri 02 Dec 2022 09:23:28 AM CET] And the full chain certs is there:  /root/acme/.acme.sh/your-main-domain.com/fullchain.cer 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;After retrieving the certificates we will now install them in their proper directory. We&#39;ll also specify the command to be run for reloading Nginx after the certificates auto-renewal.&lt;/p&gt;
+&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;acme.sh --install-cert &lt;span class=&quot;token parameter variable&quot;&gt;-d&lt;/span&gt; your-main-domain.com &lt;span class=&quot;token parameter variable&quot;&gt;-d&lt;/span&gt; your-sandbox-domain.com &lt;span class=&quot;token punctuation&quot;&gt;&#92;&lt;/span&gt;&lt;br /&gt;--key-file /etc/ssl/lets-encrypt/your-main-domain.com/key &lt;span class=&quot;token punctuation&quot;&gt;&#92;&lt;/span&gt;&lt;br /&gt;--fullchain-file /etc/ssl/lets-encrypt/your-main-domain.com/cert &lt;span class=&quot;token punctuation&quot;&gt;&#92;&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;token parameter variable&quot;&gt;--reloadcmd&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;systemctl reload nginx.service&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This command should produce the following output.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[Fri 02 Dec 2022 09:25:38 AM CET] Installing key to:/etc/ssl/lets-encrypt/your-main-domain.com/key
+[Fri 02 Dec 2022 09:25:38 AM CET] Installing full chain to:/etc/ssl/lets-encrypt/your-main-domain.com/cert
+[Fri 02 Dec 2022 09:25:38 AM CET] Run reload cmd: systemctl reload nginx.service
+[Fri 02 Dec 2022 09:25:38 AM CET] Reload success
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;Going forward&lt;/h2&gt;
+&lt;p&gt;Now you just have to continue the installation process described in &lt;a href=&quot;https://docs.cryptpad.org/en/admin_guide/installation.html#install-and-configure-nginx&quot;&gt;the administrator guide&lt;/a&gt;, copying the example configuration file provided and edit it to match your configuration.&lt;/p&gt;
+&lt;h2&gt;Summary&lt;/h2&gt;
+&lt;p&gt;It&#39;s done! In this tutorial we&#39;ve seen how to install &lt;a href=&quot;http://acme.sh/&quot;&gt;acme.sh&lt;/a&gt;, adapt Nginx configuration to handle TLS certificates generation and what are the next steps going forward. Thank you very much for reading this far, and for your interest in CryptPad!&lt;/p&gt;
+&lt;p&gt;In case of need, don&#39;t hesitate to join the &lt;a href=&quot;https://forum.cryptpad.org/&quot;&gt;community forum&lt;/a&gt; or the &lt;a href=&quot;https://matrix.to/#/#cryptpad:matrix.xwiki.com&quot;&gt;Matrix space&lt;/a&gt;. You can also follow CryptPad on the fediverse with the &lt;a href=&quot;https://fosstodon.org/@cryptpad&quot;&gt;official Mastodon account&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Have a great day!&lt;/p&gt;
+</content>
+    <category term="tutorials" scheme="https://blog.cryptpad.org/tags/tutorials/"/>
+    <category term="client" scheme="https://blog.cryptpad.org/tags/client/"/>
+    <category term="security" scheme="https://blog.cryptpad.org/tags/security/"/>
   </entry>
   <entry>
     <title>Summer 2023 status - part 2</title>
@@ -3774,7 +3983,7 @@ We still plan to &lt;em&gt;deploy on Tuesdays&lt;/em&gt;, since it&#39;s as earl
 Others might take stretch to three weeks or a full month, but we&#39;ll do our best not to take any longer than that.
 We try to be as transparent as possible with our plans, and so users should expect each release to also specify the projected date for the following release.&lt;/p&gt;
 &lt;h2&gt;What&#39;s coming next...&lt;/h2&gt;
-&lt;p&gt;In the last year, we tried to find a balance between improving user security through the use of our &lt;a href=&quot;https://blog.cryptpad.org/2018/02/23/One-year-of-biweekly-releases/2017/08/30/CryptPad-s-new-Secure-Cross-Domain-Iframe/&quot;&gt;sandboxing techniques&lt;/a&gt;, and implementing the productivity features necessary for people to consider the security improvements an &lt;em&gt;added bonus&lt;/em&gt; rather than an impractical ideology.
+&lt;p&gt;In the last year, we tried to find a balance between improving user security through the use of our &lt;a href=&quot;https://blog.cryptpad.org/2017/08/30/CryptPad-s-new-Secure-Cross-Domain-Iframe/&quot;&gt;sandboxing techniques&lt;/a&gt;, and implementing the productivity features necessary for people to consider the security improvements an &lt;em&gt;added bonus&lt;/em&gt; rather than an impractical ideology.
 The core of our philosophy is that &lt;em&gt;security&lt;/em&gt; and &lt;em&gt;ease of use&lt;/em&gt; must be packaged together in order for tools like CryptPad to benefit users.&lt;/p&gt;
 &lt;p&gt;While CryptPad is considerably more than a &lt;em&gt;proof-of-concept&lt;/em&gt;, we don&#39;t consider it anywhere close to being finished.
 As heavy users of CryptPad ourselves, we are aware of its rough edges.
@@ -3869,7 +4078,7 @@ can be seen on this blog because it is using the &lt;a href=&quot;https://github
 &lt;/blockquote&gt;
 &lt;p&gt;CryptPad was born on Halloween 2014, at that time it was a skunkworks project inside of XWiki SAS. The UI was hidious green and white and the only feature was the CKEditor based pad. We have come a long way.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/cryptpad_old_mainpage.png&quot; alt=&quot;Old CryptPad Main Page&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;As was mentioned in &lt;a href=&quot;https://blog.cryptpad.org/2017/08/18/CryptPad-s-New-Direction/2017/06/02/Building-mutually-beneficial-relationships/&quot;&gt;Building Mututally Beneficial Relationships&lt;/a&gt;, CryptPad cannot ever be great without people developing the software as their daily job. We have been able to develop this project with the generous support of &lt;a href=&quot;http://www.bpifrance.fr/&quot;&gt;BPI France&lt;/a&gt; and the &lt;a href=&quot;http://ng.open-paas.org/&quot;&gt;OpenPaaS::NG&lt;/a&gt; but that support only finances a small team and it will not continue indefinitely.&lt;/p&gt;
+&lt;p&gt;As was mentioned in &lt;a href=&quot;https://blog.cryptpad.org/2017/06/02/Building-mutually-beneficial-relationships/&quot;&gt;Building Mututally Beneficial Relationships&lt;/a&gt;, CryptPad cannot ever be great without people developing the software as their daily job. We have been able to develop this project with the generous support of &lt;a href=&quot;http://www.bpifrance.fr/&quot;&gt;BPI France&lt;/a&gt; and the &lt;a href=&quot;http://ng.open-paas.org/&quot;&gt;OpenPaaS::NG&lt;/a&gt; but that support only finances a small team and it will not continue indefinitely.&lt;/p&gt;
 &lt;p&gt;Starting with this release, we are adopting a new look and a reinforced dedication to making a quality product for people whose time is valuable. We&#39;re starting this by upgrading the logo and the informational pages.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/cryptpad_new_mainpage.png&quot; alt=&quot;New CryptPad Main Page&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;Our lovable fist logo was created one night by grabbing a screen shot of an ascii generator. It was a time when I was racing to get &lt;em&gt;something&lt;/em&gt; working to prove that CryptPad was an idea worth pursuing. Now times have changed. CryptPad is finally something that I&#39;m starting to feel proud of, and the logo represented the last reminents of a time when everything was a rush and quality was an afterthought.&lt;/p&gt;
@@ -4279,12 +4488,10 @@ make CryptPad fit your needs better.&lt;/p&gt;
 &lt;h2&gt;For Admins&lt;/h2&gt;
 &lt;p&gt;If you&#39;re hosting your own instance of CryptPad, there are a few things you&#39;ll need to do when you upgrade to Hodag. The limits code is still somewhat of a mess and while we get it tied down, you&#39;ll need to do a bit of work to disable it.&lt;/p&gt;
 &lt;p&gt;First there is a serverside per-user storage limit defined in &lt;code&gt;config.js&lt;/code&gt; You&#39;ll want to set this to a big number like so:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;defaultStorageLimit: Number.MAX_SAFE_INTEGER
-&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;defaultStorageLimit: Number.MAX_SAFE_INTEGER&lt;/p&gt;
 &lt;p&gt;Then there is &lt;code&gt;customize/application_config.js&lt;/code&gt;. If you&#39;re not familiar with &lt;code&gt;/customize/&lt;/code&gt;, you can create this directory and then copy &lt;code&gt;application_config.js&lt;/code&gt; over from the &lt;code&gt;/customize.dist/&lt;/code&gt; directory so it will not be overwritten. The server will try looking in &lt;code&gt;/customize/&lt;/code&gt; first.&lt;/p&gt;
 &lt;p&gt;Inside of &lt;code&gt;application_config.js&lt;/code&gt; you&#39;ll need to update the &lt;code&gt;enablePinLimit&lt;/code&gt; line like so:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;enablePinLimit = false;
-&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;enablePinLimit = false;&lt;/p&gt;
 &lt;p&gt;If you&#39;re using your own CryptPad installation in a business context, please consider contacting &lt;a href=&quot;mailto:sales@cryptpad.fr&quot;&gt;sales@cryptpad.fr&lt;/a&gt; for an on-premises support contract. You&#39;ll get help with upgrades and early information about security issues.&lt;/p&gt;
 &lt;h2&gt;What&#39;s Next&lt;/h2&gt;
 &lt;p&gt;In the coming months, we&#39;re hoping to roll out text coloring based on the authors of the document as well as file upload for PDF and image embedding. Eventually we plan to add Zero Knowledge spreadsheets and workgroups for team collaboration.&lt;/p&gt;
