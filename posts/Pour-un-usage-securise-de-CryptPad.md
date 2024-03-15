@@ -1,6 +1,6 @@
 ---
 title: Pour un usage sécurisé de CryptPad
-date: 2024-03-15
+date: 2024-03-18
 author:
   - Mathilde Grünig
   - Theo von Arx
