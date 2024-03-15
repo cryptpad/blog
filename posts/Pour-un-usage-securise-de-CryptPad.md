@@ -6,7 +6,7 @@ author:
   - Theo von Arx
   - Fabrice Mouhartem
 lang: fr
-summary: Nous vous présentons dans quels scénarios CryptPad est sécurisé, et partageons des idées d'actions concrètes pour un usage de CryptPad respectant votre confidentialité.
+summary: 🇫🇷 Post in French - Nous vous présentons dans quels scénarios CryptPad est sécurisé, et partageons des idées d'actions concrètes pour un usage de CryptPad respectant votre confidentialité.
 cover: /images/Paris_Pont_des_Arts_--_2014_--_1422.jpg
 tags:
   - security
