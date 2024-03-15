@@ -15,7 +15,7 @@
     <link href="https://blog.cryptpad.org/2024/03/15/Pour-un-usage-securise-de-CryptPad/"/>
     <updated>2024-03-15T00:00:00Z</updated>
     <id>https://blog.cryptpad.org/2024/03/15/Pour-un-usage-securise-de-CryptPad/</id>
-    <summary xml:lang="en" type="html">Nous vous présentons dans quels scénarios CryptPad est sécurisé, et partageons des idées d&#39;actions concrètes pour un usage de CryptPad respectant votre confidentialité.</summary>
+    <summary xml:lang="en" type="html">🇫🇷 Post in French - Nous vous présentons dans quels scénarios CryptPad est sécurisé, et partageons des idées d&#39;actions concrètes pour un usage de CryptPad respectant votre confidentialité.</summary>
     <content xml:lang="en" type="html">&lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/Paris_Pont_des_Arts_--_2014_--_1422.jpg&quot; alt=&quot;Cadenas d&#39;amour sur le Pont des Arts, Paris, France (2014)&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;Photo Dietmar Rabich &lt;a href=&quot;https://commons.wikimedia.org/wiki/File:Paris,_Pont_des_Arts_--_2014_--_1422.jpg&quot;&gt;Wikimedia Commons CC-BY-SA&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Ce billet de blog est une traduction francophone d&#39;&lt;a href=&quot;https://blog.cryptpad.org/2024/03/14/Most-Secure-CryptPad-Usage/&quot;&gt;une première version originale en anglais&lt;/a&gt; rédigée par Théo Von Arx et Fabrice Mouhartem.&lt;/p&gt;
@@ -1265,110 +1265,6 @@ During this event, Cryptpad was present on a stand that was quite well-received 
     <category term="status update" scheme="https://blog.cryptpad.org/tags/status update/"/>
     <category term="team" scheme="https://blog.cryptpad.org/tags/team/"/>
     <category term="release" scheme="https://blog.cryptpad.org/tags/release/"/>
-  </entry>
-  <entry>
-    <title>How to setup second factor authentication (2FA)</title>
-    <link href="https://blog.cryptpad.org/2023/09/25/tutorial-2fa/"/>
-    <updated>2023-09-25T00:00:00Z</updated>
-    <id>https://blog.cryptpad.org/2023/09/25/tutorial-2fa/</id>
-    <summary xml:lang="en" type="html">A complete tutorial about second factor authentication (2FA) and CryptPad</summary>
-    <content xml:lang="en" type="html">&lt;p&gt;Hello!&lt;/p&gt;
-&lt;p&gt;This is the second article for the tutorials series on the CryptPad blog! 📚&lt;/p&gt;
-&lt;p&gt;Today we&#39;ll be taking a look at a new CryptPad 5.4 feature for our users: second factor authentication (2FA).&lt;/p&gt;
-&lt;h2&gt;Prerequisites&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;You have a CryptPad account on an instance running at least version 5.4.0&lt;/li&gt;
-&lt;li&gt;You have
-Unless stated otherwise, all commands listed in this article are meant to be run as superuser, &lt;code&gt;root&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;You have two different domains available, it&#39;s a strong requirement &lt;a href=&quot;https://docs.cryptpad.org/en/admin_guide/installation.html#admin-domain-config&quot;&gt;explained in the documentation&lt;/a&gt;. You know how to setup their DNS zone file and have added proper entries for both IPv4 &amp;amp; IPv6.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;Dependencies&lt;/h2&gt;
-&lt;p&gt;As Nginx is a basic requirement for CryptPad we&#39;ll assume that &lt;a href=&quot;https://nginx.org/en/linux_packages.html#Debian&quot;&gt;you have already installed it&lt;/a&gt;. However, we still need a way to generate our TLS certificates.&lt;/p&gt;
-&lt;p&gt;Luckily, since 2015 and thanks to &lt;a href=&quot;https://letsencrypt.org/&quot;&gt;Let&#39;s Encrypt&lt;/a&gt;, something that was once expensive and kind of a hassle to setup has been greatly simplified. Now you can get TLS certificates for free and provision them in a super simple way thanks to a variety of clients available. We will focus on &lt;a href=&quot;https://github.com/acmesh-official/acme.sh&quot;&gt;acme.sh&lt;/a&gt;, &lt;em&gt;a pure Unix shell script implementing ACME client protocol&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;Let&#39;s start by cloning the git repository.&lt;/p&gt;
-&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; clone https://github.com/acmesh-official/acme.sh.git&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Then move inside the new folder and install it by specifying an email address for the account registration:&lt;/p&gt;
-&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token builtin class-name&quot;&gt;cd&lt;/span&gt; ./acme.sh&lt;br /&gt;./acme.sh &lt;span class=&quot;token parameter variable&quot;&gt;--install&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-m&lt;/span&gt; my@example.com&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;This command should produce the following output.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;[Fri 02 Dec 2022 09:13:23 AM CET] It is recommended to install socat first.
-[Fri 02 Dec 2022 09:13:23 AM CET] We use socat for standalone server if you use standalone mode.
-[Fri 02 Dec 2022 09:13:23 AM CET] If you don&#39;t use standalone mode, just ignore this warning.
-[Fri 02 Dec 2022 09:13:23 AM CET] Installing to /root/.acme.sh
-[Fri 02 Dec 2022 09:13:23 AM CET] Installed to /root/.acme.sh/acme.sh
-[Fri 02 Dec 2022 09:13:23 AM CET] Installing alias to &#39;/root/.bashrc&#39;
-[Fri 02 Dec 2022 09:13:23 AM CET] OK, Close and reopen your terminal to start using acme.sh
-[Fri 02 Dec 2022 09:13:23 AM CET] Installing cron job
-38 0 * * * &amp;quot;/root/.acme.sh&amp;quot;/acme.sh --cron --home &amp;quot;/root/.acme.sh&amp;quot; &amp;gt; /dev/null
-[Fri 02 Dec 2022 09:13:23 AM CET] Good, bash is found, so change the shebang to use bash as preferred.
-[Fri 02 Dec 2022 09:13:24 AM CET] OK
-[Fri 02 Dec 2022 09:13:24 AM CET] Install success!
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;You can safely ignore the socat warning since we won&#39;t use the standalone mode.&lt;/p&gt;
-&lt;h2&gt;Configuration&lt;/h2&gt;
-&lt;h3&gt;&lt;a href=&quot;http://acme.sh/&quot;&gt;acme.sh&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;It&#39;s a great ACME client because of its simplicity and the fact that it just works and then gets out of your way.&lt;/p&gt;
-&lt;p&gt;The maintainers of &lt;a href=&quot;http://acme.sh/&quot;&gt;acme.sh&lt;/a&gt; have a sponsored partnership with ZeroSSL to set up their Certificate Authority (CA) as &lt;a href=&quot;http://acme.sh/&quot;&gt;acme.sh&lt;/a&gt;&#39;s default. But ZeroSSL free services can be unreliable. That&#39;s why we prefer Let&#39;s Encrypt, which is more reliable and also operated by a nonprofit organization.&lt;/p&gt;
-&lt;p&gt;We need to change a single parameter to switch the CA from ZeroSSL to Let&#39;s Encrypt.
-We do this with the following command:&lt;/p&gt;
-&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;acme.sh --set-default-ca &lt;span class=&quot;token parameter variable&quot;&gt;--server&lt;/span&gt; letsencrypt&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Which produces this result:&lt;/p&gt;
-&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;Fri 02 Dec &lt;span class=&quot;token number&quot;&gt;2022&lt;/span&gt; 09:22:27 AM CET&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; Changed default CA to: https://acme-v02.api.letsencrypt.org/directory&lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;Nginx&lt;/h3&gt;
-&lt;p&gt;Now we can configure Nginx!&lt;/p&gt;
-&lt;p&gt;First we create a directory where the ACME token will be put for authenticating before certificates retrieval.&lt;/p&gt;
-&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;mkdir&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-p&lt;/span&gt; /var/www/le_root/.well-known/acme-challenge&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Then we create a directory where the certificates will be stored when installed.&lt;/p&gt;
-&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;mkdir&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-p&lt;/span&gt; /etc/ssl/lets-encrypt/your-main-domain.com&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;We also need to create an Nginx configuration file for &lt;a href=&quot;http://acme.sh/&quot;&gt;acme.sh&lt;/a&gt; webroot.&lt;/p&gt;
-&lt;pre class=&quot;language-nginx&quot;&gt;&lt;code class=&quot;language-nginx&quot;&gt;&lt;span class=&quot;token directive&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;cat&lt;/span&gt; &amp;lt;&amp;lt;EOT &gt;&gt; /etc/nginx/letsencrypt-webroot&lt;br /&gt;location ^~ /.well-known/acme-challenge&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br /&gt;    &lt;span class=&quot;token directive&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;allow&lt;/span&gt; all&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br /&gt;    &lt;span class=&quot;token directive&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;expires&lt;/span&gt; -1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br /&gt;    &lt;span class=&quot;token directive&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;add_header&lt;/span&gt; Cache-Control no-store&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br /&gt;    &lt;span class=&quot;token directive&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;alias&lt;/span&gt; /var/www/le_root/.well-known/acme-challenge/&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;br /&gt;EOT&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;We link it to the default Nginx configuration file, pasting those lines below the &lt;code&gt;listen&lt;/code&gt; directive in &lt;code&gt;/etc/nginx/conf.d/default.conf&lt;/code&gt;:&lt;/p&gt;
-&lt;pre class=&quot;language-nginx&quot;&gt;&lt;code class=&quot;language-nginx&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# Let&#39;s Encrypt webroot&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;token directive&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;include&lt;/span&gt; letsencrypt-webroot&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Then we check if everything is sound.&lt;/p&gt;
-&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;nginx &lt;span class=&quot;token parameter variable&quot;&gt;-t&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Finally, if we get no warning or errors, we reload the configuration to apply the last changes.&lt;/p&gt;
-&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;nginx &lt;span class=&quot;token parameter variable&quot;&gt;-s&lt;/span&gt; reload&lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;Certificate generation&lt;/h2&gt;
-&lt;p&gt;Now that we have configured &lt;a href=&quot;http://acme.sh/&quot;&gt;acme.sh&lt;/a&gt; &amp;amp; Nginx we can finally issue our certificates. We&#39;ll validate them against two domains, the main one and the one dedicated to the sandbox.&lt;/p&gt;
-&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;acme.sh &lt;span class=&quot;token parameter variable&quot;&gt;--issue&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-d&lt;/span&gt; your-main-domain.com &lt;span class=&quot;token parameter variable&quot;&gt;-d&lt;/span&gt; your-sandbox-domain.com &lt;span class=&quot;token parameter variable&quot;&gt;-w&lt;/span&gt; /var/www/le_root/&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;This command should produce the following output.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;[Fri 02 Dec 2022 09:23:23 AM CET] Using stage ACME_DIRECTORY: https://acme-staging.api.letsencrypt.org/directory
-[Fri 02 Dec 2022 09:23:23 AM CET] Creating domain key
-[Fri 02 Dec 2022 09:23:23 AM CET] The domain key is here: /root/acme/.acme.sh/your-main-domain.com/your-main-domain.com.key
-[Fri 02 Dec 2022 09:23:23 AM CET] Single domain=&#39;your-main-domain.com&#39;
-[Fri 02 Dec 2022 09:23:24 AM CET] Getting domain auth token for each domain
-[Fri 02 Dec 2022 09:23:24 AM CET] Getting webroot for domain=&#39;your-main-domain.com&#39;
-[Fri 02 Dec 2022 09:23:25 AM CET] Getting new-authz for domain=&#39;your-main-domain.com&#39;
-[Fri 02 Dec 2022 09:23:25 AM CET] The new-authz request is ok.
-[Fri 02 Dec 2022 09:23:26 AM CET] Verifying:your-main-domain.com
-[Fri 02 Dec 2022 09:23:27 AM CET] Success
-[Fri 02 Dec 2022 09:23:27 AM CET] Verify finished, start to sign.
-[Fri 02 Dec 2022 09:23:27 AM CET] Cert success.
------BEGIN CERTIFICATE-----
-...
------END CERTIFICATE-----
-[Fri 02 Dec 2022 09:23:28 AM CET] Your cert is in  /root/acme/.acme.sh/your-main-domain.com/your-main-domain.com.cer 
-[Fri 02 Dec 2022 09:23:28 AM CET] Your cert key is in  /root/acme/.acme.sh/your-main-domain.com/your-main-domain.com.key 
-[Fri 02 Dec 2022 09:23:28 AM CET] The intermediate CA cert is in  /root/acme/.acme.sh/your-main-domain.com/ca.cer 
-[Fri 02 Dec 2022 09:23:28 AM CET] And the full chain certs is there:  /root/acme/.acme.sh/your-main-domain.com/fullchain.cer 
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;After retrieving the certificates we will now install them in their proper directory. We&#39;ll also specify the command to be run for reloading Nginx after the certificates auto-renewal.&lt;/p&gt;
-&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;acme.sh --install-cert &lt;span class=&quot;token parameter variable&quot;&gt;-d&lt;/span&gt; your-main-domain.com &lt;span class=&quot;token parameter variable&quot;&gt;-d&lt;/span&gt; your-sandbox-domain.com &lt;span class=&quot;token punctuation&quot;&gt;&#92;&lt;/span&gt;&lt;br /&gt;--key-file /etc/ssl/lets-encrypt/your-main-domain.com/key &lt;span class=&quot;token punctuation&quot;&gt;&#92;&lt;/span&gt;&lt;br /&gt;--fullchain-file /etc/ssl/lets-encrypt/your-main-domain.com/cert &lt;span class=&quot;token punctuation&quot;&gt;&#92;&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;token parameter variable&quot;&gt;--reloadcmd&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;systemctl reload nginx.service&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;This command should produce the following output.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;[Fri 02 Dec 2022 09:25:38 AM CET] Installing key to:/etc/ssl/lets-encrypt/your-main-domain.com/key
-[Fri 02 Dec 2022 09:25:38 AM CET] Installing full chain to:/etc/ssl/lets-encrypt/your-main-domain.com/cert
-[Fri 02 Dec 2022 09:25:38 AM CET] Run reload cmd: systemctl reload nginx.service
-[Fri 02 Dec 2022 09:25:38 AM CET] Reload success
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;Going forward&lt;/h2&gt;
-&lt;p&gt;Now you just have to continue the installation process described in &lt;a href=&quot;https://docs.cryptpad.org/en/admin_guide/installation.html#install-and-configure-nginx&quot;&gt;the administrator guide&lt;/a&gt;, copying the example configuration file provided and edit it to match your configuration.&lt;/p&gt;
-&lt;h2&gt;Summary&lt;/h2&gt;
-&lt;p&gt;It&#39;s done! In this tutorial we&#39;ve seen how to install &lt;a href=&quot;http://acme.sh/&quot;&gt;acme.sh&lt;/a&gt;, adapt Nginx configuration to handle TLS certificates generation and what are the next steps going forward. Thank you very much for reading this far, and for your interest in CryptPad!&lt;/p&gt;
-&lt;p&gt;In case of need, don&#39;t hesitate to join the &lt;a href=&quot;https://forum.cryptpad.org/&quot;&gt;community forum&lt;/a&gt; or the &lt;a href=&quot;https://matrix.to/#/#cryptpad:matrix.xwiki.com&quot;&gt;Matrix space&lt;/a&gt;. You can also follow CryptPad on the fediverse with the &lt;a href=&quot;https://fosstodon.org/@cryptpad&quot;&gt;official Mastodon account&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Have a great day!&lt;/p&gt;
-</content>
-    <category term="tutorials" scheme="https://blog.cryptpad.org/tags/tutorials/"/>
-    <category term="client" scheme="https://blog.cryptpad.org/tags/client/"/>
-    <category term="security" scheme="https://blog.cryptpad.org/tags/security/"/>
   </entry>
   <entry>
     <title>Summer 2023 status - part 2</title>
