@@ -138,6 +138,7 @@ CryptPad est conçu pour être une suite bureautique générale et facile à uti
 À propos de CryptPad :
 
 - La [section sécurité](https://docs.cryptpad.org/fr/user_guide/security.html) dans notre guide de l'utilisateur·ice explique l'utilisation des fonctionnalités de sécurité de CryptPad.
+- Le [Guide d'Autodéfence Numérique](https://guide.boum.org/préface-à-cette-édition.html)
 - La conférence [« Vivre à la périphérie avec CryptPad : confidentialité, calcul distribué et architectures de résilience »](https://peertube.xwiki.com/w/jAP48FTXpi9CpJnb8SSVDh) (en anglais) est une explication détaillée des concepts derrière CryptPad.
 - Nous avons publié un [livre blanc](https://blog.cryptpad.org/2023/02/02/Whitepaper/) (en anglais) décrivant les mécanismes de sécurité et la cryptographie utilisés dans CryptPad. Ce document est destiné aux personnes qui sont déjà familières avec la cryptographie.
 
