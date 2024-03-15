@@ -21,7 +21,7 @@ tags:
 
 Photo Dietmar Rabich [Wikimedia Commons CC-BY-SA](https://commons.wikimedia.org/wiki/File:Paris,_Pont_des_Arts_--_2014_--_1422.jpg)
 
-Ce billet de blog est une traduction francophone d'une première version originale en anglais rédigée par Théo Von Arx et Fabrice Mouhartem.
+Ce billet de blog est une traduction francophone d'[une première version originale en anglais](https://blog.cryptpad.org/2024/03/14/Most-Secure-CryptPad-Usage/) rédigée par Théo Von Arx et Fabrice Mouhartem.
 
 Vous êtes à la recherche d'un outil de collaboration axé sur la vie privée ? Eh bien, vous l'avez déjà trouvé ! Mais que signifie réellement « vie privée » dans ce contexte ? Et comment est-il techniquement appliqué ? Il y a-t-il des précautions supplémentaires nécessaires pour une utilisation extra-sûre de CryptPad ?
 
@@ -138,13 +138,13 @@ CryptPad est conçu pour être une suite bureautique générale et facile à uti
 À propos de CryptPad :
 
 - La [section sécurité](https://docs.cryptpad.org/fr/user_guide/security.html) dans notre guide de l'utilisateur·ice explique l'utilisation des fonctionnalités de sécurité de CryptPad.
-- Le [Guide d'Autodéfence Numérique](https://guide.boum.org/préface-à-cette-édition.html)
 - La conférence [« Vivre à la périphérie avec CryptPad : confidentialité, calcul distribué et architectures de résilience »](https://peertube.xwiki.com/w/jAP48FTXpi9CpJnb8SSVDh) (en anglais) est une explication détaillée des concepts derrière CryptPad.
 - Nous avons publié un [livre blanc](https://blog.cryptpad.org/2023/02/02/Whitepaper/) (en anglais) décrivant les mécanismes de sécurité et la cryptographie utilisés dans CryptPad. Ce document est destiné aux personnes qui sont déjà familières avec la cryptographie.
 
 Plus général :
 
-- Le [guide d'autodéfense de surveillance](https://ssd.eff.org/) par l'Electronic Frontier Foundation (EFF)
+- Le [Guide d'Autodéfence Numérique](https://guide.boum.org/préface-à-cette-édition.html)
+- Le [guide d'autodéfense de surveillance](https://ssd.eff.org/fr/) par l'Electronic Frontier Foundation (EFF)
 
 ## 🙋 Questions ?
 
