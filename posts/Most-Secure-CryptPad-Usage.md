@@ -20,6 +20,8 @@ tags:
 
 Photo Dietmar Rabich [Wikimedia Commons CC-BY-SA](https://commons.wikimedia.org/wiki/File:Paris,_Pont_des_Arts_--_2014_--_1422.jpg)
 
+A [French translated version](https://blog.cryptpad.org/2024/03/18/Pour-un-usage-securise-de-CrytpPad/) is also available.
+
 You're looking for a privacy-focused collaboration tool?
 Well, you already found it!
 But what does “privacy” in this context actually mean?
