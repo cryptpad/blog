@@ -50,7 +50,7 @@
         <section class="header">
             <h1>CryptPad - use it, love ❤️ it, support it</h1>
             <p class="meta">
-                23 May 2017
+                May 23, 2017
                 
                     
                         - Caleb James DeLisle
@@ -100,12 +100,10 @@
 <h2>For Admins</h2>
 <p>If you're hosting your own instance of CryptPad, there are a few things you'll need to do when you upgrade to Hodag. The limits code is still somewhat of a mess and while we get it tied down, you'll need to do a bit of work to disable it.</p>
 <p>First there is a serverside per-user storage limit defined in <code>config.js</code> You'll want to set this to a big number like so:</p>
-<pre><code>defaultStorageLimit: Number.MAX_SAFE_INTEGER
-</code></pre>
+<p>defaultStorageLimit: Number.MAX_SAFE_INTEGER</p>
 <p>Then there is <code>customize/application_config.js</code>. If you're not familiar with <code>/customize/</code>, you can create this directory and then copy <code>application_config.js</code> over from the <code>/customize.dist/</code> directory so it will not be overwritten. The server will try looking in <code>/customize/</code> first.</p>
 <p>Inside of <code>application_config.js</code> you'll need to update the <code>enablePinLimit</code> line like so:</p>
-<pre><code>enablePinLimit = false;
-</code></pre>
+<p>enablePinLimit = false;</p>
 <p>If you're using your own CryptPad installation in a business context, please consider contacting <a href="mailto:sales@cryptpad.fr">sales@cryptpad.fr</a> for an on-premises support contract. You'll get help with upgrades and early information about security issues.</p>
 <h2>What's Next</h2>
 <p>In the coming months, we're hoping to roll out text coloring based on the authors of the document as well as file upload for PDF and image embedding. Eventually we plan to add Zero Knowledge spreadsheets and workgroups for team collaboration.</p>
@@ -135,13 +133,16 @@
         <a class="tag" href="/tags/funding">funding</a><span class="count">16</span></li>
 
     <li>
-        <a class="tag" href="/tags/security">security</a><span class="count">11</span></li>
+        <a class="tag" href="/tags/security">security</a><span class="count">12</span></li>
 
     <li>
         <a class="tag" href="/tags/roadmap">roadmap</a><span class="count">10</span></li>
 
     <li>
-        <a class="tag" href="/tags/ngi">ngi</a><span class="count">9</span></li>
+        <a class="tag" href="/tags/ngi">ngi</a><span class="count">10</span></li>
+
+    <li>
+        <a class="tag" href="/tags/research">research</a><span class="count">9</span></li>
 
     <li>
         <a class="tag" href="/tags/team">team</a><span class="count">9</span></li>
@@ -150,13 +151,10 @@
         <a class="tag" href="/tags/donate">donate</a><span class="count">8</span></li>
 
     <li>
-        <a class="tag" href="/tags/research">research</a><span class="count">8</span></li>
-
-    <li>
         <a class="tag" href="/tags/open-collective">open collective</a><span class="count">7</span></li>
 
     <li>
-        <a class="tag" href="/tags/open-source">open-source</a><span class="count">6</span></li>
+        <a class="tag" href="/tags/privacy">privacy</a><span class="count">7</span></li>
 
 </ul>
         </section>
