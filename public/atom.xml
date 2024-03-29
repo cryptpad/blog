@@ -15,7 +15,7 @@
     <link href="https://blog.cryptpad.org/2024/03/29/status-2024-03/"/>
     <updated>2024-03-29T00:00:00Z</updated>
     <id>https://blog.cryptpad.org/2024/03/29/status-2024-03/</id>
-    <summary xml:lang="en" type="html">Spring 2024 release (2023.3.0)</summary>
+    <summary xml:lang="en" type="html">Spring 2024 release (2024.3.0)</summary>
     <content xml:lang="en" type="html">&lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/spring-2024-custom-instance.png&quot; alt=&quot;screenshot of customized CryptPad instance&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;💐 CryptPad Spring release (2024.3.0)&lt;/h2&gt;
 &lt;p&gt;At the time of writing the latest CryptPad release is in production on &lt;a href=&quot;http://cryptpad.fr/&quot;&gt;CryptPad.fr&lt;/a&gt; and will soon be tagged on GitHub.&lt;/p&gt;
