@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+
+    <title>March 2024 status | CryptPad Blog</title> 
+    
+
+    
+    
+    <meta property="og:type" content="webpage">
+    <meta property="og:title" content="March 2024 status">
+    <meta property="og:url" content="http://blog.cryptpad.org/2024/03/29/status-2024-03/">
+    <meta property="og:page_name" content="March 2024 status">
+    <meta property="og:locale" content="default">
+    <meta property="og:image" content="http://blog.cryptpad.org/images/spring-2024-custom-instance.png">
+    <meta property="og:description" content="Spring 2024 release (2023.3.0)">
+    <meta name="twitter:card" content="Spring 2024 release (2023.3.0)">
+    <meta name="twitter:title" content="March 2024 status">
+
+
+
+    <link rel="alternate" href="/atom.xml" title="CryptPad Blog" type="application/atom+xml">
+
+    <link rel="icon" href="/theme/favicon.png">
+
+
+</head>
+
+<body>
+    <main class="container">
+        <header>
+            
+    <a href="/" class="back-home">
+        <i class="fa fa-arrow-left" aria-hidden="true"></i> <i class="fa fa-home" aria-hidden="true"></i> Homepage
+    </a>
+
+            <a href="/">
+                <img class="cp-logo" src="/theme/CryptPad_logo.svg" aria-hidden="true" alt="">
+                <h1>CryptPad Blog</h1>
+            </a>
+        </header>
+        <section id="content">
+            
+    <article class="post" lang="en">
+        <section class="header">
+            <h1>March 2024 status</h1>
+            <p class="meta">
+                29 Mar 2024
+                
+                    
+                        
+                        
+                        
+                        -  David Benqué
+                        
+                    
+                
+                    
+                    
+            </p>
+            <div class="article-tags">
+    
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        <ul class="tags" aria-label="Tags">
+        
+            <li><a class="tag" href="/tags/status-update">status update</a></li>
+        
+            <li><a class="tag" href="/tags/release">release</a></li>
+        
+            <li><a class="tag" href="/tags/onlyoffice">onlyoffice</a></li>
+        
+        </ul>
+    
+</div>
+        </section>
+        <h2>💐 CryptPad Spring release (2024.3.0)</h2>
+<p>At the time of writing the latest CryptPad release is in production on <a href="http://CryptPad.fr">CryptPad.fr</a> and will soon be tagged on GitHub.</p>
+<p>This is a major release since it changes the way CryptPad is installed with potential breaking changes for existing instances. Instead of going from <code>5.7.0</code> to <code>6.0.0</code>, we are taking this opportunity to make a change to our version numbering. As CryptPad keeps growing and developing the accumulation of numbers in versions 5.x.x, 6.x.x, … is starting to feel arbitrary. Instead we would like to reflect that CryptPad is an <em>ongoing</em> project being actively maintained and improved for the foreseeable future.
+As a self-hostable service we believe a date-based version is also a benefit for users as it provides a quick way of checking how up-to-date a particular instance is before using it.</p>
+<p>We are moving from semantic versioning (semver e.g. <code>5.7.0</code>) to <a href="https://calver.org/">calendar versioning</a> with each release carrying a date stamp rather than an iteration count. The first of these releases is <code>2024.3.0</code> and we will continue in the
+<code>YYYY.MM.micro</code> format after that. Combined with the quarterly release schedule in place since ~1 year, this means you can expect the following versions of CryptPad this year:</p>
+<ul>
+<li>💐 Spring <code>2024.3.0</code></li>
+<li>🌻 Summer <code>2024.6.0</code></li>
+<li>🍁 Autumn <code>2024.9.0</code></li>
+<li>❄️ Winter <code>2024.12.0</code></li>
+</ul>
+<p>In between these milestones we could issue patch releases if needed for urgent bug fixes or security. These would look like <code>2024.3.1</code>, <code>2024.3.2</code>, etc. Note that this new scheme is still compatible with semver, only it jumps 2018.3 versions from <code>5.7.0</code>
+to <code>2023.3.0</code> in one go.</p>
+<p>Besides these technicalities, there are also some great new features in the 2024 Spring release, mainly aimed at instance administrators:</p>
+<h3>🎛️ Refactored admin panel</h3>
+<p>We have revamped the administration panel which now uses a more streamlined component system. This should make for more consistent and maintainable styles in that section. We have also re-organized the tabs so that important information about the instance (name, description, etc) is presented first.</p>
+<h3>🎨 Easily customize instance logo and accent color</h3>
+<p>It is now possible to add a custom logo to a CryptPad instance from the admin panel. The accent color (used in buttons and many other parts of the CryptPad UI) can also be changed to match the logo or branding.</p>
+<p>We ensure that the color used by default has sufficient contrast with text and background colors in both dark and light themes. Making this customizable will potentially create less accessible color combinations, so we urge administrators to <a href="https://accessibleweb.com/color-contrast-checker/">check color contrast</a> before choosing a new color. We will do our best to monitor how this feature is used and potentially add measures such as a contrast-checker in a future version.</p>
+<h3>🚑🧑‍⚕️ New help-desk system</h3>
+<p>The support system has been completely refactored to make it easier to manage a large history of tickets (serving our own needs on <a href="http://CryptPad.fr">CryptPad.fr</a>). Crucially this new version now includes a new &quot;moderator&quot; role for users that can access the support system without having admin rights on the instance.</p>
+<h3>📦 New external module for OnlyOffice applications</h3>
+<p>As you may know, the Spreadsheet, Document, and Presentation applications are integrations of OnlyOffice editors with CryptPad's end-to-end encrypted real-time collaboration. Until now all 6 versions of OnlyOffice since we started integrating it were included in the CryptPad repository. On <a href="http://CryptPad.fr">CryptPad.fr</a> we need to keep all of these versions to support opening documents that our users may have created a long time ago. For newer instances however, it makes little sense to download 1.7GB of OnlyOffice versions that will never be used.</p>
+<p>With this version we are taking the first step in taking the OnlyOffice builds out of the main CryptPad code-base to their <a href="https://github.com/cryptpad/onlyoffice-builds">own repository</a>. We provide an installation script for instance admins to easily install the apps if they want to. While this is &quot;all 6 historical versions or nothing&quot; for now, it is the first step towards a finer-grained system where each instance only downloads the OnlyOffice version currently in use and any subsequent updates.</p>
+<h2>🔭 up next</h2>
+<ul>
+<li>We have started correcting a few issues with <code>2024.3.0</code> after putting it to the test of production</li>
+<li>We hope to officially release this version next week</li>
+<li>After this we will start planning for the Summer release (<code>2024.6.0</code>)</li>
+<li>We already said this last time but we are closer than <em>ever</em> to wrapping up our two NGI projects AUTH and BLUEPRINTS and to releasing our Cryptography R&amp;D website</li>
+</ul>
+
+    </article>
+
+    <nav class="article-pagination" aria-label="Pagination">
+        
+        
+            <a href="/2024/03/14/Most-Secure-CryptPad-Usage/">Older: <span class="title">The Most Secure Way To Use CryptPad</span></a>
+        
+    </nav>
+
+        </section>
+        
+<section id="top-tags" class="post">
+
+            <h3><i class="fa fa-tags" aria-hidden="true"></i> Top Tags</h3>
+<ul>
+
+    <li>
+        <a class="tag" href="/tags/status-update">status update</a><span class="count">31</span></li>
+
+    <li>
+        <a class="tag" href="/tags/funding">funding</a><span class="count">16</span></li>
+
+    <li>
+        <a class="tag" href="/tags/security">security</a><span class="count">11</span></li>
+
+    <li>
+        <a class="tag" href="/tags/roadmap">roadmap</a><span class="count">10</span></li>
+
+    <li>
+        <a class="tag" href="/tags/ngi">ngi</a><span class="count">9</span></li>
+
+    <li>
+        <a class="tag" href="/tags/team">team</a><span class="count">9</span></li>
+
+    <li>
+        <a class="tag" href="/tags/donate">donate</a><span class="count">8</span></li>
+
+    <li>
+        <a class="tag" href="/tags/research">research</a><span class="count">8</span></li>
+
+    <li>
+        <a class="tag" href="/tags/open-collective">open collective</a><span class="count">7</span></li>
+
+    <li>
+        <a class="tag" href="/tags/open-source">open-source</a><span class="count">6</span></li>
+
+</ul>
+        </section>
+        
+    <section id="social" class="post">
+
+            <h3><i class="fa fa-link" aria-hidden="true"></i> Links</h3>
+<ul>
+    <li>
+        <a href="https://cryptpad.org">
+            <i aria-hidden="true" class="fa fa-globe"></i>Project website
+        </a>
+    </li>
+    <li>
+        <a href="https://opencollective.com/cryptpad/contribute">
+            <i aria-label="OpenCollective" class="fa fa-open-collective"></i>Donate
+        </a>
+    </li>
+</ul>
+<ul>
+    <li>
+        <a href="https://forum.cryptpad.org">
+            <i aria-hidden="true" class="fa fa-bullhorn"></i>Forum
+        </a>
+    </li>
+    <li>
+        <a href="https://matrix.to/#/#cryptpad:matrix.xwiki.com">
+            <i aria-hidden="true" class="fa fa-matrix-org"></i>Chat (Matrix)
+        </a>
+    </li>
+    <li>
+        <a rel="me" href="https://fosstodon.org/@cryptpad">
+            <i aria-hidden="true" class="fa fa-mastodon"></i>Mastodon
+        </a>
+    </li>
+    <li>
+        <a href="https://peertube.xwiki.com/c/cryptpad_channel/videos">
+            <i aria-hidden="true" class="fa fa-peertube"></i>Peertube
+        </a>
+    </li>
+    <li>
+        <a href="https://pixelfed.social/cryptpad_design">
+            <i aria-hidden="true" class="fa fa-pixelfed"></i>Pixelfed
+        </a>
+    </li>
+</ul>
+<ul>
+    <li>
+        <a href="/atom.xml">
+            <i aria-hidden="true" class="fa fa-rss"></i>RSS Feed
+        </a>
+    </li>
+</ul>
+        </section>
+    </main>
+</body>
+
+</html>

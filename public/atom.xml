@@ -4,12 +4,55 @@
   <subtitle>News from the end-to-end encrypted collaboration suite</subtitle>
   <link href="https://blog.cryptpad.org/atom.xml" rel="self"/>
   <link href="https://blog.cryptpad.org"/>
-  <updated>2024-03-14T00:00:00Z</updated>
+  <updated>2024-03-29T00:00:00Z</updated>
   <id>https://blog.cryptpad.org</id>
   <author>
     <name>CryptPad Team</name>
     <email>contact@cryptpad.fr</email>
   </author>
+  <entry>
+    <title>March 2024 status</title>
+    <link href="https://blog.cryptpad.org/2024/03/29/status-2024-03/"/>
+    <updated>2024-03-29T00:00:00Z</updated>
+    <id>https://blog.cryptpad.org/2024/03/29/status-2024-03/</id>
+    <summary xml:lang="en" type="html">Spring 2024 release (2023.3.0)</summary>
+    <content xml:lang="en" type="html">&lt;h2&gt;💐 CryptPad Spring release (2024.3.0)&lt;/h2&gt;
+&lt;p&gt;At the time of writing the latest CryptPad release is in production on &lt;a href=&quot;http://cryptpad.fr/&quot;&gt;CryptPad.fr&lt;/a&gt; and will soon be tagged on GitHub.&lt;/p&gt;
+&lt;p&gt;This is a major release since it changes the way CryptPad is installed with potential breaking changes for existing instances. Instead of going from &lt;code&gt;5.7.0&lt;/code&gt; to &lt;code&gt;6.0.0&lt;/code&gt;, we are taking this opportunity to make a change to our version numbering. As CryptPad keeps growing and developing the accumulation of numbers in versions 5.x.x, 6.x.x, … is starting to feel arbitrary. Instead we would like to reflect that CryptPad is an &lt;em&gt;ongoing&lt;/em&gt; project being actively maintained and improved for the foreseeable future.
+As a self-hostable service we believe a date-based version is also a benefit for users as it provides a quick way of checking how up-to-date a particular instance is before using it.&lt;/p&gt;
+&lt;p&gt;We are moving from semantic versioning (semver e.g. &lt;code&gt;5.7.0&lt;/code&gt;) to &lt;a href=&quot;https://calver.org/&quot;&gt;calendar versioning&lt;/a&gt; with each release carrying a date stamp rather than an iteration count. The first of these releases is &lt;code&gt;2024.3.0&lt;/code&gt; and we will continue in the
+&lt;code&gt;YYYY.MM.micro&lt;/code&gt; format after that. Combined with the quarterly release schedule in place since ~1 year, this means you can expect the following versions of CryptPad this year:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;💐 Spring &lt;code&gt;2024.3.0&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;🌻 Summer &lt;code&gt;2024.6.0&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;🍁 Autumn &lt;code&gt;2024.9.0&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;❄️ Winter &lt;code&gt;2024.12.0&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In between these milestones we could issue patch releases if needed for urgent bug fixes or security. These would look like &lt;code&gt;2024.3.1&lt;/code&gt;, &lt;code&gt;2024.3.2&lt;/code&gt;, etc. Note that this new scheme is still compatible with semver, only it jumps 2018.3 versions from &lt;code&gt;5.7.0&lt;/code&gt;
+to &lt;code&gt;2023.3.0&lt;/code&gt; in one go.&lt;/p&gt;
+&lt;p&gt;Besides these technicalities, there are also some great new features in the 2024 Spring release, mainly aimed at instance administrators:&lt;/p&gt;
+&lt;h3&gt;🎛️ Refactored admin panel&lt;/h3&gt;
+&lt;p&gt;We have revamped the administration panel which now uses a more streamlined component system. This should make for more consistent and maintainable styles in that section. We have also re-organized the tabs so that important information about the instance (name, description, etc) is presented first.&lt;/p&gt;
+&lt;h3&gt;🎨 Easily customize instance logo and accent color&lt;/h3&gt;
+&lt;p&gt;It is now possible to add a custom logo to a CryptPad instance from the admin panel. The accent color (used in buttons and many other parts of the CryptPad UI) can also be changed to match the logo or branding.&lt;/p&gt;
+&lt;p&gt;We ensure that the color used by default has sufficient contrast with text and background colors in both dark and light themes. Making this customizable will potentially create less accessible color combinations, so we urge administrators to &lt;a href=&quot;https://accessibleweb.com/color-contrast-checker/&quot;&gt;check color contrast&lt;/a&gt; before choosing a new color. We will do our best to monitor how this feature is used and potentially add measures such as a contrast-checker in a future version.&lt;/p&gt;
+&lt;h3&gt;🚑🧑‍⚕️ New help-desk system&lt;/h3&gt;
+&lt;p&gt;The support system has been completely refactored to make it easier to manage a large history of tickets (serving our own needs on &lt;a href=&quot;http://cryptpad.fr/&quot;&gt;CryptPad.fr&lt;/a&gt;). Crucially this new version now includes a new &amp;quot;moderator&amp;quot; role for users that can access the support system without having admin rights on the instance.&lt;/p&gt;
+&lt;h3&gt;📦 New external module for OnlyOffice applications&lt;/h3&gt;
+&lt;p&gt;As you may know, the Spreadsheet, Document, and Presentation applications are integrations of OnlyOffice editors with CryptPad&#39;s end-to-end encrypted real-time collaboration. Until now all 6 versions of OnlyOffice since we started integrating it were included in the CryptPad repository. On &lt;a href=&quot;http://cryptpad.fr/&quot;&gt;CryptPad.fr&lt;/a&gt; we need to keep all of these versions to support opening documents that our users may have created a long time ago. For newer instances however, it makes little sense to download 1.7GB of OnlyOffice versions that will never be used.&lt;/p&gt;
+&lt;p&gt;With this version we are taking the first step in taking the OnlyOffice builds out of the main CryptPad code-base to their &lt;a href=&quot;https://github.com/cryptpad/onlyoffice-builds&quot;&gt;own repository&lt;/a&gt;. We provide an installation script for instance admins to easily install the apps if they want to. While this is &amp;quot;all 6 historical versions or nothing&amp;quot; for now, it is the first step towards a finer-grained system where each instance only downloads the OnlyOffice version currently in use and any subsequent updates.&lt;/p&gt;
+&lt;h2&gt;🔭 up next&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;We have started correcting a few issues with &lt;code&gt;2024.3.0&lt;/code&gt; after putting it to the test of production&lt;/li&gt;
+&lt;li&gt;We hope to officially release this version next week&lt;/li&gt;
+&lt;li&gt;After this we will start planning for the Summer release (&lt;code&gt;2024.6.0&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;We already said this last time but we are closer than &lt;em&gt;ever&lt;/em&gt; to wrapping up our two NGI projects AUTH and BLUEPRINTS and to releasing our Cryptography R&amp;amp;D website&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    <category term="status update" scheme="https://blog.cryptpad.org/tags/status update/"/>
+    <category term="release" scheme="https://blog.cryptpad.org/tags/release/"/>
+    <category term="onlyoffice" scheme="https://blog.cryptpad.org/tags/onlyoffice/"/>
+  </entry>
   <entry>
     <title>The Most Secure Way To Use CryptPad</title>
     <link href="https://blog.cryptpad.org/2024/03/14/Most-Secure-CryptPad-Usage/"/>
@@ -3774,7 +3817,7 @@ We still plan to &lt;em&gt;deploy on Tuesdays&lt;/em&gt;, since it&#39;s as earl
 Others might take stretch to three weeks or a full month, but we&#39;ll do our best not to take any longer than that.
 We try to be as transparent as possible with our plans, and so users should expect each release to also specify the projected date for the following release.&lt;/p&gt;
 &lt;h2&gt;What&#39;s coming next...&lt;/h2&gt;
-&lt;p&gt;In the last year, we tried to find a balance between improving user security through the use of our &lt;a href=&quot;https://blog.cryptpad.org/2018/02/23/One-year-of-biweekly-releases/2017/08/30/CryptPad-s-new-Secure-Cross-Domain-Iframe/&quot;&gt;sandboxing techniques&lt;/a&gt;, and implementing the productivity features necessary for people to consider the security improvements an &lt;em&gt;added bonus&lt;/em&gt; rather than an impractical ideology.
+&lt;p&gt;In the last year, we tried to find a balance between improving user security through the use of our &lt;a href=&quot;https://blog.cryptpad.org/2017/08/30/CryptPad-s-new-Secure-Cross-Domain-Iframe/&quot;&gt;sandboxing techniques&lt;/a&gt;, and implementing the productivity features necessary for people to consider the security improvements an &lt;em&gt;added bonus&lt;/em&gt; rather than an impractical ideology.
 The core of our philosophy is that &lt;em&gt;security&lt;/em&gt; and &lt;em&gt;ease of use&lt;/em&gt; must be packaged together in order for tools like CryptPad to benefit users.&lt;/p&gt;
 &lt;p&gt;While CryptPad is considerably more than a &lt;em&gt;proof-of-concept&lt;/em&gt;, we don&#39;t consider it anywhere close to being finished.
 As heavy users of CryptPad ourselves, we are aware of its rough edges.
@@ -3869,7 +3912,7 @@ can be seen on this blog because it is using the &lt;a href=&quot;https://github
 &lt;/blockquote&gt;
 &lt;p&gt;CryptPad was born on Halloween 2014, at that time it was a skunkworks project inside of XWiki SAS. The UI was hidious green and white and the only feature was the CKEditor based pad. We have come a long way.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/cryptpad_old_mainpage.png&quot; alt=&quot;Old CryptPad Main Page&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;As was mentioned in &lt;a href=&quot;https://blog.cryptpad.org/2017/08/18/CryptPad-s-New-Direction/2017/06/02/Building-mutually-beneficial-relationships/&quot;&gt;Building Mututally Beneficial Relationships&lt;/a&gt;, CryptPad cannot ever be great without people developing the software as their daily job. We have been able to develop this project with the generous support of &lt;a href=&quot;http://www.bpifrance.fr/&quot;&gt;BPI France&lt;/a&gt; and the &lt;a href=&quot;http://ng.open-paas.org/&quot;&gt;OpenPaaS::NG&lt;/a&gt; but that support only finances a small team and it will not continue indefinitely.&lt;/p&gt;
+&lt;p&gt;As was mentioned in &lt;a href=&quot;https://blog.cryptpad.org/2017/06/02/Building-mutually-beneficial-relationships/&quot;&gt;Building Mututally Beneficial Relationships&lt;/a&gt;, CryptPad cannot ever be great without people developing the software as their daily job. We have been able to develop this project with the generous support of &lt;a href=&quot;http://www.bpifrance.fr/&quot;&gt;BPI France&lt;/a&gt; and the &lt;a href=&quot;http://ng.open-paas.org/&quot;&gt;OpenPaaS::NG&lt;/a&gt; but that support only finances a small team and it will not continue indefinitely.&lt;/p&gt;
 &lt;p&gt;Starting with this release, we are adopting a new look and a reinforced dedication to making a quality product for people whose time is valuable. We&#39;re starting this by upgrading the logo and the informational pages.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/cryptpad_new_mainpage.png&quot; alt=&quot;New CryptPad Main Page&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;Our lovable fist logo was created one night by grabbing a screen shot of an ascii generator. It was a time when I was racing to get &lt;em&gt;something&lt;/em&gt; working to prove that CryptPad was an idea worth pursuing. Now times have changed. CryptPad is finally something that I&#39;m starting to feel proud of, and the logo represented the last reminents of a time when everything was a rush and quality was an afterthought.&lt;/p&gt;
