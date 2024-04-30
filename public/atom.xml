@@ -4,12 +4,43 @@
   <subtitle>News from the end-to-end encrypted collaboration suite</subtitle>
   <link href="https://blog.cryptpad.org/atom.xml" rel="self"/>
   <link href="https://blog.cryptpad.org"/>
-  <updated>2024-03-29T00:00:00Z</updated>
+  <updated>2024-04-30T00:00:00Z</updated>
   <id>https://blog.cryptpad.org</id>
   <author>
     <name>CryptPad Team</name>
     <email>contact@cryptpad.fr</email>
   </author>
+  <entry>
+    <title>April 2024 status</title>
+    <link href="https://blog.cryptpad.org/2024/04/30/status-2024-04/"/>
+    <updated>2024-04-30T00:00:00Z</updated>
+    <id>https://blog.cryptpad.org/2024/04/30/status-2024-04/</id>
+    <summary xml:lang="en" type="html">270K accounts on CryptPad.fr, End-to-end test suite published, Upcoming conferences</summary>
+    <content xml:lang="en" type="html">&lt;h2&gt;⛰️ Over 270K accounts on &lt;a href=&quot;http://cryptpad.fr/&quot;&gt;CryptPad.fr&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;We are happy to report that registered users on our flagship instance have passed the 270,000 mark. This follows steady growth of about 1 thousand registrations a week. While it demonstrates interest in our product, we will need to convert more of these users to &lt;a href=&quot;https://cryptpad.fr/accounts/#&quot;&gt;subscribers&lt;/a&gt; or &lt;a href=&quot;https://opencollective.com/cryptpad&quot;&gt;donations&lt;/a&gt; to make the project financially sustainable.&lt;/p&gt;
+&lt;h2&gt;🧪 End-to-end test suite published&lt;/h2&gt;
+&lt;p&gt;After months of work by Zuzanna on an end-to-end test suite for CryptPad, we are &lt;a href=&quot;https://github.com/cryptpad/e2e-test-suite&quot;&gt;publishing the results on GitHub&lt;/a&gt;. This will make our quality assurance process more transparent and might even encourage people with knowledge of &lt;a href=&quot;https://playwright.dev/&quot;&gt;Playwright&lt;/a&gt; to contribute.&lt;/p&gt;
+&lt;h2&gt;📢 Upcoming conferences&lt;/h2&gt;
+&lt;p&gt;Fabrice has been busy submitting proposals to conferences and they all got accepted! So if you are in France or online you will be able to hear him talk about CryptPad in the next couple of months at the following venues:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://jdll.org/&quot;&gt;Journées du Logiciel Libre&lt;/a&gt; (in French), on Saturday May 25th, from 1PM to 1:55PM in Lyon, about &lt;a href=&quot;https://pretalx.jdll.org/jdll2024/talk/review/AY8BCJYGZYESSZSXEYBDAWBJDHLH8YZN&quot;&gt;CryptPad for Education&lt;/a&gt;. Will be recorded 📹&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://passageenseine.fr/&quot;&gt;Pas Sage en Seine&lt;/a&gt; (in French), on Friday May 31st, from 5PM to 6PM in Choisy-le-Roi (near Paris), about &lt;a href=&quot;https://programme.passageenseine.fr/&quot;&gt;CryptPad in general&lt;/a&gt;. Will be recorded 📹&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.ow2con.org/view/2024/&quot;&gt;OW2Con&lt;/a&gt; (in English), on Tuesday June 11th, from 2:15PM to 2:30PM in Châtillon (near Paris), about &lt;a href=&quot;https://www.ow2con.org/view/2024/Breakout_Sessions/Open_Source_Education_Science_Research&quot;&gt;CryptPad for Research and Education&lt;/a&gt;. May not be recorded.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://2024.pass-the-salt.org/&quot;&gt;Pass the Salt&lt;/a&gt; (In English), Wednesday July 3rd from 3:40PM to 4:15PM in Lille, about putting the &lt;a href=&quot;https://cfp.pass-the-salt.org/pts2024/talk/7HUMEU/&quot;&gt;&lt;strong&gt;Crypt&lt;/strong&gt; in &lt;strong&gt;Crypt&lt;/strong&gt;Pad&lt;/a&gt;. Will be recorded 📹&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;🐋 🇫🇷 French Docker tutorial&lt;/h2&gt;
+&lt;p&gt;We came across a &lt;a href=&quot;https://belginux.com/installer-cryptpad-avec-docker/&quot;&gt;great blog post at Belginux&lt;/a&gt; that details the process of installing CryptPad with Docker.&lt;/p&gt;
+&lt;h2&gt;🔭 Next up&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;The team is hard at work on the Summer release cycle&lt;/li&gt;
+&lt;li&gt;A lot of the focus is now on OnlyOffice applications through the France 2030 project which we will write more about in future. This is long-haul work that not pay off instantly but is really needed to improve the stability of the OnlyOffice integrations&lt;/li&gt;
+&lt;li&gt;We have interviewed some candidates for summer internships and have made an offer. We will post more details if/when it is accepted&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    <category term="status update" scheme="https://blog.cryptpad.org/tags/status update/"/>
+    <category term="end-to-end testing" scheme="https://blog.cryptpad.org/tags/end-to-end testing/"/>
+    <category term="talk" scheme="https://blog.cryptpad.org/tags/talk/"/>
+  </entry>
   <entry>
     <title>March 2024 status</title>
     <link href="https://blog.cryptpad.org/2024/03/29/status-2024-03/"/>
