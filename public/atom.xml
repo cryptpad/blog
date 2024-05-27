@@ -4,12 +4,192 @@
   <subtitle>News from the end-to-end encrypted collaboration suite</subtitle>
   <link href="https://blog.cryptpad.org/atom.xml" rel="self"/>
   <link href="https://blog.cryptpad.org"/>
-  <updated>2024-03-14T00:00:00Z</updated>
+  <updated>2024-04-30T00:00:00Z</updated>
   <id>https://blog.cryptpad.org</id>
   <author>
     <name>CryptPad Team</name>
     <email>contact@cryptpad.fr</email>
   </author>
+  <entry>
+    <title>April 2024 status</title>
+    <link href="https://blog.cryptpad.org/2024/04/30/status-2024-04/"/>
+    <updated>2024-04-30T00:00:00Z</updated>
+    <id>https://blog.cryptpad.org/2024/04/30/status-2024-04/</id>
+    <summary xml:lang="en" type="html">270K accounts on CryptPad.fr, End-to-end test suite published, Upcoming conferences</summary>
+    <content xml:lang="en" type="html">&lt;h2&gt;⛰️ Over 270K accounts on &lt;a href=&quot;http://cryptpad.fr/&quot;&gt;CryptPad.fr&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;We are happy to report that registered users on our flagship instance have passed the 270,000 mark. This follows steady growth of about 1 thousand registrations a week. While it demonstrates interest in our product, we will need to convert more of these users to &lt;a href=&quot;https://cryptpad.fr/accounts/#&quot;&gt;subscribers&lt;/a&gt; or &lt;a href=&quot;https://opencollective.com/cryptpad&quot;&gt;donations&lt;/a&gt; to make the project financially sustainable.&lt;/p&gt;
+&lt;h2&gt;🧪 End-to-end test suite published&lt;/h2&gt;
+&lt;p&gt;After months of work by Zuzanna on an end-to-end test suite for CryptPad, we are &lt;a href=&quot;https://github.com/cryptpad/e2e-test-suite&quot;&gt;publishing the results on GitHub&lt;/a&gt;. This will make our quality assurance process more transparent and might even encourage people with knowledge of &lt;a href=&quot;https://playwright.dev/&quot;&gt;Playwright&lt;/a&gt; to contribute.&lt;/p&gt;
+&lt;h2&gt;📢 Upcoming conferences&lt;/h2&gt;
+&lt;p&gt;Fabrice has been busy submitting proposals to conferences and they all got accepted! So if you are in France or online you will be able to hear him talk about CryptPad in the next couple of months at the following venues:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://jdll.org/&quot;&gt;Journées du Logiciel Libre&lt;/a&gt; (in French), on Saturday May 25th, from 1PM to 1:55PM in Lyon, about &lt;a href=&quot;https://pretalx.jdll.org/jdll2024/talk/review/AY8BCJYGZYESSZSXEYBDAWBJDHLH8YZN&quot;&gt;CryptPad for Education&lt;/a&gt;. Will be recorded 📹&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://passageenseine.fr/&quot;&gt;Pas Sage en Seine&lt;/a&gt; (in French), on Friday May 31st, from 5PM to 6PM in Choisy-le-Roi (near Paris), about &lt;a href=&quot;https://programme.passageenseine.fr/&quot;&gt;CryptPad in general&lt;/a&gt;. Will be recorded 📹&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.ow2con.org/view/2024/&quot;&gt;OW2Con&lt;/a&gt; (in English), on Tuesday June 11th, from 2:15PM to 2:30PM in Châtillon (near Paris), about &lt;a href=&quot;https://www.ow2con.org/view/2024/Breakout_Sessions/Open_Source_Education_Science_Research&quot;&gt;CryptPad for Research and Education&lt;/a&gt;. May not be recorded.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://2024.pass-the-salt.org/&quot;&gt;Pass the Salt&lt;/a&gt; (In English), Wednesday July 3rd from 3:40PM to 4:15PM in Lille, about putting the &lt;a href=&quot;https://cfp.pass-the-salt.org/pts2024/talk/7HUMEU/&quot;&gt;&lt;strong&gt;Crypt&lt;/strong&gt; in &lt;strong&gt;Crypt&lt;/strong&gt;Pad&lt;/a&gt;. Will be recorded 📹&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;🐋 🇫🇷 French Docker tutorial&lt;/h2&gt;
+&lt;p&gt;We came across a &lt;a href=&quot;https://belginux.com/installer-cryptpad-avec-docker/&quot;&gt;great blog post at Belginux&lt;/a&gt; that details the process of installing CryptPad with Docker.&lt;/p&gt;
+&lt;h2&gt;🔭 Next up&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;The team is hard at work on the Summer release cycle&lt;/li&gt;
+&lt;li&gt;A lot of the focus is now on OnlyOffice applications through the France 2030 project which we will write more about in future. This is long-haul work that not pay off instantly but is really needed to improve the stability of the OnlyOffice integrations&lt;/li&gt;
+&lt;li&gt;We have interviewed some candidates for summer internships and have made an offer. We will post more details if/when it is accepted&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    <category term="status update" scheme="https://blog.cryptpad.org/tags/status update/"/>
+    <category term="end-to-end testing" scheme="https://blog.cryptpad.org/tags/end-to-end testing/"/>
+    <category term="talk" scheme="https://blog.cryptpad.org/tags/talk/"/>
+  </entry>
+  <entry>
+    <title>March 2024 status</title>
+    <link href="https://blog.cryptpad.org/2024/03/29/status-2024-03/"/>
+    <updated>2024-03-29T00:00:00Z</updated>
+    <id>https://blog.cryptpad.org/2024/03/29/status-2024-03/</id>
+    <summary xml:lang="en" type="html">Spring 2024 release (2024.3.0)</summary>
+    <content xml:lang="en" type="html">&lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/spring-2024-custom-instance.png&quot; alt=&quot;screenshot of customized CryptPad instance&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;💐 CryptPad Spring release (2024.3.0)&lt;/h2&gt;
+&lt;p&gt;At the time of writing the latest CryptPad release is in production on &lt;a href=&quot;http://cryptpad.fr/&quot;&gt;CryptPad.fr&lt;/a&gt; and will soon be tagged on GitHub.&lt;/p&gt;
+&lt;p&gt;This is a major release since it changes the way CryptPad is installed with potential breaking changes for existing instances. Instead of going from &lt;code&gt;5.7.0&lt;/code&gt; to &lt;code&gt;6.0.0&lt;/code&gt;, we are taking this opportunity to make a change to our version numbering. As CryptPad keeps growing and developing the accumulation of numbers in versions 5.x.x, 6.x.x, … is starting to feel arbitrary. Instead we would like to reflect that CryptPad is an &lt;em&gt;ongoing&lt;/em&gt; project being actively maintained and improved for the foreseeable future.
+As a self-hostable service we believe a date-based version is also a benefit for users as it provides a quick way of checking how up-to-date a particular instance is before using it.&lt;/p&gt;
+&lt;p&gt;We are moving from semantic versioning (semver e.g. &lt;code&gt;5.7.0&lt;/code&gt;) to &lt;a href=&quot;https://calver.org/&quot;&gt;calendar versioning&lt;/a&gt; with each release carrying a date stamp rather than an iteration count. The first of these releases is &lt;code&gt;2024.3.0&lt;/code&gt; and we will continue in the
+&lt;code&gt;YYYY.MM.micro&lt;/code&gt; format after that. Combined with the quarterly release schedule in place since ~1 year, this means you can expect the following versions of CryptPad this year:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;💐 Spring &lt;code&gt;2024.3.0&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;🌻 Summer &lt;code&gt;2024.6.0&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;🍁 Autumn &lt;code&gt;2024.9.0&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;❄️ Winter &lt;code&gt;2024.12.0&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In between these milestones we could issue patch releases if needed for urgent bug fixes or security. These would look like &lt;code&gt;2024.3.1&lt;/code&gt;, &lt;code&gt;2024.3.2&lt;/code&gt;, etc. Note that this new scheme is still compatible with semver, only it jumps 2018.3 versions from &lt;code&gt;5.7.0&lt;/code&gt;
+to &lt;code&gt;2023.3.0&lt;/code&gt; in one go.&lt;/p&gt;
+&lt;p&gt;Besides these technicalities, there are also some great new features in the 2024 Spring release, mainly aimed at instance administrators:&lt;/p&gt;
+&lt;h3&gt;🎛️ Refactored admin panel&lt;/h3&gt;
+&lt;p&gt;We have revamped the administration panel which now uses a more streamlined component system. This should make for more consistent and maintainable styles in that section. We have also re-organized the tabs so that important information about the instance (name, description, etc) is presented first.&lt;/p&gt;
+&lt;h3&gt;🎨 Easily customize instance logo and accent color&lt;/h3&gt;
+&lt;p&gt;It is now possible to add a custom logo to a CryptPad instance from the admin panel. The accent color (used in buttons and many other parts of the CryptPad UI) can also be changed to match the logo or branding.&lt;/p&gt;
+&lt;p&gt;We ensure that the color used by default has sufficient contrast with text and background colors in both dark and light themes. Making this customizable will potentially create less accessible color combinations, so we urge administrators to &lt;a href=&quot;https://accessibleweb.com/color-contrast-checker/&quot;&gt;check color contrast&lt;/a&gt; before choosing a new color. We will do our best to monitor how this feature is used and potentially add measures such as a contrast-checker in a future version.&lt;/p&gt;
+&lt;h3&gt;🚑🧑‍⚕️ New help-desk system&lt;/h3&gt;
+&lt;p&gt;The support system has been completely refactored to make it easier to manage a large history of tickets (serving our own needs on &lt;a href=&quot;http://cryptpad.fr/&quot;&gt;CryptPad.fr&lt;/a&gt;). Crucially this new version now includes a new &amp;quot;moderator&amp;quot; role for users that can access the support system without having admin rights on the instance.&lt;/p&gt;
+&lt;h3&gt;📦 New external module for OnlyOffice applications&lt;/h3&gt;
+&lt;p&gt;As you may know, the Spreadsheet, Document, and Presentation applications are integrations of OnlyOffice editors with CryptPad&#39;s end-to-end encrypted real-time collaboration. Until now all 6 versions of OnlyOffice since we started integrating it were included in the CryptPad repository. On &lt;a href=&quot;http://cryptpad.fr/&quot;&gt;CryptPad.fr&lt;/a&gt; we need to keep all of these versions to support opening documents that our users may have created a long time ago. For newer instances however, it makes little sense to download 1.7GB of OnlyOffice versions that will never be used.&lt;/p&gt;
+&lt;p&gt;With this version we are taking the first step in taking the OnlyOffice builds out of the main CryptPad code-base to their &lt;a href=&quot;https://github.com/cryptpad/onlyoffice-builds&quot;&gt;own repository&lt;/a&gt;. We provide an installation script for instance admins to easily install the apps if they want to. While this is &amp;quot;all 6 historical versions or nothing&amp;quot; for now, it is the first step towards a finer-grained system where each instance only downloads the OnlyOffice version currently in use and any subsequent updates.&lt;/p&gt;
+&lt;h2&gt;🔭 up next&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;We have started correcting a few issues with &lt;code&gt;2024.3.0&lt;/code&gt; after putting it to the test of production&lt;/li&gt;
+&lt;li&gt;We hope to officially release this version next week&lt;/li&gt;
+&lt;li&gt;After this we will start planning for the Summer release (&lt;code&gt;2024.6.0&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;We already said this last time but we are closer than &lt;em&gt;ever&lt;/em&gt; to wrapping up our two NGI projects AUTH and BLUEPRINTS and to releasing our Cryptography R&amp;amp;D website&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    <category term="status update" scheme="https://blog.cryptpad.org/tags/status update/"/>
+    <category term="release" scheme="https://blog.cryptpad.org/tags/release/"/>
+    <category term="onlyoffice" scheme="https://blog.cryptpad.org/tags/onlyoffice/"/>
+  </entry>
+  <entry>
+    <title>Pour un usage sécurisé de CryptPad</title>
+    <link href="https://blog.cryptpad.org/2024/03/18/Pour-un-usage-securise-de-CryptPad/"/>
+    <updated>2024-03-18T00:00:00Z</updated>
+    <id>https://blog.cryptpad.org/2024/03/18/Pour-un-usage-securise-de-CryptPad/</id>
+    <summary xml:lang="en" type="html">🇫🇷 Post in French - Nous vous présentons dans quels scénarios CryptPad est sécurisé, et partageons des idées d&#39;actions concrètes pour un usage de CryptPad respectant votre confidentialité.</summary>
+    <content xml:lang="en" type="html">&lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/Paris_Pont_des_Arts_--_2014_--_1422.jpg&quot; alt=&quot;Cadenas d&#39;amour sur le Pont des Arts, Paris, France (2014)&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Photo Dietmar Rabich &lt;a href=&quot;https://commons.wikimedia.org/wiki/File:Paris,_Pont_des_Arts_--_2014_--_1422.jpg&quot;&gt;Wikimedia Commons CC-BY-SA&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Ce billet de blog est une traduction francophone d&#39;&lt;a href=&quot;https://blog.cryptpad.org/2024/03/14/Most-Secure-CryptPad-Usage/&quot;&gt;une première version originale en anglais&lt;/a&gt; rédigée par Théo Von Arx et Fabrice Mouhartem.&lt;/p&gt;
+&lt;p&gt;Vous êtes à la recherche d&#39;un outil de collaboration axé sur la vie privée ? Eh bien, vous l&#39;avez déjà trouvé ! Mais que signifie réellement « vie privée » dans ce contexte ? Et comment est-il techniquement appliqué ? Il y a-t-il des précautions supplémentaires nécessaires pour une utilisation extra-sûre de CryptPad ?&lt;/p&gt;
+&lt;p&gt;Dans ce billet de blog, nous répondrons à ces questions, ainsi qu&#39;à d&#39;autres. Nous vous montrerons dans quels scénarios CryptPad est sécurisé et vous donnerons des idées d&#39;actions concrètes pour utiliser CryptPad en toute confidentialité. Bien que nous fassions tout ce qui est possible pour sécuriser CryptPad, sa sécurité dépend également de la façon dont vous l&#39;utilisez.&lt;/p&gt;
+&lt;h2&gt;🧑‍🏫 Préliminaires&lt;/h2&gt;
+&lt;h3&gt;🗺 Modèle de menace&lt;/h3&gt;
+&lt;p&gt;Lorsque nous parlons de sécurité ou de confidentialité, nous devrions toujours définir le scénario dont nous parlons.
+Ce scénario est ce qu&#39;on appelle le &lt;a href=&quot;https://ssd.eff.org/fr/glossary/modele-de-menaces&quot;&gt;&lt;em&gt;modèle de menace&lt;/em&gt;&lt;/a&gt;, qui définit la &lt;a href=&quot;https://ssd.eff.org/fr/glossary/possibilite-d-action&quot;&gt;possibilité d&#39;action&lt;/a&gt;. En général, nous visons à penser qu&#39;elles sont aussi puissantes que possible. Si nous pouvons nous défendre contre un &lt;a href=&quot;https://ssd.eff.org/fr/glossary/adversaire&quot;&gt;adversaire&lt;/a&gt; fort, nous pouvons également nous défendre contre un adversaire plus faible.&lt;/p&gt;
+&lt;p&gt;La première hypothèse sur les capacités de&#39;un adversaire découle directement de l&#39;architecture de CryptPad. CryptPad est une application web : vous visitez le site web de votre &lt;a href=&quot;https://docs.cryptpad.org/fr/user_guide/instances.html&quot;&gt;instance&lt;/a&gt; (par exemple, &lt;a href=&quot;https://cryptpad.fr/&quot;&gt;https://cryptpad.fr&lt;/a&gt;) et téléchargez automatiquement le code client qui sera exécuté localement sur votre ordinateur. Si vous recevez un code source altéré de ce serveur, vous ne pouvez pas établir de sécurité, car ce mauvais code source peut, par exemple, envoyer tous vos documents en texte clair au serveur.
+Par conséquent, vous devez faire confiance au serveur pour ne pas exécuter d&#39;&lt;a href=&quot;https://ssd.eff.org/fr/glossary/attaque&quot;&gt;attaques &lt;em&gt;active&lt;/em&gt;&lt;/a&gt; (c&#39;est-à-dire pour ne pas exécuter un logiciel de serveur CryptPad modifié).&lt;/p&gt;
+&lt;p&gt;Nous nous défendons néanmoins contre un serveur &lt;em&gt;honnête mais curieux&lt;/em&gt; (c&#39;est-à-dire passif). La deuxième hypothèse est donc que le serveur joue selon les règles, mais pourrait essayer de déduire des informations sensibles en analysant toutes les données qu&#39;il reçoit. Ce scénario inclut la possibilité qu&#39;un tiers ait accès au serveur et puisse voir toutes les données et tous les journaux de logs. CryptPad s&#39;est déjà défendu contre un tel adversaire dans le passé lorsque &lt;a href=&quot;https://newsrnd.com/tech/2022-06-24-data-confiscated-from-pirate-party-servers.SJxeH5I79q.html&quot;&gt;une instance tierce a été saisie par la police&lt;/a&gt;. Nous considérons donc ce scénario comme très réaliste.&lt;/p&gt;
+&lt;p&gt;Enfin, nous supposons que les attaquants ont une capacité de réseau. Ce serait le cas de l&#39;administrateur système qui gère le réseau dans votre bureau, de votre &lt;a href=&quot;https://fr.wikipedia.org/wiki/Fournisseur_d%27acc%C3%A8s_%C3%A0_Internet&quot;&gt;fournisseur d&#39;accès Internet&lt;/a&gt;, ou des services secrets ainsi que de nombreux autres. Les attaquants peuvent même utiliser les capacités de réseau actives, c&#39;est-à-dire qu&#39;ils peuvent épier votre trafic internet, et également analyser, déposer ou modifier les données envoyées sur le réseau.&lt;/p&gt;
+&lt;h3&gt;🔑 Cryptographie&lt;/h3&gt;
+&lt;p&gt;L&#39;une des principales caractéristiques de CryptPad est &lt;a href=&quot;https://ssd.eff.org/fr/glossary/chiffrement-de-bout-en-bout&quot;&gt;le chiffrement de bout en bout&lt;/a&gt;. Laissez-nous vous donner une idée approximative de ce que sont le chiffrement et l&#39;authentification. Il y a trois blocs de construction principaux :&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Le chiffrement symétrique&lt;/strong&gt; (ou chiffrement à clé secrète) fonctionne de la même manière qu&#39;une boîte avec un verrou : nous pouvons mettre quelque chose dans la boîte et verrouiller la boîte à l’aide de la clé (c’est la phase de chiffrement). Seule une personne ayant un exemplaire de la clé peut déverrouiller la boîte et accéder au contenu (qui correspond au déchiffrement) et le modifier. Étant donné que la même clé est utilisée pour verrouiller et déverrouiller la boîte, ce schéma est surnommé &lt;em&gt;symétrique&lt;/em&gt;. Nous pouvons également faire des copies de la clé et la distribuer aux personnes en qui nous avons confiance, afin qu&#39;elles puissent toutes verrouiller et déverrouiller la boîte.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Le chiffrement asymétrique&lt;/strong&gt; (ou chiffrement à clé publique : &lt;em&gt;Public Key Encryption&lt;/em&gt;, PKE pour faire court) diffère du chiffrement symétrique en ce sens qu&#39;une clé différente est utilisée pour le chiffrement (à savoir la &lt;em&gt;clé publique&lt;/em&gt;) et le déchiffrement (la &lt;em&gt;clé privée&lt;/em&gt;). Vous pouvez imaginer le chiffrement asymétrique comme le système suivant : vous distribuez des cadenas ouverts (la clé de chiffrement publique) à tout le monde et gardez la clé (secrète de déchiffrement) pour vous. Ensuite, si quelqu&#39;un veut vous envoyer un message, il le met dans une boîte et la ferme grâce au cadenas que vous lui avez donné. Ainsi, vous seul·e pouvez l&#39;ouvrir pendant que n&#39;importe qui peut produire une boîte verrouillée pour vous. &lt;p&gt;&lt;img alt=&quot;Boîte avec cadenas&quot; src=&quot;https://blog.cryptpad.org/images/unsplash-lock_on_a_box.jpg&quot; /&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Les signatures numériques&lt;/strong&gt; sont étroitement liées aux sceaux physiques : seules les personnes en possession du sceau (que nous appelons la clé de signature) peuvent signer, mais toutes les autres personnes peuvent vérifier l&#39;authenticité d&#39;un document à l&#39;aide de la clé de vérification publique de l&#39;émetteur. En outre, les signatures numériques garantissent également que personne n&#39;est en mesure de modifier le contenu scellé sans que les lecteur·ices ne s&#39;en aperçoivent. Une propriété que les sceaux conventionnels n&#39;apprécient pas. Notez qu&#39;il existe une variante symétrique de cette primitive appelée &lt;a href=&quot;https://fr.wikipedia.org/wiki/Code_d%27authentification_de_message&quot;&gt;&lt;em&gt;code d&#39;authentification de message&lt;/em&gt;&lt;/a&gt;. Cependant, il est rarement utilisé comme brique de construction indépendante et est utilisé conjointement avec le chiffrement symétrique pour obtenir &lt;a href=&quot;https://fr.wikipedia.org/wiki/Mode_d%27op%C3%A9ration_(cryptographie)#AEAD_:_chiffrement_authentifi%C3%A9_avec_modes_de_donn%C3%A9es_additionnelles&quot;&gt;le chiffrement authentifié&lt;/a&gt;, ce qui garantit en outre que les messages ne sont pas altérés. Comme nous utilisons exclusivement le chiffrement authentifié dans CryptPad, nous utilisons généralement le terme de &amp;quot;chiffrement symétrique&amp;quot; à la place dans les explications pour plus de simplicité, mais les garanties réelles sont plus fortes. &lt;p&gt;&lt;img alt=&quot;Cachet sur une enveloppe&quot; src=&quot;https://blog.cryptpad.org/images/unsplash-sealed_letter.jpg&quot; /&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Pour CryptPad, nous combinons toutes ces briques de construction pour atteindre différents objectifs. Nous expliquerons l&#39;utilisation ci-dessous dans la section relative aux documents.&lt;/p&gt;
+&lt;h2&gt;🧗 Les bases&lt;/h2&gt;
+&lt;p&gt;Nous décrivons quelques mesures de base qui vous permettent d&#39;augmenter considérablement la sécurité de votre utilisation de CryptPad :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;CryptPad est un logiciel &lt;a href=&quot;https://ssd.eff.org/fr/glossary/logiciels-ouverts&quot;&gt;open source&lt;/a&gt; et, à ce titre, il y a &lt;a href=&quot;https://cryptpad.org/instances/&quot;&gt;diverses instances&lt;/a&gt; qui l&#39;exécutent. Alors que nous hébergeons l&#39;&lt;a href=&quot;https://cryptpad.fr/&quot;&gt;instance phare&lt;/a&gt;, vous pouvez en choisir une autre, en fonction de la juridiction par exemple.&lt;/li&gt;
+&lt;li&gt;Assurez-vous de vous connecter à l&#39;instance CryptPad choisie via &lt;a href=&quot;https://ssd.eff.org/fr/module/que-devrais-je-savoir-au-sujet-du-chiffrement%E2%80%89#exemple-de-chiffrement-de-la-couche-de-transport-https&quot;&gt;HTTPS&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Tous les mécanismes de sécurité sont seulement aussi forts que votre mot de passe. Si votre mot de passe est facilement devinable, les attaquants peuvent obtenir un accès complet à toutes vos données stockées sur CryptPad. Nous vous recommandons soit de générer un mot de passe aléatoire à l&#39;aide d&#39;un &lt;a href=&quot;https://guide.boum.org/en-ligne-outils-gerer-des-mots-de-passe.html#en_ligne-outils-gerer_des_mots_de_passe-utiliser_un_gestionnaire_de_mots_de_passe&quot;&gt;gestionnaire de mots de passe&lt;/a&gt;, ou de &lt;a href=&quot;https://guide.boum.org/hors-connexions-outils-choisir-une-phrase-de-passe.html#hors_connexions-outils-choisir_une_phrase_de_passe&quot;&gt;choisir une bonne phrase de passe&lt;/a&gt; au cas où le mot de passe devrait être mémorisable. Utilisez ce mot de passe uniquement pour CryptPad afin d&#39;éviter que d&#39;autres services ne le divulgue.&lt;/li&gt;
+&lt;li&gt;Déconnectez-vous de CryptPad après chaque session, afin de redemander le mot de passe pour accéder à vos données sur CryptPad. Sinon, toute personne ayant accès à votre appareil peut également accéder à vos données sur CryptPad.&lt;/li&gt;
+&lt;li&gt;Utilisez l&#39;&lt;a href=&quot;https://ssd.eff.org/fr/glossary/authentification-deux-facteurs&quot;&gt;authentification à deux facteurs&lt;/a&gt; dans votre compte pour ajouter une protection contre le phishing en ajoutant un facteur temporel à votre connexion. &lt;a href=&quot;https://blog.cryptpad.org/2024/01/09/tutorial-two-factor-authentication/&quot;&gt;Un tutoriel&lt;/a&gt; (en anglais) à ce sujet est disponible sur ce blog.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;🧑 Contacts&lt;/h2&gt;
+&lt;p&gt;Comme nous le montrerons ci-dessous, l&#39;ajout de vos pairs en tant que contacts CryptPad vous permet de partager des documents plus facilement, ainsi qu&#39;en toute sécurité. Vous pouvez en outre restreindre l&#39;accès à un document à des contacts spécifiques et échanger des messages texte avec eux.&lt;/p&gt;
+&lt;p&gt;La façon la plus simple d&#39;ajouter quelqu&#39;un à vos contacts est de &lt;a href=&quot;https://docs.cryptpad.org/fr/user_guide/collaboration.html#add-a-contact&quot;&gt;partager le lien vers votre profil&lt;/a&gt; via une communication sécurisée avec votre pair et de demander à s&#39;ajouter les un·es les autres en tant que contacts.&lt;/p&gt;
+&lt;p&gt;⚠️ Notez que les noms d&#39;utilisateur·ices ne sont pas uniques sur CryptPad. Selon le contexte, il peut être judicieux de vérifier une demande de contact reçue par un autre canal sécurisé.&lt;/p&gt;
+&lt;h2&gt;📄 Documents&lt;/h2&gt;
+&lt;p&gt;CryptPad utilise un chiffrement symétrique avec une clé secrète par document pour rendre vos documents illisibles pour tous ceux qui n&#39;ont pas accès aux clés correspondantes. CryptPad vous permet également de faire la différence entre les accès en lecture seule et les accès en écriture à un document. Pour cela, toute personne souhaitant modifier un document doit prouver qu&#39;iel possède la clé de signature privée liée au document. Pour cela, iels signent leurs modifications et d&#39;autres personnes travaillant sur le même document peuvent vérifier que la modification a effectivement été effectuée par une personne autorisée avant d&#39;accepter les modifications.&lt;/p&gt;
+&lt;h3&gt;🔄 Partager&lt;/h3&gt;
+&lt;p&gt;CryptPad conserve ces détails techniques « sous le capot » et fournit une interface simple pour &lt;a href=&quot;https://docs.cryptpad.org/fr/user_guide/share_and_access.html#sharing-a-link&quot;&gt;partager des documents&lt;/a&gt; via des liens. Un tel lien contient essentiellement la clé symétrique pour le chiffrement et le déchiffrement, pour la vérification des signatures ainsi que celle pour l&#39;émission des signatures (en cas d&#39;accès en lecture/écriture) d&#39;une manière &lt;strong&gt;non révocable&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;
+&lt;img alt=&quot;Partager avec un lien&quot; style=&quot;border-radius: 10px&quot; src=&quot;https://blog.cryptpad.org/images/docs-modal-share-link.png&quot; /&gt;
+&lt;/p&gt;
+&lt;p&gt;⚠️ Cela implique que le document est seulement aussi sécurisé que le canal de communication &lt;strong&gt;le plus faible&lt;/strong&gt; utilisé pour envoyer ces liens.&lt;/p&gt;
+&lt;p&gt;Si vous considérez qu&#39;un canal n&#39;est pas sûr, ou s&#39;il est accessible au public, vous voudrez peut-être en isoler certains de vos documents. Par exemple, vous pouvez limiter l&#39;envoi de liens d&#39;édition vers les chats &lt;a href=&quot;https://signal.org/&quot;&gt;Signal&lt;/a&gt; avec des messages éphémères qui disparaissent.&lt;/p&gt;
+&lt;p&gt;Une autre possibilité de partager l&#39;accès en toute sécurité est de &lt;a href=&quot;https://docs.cryptpad.org/fr/user_guide/share_and_access.html#sharing-with-contacts&quot;&gt;l&#39;envoyer via CryptPad à vos contacts&lt;/a&gt;. Iel utilisent en interne le système de &lt;a href=&quot;https://docs.cryptpad.org/en/dev_guide/general.html#encryption&quot;&gt;&amp;quot;mailbox&amp;quot;&lt;/a&gt; (en anglais) pour les communications internes, sans que le serveur CryptPad ne le sache. De cette façon, vous n&#39;avez pas besoin d&#39;utiliser un canal de communication tiers (potentiellement non sécurisé).&lt;/p&gt;
+&lt;p&gt;
+&lt;img alt=&quot;Partager avec des contacts&quot; style=&quot;border-radius: 10px&quot; src=&quot;https://blog.cryptpad.org/images/docs-modal-share-contacts.png&quot; /&gt;
+&lt;/p&gt;
+&lt;p&gt;⚠️ Notez que les documents CryptPad contiennent l&#39;historique complet des modifications. Il est facilement accessible à n&#39;importe qui à partir de l&#39;&lt;a href=&quot;https://docs.cryptpad.org/fr/user_guide/apps/general.html#document-history&quot;&gt;interface utilisateur·ice&lt;/a&gt;. Si vous avez commis une erreur de manipulation, par exemple au bout d&#39;un texte que vous ne vouliez pas partager, tout en produisant le document &lt;strong&gt;avant&lt;/strong&gt; de le partager, nous vous recommandons de copier-coller la version que vous souhaitez partager pour la collaboration dans un nouveau document avant de l&#39;envoyer pour nettoyer l&#39;historique (cela aide également à suivre les modifications par la suite).&lt;/p&gt;
+&lt;h3&gt;⛔ Restreindre l&#39;accès&lt;/h3&gt;
+&lt;p&gt;Comme CryptPad fonctionne avec des clés statiques, les accès partagés accordés ne sont pas révoquables. Cela signifie que par défaut, toute personne à qui l&#39;accès a été accordé pourra à jamais lire (et modifier) un document. Pour éviter cela, vous pouvez fermer l&#39;accès à un document à l&#39;aide de la fonctionnalité &lt;a href=&quot;https://docs.cryptpad.org/fr/user_guide/share_and_access.html#access-list&quot;&gt;Liste d&#39;accès&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;
+&lt;img alt=&quot;Liste d&#39;accès&quot; style=&quot;border-radius: 10px&quot; src=&quot;https://blog.cryptpad.org/images/docs-modal-access-list.png&quot; /&gt;
+&lt;/p&gt;
+&lt;p&gt;De cette façon, seules les personnes sélectionnées ont accès au document, indépendamment de la personne qui a reçu le lien de partage.&lt;/p&gt;
+&lt;p&gt;Assurez-vous également que vous ou votre &lt;a href=&quot;https://docs.cryptpad.org/fr/user_guide/collaboration.html#teams&quot;&gt;équipe&lt;/a&gt; êtes défini comme « propriétaire » lorsque vous créez des documents. Cela vous donnera un contrôle total, y compris la possibilité de détruire un document s&#39;il contient des informations sensibles ou si le lien échappe à votre contrôle.&lt;/p&gt;
+&lt;h3&gt;🔒 Mots de passe par document&lt;/h3&gt;
+&lt;p&gt;Pour plus de sécurité, vous pouvez &lt;a href=&quot;https://docs.cryptpad.org/fr/user_guide/share_and_access.html#access-tab&quot;&gt;protéger un document avec un mot de passe&lt;/a&gt;. Le document n&#39;est alors disponible que si vous avez les deux, le lien de partage et le mot de passe. Ceci est particulièrement utile dans le cas où vous n&#39;avez pas de canal de communication sécurisé pour partager le lien, car vous pouvez envoyer le lien et le mot de passe sur deux canaux &lt;em&gt;distincts&lt;/em&gt; (par exemple, la messagerie texte et le courrier électronique). De cette façon, l&#39;attaquant doit surveiller les deux canaux en même temps, ce qui le rend beaucoup plus difficile.&lt;/p&gt;
+&lt;p&gt;Lorsque vous partagez des documents avec vos contacts directement sur CryptPad, les communications sont chiffrées, et nous supposons que vous voulez leur donner accès. Par conséquent, le mot de passe est mémorisé et envoyé avec le document lorsque vous le partagez. On ne le demande pas au destinataire, ou à vous-même, lors de l&#39;ouverture du document. Cela suppose implicitement que la sécurité du lecteur CryptPad est au moins aussi forte que les canaux de communication utilisés pour partager le document.&lt;/p&gt;
+&lt;h3&gt;💨 Autodestruction&lt;/h3&gt;
+&lt;p&gt;CryptPad vous permet de créer des &lt;a href=&quot;https://docs.cryptpad.org/fr/user_guide/security.html#self-destructing-documents&quot;&gt;documents qui s&#39;autodétruisent&lt;/a&gt;, ils seront détruits soit après l&#39;heure d&#39;expiration définie, soit après l&#39;ouverture du document partagé la première fois.&lt;/p&gt;
+&lt;p&gt;Cette fonctionnalité est particulièrement utile si vous devez partager des données sensibles qui ne devraient pas être accessibles pour toujours. Vous pouvez l&#39;utiliser pour partager un mot de passe avec une personne par exemple.&lt;/p&gt;
+&lt;h2&gt;🕵️ Anonymat&lt;/h2&gt;
+&lt;p&gt;CryptPad ne fournit qu&#39;une faible forme d&#39;anonymat et ne cache pas votre &lt;a href=&quot;https://guide.boum.org/en-ligne-comprendre-bases-sur-les-reseaux.html#en_ligne-comprendre-bases_sur_les_reseaux-protocole_de_communication-protocole_ip&quot;&gt;adresse IP&lt;/a&gt; ou votre &lt;a href=&quot;https://guide.boum.org/en-ligne-comprendre-traces-sur-toute-la-ligne.html#en_ligne-comprendre-traces_sur_toute_la_ligne-serveur-les_en_tetes_http&quot;&gt;« agent utilisateur »&lt;/a&gt; (navigateur et &lt;a href=&quot;https://ssd.eff.org/fr/glossary/systeme-d-exploitation&quot;&gt;système d&#39;exploitation&lt;/a&gt;). Le serveur peut en outre lier les adresses IP de personnes qui collaborent souvent sur les mêmes documents. Bien sûr, nous n&#39;exécutons pas ces analyses pour notre instance phare, mais nous voulons que vous nous fassiez confiance le moins possible. Vous pouvez donc utiliser les outils et techniques suivants :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Le &lt;a href=&quot;https://www.torproject.org/download/&quot;&gt;Navigateur Tor&lt;/a&gt; pour se connecter à CryptPad et cacher votre adresse IP.&lt;/li&gt;
+&lt;li&gt;Un compte « jetable » qui n&#39;est utilisé que pour des actions spécifiques à haut risque, telles que le travail sur un petit ensemble de documents ou la publication d&#39;informations sensibles pour éviter la possibilité de lier les adresses IP des personnes collaboratrices.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://tails.net/&quot;&gt;Tails&lt;/a&gt; pour ne laisser aucune trace sur votre appareil local.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;💡 Autres outils&lt;/h2&gt;
+&lt;p&gt;CryptPad est conçu pour être une suite bureautique générale et facile à utiliser. En tant que tel, il se peut qu&#39;il ne réponde pas toujours à vos besoins spécifiques. Nous vous redirigons vers d&#39;autres outils et services qui ne sont pas affiliés à CryptPad pour les actions suivantes :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Un &lt;a href=&quot;https://guide.boum.org/en-ligne-outils-gerer-des-mots-de-passe.html#en_ligne-outils-gerer_des_mots_de_passe-utiliser_un_gestionnaire_de_mots_de_passe&quot;&gt;gestionnaire de mots de passe&lt;/a&gt; pour avoir le contrôle de vos mots de passe.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://securedrop.org/&quot;&gt;Secure Drop&lt;/a&gt; pour les lanceur·euses d&#39;alertes.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://signal.org/&quot;&gt;Signal&lt;/a&gt; pour une messagerie sécurisée en temps réel.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;📚 Références&lt;/h2&gt;
+&lt;p&gt;À propos de CryptPad :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;La &lt;a href=&quot;https://docs.cryptpad.org/fr/user_guide/security.html&quot;&gt;section sécurité&lt;/a&gt; dans notre guide de l&#39;utilisateur·ice explique l&#39;utilisation des fonctionnalités de sécurité de CryptPad.&lt;/li&gt;
+&lt;li&gt;La conférence &lt;a href=&quot;https://peertube.xwiki.com/w/jAP48FTXpi9CpJnb8SSVDh&quot;&gt;« Vivre à la périphérie avec CryptPad : confidentialité, calcul distribué et architectures de résilience »&lt;/a&gt; (en anglais) est une explication détaillée des concepts derrière CryptPad.&lt;/li&gt;
+&lt;li&gt;Nous avons publié un &lt;a href=&quot;https://blog.cryptpad.org/2023/02/02/Whitepaper/&quot;&gt;livre blanc&lt;/a&gt; (en anglais) décrivant les mécanismes de sécurité et la cryptographie utilisés dans CryptPad. Ce document est destiné aux personnes qui sont déjà familières avec la cryptographie.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Plus général :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Le &lt;a href=&quot;https://guide.boum.org/pr%C3%A9face-%C3%A0-cette-%C3%A9dition.html&quot;&gt;Guide d&#39;Autodéfence Numérique&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Le &lt;a href=&quot;https://ssd.eff.org/fr/&quot;&gt;guide d&#39;autodéfense de surveillance&lt;/a&gt; par l&#39;Electronic Frontier Foundation (EFF)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;🙋 Questions ?&lt;/h2&gt;
+&lt;p&gt;Nous sommes heureux·ses de vous aider et de répondre à vos questions concernant ce billet de blog. Vous pouvez nous joindre sur &lt;a href=&quot;https://forum.cryptpad.org/&quot;&gt;notre forum&lt;/a&gt;, &lt;a href=&quot;https://matrix.to/#/#cryptpad:matrix.xwiki.com&quot;&gt;Matrix&lt;/a&gt;, &lt;a href=&quot;https://fosstodon.org/@cryptpad&quot;&gt;Mastodon&lt;/a&gt;, ou par &lt;a href=&quot;mailto:contact@cryptpad.org&quot;&gt;e-mail&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;🙏 Remerciements&lt;/h2&gt;
+&lt;p&gt;Ce projet fait partie de &lt;a href=&quot;https://nlnet.nl/project/CryptPad-Blueprints/&quot;&gt;CryptPad Blueprints&lt;/a&gt;, qui est financé par le Fonds &lt;a href=&quot;https://nlnet.nl/entrust&quot;&gt;NGI0 Entrust&lt;/a&gt;, un fonds créé par &lt;a href=&quot;https://nlnet.nl/&quot;&gt;NLnet&lt;/a&gt; avec le soutien financier du programme &lt;a href=&quot;https://ngi.eu/&quot;&gt;Next Generation Internet&lt;/a&gt; de la Commission européenne, sous l&#39;égide de &lt;em&gt;DG Communications Networks, Content and Technology&lt;/em&gt;  dans le cadre de la convention de subvention n° 101069594.&lt;/p&gt;
+</content>
+    <category term="security" scheme="https://blog.cryptpad.org/tags/security/"/>
+    <category term="tutorials" scheme="https://blog.cryptpad.org/tags/tutorials/"/>
+    <category term="privacy" scheme="https://blog.cryptpad.org/tags/privacy/"/>
+    <category term="research" scheme="https://blog.cryptpad.org/tags/research/"/>
+    <category term="Blueprints" scheme="https://blog.cryptpad.org/tags/Blueprints/"/>
+    <category term="ngi" scheme="https://blog.cryptpad.org/tags/ngi/"/>
+  </entry>
   <entry>
     <title>The Most Secure Way To Use CryptPad</title>
     <link href="https://blog.cryptpad.org/2024/03/14/Most-Secure-CryptPad-Usage/"/>
@@ -18,6 +198,7 @@
     <summary xml:lang="en" type="html">We show you in which scenario CryptPad is secure, and give you ideas for concrete actions for a safe CryptPad usage.</summary>
     <content xml:lang="en" type="html">&lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/Paris_Pont_des_Arts_--_2014_--_1422.jpg&quot; alt=&quot;Love padlocks at the Pont des Arts, Paris, France (2014) &quot; /&gt;&lt;/p&gt;
 &lt;p&gt;Photo Dietmar Rabich &lt;a href=&quot;https://commons.wikimedia.org/wiki/File:Paris,_Pont_des_Arts_--_2014_--_1422.jpg&quot;&gt;Wikimedia Commons CC-BY-SA&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;A &lt;a href=&quot;https://blog.cryptpad.org/2024/03/18/Pour-un-usage-securise-de-CrytpPad/&quot;&gt;French translated version&lt;/a&gt; is also available.&lt;/p&gt;
 &lt;p&gt;You&#39;re looking for a privacy-focused collaboration tool?
 Well, you already found it!
 But what does “privacy” in this context actually mean?
@@ -3774,7 +3955,7 @@ We still plan to &lt;em&gt;deploy on Tuesdays&lt;/em&gt;, since it&#39;s as earl
 Others might take stretch to three weeks or a full month, but we&#39;ll do our best not to take any longer than that.
 We try to be as transparent as possible with our plans, and so users should expect each release to also specify the projected date for the following release.&lt;/p&gt;
 &lt;h2&gt;What&#39;s coming next...&lt;/h2&gt;
-&lt;p&gt;In the last year, we tried to find a balance between improving user security through the use of our &lt;a href=&quot;https://blog.cryptpad.org/2018/02/23/One-year-of-biweekly-releases/2017/08/30/CryptPad-s-new-Secure-Cross-Domain-Iframe/&quot;&gt;sandboxing techniques&lt;/a&gt;, and implementing the productivity features necessary for people to consider the security improvements an &lt;em&gt;added bonus&lt;/em&gt; rather than an impractical ideology.
+&lt;p&gt;In the last year, we tried to find a balance between improving user security through the use of our &lt;a href=&quot;https://blog.cryptpad.org/2017/08/30/CryptPad-s-new-Secure-Cross-Domain-Iframe/&quot;&gt;sandboxing techniques&lt;/a&gt;, and implementing the productivity features necessary for people to consider the security improvements an &lt;em&gt;added bonus&lt;/em&gt; rather than an impractical ideology.
 The core of our philosophy is that &lt;em&gt;security&lt;/em&gt; and &lt;em&gt;ease of use&lt;/em&gt; must be packaged together in order for tools like CryptPad to benefit users.&lt;/p&gt;
 &lt;p&gt;While CryptPad is considerably more than a &lt;em&gt;proof-of-concept&lt;/em&gt;, we don&#39;t consider it anywhere close to being finished.
 As heavy users of CryptPad ourselves, we are aware of its rough edges.
@@ -3869,7 +4050,7 @@ can be seen on this blog because it is using the &lt;a href=&quot;https://github
 &lt;/blockquote&gt;
 &lt;p&gt;CryptPad was born on Halloween 2014, at that time it was a skunkworks project inside of XWiki SAS. The UI was hidious green and white and the only feature was the CKEditor based pad. We have come a long way.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/cryptpad_old_mainpage.png&quot; alt=&quot;Old CryptPad Main Page&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;As was mentioned in &lt;a href=&quot;https://blog.cryptpad.org/2017/08/18/CryptPad-s-New-Direction/2017/06/02/Building-mutually-beneficial-relationships/&quot;&gt;Building Mututally Beneficial Relationships&lt;/a&gt;, CryptPad cannot ever be great without people developing the software as their daily job. We have been able to develop this project with the generous support of &lt;a href=&quot;http://www.bpifrance.fr/&quot;&gt;BPI France&lt;/a&gt; and the &lt;a href=&quot;http://ng.open-paas.org/&quot;&gt;OpenPaaS::NG&lt;/a&gt; but that support only finances a small team and it will not continue indefinitely.&lt;/p&gt;
+&lt;p&gt;As was mentioned in &lt;a href=&quot;https://blog.cryptpad.org/2017/06/02/Building-mutually-beneficial-relationships/&quot;&gt;Building Mututally Beneficial Relationships&lt;/a&gt;, CryptPad cannot ever be great without people developing the software as their daily job. We have been able to develop this project with the generous support of &lt;a href=&quot;http://www.bpifrance.fr/&quot;&gt;BPI France&lt;/a&gt; and the &lt;a href=&quot;http://ng.open-paas.org/&quot;&gt;OpenPaaS::NG&lt;/a&gt; but that support only finances a small team and it will not continue indefinitely.&lt;/p&gt;
 &lt;p&gt;Starting with this release, we are adopting a new look and a reinforced dedication to making a quality product for people whose time is valuable. We&#39;re starting this by upgrading the logo and the informational pages.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/cryptpad_new_mainpage.png&quot; alt=&quot;New CryptPad Main Page&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;Our lovable fist logo was created one night by grabbing a screen shot of an ascii generator. It was a time when I was racing to get &lt;em&gt;something&lt;/em&gt; working to prove that CryptPad was an idea worth pursuing. Now times have changed. CryptPad is finally something that I&#39;m starting to feel proud of, and the logo represented the last reminents of a time when everything was a rush and quality was an afterthought.&lt;/p&gt;
