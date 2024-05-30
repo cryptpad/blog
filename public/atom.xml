@@ -4,12 +4,44 @@
   <subtitle>News from the end-to-end encrypted collaboration suite</subtitle>
   <link href="https://blog.cryptpad.org/atom.xml" rel="self"/>
   <link href="https://blog.cryptpad.org"/>
-  <updated>2024-04-30T00:00:00Z</updated>
+  <updated>2024-05-30T00:00:00Z</updated>
   <id>https://blog.cryptpad.org</id>
   <author>
     <name>CryptPad Team</name>
     <email>contact@cryptpad.fr</email>
   </author>
+  <entry>
+    <title>May 2024 status</title>
+    <link href="https://blog.cryptpad.org/2024/05/30/status-2024-05/"/>
+    <updated>2024-05-30T00:00:00Z</updated>
+    <id>https://blog.cryptpad.org/2024/05/30/status-2024-05/</id>
+    <summary xml:lang="en" type="html">2024.3.1 minor release and launch of R&amp;D site Blueprints</summary>
+    <content xml:lang="en" type="html">&lt;h2&gt;🚀 Minor release &lt;code&gt;2024.3.1&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;This month we released &lt;a href=&quot;https://github.com/cryptpad/cryptpad/releases/tag/2024.3.1&quot;&gt;CryptPad 2024.3.1&lt;/a&gt; with some improvements for OnlyOffice applications and various other fixes and translations. Please see the &lt;a href=&quot;https://github.com/cryptpad/cryptpad/releases/tag/2024.3.1&quot;&gt;full release notes&lt;/a&gt; for details.&lt;/p&gt;
+&lt;h2&gt;🧪 Blueprints R&amp;amp;D site launched&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/blueprints-roadmap.png&quot; alt=&quot;roadmap diagram on the Blueprints website&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;We are happy to announce that we completed the &lt;a href=&quot;https://nlnet.nl/project/CryptPad-Blueprints/&quot;&gt;CryptPad Blueprints&lt;/a&gt; project and launched &lt;a href=&quot;https://blueprints.cryptpad.org/&quot;&gt;our Research &amp;amp; Development website&lt;/a&gt; which we will be the home for all CryptPad related research going forward.&lt;/p&gt;
+&lt;p&gt;Blueprints is a project funded by &lt;a href=&quot;https://nlnet.nl/NGI0/&quot;&gt;NGI Zero&lt;/a&gt; by NLNet  to survey the state of the cryptography, ease of access of CryptPad, and propose some improvements. We already published &lt;a href=&quot;https://blog.cryptpad.org/tags/blueprints/&quot;&gt;some of the ressources&lt;/a&gt; on this blog, such as the &lt;a href=&quot;https://blog.cryptpad.org/2023/02/02/Whitepaper/&quot;&gt;whitepaper&lt;/a&gt; and a &lt;a href=&quot;https://blog.cryptpad.org/2024/03/14/Most-Secure-CryptPad-Usage/&quot;&gt;good practices guide&lt;/a&gt;. However, these were just a fraction of the full research now accessible on &lt;a href=&quot;https://blueprints.cryptpad.org/&quot;&gt;the blueprints website&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This website shows our analysis of CryptPad, a &lt;a href=&quot;https://en.wikipedia.org/wiki/User_story&quot;&gt;user-stories&lt;/a&gt; based needs analysis and their relations to proposed solutions (some of which are already live) as well as some prototyping of missing features such as password recovery or the use of &lt;abbr title=&quot;Conflict-free Replicated Data Types&quot;&gt;CRDTs&lt;/abbr&gt; to pave the way toward offline-first editing.&lt;/p&gt;
+&lt;p&gt;We will maintain this website and update it when we conduct new research so expect to hear more about Blueprints in future!&lt;/p&gt;
+&lt;h2&gt;🔭 Next up&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;The team is at work on the &lt;code&gt;2024.6.0&lt;/code&gt; release planned for the end of June&lt;/li&gt;
+&lt;li&gt;After &lt;a href=&quot;https://fosstodon.org/@cryptpad/112501407749013093&quot;&gt;the talk&lt;/a&gt; at the &lt;a href=&quot;https://jdll.org/&quot;&gt;&lt;em&gt;Journées du Logiciel Libre&lt;/em&gt;&lt;/a&gt; in Lyon, Fabrice will be giving talks about CryptPad at:
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://passageenseine.fr/&quot;&gt;Pas Sage en Seine&lt;/a&gt; on May 31st, in Choisy-le-Roi&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.ow2con.org/view/2024/&quot;&gt;OW2Con&lt;/a&gt; on June 11th, in Châtillon&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://2024.pass-the-salt.org/&quot;&gt;Pass the Salt&lt;/a&gt; on July 3rd, in Lille&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Andreea will join us for an internship at the start of next month&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    <category term="status update" scheme="https://blog.cryptpad.org/tags/status update/"/>
+    <category term="release" scheme="https://blog.cryptpad.org/tags/release/"/>
+    <category term="research" scheme="https://blog.cryptpad.org/tags/research/"/>
+    <category term="ngi" scheme="https://blog.cryptpad.org/tags/ngi/"/>
+  </entry>
   <entry>
     <title>April 2024 status</title>
     <link href="https://blog.cryptpad.org/2024/04/30/status-2024-04/"/>
