@@ -230,7 +230,7 @@ Par conséquent, vous devez faire confiance au serveur pour ne pas exécuter d&#
     <summary xml:lang="en" type="html">We show you in which scenario CryptPad is secure, and give you ideas for concrete actions for a safe CryptPad usage.</summary>
     <content xml:lang="en" type="html">&lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/Paris_Pont_des_Arts_--_2014_--_1422.jpg&quot; alt=&quot;Love padlocks at the Pont des Arts, Paris, France (2014) &quot; /&gt;&lt;/p&gt;
 &lt;p&gt;Photo Dietmar Rabich &lt;a href=&quot;https://commons.wikimedia.org/wiki/File:Paris,_Pont_des_Arts_--_2014_--_1422.jpg&quot;&gt;Wikimedia Commons CC-BY-SA&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;A &lt;a href=&quot;https://blog.cryptpad.org/2024/03/18/Pour-un-usage-securise-de-CrytpPad/&quot;&gt;French translated version&lt;/a&gt; is also available.&lt;/p&gt;
+&lt;p&gt;A &lt;a href=&quot;https://blog.cryptpad.org/2024/03/18/Pour-un-usage-securise-de-CryptPad/&quot;&gt;French translated version&lt;/a&gt; is also available.&lt;/p&gt;
 &lt;p&gt;You&#39;re looking for a privacy-focused collaboration tool?
 Well, you already found it!
 But what does “privacy” in this context actually mean?
@@ -4492,12 +4492,10 @@ make CryptPad fit your needs better.&lt;/p&gt;
 &lt;h2&gt;For Admins&lt;/h2&gt;
 &lt;p&gt;If you&#39;re hosting your own instance of CryptPad, there are a few things you&#39;ll need to do when you upgrade to Hodag. The limits code is still somewhat of a mess and while we get it tied down, you&#39;ll need to do a bit of work to disable it.&lt;/p&gt;
 &lt;p&gt;First there is a serverside per-user storage limit defined in &lt;code&gt;config.js&lt;/code&gt; You&#39;ll want to set this to a big number like so:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;defaultStorageLimit: Number.MAX_SAFE_INTEGER
-&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;defaultStorageLimit: Number.MAX_SAFE_INTEGER&lt;/p&gt;
 &lt;p&gt;Then there is &lt;code&gt;customize/application_config.js&lt;/code&gt;. If you&#39;re not familiar with &lt;code&gt;/customize/&lt;/code&gt;, you can create this directory and then copy &lt;code&gt;application_config.js&lt;/code&gt; over from the &lt;code&gt;/customize.dist/&lt;/code&gt; directory so it will not be overwritten. The server will try looking in &lt;code&gt;/customize/&lt;/code&gt; first.&lt;/p&gt;
 &lt;p&gt;Inside of &lt;code&gt;application_config.js&lt;/code&gt; you&#39;ll need to update the &lt;code&gt;enablePinLimit&lt;/code&gt; line like so:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;enablePinLimit = false;
-&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;enablePinLimit = false;&lt;/p&gt;
 &lt;p&gt;If you&#39;re using your own CryptPad installation in a business context, please consider contacting &lt;a href=&quot;mailto:sales@cryptpad.fr&quot;&gt;sales@cryptpad.fr&lt;/a&gt; for an on-premises support contract. You&#39;ll get help with upgrades and early information about security issues.&lt;/p&gt;
 &lt;h2&gt;What&#39;s Next&lt;/h2&gt;
 &lt;p&gt;In the coming months, we&#39;re hoping to roll out text coloring based on the authors of the document as well as file upload for PDF and image embedding. Eventually we plan to add Zero Knowledge spreadsheets and workgroups for team collaboration.&lt;/p&gt;
