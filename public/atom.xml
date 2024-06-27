@@ -4,12 +4,86 @@
   <subtitle>News from the end-to-end encrypted collaboration suite</subtitle>
   <link href="https://blog.cryptpad.org/atom.xml" rel="self"/>
   <link href="https://blog.cryptpad.org"/>
-  <updated>2024-05-30T00:00:00Z</updated>
+  <updated>2024-06-27T00:00:00Z</updated>
   <id>https://blog.cryptpad.org</id>
   <author>
     <name>CryptPad Team</name>
     <email>contact@cryptpad.fr</email>
   </author>
+  <entry>
+    <title>June 2024 status</title>
+    <link href="https://blog.cryptpad.org/2024/06/27/status-2024-06/"/>
+    <updated>2024-06-27T00:00:00Z</updated>
+    <id>https://blog.cryptpad.org/2024/06/27/status-2024-06/</id>
+    <summary xml:lang="en" type="html">Summer 2024 release (2024.6.0) and feedbacks from conferences.</summary>
+    <content xml:lang="en" type="html">&lt;h2&gt;🌻 CryptPad Summer release (2024.6.0)&lt;/h2&gt;
+&lt;p&gt;The summer release is in production on &lt;a href=&quot;http://cryptpad.fr/&quot;&gt;CryptPad.fr&lt;/a&gt; and will soon be tagged on
+GitHub.&lt;/p&gt;
+&lt;p&gt;This release primarily introduces our new onboarding system! We also include
+some fixes on accessibility, deployment, OnlyOffice and more.&lt;/p&gt;
+&lt;h3&gt;🔛 Onboarding&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/onboarding-first-screen.png&quot; alt=&quot;Screenshot of the first screen of the CryptPad new onboarding process&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;We added an onboarding process when running CryptPad for the first time to help
+administrators in the process of configuring their own instance.
+Once the first admin account is created, the onboarding guides them to configure
+the name, description, visual identity of the instance, which applications are
+available, and enable extra security features. All these options can be changed
+later on in the administration panel.&lt;/p&gt;
+&lt;p&gt;This will hopefully ease the installation process of new CryptPad instances.&lt;/p&gt;
+&lt;h3&gt;♿ Accessibility&lt;/h3&gt;
+&lt;p&gt;Following our effort in making CryptPad more accessible, some bugs have been
+fixed with this release. In particular, if navigating with your keyboard, you
+can access all the tabbable elements from a document or certain modals.&lt;/p&gt;
+&lt;h2&gt;🎬 CryptPad at FOSS conferences feedbacks&lt;/h2&gt;
+&lt;p&gt;In the past month, Fabrice has been traveling to different free and open-source
+software-related conferences to present multiple aspects of CryptPad:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;🦁 &lt;a href=&quot;https://jdll.org/&quot;&gt;&lt;strong&gt;Journées du logiciel libre&lt;/strong&gt;&lt;/a&gt;. This event took place
+in Lyon, and the topic this year was “popular education”. That’s why a talk
+about CryptPad for research and education was presented: CryptPad was shown as a
+tool to spread information while safeguarding the privacy of the different
+actors: both the writers and the readers. This privacy is guaranteed not only
+against external threats, but also from &lt;em&gt;us&lt;/em&gt; (up to reasonable limits) and our
+open-source policy ensures that anyone can double-check those claims.&lt;br /&gt;
+The talk was overall well-received and people were glad to discover that
+CryptPad is more than just an end-to-end encrypted version of etherpad.&lt;/li&gt;
+&lt;li&gt;🐇 &lt;a href=&quot;https://passageenseine.fr/&quot;&gt;&lt;strong&gt;Pas sage en Seine&lt;/strong&gt;&lt;/a&gt; is a privacy-oriented
+event that covers a large spectrum of topics. This year Fabrice gave a general
+presentation of CryptPad and its recent advances, such as
+&lt;a href=&quot;https://blueprints.cryptpad.org/&quot;&gt;Blueprints&lt;/a&gt; or SSO integration.&lt;br /&gt;
+The public was quite interested and some people asked for a CryptPad
+install-party to test the server installation process using docker, which was
+thus organized. It was however before the integration of the onboarding process.
+However, this initiative was a good opportunity to see how easy it is to install
+CryptPad, and may lead in the future to smoother deployments.&lt;br /&gt;
+The talk was recorded and is available &lt;a href=&quot;https://video.passageenseine.fr/w/mGGr6xiySrRipaXes7zHN8&quot;&gt;here&lt;/a&gt; (in French).&lt;/li&gt;
+&lt;li&gt;🐧 &lt;a href=&quot;https://www.ow2con.org/view/2024/&quot;&gt;&lt;strong&gt;OW2 conference&lt;/strong&gt;&lt;/a&gt;. OW2 is a
+consortium between FOSS actors and they organized a conference near Paris to
+exchange about the new advances in the open-source community. There was also
+some breakout sessions, with one about Research, Science and Education. It was
+there that Fabrice gave a 15 minute speech about CryptPad for research and
+education, where it fitted well in the session. During those two days, Fabrice
+was also present at the CryptPad booth to answer the different questions about
+CryptPad, its usage and, again, the installation process.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This was also relayed in the &lt;a href=&quot;https://xwiki.com/en/Blog/Events-April-to-June/&quot;&gt;XWiki
+blog&lt;/a&gt;, which CryptPad is part
+of. There, you can find links for the different slidedecks.&lt;/p&gt;
+&lt;h2&gt;🔭 Next up&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Andreea will join the team for an internship at the start of the month!&lt;/li&gt;
+&lt;li&gt;We will start planning for the autumn release (&lt;code&gt;2024.9.0&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;Fabrice will finish his conference tour at &lt;a href=&quot;https://2024.pass-the-salt.org/&quot;&gt;Pass the
+Salt&lt;/a&gt; in Lille on Wednesday, July 3rd. He will
+present &lt;a href=&quot;https://cfp.pass-the-salt.org/pts2024/talk/7HUMEU/&quot;&gt;future improvements in
+CryptPad&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    <category term="status update" scheme="https://blog.cryptpad.org/tags/status update/"/>
+    <category term="release" scheme="https://blog.cryptpad.org/tags/release/"/>
+    <category term="presentation" scheme="https://blog.cryptpad.org/tags/presentation/"/>
+    <category term="talk" scheme="https://blog.cryptpad.org/tags/talk/"/>
+  </entry>
   <entry>
     <title>May 2024 status</title>
     <link href="https://blog.cryptpad.org/2024/05/30/status-2024-05/"/>
@@ -2416,7 +2490,7 @@ We do this with the following command:&lt;/p&gt;
 &lt;p&gt;The new site will include a public instance list, new pricing for hosted instances, and pages tailored to various sectors such as NGOs, education, and enterprise.&lt;/p&gt;
 &lt;p&gt;We are planning to include testimonials on the site. If you use CryptPad and have a few minutes to share some words of support using &lt;a href=&quot;https://cryptpad.fr/form/#/2/form/view/1NDX7MEkhzNz1FCrcjCxmvjgIj24QjWNncZygR60Ch8/&quot;&gt;our new survey&lt;/a&gt;, that would be much appreciated.&lt;/p&gt;
 &lt;h2&gt;Recent and upcoming talks&lt;/h2&gt;
-&lt;p&gt;Ludovic presented CryptPad at the &lt;a href=&quot;https://www.campus-du-libre.org/prog.php&quot;&gt;Campus du Libre&lt;/a&gt; on 6th November in Lyon. We don&#39;t have video (yet) but the &lt;a href=&quot;https://www.campus-du-libre.org/Supports/CampusDuLibre2021-CryptPad.pdf&quot;&gt;slides are online&lt;/a&gt; (in French).&lt;/p&gt;
+&lt;p&gt;Ludovic presented CryptPad at the &lt;a href=&quot;https://www.campus-du-libre.org/prog.php&quot;&gt;Campus du Libre&lt;/a&gt; on 6th November in Lyon. We don&#39;t have video (yet) but the &lt;a href=&quot;https://www.campus-du-libre.org/2021/Supports/CampusDuLibre2021-CryptPad.pdf&quot;&gt;slides are online&lt;/a&gt; (in French).&lt;/p&gt;
 &lt;p&gt;David will present CryptPad to a healthcare and free software audience on December 10th as part of &lt;a href=&quot;https://www.gnuhealthcon.org/2021/&quot;&gt;GNU Health Con 2021&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/GHcon.png&quot; alt=&quot;Promotion image for CryptPad at GNU Health Con 2012&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;That&#39;s it for this month. We are looking forward to launching the new OnlyOffice editors, you will probably read about that in the next status update.&lt;/p&gt;
