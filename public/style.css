@@ -3391,3 +3391,9 @@ article.post blockquote {
 .article-pagination a .title {
   color: var(--col-link);
 }
+section.footnotes {
+  font-size: 0.75em;
+}
+section.footnotes ol li::before {
+  content: unset;
+}
