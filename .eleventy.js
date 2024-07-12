@@ -1,6 +1,7 @@
 
 const markdownIt = require("markdown-it");
 const markdownItAttrs = require('markdown-it-attrs')
+const markdownItFootnote = require("markdown-it-footnote");
 const { DateTime } = require("luxon");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
@@ -29,7 +30,21 @@ module.exports = (function(eleventyConfig) {
       linkify: true
     }
 
-    const markdownLib = markdownIt(markdownItOptions).use(markdownItAttrs)
+    const markdownLib = markdownIt(markdownItOptions)
+      .use(markdownItAttrs)
+      .use(markdownItFootnote);
+
+
+    markdownLib.renderer.rules.footnote_caption = (tokens, idx) => {
+      let n = Number(tokens[idx].meta.id + 1).toString();
+
+      if (tokens[idx].meta.subId > 0) {
+        n += ":" + tokens[idx].meta.subId;
+      }
+
+      return n;
+    };
+
     eleventyConfig.setLibrary('md', markdownLib)
 
     // Debug filter
