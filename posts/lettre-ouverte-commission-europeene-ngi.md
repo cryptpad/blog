@@ -14,7 +14,7 @@ tags:
 
 Dans le cadre du projet CryptPad, le soutien des programmes Next Generation Internet (NGI) a été crucial au développement de notre produit open-source, ceci au sein d'un marché très compétitif et en grande majorité financé par investissements à capital-risque.
 
-Les équipes de développement CryptPad et XWiki SAS soutiennent cette [lettre ouverte](https://pad.public.cat/lettre-NCP-NGI) en faveur des programmes NGI.
+Les équipes de développement CryptPad et XWiki SAS soutiennent cette [lettre ouverte](https://pad.public.cat/lettre-NCP-NGI) publiée initialement par les [petites singularités](https://ps.zoethical.org/pub/lettre-publique-aux-ncp-au-sujet-de-ngi/) en faveur des programmes NGI.
 
 
 ## Lettre ouverte à la Commission Européenne
