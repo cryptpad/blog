@@ -12,6 +12,11 @@ tags:
   - ngi
 ---
 
+Dans le cadre du projet CryptPad, le soutien des programmes Next Generation Internet (NGI) a été crucial au développement de notre produit open-source, ceci au sein d'un marché très compétitif et en grande majorité financé par investissements à capital-risque.
+
+Les équipes de développement CryptPad et XWiki SAS soutiennent cette [lettre ouverte](https://pad.public.cat/lettre-NCP-NGI) en faveur des programmes NGI.
+
+
 ## Lettre ouverte à la Commission Européenne
 
 Depuis 2020, les programmes Next Generation Internet (NGI), sous-branche du programme Horizon Europe de la Commission Européenne financent en cascade (via les appels de NLNet) le logiciel libre en Europe. Cette année, à la lecture du brouillon du Programme de Travail de Horizon Europe détaillant les programmes de financement de la commission européenne pour 2025, nous nous apercevons que les programmes Next Generation Internet ne sont plus mentionnés dans le Cluster 4.
@@ -35,6 +40,3 @@ Dans ces perspectives, nous vous demandons urgemment de réclamer la préservati
 
 [^1]: Tels que définis par Horizon Europe, les États Membres élargis sont la Bulgarie, la Croatie, Chypre, la République Tchèque, l’Estonie, la Grèce, la Hongrie, la Lettonie, la Lithuanie, Malte, la Pologne, le Portugal, la Roumanie, la Slovaquie et la Slovénie. Les pays associés élargies (sous conditions d’un accord d’association) l’Albanie, l’Arménie, la Bosnie Herzégovine, les Iles Feroé, la Géorgie, le Kosovo, la Moldavie, le Monténégro, le Maroc, la Macédoine du Nord, la Serbie, la Tunisie, la Turquie et l’Ukraine. Les régions élargies d’outre-mer sont: la Guadeloupe, la Guyane Française, la Martinique, La Réunion, Mayotte, Saint-Martin, Les Açores, Madère, les Iles Canaries.
 
-Dans le cadre du projet CryptPad, le soutien des programmes NGI a été crucial dans le développement de notre produit, ceci au sein d'un marché très compétitif et en grande majorité financé par investissements à capital-risque.
-
-L'équipe de développement CryptPad et XWiki SAS soutiennent cette [lettre ouverte](https://pad.public.cat/lettre-NCP-NGI).
