@@ -4,12 +4,54 @@
   <subtitle>News from the end-to-end encrypted collaboration suite</subtitle>
   <link href="https://blog.cryptpad.org/atom.xml" rel="self"/>
   <link href="https://blog.cryptpad.org"/>
-  <updated>2024-07-12T00:00:00Z</updated>
+  <updated>2024-07-29T00:00:00Z</updated>
   <id>https://blog.cryptpad.org</id>
   <author>
     <name>CryptPad Team</name>
     <email>contact@cryptpad.fr</email>
   </author>
+  <entry>
+    <title>July 2024 status</title>
+    <link href="https://blog.cryptpad.org/2024/07/29/status-2024-07/"/>
+    <updated>2024-07-29T00:00:00Z</updated>
+    <id>https://blog.cryptpad.org/2024/07/29/status-2024-07/</id>
+    <summary xml:lang="en" type="html">Bugfix release (2024.6.1), welcome Andreea, and conference recap</summary>
+    <content xml:lang="en" type="html">&lt;h2&gt;🚀 Bugfix release: 2024.6.1&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/cryptpad/cryptpad/releases/tag/2024.6.1&quot;&gt;CryptPad 2024.6.1&lt;/a&gt; is live on &lt;a href=&quot;http://cryptapd.fr/&quot;&gt;Cryptapd.fr&lt;/a&gt; and available on Github since a couple of days.&lt;/p&gt;
+&lt;p&gt;This is a bugfix release addressing some issues reported by users:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Issues with calendar events not displaying without a page refresh&lt;/li&gt;
+&lt;li&gt;OnlyOffice documents not opening&lt;/li&gt;
+&lt;li&gt;Code/Markdown documents not printing&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We also took the opportunity to enable new translations from the community: Español cubano, اَلْعَرَبِيَّةُ Arabic, Svenska, and to update the existing languages.&lt;/p&gt;
+&lt;h2&gt;🧑‍🔬 Welcome Andreea&lt;/h2&gt;
+&lt;p&gt;Andreea joined the team at the start of the month for a summer internship as part of the &lt;a href=&quot;https://stagiipebune.ro/home/&quot;&gt;Stagii pe Bune&lt;/a&gt; program in Romania. She is working with Wolfgang on our OnlyOffice integration.&lt;/p&gt;
+&lt;h2&gt;🧂 Fabrice at Pass the Salt&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/53861691161_65fc0429de_k.jpg&quot; alt=&quot;Fabrice presenting at Pass the Salt 2024&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Fabrice presenting at Pass the Salt 2024. Photo &lt;a href=&quot;https://www.flickr.com/photos/yobibe/53861691161/in/album-72177720318671117/&quot;&gt;CC-BY-SA @julioloayzam&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;At the beginning of the month, Fabrice presented &lt;strong&gt;future advances&lt;/strong&gt; in
+CryptPad at Pass the Salt 2024. It is a security conference that took place
+in Lille and covering a large spectrum of topics, from hardware attacks to
+letsencrypt emergency fallbacks while showing some reverse engineering
+explorations.&lt;/p&gt;
+&lt;p&gt;The talk, well received by the attendees, presented the way CryptPad is built
+around cryptography to ensure the data and identity privacy of its users. It
+then continued on showing the results of the NLnet NGI0
+&lt;a href=&quot;https://blueprints.cryptpad.org/&quot;&gt;blueprints&lt;/a&gt; project that finished in May
+this year.&lt;/p&gt;
+&lt;p&gt;📹 A recording of the talk is &lt;a href=&quot;https://peertube.xwiki.com/w/bp8H35Ys3QgQF6FzLFmGth&quot;&gt;available&lt;/a&gt;, and more can be found in our &lt;a href=&quot;https://peertube.xwiki.com/c/cryptpad_channel/videos&quot;&gt;peertube&lt;/a&gt; channel.&lt;/p&gt;
+&lt;iframe title=&quot;Pass The Salt 2024: The Future Of CryptPad, An End-to-End Encrypted Collaborative Office Suite&quot; width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://peertube.xwiki.com/videos/embed/54363e44-b299-43be-97ce-565bcfe0ae9e&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; sandbox=&quot;allow-same-origin allow-scripts allow-popups allow-forms&quot;&gt;&lt;/iframe&gt;
+&lt;h2&gt;🔭 Up Next&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;We are working towards the 🍁 Autumn release (&lt;code&gt;2024.9.0&lt;/code&gt;) that we expect for late September (we will confirm the exact date, likely to be before or after the &lt;a href=&quot;https://download.xwiki.com/en/summit-2024/&quot;&gt;XWiki Summit&lt;/a&gt; and company-wide seminar happening at that time)&lt;/li&gt;
+&lt;li&gt;The team is working on some experimental R&amp;amp;D prototypes to improve CryptPad&#39;s performance. We will detail these in upcoming blog posts and releases&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    <category term="status update" scheme="https://blog.cryptpad.org/tags/status update/"/>
+    <category term="release" scheme="https://blog.cryptpad.org/tags/release/"/>
+    <category term="talk" scheme="https://blog.cryptpad.org/tags/talk/"/>
+  </entry>
   <entry>
     <title>Lettre ouverte à la Commission Européenne</title>
     <link href="https://blog.cryptpad.org/2024/07/12/lettre-ouverte-commission-europeene-ngi/"/>
