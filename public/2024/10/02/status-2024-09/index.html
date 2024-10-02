@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+
+    <title>September 2024 status | CryptPad Blog</title> 
+    
+
+    
+    
+    <meta property="og:type" content="webpage">
+    <meta property="og:title" content="September 2024 status">
+    <meta property="og:url" content="http://blog.cryptpad.org/2024/10/02/status-2024-09/">
+    <meta property="og:page_name" content="September 2024 status">
+    <meta property="og:locale" content="default">
+    <meta property="og:image" content="http://blog.cryptpad.org/images/penpot-colors.png">
+    <meta property="og:description" content="Autumn release (2024.9.0), Andreea joisn the team, XWiki seminar hackathon">
+    <meta name="twitter:card" content="Autumn release (2024.9.0), Andreea joisn the team, XWiki seminar hackathon">
+    <meta name="twitter:title" content="September 2024 status">
+
+
+
+    <link rel="alternate" href="/atom.xml" title="CryptPad Blog" type="application/atom+xml">
+
+    <link rel="icon" href="/theme/favicon.png">
+
+
+</head>
+
+<body>
+    <main class="container">
+        <header>
+            
+    <a href="/" class="back-home">
+        <i class="fa fa-arrow-left" aria-hidden="true"></i> <i class="fa fa-home" aria-hidden="true"></i> Homepage
+    </a>
+
+            <a href="/">
+                <img class="cp-logo" src="/theme/CryptPad_logo.svg" aria-hidden="true" alt="">
+                <h1>CryptPad Blog</h1>
+            </a>
+        </header>
+        <section id="content">
+            
+    <article class="post" lang="en">
+        <section class="header">
+            <h1>September 2024 status</h1>
+            <p class="meta">
+                2 Oct 2024
+                
+                    
+                        
+                        
+                        
+                        -  David Benqué
+                        
+                    
+                
+                    
+                    
+            </p>
+            <div class="article-tags">
+    
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        <ul class="tags" aria-label="Tags">
+        
+            <li><a class="tag" href="/tags/status-update">status update</a></li>
+        
+            <li><a class="tag" href="/tags/release">release</a></li>
+        
+            <li><a class="tag" href="/tags/prototypes">prototypes</a></li>
+        
+            <li><a class="tag" href="/tags/team">team</a></li>
+        
+        </ul>
+    
+</div>
+        </section>
+        <p>We are back to our regular monthly blog post schedule after taking a break in August. Some of the team got to meet IRL during XWiki's annual seminar in France last week, right after XWiki's <a href="https://xwiki.com/en/Blog/XWiki-20th-anniversary/">🎂 20th birthday party</a>.</p>
+<h2>🚀 🍁 Autumn release 2024.9.0</h2>
+<p>We have just wrapped up our <a href="https://github.com/cryptpad/cryptpad/releases/tag/2024.9.0">Autumn release (2024.9.0)</a> which is focused on server performance improvements. One of them is a new option to swap some of the cryptography used by CryptPad (<a href="https://www.npmjs.com/package/tweetnacl">TweetNaCl</a>) with a more efficient replacement (<a href="https://www.npmjs.com/package/sodium-native">Sodium</a>). This is an <a href="https://github.com/cryptpad/cryptpad-sodium-plugin">optional plugin</a> geared towards the performance needs of larger instances, currently in production on our flagship <a href="http://cryptpad.fr">cryptpad.fr</a>.</p>
+<p>We will write a detailed tutorial blog post and documentation in the coming days.</p>
+<h2>🧑‍🔬 Andreea joins the team</h2>
+<p>We are delighted to announce that after a very productive internship, Andreea will be joining the team part-time as she completes her studies. She will continue working on improving our OnlyOffice integration in collaboration with Wolfgang.</p>
+<h2>🧰 XWiki seminar Hackathon 2024</h2>
+<p>The annual XWiki seminar always includes a hackathon day where teams work on things that they would not normally spend time on. This year the team worked on the following projects:</p>
+<h3>Tiptap application prototype</h3>
+<p>We tested the potential of <a href="https://tiptap.dev/">Tiptap</a> to power our Rich Text application. We are looking for a replacement to CKEditor which reached <a href="https://ckeditor.com/docs/ckeditor4/latest/index.html">End of Life in June 2023</a>. We managed a basic integration in one day that allowed to take stock of the work that would be necessary to build this into a full-fledged application.</p>
+<h3>Remove Bootstrap</h3>
+<p>Given recent security advisories and the fact that we override most of Bootstrap styles anyway, we wanted to know if we could remove this big dependency from our code-base. It turns out that although we don't benefit a lot from Bootstrap features, its styles still cascade to quite a few elements in the CryptPad user-interface and would require significant work to remove.</p>
+<h3>Penpot design system</h3>
+<p>XWiki now self-hosts <a href="https://penpot.app/">Penpot</a>—an open-source alternative to Figma—as an internal tool. Our XWiki colleague Pauline started a design system library to make the creation of future mockups easier.</p>
+<p><img src="/images/penpot-colors.png" alt="color swatches in the CryptPad design system made with Penpot"></p>
+<h2>📼 JDLL videos are online</h2>
+<p>Fabrice presented at the <a href="https://jdll.org/">Journées du Logiciel Libre</a> in Lyon, France earlier this year. <a href="https://videos-libr.es/w/26y4Nsvt53KU45jVPSDk4B">The video of his talk</a> is now available.</p>
+<iframe title="CryptPad : une suite bureautique pour la diffusion sécurisée des connaissances - Fabrice Mouhartem - JdLL2024" width="560" height="315" src="https://videos-libr.es/videos/embed/08df9e5c-68e6-41c4-8392-8a3dbeb28a05" frameborder="0" allowfullscreen="" sandbox="allow-same-origin allow-scripts allow-popups allow-forms"></iframe>
+<h2>🔭 Next up</h2>
+<ul>
+<li>Starting work on the Winter release 2024.12.0</li>
+<li>Launching a &quot;cloud demo&quot; service for managed CryptPad instances</li>
+</ul>
+
+    </article>
+
+    <nav class="article-pagination" aria-label="Pagination">
+        
+        
+            <a href="/2024/07/29/status-2024-07/">Older: <span class="title">July 2024 status</span></a>
+        
+    </nav>
+
+        </section>
+        
+<section id="top-tags" class="post">
+
+            <h3><i class="fa fa-tags" aria-hidden="true"></i> Top Tags</h3>
+<ul>
+
+    <li>
+        <a class="tag" href="/tags/status-update">status update</a><span class="count">36</span></li>
+
+    <li>
+        <a class="tag" href="/tags/funding">funding</a><span class="count">17</span></li>
+
+    <li>
+        <a class="tag" href="/tags/ngi">ngi</a><span class="count">12</span></li>
+
+    <li>
+        <a class="tag" href="/tags/security">security</a><span class="count">12</span></li>
+
+    <li>
+        <a class="tag" href="/tags/research">research</a><span class="count">11</span></li>
+
+    <li>
+        <a class="tag" href="/tags/release">release</a><span class="count">10</span></li>
+
+    <li>
+        <a class="tag" href="/tags/roadmap">roadmap</a><span class="count">10</span></li>
+
+    <li>
+        <a class="tag" href="/tags/team">team</a><span class="count">10</span></li>
+
+    <li>
+        <a class="tag" href="/tags/donate">donate</a><span class="count">8</span></li>
+
+    <li>
+        <a class="tag" href="/tags/open-source">open-source</a><span class="count">7</span></li>
+
+</ul>
+        </section>
+        
+    <section id="social" class="post">
+
+            <h3><i class="fa fa-link" aria-hidden="true"></i> Links</h3>
+<ul>
+    <li>
+        <a href="https://cryptpad.org">
+            <i aria-hidden="true" class="fa fa-globe"></i>Project website
+        </a>
+    </li>
+    <li>
+        <a href="https://opencollective.com/cryptpad/contribute">
+            <i aria-label="OpenCollective" class="fa fa-open-collective"></i>Donate
+        </a>
+    </li>
+</ul>
+<ul>
+    <li>
+        <a href="https://forum.cryptpad.org">
+            <i aria-hidden="true" class="fa fa-bullhorn"></i>Forum
+        </a>
+    </li>
+    <li>
+        <a href="https://matrix.to/#/#cryptpad:matrix.xwiki.com">
+            <i aria-hidden="true" class="fa fa-matrix-org"></i>Chat (Matrix)
+        </a>
+    </li>
+    <li>
+        <a rel="me" href="https://fosstodon.org/@cryptpad">
+            <i aria-hidden="true" class="fa fa-mastodon"></i>Mastodon
+        </a>
+    </li>
+    <li>
+        <a href="https://peertube.xwiki.com/c/cryptpad_channel/videos">
+            <i aria-hidden="true" class="fa fa-peertube"></i>Peertube
+        </a>
+    </li>
+    <li>
+        <a href="https://pixelfed.social/cryptpad_design">
+            <i aria-hidden="true" class="fa fa-pixelfed"></i>Pixelfed
+        </a>
+    </li>
+</ul>
+<ul>
+    <li>
+        <a href="/atom.xml">
+            <i aria-hidden="true" class="fa fa-rss"></i>RSS Feed
+        </a>
+    </li>
+</ul>
+        </section>
+    </main>
+</body>
+
+</html>

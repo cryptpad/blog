@@ -4,12 +4,47 @@
   <subtitle>News from the end-to-end encrypted collaboration suite</subtitle>
   <link href="https://blog.cryptpad.org/atom.xml" rel="self"/>
   <link href="https://blog.cryptpad.org"/>
-  <updated>2024-07-29T00:00:00Z</updated>
+  <updated>2024-10-02T00:00:00Z</updated>
   <id>https://blog.cryptpad.org</id>
   <author>
     <name>CryptPad Team</name>
     <email>contact@cryptpad.fr</email>
   </author>
+  <entry>
+    <title>September 2024 status</title>
+    <link href="https://blog.cryptpad.org/2024/10/02/status-2024-09/"/>
+    <updated>2024-10-02T00:00:00Z</updated>
+    <id>https://blog.cryptpad.org/2024/10/02/status-2024-09/</id>
+    <summary xml:lang="en" type="html">Autumn release (2024.9.0), Andreea joisn the team, XWiki seminar hackathon</summary>
+    <content xml:lang="en" type="html">&lt;p&gt;We are back to our regular monthly blog post schedule after taking a break in August. Some of the team got to meet IRL during XWiki&#39;s annual seminar in France last week, right after XWiki&#39;s &lt;a href=&quot;https://xwiki.com/en/Blog/XWiki-20th-anniversary/&quot;&gt;🎂 20th birthday party&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;🚀 🍁 Autumn release 2024.9.0&lt;/h2&gt;
+&lt;p&gt;We have just wrapped up our &lt;a href=&quot;https://github.com/cryptpad/cryptpad/releases/tag/2024.9.0&quot;&gt;Autumn release (2024.9.0)&lt;/a&gt; which is focused on server performance improvements. One of them is a new option to swap some of the cryptography used by CryptPad (&lt;a href=&quot;https://www.npmjs.com/package/tweetnacl&quot;&gt;TweetNaCl&lt;/a&gt;) with a more efficient replacement (&lt;a href=&quot;https://www.npmjs.com/package/sodium-native&quot;&gt;Sodium&lt;/a&gt;). This is an &lt;a href=&quot;https://github.com/cryptpad/cryptpad-sodium-plugin&quot;&gt;optional plugin&lt;/a&gt; geared towards the performance needs of larger instances, currently in production on our flagship &lt;a href=&quot;http://cryptpad.fr/&quot;&gt;cryptpad.fr&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;We will write a detailed tutorial blog post and documentation in the coming days.&lt;/p&gt;
+&lt;h2&gt;🧑‍🔬 Andreea joins the team&lt;/h2&gt;
+&lt;p&gt;We are delighted to announce that after a very productive internship, Andreea will be joining the team part-time as she completes her studies. She will continue working on improving our OnlyOffice integration in collaboration with Wolfgang.&lt;/p&gt;
+&lt;h2&gt;🧰 XWiki seminar Hackathon 2024&lt;/h2&gt;
+&lt;p&gt;The annual XWiki seminar always includes a hackathon day where teams work on things that they would not normally spend time on. This year the team worked on the following projects:&lt;/p&gt;
+&lt;h3&gt;Tiptap application prototype&lt;/h3&gt;
+&lt;p&gt;We tested the potential of &lt;a href=&quot;https://tiptap.dev/&quot;&gt;Tiptap&lt;/a&gt; to power our Rich Text application. We are looking for a replacement to CKEditor which reached &lt;a href=&quot;https://ckeditor.com/docs/ckeditor4/latest/index.html&quot;&gt;End of Life in June 2023&lt;/a&gt;. We managed a basic integration in one day that allowed to take stock of the work that would be necessary to build this into a full-fledged application.&lt;/p&gt;
+&lt;h3&gt;Remove Bootstrap&lt;/h3&gt;
+&lt;p&gt;Given recent security advisories and the fact that we override most of Bootstrap styles anyway, we wanted to know if we could remove this big dependency from our code-base. It turns out that although we don&#39;t benefit a lot from Bootstrap features, its styles still cascade to quite a few elements in the CryptPad user-interface and would require significant work to remove.&lt;/p&gt;
+&lt;h3&gt;Penpot design system&lt;/h3&gt;
+&lt;p&gt;XWiki now self-hosts &lt;a href=&quot;https://penpot.app/&quot;&gt;Penpot&lt;/a&gt;—an open-source alternative to Figma—as an internal tool. Our XWiki colleague Pauline started a design system library to make the creation of future mockups easier.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/penpot-colors.png&quot; alt=&quot;color swatches in the CryptPad design system made with Penpot&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;📼 JDLL videos are online&lt;/h2&gt;
+&lt;p&gt;Fabrice presented at the &lt;a href=&quot;https://jdll.org/&quot;&gt;Journées du Logiciel Libre&lt;/a&gt; in Lyon, France earlier this year. &lt;a href=&quot;https://videos-libr.es/w/26y4Nsvt53KU45jVPSDk4B&quot;&gt;The video of his talk&lt;/a&gt; is now available.&lt;/p&gt;
+&lt;iframe title=&quot;CryptPad : une suite bureautique pour la diffusion sécurisée des connaissances - Fabrice Mouhartem - JdLL2024&quot; width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://videos-libr.es/videos/embed/08df9e5c-68e6-41c4-8392-8a3dbeb28a05&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; sandbox=&quot;allow-same-origin allow-scripts allow-popups allow-forms&quot;&gt;&lt;/iframe&gt;
+&lt;h2&gt;🔭 Next up&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Starting work on the Winter release 2024.12.0&lt;/li&gt;
+&lt;li&gt;Launching a &amp;quot;cloud demo&amp;quot; service for managed CryptPad instances&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    <category term="status update" scheme="https://blog.cryptpad.org/tags/status update/"/>
+    <category term="release" scheme="https://blog.cryptpad.org/tags/release/"/>
+    <category term="prototypes" scheme="https://blog.cryptpad.org/tags/prototypes/"/>
+    <category term="team" scheme="https://blog.cryptpad.org/tags/team/"/>
+  </entry>
   <entry>
     <title>July 2024 status</title>
     <link href="https://blog.cryptpad.org/2024/07/29/status-2024-07/"/>
