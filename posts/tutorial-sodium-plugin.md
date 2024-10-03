@@ -14,7 +14,7 @@ tags:
 
 <figure>
 
-![Cover image: Salt mine of Turda, Romania. ](/images/salt-mine-turda.jpg "Salt mine of Turda")
+![Cover image: Salt mine of Turda, Romania.](/images/salt-mine-turda.jpg "Cover Image: Salt mine of Turda")
 <figcaption>
 Salt mine of Turda, Romania. From <a href="https://commons.wikimedia.org/wiki/File:Roumanie_Mine_de_sel_de_Turda_2019_5.jpg">Wikimedia Commons</a>
 under CC0 license.
