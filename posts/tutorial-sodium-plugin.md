@@ -56,7 +56,7 @@ sane defaults for reasonable-sized instances, while making possible to easily
 swap the cryptographic library used by the server. The goal of this tutorial is
 to show how to do it in practice.
 
-## ⚙️ Installing the plugin
+## 🔩 Installing the plugin
 
 1. To install the plugin, the first step is to download it at the right place.
 From your CryptPad installation directory:
