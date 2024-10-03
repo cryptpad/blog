@@ -78,6 +78,8 @@ npm ci
 And that’s it, your server should use its native implementation of _libsodium_
 now.
 
+⚠️ If you omit step 2, the server will silently fall back to `TweetNaCl`.
+
 ## 🔧 Use another library?
 
 For signatures, CryptPad uses the EdDSA algorithm over the
