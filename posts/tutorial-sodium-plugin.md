@@ -1,5 +1,5 @@
 ---
-title: Changing the cryptography library in CryptPad server
+title: Changing the cryptography library in your CryptPad server
 date: 2024-10-03
 author: "Fabrice Mouhartem"
 cover: /images/salt-mine-turda.jpg
