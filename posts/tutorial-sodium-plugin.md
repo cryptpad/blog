@@ -38,13 +38,13 @@ to _denial of service_ attacks.
 
 Well, that’s good, but it doesn’t help us with our load issue.
 However, looking at how CryptPad is designed, we remark that both the server and
-the client are written in _javascript_.
+the client are written in javascript.
 This allows us to share common libraries between the server and the client·
 Thus it guarantees the same behaviour for both for fundamental building blocks.
 It also stands true for the cryptographic library that is used to perform those
 essential operations for CryptPad.
 [TweetNaCl](https://github.com/dchest/tweetnacl-js) has been picked as a
-lightweight full-_javascript_ library to ensure browser-portability for the
+lightweight full-javascript library to ensure browser-portability for the
 client.
 However, this portability constraint is not relevant for servers, and the
 lack of low-level optimisation is actually what cause of the bottleneck we
@@ -75,7 +75,8 @@ npm ci
 
 3. Restart your CryptPad server.
 
-And that’s it, your server should use its native implementation of libsodium now.
+And that’s it, your server should use its native implementation of _libsodium_
+now.
 
 ## 🔧 Use another library?
 
