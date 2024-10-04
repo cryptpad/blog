@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+
+    <title>Changing the cryptography library in your CryptPad server | CryptPad Blog</title> 
+    
+
+    
+    
+    <meta property="og:type" content="webpage">
+    <meta property="og:title" content="Changing the cryptography library in your CryptPad server">
+    <meta property="og:url" content="http://blog.cryptpad.org/2024/10/03/tutorial-sodium-plugin/">
+    <meta property="og:page_name" content="Changing the cryptography library in your CryptPad server">
+    <meta property="og:locale" content="default">
+    <meta property="og:image" content="http://blog.cryptpad.org/images/salt-mine-turda.jpg">
+    <meta property="og:description" content="A tutorial to explain why and how to change the backend cryptography library on your cryptpad server">
+    <meta name="twitter:card" content="A tutorial to explain why and how to change the backend cryptography library on your cryptpad server">
+    <meta name="twitter:title" content="Changing the cryptography library in your CryptPad server">
+
+
+
+    <link rel="alternate" href="/atom.xml" title="CryptPad Blog" type="application/atom+xml">
+
+    <link rel="icon" href="/theme/favicon.png">
+
+
+</head>
+
+<body>
+    <main class="container">
+        <header>
+            
+    <a href="/" class="back-home">
+        <i class="fa fa-arrow-left" aria-hidden="true"></i> <i class="fa fa-home" aria-hidden="true"></i> Homepage
+    </a>
+
+            <a href="/">
+                <img class="cp-logo" src="/theme/CryptPad_logo.svg" aria-hidden="true" alt="">
+                <h1>CryptPad Blog</h1>
+            </a>
+        </header>
+        <section id="content">
+            
+    <article class="post" lang="en">
+        <section class="header">
+            <h1>Changing the cryptography library in your CryptPad server</h1>
+            <p class="meta">
+                3 Oct 2024
+                
+                    
+                        - Fabrice Mouhartem
+                    
+                
+                    
+                    
+            </p>
+            <div class="article-tags">
+    
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        <ul class="tags" aria-label="Tags">
+        
+            <li><a class="tag" href="/tags/tutorials">tutorials</a></li>
+        
+            <li><a class="tag" href="/tags/administration">administration</a></li>
+        
+            <li><a class="tag" href="/tags/configuration">configuration</a></li>
+        
+            <li><a class="tag" href="/tags/performance">performance</a></li>
+        
+            <li><a class="tag" href="/tags/security">security</a></li>
+        
+        </ul>
+    
+</div>
+        </section>
+        <figure>
+<p><img src="/images/salt-mine-turda.jpg" alt="Cover image: Salt mine of Turda, Romania." title="Cover Image: Salt mine of Turda"></p>
+<figcaption>
+Salt mine of Turda, Romania. From <a href="https://commons.wikimedia.org/wiki/File:Roumanie_Mine_de_sel_de_Turda_2019_5.jpg">Wikimedia Commons</a>
+under CC0 license.
+</figcaption>
+</figure>
+<p>⚠️ This tutorial is intended for system administrators. However, the introduction
+can be of interest to anyone who is curious about the inner working of CryptPad.</p>
+<h2>🧑‍🏫 Introduction</h2>
+<p>When running CryptPad on your server, you may notice that under load, some
+CryptPad processes are consuming a lot of computational resources. So far, there
+is nothing surprising. However, doing a bit of profiling about these
+computations, we noticed that the heavy lifting was done by signature
+verifications. The reason being that the server proceeds with data validation
+before storage to avoid being spammed by false patches. Even if they won’t
+affect the final state of the file as they won’t be displayed with an invalid
+signature, they still need to be processed by the clients, potentially allowing
+to <em>denial of service</em> attacks.</p>
+<p>Well, that’s good, but it doesn’t help us with our load issue.
+However, looking at how CryptPad is designed, we remark that both the server and
+the client are written in javascript.
+This allows us to share common libraries between the server and the client·
+Thus it guarantees the same behaviour for both for fundamental building blocks.
+It also stands true for the cryptographic library that is used to perform those
+essential operations for CryptPad.
+<a href="https://github.com/dchest/tweetnacl-js">TweetNaCl</a> has been picked as a
+lightweight full-javascript library to ensure browser-portability for the
+client.
+However, this portability constraint is not relevant for servers, and the
+lack of low-level optimisation is actually what cause of the bottleneck we
+described previously.</p>
+<p>To keep the codebase legible, and as it’s not a problem for small instances, we
+decided to address this problem using CryptPad’s plugin system. Then providing
+sane defaults for reasonable-sized instances, while making possible to easily
+swap the cryptographic library used by the server. The goal of this tutorial is
+to show how to do it in practice.</p>
+<h2>🔩 Installing the plugin</h2>
+<ol>
+<li>To install the plugin, the first step is to download it at the right place.
+From your CryptPad installation directory:</li>
+</ol>
+<pre class="language-bash"><code class="language-bash"><span class="token builtin class-name">cd</span> lib/plugins<br><span class="token function">git</span> clone https://github.com/cryptpad/cryptpad-sodium-plugin.git sodium</code></pre>
+<ol start="2">
+<li>Then, install its dependencies:</li>
+</ol>
+<pre class="language-bash"><code class="language-bash"><span class="token builtin class-name">cd</span> sodium/<br><span class="token function">npm</span> ci</code></pre>
+<ol start="3">
+<li>Restart your CryptPad server.</li>
+</ol>
+<p>And that’s it, your server should use its native implementation of <em>libsodium</em>
+now.</p>
+<p>⚠️ If step 2 is omitted, the server would silently fall back to <code>TweetNaCl</code>.</p>
+<h2>🔧 Use another library?</h2>
+<p>For signatures, CryptPad uses the EdDSA algorithm over the
+<a href="https://en.wikipedia.org/wiki/EdDSA#Ed25519"><code>ed25519</code></a> curve.
+If you want to run another implementation of it, you can make a copy of our
+<a href="https://github.com/cryptpad/cryptpad-sodium-plugin/tree/main"><code>cryptpad-sodium-plugin</code></a>
+plugin and edit the
+<a href="https://github.com/cryptpad/cryptpad-sodium-plugin/blob/main/index.js"><code>index.js</code></a>
+file to provide another implementation for the <code>open</code> (combined mode
+verification) and <code>detachedVerify</code> (detached mode verification) functions.</p>
+<p>Please note that if you do that and run it in production, under the
+<a href="https://www.gnu.org/licenses/agpl-3.0.en.html">AGPL-3</a> licence, you are to make
+the source code of the plugin available.
+Feel free to contact us at <a href="mailto:contact@cryptpad.org">contact@cryptpad.org</a> if you want us to advertise
+your back-end crypto plugin as a community contribution 🙂</p>
+
+    </article>
+
+    <nav class="article-pagination" aria-label="Pagination">
+        
+        
+            <a href="/2024/10/02/status-2024-09/">Older: <span class="title">September 2024 status</span></a>
+        
+    </nav>
+
+        </section>
+        
+<section id="top-tags" class="post">
+
+            <h3><i class="fa fa-tags" aria-hidden="true"></i> Top Tags</h3>
+<ul>
+
+    <li>
+        <a class="tag" href="/tags/status-update">status update</a><span class="count">36</span></li>
+
+    <li>
+        <a class="tag" href="/tags/funding">funding</a><span class="count">17</span></li>
+
+    <li>
+        <a class="tag" href="/tags/security">security</a><span class="count">13</span></li>
+
+    <li>
+        <a class="tag" href="/tags/ngi">ngi</a><span class="count">12</span></li>
+
+    <li>
+        <a class="tag" href="/tags/research">research</a><span class="count">11</span></li>
+
+    <li>
+        <a class="tag" href="/tags/release">release</a><span class="count">10</span></li>
+
+    <li>
+        <a class="tag" href="/tags/roadmap">roadmap</a><span class="count">10</span></li>
+
+    <li>
+        <a class="tag" href="/tags/team">team</a><span class="count">10</span></li>
+
+    <li>
+        <a class="tag" href="/tags/donate">donate</a><span class="count">8</span></li>
+
+    <li>
+        <a class="tag" href="/tags/open-source">open-source</a><span class="count">7</span></li>
+
+</ul>
+        </section>
+        
+    <section id="social" class="post">
+
+            <h3><i class="fa fa-link" aria-hidden="true"></i> Links</h3>
+<ul>
+    <li>
+        <a href="https://cryptpad.org">
+            <i aria-hidden="true" class="fa fa-globe"></i>Project website
+        </a>
+    </li>
+    <li>
+        <a href="https://opencollective.com/cryptpad/contribute">
+            <i aria-label="OpenCollective" class="fa fa-open-collective"></i>Donate
+        </a>
+    </li>
+</ul>
+<ul>
+    <li>
+        <a href="https://forum.cryptpad.org">
+            <i aria-hidden="true" class="fa fa-bullhorn"></i>Forum
+        </a>
+    </li>
+    <li>
+        <a href="https://matrix.to/#/#cryptpad:matrix.xwiki.com">
+            <i aria-hidden="true" class="fa fa-matrix-org"></i>Chat (Matrix)
+        </a>
+    </li>
+    <li>
+        <a rel="me" href="https://fosstodon.org/@cryptpad">
+            <i aria-hidden="true" class="fa fa-mastodon"></i>Mastodon
+        </a>
+    </li>
+    <li>
+        <a href="https://peertube.xwiki.com/c/cryptpad_channel/videos">
+            <i aria-hidden="true" class="fa fa-peertube"></i>Peertube
+        </a>
+    </li>
+    <li>
+        <a href="https://pixelfed.social/cryptpad_design">
+            <i aria-hidden="true" class="fa fa-pixelfed"></i>Pixelfed
+        </a>
+    </li>
+</ul>
+<ul>
+    <li>
+        <a href="/atom.xml">
+            <i aria-hidden="true" class="fa fa-rss"></i>RSS Feed
+        </a>
+    </li>
+</ul>
+        </section>
+    </main>
+</body>
+
+</html>
