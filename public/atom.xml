@@ -4,12 +4,27 @@
   <subtitle>News from the end-to-end encrypted collaboration suite</subtitle>
   <link href="https://blog.cryptpad.org/atom.xml" rel="self"/>
   <link href="https://blog.cryptpad.org"/>
-  <updated>2024-10-03T00:00:00Z</updated>
+  <updated>2024-10-15T00:00:00Z</updated>
   <id>https://blog.cryptpad.org</id>
   <author>
     <name>CryptPad Team</name>
     <email>contact@cryptpad.fr</email>
   </author>
+  <entry>
+    <title>New Collaboration Between CryptPad and the Canòdrom</title>
+    <link href="https://blog.cryptpad.org/2024/10/15/canodrom-collab/"/>
+    <updated>2024-10-15T00:00:00Z</updated>
+    <id>https://blog.cryptpad.org/2024/10/15/canodrom-collab/</id>
+    <summary xml:lang="en" type="html">We&#39;re excited to announce a new collaboration between CryptPad and the Canòdrom, a unique space in Barcelona dedicated to exploring the intersection of technology and democracy.</summary>
+    <content xml:lang="en" type="html">&lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/Canodrom-Espai-42.jpg&quot; alt=&quot;photograph of the Canodrom building in Barcelona&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;We&#39;re excited to announce a new collaboration between CryptPad and the Canòdrom, a unique space in Barcelona dedicated to exploring the intersection of technology and democracy. The Canòdrom is more than just a space—it&#39;s a citizen&#39;s laboratory for fostering open technologies, digital rights, and active civic participation. As a community-driven atheneum, it engages the local neighbourhood, the broader city, and even a global audience, bringing people together around shared values of openness, collaboration, and innovation.&lt;/p&gt;
+&lt;p&gt;At the heart of the Canòdrom&#39;s mission are critical topics like democracy, digital rights, and hack feminism. They also focus on digital culture, education, and the ecological impact of free technologies—areas where CryptPad&#39;s privacy-first, open-source ethos aligns perfectly.&lt;/p&gt;
+&lt;p&gt;This collaboration underscores our shared commitment to building a digital future that is transparent, inclusive, and respects users&#39; autonomy and privacy. Through this collaboration, we are thrilled to join a dynamic ecosystem of forward-thinking projects like Decidim, Coopdevs, DataForGoodBCN, femProcomuns, FemDevs, and Tecnopolítica, among a lot of others.&lt;/p&gt;
+&lt;p&gt;Stay tuned for more updates as we embark on this exciting journey!&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/cryptpadXcanodrom.png&quot; alt=&quot;Cryptpad and Canodrom logos with an x between them&quot; /&gt;&lt;/p&gt;
+</content>
+    <category term="canodrom" scheme="https://blog.cryptpad.org/tags/canodrom/"/>
+  </entry>
   <entry>
     <title>Changing the cryptography library in your CryptPad server</title>
     <link href="https://blog.cryptpad.org/2024/10/03/tutorial-sodium-plugin/"/>
