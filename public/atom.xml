@@ -4,12 +4,37 @@
   <subtitle>News from the end-to-end encrypted collaboration suite</subtitle>
   <link href="https://blog.cryptpad.org/atom.xml" rel="self"/>
   <link href="https://blog.cryptpad.org"/>
-  <updated>2024-10-15T00:00:00Z</updated>
+  <updated>2024-10-31T00:00:00Z</updated>
   <id>https://blog.cryptpad.org</id>
   <author>
     <name>CryptPad Team</name>
     <email>contact@cryptpad.fr</email>
   </author>
+  <entry>
+    <title>October 2024 status</title>
+    <link href="https://blog.cryptpad.org/2024/10/31/status-2024-10/"/>
+    <updated>2024-10-31T00:00:00Z</updated>
+    <id>https://blog.cryptpad.org/2024/10/31/status-2024-10/</id>
+    <summary xml:lang="en" type="html">10 years since first commit, CryptPad.fr server migration, Canòdrom collaboration</summary>
+    <content xml:lang="en" type="html">&lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/10-years.png&quot; alt=&quot;10 years of CryptPad birthday card&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;🎂 10 Years since first commit&lt;/h2&gt;
+&lt;p&gt;31st October 2024 marks 10 years since the first commit to the CryptPad codebase. The project has come a long way since then, when it was just an experimental single page &amp;quot;pad&amp;quot;. The Drive was added in early 2017 with &lt;a href=&quot;https://github.com/cryptpad/cryptpad/releases/tag/1.0.0&quot;&gt;v1.0.0&lt;/a&gt; and the project gradually became a full office suite. We wish CryptPad another 10 years of development and improvement. &lt;!-- new paragraph? --&gt; To celebrate we are offering 50% off all plans on &lt;a href=&quot;http://cryptpad.fr/&quot;&gt;CryptPad.fr&lt;/a&gt; for the next couple of days, to redeem it please use the code &lt;code&gt;10YEARS&lt;/code&gt; at checkout for any plan on &lt;a href=&quot;http://cryptpad.fr/&quot;&gt;CryptPad.fr&lt;/a&gt; until midnight on Friday Nov 1st (Paris time).&lt;/p&gt;
+&lt;h2&gt;🚧 &lt;a href=&quot;http://cryptpad.fr/&quot;&gt;CryptPad.fr&lt;/a&gt; server migration&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://fosstodon.org/@cryptpad/113366972887911954&quot;&gt;We recently announced&lt;/a&gt; some maintenance downtime to perform a storage migration for our flagship instance. Here are some more details about this for those who are interested:&lt;/p&gt;
+&lt;p&gt;Last winter we migrated the storage of our &lt;a href=&quot;http://cryptpad.fr/&quot;&gt;CryptPad.fr&lt;/a&gt; back-end server from an old LVM partitioning scheme to BTRFS. After encountering a variety of issues, complicating our maintenance tasks and even causing some serious downtime, we decided to switch to ZFS.&lt;/p&gt;
+&lt;p&gt;We took the opportunity to migrate the entire service to a new server, running Debian 12 instead of the outdated 10. With a much newer kernel and the latest OpenZFS version. After carefully planning this, we successfully completed the task on Tuesday, October 28th.&lt;/p&gt;
+&lt;p&gt;While it&#39;s too early to draw any conclusion regarding performance and reliability, we recognize it&#39;s an important step forward for our flagship CryptPad instance&#39;s future. Reducing our operating costs, the need for manual operations, improving the speed of running backups and at the same time, improving the experience for our users.&lt;/p&gt;
+&lt;h2&gt;🤝 Canòdrom collaboration&lt;/h2&gt;
+&lt;p&gt;This month we announced the start of a &lt;a href=&quot;https://blog.cryptpad.org/2024/10/15/canodrom-collab/&quot;&gt;collaboration with  the Canòdrom in Barcelona&lt;/a&gt;. We will have more to say in the coming months on how this will actually work, but we are delighted to be associated with this laboratory connecting open-source software and the needs of citizens.&lt;/p&gt;
+&lt;h2&gt;Up next&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;We will keep a close eye on the new storage of &lt;a href=&quot;http://cryptpad.fr/&quot;&gt;cryptpad.fr&lt;/a&gt; for performance and any issues&lt;/li&gt;
+&lt;li&gt;The team is working towards our winter release expected for December&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    <category term="status update" scheme="https://blog.cryptpad.org/tags/status update/"/>
+    <category term="infrastructure" scheme="https://blog.cryptpad.org/tags/infrastructure/"/>
+  </entry>
   <entry>
     <title>New Collaboration Between CryptPad and the Canòdrom</title>
     <link href="https://blog.cryptpad.org/2024/10/15/canodrom-collab/"/>

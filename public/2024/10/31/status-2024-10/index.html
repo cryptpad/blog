@@ -7,20 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style.css">
 
-    <title>CryptPad White Paper | CryptPad Blog</title> 
+    <title>October 2024 status | CryptPad Blog</title> 
     
 
     
     
     <meta property="og:type" content="webpage">
-    <meta property="og:title" content="CryptPad White Paper">
-    <meta property="og:url" content="http://blog.cryptpad.org/2023/02/02/Whitepaper/">
-    <meta property="og:page_name" content="CryptPad White Paper">
+    <meta property="og:title" content="October 2024 status">
+    <meta property="og:url" content="http://blog.cryptpad.org/2024/10/31/status-2024-10/">
+    <meta property="og:page_name" content="October 2024 status">
     <meta property="og:locale" content="default">
-    <meta property="og:image" content="http://blog.cryptpad.org/images/whitepaper-diagram.png">
-    <meta property="og:description" content="We proudly present the CryptPad white paper summarizing the use of cryptography in CryptPad.">
-    <meta name="twitter:card" content="We proudly present the CryptPad white paper summarizing the use of cryptography in CryptPad.">
-    <meta name="twitter:title" content="CryptPad White Paper">
+    <meta property="og:image" content="http://blog.cryptpad.org/images/10-years.png">
+    <meta property="og:description" content="10 years since first commit, CryptPad.fr server migration, Canòdrom collaboration">
+    <meta name="twitter:card" content="10 years since first commit, CryptPad.fr server migration, Canòdrom collaboration">
+    <meta name="twitter:title" content="October 2024 status">
 
 
 
@@ -48,12 +48,18 @@
             
     <article class="post" lang="en">
         <section class="header">
-            <h1>CryptPad White Paper</h1>
+            <h1>October 2024 status</h1>
             <p class="meta">
-                2 Feb 2023
+                31 Oct 2024
                 
                     
-                        - Theo von Arx
+                        
+                        
+                        
+                        -  Mathilde Grünig
+                        
+                        -  David Benqué
+                        
                     
                 
                     
@@ -64,54 +70,36 @@
         <i class="fa fa-tags" aria-hidden="true"></i>
         <ul class="tags" aria-label="Tags">
         
-            <li><a class="tag" href="/tags/security">security</a></li>
+            <li><a class="tag" href="/tags/status-update">status update</a></li>
         
-            <li><a class="tag" href="/tags/documentation">documentation</a></li>
-        
-            <li><a class="tag" href="/tags/privacy">privacy</a></li>
-        
-            <li><a class="tag" href="/tags/research">research</a></li>
-        
-            <li><a class="tag" href="/tags/ngi">ngi</a></li>
-        
-            <li><a class="tag" href="/tags/blueprints">Blueprints</a></li>
+            <li><a class="tag" href="/tags/infrastructure">infrastructure</a></li>
         
         </ul>
     
 </div>
         </section>
-        <p><img src="/images/whitepaper-diagram.png" alt="Figure: Key derivation for a form"></p>
-<p>We proudly present the <a href="/images/whitepaper.pdf">CryptPad white paper</a>
-summarizing the use of cryptography in CryptPad.
-The paper is targeted at people who are familiar with cryptography, but
-obviously available for everyone interested in CryptPad.</p>
-<p><a class="btn" href="/images/whitepaper.pdf"><i class="fa fa-file-pdf-o"></i> White Paper PDF - 355kB</a></p>
-<p>In this white paper, we discuss CryptPad's underlying threat model, and explain
-the communication between the server and the client.
-We present the encryption of documents as the core functionality of CryptPad.
-We further show how the login mechanism works and how we establish secure
-communication between different users.
-Finally, we discuss how we enable secure communication and access control within
-a team.</p>
-<p>This white paper is part of the <a href="https://nlnet.nl/project/CryptPad-Blueprints/">CryptPad Blueprints
-Project</a> and is funded through
-the <a href="https://nlnet.nl/entrust">NGI0 Entrust Fund</a>. We thank
-<a href="https://nlnet.nl/">NLnet</a> for their support. All of the project's outputs, including this white paper, will be made available through a dedicated website as the project progresses.</p>
-<p>We wish you a good read!
-You can reach us with any questions or comments on <a href="https://forum.cryptpad.org/">our forum</a>,
-<a href="https://matrix.to/#/#cryptpad:matrix.xwiki.com">Matrix</a>,
-<a href="https://fosstodon.org/@cryptpad">Mastodon</a>, or
-via <a href="mailto:contact@cryptpad.fr">Email</a>.</p>
-<!-- <iframe src="/images/whitepaper.pdf#view=fit&toolbar=0&navpanes=0" width="100%" height="450px"></iframe> -->
+        <p><img src="/images/10-years.png" alt="10 years of CryptPad birthday card"></p>
+<h2>🎂 10 Years since first commit</h2>
+<p>31st October 2024 marks 10 years since the first commit to the CryptPad codebase. The project has come a long way since then, when it was just an experimental single page &quot;pad&quot;. The Drive was added in early 2017 with <a href="https://github.com/cryptpad/cryptpad/releases/tag/1.0.0">v1.0.0</a> and the project gradually became a full office suite. We wish CryptPad another 10 years of development and improvement. <!-- new paragraph? --> To celebrate we are offering 50% off all plans on <a href="http://CryptPad.fr">CryptPad.fr</a> for the next couple of days, to redeem it please use the code <code>10YEARS</code> at checkout for any plan on <a href="http://CryptPad.fr">CryptPad.fr</a> until midnight on Friday Nov 1st (Paris time).</p>
+<h2>🚧 <a href="http://CryptPad.fr">CryptPad.fr</a> server migration</h2>
+<p><a href="https://fosstodon.org/@cryptpad/113366972887911954">We recently announced</a> some maintenance downtime to perform a storage migration for our flagship instance. Here are some more details about this for those who are interested:</p>
+<p>Last winter we migrated the storage of our <a href="http://CryptPad.fr">CryptPad.fr</a> back-end server from an old LVM partitioning scheme to BTRFS. After encountering a variety of issues, complicating our maintenance tasks and even causing some serious downtime, we decided to switch to ZFS.</p>
+<p>We took the opportunity to migrate the entire service to a new server, running Debian 12 instead of the outdated 10. With a much newer kernel and the latest OpenZFS version. After carefully planning this, we successfully completed the task on Tuesday, October 28th.</p>
+<p>While it's too early to draw any conclusion regarding performance and reliability, we recognize it's an important step forward for our flagship CryptPad instance's future. Reducing our operating costs, the need for manual operations, improving the speed of running backups and at the same time, improving the experience for our users.</p>
+<h2>🤝 Canòdrom collaboration</h2>
+<p>This month we announced the start of a <a href="https://blog.cryptpad.org/2024/10/15/canodrom-collab/">collaboration with  the Canòdrom in Barcelona</a>. We will have more to say in the coming months on how this will actually work, but we are delighted to be associated with this laboratory connecting open-source software and the needs of citizens.</p>
+<h2>Up next</h2>
+<ul>
+<li>We will keep a close eye on the new storage of <a href="http://cryptpad.fr">cryptpad.fr</a> for performance and any issues</li>
+<li>The team is working towards our winter release expected for December</li>
+</ul>
 
     </article>
 
     <nav class="article-pagination" aria-label="Pagination">
         
-            <a href="/2023/02/09/CryptPad-Funding-Status-January-2023/">Newer: <span class="title">CryptPad Funding Status January 2023</span></a>
         
-        
-            <a href="/2023/01/31/status-2023-01/">Older: <span class="title">January 2023 status</span></a>
+            <a href="/2024/10/15/canodrom-collab/">Older: <span class="title">New Collaboration Between CryptPad and the Canòdrom</span></a>
         
     </nav>
 
