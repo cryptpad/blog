@@ -4,12 +4,47 @@
   <subtitle>News from the end-to-end encrypted collaboration suite</subtitle>
   <link href="https://blog.cryptpad.org/atom.xml" rel="self"/>
   <link href="https://blog.cryptpad.org"/>
-  <updated>2024-10-31T00:00:00Z</updated>
+  <updated>2024-11-28T00:00:00Z</updated>
   <id>https://blog.cryptpad.org</id>
   <author>
     <name>CryptPad Team</name>
     <email>contact@cryptpad.fr</email>
   </author>
+  <entry>
+    <title>November 2024 status</title>
+    <link href="https://blog.cryptpad.org/2024/11/28/status-2024-11/"/>
+    <updated>2024-11-28T00:00:00Z</updated>
+    <id>https://blog.cryptpad.org/2024/11/28/status-2024-11/</id>
+    <summary xml:lang="en" type="html">2024.9.1 release, new social media accounts, article and meme from La Contrevoie</summary>
+    <content xml:lang="en" type="html">&lt;h2&gt;🚀 2024.9.1&lt;/h2&gt;
+&lt;p&gt;This month we released a minor version of CryptPad, &lt;a href=&quot;https://github.com/cryptpad/cryptpad/releases/tag/2024.9.1&quot;&gt;2024.9.1&lt;/a&gt;. This point release contains fixes and improvements addressing issues and needs we encountered on the flagship instance &lt;a href=&quot;http://cryptpad.fr/&quot;&gt;CryptPad.fr&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Improving plugin support for monitoring and the upcoming CryptPad Cloud deployments (see 🔭 Next up below)&lt;/li&gt;
+&lt;li&gt;Fixing server issues&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Please see the &lt;a href=&quot;https://github.com/cryptpad/cryptpad/releases/tag/2024.9.1&quot;&gt;full release notes&lt;/a&gt; for more information.&lt;/p&gt;
+&lt;h2&gt;🗯️ Social media update&lt;/h2&gt;
+&lt;p&gt;We aren&#39;t fans of social media platforms that track users and have algorithmic timelines. We left Twitter two years ago and haven&#39;t looked back. However, we decided to increase our online presence by opening two more accounts:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://bsky.app/profile/cryptpad.org&quot;&gt;🦋 Bluesky&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.linkedin.com/company/cryptpad&quot;&gt;💼  Linkedin&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Our goal is to meet potential new users where they are, and encourage more people to improve their privacy by using CryptPad. We also need to find some companies that are willing to pay us to host the service, giving the project financial stability.&lt;/p&gt;
+&lt;p&gt;🐘 &lt;a href=&quot;https://fosstodon.org/@cryptpad&quot;&gt;Mastodon&lt;/a&gt; remains our main communication channel with 6K followers, and the Fediverse the closest network to our project values. From now on you will also be seeing our posts on Bluesky (&lt;a href=&quot;https://bsky.app/profile/cryptpad.org&quot;&gt;@cryptpad.org&lt;/a&gt;), and a separate feed on &lt;a href=&quot;https://www.linkedin.com/company/cryptpad&quot;&gt;Linkedin&lt;/a&gt; aimed at marketing CryptPad to enterprise. If you are on either of these networks we appreciate help in reaching a new audience by following and boosting our content.&lt;/p&gt;
+&lt;h2&gt;🗞️ La Contrevoie&lt;/h2&gt;
+&lt;p&gt;We were delighted to find this in depth documentation (available in &lt;a href=&quot;https://lacontrevoie.fr/blog/2024/accompagnements-numeriques-notre-mode-operatoire/&quot;&gt;French&lt;/a&gt; and &lt;a href=&quot;https://lacontrevoie.fr/en/blog/2024/accompagnements-numeriques-notre-mode-operatoire/&quot;&gt;English&lt;/a&gt;) of how French NGO &lt;a href=&quot;https://lacontrevoie.fr/en/&quot;&gt;La Contrevoie&lt;/a&gt; provides &amp;quot;digital support&amp;quot; to other NGOs. They assist others all the way from assessing the needs of a group, to implementing solutions using free software, either through self-hosting or recommending other services. On top of being an interesting read, it features CryptPad in a great meme about alternatives to Big Tech:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/contrevoie-meme.png&quot; alt=&quot;&amp;quot;The ‘what do we want?’ meme on 12 panels, titled ‘The choice of alternatives among librists’, ideal VS reality. First group of panels: &#39;If I tell you Twitter, what do you tell me?&#39; &#39;Mastodon!!&#39; &#39;Google Drive?&#39; &#39;Nextcloud!!&#39; &#39;YouTube?&#39; &#39;PeerTube!!&#39;. Second group of panels: the characters all suggest a different alternative. E.g.: &#39;Discord?&#39; &#39;IRC!&#39; &#39;XMPP!&#39; &#39;Matrix!&#39; &#39;Signal!&#39; &#39;Revolt! in front of &#39;Google Docs?&#39; it says OnlyOffice, no it&#39;s not open source enough, Collabora, vim, markdown and git, CryptPad!&amp;quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;👕 We are also big fans of their &lt;a href=&quot;https://enventelibre.org/en/la-contre-voie/169-305-t-shirt-constellations-42l.html#/7-size-m&quot;&gt;t-shirts&lt;/a&gt;! (design by &lt;a href=&quot;https://brume.ink/projets/42l/&quot;&gt;Brume&lt;/a&gt;)&lt;/p&gt;
+&lt;h2&gt;🔭 Next up&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;We are working on the Winter release &lt;code&gt;2024.12.0&lt;/code&gt; that we aim to wrap up before the holiday season.&lt;/li&gt;
+&lt;li&gt;☁️ CryptPad Cloud: We are putting the finishing touches to Cloud Demos, allowing people to test-drive their own hosted instance of CryptPad (like you can for &lt;a href=&quot;https://xwiki.com/en/try-xwiki/&quot;&gt;XWiki&lt;/a&gt; our parent company&#39;s product). We hope to release this for everyone soon!&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    <category term="status update" scheme="https://blog.cryptpad.org/tags/status update/"/>
+    <category term="social media" scheme="https://blog.cryptpad.org/tags/social media/"/>
+    <category term="release" scheme="https://blog.cryptpad.org/tags/release/"/>
+  </entry>
   <entry>
     <title>October 2024 status</title>
     <link href="https://blog.cryptpad.org/2024/10/31/status-2024-10/"/>
