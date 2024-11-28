@@ -73,12 +73,13 @@ module.exports = (function(eleventyConfig) {
     });
 
     eleventyConfig.addCollection("allTags", function(collectionApi) {
-      const tagsList = new Set();
+      const tagsSet = new Set();
       collectionApi.getAll().map( item => {
           if (item.data.tags) { // handle pages that don't have tags
-              item.data.tags.map( tag => tagsList.add(tag))
+              item.data.tags.map( tag => tagsSet.add(tag))
           }
       });
+      const tagsList = Array.from(tagsSet).sort()
       return tagsList;
   });
     // set nunjucks as markdown template engine
