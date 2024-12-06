@@ -79,7 +79,7 @@ module.exports = (function(eleventyConfig) {
               item.data.tags.map( tag => tagsSet.add(tag))
           }
       });
-      const sortedSet = new Set(Array.from(tagsSet).sort());
+      const sortedSet = new Set(Array.from(tagsSet).sort((str1,str2) => str1.toLowerCase().localeCompare(str2.toLowerCase())));
       return sortedSet;
   });
     // set nunjucks as markdown template engine
