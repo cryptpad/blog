@@ -79,8 +79,8 @@ module.exports = (function(eleventyConfig) {
               item.data.tags.map( tag => tagsSet.add(tag))
           }
       });
-      const tagsList = Array.from(tagsSet).sort()
-      return tagsList;
+      const sortedSet = new Set(Array.from(tagsSet).sort());
+      return sortedSet;
   });
     // set nunjucks as markdown template engine
     // could be useful for custom processing like mermaid
