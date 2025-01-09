@@ -4,12 +4,38 @@
   <subtitle>News from the end-to-end encrypted collaboration suite</subtitle>
   <link href="https://blog.cryptpad.org/atom.xml" rel="self"/>
   <link href="https://blog.cryptpad.org"/>
-  <updated>2024-11-28T00:00:00Z</updated>
+  <updated>2025-01-09T00:00:00Z</updated>
   <id>https://blog.cryptpad.org</id>
   <author>
     <name>CryptPad Team</name>
     <email>contact@cryptpad.fr</email>
   </author>
+  <entry>
+    <title>November 2024 status</title>
+    <link href="https://blog.cryptpad.org/2025/01/09/status-2024-12/"/>
+    <updated>2025-01-09T00:00:00Z</updated>
+    <id>https://blog.cryptpad.org/2025/01/09/status-2024-12/</id>
+    <summary xml:lang="en" type="html">Winter release, CryptPad Cloud demos, Presence at FOSDEM 2025</summary>
+    <content xml:lang="en" type="html">&lt;p&gt;At the end of December the team was hard at work on the latest release, then most took well-deserved breaks for the holiday season. This brings us to this slighthly delayed final status update for 2024, with our very best wishes for 2025!&lt;/p&gt;
+&lt;h2&gt;🚀 ❄️ Winter release (2024.12.0)&lt;/h2&gt;
+&lt;p&gt;We wrapped up our &lt;a href=&quot;https://github.com/cryptpad/cryptpad/releases/tag/2024.12.0&quot;&gt;Winter release&lt;/a&gt; before the end of the year. This version delivers fixes and improvements across CryptPad. We were particularly happy to release a fix of our OnlyOffice integration that could address long-standing issues with documents becoming corrupted. If confirmed at scale, this fix could dramatically improve the use of OnlyOffice apps in CryptPad. Please see the &lt;a href=&quot;https://github.com/cryptpad/cryptpad/releases/tag/2024.12.0&quot;&gt;changelog&lt;/a&gt; for full details.&lt;/p&gt;
+&lt;h2&gt;☁️ CryptPad Cloud demo instances&lt;/h2&gt;
+&lt;p&gt;We are happy to announce that you can now test-drive your very own CryptPad instance using our &lt;a href=&quot;https://cryptpad.org/try-cloud/&quot;&gt;Cloud demo service&lt;/a&gt;. This service builds on &lt;a href=&quot;https://xwiki.com/en/try-xwiki/&quot;&gt;a similar one&lt;/a&gt; by our parent company XWiki. You can launch demo instances after filling out some basic information, confirm your email to extend the demo to a few days, and finally &lt;a href=&quot;https://cryptpad.org/pricing/#full&quot;&gt;subscribe&lt;/a&gt; if you are happy with the product.&lt;/p&gt;
+&lt;p&gt;We hope this will encourage bigger actors such as companies and organizations to consider having their own instance managed by us. This is one of the avenues we are exploring to make the project more financially sustainable.&lt;/p&gt;
+&lt;h2&gt;🎙️ CryptPad at FOSDEM 2025&lt;/h2&gt;
+&lt;p&gt;Our very own Fabrice Mouhartem will represent CryptPad at &lt;a href=&quot;https://fosdem.org/2025/&quot;&gt;FOSDEM 2025&lt;/a&gt; with an overview of the progress made in the last year: &amp;quot;accessibility and mobile, performance improvements, cloud instances, and work on the OnlyOffice integration to name a few&amp;quot;.&lt;/p&gt;
+&lt;p&gt;You can catch his talk on &lt;a href=&quot;https://fosdem.org/2025/schedule/event/fosdem-2025-5033-cryptpad-recent-advances-in-privacy-and-collaboration/&quot;&gt;Saturday Feb. 1st at 12:15 in H.1308&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;🔭 Next up&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;We&#39;re preparing our yearly budget report which we&#39;ll publish in the next few weeks&lt;/li&gt;
+&lt;li&gt;We are starting work on the 💐 Spring release (2025.3.0) planned for end March 2025. We aim to upgrade OnlyOffice to version 8 among other improvements&lt;/li&gt;
+&lt;li&gt;We are looking forward to welcome an intern in the spring to work on cryptography improvements, more about this in due course&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    <category term="status update" scheme="https://blog.cryptpad.org/tags/status update/"/>
+    <category term="cloud" scheme="https://blog.cryptpad.org/tags/cloud/"/>
+    <category term="release" scheme="https://blog.cryptpad.org/tags/release/"/>
+  </entry>
   <entry>
     <title>November 2024 status</title>
     <link href="https://blog.cryptpad.org/2024/11/28/status-2024-11/"/>
@@ -2629,7 +2655,6 @@ We do this with the following command:&lt;/p&gt;
 &lt;p&gt;from &lt;a href=&quot;https://arxiv.org/abs/2110.07450&quot;&gt;The Risks of Client-Side Scanning report&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 </content>
-    <category term="cloud" scheme="https://blog.cryptpad.org/tags/cloud/"/>
     <category term="ethics" scheme="https://blog.cryptpad.org/tags/ethics/"/>
     <category term="funding" scheme="https://blog.cryptpad.org/tags/funding/"/>
     <category term="privacy" scheme="https://blog.cryptpad.org/tags/privacy/"/>
@@ -3305,7 +3330,6 @@ Instead, I&#39;ll leave you with a bit of a teaser for our upcoming 4.0.0 releas
 &lt;p&gt;&lt;a href=&quot;https://www.cs.jhu.edu/~huang/paper/grayfailure-hotos17.pdf&quot;&gt;One of my favourite academic papers&lt;/a&gt; defines the term &lt;strong&gt;gray failures&lt;/strong&gt;, in which well-intentioned attempts to introduce redundancy into online systems can paradoxically increases the likelihood of service degradation or interruptions. In the last few weeks both Amazon and Google (some of the richest companies on the planet, in case you haven&#39;t heard of them) have experienced severe service outages. There are very few easy answers in this area, but we&#39;re going to learn from this situation and work on solutions that would have helped at least let us recover more quickly.&lt;/p&gt;
 &lt;p&gt;If the next data-center failure happens in another three years I hope it will only last a small fraction of the time, and that our software will be so resilient you&#39;ll hardly notice. In the meantime our team greatly appreciates all your support!&lt;/p&gt;
 </content>
-    <category term="cloud" scheme="https://blog.cryptpad.org/tags/cloud/"/>
     <category term="storage" scheme="https://blog.cryptpad.org/tags/storage/"/>
     <category term="postmortem" scheme="https://blog.cryptpad.org/tags/postmortem/"/>
   </entry>
@@ -3502,7 +3526,6 @@ On the other, I&#39;m hopeful that by doing this work now I&#39;ll help pave the
 &lt;p&gt;As stated above, if this particular mistake affected you, don&#39;t hesitate to contact us.
 Otherwise, I can only hope that the way we handle it ensures that you continue to trust us with your data.&lt;/p&gt;
 </content>
-    <category term="cloud" scheme="https://blog.cryptpad.org/tags/cloud/"/>
     <category term="storage" scheme="https://blog.cryptpad.org/tags/storage/"/>
     <category term="data" scheme="https://blog.cryptpad.org/tags/data/"/>
   </entry>
@@ -4795,9 +4818,6 @@ problems, how you go about solving them, and how we can make little changes to
 make CryptPad fit your needs better.&lt;/p&gt;
 &lt;p&gt;Caleb&lt;/p&gt;
 </content>
-    <category term="open-source" scheme="https://blog.cryptpad.org/tags/open-source/"/>
-    <category term="cloud" scheme="https://blog.cryptpad.org/tags/cloud/"/>
-    <category term="ethics" scheme="https://blog.cryptpad.org/tags/ethics/"/>
   </entry>
   <entry>
     <title>CryptPad - use it, love ❤️ it, support it</title>
