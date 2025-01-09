@@ -2,10 +2,6 @@
 title: Building mutually beneficial relationships
 date: 2017-06-02 13:52:47
 author: Caleb James DeLisle
-tags:
-- open-source
-- cloud
-- ethics
 summary: You ever wonder why Open Source software always seems to be slightly harder to use and slightly buggier and slightly less polished than proprietary competitors?
 ---
  

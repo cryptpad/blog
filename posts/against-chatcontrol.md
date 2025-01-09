@@ -5,7 +5,6 @@ author: Aaron MacSween
 cover: /images/chatcontrol-cryptpad-graphic.png
 summary: Something terrible is happening in the EU and we need help to stop it
 tags:
-- cloud
 - ethics
 - funding
 - privacy
