@@ -6,6 +6,7 @@ tags:
 - funding
 - open collective
 - donate
+- status update
 summary: A summary of our budget for the year 2023 and planning for 2024
 cover: /images/2024-budget-chart.png
 ---
