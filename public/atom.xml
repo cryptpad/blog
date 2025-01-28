@@ -37,8 +37,8 @@
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;2022&lt;/td&gt;
-&lt;td&gt;46,5&lt;/td&gt;
-&lt;td&gt;12,7&lt;/td&gt;
+&lt;td&gt;46.5&lt;/td&gt;
+&lt;td&gt;12.7&lt;/td&gt;
 &lt;td&gt;100&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
@@ -48,8 +48,8 @@
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2023&lt;/td&gt;
-&lt;td&gt;54,5&lt;/td&gt;
-&lt;td&gt;25,7 + 12k Unexpected revenue (*)&lt;/td&gt;
+&lt;td&gt;54.5&lt;/td&gt;
+&lt;td&gt;25.7 + 12 Unexpected revenue (*)&lt;/td&gt;
 &lt;td&gt;216&lt;/td&gt;
 &lt;td&gt;223&lt;/td&gt;
 &lt;td&gt;10&lt;/td&gt;
@@ -141,13 +141,13 @@
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;2019&lt;/td&gt;
-&lt;td&gt;153,5&lt;/td&gt;
+&lt;td&gt;153.5&lt;/td&gt;
 &lt;td&gt;160&lt;/td&gt;
 &lt;td&gt;-6,5&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2020&lt;/td&gt;
-&lt;td&gt;236,5&lt;/td&gt;
+&lt;td&gt;236.5&lt;/td&gt;
 &lt;td&gt;242&lt;/td&gt;
 &lt;td&gt;-5,5&lt;/td&gt;
 &lt;/tr&gt;
@@ -159,7 +159,7 @@
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2022&lt;/td&gt;
-&lt;td&gt;257,2&lt;/td&gt;
+&lt;td&gt;257.2&lt;/td&gt;
 &lt;td&gt;307&lt;/td&gt;
 &lt;td&gt;-49,8&lt;/td&gt;
 &lt;/tr&gt;

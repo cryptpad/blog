@@ -21,8 +21,8 @@ You can see in this table the details of the funding of the CryptPad project we 
 
 |Year|Subscriptions  <br>(k€)|Donations  <br>(k€)|Research Projects  <br>(k€)|Client Roadmap Funding  <br>(k€)|Other Client Revenue (Cloud / Support)  <br>(k€)|Crédit Impôt Recherche Tax Cut  <br>(k€)|Extra Crédit Impôt Recherche (PHD)  <br>(k€)|Total  <br>(k€)|
 |-|-|-|-|-|-|-|-|-|
-|2022|46,5|12,7|100|||58|40|257|
-|2023|54,5|25,7 + 12k Unexpected revenue (\*)|216|223|10|48|25.5|614.7|
+|2022|46.5|12.7|100|||58|40|257|
+|2023|54.5|25.7 + 12 Unexpected revenue (\*)|216|223|10|48|25.5|614.7|
 |2024 (Expected)|65|30|293|50 to 150|0 to 100|24|101|513 to 763|
 |2024 (Real)|76|16,4|408|16|16|12|101|645.4|
 
@@ -42,10 +42,10 @@ And the following balance:
 
 |Year|Total Revenue  <br>(k€)|Total Costs  <br>(k€)|Balance  <br>(k€)|
 |-|-|-|-|
-|2019|153,5|160|\-6,5|
-|2020|236,5|242|\-5,5|
+|2019|153.5|160|\-6,5|
+|2020|236.5|242|\-5,5|
 |2021|267|254|13|
-|2022|257,2|307|\-49,8|
+|2022|257.2|307|\-49,8|
 |2023|614.7|614|0.7|
 | 2024 (Expected)|563 to 763|603 to 703|+40 to  <br>+100|
 |2024 (Real)|645.4|588|+57|
