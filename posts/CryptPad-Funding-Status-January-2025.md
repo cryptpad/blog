@@ -56,7 +56,7 @@ Overall, while we have growing revenue level from 2023 to 2024, we are a bit dis
 
 Now we have been able to grow 40% the [https://cryptpad.fr](https://cryptpad.fr) flagship instance revenue. We are now almost at **1000 paying accounts on this instance**, which is our main client revenue aside from the research project revenue.
 
-On the donations side, while we value a lot of the donations we are receiving, they unfortunately account for just a little part of what we need, and went down a bit this year as we did not receive a large donation like we received last year from Binance. However we wanted to mention a 1000 Euros donation from FUTO ([https://futo.org/)](https://futo.org/) which the FUTO team announced on their [peertube](https://peertube.futo.org/w/169654c7-cf94-484e-b83e-bf9eed1e3827). We want to particularly mention it here as it feels good to be supported by a team having a similar mission than ours. We are also very happy to have a regular donation from DSNCON Gmbh ([https://opencollective.com/dsncon-gmbh)](https://opencollective.com/dsncon-gmbh) and the C4DT lab from EPFL [https://c4dt.epfl.ch/](https://c4dt.epfl.ch/).  
+On the donations side, while we value a lot of the donations we are receiving, they unfortunately account for just a little part of what we need, and went down a bit this year as we did not receive a large donation like we received last year from Binance. However we wanted to mention a 1000 Euros donation from [FUTO](https://futo.org/) which the FUTO team announced on their [peertube](https://peertube.futo.org/w/169654c7-cf94-484e-b83e-bf9eed1e3827). We want to particularly mention it here as it feels good to be supported by a team having a similar mission to ours. We are also very happy to have a regular donation from [DSNCON Gmbh](https://opencollective.com/dsncon-gmbh) and the [C4DT lab from EPFL](https://c4dt.epfl.ch/).  
 
 And more importantly, as we were not able to pick up Enterprise revenue, we needed some research project funding. For this we have been extremely happy that the [NLNet Foundation](http://nlnet.nl) has awarded us 135k of funding as part of their NGI Assure fund, which has allowed us to work on improving the CryptPad code base in 3 important areas:  
 
@@ -71,11 +71,8 @@ We'd like to thank NLNet and the [NGI research program](http://ngi.eu) for this 
 
 ## What did we do in 2024 with our funding  
 
-You can find all the statuses of the Year 2024 on our blog in the status-update section:  
+You can find all the statuses of the Year 2024 on our blog under the [status-update tag](https://blog.cryptpad.org/tags/status-update/):  
 
-  
-
-[https://blog.cryptpad.org/tags/status-update/](https://blog.cryptpad.org/tags/status-update/)  
 
 In particular in 2024 we have worked on the following:  
 
@@ -112,7 +109,7 @@ You can see in this table the details of the funding of the CryptPad project we 
 |-|-|-|-|-|-|-|-|-|
 |2022|46,5|12,7|100|||58|40|257|
 |2023|54,5|25,7 + 12k Exceptional revenue (\*)|216|223|10|48|25.5|614.7|
-|2024 (Real)|76|16,4|408|16|16|12|101|645.4|
+|2024 (Real)|76|16.4|408|16|16|12|101|645.4|
 |2025 (Expected)|100 to 120|20 to 30|340 to 380|10 to 30|10 to 30|38|50|568 to 678|
 
 We have guaranteed funding from the French BPI project for 2024, regular subscriptions and donations and also CIR Tax cuts. This brings us 520k of guaranteed revenue. We can then expect from 40 to 110k from extra funding through increased revenue, donations, an extra research project or client revenue through CryptPad Cloud or support.  
@@ -161,7 +158,7 @@ If we want to be able to work on both Enterprise revenue and also continue to im
 
 Our users, paying users and donors are our credibility. When we discuss with potential customers or project partners, each user is key, each instance being installed, each pad being opened, each mention of CryptPad. You are our credibility.  
 
-We'd like to thank all of you and encourage anyone to join them on         [cryptpad.fr](http://cryptpad.fr) or [opencollective](https://opencollective.com/cryptpad).
+We'd like to thank all of you and encourage anyone to join them on [cryptpad.fr](http://cryptpad.fr) or [opencollective](https://opencollective.com/cryptpad).
 
 We'll also be at FOSDEM this week-end. If you'd like to talk to us, come at the XWiki/CryptPad Table.  
 
