@@ -201,7 +201,7 @@
 &lt;li&gt;We finished the NLNet Blueprints project funded by NGI Entrust, publishing a new &lt;a href=&quot;https://blueprints.cryptpad.org/&quot;&gt;R&amp;amp;D website for CryptPad&lt;/a&gt; that includes our whitepaper, threat model, prototypes, and many other research outputs.&lt;/li&gt;
 &lt;li&gt;We&#39;ve continued to &lt;a href=&quot;https://github.com/orgs/cryptpad/projects/5/views/2&quot;&gt;improve accessibility&lt;/a&gt; with 29 issues closed this year&lt;/li&gt;
 &lt;li&gt;We improved 2 factor authentication, &lt;a href=&quot;https://github.com/cryptpad/sso&quot;&gt;single-sign-on&lt;/a&gt; and user management.&lt;/li&gt;
-&lt;li&gt;We created and published an &lt;a href=&quot;https://github.com/cryptpad/e2e-test-suite&quot;&gt;end-to-end test suite&lt;/a&gt; to &lt;a href=&quot;https://github.com/cryptpad/e2e-test-suite&quot;&gt;automate CryptPad testing&lt;/a&gt; for each release.&lt;/li&gt;
+&lt;li&gt;We created and published an &lt;a href=&quot;https://github.com/cryptpad/e2e-test-suite&quot;&gt;end-to-end test suite&lt;/a&gt; to automate CryptPad testing for each release.&lt;/li&gt;
 &lt;li&gt;We separated the OnlyOffice code from the cryptpad code, allowing to reduce the size of the cryptpad server when you don&#39;t need the OnlyOffice features. It will also reduce the size of the server as it will also be possible to not carry old versions of the OnlyOffice code for new installs.&lt;/li&gt;
 &lt;li&gt;We started work on an API allowing to use CryptPad as a document editors for document stored outside of CryptPad. This work is not fully finished but well advanced as it works in our test environments. This API will have two versions:
 &lt;ul&gt;

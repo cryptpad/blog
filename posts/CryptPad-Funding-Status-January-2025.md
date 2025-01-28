@@ -80,7 +80,7 @@ In particular in 2024 we have worked on the following:
 * We finished the NLNet Blueprints project funded by NGI Entrust, publishing a new [R&D website for CryptPad](https://blueprints.cryptpad.org/) that includes our whitepaper, threat model, prototypes, and many other research outputs.  
 * We've continued to [improve accessibility](https://github.com/orgs/cryptpad/projects/5/views/2) with 29 issues closed this year  
 * We improved 2 factor authentication, [single-sign-on](https://github.com/cryptpad/sso) and user management.  
-* We created and published an [end-to-end test suite](https://github.com/cryptpad/e2e-test-suite) to [automate CryptPad testing](https://github.com/cryptpad/e2e-test-suite) for each release.
+* We created and published an [end-to-end test suite](https://github.com/cryptpad/e2e-test-suite) to automate CryptPad testing for each release.
 * We separated the OnlyOffice code from the cryptpad code, allowing to reduce the size of the cryptpad server when you don't need the OnlyOffice features. It will also reduce the size of the server as it will also be possible to not carry old versions of the OnlyOffice code for new installs.  
 * We started work on an API allowing to use CryptPad as a document editors for document stored outside of CryptPad. This work is not fully finished but well advanced as it works in our test environments. This API will have two versions:
     * one compatible with the OnlyOffice API allowing to use CryptPad as an OnlyOffice server to edit documents.   
