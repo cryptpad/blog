@@ -160,7 +160,7 @@ Our users, paying users and donors are our credibility. When we discuss with pot
 
 We'd like to thank all of you and encourage anyone to join them on [cryptpad.fr](http://cryptpad.fr) or [opencollective](https://opencollective.com/cryptpad).
 
-We'll also be at FOSDEM this week-end. If you'd like to talk to us, come at the XWiki/CryptPad Table.  
+We'll also be at FOSDEM this week-end. If you'd like to talk to us, come to the XWiki/CryptPad Table, check out [the CryptPad presentation](https://fosdem.org/2025/schedule/event/fosdem-2025-5033-cryptpad-recent-advances-in-privacy-and-collaboration/), and to hear more about our funding please attend [our dedicated talk on the subject](https://fosdem.org/2025/schedule/event/fosdem-2025-4601-20-years-of-hacking-the-funding-of-xwiki-and-cryptpad/)
 
 Thanks
 
