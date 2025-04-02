@@ -4,12 +4,48 @@
   <subtitle>News from the end-to-end encrypted collaboration suite</subtitle>
   <link href="https://blog.cryptpad.org/atom.xml" rel="self"/>
   <link href="https://blog.cryptpad.org"/>
-  <updated>2025-03-04T00:00:00Z</updated>
+  <updated>2025-04-02T00:00:00Z</updated>
   <id>https://blog.cryptpad.org</id>
   <author>
     <name>CryptPad Team</name>
     <email>contact@cryptpad.fr</email>
   </author>
+  <entry>
+    <title>March 2025 status</title>
+    <link href="https://blog.cryptpad.org/2025/04/02/status-2025-03/"/>
+    <updated>2025-04-02T00:00:00Z</updated>
+    <id>https://blog.cryptpad.org/2025/04/02/status-2025-03/</id>
+    <summary xml:lang="en" type="html">Spring Release, Enterprise webinar, WEBCAT, United Nations, XDA article, JDLL 2025</summary>
+    <content xml:lang="en" type="html">&lt;h2&gt;💐 2025.3.0 Release&lt;/h2&gt;
+&lt;p&gt;The CryptPad Spring 2025 release (2025.3.0) is now available on &lt;a href=&quot;http://cryptpad.fr/&quot;&gt;cryptpad.fr&lt;/a&gt; and &lt;a href=&quot;https://github.com/cryptpad/cryptpad/releases/tag/2025.3.0&quot;&gt;GitHub&lt;/a&gt;. This version marks the start of an important refactoring of the CryptPad code to make it more modular and efficient. Users with large drives and team-drives will notice much faster loading times since we now avoid loading all of your drives and shared folders before opening a document. The bigger picture is that this approach paves the way for much bigger improvements in the future, working towards a full CryptPad API that clients other than our web app will be able to use.&lt;/p&gt;
+&lt;p&gt;The release also contains many other fixes and improvements, for example improving touch screen experience in the Kanban and Forms applications. Please see the full list in the &lt;a href=&quot;https://github.com/cryptpad/cryptpad/releases/tag/2025.3.0&quot;&gt;release notes&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;📹 Enterprise webinar&lt;/h2&gt;
+&lt;p&gt;On March 26th, our CEO Ludovic Dubost hosted the first CryptPad webinar aimed at enterprise customers. The presentation and demo was followed by a questions and answers session adressing many concerns shared by potential CryptPad users in an enterprise context. &lt;a href=&quot;https://xwiki.com/en/Blog/webinar-overview-cryptpad-enterprise/&quot;&gt;All of this content&lt;/a&gt; is now available to catch up on if you missed the event.&lt;/p&gt;
+&lt;h2&gt;🐈 WEBCAT&lt;/h2&gt;
+&lt;p&gt;End-to-end encryption (E2EE) is a necessary step for any software protecting its users’ privacy. However, the realization of E2EE in web application such as CryptPad requires a great deal of trust from users. They indeed have to trust both the service provider not to serve malicious code, and the browser to faithfully execute the code. We are well aware of these limitations that are described in our &lt;a href=&quot;https://docs.cryptpad.org/en/FAQ.html#how-secure-is-cryptpad&quot;&gt;threat model&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;To mitigate this issue, the &lt;a href=&quot;https://freedom.press/&quot;&gt;Freedom of the Press foundation&lt;/a&gt; proposes a framework named &lt;a href=&quot;https://securedrop.org/news/introducing-webcat-web-based-code-assurance-and-transparency/&quot;&gt;WEBCAT&lt;/a&gt; (Web-based Code Assurance and Transparency), that is part of their secure document platform for whistle-blowers &lt;a href=&quot;https://securedrop.org/&quot;&gt;SecureDrop&lt;/a&gt;. WEBCAT would thus block unverified (meaning unsigned) code from being executed by the browser, hence ensuring that running code has been &lt;!-- is? --&gt; validated by developers.&lt;/p&gt;
+&lt;p&gt;From users’ perspective, this verification is provided through a &lt;a href=&quot;https://github.com/freedomofpress/webcat/tree/main/extension&quot;&gt;browser extension&lt;/a&gt;. Meanwhile, developers distribute the code signatures in a manifest file for their web application.&lt;/p&gt;
+&lt;p&gt;Keep in mind that it is &lt;strong&gt;still experimental&lt;/strong&gt;! However we are happy to see that CryptPad &lt;a href=&quot;https://github.com/freedomofpress/webcat/tree/main/apps/cryptpad&quot;&gt;is part of&lt;/a&gt; their initial test run and we really appreciate their trust in our software.&lt;/p&gt;
+&lt;p&gt;All in all, we are fully supportive of this endeavour. It would eventually help make the web a more secure place by greatly helps developers to provide certified web apps, as well as protecting the users.&lt;/p&gt;
+&lt;h2&gt;📰 4 reasons CryptPad is the best privacy-focused alternative to Google Drive, Docs, and Sheets&lt;/h2&gt;
+&lt;p&gt;We are delighted to be featured on XDA Developers with a &lt;a href=&quot;https://www.xda-developers.com/reasons-cryptpad-best-privacy-focused-alternative-google/&quot;&gt;write-up pitching CryptPad as an alternative to Big Tech platforms&lt;/a&gt;. Adam Conway makes a great case for our product, thoughtfully presenting well researched arguments. Many thanks Adam!&lt;/p&gt;
+&lt;h2&gt;🇺🇳 CryptPad in use at the United Nations&lt;/h2&gt;
+&lt;p&gt;We are proud to see the United Nations using CryptPad Forms to gather endorsements for their &lt;a href=&quot;https://unite.un.org/news/sixteen-organizations-endorse-un-open-source-principles&quot;&gt;Open Source principles&lt;/a&gt;. We were not the only ones to rejoice as &lt;a href=&quot;https://fosstodon.org/@cryptpad/114234197713107222&quot;&gt;our Mastodon post about it&lt;/a&gt; is one of our most viral ever!&lt;/p&gt;
+&lt;h2&gt;📣 CryptPad at JDLL 2025&lt;/h2&gt;
+&lt;p&gt;This year, at &lt;a href=&quot;https://jdll.org/&quot;&gt;&lt;em&gt;Journées du logiciel libre&lt;/em&gt;&lt;/a&gt;, Fabrice will be present at the XWiki/CryptPad stand to discuss and give an outreach talk about data privacy and how cryptography, and CryptPad, can help us achieve it. It is a French-speaking event around free and open-source software in Lyon, France, that will take place in May 24th and 25th.&lt;/p&gt;
+&lt;p&gt;The schedule is not fixed yet, but feel free to save the date and to &lt;a href=&quot;https://cryptpad.org/contact/&quot;&gt;get in touch&lt;/a&gt; if you want to exchange about CryptPad!&lt;/p&gt;
+&lt;p&gt;If you miss it, don’t worry, the talk will be recorded and will be made available on our &lt;a href=&quot;https://peertube.xwiki.com/c/cryptpad_channel/videos&quot;&gt;peertube channel&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;🔭 Next up&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;As explained in the &lt;a href=&quot;https://github.com/cryptpad/cryptpad/releases/tag/2025.3.0&quot;&gt;Spring Release notes&lt;/a&gt;, we were not able to include the planned OnlyOffice 8 upgrade into the release. We will be working on correcting remaining bugs in the coming weeks and will release the updated apps as &lt;code&gt;2025.3.1&lt;/code&gt; when they are ready.&lt;/li&gt;
+&lt;li&gt;We are also starting on our Summer Release cycle and will share more about this roadmap in due course.&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    <category term="status update" scheme="https://blog.cryptpad.org/tags/status update/"/>
+    <category term="release" scheme="https://blog.cryptpad.org/tags/release/"/>
+    <category term="press" scheme="https://blog.cryptpad.org/tags/press/"/>
+    <category term="in use" scheme="https://blog.cryptpad.org/tags/in use/"/>
+  </entry>
   <entry>
     <title>February 2025 status</title>
     <link href="https://blog.cryptpad.org/2025/03/04/status-2025-02/"/>
