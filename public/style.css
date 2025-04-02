@@ -49,7 +49,7 @@ li::before {
   --col-brand-fade: rgba(0, 135, 255, 0.3);
   --col-link: #0087FF;
   --col-link-vis: rgba(0, 135, 255, 0.5);
-  --col-card: #E0E0E0;
+  --col-card: #FFF;
   --col-tag: #BDBDBD;
   --col-tag-fg: #212121;
 }
