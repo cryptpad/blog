@@ -4,12 +4,57 @@
   <subtitle>News from the end-to-end encrypted collaboration suite</subtitle>
   <link href="https://blog.cryptpad.org/atom.xml" rel="self"/>
   <link href="https://blog.cryptpad.org"/>
-  <updated>2025-04-02T00:00:00Z</updated>
+  <updated>2025-05-07T00:00:00Z</updated>
   <id>https://blog.cryptpad.org</id>
   <author>
     <name>CryptPad Team</name>
     <email>contact@cryptpad.fr</email>
   </author>
+  <entry>
+    <title>April 2025 status</title>
+    <link href="https://blog.cryptpad.org/2025/05/07/status-2025-04/"/>
+    <updated>2025-05-07T00:00:00Z</updated>
+    <id>https://blog.cryptpad.org/2025/05/07/status-2025-04/</id>
+    <summary xml:lang="en" type="html">Sandbox domain warnings, moving mastodon instance, and CryptPad in the news</summary>
+    <content xml:lang="en" type="html">&lt;p&gt;This month&#39;s status is a bit delayed, the team has been busy dealing with urgent issues (detailed below) or being off during May bank-holiday season.&lt;/p&gt;
+&lt;h2&gt;⚠️ &lt;a href=&quot;http://cryptpad.fr/&quot;&gt;CryptPad.fr&lt;/a&gt; sandbox domain flagged as malicious by “Google Safe Browsing”&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/deceptive-site-warning.png&quot; alt=&quot;Screenshot of a browser warning in Firefox &amp;quot;deceptive site ahead&amp;quot; mentioning that sandbox.cryptpad.info has been reported as a deceptive site&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;We received &lt;a href=&quot;https://forum.cryptpad.org/d/2431-google-safe-browsing-shows-a-warning-on-sandboxcryptpadinfo/20&quot;&gt;reports that Google Safe Browsing had flagged our sandbox domain as malicious&lt;/a&gt;. At first this only appeared when clicking a link &lt;em&gt;inside&lt;/em&gt; a CryptPad document to an outside site. This is because we have a confirmation step when leaving CryptPad, a security measure to protect against phishing attemps which redirects users through our &lt;a href=&quot;https://docs.cryptpad.org/en/admin_guide/installation.html#admin-domain-config&quot;&gt;sandbox domain&lt;/a&gt;. The warning was displayed in Google Chrome but also in other browsers that rely on Google Safe Browsing as a source for security advisories, such as Firefox.&lt;/p&gt;
+&lt;p&gt;We submitted the “detection problem” form multiple times without any effect. We held off implementing other solutions at first (changing our sandbox domain) because we feared that it would make it harder to prove that our domain was flagged in error, entering into a cat and mouse game where we would have to keep changing domains.&lt;/p&gt;
+&lt;p&gt;However after 10 days and no action from Google, we received more worrying reports. Anti-virus software was blocking access to &lt;a href=&quot;http://cryptpad.fr/&quot;&gt;CryptPad.fr&lt;/a&gt;, this time affecting the whole service instead of only link redirection. The sandbox domain is used throughout CryptPad as a security measure so it is likely that the initial advisory spread to various lists and was generalised. We decided to change the sandbox domain as an immediate fix, as some users were locked out of their drives. We were also able to submit a new request via Google&#39;s “Search Console” which was reviewed in under 12 hours, clearing our domain of any flags.&lt;/p&gt;
+&lt;p&gt;Everything is now back to normal for &lt;a href=&quot;http://cryptpad.fr/&quot;&gt;CryptPad.fr&lt;/a&gt; users. We will be making changes to the link redirection process in order to prevent this type of error from happening again. This did highlight that security measures can sometimes backfire, and that as web-app providers we are at the mercy of powerful gatekeepers.&lt;/p&gt;
+&lt;h2&gt;📦 Moving out of Fosstodon to our own instance&lt;/h2&gt;
+&lt;p&gt;In 2022 we had chosen &lt;a href=&quot;https://fosstodon.org/&quot;&gt;Fosstodon&lt;/a&gt; as our home on the Fediverse after an internal debate on whether or not to run our own Mastodon instance.&lt;/p&gt;
+&lt;p&gt;In the last couple of weeks people confronted the Fosstodon admins about some problematic positions taken by a member of their moderation team. Instead of acknowledging the issue the team doubled down leading to a wave of instance administrators either de-federating straight away or announcing their intention to do so after 7 days of notice period. The Fosstodon admins have since &lt;a href=&quot;https://hub.fosstodon.org/were-not-shutting-down&quot;&gt;stepped down&lt;/a&gt; and &lt;a href=&quot;https://hub.fosstodon.org/update-from-gina&quot;&gt;announced a replacement&lt;/a&gt; indicating a &lt;a href=&quot;https://hub.fosstodon.org/fosstodon-community-statement&quot;&gt;possible change of course&lt;/a&gt; but too little too late to stop the de-federations.&lt;/p&gt;
+&lt;p&gt;Since the start of the project, CryptPad communication have been “Fediverse first”. Mastodon is the social media that is most aligned with our values, it&#39;s also  where we have our biggest community so the prospect of loosing lots of followers was a scary one. This finally pushed us over the edge to reclaim control over our communications and set up our own instance. &lt;a href=&quot;https://social.xwiki.com/&quot;&gt;Social.xwiki.com&lt;/a&gt; is our new home on the Fediverse, managed by our parent company to  host us at &lt;a href=&quot;https://social.xwiki.com/@CryptPad&quot;&gt;@CryptPad@xwiki.com&lt;/a&gt; as well as their other open-source projects.&lt;/p&gt;
+&lt;h2&gt;📢 Journées du Logiciel Libre&lt;/h2&gt;
+&lt;p&gt;In April, Fabrice will be present at &lt;em&gt;Journées du Logiciel Libre&lt;/em&gt; in Lyon (JDLL) on May 24th and 25th. He will &lt;a href=&quot;https://pretalx.jdll.org/jdll2025/talk/8WCPHN/&quot;&gt;give a talk about CryptPad&lt;/a&gt; and more generally talk about data privacy on the 25th at 5PM CEST. The talk will be in French.&lt;/p&gt;
+&lt;p&gt;Contrary to what have been announced last month, there won’t be any CryptPad booth this year. However, Fabrice will be present during the whole week-end if you want to talk about CryptPad.&lt;/p&gt;
+&lt;h2&gt;📰 CryptPad in use &amp;amp; in the news&lt;/h2&gt;
+&lt;p&gt;We were delighted to see our product receiving press coverage and/or being used by journalists this month.&lt;/p&gt;
+&lt;h3&gt;FOSS Force article&lt;/h3&gt;
+&lt;p&gt;Following the news that the &lt;a href=&quot;https://blog.cryptpad.org/2025/04/02/status-2025-03/&quot;&gt;United Nations have been using CryptPad Forms&lt;/a&gt;, Larry Cafiero had &lt;a href=&quot;https://fossforce.com/2025/04/un-drops-google-for-cryptpad-an-encrypted-open-source-office-suite/&quot;&gt;an in-depth conversation with CEO Ludovic Dubost about CryptPad&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This article has been echoed by a couple of other outlets such as &lt;a href=&quot;https://news.itsfoss.com/un-ditches-google-form&quot;&gt;It&#39;s FOSS&lt;/a&gt; and &lt;a href=&quot;https://news.slashdot.org/story/25/05/04/2350224/the-un-ditches-google-for-form-submissions-opts-for-open-source-cryptpad-instead&quot;&gt;Slashdot&lt;/a&gt;.&lt;/p&gt;
+&lt;h3&gt;The Linux Experiment&lt;/h3&gt;
+&lt;p&gt;We&#39;re very happy to see that Nick, the host of this popular show about Linux, has &lt;a href=&quot;https://mastodon.social/@thelinuxEXP/114386510996420376&quot;&gt;started using CryptPad Forms to gather feedback from his audience&lt;/a&gt;.&lt;/p&gt;
+&lt;h3&gt;Radio CSIRT&lt;/h3&gt;
+&lt;p&gt;Many thanks to this cyber-security podcast for mentioning our latest release in their &lt;a href=&quot;https://www.radiocsirt.org/podcast/votre-actu-cybersecurite-du-samedi-19-avril-2025-ep-260/&quot;&gt;19th April episode&lt;/a&gt; (in French).&lt;/p&gt;
+&lt;h3&gt;XDA Developers (again)&lt;/h3&gt;
+&lt;p&gt;We&#39;re delighted to see another piece from XDA about CryptPad, this time highlighting &lt;a href=&quot;https://www.xda-developers.com/reasons-why-use-cryptpad-instead-google-docs/&quot;&gt;5 reasons to use CryptPad instead of Google Docs&lt;/a&gt;.&lt;/p&gt;
+&lt;h3&gt;Le Monde&lt;/h3&gt;
+&lt;p&gt;Finally we are very happy to see journalists at Le Monde using CryptPad (once again) to share their sources for &lt;a href=&quot;https://www.lemonde.fr/international/video/2025/04/16/comment-les-drones-fpv-revolutionnent-le-champ-de-bataille-en-ukraine-le-premier-episode-de-notre-serie-video-tactiques_6596656_3210.html&quot;&gt;an article about drone warfare in Ukraine&lt;/a&gt; (in French).&lt;/p&gt;
+&lt;h2&gt;🔭 Next Up&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;We are still hard at work on the upgrade to OnlyOffice 8. We have hit a few blocking bugs but hope to release 2025.3.1 in the coming weeks.&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    <category term="status update" scheme="https://blog.cryptpad.org/tags/status update/"/>
+    <category term="security" scheme="https://blog.cryptpad.org/tags/security/"/>
+    <category term="postmortem" scheme="https://blog.cryptpad.org/tags/postmortem/"/>
+    <category term="social media" scheme="https://blog.cryptpad.org/tags/social media/"/>
+    <category term="press" scheme="https://blog.cryptpad.org/tags/press/"/>
+    <category term="in use" scheme="https://blog.cryptpad.org/tags/in use/"/>
+  </entry>
   <entry>
     <title>March 2025 status</title>
     <link href="https://blog.cryptpad.org/2025/04/02/status-2025-03/"/>

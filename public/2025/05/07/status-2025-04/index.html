@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+
+    <title>April 2025 status | CryptPad Blog</title> 
+    
+
+    
+    
+    <meta property="og:type" content="webpage">
+    <meta property="og:title" content="April 2025 status">
+    <meta property="og:url" content="http://blog.cryptpad.org/2025/05/07/status-2025-04/">
+    <meta property="og:page_name" content="April 2025 status">
+    <meta property="og:locale" content="default">
+    <meta property="og:image" content="http://blog.cryptpad.org/images/deceptive-site-warning.png">
+    <meta property="og:description" content="Sandbox domain warnings, moving mastodon instance, and CryptPad in the news">
+    <meta name="twitter:card" content="Sandbox domain warnings, moving mastodon instance, and CryptPad in the news">
+    <meta name="twitter:title" content="April 2025 status">
+
+
+
+    <link rel="alternate" href="/atom.xml" title="CryptPad Blog" type="application/atom+xml">
+
+    <link rel="icon" href="/theme/favicon.png">
+
+
+</head>
+
+<body>
+    <main class="container">
+        <header>
+            
+    <a href="/" class="back-home">
+        <i class="fa fa-arrow-left" aria-hidden="true"></i> <i class="fa fa-home" aria-hidden="true"></i> Homepage
+    </a>
+
+            <a href="/">
+                <img class="cp-logo" src="/theme/CryptPad_logo.svg" aria-hidden="true" alt="">
+                <h1>CryptPad Blog</h1>
+            </a>
+        </header>
+        <section id="content">
+            
+    <article class="post" lang="en">
+        <section class="header">
+            <h1>April 2025 status</h1>
+            <p class="meta">
+                7 May 2025
+                
+                    
+                        
+                        
+                        
+                        -  Fabrice Mouhartem
+                        
+                        -  David Benqué
+                        
+                    
+                
+                    
+                    
+            </p>
+            <div class="article-tags">
+    
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        <ul class="tags" aria-label="Tags">
+        
+            <li><a class="tag" href="/tags/status-update">status update</a></li>
+        
+            <li><a class="tag" href="/tags/security">security</a></li>
+        
+            <li><a class="tag" href="/tags/postmortem">postmortem</a></li>
+        
+            <li><a class="tag" href="/tags/social-media">social media</a></li>
+        
+            <li><a class="tag" href="/tags/press">press</a></li>
+        
+            <li><a class="tag" href="/tags/in-use">in use</a></li>
+        
+        </ul>
+    
+</div>
+        </section>
+        <p>This month's status is a bit delayed, the team has been busy dealing with urgent issues (detailed below) or being off during May bank-holiday season.</p>
+<h2>⚠️ <a href="http://CryptPad.fr">CryptPad.fr</a> sandbox domain flagged as malicious by “Google Safe Browsing”</h2>
+<p><img src="/images/deceptive-site-warning.png" alt="Screenshot of a browser warning in Firefox &quot;deceptive site ahead&quot; mentioning that sandbox.cryptpad.info has been reported as a deceptive site"></p>
+<p>We received <a href="https://forum.cryptpad.org/d/2431-google-safe-browsing-shows-a-warning-on-sandboxcryptpadinfo/20">reports that Google Safe Browsing had flagged our sandbox domain as malicious</a>. At first this only appeared when clicking a link <em>inside</em> a CryptPad document to an outside site. This is because we have a confirmation step when leaving CryptPad, a security measure to protect against phishing attemps which redirects users through our <a href="https://docs.cryptpad.org/en/admin_guide/installation.html#admin-domain-config">sandbox domain</a>. The warning was displayed in Google Chrome but also in other browsers that rely on Google Safe Browsing as a source for security advisories, such as Firefox.</p>
+<p>We submitted the “detection problem” form multiple times without any effect. We held off implementing other solutions at first (changing our sandbox domain) because we feared that it would make it harder to prove that our domain was flagged in error, entering into a cat and mouse game where we would have to keep changing domains.</p>
+<p>However after 10 days and no action from Google, we received more worrying reports. Anti-virus software was blocking access to <a href="http://CryptPad.fr">CryptPad.fr</a>, this time affecting the whole service instead of only link redirection. The sandbox domain is used throughout CryptPad as a security measure so it is likely that the initial advisory spread to various lists and was generalised. We decided to change the sandbox domain as an immediate fix, as some users were locked out of their drives. We were also able to submit a new request via Google's “Search Console” which was reviewed in under 12 hours, clearing our domain of any flags.</p>
+<p>Everything is now back to normal for <a href="http://CryptPad.fr">CryptPad.fr</a> users. We will be making changes to the link redirection process in order to prevent this type of error from happening again. This did highlight that security measures can sometimes backfire, and that as web-app providers we are at the mercy of powerful gatekeepers.</p>
+<h2>📦 Moving out of Fosstodon to our own instance</h2>
+<p>In 2022 we had chosen <a href="https://fosstodon.org">Fosstodon</a> as our home on the Fediverse after an internal debate on whether or not to run our own Mastodon instance.</p>
+<p>In the last couple of weeks people confronted the Fosstodon admins about some problematic positions taken by a member of their moderation team. Instead of acknowledging the issue the team doubled down leading to a wave of instance administrators either de-federating straight away or announcing their intention to do so after 7 days of notice period. The Fosstodon admins have since <a href="https://hub.fosstodon.org/were-not-shutting-down">stepped down</a> and <a href="https://hub.fosstodon.org/update-from-gina">announced a replacement</a> indicating a <a href="https://hub.fosstodon.org/fosstodon-community-statement">possible change of course</a> but too little too late to stop the de-federations.</p>
+<p>Since the start of the project, CryptPad communication have been “Fediverse first”. Mastodon is the social media that is most aligned with our values, it's also  where we have our biggest community so the prospect of loosing lots of followers was a scary one. This finally pushed us over the edge to reclaim control over our communications and set up our own instance. <a href="https://social.xwiki.com">Social.xwiki.com</a> is our new home on the Fediverse, managed by our parent company to  host us at <a href="https://social.xwiki.com/@CryptPad">@CryptPad@xwiki.com</a> as well as their other open-source projects.</p>
+<h2>📢 Journées du Logiciel Libre</h2>
+<p>In April, Fabrice will be present at <em>Journées du Logiciel Libre</em> in Lyon (JDLL) on May 24th and 25th. He will <a href="https://pretalx.jdll.org/jdll2025/talk/8WCPHN/">give a talk about CryptPad</a> and more generally talk about data privacy on the 25th at 5PM CEST. The talk will be in French.</p>
+<p>Contrary to what have been announced last month, there won’t be any CryptPad booth this year. However, Fabrice will be present during the whole week-end if you want to talk about CryptPad.</p>
+<h2>📰 CryptPad in use &amp; in the news</h2>
+<p>We were delighted to see our product receiving press coverage and/or being used by journalists this month.</p>
+<h3>FOSS Force article</h3>
+<p>Following the news that the <a href="https://blog.cryptpad.org/2025/04/02/status-2025-03/">United Nations have been using CryptPad Forms</a>, Larry Cafiero had <a href="https://fossforce.com/2025/04/un-drops-google-for-cryptpad-an-encrypted-open-source-office-suite/">an in-depth conversation with CEO Ludovic Dubost about CryptPad</a>.</p>
+<p>This article has been echoed by a couple of other outlets such as <a href="https://news.itsfoss.com/un-ditches-google-form">It's FOSS</a> and <a href="https://news.slashdot.org/story/25/05/04/2350224/the-un-ditches-google-for-form-submissions-opts-for-open-source-cryptpad-instead">Slashdot</a>.</p>
+<h3>The Linux Experiment</h3>
+<p>We're very happy to see that Nick, the host of this popular show about Linux, has <a href="https://mastodon.social/@thelinuxEXP/114386510996420376">started using CryptPad Forms to gather feedback from his audience</a>.</p>
+<h3>Radio CSIRT</h3>
+<p>Many thanks to this cyber-security podcast for mentioning our latest release in their <a href="https://www.radiocsirt.org/podcast/votre-actu-cybersecurite-du-samedi-19-avril-2025-ep-260/">19th April episode</a> (in French).</p>
+<h3>XDA Developers (again)</h3>
+<p>We're delighted to see another piece from XDA about CryptPad, this time highlighting <a href="https://www.xda-developers.com/reasons-why-use-cryptpad-instead-google-docs/">5 reasons to use CryptPad instead of Google Docs</a>.</p>
+<h3>Le Monde</h3>
+<p>Finally we are very happy to see journalists at Le Monde using CryptPad (once again) to share their sources for <a href="https://www.lemonde.fr/international/video/2025/04/16/comment-les-drones-fpv-revolutionnent-le-champ-de-bataille-en-ukraine-le-premier-episode-de-notre-serie-video-tactiques_6596656_3210.html">an article about drone warfare in Ukraine</a> (in French).</p>
+<h2>🔭 Next Up</h2>
+<ul>
+<li>We are still hard at work on the upgrade to OnlyOffice 8. We have hit a few blocking bugs but hope to release 2025.3.1 in the coming weeks.</li>
+</ul>
+
+    </article>
+
+    <nav class="article-pagination" aria-label="Pagination">
+        
+        
+            <a href="/2025/04/02/status-2025-03/">Older: <span class="title">March 2025 status</span></a>
+        
+    </nav>
+
+        </section>
+        
+<section id="top-tags" class="post">
+
+            <h3><i class="fa fa-tags" aria-hidden="true"></i> Top Tags</h3>
+<ul>
+
+    <li>
+        <a class="tag" href="/tags/status-update">status update</a><span class="count">44</span></li>
+
+    <li>
+        <a class="tag" href="/tags/funding">funding</a><span class="count">18</span></li>
+
+    <li>
+        <a class="tag" href="/tags/security">security</a><span class="count">14</span></li>
+
+    <li>
+        <a class="tag" href="/tags/release">release</a><span class="count">13</span></li>
+
+    <li>
+        <a class="tag" href="/tags/ngi">ngi</a><span class="count">12</span></li>
+
+    <li>
+        <a class="tag" href="/tags/research">research</a><span class="count">11</span></li>
+
+    <li>
+        <a class="tag" href="/tags/roadmap">roadmap</a><span class="count">10</span></li>
+
+    <li>
+        <a class="tag" href="/tags/team">team</a><span class="count">10</span></li>
+
+    <li>
+        <a class="tag" href="/tags/donate">donate</a><span class="count">9</span></li>
+
+    <li>
+        <a class="tag" href="/tags/open-collective">open collective</a><span class="count">8</span></li>
+
+</ul>
+        </section>
+        
+    <section id="social" class="post">
+
+            <h3><i class="fa fa-link" aria-hidden="true"></i> Links</h3>
+<ul>
+    <li>
+        <a href="https://cryptpad.org">
+            <i aria-hidden="true" class="fa fa-globe"></i>Project website
+        </a>
+    </li>
+    <li>
+        <a href="https://opencollective.com/cryptpad/contribute">
+            <i aria-label="OpenCollective" class="fa fa-open-collective"></i>Donate
+        </a>
+    </li>
+</ul>
+<ul>
+    <li>
+        <a href="https://forum.cryptpad.org">
+            <i aria-hidden="true" class="fa fa-bullhorn"></i>Forum
+        </a>
+    </li>
+    <li>
+        <a href="https://matrix.to/#/#cryptpad:matrix.xwiki.com">
+            <i aria-hidden="true" class="fa fa-matrix-org"></i>Chat (Matrix)
+        </a>
+    </li>
+    <li>
+        <a rel="me" href="https://social.xwiki.com/@CryptPad">
+            <i aria-hidden="true" class="fa fa-mastodon"></i>Mastodon
+        </a>
+    </li>
+    <li>
+        <a href="https://peertube.xwiki.com/c/cryptpad_channel/videos">
+            <i aria-hidden="true" class="fa fa-peertube"></i>Peertube
+        </a>
+    </li>
+    <li>
+        <a href="https://pixelfed.social/cryptpad_design">
+            <i aria-hidden="true" class="fa fa-pixelfed"></i>Pixelfed
+        </a>
+    </li>
+</ul>
+<ul>
+    <li>
+        <a href="/atom.xml">
+            <i aria-hidden="true" class="fa fa-rss"></i>RSS Feed
+        </a>
+    </li>
+</ul>
+        </section>
+    </main>
+</body>
+
+</html>
