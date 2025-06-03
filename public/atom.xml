@@ -4,12 +4,37 @@
   <subtitle>News from the end-to-end encrypted collaboration suite</subtitle>
   <link href="https://blog.cryptpad.org/atom.xml" rel="self"/>
   <link href="https://blog.cryptpad.org"/>
-  <updated>2025-05-07T00:00:00Z</updated>
+  <updated>2025-06-03T00:00:00Z</updated>
   <id>https://blog.cryptpad.org</id>
   <author>
     <name>CryptPad Team</name>
     <email>contact@cryptpad.fr</email>
   </author>
+  <entry>
+    <title>May 2025 status</title>
+    <link href="https://blog.cryptpad.org/2025/06/03/status-2025-05/"/>
+    <updated>2025-06-03T00:00:00Z</updated>
+    <id>https://blog.cryptpad.org/2025/06/03/status-2025-05/</id>
+    <summary xml:lang="en" type="html">CryptPad 2025.3.1 with OnlyOffice 8, CryptPad in use and in the news </summary>
+    <content xml:lang="en" type="html">&lt;h2&gt;🚀 2025.3.1 with OnlyOffice 8&lt;/h2&gt;
+&lt;p&gt;This month we released &lt;a href=&quot;https://github.com/cryptpad/cryptpad/releases/tag/2025.3.1&quot;&gt;CryptPad 2025.3.1&lt;/a&gt; with the much anticipated upgrade to OnlyOffice 8.3 for the Document, Spreadsheet, and Presentation applications. The upgrade includes improved support for right-to-left languages, a more compact user-interface, and many more features and improvements since the last version (&lt;a href=&quot;https://blog.cryptpad.org/2023/05/03/status-2023-04/&quot;&gt;7.1&lt;/a&gt;)&lt;/p&gt;
+&lt;h2&gt;📰 CryptPad in use and in the news&lt;/h2&gt;
+&lt;h3&gt;Bearstech&lt;/h3&gt;
+&lt;p&gt;We are happy to see French open-source cooperative Bearstech &lt;a href=&quot;https://mamot.fr/@bearstech/114512086526972934&quot;&gt;echo CryptPad news&lt;/a&gt;. Their software recommendations are widely followed and always great so we are in good company in their &lt;a href=&quot;https://www.linkedin.com/pulse/la-veille-des-ours-n61-bearstech-ifirf/&quot;&gt;&amp;quot;Open-Source watch&amp;quot; bulletin&lt;/a&gt; (in French).&lt;/p&gt;
+&lt;h3&gt;Tuta’s de-google list&lt;/h3&gt;
+&lt;p&gt;We have a lot of appreciation for Tuta&#39;s work on privacy-respecting email. We were very glad to notice CryptPad in &lt;a href=&quot;https://tuta.com/blog/how-to-leave-google-gmail&quot;&gt;their list of recommendations for Google alternatives&lt;/a&gt;.&lt;/p&gt;
+&lt;h3&gt;Désarmer Bolloré&lt;/h3&gt;
+&lt;p&gt;Another one from France, we were happy to see &lt;a href=&quot;https://desarmerbollore.net/news/ne-laissons-pas-Bollore-envahir-les-manuels-scolaires-et-les-cerveaux-de-nos-enfants#les-50-premi%C3%A8res-signataires&quot;&gt;a campaign to fight back against far-right billionaire influence on school manuals&lt;/a&gt; use CryptPad forms to gather signatures (in French).&lt;/p&gt;
+&lt;h2&gt;🔭 Next up&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;We are working towards the summer release (2025.6.0) due at the end of the month!&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    <category term="status update" scheme="https://blog.cryptpad.org/tags/status update/"/>
+    <category term="release" scheme="https://blog.cryptpad.org/tags/release/"/>
+    <category term="press" scheme="https://blog.cryptpad.org/tags/press/"/>
+    <category term="in use" scheme="https://blog.cryptpad.org/tags/in use/"/>
+  </entry>
   <entry>
     <title>April 2025 status</title>
     <link href="https://blog.cryptpad.org/2025/05/07/status-2025-04/"/>
