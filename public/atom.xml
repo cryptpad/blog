@@ -12,9 +12,9 @@
   </author>
   <entry>
     <title>2025.12.0 security issues</title>
-    <link href="https://blog.cryptpad.org/2025/06/18/2025.12.0-security-issues/"/>
+    <link href="https://blog.cryptpad.org/2025/06/18/2024.12.0-security-issues/"/>
     <updated>2025-06-18T00:00:00Z</updated>
-    <id>https://blog.cryptpad.org/2025/06/18/2025.12.0-security-issues/</id>
+    <id>https://blog.cryptpad.org/2025/06/18/2024.12.0-security-issues/</id>
     <summary xml:lang="en" type="html">Follow up regarding two security issues impacting CryptPad reported earlier this year</summary>
     <content xml:lang="en" type="html">&lt;p&gt;Hello everyone!&lt;/p&gt;
 &lt;p&gt;A few months ago, Lachlan Davidson from &lt;a href=&quot;https://carapace.nz/&quot;&gt;Carapace&lt;/a&gt;, made us aware of two security issues impacting CryptPad 2024.12.0 source code:&lt;/p&gt;
