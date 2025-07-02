@@ -4,12 +4,49 @@
   <subtitle>News from the end-to-end encrypted collaboration suite</subtitle>
   <link href="https://blog.cryptpad.org/atom.xml" rel="self"/>
   <link href="https://blog.cryptpad.org"/>
-  <updated>2025-06-03T00:00:00Z</updated>
+  <updated>2025-06-18T00:00:00Z</updated>
   <id>https://blog.cryptpad.org</id>
   <author>
     <name>CryptPad Team</name>
     <email>contact@cryptpad.fr</email>
   </author>
+  <entry>
+    <title>2024.12.0 security issues</title>
+    <link href="https://blog.cryptpad.org/2025/06/18/2024.12.0-security-issues/"/>
+    <updated>2025-06-18T00:00:00Z</updated>
+    <id>https://blog.cryptpad.org/2025/06/18/2024.12.0-security-issues/</id>
+    <summary xml:lang="en" type="html">Follow up regarding two security issues impacting CryptPad reported earlier this year</summary>
+    <content xml:lang="en" type="html">&lt;p&gt;Hello everyone!&lt;/p&gt;
+&lt;p&gt;A few months ago, Lachlan Davidson from &lt;a href=&quot;https://carapace.nz/&quot;&gt;Carapace&lt;/a&gt;, made us aware of two security issues impacting CryptPad 2024.12.0 source code:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/cryptpad/cryptpad/security/advisories/GHSA-vq9h-x3gr-v8rj&quot;&gt;Dom-Based Cross-Site Scripting (XSS) Vector - Link Bouncer&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/cryptpad/cryptpad/security/advisories/GHSA-xq5x-wgcm-3p33&quot;&gt;2FA Bypass&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Both issues were fixed in version &lt;a href=&quot;https://github.com/cryptpad/cryptpad/releases/tag/2025.3.0&quot;&gt;2025.3.0&lt;/a&gt; (now superseded by 2025.3.1). In this article we will share his findings, we will also explain the impact of such issues in CryptPad and how we fixed them.&lt;/p&gt;
+&lt;h2&gt;Dom-Based Cross-Site Scripting (XSS) Vector&lt;/h2&gt;
+&lt;p&gt;Cross-Site Scripting is a family of security vulnerabilities that allow the execution of remote code, allowing in some cases bypassing access control and policies. This may open a breach to the website and exfiltrate data without the user consent.&lt;/p&gt;
+&lt;p&gt;In our case, the XSS happens in a sand-boxed domain, thus not having access to the actual data storage of CryptPad and is prevented by our strong content-security policies (&lt;strong&gt;CSP&lt;/strong&gt;). In the eventuality of an attacker bypassing our CSP rules, they still cannot access the decrypted data from CryptPad. However, it may allow attackers to execute code on your browser. This is part of our security measures against XSS attacks. More details about this can be found in our &lt;a href=&quot;https://docs.cryptpad.org/en/dev_guide/basics.html#content-security-policy-csp-and-security&quot;&gt;documentation&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The security vulnerability stemmed from our code, where the sanitization happened too little too late in some cases. This happens in some early allow in the code in the case of same domain links:&lt;/p&gt;
+&lt;p&gt;↳ See &lt;a href=&quot;https://github.com/cryptpad/cryptpad/blob/15c81aa8ccb737a9a1167481f4a699af331364bb/www/bounce/main.js#L64-L95&quot;&gt;impacted source code here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;However, a maliciously crafted URI, such as &lt;code&gt;javascript://main.cryptpad.internal/%250dalert(document.domain)&lt;/code&gt;, will appear to have the same &lt;em&gt;host name&lt;/em&gt; value as  the instance&#39;s (in this case, &lt;code&gt;main.cryptpad.internal&lt;/code&gt;), and follow this early allow.&lt;/p&gt;
+&lt;p&gt;As described in the security report, this has minimal impact, as it only give access to the sandbox domain and the default content security policy is quite strong. However it may create an entry point for further attacks down the road and had to be addressed.&lt;/p&gt;
+&lt;p&gt;To fix this, we moved the validation of same-domain redirection after XSS-sanitization.&lt;/p&gt;
+&lt;h2&gt;2FA Bypass&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://blog.cryptpad.org/2024/01/09/tutorial-two-factor-authentication/&quot;&gt;Multifactor authentication&lt;/a&gt; is an important security feature for CryptPad. It protects users against their username/password leaking by providing a temporal factor into logging in.&lt;/p&gt;
+&lt;p&gt;In our case, the issue was from the way we were handling the 2FA detection. Indeed, 2FA is enforced by the server, and we cannot have it done on the client side as the server holds the TOTP secret. However, there was a case where it was possible to submit a valid authentication request that needs 2FA without having the server to trigger the 2FA validation. This loophole was fixed in 2025.3.0.&lt;/p&gt;
+&lt;p&gt;This detection issue takes root in the following code block:&lt;/p&gt;
+&lt;p&gt;↳ See &lt;a href=&quot;https://github.com/cryptpad/cryptpad/blob/15c81aa8ccb737a9a1167481f4a699af331364bb/lib/http-worker.js#L356-L364&quot;&gt;impacted source code here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;For context, when you log in to CryptPad, your credentials are used to derive several cryptographic keys. Your browser then requests a file from the server, known as the “&lt;a href=&quot;https://docs.cryptpad.org/en/dev_guide/general.html#registration-login-and-block&quot;&gt;block&lt;/a&gt;”. The block is identified by one of your &lt;a href=&quot;https://en.wikipedia.org/wiki/Base64&quot;&gt;Base64&lt;/a&gt;-encoded public keys, and only you can decrypt it. We implement 2FA verification by requiring that you complete a 2FA challenge before the server lets you access your block.&lt;/p&gt;
+&lt;p&gt;It would completely skip the 2FA verification if the block length was different from 44 (which would normally won’t be valid and the rest of the code was supposed to fail). However, replacing the base64 padding symbol (&lt;code&gt;=&lt;/code&gt;) with its &lt;a href=&quot;https://en.wikipedia.org/wiki/Percent-encoding&quot;&gt;URL-encoded&lt;/a&gt; equivalent (&lt;code&gt;%3d&lt;/code&gt;) would lead to a valid block file name, but because it is longer than 44 characters, it would bypass the 2FA verification. This allows an attacker to log in knowing only the username and password.&lt;/p&gt;
+&lt;p&gt;We fixed that by raising an error whenever there is a request with invalid length.&lt;/p&gt;
+&lt;p&gt;Note that to mount such an attack, the username and password of the targeted user still needs to be compromised. However, it totally rendered moot the extra protection that &lt;a href=&quot;https://ssd.eff.org/glossary/two-factor-authentication&quot;&gt;2FA&lt;/a&gt; was supposed to provide.&lt;/p&gt;
+&lt;p&gt;This is also a good reminder that having 2FA enabled does not mean that you can skip refreshing your passphrases regularly. If you are reading this blog post, we may assume that you are interested in security. Now would be as good as a time as any to regenerate your passphrases.&lt;/p&gt;
+&lt;p&gt;Cover photo by &lt;a href=&quot;https://unsplash.com/@thecedfox&quot;&gt;Cedric Fox&lt;/a&gt; on &lt;a href=&quot;https://unsplash.com/photos/brown-turtle-between-grasses-1tIkmgkpfNQ&quot;&gt;Unsplash&lt;/a&gt;.&lt;/p&gt;
+</content>
+    <category term="security" scheme="https://blog.cryptpad.org/tags/security/"/>
+    <category term="privacy" scheme="https://blog.cryptpad.org/tags/privacy/"/>
+    <category term="release" scheme="https://blog.cryptpad.org/tags/release/"/>
+  </entry>
   <entry>
     <title>May 2025 status</title>
     <link href="https://blog.cryptpad.org/2025/06/03/status-2025-05/"/>

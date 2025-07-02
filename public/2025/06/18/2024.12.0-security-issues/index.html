@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+
+    <title>2024.12.0 security issues | CryptPad Blog</title> 
+    
+
+    
+    
+    <meta property="og:type" content="webpage">
+    <meta property="og:title" content="2024.12.0 security issues">
+    <meta property="og:url" content="http://blog.cryptpad.org/2025/06/18/2024.12.0-security-issues/">
+    <meta property="og:page_name" content="2024.12.0 security issues">
+    <meta property="og:locale" content="default">
+    <meta property="og:image" content="http://blog.cryptpad.org/images/brown-turtle.jpg">
+    <meta property="og:description" content="Follow up regarding two security issues impacting CryptPad reported earlier this year">
+    <meta name="twitter:card" content="Follow up regarding two security issues impacting CryptPad reported earlier this year">
+    <meta name="twitter:title" content="2024.12.0 security issues">
+
+
+
+    <link rel="alternate" href="/atom.xml" title="CryptPad Blog" type="application/atom+xml">
+
+    <link rel="icon" href="/theme/favicon.png">
+
+
+</head>
+
+<body>
+    <main class="container">
+        <header>
+            
+    <a href="/" class="back-home">
+        <i class="fa fa-arrow-left" aria-hidden="true"></i> <i class="fa fa-home" aria-hidden="true"></i> Homepage
+    </a>
+
+            <a href="/">
+                <img class="cp-logo" src="/theme/CryptPad_logo.svg" aria-hidden="true" alt="">
+                <h1>CryptPad Blog</h1>
+            </a>
+        </header>
+        <section id="content">
+            
+    <article class="post" lang="en">
+        <section class="header">
+            <h1>2024.12.0 security issues</h1>
+            <p class="meta">
+                Jun 18, 2025
+                
+                    
+                        
+                        
+                        
+                        -  Lachlan Davidson
+                        
+                        -  Fabrice Mouhartem
+                        
+                        -  Mathilde Grünig
+                        
+                    
+                
+                    
+                    
+            </p>
+            <div class="article-tags">
+    
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        <ul class="tags" aria-label="Tags">
+        
+            <li><a class="tag" href="/tags/security">security</a></li>
+        
+            <li><a class="tag" href="/tags/privacy">privacy</a></li>
+        
+            <li><a class="tag" href="/tags/release">release</a></li>
+        
+        </ul>
+    
+</div>
+        </section>
+        <p>Hello everyone!</p>
+<p>A few months ago, Lachlan Davidson from <a href="https://carapace.nz">Carapace</a>, made us aware of two security issues impacting CryptPad 2024.12.0 source code:</p>
+<ul>
+<li><a href="https://github.com/cryptpad/cryptpad/security/advisories/GHSA-vq9h-x3gr-v8rj">Dom-Based Cross-Site Scripting (XSS) Vector - Link Bouncer</a></li>
+<li><a href="https://github.com/cryptpad/cryptpad/security/advisories/GHSA-xq5x-wgcm-3p33">2FA Bypass</a></li>
+</ul>
+<p>Both issues were fixed in version <a href="https://github.com/cryptpad/cryptpad/releases/tag/2025.3.0">2025.3.0</a> (now superseded by 2025.3.1). In this article we will share his findings, we will also explain the impact of such issues in CryptPad and how we fixed them.</p>
+<h2>Dom-Based Cross-Site Scripting (XSS) Vector</h2>
+<p>Cross-Site Scripting is a family of security vulnerabilities that allow the execution of remote code, allowing in some cases bypassing access control and policies. This may open a breach to the website and exfiltrate data without the user consent.</p>
+<p>In our case, the XSS happens in a sand-boxed domain, thus not having access to the actual data storage of CryptPad and is prevented by our strong content-security policies (<strong>CSP</strong>). In the eventuality of an attacker bypassing our CSP rules, they still cannot access the decrypted data from CryptPad. However, it may allow attackers to execute code on your browser. This is part of our security measures against XSS attacks. More details about this can be found in our <a href="https://docs.cryptpad.org/en/dev_guide/basics.html#content-security-policy-csp-and-security">documentation</a>.</p>
+<p>The security vulnerability stemmed from our code, where the sanitization happened too little too late in some cases. This happens in some early allow in the code in the case of same domain links:</p>
+<p>↳ See <a href="https://github.com/cryptpad/cryptpad/blob/15c81aa8ccb737a9a1167481f4a699af331364bb/www/bounce/main.js#L64-L95">impacted source code here</a>.</p>
+<p>However, a maliciously crafted URI, such as <code>javascript://main.cryptpad.internal/%250dalert(document.domain)</code>, will appear to have the same <em>host name</em> value as  the instance's (in this case, <code>main.cryptpad.internal</code>), and follow this early allow.</p>
+<p>As described in the security report, this has minimal impact, as it only give access to the sandbox domain and the default content security policy is quite strong. However it may create an entry point for further attacks down the road and had to be addressed.</p>
+<p>To fix this, we moved the validation of same-domain redirection after XSS-sanitization.</p>
+<h2>2FA Bypass</h2>
+<p><a href="https://blog.cryptpad.org/2024/01/09/tutorial-two-factor-authentication/">Multifactor authentication</a> is an important security feature for CryptPad. It protects users against their username/password leaking by providing a temporal factor into logging in.</p>
+<p>In our case, the issue was from the way we were handling the 2FA detection. Indeed, 2FA is enforced by the server, and we cannot have it done on the client side as the server holds the TOTP secret. However, there was a case where it was possible to submit a valid authentication request that needs 2FA without having the server to trigger the 2FA validation. This loophole was fixed in 2025.3.0.</p>
+<p>This detection issue takes root in the following code block:</p>
+<p>↳ See <a href="https://github.com/cryptpad/cryptpad/blob/15c81aa8ccb737a9a1167481f4a699af331364bb/lib/http-worker.js#L356-L364">impacted source code here</a>.</p>
+<p>For context, when you log in to CryptPad, your credentials are used to derive several cryptographic keys. Your browser then requests a file from the server, known as the “<a href="https://docs.cryptpad.org/en/dev_guide/general.html#registration-login-and-block">block</a>”. The block is identified by one of your <a href="https://en.wikipedia.org/wiki/Base64">Base64</a>-encoded public keys, and only you can decrypt it. We implement 2FA verification by requiring that you complete a 2FA challenge before the server lets you access your block.</p>
+<p>It would completely skip the 2FA verification if the block length was different from 44 (which would normally won’t be valid and the rest of the code was supposed to fail). However, replacing the base64 padding symbol (<code>=</code>) with its <a href="https://en.wikipedia.org/wiki/Percent-encoding">URL-encoded</a> equivalent (<code>%3d</code>) would lead to a valid block file name, but because it is longer than 44 characters, it would bypass the 2FA verification. This allows an attacker to log in knowing only the username and password.</p>
+<p>We fixed that by raising an error whenever there is a request with invalid length.</p>
+<p>Note that to mount such an attack, the username and password of the targeted user still needs to be compromised. However, it totally rendered moot the extra protection that <a href="https://ssd.eff.org/glossary/two-factor-authentication">2FA</a> was supposed to provide.</p>
+<p>This is also a good reminder that having 2FA enabled does not mean that you can skip refreshing your passphrases regularly. If you are reading this blog post, we may assume that you are interested in security. Now would be as good as a time as any to regenerate your passphrases.</p>
+<p>Cover photo by <a href="https://unsplash.com/@thecedfox">Cedric Fox</a> on <a href="https://unsplash.com/photos/brown-turtle-between-grasses-1tIkmgkpfNQ">Unsplash</a>.</p>
+
+    </article>
+
+    <nav class="article-pagination" aria-label="Pagination">
+        
+        
+            <a href="/2025/06/03/status-2025-05/">Older: <span class="title">May 2025 status</span></a>
+        
+    </nav>
+
+        </section>
+        
+<section id="top-tags" class="post">
+
+            <h3><i class="fa fa-tags" aria-hidden="true"></i> Top Tags</h3>
+<ul>
+
+    <li>
+        <a class="tag" href="/tags/status-update">status update</a><span class="count">45</span></li>
+
+    <li>
+        <a class="tag" href="/tags/funding">funding</a><span class="count">18</span></li>
+
+    <li>
+        <a class="tag" href="/tags/release">release</a><span class="count">15</span></li>
+
+    <li>
+        <a class="tag" href="/tags/security">security</a><span class="count">15</span></li>
+
+    <li>
+        <a class="tag" href="/tags/ngi">ngi</a><span class="count">12</span></li>
+
+    <li>
+        <a class="tag" href="/tags/research">research</a><span class="count">11</span></li>
+
+    <li>
+        <a class="tag" href="/tags/roadmap">roadmap</a><span class="count">10</span></li>
+
+    <li>
+        <a class="tag" href="/tags/team">team</a><span class="count">10</span></li>
+
+    <li>
+        <a class="tag" href="/tags/donate">donate</a><span class="count">9</span></li>
+
+    <li>
+        <a class="tag" href="/tags/open-collective">open collective</a><span class="count">8</span></li>
+
+</ul>
+        </section>
+        
+    <section id="social" class="post">
+
+            <h3><i class="fa fa-link" aria-hidden="true"></i> Links</h3>
+<ul>
+    <li>
+        <a href="https://cryptpad.org">
+            <i aria-hidden="true" class="fa fa-globe"></i>Project website
+        </a>
+    </li>
+    <li>
+        <a href="https://opencollective.com/cryptpad/contribute">
+            <i aria-label="OpenCollective" class="fa fa-open-collective"></i>Donate
+        </a>
+    </li>
+</ul>
+<ul>
+    <li>
+        <a href="https://forum.cryptpad.org">
+            <i aria-hidden="true" class="fa fa-bullhorn"></i>Forum
+        </a>
+    </li>
+    <li>
+        <a href="https://matrix.to/#/#cryptpad:matrix.xwiki.com">
+            <i aria-hidden="true" class="fa fa-matrix-org"></i>Chat (Matrix)
+        </a>
+    </li>
+    <li>
+        <a rel="me" href="https://social.xwiki.com/@CryptPad">
+            <i aria-hidden="true" class="fa fa-mastodon"></i>Mastodon
+        </a>
+    </li>
+    <li>
+        <a href="https://peertube.xwiki.com/c/cryptpad_channel/videos">
+            <i aria-hidden="true" class="fa fa-peertube"></i>Peertube
+        </a>
+    </li>
+    <li>
+        <a href="https://pixelfed.social/cryptpad_design">
+            <i aria-hidden="true" class="fa fa-pixelfed"></i>Pixelfed
+        </a>
+    </li>
+</ul>
+<ul>
+    <li>
+        <a href="/atom.xml">
+            <i aria-hidden="true" class="fa fa-rss"></i>RSS Feed
+        </a>
+    </li>
+</ul>
+        </section>
+    </main>
+</body>
+
+</html>
