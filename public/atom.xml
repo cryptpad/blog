@@ -4,12 +4,45 @@
   <subtitle>News from the end-to-end encrypted collaboration suite</subtitle>
   <link href="https://blog.cryptpad.org/atom.xml" rel="self"/>
   <link href="https://blog.cryptpad.org"/>
-  <updated>2025-06-18T00:00:00Z</updated>
+  <updated>2025-07-02T00:00:00Z</updated>
   <id>https://blog.cryptpad.org</id>
   <author>
     <name>CryptPad Team</name>
     <email>contact@cryptpad.fr</email>
   </author>
+  <entry>
+    <title>June 2025 status</title>
+    <link href="https://blog.cryptpad.org/2025/07/02/status-2025-06/"/>
+    <updated>2025-07-02T00:00:00Z</updated>
+    <id>https://blog.cryptpad.org/2025/07/02/status-2025-06/</id>
+    <summary xml:lang="en" type="html">Summer release, OW2 Community Award, Murena Vault</summary>
+    <content xml:lang="en" type="html">&lt;h2&gt;🌻 Summer Release (2025.6.0)&lt;/h2&gt;
+&lt;p&gt;We have just deployed the latest version of CryptPad to our &lt;a href=&quot;https://cryptpad.fr/&quot;&gt;flagship instance&lt;/a&gt;. This version includes:&lt;/p&gt;
+&lt;p&gt;🏅 New badges to identify instance administrators and moderation/support accounts. Subscribers on &lt;a href=&quot;http://cryptpad.fr/&quot;&gt;CryptPad.fr&lt;/a&gt; also have a new badge if they want to show their support. Badges are opt-in, enabled in the new Profile section in user settings.&lt;/p&gt;
+&lt;p&gt;🕰️ Improvements to Diagram history and export&lt;/p&gt;
+&lt;p&gt;♿ 📱 Many more improvements to accessibility and mobile usage&lt;/p&gt;
+&lt;p&gt;Please see the full list on GitHub, if all goes well we will tag the Summer Release there within the next week.&lt;/p&gt;
+&lt;h2&gt;🏆 OW2 Community Award&lt;/h2&gt;
+&lt;p&gt;We attended &lt;a href=&quot;https://www.ow2con.org/view/2025/&quot;&gt;OW2con 25&lt;/a&gt; earlier this month and were honored to receive the &lt;a href=&quot;https://www.ow2con.org/view/2025/Awards_Results&quot;&gt;OW2 Community Award&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/OW2con25-collage.jpg&quot; alt=&quot;Photos of the CryptPad team recieving their award on stage and showing it&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;📱🔒 Murena vault&lt;/h2&gt;
+&lt;p&gt;Murena, a French de-googled mobile company that develops open-source /e/ OS, has integrated CryptPad in their latest release. The new &lt;a href=&quot;https://doc.e.foundation/murena-vault&quot;&gt;Murena Vault&lt;/a&gt; service for subscribers is based on a customized CryptPad instance. We&#39;re happy to see CryptPad deployed in this new setting and to be &lt;a href=&quot;https://www.zdnet.com/article/i-replaced-my-ipad-with-a-de-googled-android-tablet-for-a-week-heres-my-buying-advice/&quot;&gt;mentioned in Murena&#39;s press coverage&lt;/a&gt;. We&#39;ll need to join forces if we are to propose viable alternatives to Big Tech.&lt;/p&gt;
+&lt;h2&gt;📰 CryptPad in use and in the news&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Make Tech Easier&lt;/em&gt; has &lt;a href=&quot;https://www.maketecheasier.com/encrypt-collaborate-on-documents-with-cryptpad/&quot;&gt;nice write-up and tutorial&lt;/a&gt; onboarding people to CryptPad&lt;/li&gt;
+&lt;li&gt;Former German TV show turned YouTube channel &lt;a href=&quot;https://cc2.tv/daten/20250621100000.php&quot;&gt;CC2&lt;/a&gt; has &lt;a href=&quot;https://www.youtube.com/watch?v=HBjkjFUGE3c&quot;&gt;an episode about CryptPad&lt;/a&gt; (in German)&lt;/li&gt;
+&lt;li&gt;Humanitarian project &lt;a href=&quot;https://freedomflotilla.org/i-want-to-help/&quot;&gt;The Freedom Flotilla&lt;/a&gt; uses CryptPad to gather expressions of interest&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;🔭 Next up&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;The team is now staring work on the Autumn Release and will be setting priorities for the next few months&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    <category term="release" scheme="https://blog.cryptpad.org/tags/release/"/>
+    <category term="award" scheme="https://blog.cryptpad.org/tags/award/"/>
+    <category term="press" scheme="https://blog.cryptpad.org/tags/press/"/>
+    <category term="in use" scheme="https://blog.cryptpad.org/tags/in use/"/>
+  </entry>
   <entry>
     <title>2024.12.0 security issues</title>
     <link href="https://blog.cryptpad.org/2025/06/18/2024.12.0-security-issues/"/>
