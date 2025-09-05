@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+
+    <title>Summer 2025 status | CryptPad Blog</title> 
+    
+
+    
+    
+    <meta property="og:type" content="webpage">
+    <meta property="og:title" content="Summer 2025 status">
+    <meta property="og:url" content="http://blog.cryptpad.org/2025/09/05/status-2025-08/">
+    <meta property="og:page_name" content="Summer 2025 status">
+    <meta property="og:locale" content="default">
+    <meta property="og:image" content="http://blog.cryptpad.org/images/accounts-redesign.png">
+    <meta property="og:description" content="Accounts redesign, Post-quantum research, Fight Chat Control">
+    <meta name="twitter:card" content="Accounts redesign, Post-quantum research, Fight Chat Control">
+    <meta name="twitter:title" content="Summer 2025 status">
+
+
+
+    <link rel="alternate" href="/atom.xml" title="CryptPad Blog" type="application/atom+xml">
+
+    <link rel="icon" href="/theme/favicon.png">
+
+
+</head>
+
+<body>
+    <main class="container">
+        <header>
+            
+    <a href="/" class="back-home">
+        <i class="fa fa-arrow-left" aria-hidden="true"></i> <i class="fa fa-home" aria-hidden="true"></i> Homepage
+    </a>
+
+            <a href="/">
+                <img class="cp-logo" src="/theme/CryptPad_logo.svg" aria-hidden="true" alt="">
+                <h1>CryptPad Blog</h1>
+            </a>
+        </header>
+        <section id="content">
+            
+    <article class="post" lang="en">
+        <section class="header">
+            <h1>Summer 2025 status</h1>
+            <p class="meta">
+                5 Sept 2025
+                
+                    
+                        
+                        
+                        
+                        -  Fabrice Mouhartem
+                        
+                        -  David Benqué
+                        
+                    
+                
+                    
+                    
+            </p>
+            <div class="article-tags">
+    
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        <ul class="tags" aria-label="Tags">
+        
+            <li><a class="tag" href="/tags/funding">funding</a></li>
+        
+            <li><a class="tag" href="/tags/accounts">accounts</a></li>
+        
+            <li><a class="tag" href="/tags/research">research</a></li>
+        
+            <li><a class="tag" href="/tags/post-quantum">post-quantum</a></li>
+        
+            <li><a class="tag" href="/tags/chatcontrol">chatcontrol</a></li>
+        
+            <li><a class="tag" href="/tags/in-use">in use</a></li>
+        
+        </ul>
+    
+</div>
+        </section>
+        <p>We are back after skipping a month over the summer while the team operated on reduced numbers.</p>
+<h2>✨🎟️ Accounts redesign launch</h2>
+<p>This summer we gave <a href="https://cryptpad.fr/accounts/">the subscription management section of CryptPad.fr</a> a long overdue makeover. Our plans include a number of &quot;drives&quot; that can be assigned to users or teams. We made this benefit and others such as storage easier to see and manage. We are also hoping to encourage people to subscribe as they create a new account, for this we added a step to choose a plan as part of the registration process. While &quot;Free&quot; remains an option we hope that having to explicitly choose it makes it clearer that CryptPad needs subscribers to become sustainable.</p>
+<p>We hope that this update will encourage more people to subscribe and allow supporters to make the most out of their plans. Please let us know if you have feedback on the new design!</p>
+<p><img src="/images/accounts-redesign.png" alt="screenshot of the accounts redesign showing a Duo plan with storage bar and one drive left to assign to a user or team drive"></p>
+<h2>🧪 Post-quantum research</h2>
+<p>After six months, <a href="https://github.com/Iulian-Tudor">Iulian Scutaru</a> finished his internship on post-quantum cryptography (PQC) integration in CryptPad.
+Post-quantum cryptography is the field of cryptography that studies <em>classical</em> algorithms (that can run on your computer) which provide security guarantees against an attacker owning a quantum computer.</p>
+<p>Iulian started with benchmarking the different <a href="https://csrc.nist.gov/News/2024/postquantum-cryptography-fips-approved">standardised solutions</a> from the <a href="https://csrc.nist.gov/Projects/post-quantum-cryptography">NIST post-quantum standardisation process</a>. Following this preliminary analysis, we decided on the <a href="https://pq-crystals.org/index.shtml">Crystals</a> suite (<code>ML-KEM</code> and <code>ML-DSA</code>) both for their performances and well-studied security assumptions.</p>
+<p>The results of the implementation of PQC in CryptPad are encouraging. However, there are still some blockers, both from a low-level and UX perspectives, preventing us from deployment in the near future.
+On a positive note, Iulian also implemented crypto-agility for CryptPad in order to switch from classical to quantum-resilient cryptography easily. Crypto-agility was studied since the <a href="https://blueprints.cryptpad.org/review/agility/">blueprints</a> project. It is a refactor of the code to allow switching crypto-libraries more easily. Independently of quantum-safety, it is an important security feature for CryptPad users!</p>
+<p>Stay tuned as there will be more details about the results of this post-quantum experiment on this blog later on.</p>
+<h2>📨 Fight Chat control</h2>
+<blockquote>
+<p>The EU (still) wants to scan your private messages and photos</p>
+</blockquote>
+<p>The &quot;Chat Control&quot; EU proposal is now supported by 15 EU member states despite warnings from experts in encryption and child-protection. We <a href="https://blog.cryptpad.org/2022/05/19/against-chatcontrol/">have long been against</a> this proposal and welcome the opening of <a href="https://fightchatcontrol.eu/">Fight Chat Control</a>, a new website that clearly communicates the arguments against the proposal and helps people contact their representatives. Please take a moment to email your Member of the European Parliament (MEP) especially if your country currently supports Chat Control. The implementation of such a measure would do very little to protect children while putting everyone's privacy at risk.</p>
+<h2>📹 FOSDEM talk video</h2>
+<p>At FOSDEM this year, Fabrice gave an overview of what’s new in CryptPad in 2024. <a href="https://peertube.xwiki.com/w/fL96CjcPs3VJFfEhTPq7Wg">The video recording</a> is available on our <a href="https://peertube.xwiki.com/c/cryptpad_channel/videos">peertube channel</a>. Feel free to explore the channel where we re-upload our different interventions.</p>
+<p>There will soon be, once available, the recording of the <a href="https://www.parisjug.org/events/2025/07-01-tools-in-action/">Tools in Action</a> talk from Fabrice and Ludovic about CryptPad API! There will aslo be future talks, such as Fabrice’s presentation at <a href="https://www.opensource-experience.com/en/">OSXP</a> in December about CryptPad’s cryptography.</p>
+<h2>📰 In use and in the news</h2>
+<ul>
+<li><a href="https://www.pcworld.com/article/2857908/de-google-your-life-these-17-privacy-obsessed-apps-will-set-you-free.html">De-Google your life: These 17 privacy-obsessed apps will set you free</a> - PC World</li>
+<li><a href="https://thecommandline.net/2025/05/24/cryptpad/">Collaboration with Our Own Cryptpad</a> - The Command Line</li>
+<li><a href="https://cybernews.com/google-docs-alternatives-for-currentyear/">Google Docs alternatives for (2025)</a> - Cybernews</li>
+</ul>
+<h2>🔭 Up next</h2>
+<ul>
+<li>We will be presenting at this year's <a href="https://www.opensource-experience.com/">Open Source Experience</a> summit in December</li>
+<li>The team is currently at work on the Autumn Release which is planned for early October</li>
+<li>Most of the team will meet IRL for a week at the end of September for the yearly XWiki seminar</li>
+</ul>
+
+    </article>
+
+    <nav class="article-pagination" aria-label="Pagination">
+        
+        
+            <a href="/2025/07/02/status-2025-06/">Older: <span class="title">June 2025 status</span></a>
+        
+    </nav>
+
+        </section>
+        
+<section id="top-tags" class="post">
+
+            <h3><i class="fa fa-tags" aria-hidden="true"></i> Top Tags</h3>
+<ul>
+
+    <li>
+        <a class="tag" href="/tags/status-update">status update</a><span class="count">45</span></li>
+
+    <li>
+        <a class="tag" href="/tags/funding">funding</a><span class="count">19</span></li>
+
+    <li>
+        <a class="tag" href="/tags/release">release</a><span class="count">16</span></li>
+
+    <li>
+        <a class="tag" href="/tags/security">security</a><span class="count">15</span></li>
+
+    <li>
+        <a class="tag" href="/tags/ngi">ngi</a><span class="count">12</span></li>
+
+    <li>
+        <a class="tag" href="/tags/research">research</a><span class="count">12</span></li>
+
+    <li>
+        <a class="tag" href="/tags/roadmap">roadmap</a><span class="count">10</span></li>
+
+    <li>
+        <a class="tag" href="/tags/team">team</a><span class="count">10</span></li>
+
+    <li>
+        <a class="tag" href="/tags/donate">donate</a><span class="count">9</span></li>
+
+    <li>
+        <a class="tag" href="/tags/privacy">privacy</a><span class="count">8</span></li>
+
+</ul>
+        </section>
+        
+    <section id="social" class="post">
+
+            <h3><i class="fa fa-link" aria-hidden="true"></i> Links</h3>
+<ul>
+    <li>
+        <a href="https://cryptpad.org">
+            <i aria-hidden="true" class="fa fa-globe"></i>Project website
+        </a>
+    </li>
+    <li>
+        <a href="https://opencollective.com/cryptpad/contribute">
+            <i aria-label="OpenCollective" class="fa fa-open-collective"></i>Donate
+        </a>
+    </li>
+</ul>
+<ul>
+    <li>
+        <a href="https://forum.cryptpad.org">
+            <i aria-hidden="true" class="fa fa-bullhorn"></i>Forum
+        </a>
+    </li>
+    <li>
+        <a href="https://matrix.to/#/#cryptpad:matrix.xwiki.com">
+            <i aria-hidden="true" class="fa fa-matrix-org"></i>Chat (Matrix)
+        </a>
+    </li>
+    <li>
+        <a rel="me" href="https://social.xwiki.com/@CryptPad">
+            <i aria-hidden="true" class="fa fa-mastodon"></i>Mastodon
+        </a>
+    </li>
+    <li>
+        <a href="https://peertube.xwiki.com/c/cryptpad_channel/videos">
+            <i aria-hidden="true" class="fa fa-peertube"></i>Peertube
+        </a>
+    </li>
+    <li>
+        <a href="https://pixelfed.social/cryptpad_design">
+            <i aria-hidden="true" class="fa fa-pixelfed"></i>Pixelfed
+        </a>
+    </li>
+</ul>
+<ul>
+    <li>
+        <a href="/atom.xml">
+            <i aria-hidden="true" class="fa fa-rss"></i>RSS Feed
+        </a>
+    </li>
+</ul>
+        </section>
+    </main>
+</body>
+
+</html>
