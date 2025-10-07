@@ -10,18 +10,19 @@ summary: "European SMEs have united to direct a strong open letter to urge minis
 cover: /images/stop-chat-control.webp
 ---
 
-Today we are adding our signature (and that of our parent company XWiki) to a [new open letter](https://tuta.com/blog/open-letter-against-chat-control)  against the so-called "Chat Control" EU regulation. We thank our friends at Tuta for writing it.
+Today we are adding our signature (and that of our parent company XWiki SAS) to a [new open letter](https://tuta.com/blog/open-letter-against-chat-control)  against the so-called "Chat Control" EU regulation. We thank our friends at Tuta, Proton and Mailfence for writing it.
 
 For years the CryptPad team and many other privacy advocates have been voicing their opposition to the proposed EU regulation on Child Sexual Abuse (CSA), also known as "Chat Control". This policy would extend to providers of encrypted platforms (like CryptPad) through a practice known as [client-side scanning](https://www.internetsociety.org/resources/doc/2020/fact-sheet-client-side-scanning/). In this approach, encrypted platform providers are expected to deploy code to your device which will access and use your encryption keys against you, analyzing your private content and reporting back to the provider if it matches a set of rules defined by a government agency. All of this would be applied indiscriminantly with no need for a court order or reasonable suspicion.
 
 We started [writing about this back in May 2022](https://blog.cryptpad.org/2022/05/19/against-chatcontrol/), and nothing has really changed since then. 
 See the [Fight Chat Control website](https://fightchatcontrol.eu/) to be updated on how to take action against this policy in your EU country, and to follow the latest developments.
 
-![Stop Chat Control! poster, blue background with a tall person in the background, a camera instead of the head, looking at someone's computer from behind their shoulder](/images/stop-chat-control.webp)
-
 Read the full letter below and learn why Europe should oppose it.
 
 ---
+
+![Stop Chat Control! poster, blue background with a tall person in the background, a camera instead of the head, looking at someone's computer from behind their shoulder](/images/stop-chat-control.webp)
+
 
 ## Open letter to EU Member States on the proposed CSA regulation
 
