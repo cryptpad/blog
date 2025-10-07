@@ -4,12 +4,99 @@
   <subtitle>News from the end-to-end encrypted collaboration suite</subtitle>
   <link href="https://blog.cryptpad.org/atom.xml" rel="self"/>
   <link href="https://blog.cryptpad.org"/>
-  <updated>2025-09-05T00:00:00Z</updated>
+  <updated>2025-10-07T00:00:00Z</updated>
   <id>https://blog.cryptpad.org</id>
   <author>
     <name>CryptPad Team</name>
     <email>contact@cryptpad.fr</email>
   </author>
+  <entry>
+    <title>Europe&#39;s future is at stake: Open letter against Chat Control</title>
+    <link href="https://blog.cryptpad.org/2025/10/07/open-letter-against-chat-control/"/>
+    <updated>2025-10-07T00:00:00Z</updated>
+    <id>https://blog.cryptpad.org/2025/10/07/open-letter-against-chat-control/</id>
+    <summary xml:lang="en" type="html">European SMEs have united to direct a strong open letter to urge ministers of EU member states to oppose Chat Control and to defend privacy and a strong European tech industry.</summary>
+    <content xml:lang="en" type="html">&lt;p&gt;Today we are adding our signature (and that of our parent company XWiki SAS) to a &lt;a href=&quot;https://tuta.com/blog/open-letter-against-chat-control&quot;&gt;new open letter&lt;/a&gt;  against the so-called &amp;quot;Chat Control&amp;quot; EU regulation. We thank our friends at Tuta, Proton and Mailfence for writing it.&lt;/p&gt;
+&lt;p&gt;For years the CryptPad team and many other privacy advocates have been voicing their opposition to the proposed EU regulation on Child Sexual Abuse (CSA), also known as &amp;quot;Chat Control&amp;quot;. This policy would extend to providers of encrypted platforms (like CryptPad) through a practice known as &lt;a href=&quot;https://www.internetsociety.org/resources/doc/2020/fact-sheet-client-side-scanning/&quot;&gt;client-side scanning&lt;/a&gt;. In this approach, encrypted platform providers are expected to deploy code to your device which will access and use your encryption keys against you, analyzing your private content and reporting back to the provider if it matches a set of rules defined by a government agency. All of this would be applied indiscriminantly with no need for a court order or reasonable suspicion.&lt;/p&gt;
+&lt;p&gt;We started &lt;a href=&quot;https://blog.cryptpad.org/2022/05/19/against-chatcontrol/&quot;&gt;writing about this back in May 2022&lt;/a&gt;, and nothing has really changed since then.
+See the &lt;a href=&quot;https://fightchatcontrol.eu/&quot;&gt;Fight Chat Control website&lt;/a&gt; to be updated on how to take action against this policy in your EU country, and to follow the latest developments.&lt;/p&gt;
+&lt;p&gt;Read the full letter below and learn why Europe should oppose it.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/stop-chat-control.webp&quot; alt=&quot;Stop Chat Control! poster, blue background with a tall person in the background, a camera instead of the head, looking at someone&#39;s computer from behind their shoulder&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;Open letter to EU Member States on the proposed CSA regulation&lt;/h2&gt;
+&lt;p&gt;Dear Ministers and Ambassadors of EU Member States,&lt;/p&gt;
+&lt;p&gt;We, the undersigned European enterprises, as well as the European DIGITAL SME Alliance - which represents more than 45.000 digital SMEs across Europe, write to you with deep concern regarding the proposed Regulation on Child Sexual Abuse (CSA). Protecting children and ensuring that everyone is safe on our services and on the internet in general is at the core of our mission as privacy-focused companies. We see privacy as a fundamental right, one that underpins trust, security and freedom online for adults and children alike. However, we are convinced that the current approach followed by the Danish Presidency would not only make the internet less safe for everyone, but also undermine one of the EU’s most important strategic goals: progressing towards higher levels of digital sovereignty.&lt;/p&gt;
+&lt;h3&gt;Digital sovereignty is Europe’s strategic future&lt;/h3&gt;
+&lt;p&gt;In an increasingly unstable world, Europe needs to be able to develop and control its own secure digital infrastructure, services, and technologies in line with European values. The only way to mitigate these risks is to empower innovative European technology providers.&lt;/p&gt;
+&lt;p&gt;Digital sovereignty matters for two key reasons:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Economic independence&lt;/strong&gt;: Europe’s digital future depends on the competitiveness of its own businesses. But forcing European services to undermine their security standards by scanning all messages, even encrypted ones, using client-side scanning would undermine users’ safety online, rand go against Europe’s high data protection standards. Therefore European users - individuals and businesses alike - and global customers will lose trust in our services and turn to foreign providers. This will make Europe even more dependent on American and Chinese tech giants that currently do not respect our rules, undermining the bloc’s ability to compete.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;National security&lt;/strong&gt;: Encryption is essential for national security. Mandating what would essentially amount to backdoors or other scanning technologies inevitably creates vulnerabilities that can and will be exploited by hostile state actors and criminals. For this exact reason, governments exempted themselves from the proposed CSA scanning obligations. Nevertheless, a lot of sensitive information from businesses, politicians and citizens will be at risk, should the CSA Regulation move forward. It will weaken Europe’s ability to protect its critical infrastructure, its companies, and its people.&lt;/p&gt;
+&lt;h3&gt;The CSA Regulation will undermine trust in European businesses&lt;/h3&gt;
+&lt;p&gt;Trust is Europe’s competitive advantage. Thanks to the GDPR and Europe’s strong data protection framework, European companies have built services that users worldwide rely on for data protection, security, and integrity. This reputation is hard-earned and gives European-based services a unique selling point Big Tech monopolies will never be able to match. This is one of the few, if not the only competitive advantage Europe has over the US and China in the tech sector but the CSA Regulation risks reversing this success.&lt;/p&gt;
+&lt;p&gt;This legal text would undermine European ethical and privacy-first services by forcing them to weaken the very security guarantees that differentiate European businesses internationally. This is particularly problematic in a context where the US administration explicitly forbids its companies to weaken encryption, even if mandated to do so by EU law.&lt;/p&gt;
+&lt;p&gt;Ultimately, the CSA Regulation will be a blessing for US and Chinese companies, as it will make Europe kill its only competitive advantage and open even wider the doors to Big Tech.&lt;/p&gt;
+&lt;h3&gt;Contradictions weaken Europe’s digital ambitions&lt;/h3&gt;
+&lt;p&gt;The EU has committed itself to strengthening cybersecurity through measures such as NIS2, the Cyber Resilience Act, and the Cybersecurity Act. These policies recognize encryption as essential to Europe’s digital independence. The CSA Regulation, however, must not undermine these achievements by effectively mandating systemic vulnerabilities.&lt;/p&gt;
+&lt;p&gt;It is incoherent for Europe to invest in cybersecurity with one hand, while legislating against it with the other.&lt;/p&gt;
+&lt;h3&gt;European SMEs will be hit the hardest&lt;/h3&gt;
+&lt;p&gt;Small and medium-sized enterprises (SMEs) would be hit hardest if obliged to implement client-side scanning. Unlike large technology corporations, SMEs often do not have the financial and technical resources to develop and maintain intrusive surveillance mechanisms, meaning compliance would impose prohibitive costs or force market exit. Moreover, many SMEs build their unique market position on offering the highest levels of data protection and privacy; which particularly in Europe is a decisive factor for many to choose their products over the counterparts of Big Tech. Mandating client-side scanning would undermine this core value proposition of many European companies.&lt;/p&gt;
+&lt;p&gt;This will suffocate European innovation and cement the dominance of foreign providers. Instead of building a vibrant, independent digital ecosystem, Europe risks legislating its own companies out of the market.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;For these reasons, we call on you to&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Reject measures that would force the implementation of client-side scanning, backdoors, or mass surveillance of private communications, such as we currently see in the Danish proposal for a Council position on the CSA Regulation.&lt;/li&gt;
+&lt;li&gt;Protect encryption to strengthen European cybersecurity and digital sovereignty.&lt;/li&gt;
+&lt;li&gt;Preserve the trust that European businesses have built internationally.&lt;/li&gt;
+&lt;li&gt;Ensure that EU regulation strengthens, rather than undermines, the competitiveness of European SMEs.&lt;/li&gt;
+&lt;li&gt;Pursue child protection measures that are effective, proportionate, and compatible with Europe’s strategic goal of digital sovereignty.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Digital sovereignty cannot be achieved if Europe undermines the security and integrity of its own businesses by mandating client-side scanning or other similar tools or methodologies designed to scan encrypted environments, which technologists have once again confirmed cannot be done without weakening or undermining encryption. To lead in the global digital economy, the EU must protect privacy, trust, and encryption.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Signatories&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;Blacknight (Ireland)&lt;/p&gt;
+&lt;p&gt;Commown (France)&lt;/p&gt;
+&lt;p&gt;CryptPad (France)&lt;/p&gt;
+&lt;p&gt;Ecosia (Germany)&lt;/p&gt;
+&lt;p&gt;Element (Germany)&lt;/p&gt;
+&lt;p&gt;E-Foundation (France)&lt;/p&gt;
+&lt;p&gt;European Digital SME Alliance (EU trade association representing 45.000 EU SMEs)&lt;/p&gt;
+&lt;p&gt;Fabiano Law Firm (Italy)&lt;/p&gt;
+&lt;p&gt;FlokiNET (Iceland)&lt;/p&gt;
+&lt;p&gt;FFDN (France)&lt;/p&gt;
+&lt;p&gt;Gentils Nuages (France)&lt;/p&gt;
+&lt;p&gt;Hashbang (France)&lt;/p&gt;
+&lt;p&gt;Heinlein Group (Germany)&lt;/p&gt;
+&lt;p&gt;LeBureau coop (France)&lt;/p&gt;
+&lt;p&gt;Logilab (France)&lt;/p&gt;
+&lt;p&gt;mailbox (Germany)&lt;/p&gt;
+&lt;p&gt;Mailfence (Belgium)&lt;/p&gt;
+&lt;p&gt;Mailo (France)&lt;/p&gt;
+&lt;p&gt;Murena (France)&lt;/p&gt;
+&lt;p&gt;Nextcloud (Germany)&lt;/p&gt;
+&lt;p&gt;Nord Security (Lithuania)&lt;/p&gt;
+&lt;p&gt;Nym (France / Switzerland)&lt;/p&gt;
+&lt;p&gt;Octopuce (France)&lt;/p&gt;
+&lt;p&gt;Olvid (France)OpenCloud (Germany)&lt;/p&gt;
+&lt;p&gt;OpenTalk (Germany)&lt;/p&gt;
+&lt;p&gt;Phoenix R&amp;amp;D (Germany)&lt;/p&gt;
+&lt;p&gt;Proton (Switzerland)&lt;/p&gt;
+&lt;p&gt;Serendipiware (Greece)&lt;/p&gt;
+&lt;p&gt;Skylabs (Ireland)&lt;/p&gt;
+&lt;p&gt;SMSPool (Netherlands)&lt;/p&gt;
+&lt;p&gt;Sorware Ay (Finland)&lt;/p&gt;
+&lt;p&gt;Soverin (Netherlands)&lt;/p&gt;
+&lt;p&gt;Startmail (Netherlands)&lt;/p&gt;
+&lt;p&gt;Surfshark (Netherlands)&lt;/p&gt;
+&lt;p&gt;TeleCoop (France)&lt;/p&gt;
+&lt;p&gt;The Good Cloud (Netherlands)&lt;/p&gt;
+&lt;p&gt;Threema (Switzerland)&lt;/p&gt;
+&lt;p&gt;Tuta Mail (Germany)&lt;/p&gt;
+&lt;p&gt;Volla Systeme GmbH (Germany)&lt;/p&gt;
+&lt;p&gt;WEtell (Germany)&lt;/p&gt;
+&lt;p&gt;Wire (Switzerland)&lt;/p&gt;
+&lt;p&gt;XWiki SAS (France)&lt;/p&gt;
+&lt;p&gt;zeitkapsl (Austria)&lt;/p&gt;
+</content>
+    <category term="chatcontrol" scheme="https://blog.cryptpad.org/tags/chatcontrol/"/>
+  </entry>
   <entry>
     <title>Summer 2025 status</title>
     <link href="https://blog.cryptpad.org/2025/09/05/status-2025-08/"/>
