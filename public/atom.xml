@@ -4,12 +4,62 @@
   <subtitle>News from the end-to-end encrypted collaboration suite</subtitle>
   <link href="https://blog.cryptpad.org/atom.xml" rel="self"/>
   <link href="https://blog.cryptpad.org"/>
-  <updated>2025-10-07T00:00:00Z</updated>
+  <updated>2025-10-10T00:00:00Z</updated>
   <id>https://blog.cryptpad.org</id>
   <author>
     <name>CryptPad Team</name>
     <email>contact@cryptpad.fr</email>
   </author>
+  <entry>
+    <title>September 2025 status</title>
+    <link href="https://blog.cryptpad.org/2025/10/10/status-2025-09/"/>
+    <updated>2025-10-10T00:00:00Z</updated>
+    <id>https://blog.cryptpad.org/2025/10/10/status-2025-09/</id>
+    <summary xml:lang="en" type="html">Accounts redesign, Post-quantum research, Fight Chat Control</summary>
+    <content xml:lang="en" type="html">&lt;p&gt;This month was the annual XWiki seminar where most of our team got to meet IRL in Romania for a week. This shifted some of our usual deadlines such as the publication of this post and the Autumn Release (2025.9.0), basically everything is a couple of weeks late so thank you for bearing with us!&lt;/p&gt;
+&lt;h2&gt;🌲 Seminar and hackathon&lt;/h2&gt;
+&lt;p&gt;Each year a fixture of the seminar is a day of Hackathon where the team gets to work on wildcard projects, experiments, or prototypes. This year we have a great selection!&lt;/p&gt;
+&lt;h3&gt;Webxdc CryptPad&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/hackathon-2025-webxdc.png&quot; alt=&quot;screenshot of a chess game application with a CryptPad toolbar&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;The team produced a prototype for using the &lt;a href=&quot;https://webxdc.org/&quot;&gt;Webxdc&lt;/a&gt; API within CryptPad. This simple file format for applications is designed to be lightweight and take advantage of the offline-first and end-to-end encrytpion capabilities of the platform hosting it (for example a messenger such as &lt;a href=&quot;https://delta.chat/&quot;&gt;Delta Chat&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;The team managed to port and integrate &lt;a href=&quot;https://github.com/ArcaneCircle/chess&quot;&gt;a simple chess game&lt;/a&gt; into CryptPad.&lt;/p&gt;
+&lt;h3&gt;CryptPad CLI&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/hackathon-2025-cli.png&quot; alt=&quot;screenshot of a terminal showing a cryptpad client navigating a drive with cd and ls commands&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;XWiki CEO Ludovic Dubost experimented with a command-line client for CryptPad. He managed to connect a CryptPad account and browse the drive using commands like &lt;code&gt;cd&lt;/code&gt; and &lt;code&gt;ls&lt;/code&gt;.&lt;/p&gt;
+&lt;h3&gt;Cristal in CryptPad&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/hackathon-2025-cristal.png&quot; alt=&quot;screenshot of the Cristal interface inside CryptPad&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/hackathon-2025-cristal2.png&quot; alt=&quot;screenshot of the Cristal interface inside CryptPad shown with an active text editor&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;XWikier Pierre Jeanjean experimented with an integration of the new XWiki user-interface &lt;a href=&quot;https://cristal.xwiki.org/xwiki/bin/view/Main/WebHome&quot;&gt;Cristal&lt;/a&gt; as a CryptPad application. This leveraged both Cristal&#39;s wiki support capabilities and CryptPad&#39;s secure sharing and file support. This PoC integration offers the capability to create and manage a shareable encrypted wiki, that can contain any pad type supported by the CryptPad instance by embedding the corresponding editor.&lt;/p&gt;
+&lt;h2&gt;📹 ParisJug Tools in Action Video&lt;/h2&gt;
+&lt;p&gt;Fabrice &amp;amp; Ludovic presented CryptPad to the Paris Java Users Group, 9 years after the initial demo. They talked about what changed in the project&#39;s first decade, and demonstrated the clientside API. &lt;a href=&quot;https://peertube.xwiki.com/w/tKLzwGvUtXFrHD7HukYAWA&quot;&gt;The video of the presentation&lt;/a&gt; is now available (in French).&lt;/p&gt;
+&lt;h2&gt;🔭 Up Next&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;We are working on the delayed Autumn Release (2025.9.0) with some big user-interface improvements. We hope to release this in the next couple of weeks.&lt;/li&gt;
+&lt;li&gt;We will be present at Capitole du Libre in Toulouse (in French): &lt;a href=&quot;https://capitoledulibre.org/programme/&quot;&gt;https://capitoledulibre.org/programme/&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;Private collaboration with CryptPad
+&lt;ul&gt;
+&lt;li&gt;Fabrice on Saturday Nov. 15&lt;sup&gt;th&lt;/sup&gt;, from 4:30PM to 4:55MP in room A201&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;20 ans de &amp;quot;hacking&amp;quot; du financement de XWiki et CryptPad
+&lt;ul&gt;
+&lt;li&gt;Ludovic on Saturday Nov. 15&lt;sup&gt;th&lt;/sup&gt; from 3PM to 3:55PM in room A002&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;CryptPad booth
+&lt;ul&gt;
+&lt;li&gt;Please find our spot to discuss anything XWiki/CryptPad related&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    <category term="status update" scheme="https://blog.cryptpad.org/tags/status update/"/>
+    <category term="prototypes" scheme="https://blog.cryptpad.org/tags/prototypes/"/>
+    <category term="talk" scheme="https://blog.cryptpad.org/tags/talk/"/>
+  </entry>
   <entry>
     <title>Europe&#39;s future is at stake: Open letter against Chat Control</title>
     <link href="https://blog.cryptpad.org/2025/10/07/open-letter-against-chat-control/"/>
@@ -136,6 +186,7 @@ On a positive note, Iulian also implemented crypto-agility for CryptPad in order
 &lt;li&gt;Most of the team will meet IRL for a week at the end of September for the yearly XWiki seminar&lt;/li&gt;
 &lt;/ul&gt;
 </content>
+    <category term="status update" scheme="https://blog.cryptpad.org/tags/status update/"/>
     <category term="funding" scheme="https://blog.cryptpad.org/tags/funding/"/>
     <category term="accounts" scheme="https://blog.cryptpad.org/tags/accounts/"/>
     <category term="research" scheme="https://blog.cryptpad.org/tags/research/"/>
