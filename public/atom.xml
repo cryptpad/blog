@@ -4,12 +4,45 @@
   <subtitle>News from the end-to-end encrypted collaboration suite</subtitle>
   <link href="https://blog.cryptpad.org/atom.xml" rel="self"/>
   <link href="https://blog.cryptpad.org"/>
-  <updated>2025-10-10T00:00:00Z</updated>
+  <updated>2025-11-04T00:00:00Z</updated>
   <id>https://blog.cryptpad.org</id>
   <author>
     <name>CryptPad Team</name>
     <email>contact@cryptpad.fr</email>
   </author>
+  <entry>
+    <title>October 2025 status</title>
+    <link href="https://blog.cryptpad.org/2025/11/04/status-2025-10/"/>
+    <updated>2025-11-04T00:00:00Z</updated>
+    <id>https://blog.cryptpad.org/2025/11/04/status-2025-10/</id>
+    <summary xml:lang="en" type="html">Autumn release (icons!), CryptPad in use</summary>
+    <content xml:lang="en" type="html">&lt;h2&gt;🍁 Autumn release (2025.9.0)&lt;/h2&gt;
+&lt;p&gt;This quarter&#39;s release was delayed by a couple weeks due to the annual seminar that took place late September. We needed the extra time to test as this release comes with a major update that touches nearly every part of CryptPad: icons!&lt;/p&gt;
+&lt;p&gt;We finally let go of Fontawesome 4.7 (released in 2016) and our hacky custom web-font CP Tools, in favour of &lt;a href=&quot;https://github.com/cryptpad/icons&quot;&gt;our new fork&lt;/a&gt; of &lt;a href=&quot;https://lucide.dev/&quot;&gt;Lucide Icons&lt;/a&gt; that includes applications icons and other customizations.&lt;/p&gt;
+&lt;p&gt;The work to replace the icons was substantial as they are used in almost every part of the CryptPad interface. We implemented this upgrade in a way that makes any future change much easier, as only one file would need to be edited.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/before-after-comp.png&quot; alt=&quot;screenshots of the file menu before and after the icon change&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;The release also includes a simplified loading screen. This is the first point of contact with CryptPad for a lot of people, for example when being sent a link to a shared document. We updated this screen to feel more simple and polished, while clearly stating that the platform is end-to-end encrypted.&lt;/p&gt;
+&lt;p&gt;Please see the &lt;a href=&quot;https://github.com/cryptpad/cryptpad/releases/tag/2025.9.0&quot;&gt;release notes&lt;/a&gt; for a full list of fixes and improvements in the release.&lt;/p&gt;
+&lt;h2&gt;📰 CryptPad in use&lt;/h2&gt;
+&lt;h3&gt;Huminfra conference&lt;/h3&gt;
+&lt;p&gt;We spotted that researcher Elizabeth Ashley Fox-Jensen &lt;a href=&quot;https://www.linkedin.com/posts/elizabethashleyfox_glad-to-share-that-i-will-be-presenting-activity-7389705367116464128-RF4s/&quot;&gt;mentions CryptPad&lt;/a&gt; in the upcoming paper: &amp;quot;Beyond Big Tech Dependencies: Building Collaborative and Accessible Digital Tools for Participatory Art Historical Research&amp;quot; that will be part of the &lt;a href=&quot;https://www.huminfra.se/HiC-2025&quot;&gt;Huminfra HiC 25 conference&lt;/a&gt;. We hope to catch the proceedings!&lt;/p&gt;
+&lt;h3&gt;Tactiques, Le Monde&lt;/h3&gt;
+&lt;p&gt;Le Monde journalists are once again using CryptPad to list their sources, this time for a &lt;a href=&quot;https://www.lemonde.fr/videos/video/2025/10/16/gaza-le-d9-israelien-un-bulldozer-de-guerre-au-service-de-l-aneantissement-de-l-enclave_6647187_1669088.html&quot;&gt;video documentary about the militarized D9 Bulldozer used in the Gaza strip&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;🔭 Next up&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Between the delay in the last release and the holiday season coming up the team is left with a shorter release-cycle than usual. Everyone is still hard at work though, as we figure out what we can achieve in the time we have:
+&lt;ul&gt;
+&lt;li&gt;OnlyOffice work is still progressing so we may see a version upgrade (to be confirmed)&lt;/li&gt;
+&lt;li&gt;We have discovered a new mode in the Diagram app which is promising&lt;/li&gt;
+&lt;li&gt;We will continue to improve the look and feel of CryptPad, this time looking at the Drive&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    <category term="status update" scheme="https://blog.cryptpad.org/tags/status update/"/>
+    <category term="release" scheme="https://blog.cryptpad.org/tags/release/"/>
+    <category term="in use" scheme="https://blog.cryptpad.org/tags/in use/"/>
+  </entry>
   <entry>
     <title>September 2025 status</title>
     <link href="https://blog.cryptpad.org/2025/10/10/status-2025-09/"/>
