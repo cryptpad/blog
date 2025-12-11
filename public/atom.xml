@@ -4,12 +4,63 @@
   <subtitle>News from the end-to-end encrypted collaboration suite</subtitle>
   <link href="https://blog.cryptpad.org/atom.xml" rel="self"/>
   <link href="https://blog.cryptpad.org"/>
-  <updated>2025-11-04T00:00:00Z</updated>
+  <updated>2025-12-10T00:00:00Z</updated>
   <id>https://blog.cryptpad.org</id>
   <author>
     <name>CryptPad Team</name>
     <email>contact@cryptpad.fr</email>
   </author>
+  <entry>
+    <title>November 2025 status</title>
+    <link href="https://blog.cryptpad.org/2025/12/10/status-2025-11/"/>
+    <updated>2025-12-10T00:00:00Z</updated>
+    <id>https://blog.cryptpad.org/2025/12/10/status-2025-11/</id>
+    <summary xml:lang="en" type="html">2 new NLNet projects, End-of-year funding campaign, In the news, and more</summary>
+    <content xml:lang="en" type="html">&lt;h2&gt;🎁🎁 2 new NLNet projects: CryptPad Notes and Scalable Server&lt;/h2&gt;
+&lt;p&gt;We are delighted to be included in the &lt;a href=&quot;https://nlnet.nl/news/2025/20251127-45-NGI0-CommonsFund.html&quot;&gt;45 selected projects for the NGI Zero Commons Fund seventh open call&lt;/a&gt;. We have been granted not one but &lt;em&gt;two&lt;/em&gt; important projects so we are immensely grateful to NLNet for their renewed support of CryptPad. The two pages for our &lt;a href=&quot;https://nlnet.nl/project/Cryptpad-scaling/&quot;&gt;Scalable Server&lt;/a&gt; and &lt;a href=&quot;https://nlnet.nl/project/CryptPad-Notes/&quot;&gt;CryptPad Notes&lt;/a&gt; projects will be updated shortly, but in the meantime this is what we are planning:&lt;/p&gt;
+&lt;h3&gt;Scalable Server&lt;/h3&gt;
+&lt;p&gt;This project is a complete rewrite of the CryptPad backend. It will allow the service to operate across multiple physical or logical nodes (for example virtual machines) to distribute ressources and avoid performance bottlenecks.&lt;/p&gt;
+&lt;p&gt;The work is already well underway. In the last few months performance issues have regularly affected users on our flagship instance (&lt;a href=&quot;http://cryptpad.fr/&quot;&gt;cryptpad.fr&lt;/a&gt;), to our knowledge by far the largest in terms of users and activity. While CryptPad performs very well on smaller instances, we have reached a ceiling for the single-node architecture that is hindering the project&#39;s growth.&lt;/p&gt;
+&lt;p&gt;We thank everyone for bearing with us, and are very happy to receive support to complete this work as fast as possible so that it can reach production in the next few months!&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/scalable-server-architecture.png&quot; alt=&quot;diagram of the scalable server architecture. user nodes connect to a load balancer node that connects to WebSocket nodes. 2 Additional layers underneath show a main component with core nodes inside, and a Storage component with storage nodes. The websocket, core, and storage nodes are all connected with dotted lines.&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;CryptPad Notes&lt;/h3&gt;
+&lt;p&gt;This project will replace Rich Text, one of the most used applications in CryptPad, with a much more contemporary alternative. The Rich Text application relies on &lt;a href=&quot;https://ckeditor.com/ckeditor-4/&quot;&gt;CKEditor 4&lt;/a&gt;, a library that reached end-of-life in July 2023. It does not receive further updates or fixes and the new version&#39;s license is not open-source. Meanwhile, the Document application has started to fulfill many of the more office-like functions that Rich Text also offers. When considering a replacement we therefore leaned towards a more lightweight and screen-based solution suited for quick collaborative note taking and publishing on screens.&lt;/p&gt;
+&lt;p&gt;After carefully studying our options we opted for &lt;a href=&quot;https://www.blocknotejs.org/&quot;&gt;BlockNote&lt;/a&gt;, a simple yet powerful block-based editor that offers similar fomratting and features to Rich Text but through a much simplified interface using &amp;quot;&lt;code&gt;/&lt;/code&gt;&amp;quot; commands. We&#39;re looking forward to updating the suite with this long awaited alternative!&lt;/p&gt;
+&lt;h2&gt;🎟️ End-of-year funding campaign&lt;/h2&gt;
+&lt;p&gt;As the year comes to a close, we are reminding everyone to support CryptPad if it has been useful to them this year. We will be asking for &lt;a href=&quot;https://blog.cryptpad.org/2025/12/10/status-2025-11/opencollective.com/cryptpad&quot;&gt;donations on Open Collective&lt;/a&gt;, if every active user gave 5 EUR in December, the project could be funded for all of 2026 without external grants.&lt;/p&gt;
+&lt;p&gt;For more solid support you can also &lt;a href=&quot;https://cryptpad.fr/accounts/&quot;&gt;subscribe on cryptpad.fr&lt;/a&gt;. We will be announcing some end of year discounts on December 15th so keep an eye on our socials if you are thinking of subscribing!&lt;/p&gt;
+&lt;h2&gt;🗞️ In the news&lt;/h2&gt;
+&lt;p&gt;We are happy to see some coverage of CryptPad this month:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Linux, LibreOffice, CryptPad—these names can sound intimidating to newcomers used to the comfort of Microsoft or Google ecosystems. But Triquet, of &lt;em&gt;Reporterre&lt;/em&gt;, insists that even the most technophobic staff adapt quickly.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.cjr.org/tow_center/editorial-independence-means-technological-independence.php&quot;&gt;&lt;em&gt;Editorial Independence Means Technological Independence&lt;/em&gt;&lt;/a&gt;, translated from &lt;a href=&quot;https://www.medianes.org/lindependance-des-redactions-passe-aussi-par-leurs-outils/&quot;&gt;a French piece&lt;/a&gt; by Owen Huchon. CryptPad is mentionned as a tools that helps independent journalists do their work at outlets such as &lt;a href=&quot;https://reporterre.net/&quot;&gt;Reporterre&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.jesperjuul.net/ludologist/2025/05/20/docs-office-alternatives/&quot;&gt;&lt;em&gt;A Student/Worker’s Guide to European Google Docs / Office 365 Alternatives&lt;/em&gt;&lt;/a&gt;, on The Ludologist blog by Jesper Juul&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://medium.com/@shouke.wei/cryptpad-the-privacy-first-revolution-in-collaborative-editing-0926f18766c0&quot;&gt;&lt;em&gt;CryptPad: The Privacy-First Revolution in Collaborative Editing&lt;/em&gt;&lt;/a&gt;, by Dr. Shouke Wei [💲 &amp;quot;Members only&amp;quot; Medium post]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;🎙️ Recent conferences&lt;/h2&gt;
+&lt;p&gt;Fabrice had the pleasure to exchange with people at &lt;a href=&quot;https://capitoledulibre.org/&quot;&gt;Capitole du Libre&lt;/a&gt; in Toulouse earlier in November, and also at &lt;a href=&quot;https://www.opensource-experience.com/&quot;&gt;Open Source Experience&lt;/a&gt; in Paris this week to present the recent advances in CryptPad. Videos from these talks should be available shortly, we will mirror them on our &lt;a href=&quot;https://peertube.xwiki.com/c/cryptpad_channel/videos&quot;&gt;Peertube&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Meanwhile, you can find the slideshow there:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://cryptpad.fr/file/#/2/file/B2+sAbwxmnviF39YPMuTijcr/&quot;&gt;Capitole du Libre (in French 🇫🇷)&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://cryptpad.fr/file/#/2/file/EXqMaOb-+02VqEDN6YDcBWMp/&quot;&gt;Open Source Experience (in French 🇫🇷)&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;🔭 Up next&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Winter release
+&lt;ul&gt;
+&lt;li&gt;With our last cycle running late and our team being under-staffed this quarter, we are now looking at a January release date. We aim to launch it time to discuss it all at &lt;a href=&quot;https://fosdem.org/2026/&quot;&gt;FOSDEM 26&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;We are looking at the following improvements: Drive UI, new UI modes for Diagrams, broadcast messages, office applications&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    <category term="status update" scheme="https://blog.cryptpad.org/tags/status update/"/>
+    <category term="ngi" scheme="https://blog.cryptpad.org/tags/ngi/"/>
+    <category term="in use" scheme="https://blog.cryptpad.org/tags/in use/"/>
+    <category term="talk" scheme="https://blog.cryptpad.org/tags/talk/"/>
+  </entry>
   <entry>
     <title>October 2025 status</title>
     <link href="https://blog.cryptpad.org/2025/11/04/status-2025-10/"/>

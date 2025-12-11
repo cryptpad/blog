@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+
+    <title>November 2025 status | CryptPad Blog</title> 
+    
+
+    
+    
+    <meta property="og:type" content="webpage">
+    <meta property="og:title" content="November 2025 status">
+    <meta property="og:url" content="http://blog.cryptpad.org/2025/12/10/status-2025-11/">
+    <meta property="og:page_name" content="November 2025 status">
+    <meta property="og:locale" content="default">
+    <meta property="og:image" content="http://blog.cryptpad.org/images/scalable-server-architecture.png">
+    <meta property="og:description" content="2 new NLNet projects, End-of-year funding campaign, In the news, and more">
+    <meta name="twitter:card" content="2 new NLNet projects, End-of-year funding campaign, In the news, and more">
+    <meta name="twitter:title" content="November 2025 status">
+
+
+
+    <link rel="alternate" href="/atom.xml" title="CryptPad Blog" type="application/atom+xml">
+
+    <link rel="icon" href="/theme/favicon.png">
+
+
+</head>
+
+<body>
+    <main class="container">
+        <header>
+            
+    <a href="/" class="back-home">
+        <i class="fa fa-arrow-left" aria-hidden="true"></i> <i class="fa fa-home" aria-hidden="true"></i> Homepage
+    </a>
+
+            <a href="/">
+                <img class="cp-logo" src="/theme/CryptPad_logo.svg" aria-hidden="true" alt="">
+                <h1>CryptPad Blog</h1>
+            </a>
+        </header>
+        <section id="content">
+            
+    <article class="post" lang="en">
+        <section class="header">
+            <h1>November 2025 status</h1>
+            <p class="meta">
+                10 Dec 2025
+                
+                    
+                        
+                        
+                        
+                        -  Fabrice Mouhartem
+                        
+                        -  David Benqué
+                        
+                    
+                
+                    
+                    
+            </p>
+            <div class="article-tags">
+    
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        <ul class="tags" aria-label="Tags">
+        
+            <li><a class="tag" href="/tags/status-update">status update</a></li>
+        
+            <li><a class="tag" href="/tags/ngi">ngi</a></li>
+        
+            <li><a class="tag" href="/tags/in-use">in use</a></li>
+        
+            <li><a class="tag" href="/tags/talk">talk</a></li>
+        
+        </ul>
+    
+</div>
+        </section>
+        <h2>🎁🎁 2 new NLNet projects: CryptPad Notes and Scalable Server</h2>
+<p>We are delighted to be included in the <a href="https://nlnet.nl/news/2025/20251127-45-NGI0-CommonsFund.html">45 selected projects for the NGI Zero Commons Fund seventh open call</a>. We have been granted not one but <em>two</em> important projects so we are immensely grateful to NLNet for their renewed support of CryptPad. The two pages for our <a href="https://nlnet.nl/project/Cryptpad-scaling/">Scalable Server</a> and <a href="https://nlnet.nl/project/CryptPad-Notes/">CryptPad Notes</a> projects will be updated shortly, but in the meantime this is what we are planning:</p>
+<h3>Scalable Server</h3>
+<p>This project is a complete rewrite of the CryptPad backend. It will allow the service to operate across multiple physical or logical nodes (for example virtual machines) to distribute ressources and avoid performance bottlenecks.</p>
+<p>The work is already well underway. In the last few months performance issues have regularly affected users on our flagship instance (<a href="http://cryptpad.fr">cryptpad.fr</a>), to our knowledge by far the largest in terms of users and activity. While CryptPad performs very well on smaller instances, we have reached a ceiling for the single-node architecture that is hindering the project's growth.</p>
+<p>We thank everyone for bearing with us, and are very happy to receive support to complete this work as fast as possible so that it can reach production in the next few months!</p>
+<p><img src="/images/scalable-server-architecture.png" alt="diagram of the scalable server architecture. user nodes connect to a load balancer node that connects to WebSocket nodes. 2 Additional layers underneath show a main component with core nodes inside, and a Storage component with storage nodes. The websocket, core, and storage nodes are all connected with dotted lines."></p>
+<h3>CryptPad Notes</h3>
+<p>This project will replace Rich Text, one of the most used applications in CryptPad, with a much more contemporary alternative. The Rich Text application relies on <a href="https://ckeditor.com/ckeditor-4/">CKEditor 4</a>, a library that reached end-of-life in July 2023. It does not receive further updates or fixes and the new version's license is not open-source. Meanwhile, the Document application has started to fulfill many of the more office-like functions that Rich Text also offers. When considering a replacement we therefore leaned towards a more lightweight and screen-based solution suited for quick collaborative note taking and publishing on screens.</p>
+<p>After carefully studying our options we opted for <a href="https://www.blocknotejs.org/">BlockNote</a>, a simple yet powerful block-based editor that offers similar fomratting and features to Rich Text but through a much simplified interface using &quot;<code>/</code>&quot; commands. We're looking forward to updating the suite with this long awaited alternative!</p>
+<h2>🎟️ End-of-year funding campaign</h2>
+<p>As the year comes to a close, we are reminding everyone to support CryptPad if it has been useful to them this year. We will be asking for <a href="opencollective.com/cryptpad">donations on Open Collective</a>, if every active user gave 5 EUR in December, the project could be funded for all of 2026 without external grants.</p>
+<p>For more solid support you can also <a href="https://cryptpad.fr/accounts/">subscribe on cryptpad.fr</a>. We will be announcing some end of year discounts on December 15th so keep an eye on our socials if you are thinking of subscribing!</p>
+<h2>🗞️ In the news</h2>
+<p>We are happy to see some coverage of CryptPad this month:</p>
+<blockquote>
+<p>Linux, LibreOffice, CryptPad—these names can sound intimidating to newcomers used to the comfort of Microsoft or Google ecosystems. But Triquet, of <em>Reporterre</em>, insists that even the most technophobic staff adapt quickly.</p>
+</blockquote>
+<ul>
+<li><a href="https://www.cjr.org/tow_center/editorial-independence-means-technological-independence.php"><em>Editorial Independence Means Technological Independence</em></a>, translated from <a href="https://www.medianes.org/lindependance-des-redactions-passe-aussi-par-leurs-outils/">a French piece</a> by Owen Huchon. CryptPad is mentionned as a tools that helps independent journalists do their work at outlets such as <a href="https://reporterre.net/">Reporterre</a>.</li>
+<li><a href="https://www.jesperjuul.net/ludologist/2025/05/20/docs-office-alternatives/"><em>A Student/Worker’s Guide to European Google Docs / Office 365 Alternatives</em></a>, on The Ludologist blog by Jesper Juul</li>
+<li><a href="https://medium.com/@shouke.wei/cryptpad-the-privacy-first-revolution-in-collaborative-editing-0926f18766c0"><em>CryptPad: The Privacy-First Revolution in Collaborative Editing</em></a>, by Dr. Shouke Wei [💲 &quot;Members only&quot; Medium post]</li>
+</ul>
+<h2>🎙️ Recent conferences</h2>
+<p>Fabrice had the pleasure to exchange with people at <a href="https://capitoledulibre.org/">Capitole du Libre</a> in Toulouse earlier in November, and also at <a href="https://www.opensource-experience.com/">Open Source Experience</a> in Paris this week to present the recent advances in CryptPad. Videos from these talks should be available shortly, we will mirror them on our <a href="https://peertube.xwiki.com/c/cryptpad_channel/videos">Peertube</a>.</p>
+<p>Meanwhile, you can find the slideshow there:</p>
+<ul>
+<li><a href="https://cryptpad.fr/file/#/2/file/B2+sAbwxmnviF39YPMuTijcr/">Capitole du Libre (in French 🇫🇷)</a>;</li>
+<li><a href="https://cryptpad.fr/file/#/2/file/EXqMaOb-+02VqEDN6YDcBWMp/">Open Source Experience (in French 🇫🇷)</a>.</li>
+</ul>
+<h2>🔭 Up next</h2>
+<ul>
+<li>Winter release
+<ul>
+<li>With our last cycle running late and our team being under-staffed this quarter, we are now looking at a January release date. We aim to launch it time to discuss it all at <a href="https://fosdem.org/2026/">FOSDEM 26</a>.</li>
+<li>We are looking at the following improvements: Drive UI, new UI modes for Diagrams, broadcast messages, office applications</li>
+</ul>
+</li>
+</ul>
+
+    </article>
+
+    <nav class="article-pagination" aria-label="Pagination">
+        
+        
+            <a href="/2025/11/04/status-2025-10/">Older: <span class="title">October 2025 status</span></a>
+        
+    </nav>
+
+        </section>
+        
+<section id="top-tags" class="post">
+
+            <h3><i class="fa fa-tags" aria-hidden="true"></i> Top Tags</h3>
+<ul>
+
+    <li>
+        <a class="tag" href="/tags/status-update">status update</a><span class="count">49</span></li>
+
+    <li>
+        <a class="tag" href="/tags/funding">funding</a><span class="count">19</span></li>
+
+    <li>
+        <a class="tag" href="/tags/release">release</a><span class="count">17</span></li>
+
+    <li>
+        <a class="tag" href="/tags/security">security</a><span class="count">15</span></li>
+
+    <li>
+        <a class="tag" href="/tags/ngi">ngi</a><span class="count">13</span></li>
+
+    <li>
+        <a class="tag" href="/tags/research">research</a><span class="count">12</span></li>
+
+    <li>
+        <a class="tag" href="/tags/roadmap">roadmap</a><span class="count">10</span></li>
+
+    <li>
+        <a class="tag" href="/tags/team">team</a><span class="count">10</span></li>
+
+    <li>
+        <a class="tag" href="/tags/donate">donate</a><span class="count">9</span></li>
+
+    <li>
+        <a class="tag" href="/tags/privacy">privacy</a><span class="count">8</span></li>
+
+</ul>
+        </section>
+        
+    <section id="social" class="post">
+
+            <h3><i class="fa fa-link" aria-hidden="true"></i> Links</h3>
+<ul>
+    <li>
+        <a href="https://cryptpad.org">
+            <i aria-hidden="true" class="fa fa-globe"></i>Project website
+        </a>
+    </li>
+    <li>
+        <a href="https://opencollective.com/cryptpad/contribute">
+            <i aria-label="OpenCollective" class="fa fa-open-collective"></i>Donate
+        </a>
+    </li>
+</ul>
+<ul>
+    <li>
+        <a href="https://forum.cryptpad.org">
+            <i aria-hidden="true" class="fa fa-bullhorn"></i>Forum
+        </a>
+    </li>
+    <li>
+        <a href="https://matrix.to/#/#cryptpad:matrix.xwiki.com">
+            <i aria-hidden="true" class="fa fa-matrix-org"></i>Chat (Matrix)
+        </a>
+    </li>
+    <li>
+        <a rel="me" href="https://social.xwiki.com/@CryptPad">
+            <i aria-hidden="true" class="fa fa-mastodon"></i>Mastodon
+        </a>
+    </li>
+    <li>
+        <a href="https://peertube.xwiki.com/c/cryptpad_channel/videos">
+            <i aria-hidden="true" class="fa fa-peertube"></i>Peertube
+        </a>
+    </li>
+    <li>
+        <a href="https://pixelfed.social/cryptpad_design">
+            <i aria-hidden="true" class="fa fa-pixelfed"></i>Pixelfed
+        </a>
+    </li>
+</ul>
+<ul>
+    <li>
+        <a href="/atom.xml">
+            <i aria-hidden="true" class="fa fa-rss"></i>RSS Feed
+        </a>
+    </li>
+</ul>
+        </section>
+    </main>
+</body>
+
+</html>
