@@ -2,7 +2,7 @@
 title: "Europe's future is at stake: Open letter against Chat Control"
 date: 2025-10-07
 author: 
-  - Mathilde Grünig
+  - Mathilde
   - David Benqué
 tags:
 - chatcontrol
