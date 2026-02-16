@@ -13,7 +13,7 @@ summary: "Discover CryptPad's new features, improvements, team activity, and mai
 
 ## Projects and funding
 
-We kickstarted 2025 with an [analysis of how CryptPad has been funded](https://blog.cryptpad.org/2025/01/28/CryptPad-Funding-Status-January-2025/) and what to expect for the same year. For a comparison between our financial expectations and actual results, you can also check out our 2026 analysis.  
+We kickstarted 2025 with an [analysis of how CryptPad has been funded](https://blog.cryptpad.org/2025/01/28/CryptPad-Funding-Status-January-2025/) and what to expect for the same year. For a comparison between our financial expectations and actual results, you can check out upcoming 2026 analysis.  
 
 Moreover, we’re thrilled to share that we’ve been selected as one of the **45 projects in the NGI Zero Commons Fund’s 7th open call**! Even better, we were awarded not just 1 but 2 projects this time around. We’re extremely grateful to NLNet for their continued support of CryptPad. The 2 pages for our [Scalable Server](https://nlnet.nl/project/Cryptpad-scaling/) and [CryptPad Notes](https://nlnet.nl/project/CryptPad-Notes/) projects will be updated shortly, but in the meantime, this is what we are planning:
 
@@ -135,7 +135,7 @@ If you’d like to support us going forward, individual users can donate via [*
 
 If you’re not subscribed yet, we’d love to have you join us. [**Sign up for our newsletter**](https://news.xwiki.com/cryptpadpreferencecenteren) to stay up-to-date with the latest news, features, and insights from the CryptPad team.
 
-![CP-newsletter-preview.png](../../../../../../attachment/marketing/Marketing/MarketingXCOM/Blog-Articles/Overview-of-CryptPad-in-2025/WebHome/CP-newsletter-preview.png)
+![screenshots of the CryptPad newsletter](/images/CP-newsletter-preview.png)
 
 ## Events and media
 
