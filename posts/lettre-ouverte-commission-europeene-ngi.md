@@ -2,7 +2,7 @@
 title: Lettre ouverte à la Commission Européenne
 date: 2024-07-12
 author:
-  - Mathilde Grünig
+  - Mathilde
 lang: fr
 summary: 🇫🇷 Post in French - Les programmes NGI, de la Commission Européenne financent le logiciel libre en Europe. À la lecture du brouillon détaillant les financements de la commission pour 2025, nous nous apercevons que NGI a disparu du Cluster 4.
 tags:

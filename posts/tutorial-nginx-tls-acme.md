@@ -1,7 +1,7 @@
 ---
 title: How to setup TLS certificates for CryptPad
 date: 2022-12-12
-author: "Mathilde Grünig"
+author: "Mathilde"
 summary: A complete tutorial about Nginx TLS configuration with acme.sh
 tags:
 - tutorials
