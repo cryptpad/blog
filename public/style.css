@@ -3294,7 +3294,8 @@ article.post {
 article.post .header {
   margin-bottom: 3rem;
 }
-article.post h1 {
+article.post h1,
+article.post h4 {
   margin-bottom: 0.5rem;
 }
 article.post h2 {
@@ -3302,6 +3303,9 @@ article.post h2 {
 }
 article.post h3 {
   margin: 1rem 0 0.5rem 0;
+}
+article.post h5 {
+  font-size: 1em;
 }
 article.post p {
   font-size: 1.1em;
