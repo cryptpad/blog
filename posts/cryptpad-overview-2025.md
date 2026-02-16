@@ -172,12 +172,12 @@ Like in previous years, the team continued to be hard at work. Everyone's dedica
 
 Exciting things are ahead for this year:
 
-❄ The [Winter release](https://github.com/cryptpad/cryptpad/releases/tag/2026.2.0) is just out, with the upgrade of the office apps and the redesign of the Drive tree. 
+❄️ The [Winter release](https://github.com/cryptpad/cryptpad/releases/tag/2026.2.0) is just out, with the upgrade of the office apps and the redesign of the Drive tree. 
 
 🚀 Working on the 2 NLNet projects: Scalable Server which will make [CryptPad.fr](http://cryptpad.fr/) more performant as our user-base grows, and CryptPad Notes, that will replace the outdated Rich Text app
 
-🛠 Continue working on our office apps
+🛠️ Continue working on our office apps
 
-🎙 New webinar coming soon
+🎙️ New webinar coming soon
 
 📅 Attending events, always a great chance to interact in person with our users and the open-source community
