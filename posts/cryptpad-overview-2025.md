@@ -141,7 +141,7 @@ If you’re not subscribed yet, we’d love to have you join us. [**Sign up for 
 
 On top of all the work done, and constant improvements brought to CryptPad, the team has also taken part in various talks and conferences. CryptPad was also in the spotlight with featured articles and reviews.
 
-### 🎙 Conferences and talks
+### 🎙️ Conferences and talks
 
 * **FOSDEM 2025: [Fabrice](https://xwiki.com/en/Blog/Fabrice-Mouhartem-R-D-Engineer/)**, our R&D Engineer, shared the latest privacy enhancements in CryptPad, in a talk called **CryptPad: Recent advances in privacy and collaboration**. He showed how real-time collaboration can remain secure and user-friendly, even as new features are introduced. You can watch the full video on [our PeerTube channel](https://peertube.xwiki.com/w/fL96CjcPs3VJFfEhTPq7Wg). In addition, **Ludovic**, our CEO and founder, also held a presentation on **20 years of hacking open-source funding.** He tackled the real challenge of sustaining open-source projects in a world dominated by multi-billion-dollar companies. His talk is also available on [PeerTube](https://peertube.xwiki.com/w/gSienTSznmfp3RaiNdb71o).
 * **CryptPad Enterprise webinar:** Back in March, **Ludovic** hosted **the first CryptPad webinar** dedicated to enterprise customers. The presentation and demo were followed by a Q&A session. It addressed concerns shared by potential CryptPad users in an enterprise context. [All of this content](https://xwiki.com/en/Blog/webinar-overview-cryptpad-enterprise/) is now available in case you missed the event.
@@ -153,7 +153,7 @@ On top of all the work done, and constant improvements brought to CryptPad, the 
 *   **Open Source Experience (OSXP):** Back in December, **Fabrice** attended this major open-source event to present the recent advances in CryptPad. His [talk](https://peertube.xwiki.com/w/sNtzAD7iz7AumehqmjMier) and [presentation slides](https://cryptpad.fr/file/#/2/file/EXqMaOb-+02VqEDN6YDcBWMp/) are both available in French if you want to check them out.
     
 
-### 🗞 Coverage
+### 🗞️ Coverage
 
 *  **CryptPad in use at the United Nations:** We were extremely proud to see the United Nations using CryptPad Forms to gather endorsements for their [Open Source principles](https://unite.un.org/news/sixteen-organizations-endorse-un-open-source-principles).
 *   **FOSS Force article**: Following the news that the United Nations have been using CryptPad, Larry Cafiero had [an in-depth conversation with CEO Ludovic Dubost about CryptPad](https://fossforce.com/2025/04/un-drops-google-for-cryptpad-an-encrypted-open-source-office-suite/).
