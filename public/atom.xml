@@ -4,12 +4,70 @@
   <subtitle>News from the end-to-end encrypted collaboration suite</subtitle>
   <link href="https://blog.cryptpad.org/atom.xml" rel="self"/>
   <link href="https://blog.cryptpad.org"/>
-  <updated>2026-02-18T00:00:00Z</updated>
+  <updated>2026-03-09T00:00:00Z</updated>
   <id>https://blog.cryptpad.org</id>
   <author>
     <name>CryptPad Team</name>
     <email>contact@cryptpad.org</email>
   </author>
+  <entry>
+    <title>February 2026 status</title>
+    <link href="https://blog.cryptpad.org/2026/03/09/status-2026-02/"/>
+    <updated>2026-03-09T00:00:00Z</updated>
+    <id>https://blog.cryptpad.org/2026/03/09/status-2026-02/</id>
+    <summary xml:lang="en" type="html">Winter release, FOSDEM, ELFA, Keep Android Open, In use &amp; in the news</summary>
+    <content xml:lang="en" type="html">&lt;h2&gt;❄️ Winter release&lt;/h2&gt;
+&lt;p&gt;We were happy to announce our overdue Winter release (2026.2.0).This release upgrades our office applications with OnlyOffice 9 and brings the  history browsing feature of office apps on par with other applications. We also include a redesigned folder tree in the drive, and many other improvements and fixes as detailed in the &lt;a href=&quot;https://github.com/cryptpad/cryptpad/releases/tag/2026.2.0&quot;&gt;release notes&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;🏫 FOSDEM&lt;/h2&gt;
+&lt;p&gt;We attended the &lt;a href=&quot;https://fosdem.org/&quot;&gt;FOSDEM&lt;/a&gt; conference which is an European meeting of open-source software developpers and enthusiasts. We were glad to meet you all there!&lt;/p&gt;
+&lt;p&gt;Ludovic gave a talk about recent news in CryptPad that is available on our &lt;a href=&quot;https://peertube.xwiki.com/w/8c3WxbRTsJw5THVVEZSV87&quot;&gt;PeerTube instance&lt;/a&gt;. You can also watch our previous talks about CryptPad there,  in &lt;a href=&quot;https://peertube.xwiki.com/w/p/rDc8oKm84abjq46jiifRkJ&quot;&gt;English&lt;/a&gt; or in &lt;a href=&quot;https://peertube.xwiki.com/w/p/vS5Z7gQSUj4Ra3PnYvQmv9&quot;&gt;French&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;📜 ELFA&lt;/h2&gt;
+&lt;p&gt;We are delighted to be part of the &lt;a href=&quot;https://elfaconsortium.eu/&quot;&gt;ELFA consortium&lt;/a&gt; that was recently awarded a Horizon grant by the European Union. This is an ambitious effort to build an ecosystem of local-first collaborative applications. CryptPad is on board for the initial 3 year grant. We will be prototyping with the protocol and ensuring CryptPad is compatible with it as ELFA grows. If you develop collaborative applications, keep an eye on &lt;a href=&quot;https://fosstodon.org/@elfa/&quot;&gt;ELFA social media&lt;/a&gt; for the sub-granting program that will be managed by the NLNet Foundation.&lt;/p&gt;
+&lt;h2&gt;✍️ Keep Android Open&lt;/h2&gt;
+&lt;p&gt;While we don&#39;t develop Android apps, we care about people&#39;s full ownership of their mobile devices, including the choice of what applications to install. This is coming under threat by Google&#39;s plans to make all developers register to their restrictive program.&lt;/p&gt;
+&lt;p&gt;We are proud signatories of &lt;a href=&quot;https://keepandroidopen.org/open-letter/&quot;&gt;the open letter to Keep Android Open&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;📰 In use / in the news&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.clubic.com/actualite-591346-si-nous-voulons-des-logiciels-libres-nous-devons-les-payer---interview-cryptpad.html&quot;&gt;&amp;quot;Si nous voulons des logiciels libres, nous devons les payer&amp;quot;&lt;/a&gt; interview with CEO Ludovic Dubost by Guillaume Belfiore for &lt;em&gt;Clubic&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Honorable mentions, we are delighted to be featured in
+&lt;ul&gt;
+&lt;li&gt;Wired Magazine&#39;s &lt;a href=&quot;https://www.wired.com/story/how-to-organize-safely-in-the-age-of-surveillance/&quot;&gt;How to Organize Safely in the Age of Surveillance&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Bon Pote&#39;s &lt;a href=&quot;https://bonpote.com/quelles-alternatives-aux-gafam/&quot;&gt;Quelles alternatives aux GAFAM ?&lt;/a&gt; [FR]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Tutorials &amp;amp; listings
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://awesome-privacy.xyz/productivity/cloud-productivity-suites/cryptpad&quot;&gt;Listing on Awesome Privacy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://videos.ikacode.com/w/o3npnLg8QWFL7aHCrbo1yn&quot;&gt;Présentation de Cryptpad, Suite collaborative opensource sécurisée&lt;/a&gt; Ikacode [FR]&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.ubapar.bzh/spip.php?article5564&quot;&gt;Actus du Num : CryptPad&lt;/a&gt; UBAPAR
+(Union Bretonne pour l’Animation des PAys Ruraux) [FR]&lt;/li&gt;
+&lt;li&gt;Cryptpad software libre en linea para trabajo colaborativo - &lt;a href=&quot;https://www.youtube.com/watch?v=xBYwQkmiSJU&quot;&gt;Parte 1&lt;/a&gt;, &lt;a href=&quot;https://www.youtube.com/watch?v=8PIFFOEVhys&quot;&gt;Parte 2&lt;/a&gt;,
+FreeSoftwareFan [ES]&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=PP2D94nOj38&quot;&gt;Seguridad digital para quienes defienden DDHH&lt;/a&gt; [ES]&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.howtogeek.com/this-secure-form-builder-is-my-google-forms-replacement/&quot;&gt;This secure form builder is my Google Forms replacement&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Deployments &amp;amp; Admin
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://blog.bunk.computer/announcing-scuppernong-a-private-cloud-drive-for-western-north-carolina&quot;&gt;Announcing Scuppernong: a private cloud drive for Western North Carolina&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://blog.hofstede.it/self-hosted-cryptpad-on-freebsd-with-vnet-jails-and-caddy/&quot;&gt;Self-Hosted CryptPad on FreeBSD with VNET Jails and Caddy&lt;/a&gt; Larvitz Blog&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://wiki.blablalinux.be/fr/installation-cryptpad-lxc-docker-proxmox&quot;&gt;Installation de Cryptpad en LXC Docker&lt;/a&gt;, by BlablaLinux, maintainer of an instance on our &lt;a href=&quot;https://cryptpad.org/instances/&quot;&gt;public list&lt;/a&gt; [FR]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;🔭 Up Next&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;We deployed the new CryptPad server to &lt;a href=&quot;http://cryptpad.fr/&quot;&gt;cryptpad.fr&lt;/a&gt; last week. This is a full re-write to be much more scalable and better deal with the high usage that has been causing slowness in recent months. We will have a full update about this in the next status.&lt;/li&gt;
+&lt;li&gt;We are also working on our &lt;a href=&quot;https://github.com/cryptpad/cryptpad/milestone/18&quot;&gt;Spring release&lt;/a&gt;. This will likely contain improvements to the Diagram application and improvements and fixes.&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    <category term="status update" scheme="https://blog.cryptpad.org/tags/status update/"/>
+    <category term="release" scheme="https://blog.cryptpad.org/tags/release/"/>
+    <category term="FOSDEM" scheme="https://blog.cryptpad.org/tags/FOSDEM/"/>
+    <category term="research" scheme="https://blog.cryptpad.org/tags/research/"/>
+    <category term="in use" scheme="https://blog.cryptpad.org/tags/in use/"/>
+    <category term="press" scheme="https://blog.cryptpad.org/tags/press/"/>
+  </entry>
   <entry>
     <title>CryptPad Funding Status January 2026</title>
     <link href="https://blog.cryptpad.org/2026/02/18/CryptPad-Funding-Status-2026/"/>
