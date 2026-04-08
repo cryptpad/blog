@@ -4,12 +4,44 @@
   <subtitle>News from the end-to-end encrypted collaboration suite</subtitle>
   <link href="https://blog.cryptpad.org/atom.xml" rel="self"/>
   <link href="https://blog.cryptpad.org"/>
-  <updated>2026-03-09T00:00:00Z</updated>
+  <updated>2026-04-08T00:00:00Z</updated>
   <id>https://blog.cryptpad.org</id>
   <author>
     <name>CryptPad Team</name>
     <email>contact@cryptpad.org</email>
   </author>
+  <entry>
+    <title>March 2026 status</title>
+    <link href="https://blog.cryptpad.org/2026/04/08/status-2026-03/"/>
+    <updated>2026-04-08T00:00:00Z</updated>
+    <id>https://blog.cryptpad.org/2026/04/08/status-2026-03/</id>
+    <summary xml:lang="en" type="html">Scalable server in production, Winter fix releases, Mathilde leaving the team, Mexican education program, April</summary>
+    <content xml:lang="en" type="html">&lt;h2&gt;⚖️🚀 Scalable server in production&lt;/h2&gt;
+&lt;p&gt;We had planned to deploy the &lt;a href=&quot;https://blog.cryptpad.org/2025/12/10/status-2025-11/&quot;&gt;complete rewrite of our server focused on scalability&lt;/a&gt; at the start of April at the earliest. However an new influx of users pushed &lt;a href=&quot;http://cryptpad.fr/&quot;&gt;cryptpad.fr&lt;/a&gt; beyond a threshold (see &amp;quot;Mexican education program&amp;quot;). This made an already bad situation worse and the flagship instance became basically unusable on a daily basis when timezones in Europe and the Americas overlap.&lt;/p&gt;
+&lt;p&gt;The team made the decision to deploy the new code that had already been extensively tested, taking the chance a few weeks earlier than planned. We deployed on March 4th and had a few adjustments days following that. Since then we are happy to report that the flaship seems to be running much better, providing a smoother and more reliable experience for all users of &lt;a href=&quot;http://cryptpad.fr/&quot;&gt;cryptpad.fr&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;We will continue to refine and test the new scalable server towards full documentation and open-source release in the next few weeks/months as we complete our &lt;a href=&quot;https://nlnet.nl/project/Cryptpad-scaling/&quot;&gt;NLNet funded project for this work&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;❄️ 🩹🩹 Winter fix releases&lt;/h2&gt;
+&lt;p&gt;This month we had two rounds of bug fixes to the 2026 Winter Release. The first one &lt;a href=&quot;https://github.com/cryptpad/cryptpad/releases/tag/2026.2.1&quot;&gt;2026.2.1&lt;/a&gt; had important  fixes for office documents, security, and other areas. However we made a mistake in the numbering of that version, so we made &lt;a href=&quot;https://github.com/cryptpad/cryptpad/releases/tag/2026.2.2&quot;&gt;2026.2.2&lt;/a&gt; with an additional fix to history in office apps and the right number. Since these releases contain security fixes we encourage all administrators to upgrade their instances as soon as possible.&lt;/p&gt;
+&lt;h2&gt;👋 Mathilde leaving the team&lt;/h2&gt;
+&lt;p&gt;We are sad to officially announce that Mathilde has left the team after 3.5 years. This has been effective for a few weeks but stuck in French administrative limbo which is now over. The whole team joins in thanking Mathilde for the huge contributions she has made to CryptPad in these years. From support to community, infrastructure, documentation, forum, Mathilde was a key part of the team and her presence will be missed. We respect her choice and wish her the very best in future projects.&lt;/p&gt;
+&lt;h2&gt;📼 April lightning talk presentation [FR]&lt;/h2&gt;
+&lt;p&gt;Our very own Fabrice gave a &lt;a href=&quot;https://peertube.xwiki.com/w/uMn4T4fxMpsoBpcvdUDpfx&quot;&gt;lightning talk presentation&lt;/a&gt; at French free software organisation &lt;a href=&quot;https://www.april.org/&quot;&gt;April&lt;/a&gt; which CryptPad is a member of.&lt;/p&gt;
+&lt;h2&gt;📺 Webinar&lt;/h2&gt;
+&lt;p&gt;David will present CryptPad and answer any questions you may have in an &lt;a href=&quot;https://xwiki.com/en/webinars/CryptPad-encrypted-alternative-collaboration-suite&quot;&gt;online webinar&lt;/a&gt; on April 28th at 4pm CEST, please &lt;a href=&quot;https://xwiki.com/en/webinars/CryptPad-encrypted-alternative-collaboration-suite&quot;&gt;register&lt;/a&gt; if you plan to attend!&lt;/p&gt;
+&lt;h2&gt;🎓 Mexican education program&lt;/h2&gt;
+&lt;p&gt;We were delighted to learn that The Mexican government includes CryptPad in its &lt;a href=&quot;https://dgb.sep.gob.mx/storage/recursos/2025/09/Funa9XEQmp-MCC_CULTURA-DIGITAL.pdf&quot;&gt;programme for digital culture&lt;/a&gt; aimed at high school students. We also noticed a couple of instructional videos: &lt;a href=&quot;https://www.youtube.com/watch?v=Fw7Ce8ofFJw&quot;&gt;CryptPad: Simultaneous Documents / Digital Culture II&lt;/a&gt; and &lt;a href=&quot;https://www.youtube.com/watch?v=AM3Pn-UozO8&quot;&gt;Cómo se diseñó la planeación de Cultura Digital II&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;As mentioned above, this was the influx of users that pushed our flagship instance over the edge. But this is because it was already beyond capacity, and an educational drive for high school students could not have been a better challenge for us to rise to.&lt;/p&gt;
+&lt;h2&gt;🔭 Next up&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;We have been delayed by the server deployment and bugfix releases. Work is well under way for the &lt;a href=&quot;https://github.com/cryptpad/cryptpad/milestone/18&quot;&gt;Spring Release&lt;/a&gt; that we&#39;ll be finalising in the next few weeks.&lt;/li&gt;
+&lt;li&gt;Moreover, we are happy to inform you that Fabrice will present CryptPad in Lyon (France) at &lt;a href=&quot;https://jdll.org/&quot;&gt;Journées du Logiciel Libre&lt;/a&gt; at the end of May (in French). We will give you more information next time!&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    <category term="status update" scheme="https://blog.cryptpad.org/tags/status update/"/>
+    <category term="release" scheme="https://blog.cryptpad.org/tags/release/"/>
+    <category term="team" scheme="https://blog.cryptpad.org/tags/team/"/>
+    <category term="research" scheme="https://blog.cryptpad.org/tags/research/"/>
+  </entry>
   <entry>
     <title>February 2026 status</title>
     <link href="https://blog.cryptpad.org/2026/03/09/status-2026-02/"/>
