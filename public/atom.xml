@@ -4,12 +4,44 @@
   <subtitle>News from the end-to-end encrypted collaboration suite</subtitle>
   <link href="https://blog.cryptpad.org/atom.xml" rel="self"/>
   <link href="https://blog.cryptpad.org"/>
-  <updated>2026-04-08T00:00:00Z</updated>
+  <updated>2026-06-03T00:00:00Z</updated>
   <id>https://blog.cryptpad.org</id>
   <author>
     <name>CryptPad Team</name>
     <email>contact@cryptpad.org</email>
   </author>
+  <entry>
+    <title>May 2026 status</title>
+    <link href="https://blog.cryptpad.org/2026/06/03/status-2026-05/"/>
+    <updated>2026-06-03T00:00:00Z</updated>
+    <id>https://blog.cryptpad.org/2026/06/03/status-2026-05/</id>
+    <summary xml:lang="en" type="html">Spring release, FossNorth, Journées du Logiciel Libre</summary>
+    <content xml:lang="en" type="html">&lt;p&gt;We are catching up with monthly status posts after missing last month.&lt;/p&gt;
+&lt;h2&gt;🌷 Spring Release&lt;/h2&gt;
+&lt;p&gt;This month we launched the &lt;a href=&quot;https://github.com/cryptpad/cryptpad/releases/tag/2026.5.0&quot;&gt;CryptPad Spring 2026 release (2026.5.0)&lt;/a&gt; with some improvements to the Diagram app among other fixes.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/2026-spring-release-diagram-preview.png&quot; alt=&quot;screenshot of the diagram app with a drawing: welcome to the Sketch theme! surrounded by connected shapes: Easy, Powerful, can be changed, New theme switcher! pointing to the new button in the toolbar&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;The diagram now defaults to a simpler user-interface theme called &amp;quot;sketch&amp;quot;. This makes Diagram shine as an infinite canvas whiteboarding app by highlighting only a few keys features such as shapes, arrows, and freehand drawing. For the uses that require full bells and whistles, such as the many shape libraries available, we include a menu to switch between 3 themes.&lt;/p&gt;
+&lt;p&gt;We  added additional fixes for office documents and user-registry/SSO in a &lt;a href=&quot;https://github.com/cryptpad/cryptpad/releases/tag/2026.5.1&quot;&gt;🌷🩹 Spring fix release (2026.5.1)&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;🎤 FossNorth&lt;/h2&gt;
+&lt;p&gt;Ludovic presented CryptPad at the foss-north conference on April 27th: &lt;a href=&quot;https://foss-north.se/2026/speakers-and-talks.html#ldubost&quot;&gt;End to End encrypted collaboration can be easy to use&lt;/a&gt;. The recording is now available on &lt;a href=&quot;https://peertube.anduin.net/w/vnNZQJpgMQZKLqkhz9Upxz&quot;&gt;Peertube&lt;/a&gt; and other platforms if you would like to catch up with it.&lt;/p&gt;
+&lt;h2&gt;🎤 Journées du Logiciel Libre&lt;/h2&gt;
+&lt;p&gt;Fabrice presented &lt;a href=&quot;https://pretalx.jdll.org/jdll2026/talk/8YP33K/&quot;&gt;last news from CryptPad&lt;/a&gt; on May 30th at “Journées du Logiciel Libre” (FOSS days) in Lyon. The recording will be available soon, however the &lt;a href=&quot;https://cryptpad.fr/file/#/2/file/OSlpeSeT0T4epaAIWxJZ3cxA/&quot;&gt;slide deck&lt;/a&gt; is there if you want to catch up from them (in French).&lt;/p&gt;
+&lt;p&gt;We are always happy to meet our community at such events and appreciate your ongoing support!&lt;/p&gt;
+&lt;h2&gt;📰 In the news&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;CryptPad features in an article from Clubic about the &lt;a href=&quot;https://www.clubic.com/telecharger/actus-logiciels/article-842687-1-meilleur-logiciels-desintoxiquer-google.html&quot;&gt;50 best alternatives to Google services to reclaim your data&lt;/a&gt; (in French)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;🔭 Up next&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Users on &lt;a href=&quot;http://cryptpad.fr/&quot;&gt;cryptpad.fr&lt;/a&gt; will be happy to learn that our support team will be better staffed going forward. We are currently welcoming a new hire to the XWiki support team that will be helping with CryptPad support.&lt;/li&gt;
+&lt;li&gt;Fabrice will present &lt;a href=&quot;https://cfp.pass-the-salt.org/pts2026/talk/MV83GM/&quot;&gt;post-quantum experiments on CryptPad&lt;/a&gt; on July 1st at &lt;a href=&quot;https://2026.pass-the-salt.org/&quot;&gt;Pass the Salt&lt;/a&gt; conference in Lille.&lt;/li&gt;
+&lt;li&gt;The team is now working on the Summer release that may be focused on smaller fixes as we wrap up our Scalable Server re-write. We will confirm an expected release date in the coming weeks!&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    <category term="status update" scheme="https://blog.cryptpad.org/tags/status update/"/>
+    <category term="release" scheme="https://blog.cryptpad.org/tags/release/"/>
+    <category term="talk" scheme="https://blog.cryptpad.org/tags/talk/"/>
+  </entry>
   <entry>
     <title>March 2026 status</title>
     <link href="https://blog.cryptpad.org/2026/04/08/status-2026-03/"/>
