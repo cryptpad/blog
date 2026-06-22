@@ -20,7 +20,7 @@ As part of a new collaboration, we spoke to **Hanna Bozakov**, CEO of [Tuta](ht
 
 For anyone looking to bring the same commitment to privacy and end-to-end encryption to their inbox, Tuta offers a compelling alternative to mainstream email providers.
 
-**Get 25% off Tuta Mail and Tuta Calendar!** Use this link [https://tuta.com/?t-src=cryptpad](https://tuta.com/?t-src=cryptpad)  when signing up to automatically receive 25% off a paid yearly plan.
+**Get 25% off Tuta Mail and Tuta Calendar!** Use this link [https://tuta.com/?t-src=cryptpad](https://tuta.com/?t-src=cryptpad)  when signing up to automatically receive 25% off a paid yearly plan. On the CryptPad side, use the code PRIVACY25 to get a 25% discount on any first purchase. Both promotions run for one month until 23rd July.
 
 ![photo of the Tuta team](/images/tuta-team.jpg)
 
