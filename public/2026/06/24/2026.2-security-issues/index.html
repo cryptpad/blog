@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+
+    <title>2026.2 security fixes and our new security policy | CryptPad Blog</title> 
+    
+
+    
+    
+    <meta property="og:type" content="webpage">
+    <meta property="og:title" content="2026.2 security fixes and our new security policy">
+    <meta property="og:url" content="http://blog.cryptpad.org/2026/06/24/2026.2-security-issues/">
+    <meta property="og:page_name" content="2026.2 security fixes and our new security policy">
+    <meta property="og:locale" content="default">
+    <meta property="og:image" content="http://blog.cryptpad.org/theme/og-default.png">
+    <meta property="og:description" content="Follow up regarding two security issues impacting CryptPad, post-mortem on our Jan 28th outage and our new security policy.">
+    <meta name="twitter:card" content="Follow up regarding two security issues impacting CryptPad, post-mortem on our Jan 28th outage and our new security policy.">
+    <meta name="twitter:title" content="2026.2 security fixes and our new security policy">
+
+
+
+    <link rel="alternate" href="/atom.xml" title="CryptPad Blog" type="application/atom+xml">
+
+    <link rel="icon" href="/theme/favicon.png">
+
+
+</head>
+
+<body>
+    <main class="container">
+        <header>
+            
+    <a href="/" class="back-home">
+        <i class="fa fa-arrow-left" aria-hidden="true"></i> <i class="fa fa-home" aria-hidden="true"></i> Homepage
+    </a>
+
+            <a href="/">
+                <img class="cp-logo" src="/theme/CryptPad_logo.svg" aria-hidden="true" alt="">
+                <h1>CryptPad Blog</h1>
+            </a>
+        </header>
+        <section id="content">
+            
+    <article class="post" lang="en">
+        <section class="header">
+            <h1>2026.2 security fixes and our new security policy</h1>
+            <p class="meta">
+                24 Jun 2026
+                
+                    
+                        
+                        
+                        
+                        -  Fabrice Mouhartem
+                        
+                        -  David Benqué
+                        
+                    
+                
+                    
+                    
+            </p>
+            <div class="article-tags">
+    
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        <ul class="tags" aria-label="Tags">
+        
+            <li><a class="tag" href="/tags/security">security</a></li>
+        
+            <li><a class="tag" href="/tags/postmortem">postmortem</a></li>
+        
+        </ul>
+    
+</div>
+        </section>
+        <p>In 2025.2.0 and 2025.2.1 there has been security fixes that are published in the
+following Common Vulnerabilities and Exposures (CVEs):</p>
+<ul>
+<li><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-51846">CVE-2025-51846</a>: “Unbounded
+WebSocket Frame Flood Enables Remote Denial of Service (DoS)”. CVSS3.1: 7.5
+(High)</li>
+<li><a href="https://www.cve.org/CVERecord?id=CVE-2026-26028">CVE-2026-26028</a>: “Sanitizer
+Bypass in Diffmarked.js Allows Arbitrary HTML Injection and Potential XSS”
+(Cross-Site Scripting, blocked by our content security policy (CSP)). CVSS3.1:
+6.1 (moderate)</li>
+</ul>
+<p>In this blog post we will explain these security vulnerabilities in turn,
+explaining their impact and the measures we took to address them.</p>
+<p>One of the vulnerabilities, CVE-2025-51846, was exploited against our flagship
+instance as part of a DoS attack on January 28th 2026 that led to a service
+outage. This blog post also serves as a post-mortem for this incident.</p>
+<h2>1. Frame flooding enabling Denial of Service</h2>
+<h3>Context</h3>
+<p>Since we were taking part in the <a href="https://www.opendesk.eu/en">OpenDesk project</a>,
+CryptPad code has been audited for security by Uni Systems at the request of the
+<em>Bundesamt für Sicherheit in der Informationstechnik</em>
+(<a href="https://www.bsi.bund.de/EN/Home/home_node.html">BSI</a>). This audit was part of
+an initiative for code analysis for open source software
+(<a href="https://www.bsi.bund.de/DE/Service-Navi/Publikationen/Studien/Projekt_P486/projekt_P486.html">CAOS</a>,
+in German). We are thankful to them for that!</p>
+<p>Most reported vulnerabilities did not fall in the scope of our <a href="https://blueprints.cryptpad.org/document/threatmodel/">threat
+model</a>. However, one
+vulnerability was found to be serious enough to warrant a :
+<a href="https://nvd.nist.gov/vuln/detail/CVE-2025-51846">CVE-2025-51846</a>. If you are
+interested in more technical details, please see the <a href="https://github.com/JohnPerifanis/cryptpad-cve-2025-51846-advisory/blob/main/README.md">full advisory</a>.</p>
+<p>In this post, we will explain what this vulnerability means, how it impacted us,
+and the changes we made, both in our code and in our way of dealing with
+security reports.</p>
+<h3>The vulnerability</h3>
+<p>CryptPad relies on websocket connections to exchange data between the client and
+the server, for instance to get your encrypted data for collaboration or the
+encrypted content of your drive.</p>
+<p>However, these connections were not rate-limited in any way. This meant that it
+was possible to use them to repeatedly send over and over again some known
+websocket frames that would be accepted and processed by the server. Even if
+they have no effect, they still require some computing and keeping a connection
+open. It thus leads to ressource overload, effectively resulting in a
+denial-of-service attack.</p>
+<p>To protect against such attacks, nginx (the web server we use) has rate-limiting
+features. We have now added the appropriate directives to our <a href="https://github.com/cryptpad/cryptpad/blob/358858d0732d141ff174fbc73351aed1d43368e7/docs/example-advanced.nginx.conf">example
+configuration</a>
+as well as the one we use in production for <a href="http://cryptpad.fr">cryptpad.fr</a>.</p>
+<h4>For instance administrators</h4>
+<p>If you are using CryptPad behind nginx with a variation of our nginx advanced
+configuration, please update it with our <a href="https://github.com/cryptpad/cryptpad/blob/main/docs/example-advanced.nginx.conf">latest
+version</a>
+as soon as possible.</p>
+<p>The details of the changes can be seen in this
+<a href="https://github.com/cryptpad/cryptpad/commit/1e0c06ad8a0c5dab795f85f9730ec2693320c62e">commit</a>.</p>
+<h3>Consequences</h3>
+<p>As we were slow to respond to this looming threat, <a href="http://cryptpad.fr">cryptpad.fr</a> was targeted by a
+<a href="https://social.xwiki.com/@CryptPad/115974705329016378">distributed denial-of-service
+attack</a> on January 28th
+2026. The incident was resolved in under 3 hours. However, the server was
+already under high load from legitimate users, and we did not notice the issue
+immediately.</p>
+<p>The fix has been included in our <a href="https://github.com/cryptpad/cryptpad/releases/tag/2026.2.1">Winter fix release
+(2026.2.1)</a>. In line
+with the discussion between our team and the security researchers, we embargoed
+this disclosure for 90 days after the release to give instance administrators
+time to update their instances. However in this case, the reporter disputed the
+validity of the embargo as it was not written clearly in our security policy.
+The CVE was thus published on April 30th, which is 34 days after the 2024.2.1
+release.</p>
+<h3>Our response</h3>
+<p>Consequently, we wanted to avoid putting instance administrators under the risk
+of a public vulnerability without having the time to upgrade their instances in
+the future. We also wanted to ensure that instances on our <a href="https://cryptpad.org/instances/">public
+list</a> aren't exposed to attacks through known
+vulnerabilities.</p>
+<p>To this end, we wrote a <a href="https://cryptpad.org/security/">new security policy</a>
+to:</p>
+<ul>
+<li>Explicitly state the length of the embargo period to protect third-party
+instances;</li>
+<li>Clearly list the channels available to report vulnerabilities to us;</li>
+<li>Explain the specificities of CryptPad and what falls into our threat model;</li>
+<li>Be transparent about the security processes that our team follows, and the
+verification steps on our code and external dependencies we also do on our
+side.</li>
+</ul>
+<p>We hope that this new policy will improve the security practices around
+CryptPad, and make it easier for our team and community to build more secure
+software.</p>
+<h2>2. Sanitizer bypass</h2>
+<p>As stated in the introduction, the security advisory
+<a href="https://github.com/cryptpad/cryptpad/security/advisories/GHSA-g2g4-47gv-p72v">GHSA-g2g4-47gv-p72v</a>
+describing <a href="https://www.cve.org/CVERecord?id=CVE-2026-26028">CVE-2026-26028</a> has
+recently been published on GitHub.</p>
+<p>We are thankful to user <a href="https://github.com/ixSly">@ixSly</a> on GitHub, for
+reporting it to us.</p>
+<p>We use iframes in multiple ways in CryptPad, one of them is to embed external
+ressources (for example encrypted PDFs). As they are a common attack vector, the
+source of these iframes is sanitized in CryptPad to only allow authorized
+sources. However, we missed the possible use of the <code>srcdoc</code> attribute to inject
+arbitrary HTML in an iframe.</p>
+<p>Fortunately, this does not lead to exploitable attacks, as CryptPad’s
+content-security policy (CSP) blocks it at the browser’s level. However, in
+order not to rely on CSPs for security, we fixed this issue by improving our
+sanitizer with the removal of iframes containing these attributes before
+rendering the page.</p>
+
+    </article>
+
+    <nav class="article-pagination" aria-label="Pagination">
+        
+        
+            <a href="/2026/06/23/2026-06-a-conversation-with-tuta/">Older: <span class="title">A shared vision for encryption and privacy: A conversation with Tuta</span></a>
+        
+    </nav>
+
+        </section>
+        
+<section id="top-tags" class="post">
+
+            <h3><i class="fa fa-tags" aria-hidden="true"></i> Top Tags</h3>
+<ul>
+
+    <li>
+        <a class="tag" href="/tags/status-update">status update</a><span class="count">54</span></li>
+
+    <li>
+        <a class="tag" href="/tags/release">release</a><span class="count">20</span></li>
+
+    <li>
+        <a class="tag" href="/tags/funding">funding</a><span class="count">20</span></li>
+
+    <li>
+        <a class="tag" href="/tags/security">security</a><span class="count">16</span></li>
+
+    <li>
+        <a class="tag" href="/tags/research">research</a><span class="count">14</span></li>
+
+    <li>
+        <a class="tag" href="/tags/ngi">ngi</a><span class="count">13</span></li>
+
+    <li>
+        <a class="tag" href="/tags/team">team</a><span class="count">11</span></li>
+
+    <li>
+        <a class="tag" href="/tags/donate">donate</a><span class="count">10</span></li>
+
+    <li>
+        <a class="tag" href="/tags/roadmap">roadmap</a><span class="count">10</span></li>
+
+    <li>
+        <a class="tag" href="/tags/open-collective">open collective</a><span class="count">9</span></li>
+
+</ul>
+        </section>
+        
+    <section id="social" class="post">
+
+            <h3><i class="fa fa-link" aria-hidden="true"></i> Links</h3>
+<ul>
+    <li>
+        <a href="https://cryptpad.org">
+            <i aria-hidden="true" class="fa fa-globe"></i>Project website
+        </a>
+    </li>
+    <li>
+        <a href="https://opencollective.com/cryptpad/contribute">
+            <i aria-label="OpenCollective" class="fa fa-open-collective"></i>Donate
+        </a>
+    </li>
+</ul>
+<ul>
+    <li>
+        <a href="https://forum.cryptpad.org">
+            <i aria-hidden="true" class="fa fa-bullhorn"></i>Forum
+        </a>
+    </li>
+    <li>
+        <a href="https://matrix.to/#/#cryptpad:matrix.xwiki.com">
+            <i aria-hidden="true" class="fa fa-matrix-org"></i>Chat (Matrix)
+        </a>
+    </li>
+    <li>
+        <a rel="me" href="https://social.xwiki.com/@CryptPad">
+            <i aria-hidden="true" class="fa fa-mastodon"></i>Mastodon
+        </a>
+    </li>
+    <li>
+        <a href="https://peertube.xwiki.com/c/cryptpad_channel/videos">
+            <i aria-hidden="true" class="fa fa-peertube"></i>Peertube
+        </a>
+    </li>
+    <li>
+        <a href="https://pixelfed.social/cryptpad_design">
+            <i aria-hidden="true" class="fa fa-pixelfed"></i>Pixelfed
+        </a>
+    </li>
+</ul>
+<ul>
+    <li>
+        <a href="/atom.xml">
+            <i aria-hidden="true" class="fa fa-rss"></i>RSS Feed
+        </a>
+    </li>
+</ul>
+        </section>
+    </main>
+</body>
+
+</html>
