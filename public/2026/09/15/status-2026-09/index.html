@@ -96,8 +96,8 @@ process remains mainly the same as before (i.e. sending findings to
 <li>We now use the <em>Common Vulnerability Scoring System</em> (CVSS) score using
 <a href="https://www.first.org/cvss/v4.0/user-guide">version 4.0</a>). This version of
 CVSS computation has a better granularity in defining attacker capabilities,
-especially in user interactions needs for mounting an attack (which was
-boolean in version 3, and distinguish between active and passive attacks).</li>
+especially in user interaction needs for mounting an attack (which was boolean
+in version 3, and now distinguishes between active and passive attacks).</li>
 <li>We specified the duration of the embargo before CVE publication (90 days after
 the public release including the patch).</li>
 <li>This security policy does not only apply to the CryptPad codebase, but also to
@@ -136,7 +136,7 @@ crypto-agility practices in the CryptPad codebase, we replaced the public-key
 cryptography in CryptPad code with their post-quantum equivalent (in a hybrid
 manner) and faced some technical difficulties (due to the way non-interactive DH
 key exchange works).</p>
-<p>The end result of these test was that while most of CryptPad was running
+<p>The end result of these tests was that while most of CryptPad was running
 smoothly, some parts became unbearably slow due to the overhead of post-quantum
 cryptography. Thanks to the discussion with experts at Pass the Salt however, we
 discovered that there is a
