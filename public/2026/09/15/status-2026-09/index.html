@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+
+    <title>Summer 2026 status | CryptPad Blog</title> 
+    
+
+    
+    
+    <meta property="og:type" content="webpage">
+    <meta property="og:title" content="Summer 2026 status">
+    <meta property="og:url" content="http://blog.cryptpad.org/2026/09/15/status-2026-09/">
+    <meta property="og:page_name" content="Summer 2026 status">
+    <meta property="og:locale" content="default">
+    <meta property="og:image" content="http://blog.cryptpad.org/images/pts-2026-photo.jpg">
+    <meta property="og:description" content="Security news, conferences and support news: hiring and dropping French.">
+    <meta name="twitter:card" content="Security news, conferences and support news: hiring and dropping French.">
+    <meta name="twitter:title" content="Summer 2026 status">
+
+
+
+    <link rel="alternate" href="/atom.xml" title="CryptPad Blog" type="application/atom+xml">
+
+    <link rel="icon" href="/theme/favicon.png">
+
+
+</head>
+
+<body>
+    <main class="container">
+        <header>
+            
+    <a href="/" class="back-home">
+        <i class="fa fa-arrow-left" aria-hidden="true"></i> <i class="fa fa-home" aria-hidden="true"></i> Homepage
+    </a>
+
+            <a href="/">
+                <img class="cp-logo" src="/theme/CryptPad_logo.svg" aria-hidden="true" alt="">
+                <h1>CryptPad Blog</h1>
+            </a>
+        </header>
+        <section id="content">
+            
+    <article class="post" lang="en">
+        <section class="header">
+            <h1>Summer 2026 status</h1>
+            <p class="meta">
+                15 Sept 2026
+                
+                    
+                        
+                        
+                        
+                        -  Fabrice Mouhartem
+                        
+                        -  David Benqué
+                        
+                    
+                
+                    
+                    
+            </p>
+            <div class="article-tags">
+    
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        <ul class="tags" aria-label="Tags">
+        
+            <li><a class="tag" href="/tags/status-update">status update</a></li>
+        
+            <li><a class="tag" href="/tags/talk">talk</a></li>
+        
+            <li><a class="tag" href="/tags/team">team</a></li>
+        
+            <li><a class="tag" href="/tags/job">job</a></li>
+        
+            <li><a class="tag" href="/tags/support">support</a></li>
+        
+            <li><a class="tag" href="/tags/press">press</a></li>
+        
+        </ul>
+    
+</div>
+        </section>
+        <p>We are back with a monthly status after taking a break this summer.</p>
+<h2>🛡️ Security news</h2>
+<p>Recently, CryptPad has implemented a new
+<a href="https://cryptpad.org/security/">security policy</a>. While the security reporting
+process remains mainly the same as before (i.e. sending findings to
+<a href="mailto:security@cryptpad.org">security@cryptpad.org</a>), we added several points:</p>
+<ul>
+<li>We now use the <em>Common Vulnerability Scoring System</em> (CVSS) score using
+<a href="https://www.first.org/cvss/v4.0/user-guide">version 4.0</a>). This version of
+CVSS computation has a better granularity in defining attacker capabilities,
+especially in user interactions needs for mounting an attack (which was
+boolean in version 3, and distinguish between active and passive attacks).</li>
+<li>We specified the duration of the embargo before CVE publication (90 days after
+the public release including the patch).</li>
+<li>This security policy does not only apply to the CryptPad codebase, but also to
+the different repositories we are maintaining. The complete list is part of
+<a href="https://cryptpad.org/security/#vulnerabilities-in-dependencies-maintained-by-the-cryptpad-team">the security policy</a>.</li>
+</ul>
+<p>Last February we faced a denial of service (DoS) attack, which has been
+mitigated, and the fix is available in the
+<a href="https://github.com/cryptpad/cryptpad/releases/tag/2026.2.1">2026.2.1</a> release.
+Details and post-mortem has already been published in a
+<a href="https://blog.cryptpad.org/2026/06/24/2026.2-security-issues/">blog post</a>. We
+are also in the process of reviewing the security changes in the previous
+<a href="https://github.com/cryptpad/cryptpad/releases/tag/2026.5.0">Spring release</a> to
+make them public.</p>
+<h2>🎤 Pass the salt conference and post-quantum recap</h2>
+<p><img src="/images/pts-2026-photo.jpg" alt="Fabrice presenting CryptPad at Pass the Salt Conference">
+By: Julio Loayza Meneses <a href="mailto:photos@julioloayzam.com">photos@julioloayzam.com</a> - Creative Commons BY-SA 4.0</p>
+<p>Fabrice has presented results about post-quantum cryptographic implementation at
+the FOSS &amp; Security conference <a href="https://2026.pass-the-salt.org/">Pass the Salt</a>
+in Lille, France, which was joint work with Iulian‑Tudor Scutaru.</p>
+<p>This work was summarised in the
+<a href="https://blog.cryptpad.org/2025/09/05/status-2025-08/">summer 2025 status blog post</a>.
+The actual talk was well received, and if you missed it (or simply want to watch
+it again), the recording is available on
+<a href="https://passthesalt.ubicast.tv/videos/2026-cryptpad-experimented-on-post-quantum-cryptography/">Pass the Salt UBICAST channel</a>.
+You can also skim through the
+<a href="https://cryptpad.fr/file/#/2/file/IJuN5NxZb2RkG8TPrFQda-Ef/">slide deck</a>.</p>
+<p>To summarise this work, different post-quantum cryptography libraries
+implementations and algorithms have been benchmarked to see which would have the
+more fitting performance fingerprint (both in terms of computation and memory)
+with our needs. These tests showed that
+<a href="https://csrc.nist.gov/pubs/fips/203/final"><code>ML-KEM</code></a> and
+<a href="https://csrc.nist.gov/pubs/fips/204/final"><code>ML-DSA</code></a> enjoy the best balance
+according to CryptPad’s cryptography usage. From there, after implementing
+crypto-agility practices in the CryptPad codebase, we replaced the public-key
+cryptography in CryptPad code with their post-quantum equivalent (in a hybrid
+manner) and faced some technical difficulties (due to the way non-interactive DH
+key exchange works).</p>
+<p>The end result of these test was that while most of CryptPad was running
+smoothly, some parts became unbearably slow due to the overhead of post-quantum
+cryptography. Thanks to the discussion with experts at Pass the Salt however, we
+discovered that there is a
+<a href="https://wicg.github.io/webcrypto-modern-algos/">work in progress</a> to implement
+<code>ML-KEM</code> and <code>ML-DSA</code> directly in the
+<a href="https://en.wikipedia.org/wiki/Web_Cryptography_API">Web Cryptography API</a>. It
+should be more efficient than code imported from an external library by two
+orders of magnitude and may make post-quantum CryptPad a more realistic
+possibility.</p>
+<h2>🆘 Support</h2>
+<p>Since
+<a href="https://blog.cryptpad.org/2026/04/08/status-2026-03/">Mathilde left the team</a>,
+there has been a missing person in our dedicated support team. This change has
+two consequences:</p>
+<ul>
+<li>The first one is that we don’t have any French-speaking person in the support
+team, meaning that we’ll have to drop the French support on the <a href="http://cryptpad.fr">cryptpad.fr</a>
+instance;</li>
+<li>The other consequence is that we have a position for
+<a href="https://xwiki.com/en/company/jobs/#TechnicalSupportEngineer">technical support engineer</a>
+for XWiki and CryptPad. If you’re a good communicator, interested in digital
+privacy, and enjoy helping people protect their data, we’d love to hear from
+you. And if you know someone who might be a good fit, feel free to share the
+opportunity with them!</li>
+</ul>
+<h2>📰 In the news</h2>
+<ul>
+<li>The environmental organization <a href="https://poblesvius.cat/">Pobles Vius</a> has
+created a <a href="https://www.youtube.com/watch?v=5IzhvHrXcOM">CryptPad tutorial</a> in
+Catalan.</li>
+<li>CryptPad was granted the July’s
+<a href="https://www.ow2.org/view/OW2-Project-of-the-Month/July-2026-Cryptpad">project of the month</a>
+from <a href="https://www.ow2.org/view/Main/">OW2</a>!</li>
+<li>We are also glad to see that CryptPad was featured in a
+<a href="https://www.usenix.org/system/files/usenixsecurity26-knabenhans.pdf">research article</a>
+from the prestigious
+<a href="https://www.usenix.org/conference/usenixsecurity26">USENIX security Symposium</a>
+this summer. The article “End-to-End Encrypted Collaborative Documents” from
+researchers from EPFL and Max Planck institute provided a formal security
+definition for E2EE collaborative edition and used CryptPad as an example of
+instanciation for their framework (see Appendix E of the paper). This piece of
+research received the Internet Defense Prize and an Honorable Mention.</li>
+</ul>
+<h2>🔭 Up next</h2>
+<ul>
+<li>Stay tuned for the upcoming Autumn Release that will feature
+<a href="https://github.com/cryptpad/cryptpad/milestone/20">2 releases worth</a> of
+improvements!</li>
+<li>Most of the team will meet IRL for a week at the end of September for the
+yearly XWiki seminar;</li>
+<li>Upcoming events:
+<ul>
+<li>Next month, Fabrice will be in Luxembourg for the
+<a href="https://fairtechsummit.org/">Fair Tech Summit Europe</a> on October 6th and
+the <a href="https://conference.opensource.lu/">Open Source Conference</a> on October
+7th. He’ll present CryptPad as an alternative to Big Techs, from the
+viewpoints of both a FOSS project and as a company product.</li>
+<li>Then, on 14‑15 November, you can meet Fabrice again at
+<a href="https://capitoledulibre.org/">Capitole du Libre</a> in Toulouse, France. He’ll
+give an overview of CryptPad and share some of the latest developments from
+the project.</li>
+</ul>
+</li>
+</ul>
+
+    </article>
+
+    <nav class="article-pagination" aria-label="Pagination">
+        
+        
+            <a href="/2026/06/24/2026.2-security-issues/">Older: <span class="title">2026.2 security fixes and our new security policy</span></a>
+        
+    </nav>
+
+        </section>
+        
+<section id="top-tags" class="post">
+
+            <h3><i class="fa fa-tags" aria-hidden="true"></i> Top Tags</h3>
+<ul>
+
+    <li>
+        <a class="tag" href="/tags/status-update">status update</a><span class="count">55</span></li>
+
+    <li>
+        <a class="tag" href="/tags/release">release</a><span class="count">20</span></li>
+
+    <li>
+        <a class="tag" href="/tags/funding">funding</a><span class="count">20</span></li>
+
+    <li>
+        <a class="tag" href="/tags/security">security</a><span class="count">16</span></li>
+
+    <li>
+        <a class="tag" href="/tags/research">research</a><span class="count">14</span></li>
+
+    <li>
+        <a class="tag" href="/tags/ngi">ngi</a><span class="count">13</span></li>
+
+    <li>
+        <a class="tag" href="/tags/team">team</a><span class="count">12</span></li>
+
+    <li>
+        <a class="tag" href="/tags/donate">donate</a><span class="count">10</span></li>
+
+    <li>
+        <a class="tag" href="/tags/talk">talk</a><span class="count">10</span></li>
+
+    <li>
+        <a class="tag" href="/tags/roadmap">roadmap</a><span class="count">10</span></li>
+
+</ul>
+        </section>
+        
+    <section id="social" class="post">
+
+            <h3><i class="fa fa-link" aria-hidden="true"></i> Links</h3>
+<ul>
+    <li>
+        <a href="https://cryptpad.org">
+            <i aria-hidden="true" class="fa fa-globe"></i>Project website
+        </a>
+    </li>
+    <li>
+        <a href="https://opencollective.com/cryptpad/contribute">
+            <i aria-label="OpenCollective" class="fa fa-open-collective"></i>Donate
+        </a>
+    </li>
+</ul>
+<ul>
+    <li>
+        <a href="https://forum.cryptpad.org">
+            <i aria-hidden="true" class="fa fa-bullhorn"></i>Forum
+        </a>
+    </li>
+    <li>
+        <a href="https://matrix.to/#/#cryptpad:matrix.xwiki.com">
+            <i aria-hidden="true" class="fa fa-matrix-org"></i>Chat (Matrix)
+        </a>
+    </li>
+    <li>
+        <a rel="me" href="https://social.xwiki.com/@CryptPad">
+            <i aria-hidden="true" class="fa fa-mastodon"></i>Mastodon
+        </a>
+    </li>
+    <li>
+        <a href="https://peertube.xwiki.com/c/cryptpad_channel/videos">
+            <i aria-hidden="true" class="fa fa-peertube"></i>Peertube
+        </a>
+    </li>
+    <li>
+        <a href="https://pixelfed.social/cryptpad_design">
+            <i aria-hidden="true" class="fa fa-pixelfed"></i>Pixelfed
+        </a>
+    </li>
+</ul>
+<ul>
+    <li>
+        <a href="/atom.xml">
+            <i aria-hidden="true" class="fa fa-rss"></i>RSS Feed
+        </a>
+    </li>
+</ul>
+        </section>
+    </main>
+</body>
+
+</html>

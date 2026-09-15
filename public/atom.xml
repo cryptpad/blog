@@ -4,12 +4,141 @@
   <subtitle>News from the end-to-end encrypted collaboration suite</subtitle>
   <link href="https://blog.cryptpad.org/atom.xml" rel="self"/>
   <link href="https://blog.cryptpad.org"/>
-  <updated>2026-06-24T00:00:00Z</updated>
+  <updated>2026-09-15T00:00:00Z</updated>
   <id>https://blog.cryptpad.org</id>
   <author>
     <name>CryptPad Team</name>
     <email>contact@cryptpad.org</email>
   </author>
+  <entry>
+    <title>Summer 2026 status</title>
+    <link href="https://blog.cryptpad.org/2026/09/15/status-2026-09/"/>
+    <updated>2026-09-15T00:00:00Z</updated>
+    <id>https://blog.cryptpad.org/2026/09/15/status-2026-09/</id>
+    <summary xml:lang="en" type="html">Security news, conferences and support news: hiring and dropping French.</summary>
+    <content xml:lang="en" type="html">&lt;p&gt;We are back with a monthly status after taking a break this summer.&lt;/p&gt;
+&lt;h2&gt;🛡️ Security news&lt;/h2&gt;
+&lt;p&gt;Recently, CryptPad has implemented a new
+&lt;a href=&quot;https://cryptpad.org/security/&quot;&gt;security policy&lt;/a&gt;. While the security reporting
+process remains mainly the same as before (i.e. sending findings to
+&lt;a href=&quot;mailto:security@cryptpad.org&quot;&gt;security@cryptpad.org&lt;/a&gt;), we added several points:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;We now use the &lt;em&gt;Common Vulnerability Scoring System&lt;/em&gt; (CVSS) score using
+&lt;a href=&quot;https://www.first.org/cvss/v4.0/user-guide&quot;&gt;version 4.0&lt;/a&gt;). This version of
+CVSS computation has a better granularity in defining attacker capabilities,
+especially in user interactions needs for mounting an attack (which was
+boolean in version 3, and distinguish between active and passive attacks).&lt;/li&gt;
+&lt;li&gt;We specified the duration of the embargo before CVE publication (90 days after
+the public release including the patch).&lt;/li&gt;
+&lt;li&gt;This security policy does not only apply to the CryptPad codebase, but also to
+the different repositories we are maintaining. The complete list is part of
+&lt;a href=&quot;https://cryptpad.org/security/#vulnerabilities-in-dependencies-maintained-by-the-cryptpad-team&quot;&gt;the security policy&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Last February we faced a denial of service (DoS) attack, which has been
+mitigated, and the fix is available in the
+&lt;a href=&quot;https://github.com/cryptpad/cryptpad/releases/tag/2026.2.1&quot;&gt;2026.2.1&lt;/a&gt; release.
+Details and post-mortem has already been published in a
+&lt;a href=&quot;https://blog.cryptpad.org/2026/06/24/2026.2-security-issues/&quot;&gt;blog post&lt;/a&gt;. We
+are also in the process of reviewing the security changes in the previous
+&lt;a href=&quot;https://github.com/cryptpad/cryptpad/releases/tag/2026.5.0&quot;&gt;Spring release&lt;/a&gt; to
+make them public.&lt;/p&gt;
+&lt;h2&gt;🎤 Pass the salt conference and post-quantum recap&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/pts-2026-photo.jpg&quot; alt=&quot;Fabrice presenting CryptPad at Pass the Salt Conference&quot; /&gt;
+By: Julio Loayza Meneses &lt;a href=&quot;mailto:photos@julioloayzam.com&quot;&gt;photos@julioloayzam.com&lt;/a&gt; - Creative Commons BY-SA 4.0&lt;/p&gt;
+&lt;p&gt;Fabrice has presented results about post-quantum cryptographic implementation at
+the FOSS &amp;amp; Security conference &lt;a href=&quot;https://2026.pass-the-salt.org/&quot;&gt;Pass the Salt&lt;/a&gt;
+in Lille, France, which was joint work with Iulian‑Tudor Scutaru.&lt;/p&gt;
+&lt;p&gt;This work was summarised in the
+&lt;a href=&quot;https://blog.cryptpad.org/2025/09/05/status-2025-08/&quot;&gt;summer 2025 status blog post&lt;/a&gt;.
+The actual talk was well received, and if you missed it (or simply want to watch
+it again), the recording is available on
+&lt;a href=&quot;https://passthesalt.ubicast.tv/videos/2026-cryptpad-experimented-on-post-quantum-cryptography/&quot;&gt;Pass the Salt UBICAST channel&lt;/a&gt;.
+You can also skim through the
+&lt;a href=&quot;https://cryptpad.fr/file/#/2/file/IJuN5NxZb2RkG8TPrFQda-Ef/&quot;&gt;slide deck&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;To summarise this work, different post-quantum cryptography libraries
+implementations and algorithms have been benchmarked to see which would have the
+more fitting performance fingerprint (both in terms of computation and memory)
+with our needs. These tests showed that
+&lt;a href=&quot;https://csrc.nist.gov/pubs/fips/203/final&quot;&gt;&lt;code&gt;ML-KEM&lt;/code&gt;&lt;/a&gt; and
+&lt;a href=&quot;https://csrc.nist.gov/pubs/fips/204/final&quot;&gt;&lt;code&gt;ML-DSA&lt;/code&gt;&lt;/a&gt; enjoy the best balance
+according to CryptPad’s cryptography usage. From there, after implementing
+crypto-agility practices in the CryptPad codebase, we replaced the public-key
+cryptography in CryptPad code with their post-quantum equivalent (in a hybrid
+manner) and faced some technical difficulties (due to the way non-interactive DH
+key exchange works).&lt;/p&gt;
+&lt;p&gt;The end result of these test was that while most of CryptPad was running
+smoothly, some parts became unbearably slow due to the overhead of post-quantum
+cryptography. Thanks to the discussion with experts at Pass the Salt however, we
+discovered that there is a
+&lt;a href=&quot;https://wicg.github.io/webcrypto-modern-algos/&quot;&gt;work in progress&lt;/a&gt; to implement
+&lt;code&gt;ML-KEM&lt;/code&gt; and &lt;code&gt;ML-DSA&lt;/code&gt; directly in the
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Web_Cryptography_API&quot;&gt;Web Cryptography API&lt;/a&gt;. It
+should be more efficient than code imported from an external library by two
+orders of magnitude and may make post-quantum CryptPad a more realistic
+possibility.&lt;/p&gt;
+&lt;h2&gt;🆘 Support&lt;/h2&gt;
+&lt;p&gt;Since
+&lt;a href=&quot;https://blog.cryptpad.org/2026/04/08/status-2026-03/&quot;&gt;Mathilde left the team&lt;/a&gt;,
+there has been a missing person in our dedicated support team. This change has
+two consequences:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The first one is that we don’t have any French-speaking person in the support
+team, meaning that we’ll have to drop the French support on the &lt;a href=&quot;http://cryptpad.fr/&quot;&gt;cryptpad.fr&lt;/a&gt;
+instance;&lt;/li&gt;
+&lt;li&gt;The other consequence is that we have a position for
+&lt;a href=&quot;https://xwiki.com/en/company/jobs/#TechnicalSupportEngineer&quot;&gt;technical support engineer&lt;/a&gt;
+for XWiki and CryptPad. If you’re a good communicator, interested in digital
+privacy, and enjoy helping people protect their data, we’d love to hear from
+you. And if you know someone who might be a good fit, feel free to share the
+opportunity with them!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;📰 In the news&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;The environmental organization &lt;a href=&quot;https://poblesvius.cat/&quot;&gt;Pobles Vius&lt;/a&gt; has
+created a &lt;a href=&quot;https://www.youtube.com/watch?v=5IzhvHrXcOM&quot;&gt;CryptPad tutorial&lt;/a&gt; in
+Catalan.&lt;/li&gt;
+&lt;li&gt;CryptPad was granted the July’s
+&lt;a href=&quot;https://www.ow2.org/view/OW2-Project-of-the-Month/July-2026-Cryptpad&quot;&gt;project of the month&lt;/a&gt;
+from &lt;a href=&quot;https://www.ow2.org/view/Main/&quot;&gt;OW2&lt;/a&gt;!&lt;/li&gt;
+&lt;li&gt;We are also glad to see that CryptPad was featured in a
+&lt;a href=&quot;https://www.usenix.org/system/files/usenixsecurity26-knabenhans.pdf&quot;&gt;research article&lt;/a&gt;
+from the prestigious
+&lt;a href=&quot;https://www.usenix.org/conference/usenixsecurity26&quot;&gt;USENIX security Symposium&lt;/a&gt;
+this summer. The article “End-to-End Encrypted Collaborative Documents” from
+researchers from EPFL and Max Planck institute provided a formal security
+definition for E2EE collaborative edition and used CryptPad as an example of
+instanciation for their framework (see Appendix E of the paper). This piece of
+research received the Internet Defense Prize and an Honorable Mention.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;🔭 Up next&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Stay tuned for the upcoming Autumn Release that will feature
+&lt;a href=&quot;https://github.com/cryptpad/cryptpad/milestone/20&quot;&gt;2 releases worth&lt;/a&gt; of
+improvements!&lt;/li&gt;
+&lt;li&gt;Most of the team will meet IRL for a week at the end of September for the
+yearly XWiki seminar;&lt;/li&gt;
+&lt;li&gt;Upcoming events:
+&lt;ul&gt;
+&lt;li&gt;Next month, Fabrice will be in Luxembourg for the
+&lt;a href=&quot;https://fairtechsummit.org/&quot;&gt;Fair Tech Summit Europe&lt;/a&gt; on October 6th and
+the &lt;a href=&quot;https://conference.opensource.lu/&quot;&gt;Open Source Conference&lt;/a&gt; on October
+7th. He’ll present CryptPad as an alternative to Big Techs, from the
+viewpoints of both a FOSS project and as a company product.&lt;/li&gt;
+&lt;li&gt;Then, on 14‑15 November, you can meet Fabrice again at
+&lt;a href=&quot;https://capitoledulibre.org/&quot;&gt;Capitole du Libre&lt;/a&gt; in Toulouse, France. He’ll
+give an overview of CryptPad and share some of the latest developments from
+the project.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    <category term="status update" scheme="https://blog.cryptpad.org/tags/status update/"/>
+    <category term="talk" scheme="https://blog.cryptpad.org/tags/talk/"/>
+    <category term="team" scheme="https://blog.cryptpad.org/tags/team/"/>
+    <category term="job" scheme="https://blog.cryptpad.org/tags/job/"/>
+    <category term="support" scheme="https://blog.cryptpad.org/tags/support/"/>
+    <category term="press" scheme="https://blog.cryptpad.org/tags/press/"/>
+  </entry>
   <entry>
     <title>2026.2 security fixes and our new security policy</title>
     <link href="https://blog.cryptpad.org/2026/06/24/2026.2-security-issues/"/>
