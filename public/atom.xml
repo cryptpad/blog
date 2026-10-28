@@ -4,12 +4,71 @@
   <subtitle>News from the end-to-end encrypted collaboration suite</subtitle>
   <link href="https://blog.cryptpad.org/atom.xml" rel="self"/>
   <link href="https://blog.cryptpad.org"/>
-  <updated>2026-09-15T00:00:00Z</updated>
+  <updated>2026-10-28T00:00:00Z</updated>
   <id>https://blog.cryptpad.org</id>
   <author>
     <name>CryptPad Team</name>
     <email>contact@cryptpad.org</email>
   </author>
+  <entry>
+    <title>Autumn 2026 status</title>
+    <link href="https://blog.cryptpad.org/2026/10/28/status-2026-autumn/"/>
+    <updated>2026-10-28T00:00:00Z</updated>
+    <id>https://blog.cryptpad.org/2026/10/28/status-2026-autumn/</id>
+    <summary xml:lang="en" type="html">Autumn release, Euro-office, hackathon prototypes, and a team update</summary>
+    <content xml:lang="en" type="html">&lt;p&gt;We are late posting this status as it is all about our autumn release, that unfortunately &lt;a href=&quot;https://github.com/cryptpad/cryptpad/issues/2415&quot;&gt;had to be delayed&lt;/a&gt; to set a few things right. With this delay we are renaming the post to &amp;quot;Autumn status&amp;quot; to cover both September and October news.&lt;/p&gt;
+&lt;h2&gt;🍂 Autumn Release&lt;/h2&gt;
+&lt;p&gt;We are happy to announce that our Autumn Release is finally out. This was a longer cycle than usual as quite a few major features and improvements are included.&lt;/p&gt;
+&lt;h3&gt;Releasing the new re-written server&lt;/h3&gt;
+&lt;p&gt;We &lt;a href=&quot;https://blog.cryptpad.org/2026/04/08/status-2026-03/&quot;&gt;put the new scalable server in production&lt;/a&gt; on &lt;a href=&quot;http://cryptpad.fr/&quot;&gt;cryptpad.fr&lt;/a&gt; last March, and have been monitoring closely since then. After a series of fixes and some documentation to make it easy to install by third party administrators, we are ready to release it as part of the open-source product.&lt;/p&gt;
+&lt;p&gt;We moved the server to &lt;a href=&quot;https://github.com/cryptpad/server&quot;&gt;its own repository on Github&lt;/a&gt; so that it can be updated and fixed independently of the main CryptPad release cycle. We have worked to make the upgrade process as transparent as possible for administrators, but some configuration adjustments may be necessary, please see &lt;a href=&quot;https://github.com/cryptpad/cryptpad/releases/tag/2026.10.0&quot;&gt;the upgrade notes&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Our thanks go to NLNet Foundation for &lt;a href=&quot;https://nlnet.nl/project/Cryptpad-scaling/&quot;&gt;funding this work thought the NGI0 Commons Fund&lt;/a&gt;.&lt;/p&gt;
+&lt;h3&gt;Upgrading to Euro-Office&lt;/h3&gt;
+&lt;p&gt;We are upgrading all the office apps in this release, but this isn&#39;t just a version upgrade of OnlyOffice, which we&#39;ve relied on so far. We have switched our applications to &lt;a href=&quot;https://github.com/Euro-Office&quot;&gt;Euro-Office&lt;/a&gt; which is itself based on &lt;a href=&quot;https://github.com/ONLYOFFICE&quot;&gt;OnlyOffice&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Our parent company XWiki has been involved in the Euro-Office initiative &lt;a href=&quot;https://nextcloud.com/blog/press_releases/industry-initiative-launches-euro-office-as-true-sovereign-office-suite/&quot;&gt;from the start&lt;/a&gt;, this fork aims to improve technological sovereignty by providing a European open-source office suite solution.&lt;/p&gt;
+&lt;h3&gt;Many more fixes an improvements&lt;/h3&gt;
+&lt;p&gt;To name a few:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Improved stability and performance of office apps with linked documents, a new way to store data for apps that do not rely on Chainpad.&lt;/li&gt;
+&lt;li&gt;Adjusted the form sharing UX to prevent form authors from loosing their edit link (that also gives access to the form&#39;s responses).&lt;/li&gt;
+&lt;li&gt;...&lt;/li&gt;
+&lt;li&gt;Many other fixes, please see &lt;a href=&quot;https://github.com/cryptpad/cryptpad/releases/tag/2026.10.0&quot;&gt;the full release notes&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;🧪 Seminar / Hackathon results&lt;/h2&gt;
+&lt;p&gt;In September part of the team attended the &lt;a href=&quot;https://xwiki.com/en/Blog/seminar-2026-edition/&quot;&gt;2026 edition of the XWiki seminar&lt;/a&gt; and as is customary we experimented on things during the day-long hackathon session.&lt;/p&gt;
+&lt;h3&gt;Improved templates&lt;/h3&gt;
+&lt;p&gt;Daria (CryptPad team) and Thiago (XWiki) worked on some improvements for templates. They prototyped some useful documents such as meeting notes, goal tracker, and cooking recipe. They also mocked up what an improved template picker could look like.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/templates.png&quot; alt=&quot;screenshot of improved template menu when creating a new document, templates are shown with titles such as &amp;quot;weekly sync&amp;quot;, &amp;quot;interview notes&amp;quot;, &amp;quot;Board minutes&amp;quot; and so on &quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;Features page redesign wireframes&lt;/h3&gt;
+&lt;p&gt;The &lt;a href=&quot;https://cryptpad.fr/features.html&quot;&gt;features page of CryptPad&lt;/a&gt; has long been something we want to improve. The hackathon provided an opportunity to finally do that, as Daria and Andreea teamed up with the XWiki marketing team to produce mockups of a redesign.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/features-1.png&quot; alt=&quot;page mockup &amp;quot;one private workspace. Everything connected&amp;quot;, private by design, real time collaboration, one connected workspace, fine-grained control&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/features-2.png&quot; alt=&quot;same mockup continues with &amp;quot;drag and drop interface&amp;quot;, &amp;quot;presentations made with familiar tools&amp;quot; &amp;quot;flexible file support&amp;quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;Logo experiments&lt;/h3&gt;
+&lt;p&gt;Finally, David experimented with a logo refresh that would be more in line with the Lucide icon set used in the product. The ability to add styles to SVGs including favicons would make this a more versatile logo, for example able to adjust to light/dark modes.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/logo-slide.png&quot; alt=&quot;slide showing the new logo icon next to the CryptPad name on light and dark backgrounds&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/svg-favicon-dark.png&quot; alt=&quot;row of tabs with favicons of different colors contrasting against the dark background&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://blog.cryptpad.org/images/svg-favicon-light.png&quot; alt=&quot;row of tabs with favicons of different colors contrasting against the light background&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;🎙️ Conferences&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Fabrice presented CryptPad at the &lt;a href=&quot;https://conference.opensource.lu/&quot;&gt;Open Source Conference Luxembourg&lt;/a&gt; earlier in October. The video is not available yet, but you can check out &lt;a href=&quot;https://pretalx.com/media/open-source-conference-luxembourg-2026/submissions/C3TBZ7/resources/1630-FabriceMouharte_0Eq7dsb.pdf&quot;&gt;the slides&lt;/a&gt; if you want to know more!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;🗞️ In the news&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;We are happy to be included in the Electronic Frontier Foundation&#39;s &lt;a href=&quot;https://www.eff.org/pages/i-want-opt-out-software-made-big-tech&quot;&gt;How to Opt Out of Software Made by Big Tech&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;🏀 Team update&lt;/h2&gt;
+&lt;p&gt;After 7 years on the team and nearly 4 as project lead, David Benqué will leave the team at the end of November. Fabrice Mouhartem, our senior engineer in charge of cryptography and security, has accepted the role of &amp;quot;acting project lead&amp;quot; to run the project going forward. The team and management will reflect on what new hire will be best for the project.&lt;/p&gt;
+&lt;h2&gt;🔭 Up Next&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;The team will now be turning their attention to &lt;a href=&quot;https://nlnet.nl/project/CryptPad-Notes/&quot;&gt;CryptPad Notes&lt;/a&gt; as the next big feature to implement.&lt;/li&gt;
+&lt;li&gt;CryptPad is part of of the SuperStack consortium of consortia with the projects &lt;a href=&quot;https://elfaconsortium.eu/&quot;&gt;ELFA&lt;/a&gt; and SuperApps. Our work on the project will not start until mid 2027 but we will be attending kick off meetings in the coming months.&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    <category term="status update" scheme="https://blog.cryptpad.org/tags/status update/"/>
+    <category term="release" scheme="https://blog.cryptpad.org/tags/release/"/>
+    <category term="team" scheme="https://blog.cryptpad.org/tags/team/"/>
+    <category term="prototypes" scheme="https://blog.cryptpad.org/tags/prototypes/"/>
+  </entry>
   <entry>
     <title>Summer 2026 status</title>
     <link href="https://blog.cryptpad.org/2026/09/15/status-2026-09/"/>
