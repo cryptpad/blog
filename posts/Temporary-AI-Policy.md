@@ -1,6 +1,6 @@
 ---
 title: "Temporary AI Policy for CryptPad Development"
-date: 2026-11-09
+date: 2026-11-10
 author:
   - Ludovic Dubost
   - Fabrice Mouhartem
