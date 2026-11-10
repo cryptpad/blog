@@ -4,12 +4,157 @@
   <subtitle>News from the end-to-end encrypted collaboration suite</subtitle>
   <link href="https://blog.cryptpad.org/atom.xml" rel="self"/>
   <link href="https://blog.cryptpad.org"/>
-  <updated>2026-10-28T00:00:00Z</updated>
+  <updated>2026-11-10T00:00:00Z</updated>
   <id>https://blog.cryptpad.org</id>
   <author>
     <name>CryptPad Team</name>
     <email>contact@cryptpad.org</email>
   </author>
+  <entry>
+    <title>Temporary AI Policy for CryptPad Development</title>
+    <link href="https://blog.cryptpad.org/2026/11/10/Temporary-AI-Policy/"/>
+    <updated>2026-11-10T00:00:00Z</updated>
+    <id>https://blog.cryptpad.org/2026/11/10/Temporary-AI-Policy/</id>
+    <summary xml:lang="en" type="html">The stance on AI for CryptPad development and next steps</summary>
+    <content xml:lang="en" type="html">&lt;h2&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://cryptpad.org/&quot;&gt;CryptPad&lt;/a&gt; is an open-source end-to-end encrypted (E2EE) office suite. It has been developed since 2014 in javascript, building a real-time E2EE collaboration engine along with an integration for various applications for document processing (spreadsheets, documents, presentations, markdown, …) and collaboration (calendar, teams, drive, forms, …) in mind. CryptPad is distributed as a web application that puts the emphasis on the ease of use while staying secure under our &lt;a href=&quot;https://blueprints.cryptpad.org/document/threatmodel/&quot;&gt;threat model&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Due to the ever-growing presence of Artificial Intelligence (AI) tools in development processes and recurrent questions from our community, until we write a definitive AI policy, we are providing this document to disclose the stance of the CryptPad project (as part of &lt;a href=&quot;https://xwiki.com/&quot;&gt;XWiki SAS&lt;/a&gt;) with respect to AI.&lt;/p&gt;
+&lt;h2&gt;LLM usage on the CryptPad project so far&lt;/h2&gt;
+&lt;p&gt;On the core developer side:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;No features have been coded by agents. All commits are reviewed by the core developers of CryptPad.&lt;/li&gt;
+&lt;li&gt;LLMs have not been used so-far by the developers of the project further than asking questions.&lt;/li&gt;
+&lt;li&gt;All commits are humanly reviewed by committers.&lt;/li&gt;
+&lt;li&gt;We have used LLMs for read-only security issues discovery and analysis.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;On the contributor side:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;We have not provided any specific guidlines to contributors.&lt;/li&gt;
+&lt;li&gt;All contributions have been humanly reviewed.&lt;/li&gt;
+&lt;li&gt;If a contribution becomes too difficult to review, for instance because there is a large batch of AI generated code, we drop it.&lt;/li&gt;
+&lt;li&gt;We have no knowledge of having accepted a heavily LLM generated contribution.&lt;/li&gt;
+&lt;li&gt;We have received contributed security issue reports produced by LLMs.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Additionally, CryptPad has no AI features in the product itself.&lt;/p&gt;
+&lt;h2&gt;NLNet&lt;/h2&gt;
+&lt;p&gt;NLNet is a foundation funding several open-source projects related to the Internet via the &lt;a href=&quot;https://nlnet.nl/NGI/&quot;&gt;Next Generation Internet&lt;/a&gt; (NGI) programmes. CryptPad has been funded by NLNet on several projects and we thank them for that.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Project&lt;/th&gt;
+&lt;th&gt;Fund type&lt;/th&gt;
+&lt;th&gt;Start&lt;/th&gt;
+&lt;th&gt;End&lt;/th&gt;
+&lt;th&gt;Summary&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;https://nlnet.nl/project/Cryptpad&quot;&gt;CryptPad&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;NGI0 PET&lt;/td&gt;
+&lt;td&gt;2019&lt;/td&gt;
+&lt;td&gt;2019&lt;/td&gt;
+&lt;td&gt;Real-time collaboration with client-side encryption&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;https://nlnet.nl/project/CryptPad-Auth&quot;&gt;CryptPad Auth&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;NGI Assure&lt;/td&gt;
+&lt;td&gt;2021&lt;/td&gt;
+&lt;td&gt;2024&lt;/td&gt;
+&lt;td&gt;Implement external identity mechanisms to E2EE collaborative editor&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;https://nlnet.nl/project/Cryptpad-Directory&quot;&gt;CryptPad Auth Improvements&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;NGI Assure&lt;/td&gt;
+&lt;td&gt;2024&lt;/td&gt;
+&lt;td&gt;2024&lt;/td&gt;
+&lt;td&gt;Better user management, 2FA and SSO for CryptPad&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;https://nlnet.nl/project/CryptPad-Blueprints&quot;&gt;CryptPad Blueprints&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;NGI0 Entrust&lt;/td&gt;
+&lt;td&gt;2022&lt;/td&gt;
+&lt;td&gt;2024&lt;/td&gt;
+&lt;td&gt;Server-side encrypted collaborative editor&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;https://nlnet.nl/project/Cryptpad-Communities&quot;&gt;CryptPad for communities&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;NGI0 PET&lt;/td&gt;
+&lt;td&gt;2019&lt;/td&gt;
+&lt;td&gt;2019&lt;/td&gt;
+&lt;td&gt;Collaborative web editor with client-side encryption&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;https://nlnet.nl/project/CryptPad-Notes&quot;&gt;CryptPad Notes&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;NGI0 Commons Fund&lt;/td&gt;
+&lt;td&gt;2025&lt;/td&gt;
+&lt;td&gt;…&lt;/td&gt;
+&lt;td&gt;E2EE collaborative rich text editor&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;https://nlnet.nl/project/CryptPad-QA&quot;&gt;CryptPad Quality Test Suite&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;NGI Assure&lt;/td&gt;
+&lt;td&gt;2024&lt;/td&gt;
+&lt;td&gt;2024&lt;/td&gt;
+&lt;td&gt;Continuous testing of critical CryptPad functionality&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;https://nlnet.nl/project/Cryptpad-scaling&quot;&gt;CryptPad Scalable Server&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;NGI0 Commons Fund&lt;/td&gt;
+&lt;td&gt;2025&lt;/td&gt;
+&lt;td&gt;2026&lt;/td&gt;
+&lt;td&gt;Improve the architecture of CryptPad&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;https://nlnet.nl/project/CryptPad-WCAG&quot;&gt;CryptPad WCAG&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;NGI Assure&lt;/td&gt;
+&lt;td&gt;2024&lt;/td&gt;
+&lt;td&gt;2024&lt;/td&gt;
+&lt;td&gt;Accessibility improvements to CryptPad suite&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;https://nlnet.nl/project/CryptPadForms&quot;&gt;CryptPad: Project Dialogue&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;NGI0 PET&lt;/td&gt;
+&lt;td&gt;2020&lt;/td&gt;
+&lt;td&gt;2020&lt;/td&gt;
+&lt;td&gt;Secure surveys and polls for Cryptpad&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3&gt;NLNet AI Policy 1.1&lt;/h3&gt;
+&lt;p&gt;As some CryptPad’s features are still funded by NLNet, we are following the &lt;a href=&quot;https://nlnet.nl/foundation/policies/generativeAI/1.1/&quot;&gt;NLNet AI Policy 1.1&lt;/a&gt; so far.&lt;/p&gt;
+&lt;p&gt;The key points of NLNet policy are that AI may be used to produce code as long as it’s fully disclosed and that the resulting code is still compliant with a FOSS license. Moreover, the use of AI-tools should not degrade quality, clarity, reliability, or reproducibility of the work.&lt;/p&gt;
+&lt;p&gt;As of November 2026, CryptPad is being funded by NLNet on the two following projects:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A &lt;a href=&quot;https://nlnet.nl/project/Cryptpad-scaling/&quot;&gt;refactor of the server&lt;/a&gt;, to make it more modular and scalable, that has been released in version &lt;a href=&quot;https://github.com/cryptpad/cryptpad/releases/tag/2026.10.0&quot;&gt;2026.10.0&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;A new &lt;a href=&quot;https://nlnet.nl/project/CryptPad-Notes/&quot;&gt;Note application&lt;/a&gt; based on BlockNote that is still under development.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;NLNet AI Policy 2.0&lt;/h3&gt;
+&lt;p&gt;On October 20th, NLNet &lt;a href=&quot;https://nlnet.nl/foundation/policies/generativeAI/2.0/&quot;&gt;updated&lt;/a&gt; their policy to restrict the use of LLMs and AI-tools to be read only (with transparency) and developers are not allowed produce any artifacts (including code, design and documentation) under NLNet grants.&lt;/p&gt;
+&lt;p&gt;Until now, CryptPad is compliant with these restrictions, and for transparency’s sake, LLM-based tools are being used for security scans on the code base during the development process to catch oversights.&lt;/p&gt;
+&lt;h2&gt;XWiki SAS Position&lt;/h2&gt;
+&lt;p&gt;Although we have not used AI for producing code or documentation in CryptPad, our parent company XWiki SAS has started experimenting with AI systems, trying to understand their impact on the development process, their efficiency, the quality benefits and risks. We do see some areas where LLMs can bring a significant benefit to the end goal of the project. We also see significant risks of not following proper development processes and other risks concerning LLM usage.&lt;/p&gt;
+&lt;p&gt;While as citizens we are concerned about the risks associated with AI usage and negative externalities, both at our level and for society in general, we also have to evaluate the positive benefits AI can bring to small teams and to our end goals.&lt;/p&gt;
+&lt;p&gt;We believe we need to keep an open mind and study all aspects before deciding on a final policy.&lt;/p&gt;
+&lt;h2&gt;Next steps&lt;/h2&gt;
+&lt;p&gt;We plan to create the projects AI policy. We will follow the following process:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Run a survey aimed at our developer team to understand the opinions of the whole team.&lt;/li&gt;
+&lt;li&gt;Run a survey aimed at our users and community to understand their opinion on LLM usage.&lt;/li&gt;
+&lt;li&gt;Study the viability of the project with and without LLMs.&lt;/li&gt;
+&lt;li&gt;Define our LLM policy taking into account all the prior information.&lt;/li&gt;
+&lt;li&gt;Publish our policy for review.&lt;/li&gt;
+&lt;li&gt;Implement our policy.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;We will keep our community informed about the evolution on this topic!&lt;/p&gt;
+</content>
+    <category term="cryptpad team" scheme="https://blog.cryptpad.org/tags/cryptpad team/"/>
+    <category term="funding" scheme="https://blog.cryptpad.org/tags/funding/"/>
+    <category term="ngi" scheme="https://blog.cryptpad.org/tags/ngi/"/>
+    <category term="survey" scheme="https://blog.cryptpad.org/tags/survey/"/>
+    <category term="security" scheme="https://blog.cryptpad.org/tags/security/"/>
+    <category term="quality" scheme="https://blog.cryptpad.org/tags/quality/"/>
+  </entry>
   <entry>
     <title>Autumn 2026 status</title>
     <link href="https://blog.cryptpad.org/2026/10/28/status-2026-autumn/"/>

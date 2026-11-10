@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+
+    <title>Temporary AI Policy for CryptPad Development | CryptPad Blog</title> 
+    
+
+    
+    
+    <meta property="og:type" content="webpage">
+    <meta property="og:title" content="Temporary AI Policy for CryptPad Development">
+    <meta property="og:url" content="http://blog.cryptpad.org/2026/11/10/Temporary-AI-Policy/">
+    <meta property="og:page_name" content="Temporary AI Policy for CryptPad Development">
+    <meta property="og:locale" content="default">
+    <meta property="og:image" content="http://blog.cryptpad.org/theme/og-default.png">
+    <meta property="og:description" content="The stance on AI for CryptPad development and next steps">
+    <meta name="twitter:card" content="The stance on AI for CryptPad development and next steps">
+    <meta name="twitter:title" content="Temporary AI Policy for CryptPad Development">
+
+
+
+    <link rel="alternate" href="/atom.xml" title="CryptPad Blog" type="application/atom+xml">
+
+    <link rel="icon" href="/theme/favicon.png">
+
+
+</head>
+
+<body>
+    <main class="container">
+        <header>
+            
+    <a href="/" class="back-home">
+        <i class="fa fa-arrow-left" aria-hidden="true"></i> <i class="fa fa-home" aria-hidden="true"></i> Homepage
+    </a>
+
+            <a href="/">
+                <img class="cp-logo" src="/theme/CryptPad_logo.svg" aria-hidden="true" alt="">
+                <h1>CryptPad Blog</h1>
+            </a>
+        </header>
+        <section id="content">
+            
+    <article class="post" lang="en">
+        <section class="header">
+            <h1>Temporary AI Policy for CryptPad Development</h1>
+            <p class="meta">
+                10 Nov 2026
+                
+                    
+                        
+                        
+                        
+                        -  Ludovic Dubost
+                        
+                        -  Fabrice Mouhartem
+                        
+                    
+                
+                    
+                    
+            </p>
+            <div class="article-tags">
+    
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        <ul class="tags" aria-label="Tags">
+        
+            <li><a class="tag" href="/tags/cryptpad-team">cryptpad team</a></li>
+        
+            <li><a class="tag" href="/tags/funding">funding</a></li>
+        
+            <li><a class="tag" href="/tags/ngi">ngi</a></li>
+        
+            <li><a class="tag" href="/tags/survey">survey</a></li>
+        
+            <li><a class="tag" href="/tags/security">security</a></li>
+        
+            <li><a class="tag" href="/tags/quality">quality</a></li>
+        
+        </ul>
+    
+</div>
+        </section>
+        <h2>Introduction</h2>
+<p><a href="https://cryptpad.org/">CryptPad</a> is an open-source end-to-end encrypted (E2EE) office suite. It has been developed since 2014 in javascript, building a real-time E2EE collaboration engine along with an integration for various applications for document processing (spreadsheets, documents, presentations, markdown, …) and collaboration (calendar, teams, drive, forms, …) in mind. CryptPad is distributed as a web application that puts the emphasis on the ease of use while staying secure under our <a href="https://blueprints.cryptpad.org/document/threatmodel/">threat model</a>.</p>
+<p>Due to the ever-growing presence of Artificial Intelligence (AI) tools in development processes and recurrent questions from our community, until we write a definitive AI policy, we are providing this document to disclose the stance of the CryptPad project (as part of <a href="https://xwiki.com/">XWiki SAS</a>) with respect to AI.</p>
+<h2>LLM usage on the CryptPad project so far</h2>
+<p>On the core developer side:</p>
+<ul>
+<li>No features have been coded by agents. All commits are reviewed by the core developers of CryptPad.</li>
+<li>LLMs have not been used so-far by the developers of the project further than asking questions.</li>
+<li>All commits are humanly reviewed by committers.</li>
+<li>We have used LLMs for read-only security issues discovery and analysis.</li>
+</ul>
+<p>On the contributor side:</p>
+<ul>
+<li>We have not provided any specific guidlines to contributors.</li>
+<li>All contributions have been humanly reviewed.</li>
+<li>If a contribution becomes too difficult to review, for instance because there is a large batch of AI generated code, we drop it.</li>
+<li>We have no knowledge of having accepted a heavily LLM generated contribution.</li>
+<li>We have received contributed security issue reports produced by LLMs.</li>
+</ul>
+<p>Additionally, CryptPad has no AI features in the product itself.</p>
+<h2>NLNet</h2>
+<p>NLNet is a foundation funding several open-source projects related to the Internet via the <a href="https://nlnet.nl/NGI/">Next Generation Internet</a> (NGI) programmes. CryptPad has been funded by NLNet on several projects and we thank them for that.</p>
+<table>
+<thead>
+<tr>
+<th>Project</th>
+<th>Fund type</th>
+<th>Start</th>
+<th>End</th>
+<th>Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://nlnet.nl/project/Cryptpad">CryptPad</a></td>
+<td>NGI0 PET</td>
+<td>2019</td>
+<td>2019</td>
+<td>Real-time collaboration with client-side encryption</td>
+</tr>
+<tr>
+<td><a href="https://nlnet.nl/project/CryptPad-Auth">CryptPad Auth</a></td>
+<td>NGI Assure</td>
+<td>2021</td>
+<td>2024</td>
+<td>Implement external identity mechanisms to E2EE collaborative editor</td>
+</tr>
+<tr>
+<td><a href="https://nlnet.nl/project/Cryptpad-Directory">CryptPad Auth Improvements</a></td>
+<td>NGI Assure</td>
+<td>2024</td>
+<td>2024</td>
+<td>Better user management, 2FA and SSO for CryptPad</td>
+</tr>
+<tr>
+<td><a href="https://nlnet.nl/project/CryptPad-Blueprints">CryptPad Blueprints</a></td>
+<td>NGI0 Entrust</td>
+<td>2022</td>
+<td>2024</td>
+<td>Server-side encrypted collaborative editor</td>
+</tr>
+<tr>
+<td><a href="https://nlnet.nl/project/Cryptpad-Communities">CryptPad for communities</a></td>
+<td>NGI0 PET</td>
+<td>2019</td>
+<td>2019</td>
+<td>Collaborative web editor with client-side encryption</td>
+</tr>
+<tr>
+<td><a href="https://nlnet.nl/project/CryptPad-Notes">CryptPad Notes</a></td>
+<td>NGI0 Commons Fund</td>
+<td>2025</td>
+<td>…</td>
+<td>E2EE collaborative rich text editor</td>
+</tr>
+<tr>
+<td><a href="https://nlnet.nl/project/CryptPad-QA">CryptPad Quality Test Suite</a></td>
+<td>NGI Assure</td>
+<td>2024</td>
+<td>2024</td>
+<td>Continuous testing of critical CryptPad functionality</td>
+</tr>
+<tr>
+<td><a href="https://nlnet.nl/project/Cryptpad-scaling">CryptPad Scalable Server</a></td>
+<td>NGI0 Commons Fund</td>
+<td>2025</td>
+<td>2026</td>
+<td>Improve the architecture of CryptPad</td>
+</tr>
+<tr>
+<td><a href="https://nlnet.nl/project/CryptPad-WCAG">CryptPad WCAG</a></td>
+<td>NGI Assure</td>
+<td>2024</td>
+<td>2024</td>
+<td>Accessibility improvements to CryptPad suite</td>
+</tr>
+<tr>
+<td><a href="https://nlnet.nl/project/CryptPadForms">CryptPad: Project Dialogue</a></td>
+<td>NGI0 PET</td>
+<td>2020</td>
+<td>2020</td>
+<td>Secure surveys and polls for Cryptpad</td>
+</tr>
+</tbody>
+</table>
+<h3>NLNet AI Policy 1.1</h3>
+<p>As some CryptPad’s features are still funded by NLNet, we are following the <a href="https://nlnet.nl/foundation/policies/generativeAI/1.1/">NLNet AI Policy 1.1</a> so far.</p>
+<p>The key points of NLNet policy are that AI may be used to produce code as long as it’s fully disclosed and that the resulting code is still compliant with a FOSS license. Moreover, the use of AI-tools should not degrade quality, clarity, reliability, or reproducibility of the work.</p>
+<p>As of November 2026, CryptPad is being funded by NLNet on the two following projects:</p>
+<ul>
+<li>A <a href="https://nlnet.nl/project/Cryptpad-scaling/">refactor of the server</a>, to make it more modular and scalable, that has been released in version <a href="https://github.com/cryptpad/cryptpad/releases/tag/2026.10.0">2026.10.0</a>;</li>
+<li>A new <a href="https://nlnet.nl/project/CryptPad-Notes/">Note application</a> based on BlockNote that is still under development.</li>
+</ul>
+<h3>NLNet AI Policy 2.0</h3>
+<p>On October 20th, NLNet <a href="https://nlnet.nl/foundation/policies/generativeAI/2.0/">updated</a> their policy to restrict the use of LLMs and AI-tools to be read only (with transparency) and developers are not allowed produce any artifacts (including code, design and documentation) under NLNet grants.</p>
+<p>Until now, CryptPad is compliant with these restrictions, and for transparency’s sake, LLM-based tools are being used for security scans on the code base during the development process to catch oversights.</p>
+<h2>XWiki SAS Position</h2>
+<p>Although we have not used AI for producing code or documentation in CryptPad, our parent company XWiki SAS has started experimenting with AI systems, trying to understand their impact on the development process, their efficiency, the quality benefits and risks. We do see some areas where LLMs can bring a significant benefit to the end goal of the project. We also see significant risks of not following proper development processes and other risks concerning LLM usage.</p>
+<p>While as citizens we are concerned about the risks associated with AI usage and negative externalities, both at our level and for society in general, we also have to evaluate the positive benefits AI can bring to small teams and to our end goals.</p>
+<p>We believe we need to keep an open mind and study all aspects before deciding on a final policy.</p>
+<h2>Next steps</h2>
+<p>We plan to create the projects AI policy. We will follow the following process:</p>
+<ol>
+<li>Run a survey aimed at our developer team to understand the opinions of the whole team.</li>
+<li>Run a survey aimed at our users and community to understand their opinion on LLM usage.</li>
+<li>Study the viability of the project with and without LLMs.</li>
+<li>Define our LLM policy taking into account all the prior information.</li>
+<li>Publish our policy for review.</li>
+<li>Implement our policy.</li>
+</ol>
+<p>We will keep our community informed about the evolution on this topic!</p>
+
+    </article>
+
+    <nav class="article-pagination" aria-label="Pagination">
+        
+        
+            <a href="/2026/10/28/status-2026-autumn/">Older: <span class="title">Autumn 2026 status</span></a>
+        
+    </nav>
+
+        </section>
+        
+<section id="top-tags" class="post">
+
+            <h3><i class="fa fa-tags" aria-hidden="true"></i> Top Tags</h3>
+<ul>
+
+    <li>
+        <a class="tag" href="/tags/status-update">status update</a><span class="count">56</span></li>
+
+    <li>
+        <a class="tag" href="/tags/release">release</a><span class="count">21</span></li>
+
+    <li>
+        <a class="tag" href="/tags/funding">funding</a><span class="count">21</span></li>
+
+    <li>
+        <a class="tag" href="/tags/security">security</a><span class="count">17</span></li>
+
+    <li>
+        <a class="tag" href="/tags/ngi">ngi</a><span class="count">14</span></li>
+
+    <li>
+        <a class="tag" href="/tags/research">research</a><span class="count">14</span></li>
+
+    <li>
+        <a class="tag" href="/tags/team">team</a><span class="count">13</span></li>
+
+    <li>
+        <a class="tag" href="/tags/donate">donate</a><span class="count">10</span></li>
+
+    <li>
+        <a class="tag" href="/tags/roadmap">roadmap</a><span class="count">10</span></li>
+
+    <li>
+        <a class="tag" href="/tags/talk">talk</a><span class="count">10</span></li>
+
+</ul>
+        </section>
+        
+    <section id="social" class="post">
+
+            <h3><i class="fa fa-link" aria-hidden="true"></i> Links</h3>
+<ul>
+    <li>
+        <a href="https://cryptpad.org">
+            <i aria-hidden="true" class="fa fa-globe"></i>Project website
+        </a>
+    </li>
+    <li>
+        <a href="https://opencollective.com/cryptpad/contribute">
+            <i aria-label="OpenCollective" class="fa fa-open-collective"></i>Donate
+        </a>
+    </li>
+</ul>
+<ul>
+    <li>
+        <a href="https://forum.cryptpad.org">
+            <i aria-hidden="true" class="fa fa-bullhorn"></i>Forum
+        </a>
+    </li>
+    <li>
+        <a href="https://matrix.to/#/#cryptpad:matrix.xwiki.com">
+            <i aria-hidden="true" class="fa fa-matrix-org"></i>Chat (Matrix)
+        </a>
+    </li>
+    <li>
+        <a rel="me" href="https://social.xwiki.com/@CryptPad">
+            <i aria-hidden="true" class="fa fa-mastodon"></i>Mastodon
+        </a>
+    </li>
+    <li>
+        <a href="https://peertube.xwiki.com/c/cryptpad_channel/videos">
+            <i aria-hidden="true" class="fa fa-peertube"></i>Peertube
+        </a>
+    </li>
+    <li>
+        <a href="https://pixelfed.social/cryptpad_design">
+            <i aria-hidden="true" class="fa fa-pixelfed"></i>Pixelfed
+        </a>
+    </li>
+</ul>
+<ul>
+    <li>
+        <a href="/atom.xml">
+            <i aria-hidden="true" class="fa fa-rss"></i>RSS Feed
+        </a>
+    </li>
+</ul>
+        </section>
+    </main>
+</body>
+
+</html>
